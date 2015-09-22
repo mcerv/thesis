@@ -104,11 +104,6 @@ int32_t main (void) {
   //set global variables and objects
   stringstream ss;
   // TCanvas* can = new TCanvas("can","can",800,600);
-  TFile* f = new TFile ("plots/plots.root","read");// = new TFile();
-  if (!f->IsOpen()) {
-    cout<<" File " << ss.str().c_str() << " not open properly!" << endl;
-    return 0;
-  }
 
 
 
@@ -133,8 +128,6 @@ int32_t main (void) {
               "115k","135k","160k","180k","210k","230k","260k","280k","295k"};
   double tempN[nTemp] = {4,7,10,15,25,40,60,75,95,115,135,160,180,210,230,260,280,295};
 
-  vector< vector< vector <TProfile> > > profvec;
-  vector< vector< vector <bool> > > missingprof;
 
   double spaceCharge[nSamples][nTemp][nVoltages];
   double chi2[nSamples][nTemp][nVoltages];
@@ -165,46 +158,40 @@ int32_t main (void) {
 
 
 
-  //get the profiles from the file
-  profvec.resize(nSamples);
-  missingprof.resize(nSamples);
+  //------------get the profiles from the file-------------------------
+  TProfile* prof[nSamples][nTemp][nVoltages];
+  bool missingprof[nSamples][nTemp][nVoltages];
+  TFile* f = new TFile ("plots/pulses.root","read");// = new TFile();
+  if (!f->IsOpen()) {
+    cout<<" File " << ss.str().c_str() << " not open properly!" << endl;
+    return 0;
+  }
   for (int32_t sample = 0; sample < nSamples; sample++) {
-    profvec.at(sample).resize(nTemp);
-    missingprof.at(sample).resize(nTemp);
     for (int32_t temp = 0; temp < nTemp; temp++) {
       for (int32_t volt = 0; volt < nVoltages; volt++) {
         ss.str("");
         ss << "Sample_" << sampleName[sample] << "/" << sampleName[sample]
            << "_" << tempS[temp] << "_" << voltage[volt];
-
-        TProfile prof;
-
         if (!(TProfile*)f->Get(ss.str().c_str() ) ) {
           cout<<" File " << ss.str().c_str() << " doesn't include " << ss.str() << endl;
-          missingprof.at(sample).at(temp).push_back(true);
-          profvec.at(sample).at(temp).push_back(prof);
+          prof[sample][temp][volt] = new TProfile();
+          missingprof[sample][temp][volt] = true;
           continue;
         }
-      	prof = (*(TProfile*)f->Get(ss.str().c_str() ));
-        // prof[sample][temp][volt] = new TProfile(*(TProfile*)f->Get("avgpulses_filt"));
-        // *prof[sample][temp][volt] = *(TProfile*)f->Get("avgpulses_filt");
-        // prof->SetTitle(ss.str().c_str());
-        profvec.at(sample).at(temp).push_back(prof);
-        missingprof.at(sample).at(temp).push_back(false);
-
+        prof[sample][temp][volt] = ((TProfile*)f->Get(ss.str().c_str() ));
+        missingprof[sample][temp][volt] = false;
       }
     }
-  }
+  }//----------------- end of reading in -------------------------
   cout<<endl;
-  f->Close();
-  delete(f);
+
 
 
 
 
 
   //create the fit function
-  TF1* decayfun = new TF1("decay","[4]*x + [5] + [6] + [0] + ([1]-[0])*exp(-(x+[3])/[2])",1.5,7.5);
+  TF1* risefun = new TF1("rise","[4] + [5]/[6]*exp(-(x+[3])/[5])",1.5,7.5);
   TF1* decaydoublefun = new TF1("decaydouble","[0] + ([1]-[0])*exp(-(x+[3])/[2])",1.5,7.5);
   TF1* spacechgfun = new TF1("spacechg","[1]*x + [0]",1.5,7.5);
 
@@ -220,6 +207,7 @@ int32_t main (void) {
   decaydoublefun->SetParLimits(2,0,400);
   decaydoublefun->SetParLimits(3,-2,1);
 
+  // risefun->SetParName(4, )
 
 
   TCanvas *can = new TCanvas("Irrad","Irrad",800,600);
@@ -236,8 +224,8 @@ int32_t main (void) {
 
         //set the fit limits
         //get the max and thres of the top
-        double max = (double)profvec[sample][temp][volt].GetMaximum();
-        double maxBin = profvec[sample][temp][volt].GetMaximumBin();
+        double max = (double)prof[sample][temp][volt]->GetMaximum();
+        double maxBin = prof[sample][temp][volt]->GetMaximumBin();
         double marginFall = 0 ;
         double marginRise = 0 ;
         double thresRise = 0;
@@ -262,12 +250,12 @@ int32_t main (void) {
         int32_t riseEdgeBin = 0;//(int32_t)prof->GetMaximumBin();
         int32_t fallEdgeBin = 0;
         for (int32_t bin=maxBin; bin>(maxBin-200); bin--) {
-          if (profvec[sample][temp][volt].GetBinContent(bin) >= thresRise) {
+          if (prof[sample][temp][volt]->GetBinContent(bin) >= thresRise) {
             riseEdgeBin = bin;
           }
         }
         for (int32_t bin=maxBin; bin<(maxBin+200); bin++) {
-          if (profvec[sample][temp][volt].GetBinContent(bin) >= thresFall) {
+          if (prof[sample][temp][volt]->GetBinContent(bin) >= thresFall) {
             fallEdgeBin = bin;
           }
         }
@@ -292,9 +280,9 @@ int32_t main (void) {
         //for the non-irradiated sample take the maximum and save it.
 
         // for the irradiatied samples (and S37), fix the space charge and fit the decay.
-        // if ( !sampleName[sample].compare("S79_1e14") ||
-        //      !sampleName[sample].compare("S52_3-63e14") ||
-        //      !sampleName[sample].compare("S37") ) {
+        // if ( !sampleName[sample]->compare("S79_1e14") ||
+        //      !sampleName[sample]->compare("S52_3-63e14") ||
+        //      !sampleName[sample]->compare("S37") ) {
         int32_t sampleNonIrrad = 0;
         if(1) {
           //fix the space charge of the non-irrad
@@ -307,11 +295,11 @@ int32_t main (void) {
           }
 
           //set the max current/charge
-          double maxCur = profvec[sampleNonIrrad][temp][volt].GetMaximum() ;
+          double maxCur = prof[sampleNonIrrad][temp][volt]->GetMaximum() ;
           //get the area from binMin to binMax
           double area = 0;
           for (int32_t bin=fitMinBin; bin<fitMaxBin; bin++) {
-            area+= profvec[sample][temp][volt].GetBinContent(bin);
+            area+= prof[sample][temp][volt]->GetBinContent(bin);
           } //area in 0.1 ns * uA
           area /= 10; //to get it in ns
           cout << "fitMin "<< fitMin << " fitMax " << fitMax << " maxCur "
@@ -320,9 +308,9 @@ int32_t main (void) {
 
 
           // special fit with p0 fixed
-          decaydoublefun->FixParameter(1,profvec.at(sampleNonIrrad).at(temp).at(volt).GetMaximum() );
+          decaydoublefun->FixParameter(1,prof[sampleNonIrrad][temp][volt]->GetMaximum() );
 
-          TFitResultPtr fptr = profvec[sample][temp][volt].Fit("decaydouble","RSQ", "", fitMin, fitMax);
+          TFitResultPtr fptr = prof[sample][temp][volt]->Fit("decaydouble","RSQ", "", fitMin, fitMax);
           if (!fptr->IsEmpty()) { //if the fit is not empty, fill arrays
             tauDecayVolt[sample][temp][volt] = fptr->Parameter(2); //tau fit
             tauDecayTemp[sample][volt][temp] = fptr->Parameter(2); //tau fit
@@ -356,8 +344,8 @@ int32_t main (void) {
 
         //-----------------------------------------------------------------
         if (DEBUG) {
-          profvec.at(sampleNonIrrad).at(temp).at(volt).Draw();
-          profvec.at(sample).at(temp).at(volt).Draw("same");
+          prof[sampleNonIrrad][temp][volt]->Draw();
+          prof[sample][temp][volt]->Draw("same");
           can->Update();
           can->WaitPrimitive();
           can->Clear();
@@ -368,6 +356,14 @@ int32_t main (void) {
   }
   delete(decaydoublefun);
   delete(can);
+
+  for (int32_t sample = S52_363e14; sample < nSamples; sample++) {
+    for (int32_t temp = 0; temp < nTemp; temp++) {
+      for (int32_t volt = 0; volt < nVoltages; volt++) {
+        delete (prof[sample][temp][volt]);
+      }
+    }
+  }
   cout<<endl<<" ------------ Fitting finished.. -----------"<<endl<<endl;
   //----------------- end of decay fitting ---------------------
 
@@ -387,6 +383,7 @@ int32_t main (void) {
 
   //----------------- Prepare the tau data-------------------------------
   //remove all non-fitted inputs.
+  TH1D* diffTau[nSamples]; //for 500V
   TH2D* mapTau[nSamples];
   TH2D* mapTauArea[nSamples];
   TH2D* mapChi2[nSamples];
@@ -408,12 +405,17 @@ int32_t main (void) {
     ssmap << "Tau_map_"<<sampleName[sample];
     mapTau[sample] = new TH2D(ssmap.str().c_str(),ssmap.str().c_str(),
               nTemp, 0, nTemp, nVoltages, 0, nVoltages);
+    ssmap << "1d";
+    diffTau[sample] = new TH1D(ssmap.str().c_str(),ssmap.str().c_str(),nTemp, 0, nTemp);
+
     ssmap << "_Chi2";
     mapChi2[sample] = new TH2D(ssmap.str().c_str(),ssmap.str().c_str(),
               nTemp, 0, nTemp, nVoltages, 0, nVoltages);
     ssmap << "_hist";
     histChi2[sample] = new TH1D(ssmap.str().c_str(),ssmap.str().c_str(),
               nTemp*nVoltages, 0, nTemp*nVoltages);
+
+
     for (int32_t volt=0; volt<nVoltages; volt++) {
       for (int32_t temp=0; temp<nTemp; temp++) {
         if (tauDecayTemp[sample][volt][temp] >= 0.0){
@@ -421,6 +423,9 @@ int32_t main (void) {
           mapTauArea[sample]->Fill(temp,volt,tauDecayArea[sample][volt][temp]);
           mapChi2[sample]->Fill(temp,volt,chi2[sample][volt][temp]);
           histChi2[sample]->Fill(nTemp*volt + temp, chi2[sample][volt][temp]);
+          if (!volt) {
+            diffTau[sample]->Fill(temp,tauDecayArea[sample][volt][temp]/tauDecayTemp[sample][volt][temp]);
+          }
         }
         else {
           histChi2[sample]->Fill(nTemp*volt + temp, -1);
@@ -433,6 +438,7 @@ int32_t main (void) {
   cout<<endl<<" Plotting the map of decimated decay vs temperature... "<<endl;
   can = new TCanvas("can","can",nSamples*400,1000);
   can->Divide(5,2);
+
   TH2D* mapTauDiff[nSamples];
   int32_t cntCd = 1;
   for (int32_t sample=S52_363e14; sample<nSamples; sample++) {
@@ -470,17 +476,43 @@ int32_t main (void) {
   can->Update();
   // can->Write();
   can->WaitPrimitive();
+  can->Update();
   can->Clear();
   delete(can);
+
+  TCanvas* c3 = new TCanvas("diff","diff",800,600);
+  TLegend* leg4 = new TLegend(0.7,0.7,0.95,0.95);
+  c3->SetLogy();
+  diffTau[S52_363e14]->Draw();
+  // diffTau[S52_363e14]->GetYaxis()->SetRangeUser(0.01,1);
+  diffTau[S79_1e14]->Draw("same");
+  dr->prettify(diffTau[S52_363e14],"red");
+  dr->prettify(diffTau[S79_1e14],"blue");
+  diffTau[S52_363e14]->GetYaxis()->SetRangeUser(0.7,4);
+  diffTau[S52_363e14]->GetXaxis()->SetTitle("Temperature points");
+  diffTau[S52_363e14]->GetYaxis()->SetTitle("#tau difference between fit methods");
+  dr->prettify(c3);
+  leg4->SetHeader("#tau_{area} / #tau");
+  leg4->AddEntry(diffTau[S52_363e14],"S52","l");
+  leg4->AddEntry(diffTau[S79_1e14],"S79","l");
+  leg4->Draw("same");
+
+  c3->Update();
+  c3->WaitPrimitive();
+  c3->Update();
+  delete c3;
   //------------------------------------------------------------
 
 
-  for (int32_t i=0; i<profvec.size(); i++) {
-    for (int32_t j=0; j<profvec.at(i).size(); j++) {
-        profvec.at(i).at(j).clear();
-        missingprof.at(i).at(j).clear();
-    }
-  }
+
+
+
+
+
+
+
+  f->Close();
+  delete(f);
 
   delete(dr);
   delete(app);

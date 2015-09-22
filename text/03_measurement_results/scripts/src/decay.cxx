@@ -61,22 +61,21 @@ int32_t main (void) {
   //set global variables and objects
   stringstream ss;
   TCanvas* can = new TCanvas("can","can",800,600);
-  TGraph* norm = new TGraph();
-  TGraph* diff = new TGraph();
-  TFile* f;// = new TFile();
+  // TGraph* norm = new TGraph();
+  // TGraph* diff = new TGraph();
   double samplingTime = 0.1; //ns
   //set the input data
   const int nSamples = 5;
-  // const int nVoltages = 4;
-  const int nVoltages = 14;
+  const int nVoltages = 4;
+  // const int nVoltages = 14;
   const int nTemp = 18;
 
   // double voltage[nVoltages] = {500.0, 400.0, 300.0, 200.0, 100.0, -100.0, -200.0, -300.0, -400.0, -500.0};
   // double voltage[nVoltages] = {700.0, 600.0, 500.0, 400.0, -400.0, -500.0, -600.0, -700.0};
   // double voltage[nVoltages] = {700.0, -700.0};
-  double voltage[nVoltages] = {700.0, 600.0, 500.0, 400.0, 300.0, 200.0, 100.0,
-                        -100.0, -200.0, -300.0, -400.0, -500.0, -600.0, -700.0};
-  // double voltage[nVoltages] = {500.0, 400.0, -400.0, -500.0};
+  // double voltage[nVoltages] = {700.0, 600.0, 500.0, 400.0, 300.0, 200.0, 100.0,
+  //                       -100.0, -200.0, -300.0, -400.0, -500.0, -600.0, -700.0};
+  double voltage[nVoltages] = {500.0, 400.0, -400.0, -500.0};
   string sampleName[nSamples] = {"S52","S79","S37","S52_3-63e14","S79_1e14" };
   // string sampleName[nSamples] = {"S79_1e14","S52_3-63e14","S37"};
   // string sampleName[nSamples] = {"S52", "S52_3-63e14"};
@@ -85,8 +84,35 @@ int32_t main (void) {
               "115k","135k","160k","180k","210k","230k","260k","280k","295k"};
   double tempN[nTemp] = {4,7,10,15,25,40,60,75,95,115,135,160,180,210,230,260,280,295};
 
-  vector< vector< vector <TProfile> > > profvec;
-  vector< vector< vector <bool> > > missingprof;
+
+
+  //------------get the profiles from the file-------------------------
+  TProfile* prof[nSamples][nTemp][nVoltages];
+  bool missingprof[nSamples][nTemp][nVoltages];
+  TFile* f = new TFile ("plots/pulses.root","read");// = new TFile();
+  if (!f->IsOpen()) {
+    cout<<" File " << ss.str().c_str() << " not open properly!" << endl;
+    return 0;
+  }
+  for (int32_t sample = 0; sample < nSamples; sample++) {
+    for (int32_t temp = 0; temp < nTemp; temp++) {
+      for (int32_t volt = 0; volt < nVoltages; volt++) {
+        ss.str("");
+        ss << "Sample_" << sampleName[sample] << "/" << sampleName[sample]
+           << "_" << tempS[temp] << "_" << voltage[volt];
+        if (!(TProfile*)f->Get(ss.str().c_str() ) ) {
+          cout<<" File " << ss.str().c_str() << " doesn't include " << ss.str() << endl;
+          prof[sample][temp][volt] = new TProfile();
+          missingprof[sample][temp][volt] = true;
+          continue;
+        }
+        prof[sample][temp][volt] = ((TProfile*)f->Get(ss.str().c_str() ));
+        missingprof[sample][temp][volt] = false;
+      }
+    }
+  }//----------------- end of reading in -------------------------
+
+
 
   double spaceCharge[nSamples][nTemp][nVoltages];
   double maxNonIrrad[nSamples][nTemp][nVoltages];
@@ -156,66 +182,70 @@ int32_t main (void) {
   decaydoublefun->SetParLimits(3,-5,5);
 
 
-  //get the profiles from the file
-  profvec.resize(nSamples);
-  missingprof.resize(nSamples);
-  for (int32_t sample = 0; sample < nSamples; sample++) {
-    profvec.at(sample).resize(nTemp);
-    missingprof.at(sample).resize(nTemp);
-    for (int32_t temp = 0; temp < nTemp; temp++) {
-      for (int32_t volt = 0; volt < nVoltages; volt++) {
-        ss.str("");
-        if (!sampleName[sample].compare("S52") ||
-            !sampleName[sample].compare("S37") ||
-            !sampleName[sample].compare("S79")) {
-          ss << "/Volumes/MACSTORAGE/TCT/TCT_results/";
-          // ss << "/Volumes/hram/work/TCT/TCT_results/";
-        } else if (!sampleName[sample].compare("S52_3-63e14")) {
-          // ss << "/Volumes/hram/work/TCT/2014-07-29/TCT_results/";
-          ss << "/Volumes/MACSTORAGE/TCT/2014-07-29/TCT_results/";
-        } else if (!sampleName[sample].compare("S79_1e14")) {
-          // ss << "/Volumes/hram/work/TCT/2014-07-28/TCT_results/";
-          ss << "/Volumes/MACSTORAGE/TCT/2014-07-28/TCT_results/";
-        }
-        ss << sampleName[sample] << "/" << tempS[temp] << "/" << sampleName[sample]
-           << "_" << tempS[temp] << "_" << voltage[volt] << "V.root";
-        // the sample dataset
-        // ss << "data/" << sampleName[sample] << "/" << tempS[temp] << "/" << sampleName[sample]
-        //    << "_" << tempS[temp] << "_" << voltage[volt] << "V.root";
-        TProfile prof;
+  // //get the profiles from the file
+  // profvec.resize(nSamples);
+  // missingprof.resize(nSamples);
+  // for (int32_t sample = 0; sample < nSamples; sample++) {
+  //   profvec.at(sample).resize(nTemp);
+  //   missingprof.at(sample).resize(nTemp);
+  //   for (int32_t temp = 0; temp < nTemp; temp++) {
+  //     for (int32_t volt = 0; volt < nVoltages; volt++) {
+  //       ss.str("");
+  //       if (!sampleName[sample].compare("S52") ||
+  //           !sampleName[sample].compare("S37") ||
+  //           !sampleName[sample].compare("S79")) {
+  //         ss << "/Volumes/MACSTORAGE/TCT/TCT_results/";
+  //         // ss << "/Volumes/hram/work/TCT/TCT_results/";
+  //       } else if (!sampleName[sample].compare("S52_3-63e14")) {
+  //         // ss << "/Volumes/hram/work/TCT/2014-07-29/TCT_results/";
+  //         ss << "/Volumes/MACSTORAGE/TCT/2014-07-29/TCT_results/";
+  //       } else if (!sampleName[sample].compare("S79_1e14")) {
+  //         // ss << "/Volumes/hram/work/TCT/2014-07-28/TCT_results/";
+  //         ss << "/Volumes/MACSTORAGE/TCT/2014-07-28/TCT_results/";
+  //       }
+  //       ss << sampleName[sample] << "/" << tempS[temp] << "/" << sampleName[sample]
+  //          << "_" << tempS[temp] << "_" << voltage[volt] << "V.root";
+  //       // the sample dataset
+  //       // ss << "data/" << sampleName[sample] << "/" << tempS[temp] << "/" << sampleName[sample]
+  //       //    << "_" << tempS[temp] << "_" << voltage[volt] << "V.root";
+  //       TProfile prof;
+  //
+  //       cout << "\r" << "Opening file " << ss.str() << flush;// << endl;
+  //       f = new TFile(ss.str().c_str(),"read");
+  //       if (!f->IsOpen()) {
+  //         cout<<" File " << ss.str().c_str() << " not open properly!" << endl;
+  //         missingprof.at(sample).at(temp).push_back(true);
+  //         profvec.at(sample).at(temp).push_back(prof);
+  //         continue;
+  //       }
+  //       if (!(TProfile*)f->Get("avgpulses_filt")) {
+  //         cout<<" File " << ss.str().c_str() << " doesn't include avgpulses!" << endl;
+  //         missingprof.at(sample).at(temp).push_back(true);
+  //         profvec.at(sample).at(temp).push_back(prof);
+  //         continue;
+  //       }
+  //     	prof = (*(TProfile*)f->Get("avgpulses_filt"));
+  //       // prof[sample][temp][volt] = new TProfile(*(TProfile*)f->Get("avgpulses_filt"));
+  //       // *prof[sample][temp][volt] = *(TProfile*)f->Get("avgpulses_filt");
+  //       // prof->SetTitle(ss.str().c_str());
+  //       prof.Scale(131.7);
+  //       prof.GetXaxis()->SetRangeUser(-5,20); //nanoseconds
+  //       ss.str("");
+  //       ss << sampleName[sample] << "_" << tempS[temp] << "_" << voltage[volt];
+  //       prof.SetName(ss.str().c_str());
+  //       profvec.at(sample).at(temp).push_back(prof);
+  //       missingprof.at(sample).at(temp).push_back(false);
+  //
+  //       f->Close();
+  //       delete(f);
+  //     }
+  //   }
+  // }
+  // cout<<endl;
 
-        cout << "\r" << "Opening file " << ss.str() << flush;// << endl;
-        f = new TFile(ss.str().c_str(),"read");
-        if (!f->IsOpen()) {
-          cout<<" File " << ss.str().c_str() << " not open properly!" << endl;
-          missingprof.at(sample).at(temp).push_back(true);
-          profvec.at(sample).at(temp).push_back(prof);
-          continue;
-        }
-        if (!(TProfile*)f->Get("avgpulses_filt")) {
-          cout<<" File " << ss.str().c_str() << " doesn't include avgpulses!" << endl;
-          missingprof.at(sample).at(temp).push_back(true);
-          profvec.at(sample).at(temp).push_back(prof);
-          continue;
-        }
-      	prof = (*(TProfile*)f->Get("avgpulses_filt"));
-        // prof[sample][temp][volt] = new TProfile(*(TProfile*)f->Get("avgpulses_filt"));
-        // *prof[sample][temp][volt] = *(TProfile*)f->Get("avgpulses_filt");
-        // prof->SetTitle(ss.str().c_str());
-        prof.Scale(131.7);
-        prof.GetXaxis()->SetRangeUser(-5,20); //nanoseconds
-        ss.str("");
-        ss << sampleName[sample] << "_" << tempS[temp] << "_" << voltage[volt];
-        prof.SetName(ss.str().c_str());
-        profvec.at(sample).at(temp).push_back(prof);
-        missingprof.at(sample).at(temp).push_back(false);
 
-        f->Close();
-        delete(f);
-      }
-    }
-  }
-  cout<<endl;
+
+
 
 
 
@@ -236,8 +266,8 @@ int32_t main (void) {
 
         //set the fit limits
         //get the max and thres of the top
-        double max = (double)profvec[sample][temp][volt].GetMaximum();
-        double maxBin = profvec[sample][temp][volt].GetMaximumBin();
+        double max = (double)prof[sample][temp][volt]->GetMaximum();
+        double maxBin = prof[sample][temp][volt]->GetMaximumBin();
         double marginFall = 0 ;
         double marginRise = 0 ;
         double thresRise = 0;
@@ -262,12 +292,12 @@ int32_t main (void) {
         int32_t riseEdgeBin = 0;//(int32_t)prof->GetMaximumBin();
         int32_t fallEdgeBin = 0;
         for (int32_t bin=maxBin; bin>(maxBin-200); bin--) {
-          if (profvec[sample][temp][volt].GetBinContent(bin) >= thresRise) {
+          if (prof[sample][temp][volt]->GetBinContent(bin) >= thresRise) {
             riseEdgeBin = bin;
           }
         }
         for (int32_t bin=maxBin; bin<(maxBin+200); bin++) {
-          if (profvec[sample][temp][volt].GetBinContent(bin) >= thresFall) {
+          if (prof[sample][temp][volt]->GetBinContent(bin) >= thresFall) {
             fallEdgeBin = bin;
           }
         }
@@ -301,7 +331,7 @@ int32_t main (void) {
           spacechgfun->SetParameter("spaceChgDisp",max); //max of the pulse as a starting point
           spacechgfun->SetParameter("spaceChg",0); //starting space charge is 0
 
-          TFitResultPtr fptr = profvec[sample][temp][volt].Fit("spacechg","RSQ", "", fitMin, fitMax);
+          TFitResultPtr fptr = prof[sample][temp][volt]->Fit("spacechg","RSQ", "", fitMin, fitMax);
 
           spaceCharge[sample][temp][volt] = fptr->Parameter(1);
           spaceChargeDisp[sample][temp][volt] = fptr->Parameter(0);
@@ -330,14 +360,14 @@ int32_t main (void) {
           // decayfun->FixParameter(5,0); //displacement due to space charge
 
           // special fit with p0 fixed
-          decaydoublefun->FixParameter(1,profvec.at(sampleNonIrrad).at(temp).at(volt).GetMaximum() );
-          TFitResultPtr fptrdouble = profvec[sample][temp][volt].Fit("decaydouble","RSQ", "", fitMin, fitMax);
+          decaydoublefun->FixParameter(1,prof[sampleNonIrrad][temp][volt]->GetMaximum() );
+          TFitResultPtr fptrdouble = prof[sample][temp][volt]->Fit("decaydouble","RSQ", "", fitMin, fitMax);
 
         if (!fptrdouble->IsEmpty()) { //if the fit is not empty, fill arrays
             cout<<" SECONDARY FIY: fitted Tau "<<fptrdouble->Parameter(2)<<flush<<endl;
           }
 
-          TFitResultPtr fptr = profvec[sample][temp][volt].Fit("decay","RSQ", "", fitMin, fitMax);
+          TFitResultPtr fptr = prof[sample][temp][volt]->Fit("decay","RSQ", "", fitMin, fitMax);
           if (!fptr->IsEmpty()) { //if the fit is not empty, fill arrays
             tauDecayVolt[sample][temp][volt] = fptr->Parameter(2); //tau fit
             tauDecayTemp[sample][volt][temp] = fptr->Parameter(2); //tau fit
@@ -385,7 +415,17 @@ int32_t main (void) {
 
 
 
+  // delete all profile pointers.
+  for (int32_t sample = 0; sample < nSamples; sample++) {
+    for (int32_t temp = 0; temp < nTemp; temp++) {
+      for (int32_t volt = 0; volt < nVoltages; volt++) {
+        delete prof[sample][temp][volt];
+      }
+    }
+  }
 
+  f->Close();
+  delete(f);
 
 
 
@@ -396,29 +436,29 @@ int32_t main (void) {
 
 
   //------------ open file for saving plots --------------------------
-  TFile* filePlots = new TFile("plots/plots.root","recreate");
+  TFile* filePlots = new TFile("plots/plotsdecay.root","update");
   //------------------------------------------------------------------
 
 
-  //----------------- Save the pulses -------------------------------
-  TDirectory* dirp;
-  TDirectory* dirs;
-  TDirectory* dirt;
-  stringstream sst;
-  for (int32_t sample = 0; sample < nSamples; sample++) {
-    sst.str("");
-    sst << "Sample_" << sampleName[sample];
-    dirs = filePlots->mkdir(sst.str().c_str());
-    dirs->cd();
-    // filePlots->cd(sst.str().c_str());
-    for (int32_t temp = 0; temp < nTemp; temp++) {
-      for (int32_t volt = 0; volt < nVoltages; volt++) {
-        profvec.at(sample).at(temp).at(volt).Write();
-      }
-    }
-  }
-  filePlots->cd();
-  //-----------------------------------------------------------------
+  // //----------------- Save the pulses -------------------------------
+  // TDirectory* dirp;
+  // TDirectory* dirs;
+  // TDirectory* dirt;
+  // stringstream sst;
+  // for (int32_t sample = 0; sample < nSamples; sample++) {
+  //   sst.str("");
+  //   sst << "Sample_" << sampleName[sample];
+  //   dirs = filePlots->mkdir(sst.str().c_str());
+  //   dirs->cd();
+  //   // filePlots->cd(sst.str().c_str());
+  //   for (int32_t temp = 0; temp < nTemp; temp++) {
+  //     for (int32_t volt = 0; volt < nVoltages; volt++) {
+  //       profvec.at(sample).at(temp).at(volt).Write();
+  //     }
+  //   }
+  // }
+  // filePlots->cd();
+  // //-----------------------------------------------------------------
 
   //----------------- Prepare the tau data-------------------------------
   //remove all non-fitted inputs.
@@ -588,7 +628,7 @@ int32_t main (void) {
   can = new TCanvas("can","can",800,600);
   dr->prettify(can);
   can->SetLogy();
-  TLegend* legTemp = new TLegend(0.7,0.1,0.95,0.95); //for All, Odd and Even
+  TLegend* legTemp = new TLegend(0.7,0.65,0.95,0.95); //for All, Odd and Even
   bool first3 = true;
 
   for (int32_t sample=0; sample<nSamples; sample++) {
@@ -604,17 +644,22 @@ int32_t main (void) {
         grTemp[sample][volt]->GetXaxis()->SetRangeUser(1,450);
         grTemp[sample][volt]->GetXaxis()->SetLimits(1,450);
         grTemp[sample][volt]->GetXaxis()->SetTitle("Temperature [K]");
-        grTemp[sample][volt]->GetYaxis()->SetTitle("Decay time #Tau [s{}^{-1}]");
+        grTemp[sample][volt]->GetYaxis()->SetTitle("#tau [s{}^{-1}]");
       }
       else {
         grTemp[sample][volt]->Draw ("L SAME");
       }
       grTemp[sample][volt]->SetLineColor(clrScheme[sample][volt]);
       ssleg.str("");
-      ssleg << sampleName[sample] << "_" << voltage[volt];
-      legTemp->AddEntry(grTemp[sample][volt],ssleg.str().c_str(),"l");
+      ssleg << sampleName[sample];// << "_" << voltage[volt];
+      if (!volt) {
+        legTemp->AddEntry(grTemp[sample][volt],ssleg.str().c_str(),"l");
+      }
+
     }
   }
+  legTemp->SetHeader("For #pm 400 V, #pm 500 V");
+  legTemp->SetTextSize(0.04);
   legTemp->Draw("same");
   can->Update();
   can->Write();
@@ -677,7 +722,7 @@ int32_t main (void) {
           grTempDec[dec][sample][volt]->GetYaxis()->SetRangeUser(1,450); //tau
           grTempDec[dec][sample][volt]->GetXaxis()->SetLimits(1,450); //temp
           grTempDec[dec][sample][volt]->GetXaxis()->SetTitle("Temperature [K]");
-          grTempDec[dec][sample][volt]->GetYaxis()->SetTitle("Decay time #Tau [s{}^{-1}]");
+          grTempDec[dec][sample][volt]->GetYaxis()->SetTitle("#tau [s{}^{-1}]");
           // can->Update();
           // can->WaitPrimitive();
         }

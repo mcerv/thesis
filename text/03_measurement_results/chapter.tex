@@ -1,6 +1,6 @@
 
 % ---------------------------- comment out when compiling the full document -------------------
-\documentclass[11pt]{mytustyle}  % default square logo 
+\documentclass[12pt]{mytustyle}  % default square logo 
 \usepackage{amssymb}
 \usepackage{caption}
 \usepackage{upgreek}
@@ -72,7 +72,7 @@ Two preamplifiers were used for the measurements, both embedded in an RF-tight a
 
 \emph{CIVIDEC Cx} is a charge shaping amplifier. Its high SNR (low noise of 400~electrons and gain of 8.2~mV/fC) makes it a good choice for spectroscopic measurements with diamond sensors.
 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
 \subfloat[Cx charge shaping preamplifier]{\includegraphics[width=0.45\textwidth]{pics/setup/Cx} \label{fig:ampcx}} &
@@ -124,7 +124,7 @@ Oscilloscopes are the most versatile analogue signal readout devices - fast to s
 \label{sec:cryosetup}
 
 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
 \subfloat[Sensor carrier]{\includegraphics[width=0.45\textwidth]{pics/setup/carrier2} \label{fig:carrier}} &
@@ -161,9 +161,58 @@ Noise is a major limiting factor in particle detection. It defines the minimum m
 \section{Temperature limitations}
 \label{sec:templimit}
 % ---------------------------------------------------------------------------------------------------------------
-A test was carried out to evaluate the effect of temperature changes on the output signal of the diamond sensors. A cryostat filled with liquid helium was used to cool down the sensor during the measurement process. Current signal response to $\alpha$-particles was measured at $\sim$20 temperature points between 4~K and 295~K (room temperature - RT). At every temperature point, a set of 300 pulses was read out at various bias voltages. Resulting data showed that the charge collection is stable down to 150~K, where it starts decreasing and stabilises again at a third of the initial value at 75~K. This behaviour was first measured and discussed by H. Jansen in~\cite{JansenThesis}.
+A test was carried out to evaluate the effect of temperature changes on the output signal of the diamond sensors. A cryostat filled with liquid helium was used to cool down the sensor during the measurement process. Current signal response to $\alpha$-particles was measured at 18 temperature points between 4~K and 295~K (room temperature - RT). At every temperature point, a set of 300 pulses was read out at various bias voltages. Resulting data showed that the charge collection is stable down to 150~K, where it starts decreasing and stabilises again at about one third of the initial value at 75~K. This behaviour was first measured and discussed by H. Jansen in~\cite{JansenThesis}.
 
 \subsection{Temperature-variant TCT}
+% Explain Hendrik's model
+%\subsubsection{Acoustic phonon scattering}
+The band gap energy in diamond equals to $E_g=5.5$~eV while the average energy to produce an electron-hole pair is $E_{e-h}=13.25$~eV. This means there is excessive energy deposited in the diamond bulk. The impinging $\upalpha$-particle stops within $\sim$10~$\upmu$m of the bulk, transferring all its energy to the lattice. A part of this energy, approximately 40~\%, directly ionises the carbon atoms, creating free electron-hole pairs. The remaining energy, however, is converted into lattice vibrations (phonons~\cite{Phonons}). This effectively means that the lattice within the ionisation volume (approximately $\sim$10~$\upmu$m$\times\sim$2~nm in size) is briefly heated up. The hot plasma then cools down to the temperature of the surrounding material by heat dissipation, (i.e. phonon transport).
+
+%\subsubsection{Exciton formation and recombination}
+The positively charged hole and negatively charged electron in the hole attract each other via the Coulomb force and may undergo a bonding process during which a phonon is emitted. That phonon is referred to as \emph{exciton}~\cite{Exciton}. The electron is pushed to a so-called exciton energy band, which is 80~mV under the conduction band. At higher temperatures, the lattice provides enough energy to excite the electron from the exciton state back to the valence band (so-called exciton recombination). At lower temperatures, however, the exciton lifetime increases, which means that it will take a longer time for the electrons to get re-excited to the valence band. The re-excitation lifetime at room temperature is $\sim$30~ps, increasing to $\sim$150~$\upmu$s at 50~K.
+
+% Show a set of pulses
+\subsubsection{Temperature-variant pulse shapes}
+Three sCVD diamond samples were tested at the range of temperatures. Resulting averaged pulses are shown in a set of figures~\ref{fig:temppulses}. Some conclusions can be drawn by observing their shape. First, the pulses from hole collection are shorter than those from the electron collection, proving that holes indeed travel faster in diamond. Second, the pulse shapes change with decreasing temperature. In particular, the pulse time gets shorter, hinting at the faster carrier drift velocity $v_{drift}$. Third, between 150~K and 75~K there is a significant change in shape - the time constant of the rising edge increases significantly and the pulse area decreases. From 75~K down to 4~K there is no significant change. Last, the top of the pulse at the S52 is not flat, which hints on charge loss along the way. This could be due to impurities in the diamond bulk, which act as charge traps. All in all, the pulse shape changes significantly with temperature, which is predicted by H. Jansen's model.
+
+\begin{figure}[!t]
+\begin{tabular}{rr}
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S37_elecs} \label{fig:S37plus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S37_holes}  \label{fig:S37minus}} \\
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S79_elecs} \label{fig:S37plus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S79_holes}  \label{fig:S37minus}} \\
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S52_elecs} \label{fig:S37plus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S52_holes}  \label{fig:S37minus}}
+\end{tabular}
+\caption{Several data points between 4~K and 295~K at a bias voltage of $\pm$500~V}
+\label{fig:temppulses}
+\end{figure}
+
+Figure~\ref{fig:voltpulse} shows the pulses at different bias voltages at a fixed temperature. Again it is evident that the pulse width decreases with increasing bias voltage. 
+
+\begin{figure}[!t]
+\begin{tabular}{rr}
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulsesVolt/varVolt_S37_elecs_260k} \label{fig:S37cTplus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulsesVolt/varVolt_S37_holes_260k}  \label{fig:S37ctTminus}}
+\end{tabular}
+\caption{Varied bias voltage at a fixed temperature}
+\label{fig:voltpulse}
+\end{figure}
+
+% Show drift velocity wrt volt
+% Show drift velocity wrt temp
+% Show integrated charge
+% Show Vdrift wrt 1/Voltage
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -181,7 +230,7 @@ The last few decades have seen extensive efforts put into understanding and quan
 Radiation damage in silicon, for instance, is well understood and explained. Silicon sensor is relatively cheap and widespread, which facilitated the irradiation experiments. Diamond, however, is an expensive material and the technology is relatively new as compared to silicon. Therefore not many institutes are carrying out diamond irradiation studies. To join the efforts, a collaboration called RD42 was formed. It gathers the experimental data from diamond irradiation studies. Unlike with silicon, the experimental results so far show no significant correlation with the NIEL (non-ionising energy loss) model~\cite{XXX}, which correlates detector efficiency with the \emph{number of lattice displacements}. Therefore an alternative model was proposed by Karlsruhe Institute of Technology~\cite{XXX}, correlating the diamond efficiency with \emph{displacements per atom} (DPA) in the bulk. Figure~\ref{fig:kitdpa} shows the DPA model for a range of energies of proton, pion and neutron irradiation in diamond. It has been normalised to damage in 24~GeV protons. According to the plot, a 300~MeV pion beam damages the diamond bulk twice as much as a 24~GeV proton beam.
 
 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{plots/DPAplaceholder}
 \caption{Diamond radiation damage - a model based on displacements per atom. Courtesy Karlsruhe Institute of Technology~\cite{} PLACEHOLDER}
@@ -209,7 +258,7 @@ CCD = \frac{Q_i}{\delta_d}
 \end{equation} 
 
 % sample landau distribution  
-\begin{figure}[!ht]
+\begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{scripts/pics/S37_500}
 \caption{An example of a landau distribution acquired by S37 at 500~V bias voltage PLACEHOLDER}
@@ -233,7 +282,7 @@ The irradiation damage factor $k$ is a way to quantify irradiation damage of a s
 The data points with the maximum CCD obtained in the test beam measurements were plotted against radiation dose received (see figure~\ref{fig:radfactor}). Function~\ref{eq:radfactor1} was fitted to the data points and a damage factor $k=6.2\times 10{-18}$ was obtained. This is three times higher than the damage factor obtained by RD42. A possible cause is that the irradiated samples did not yet have a full charge collection at 1~V~$\upmu$m$^{-1}$.
 
 % CCD against HV 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
 \subfloat[CCD for S37, S79 and S52]{\includegraphics[width=0.45\textwidth]{scripts/plots/ccd} \label{fig:ccd}} &
@@ -252,7 +301,7 @@ TO-DO: Ramp up to 500 V, take 100 samples every 5 minutes.
 
 The three samples were tested for a long term stability of the current pulse shapes. 
 % sample landau distribution  
-\begin{figure}[!ht]
+\begin{figure}[!t]
 \begin{center}
 %\includegraphics[width=0.6\textwidth]{}
 \caption{Change of the pulse shape with time. PLACEHOLDER}
@@ -263,7 +312,7 @@ The three samples were tested for a long term stability of the current pulse sha
 
 \subsubsection{Charge collection hysteresis}
 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 \begin{center}
 \includegraphics[width=1\textwidth]{plots/hysteresis/all_pulses_1}
 \caption{S37 non-irrad; S52 $1\times10^{14}~p~cm^{-2}$ non-pumped, pumped; S79 $3.63\times10^{14}~p~cm^{-2}$ non-pumped, pumped PLACEHOLDER}
@@ -281,6 +330,18 @@ The irradiated samples were put in the cryostat, which was cooled down to 4.2~K 
 TO-DO: get the Tau and plot it against T. 
 TO-DO: plot the drift time against square voltage.
 
+
+\begin{figure}[!t]
+\begin{tabular}{rr}
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S37_elecs} \label{fig:S372plus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S37_holes}  \label{fig:S372minus}} \\
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S79_1e14_elecs} \label{fig:S79_1e14plus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S79_1e14_holes}  \label{fig:S79_1e14minus}} \\
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S52_3-63e14_elecs} \label{fig:S37_363e14plus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S52_3-63e14_holes}  \label{fig:S37_363e14minus}}
+\end{tabular}
+\caption{Several data points between 4~K and 295~K at a bias voltage of $\pm$500~V}
+\end{figure}
 
 
 

@@ -8,6 +8,7 @@
 #include "TStyle.h"
 #include "TCanvas.h"
 #include "TAxis.h"
+#include "TColor.h"
 //#include "TSpectrum.h"
 #include "TH1.h"
 #include "TH2.h"
@@ -37,8 +38,13 @@ public:
   DrawFuns();
   ~DrawFuns();
 
-  int32_t color[22];
-  int32_t color2[22];
+  TColor color[22];
+  TColor color2[22];
+  int32_t clr[22];
+  int32_t clrTemp[22];
+  int32_t clrVolt[10];
+
+
 };
 
 

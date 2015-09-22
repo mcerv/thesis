@@ -1,6 +1,6 @@
 /*
   Draw functions
-  2015-07-27
+  2015-07-30
   Matevz Cerv
 */
 
@@ -8,10 +8,65 @@
 
 
 DrawFuns::DrawFuns () {
+  TColor* clrObj = new TColor();
+  clr[0] = clrObj->GetColor("#2D2D29");
+  clr[1] = clrObj->GetColor("#215A6D");
+  clr[2] = clrObj->GetColor("#3CA2A2");
+  clr[3] = clrObj->GetColor("#92C7A3");
+  clr[4] = clrObj->GetColor("#DFECE6");
+  clr[5] = clrObj->GetColor("#C2CBCE");
+  clr[6] = clrObj->GetColor("#A4BCC2");
+  clr[7] = clrObj->GetColor("#81A8B8");
+  clr[8] = clrObj->GetColor("#107FC9");
+  clr[9] = clrObj->GetColor("#0E4EAD");
+  clr[10] = clrObj->GetColor("#0B108C");
+  clr[11] = clrObj->GetColor("#0C0F66");
+  clr[12] = clrObj->GetColor("#07093D");
+  clr[13] = clrObj->GetColor("#300030");
+  clr[14] = clrObj->GetColor("#480048");
+  clr[15] = clrObj->GetColor("#601848");
+  clr[16] = clrObj->GetColor("#C04848");
+  clr[17] = clrObj->GetColor("#F07241");
 
+  clrVolt[0] = clrObj->GetColor("#00A0B0");
+  clrVolt[1] = clrObj->GetColor("#6A4A3C");
+  clrVolt[2] = clrObj->GetColor("#CC333F");
+  clrVolt[3] = clrObj->GetColor("#EB6841");
+  clrVolt[4] = clrObj->GetColor("#EDC951");
+  clrVolt[5] = clrObj->GetColor("#00A0B0");
+  clrVolt[6] = clrObj->GetColor("#6A4A3C");
+  clrVolt[7] = clrObj->GetColor("#CC333F");
+  clrVolt[8] = clrObj->GetColor("#EB6841");
+  clrVolt[9] = clrObj->GetColor("#EDC951");
+
+  clrTemp[20] = clrObj->GetColor("#FF0000");
+  clrTemp[19] = clrObj->GetColor("#FF1e00");
+  clrTemp[18] = clrObj->GetColor("#FF3c00");
+  clrTemp[17] = clrObj->GetColor("#FF5a00");
+  clrTemp[16] = clrObj->GetColor("#FF7800");
+  clrTemp[15] = clrObj->GetColor("#FF9600");
+  clrTemp[14] = clrObj->GetColor("#FFb400");
+  clrTemp[13] = clrObj->GetColor("#FFd200");
+  clrTemp[12] = clrObj->GetColor("#FFf000");
+  clrTemp[11] = clrObj->GetColor("#d7ff00");
+  clrTemp[10] = clrObj->GetColor("#65ff00");
+  clrTemp[9] = clrObj->GetColor("#00ff10");
+  clrTemp[8] = clrObj->GetColor("#C44D58");
+  clrTemp[7] = clrObj->GetColor("#FF6B6B");
+  clrTemp[6] = clrObj->GetColor("#92C7A3");
+  clrTemp[5] = clrObj->GetColor("#4ECDC4");
+  clrTemp[4] = clrObj->GetColor("#556270");
+  clrTemp[3] = clrObj->GetColor("#83988E");
+  clrTemp[2] = clrObj->GetColor("#45ADA8");
+  clrTemp[1] = clrObj->GetColor("#547980");
+  clrTemp[0] = clrObj->GetColor("#594F4F");
+  // clr[9] = clrObj->GetColor("");
+  delete clrObj;
+  // getchar();
 }
 
-DrawFuns::~DrawFuns() {}
+DrawFuns::~DrawFuns() {
+}
 
 void DrawFuns::prettify (TGraph *gr ) {
   //gr->GetXaxis()->SetLogx();
@@ -47,7 +102,7 @@ void DrawFuns::prettify (TMultiGraph *gr) {
   gr->GetYaxis()->SetTitle("Y axis [unit]");
   gr->GetXaxis()->SetTitleSize(0.07);
   gr->GetYaxis()->SetTitleSize(0.07);
-  gr->GetXaxis()->SetTitleOffset(0.7);
+  gr->GetXaxis()->SetTitleOffset(0.8);
   gr->GetYaxis()->SetTitleOffset(0.7);
   gr->GetXaxis()->SetTitleFont(132);
   gr->GetYaxis()->SetTitleFont(132);
@@ -94,7 +149,8 @@ void DrawFuns::prettify (TH2 *h ) {
   h->GetYaxis()->SetTitle("Y axis [unit]");
   h->GetXaxis()->SetTitleSize(0.07);
   h->GetYaxis()->SetTitleSize(0.07);
-  h->GetYaxis()->SetTitleOffset(0.8);
+  h->GetYaxis()->SetTitleOffset(0.7);
+  h->GetXaxis()->SetTitleOffset(0.7);
   h->GetXaxis()->SetTitleFont(132);
   h->GetYaxis()->SetTitleFont(132);
   h->GetXaxis()->SetLabelSize(0.05);
@@ -152,7 +208,8 @@ void DrawFuns::prettify (TH1 *h , std::string color = "red") {
   h->GetYaxis()->SetTitle("Y axis [unit]");
   h->GetXaxis()->SetTitleSize(0.07);
   h->GetYaxis()->SetTitleSize(0.07);
-  h->GetYaxis()->SetTitleOffset(0.8);
+  h->GetXaxis()->SetTitleOffset(0.7);
+  h->GetYaxis()->SetTitleOffset(0.7);
   h->GetXaxis()->SetTitleFont(132);
   h->GetYaxis()->SetTitleFont(132);
   h->GetXaxis()->SetLabelSize(0.05);

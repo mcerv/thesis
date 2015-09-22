@@ -19,7 +19,7 @@
 #include "TColor.h"
 #include <math.h>
 
-#define DEBUG 2
+#define DEBUG 1
 #define S52 0
 #define S79 1
 #define S37 2

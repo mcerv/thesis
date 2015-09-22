@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  15 JUL 2015 13:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 AUG 2015 17:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -140,41 +140,54 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@lotdepth=\count97
 \sf@top=\skip46
 \sf@bottom=\skip47
-) (./chapter.aux)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip48
+\enit@outerparindent=\dimen113
+\enit@toks=\toks16
+\enit@inbox=\box26
+\enitdp@description=\count98
+)
+(./chapter.aux
+
+LaTeX Warning: Label `eq:vsat' multiply defined.
+
+)
 \openout1 = `chapter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 8.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 10.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 10.
  (/usr/local/texlive/2012/texmf-dist/tex/generic/babel/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    ... okay on input line 10.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count98
-\scratchdimen=\dimen113
-\scratchbox=\box26
-\nofMPsegments=\count99
-\nofMParguments=\count100
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count101
-\MPscratchDim=\dimen114
-\MPnumerator=\count102
-\makeMPintoPDFobject=\count103
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count99
+\scratchdimen=\dimen114
+\scratchbox=\box27
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen115
+\MPnumerator=\count103
+\makeMPintoPDFobject=\count104
+\everyMPtoPDFconversion=\toks18
 ) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -228,11 +241,11 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 Chapter 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -244,83 +257,99 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 File: plots/semilattice9.pdf Graphic file (type pdf)
 
 <use plots/semilattice9.pdf>
-Package pdftex.def Info: plots/semilattice9.pdf used on input line 60.
+Package pdftex.def Info: plots/semilattice9.pdf used on input line 63.
 (pdftex.def)             Requested size: 173.44534pt x 169.09402pt.
 
 <plots/simpledrift.pdf, id=16, 128.98187pt x 73.77562pt>
 File: plots/simpledrift.pdf Graphic file (type pdf)
 
 <use plots/simpledrift.pdf>
-Package pdftex.def Info: plots/simpledrift.pdf used on input line 72.
+Package pdftex.def Info: plots/simpledrift.pdf used on input line 75.
 (pdftex.def)             Requested size: 195.12767pt x 111.62pt.
 
 <plots/simpledrifteq.pdf, id=17, 124.465pt x 66.2475pt>
 File: plots/simpledrifteq.pdf Graphic file (type pdf)
 
 <use plots/simpledrifteq.pdf>
-Package pdftex.def Info: plots/simpledrifteq.pdf used on input line 73.
+Package pdftex.def Info: plots/simpledrifteq.pdf used on input line 76.
 (pdftex.def)             Requested size: 195.12767pt x 103.86726pt.
- [2 <./plots/semilattice9.pdf> <./plots/simpledrift.pdf> <./plots/simpledrifteq
-.pdf>]
-<plots/energygap.pdf, id=83, 101.37875pt x 66.74937pt>
+ [2
+
+ <./plots/semilattice9.pdf>]
+<plots/energygap.pdf, id=43, 101.37875pt x 66.74937pt>
 File: plots/energygap.pdf Graphic file (type pdf)
 
 <use plots/energygap.pdf>
-Package pdftex.def Info: plots/energygap.pdf used on input line 92.
+Package pdftex.def Info: plots/energygap.pdf used on input line 98.
 (pdftex.def)             Requested size: 173.44534pt x 114.20267pt.
-
-<plots/Intrinsic_energy_res.pdf, id=84, 569.12625pt x 364.36125pt>
+ [3 <./plots/simpledrift.pdf> <./plots/simpledrifteq.pdf> <./plots/energygap.pd
+f>]
+<plots/Intrinsic_energy_res.pdf, id=107, 569.12625pt x 364.36125pt>
 File: plots/Intrinsic_energy_res.pdf Graphic file (type pdf)
 
 <use plots/Intrinsic_energy_res.pdf>
-Package pdftex.def Info: plots/Intrinsic_energy_res.pdf used on input line 121.
+Package pdftex.def Info: plots/Intrinsic_energy_res.pdf used on input line 127.
 
 (pdftex.def)             Requested size: 346.89731pt x 222.0988pt.
- [3 <./plots/energygap.pdf>]
-<plots/curramp.pdf, id=109, 153.07187pt x 66.74937pt>
-File: plots/curramp.pdf Graphic file (type pdf)
- <use plots/curramp.pdf>
-Package pdftex.def Info: plots/curramp.pdf used on input line 172.
-(pdftex.def)             Requested size: 260.17464pt x 113.45915pt.
+ [4 <./plots/Intrinsic_energy_res.pdf, page is rotated 90 degrees>]
 
-[4 <./plots/Intrinsic_energy_res.pdf, page is rotated 90 degrees>]
-<plots/chgamp.pdf, id=156, 153.07187pt x 90.83937pt>
+LaTeX Warning: Reference `XXXCHAPTER' on page 5 undefined on input line 164.
+
+[5
+
+] <plots/curramp.pdf, id=159, 153.07187pt x 66.74937pt>
+File: plots/curramp.pdf Graphic file (type pdf)
+
+<use plots/curramp.pdf>
+Package pdftex.def Info: plots/curramp.pdf used on input line 223.
+(pdftex.def)             Requested size: 260.17464pt x 113.45915pt.
+ [6
+
+ <./plots/curramp.pdf>]
+<plots/chgamp.pdf, id=180, 153.07187pt x 90.83937pt>
 File: plots/chgamp.pdf Graphic file (type pdf)
  <use plots/chgamp.pdf>
-Package pdftex.def Info: plots/chgamp.pdf used on input line 190.
+Package pdftex.def Info: plots/chgamp.pdf used on input line 241.
 (pdftex.def)             Requested size: 260.17464pt x 154.40685pt.
 
-[5 <./plots/curramp.pdf> <./plots/chgamp.pdf>] [6] (./chapter.aux) ) 
+[7 <./plots/chgamp.pdf>] [8] (./chapter.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3611 strings out of 493488
- 55089 string characters out of 3141326
- 112667 words of memory out of 3000000
- 6852 multiletter control sequences out of 15000+200000
+ 3891 strings out of 493488
+ 59825 string characters out of 3141326
+ 117942 words of memory out of 3000000
+ 7128 multiletter control sequences out of 15000+200000
  15366 words of font info for 56 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,15n,46p,838b,416s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local
-/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/
-texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
-/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2
-012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2012/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2012/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2012/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2012/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2012/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2012/texmf-dist/fo
-nts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2012/texmf-dist/
-fonts/type1/public/cbfonts/grmn1095.pfb>
-Output written on chapter.pdf (6 pages, 281398 bytes).
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2012/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2012/te
+xmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2012/
+texmf-dist/fonts/type1/public/cbfonts/grmn1095.pfb>
+Output written on chapter.pdf (8 pages, 295373 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
+ 262 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
