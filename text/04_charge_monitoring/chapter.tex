@@ -4,12 +4,14 @@
 \usepackage{caption}
 \usepackage{upgreek}
 \usepackage{subfig}
+\usepackage{textcomp}
 
 \usepackage{packages/fancyhdr}% http://ctan.org/pkg/fancyhdr
 \pagestyle{fancy}% Change page style to fancy
 %\fancyhf{}% Clear header/footer
-\fancyhead{}
-\fancyhead[RO, LE]{Charge monitoring}	
+%\fancyhead{}
+%\fancyhead[RO, LE]{Introduction}	
+%\fancyhead[RO, LE]{\rightmark}	
 %\fancyfoot{}
 %\fancyfoot[RO, LE]{\thepage}% \fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0.7pt}% Default \headrulewidth is 0.4pt
@@ -23,8 +25,9 @@
 
 
 % ---------------------------------------------------------------------------------------------------------------
-\chapter{Charge monitoring}
+\chapter{Charge monitoring -- the ATLAS Diamond Beam Monitor}
 % ---------------------------------------------------------------------------------------------------------------
+
 
 Diamond Beam Monitor
 
@@ -54,19 +57,72 @@ Comparison between diamond and silicon modules.
 
 
 % ---------------------------------------------------------------------------------------------------------------
-\clearpage
-\section{The ATLAS Diamond Beam Monitor}
+%\clearpage
+%\section{The ATLAS Diamond Beam Monitor}
+%\label{sec:atlasdbm}
+% ---------------------------------------------------------------------------------------------------------------
+The ATLAS Diamond Beam Monitor (DBM) is a novel high energy charged particle detector. Its function is to measure luminosity and beam background in the ATLAS experiment. The monitor's pCVD diamond sensors are instrumented with pixellated FE-I4 front-end chips. The CVD diamond sensor material was chosen to ensure the durability of the sensors in a radiation-hard environment. The DBM was designed as an upgrade to the existing luminosity monitor called the Beam Conditions Monitor (BCM)~\cite{} consisting of eight diamond pad detectors. It is able to perform precise time-of-flight (ToF) measurements. The DBM complements the BCM's features by implementing tracking capability. Its pixelated front-end electronics significantly increase the spatial resolution of the system. Furthermore, the DBM is able to distinguish particle tracks originating in the collision region from the background hits. This capability is a result of its projective geometry pointing towards the interaction region. This chapter first describes the principles of luminosity measurements. It then explains how the DBM will carry out this task. Finally, some results from tests and from the real collisions are presented. 
+
+When a particle traverses a sensor plane, a hit is recorded in the corresponding pixel. Thus, a precise spatial and timing information of the hit is extracted. With three or more sensors stacked one behind the other, it is also possible to define the particle's trajectory. This is the case with the DBM. Its projective geometry allows the particles to be tracked if they traverse the sensor planes. The DBM relates the luminosity to the number of particle tracks that originate from the collision region of the ATLAS experiment. Particles that hit the DBM from other directions are not taken into account.
+
+
+% ---------------------------------------------------------------------------------------------------------------
+%\clearpage
+\section{Luminosity measurements}
+\label{sec:lummeas}
+% ---------------------------------------------------------------------------------------------------------------
+ \label{sec:lumi}
+Luminosity is one of the most important parameters of a particle collider. It is a measurement of the rate of particle collisions that are produced by two particle beams. It can be described as a function of beam parameters, such as: the number of colliding bunch pairs, the revolution frequency, the number of particles in each bunch and the transverse bunch dimensions. The first four parameters are well defined. However, the transverse bunch dimensions have to be determined experimentally during calibration. The ATLAS experiment uses the \emph{van der Meer scan} \cite{} during low-luminosity runs to calibrate the luminosity detectors. This scan is performed by displacing one beam in a given direction and measuring the rate of interactions as a function of the displacement. Transverse charge density of the bunches can be estimated on the basis of the interaction rate. The calibrated luminosity detectors can then operate during high-luminosity runs.
+
+One approach to luminosity monitoring is to count the number of particles produced by the collisions. The luminosity is then proportional to the number of detected particles. A detector has to be capable of distinguishing individual particles that fly from the interaction point through the active sensor area. If the number of particles reaching the sensors is too high, the detectors may saturate. It is hence important to design detectors with a high time and/or spatial resolution.
+
+
+
+
+
+% ---------------------------------------------------------------------------------------------------------------
+%\clearpage
+\section{Diamond pixel module}
 \label{sec:atlasdbm}
 % ---------------------------------------------------------------------------------------------------------------
+\subsection{Front-end electronics}
+%Currently, the ATLAS pixel detector consists of three layers of silicon pixel sensors utilising the FE-I3 front-end ASIC pixel readout chips. In order to increase the impact parameter resolution of the detector, a fourth layer of sensors will be installed around the beam pipe. 
+The FE-I4 (front-end version four) is an ASIC pixel chip designed specifically for the ATLAS pixel detector upgrade. The newly installed pixel layer called the Insertable B-Layer (IBL)~\cite{} is equipped with 336 FE-I4 modules. The DBM uses the same chips. The FE-I4's integrated circuit contains readout circuitry for 26~880 pixels arranged in 80 columns on a 250~$\upmu$m pitch and 336 rows on a 50~$\upmu$m pitch. The size of the active area is therefore 20.0~mm~$\times$~16.8~mm. This fine granularity allows for a high precision particle tracking. The chip operates at 40~MHz with a 25~ns acquisition window, which corresponds to the spacing of the particle bunches in the LHC. It is hence able to correlate hits/tracks to their corresponding bunch. Furthermore, each pixel is capable of measuring the deposited charge of a detected particle by using the Time-over-Threshold method. The pixels are designed to collect the negative charge. Finally, the FEI4 has been designed to withstand a radiation dose up to 300 MGy. This ensures long term stability in the radiation hard forward region of the experiment.
 
-\subsection{Diamond pixel module}
-\subsection{Module assembly and quality control}
-\subsection{Installation and commissioning}
-\subsection{Performance results}
-\subsubsection{Source tests}
-\subsubsection{Test beam results}
+\subsection{Positioning}
+The DBM is placed in the forward region of the ATLAS detector, very close to the beam pipe. The mechanical structure that holds the sensor planes is, due to its shape, referred to as a DBM telescope. A telescope is a system that consists of several pixel sensors placed in series one behind the other. Each DBM telescope houses three diamond pixel modules. Eight DBM telescopes reside approximately 1~m away from the collision region, four on each side. They are tilted with respect to the beam pipe for 10\textdegree. This is due to a specific phenomenon connected to erratic (dark) currents in diamond. Studies have shown~\cite{} that the erratic leakage currents that gradually develop in diamond can be suppressed under certain conditions. For instance, if a strong magnetic field is applied perpendicular to the electric field lines in the diamond bulk, the leakage current stabilises~\cite{}. The DBM was designed to exploit this phenomenon. The magnetic field lines in the ATLAS experiment are parallel to the beam. Hence, an angular displacement of the sensor with respect to the beam allows for the leakage current suppression. However, the DBM telescopes still need to be directed towards the interaction region. Taking these considerations into account, a 10\textdegree~angle with respect to the beam pipe was chosen. The influence of the magnetic field on the particle tracks at this angle is very low as the field lines are almost parallel to the tracks. The tracks are therefore straight, which reduces the track reconstruction complexity.
+
+% It is capable of carrying out position-resolved measurements by performing high-precision particle tracking.
+
+
+% ---------------------------------------------------------------------------------------------------------------
+\section{Module assembly and quality control}
+\label{sec:modass}
+% ---------------------------------------------------------------------------------------------------------------
+
+
+% ---------------------------------------------------------------------------------------------------------------
+\section{Installation and commissioning}
+\label{sec:installationcomm}
+% ---------------------------------------------------------------------------------------------------------------
+
+\subsection{Positioning}
+
+% ---------------------------------------------------------------------------------------------------------------
+\section{Performance results}
+\label{sec:perfresults}
+% ---------------------------------------------------------------------------------------------------------------
+
+\subsection{Source tests}
+\subsection{Test beam results}
 Spatial resolution, efficiency, ToT
-\subsection{Limitations}
+
+
+% ---------------------------------------------------------------------------------------------------------------
+\section{Limitations}
+\label{sec:limitations}
+% ---------------------------------------------------------------------------------------------------------------
+
 comparison between diamond and silicon modules
 
 
