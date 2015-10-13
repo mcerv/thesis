@@ -17,7 +17,7 @@
 %\rfoot{\thepage}
 
 \begin{document}
-\baselineskip=16pt
+\baselineskip=15pt
 % ---------------------------------------------------------------------------------------------------------------
 
 
@@ -26,10 +26,51 @@
 \chapter{Current monitoring}
 % ---------------------------------------------------------------------------------------------------------------
 	- Real-time particle identification
-		- Pulse shape (width, area. . .) and its constrants
+		- Pulse shape (width, area. . .) and its constraints
 		- Device constraints
-		- Vienna TRIGA reactor
-//		- Real time cross section measurement at IRMM?
+
+Diamond sensors have a very fast signal response due to their low capacitance. The electrical signal created by drifting charge carriers retains its shape without significant distortion. When the sensor is used together with a fast current amplifier with a high broadband limit ($\sim$2~GHz) and a readout device with a similar limit, the information about the drifting charges is retained. For instance, a proton creates the free e-h pairs along its trajectory. The electrons and holes start drifting immediately. Those closest to the electrodes recombine quickly whereas those at the opposite side contribute to the induced signal for longer. The resulting signal is therefore a triangular pulse with a steep rising edge and a gentle falling edge. This means that it is possible to determine, with a certain probability, the type of radiation detected by the diamond sensor. Furthermore, it is possible to determine the speed of the charge carriers, as was done in chapter~\ref{}. This, however, only applies to sCVD diamond . Its uniform carbon lattice allows the ionisation profiles to retain their shape, unlike in pCVD material, laden with grain boundaries, or in even in silicon where the shape is deformed due to p-n junction non-uniformities.
+
+Chapter~\ref{} shows that the shape is heavily dependent on several factors, such as environmental temperature and received irradiation dose. At temperatures lower than 150~K the signal from an $\upalpha$ starts deteriorating due to recombination of charges in the charge cloud. Sensor irradiation, on the other hand, introduces charge traps, which cause the signal to decay exponentially. These two factors are a significant limitation for particle identification. Priming can improve the charge collection and longterm stability of the pulse shapes. To improve the measurement further, a high bias voltage has to be applied, with the right polarity for hole collection. These settings will yield a high and narrow $\upalpha$ pulse, increasing the measurement SNR. 
+
+
+%The most straightforward way is to discriminate between $\upalpha$ (rectangular) and $\upgamma$ or proton (triangular) pulses.
+
+\begin{center}
+\begin{tabular}{l*{1}{c}}
+Factor              & Operating range \\
+\hline
+Sensor material & sCVD diamond \\
+Sensor thickness & $500~\mu m$ \\
+Temperature & 150~K -- 400~K \\
+Radiation dose & $1\times10^{13}~neq~cm^{-2} s^{-1}$ \\
+Charge carriers & holes \\
+Bias voltage & $\sim1~V \mu m^{-1}$ \\
+Signal-to-noise & 5 \\
+\end{tabular}
+\captionof{table}{Limitations to particle identification}
+\label{tab:limits}
+\end{center}
+
+
+
+
+This chapter describes an application that carries out particle identification using pulse shape analysis. It was developed to count neutrons emitted by a neutron reactor. In this case the device has to be able to filter out the photon background with a rate several orders of magnitude higher than the neutron rate. Overall detected rate in a neutron reactor can easily exceed $10^8$ particles $cm^{-2}s^{-1}$, depending on the distance of the detector from the reactor core. The device has to be able to cope with such high rates. It also needs to be dead time free or at least close to that, to minimise the counting error. At these rates, it still has to be able to identify the types of pulse. This type of online analysis cannot be done in software. It has to be implemented in an FPGA.
+
+
+
+
+
+
+
+%To sum up, observing the ionisation profiles in sCVD diamond allows us to determine the type of radiation. 
+
+
+
+- pulse shape
+- constraints
+- single
+
 
 
 
@@ -37,47 +78,74 @@
 
 % ---------------------------------------------------------------------------------------------------------------
 \clearpage
-\section{Real-time particle identification}
+\section{Application for real-time particle identification}
 \label{sec:rtpi}
 % ---------------------------------------------------------------------------------------------------------------
+Pulse shape analysis (PSA) is a common software tool for analysing sensor response to impinging particles. It is usually done using software that runs over big amounts of data that have been acquired and saved to storage. This offline analysis can be repeated and improved. However, the saved data take up a lot of storage space. In addition, saving raw waveform data requires a system capable of a high data throughput and fast data storing. For instance, an oscilloscope can save up to 100~waveforms per second. This means that there is a high measurement dead time. To avoid the high dead times, the software algorithms can be ported to the FPGA where they analyse the incoming signal in real time. The signal is then discarded and only the analysis results are saved, decreasing the storage space significantly.
 
+The offline pulse shape analysis has already been used for particle identification with a diamond sensor. An effort has been made to implement an online and real time application for this analysis by porting the algorithms into an FPGA. This section first describes the device specifications Then it describes in detail the PSA algorithms and the structure of the code. Finally it discusses the performance results.
+
+
+
+\subsection{Device specifications and constraints}
+The ROSY box has a single BNC input with the termination $50~\Omega$ or $1~M\Omega$ with a DC or AC coupling. The analog chain has a 250~MHz bandwidth limit. The input range can be set from $\pm$50~mV up to $\pm$5~V. The signal offset can be set to any value within this range. The ADC is samples this signal with an 8-bit precision at a rate of up to 5~GSPS. The PSA uses the highest sampling to achieve width measurement resolution of 0.2~ns. The spectroscopic application does not need such a fine timing resolution and therefore operates at a reduced sampling rate of 0.8~ns. The amplitude resolution depends on the chosen input range, but at 256 ADC counts per sample, it can be as low as 0.39~mV~s$^{-1}$ at the range of $\pm$50~mV and as high as 39~mV~s$^{-1}$ at the range of $\pm$5~V.
+
+The logic structure of the PSA is designed using VHDL and runs on Xilinx Virtex~5. The PSA is capable of a maximum counting rate of $1.56\times10^8$ pulses per second, yielding a 6.4~ns double pulse resolution. The analysis is more time consuming; the maximum throughput rate of the pulse shape analysis is $\sim10^7$ pulses per second. This means that after every pulse, the device has a dead time of approximately 100$\pm$15~ns, depending on the width of the pulse being analysed. Any pulse arriving during the analysis of the previous one will be counted, but not analysed. Any two pulses with the distance between the rising edges lower than 6.4~ns will be counted as a single pulse.
+
+The device is very sensitive to noise pick-up. Therefore the setup must be designed to minimise the pick-up by means of proper shielding, use of high-quality cables etc. The relatively low bandwidth limit filters out some high-frequency noise, but not the ringing or higher noise spikes. That is the task for the PSA.
 
 \subsection{Pulse parameters}
+A signal pulse on the input is parametrised during the analysis process. The PSA measures its amplitude, area, width and the slope of its falling edge. The amplitude is the difference between the baseline and the highest sample in the pulse and is given in ADC counts as an 8-bit value. The area is defined as the sum of amplitudes of all samples between two defined boundaries within the pulse. The width is defined as the number of samples with a value higher than a set amplitude threshold. If the threshold is at half the maximum amplitude, the resulting width is \emph{full width at half maximum} (FWHM). The falling slope is the maximum negative difference between values of two samples and is given in ADC counts per sample. These parameters can also be used as \emph{qualifiers} for accepting or discarding a pulse. All four parameters limited by the low and high limit are called a \emph{qualifier set}. For instance, a rectangular pulse by an $\upalpha$ particle will always have the same FWHM and a very steep slope. In comparison, a photon will have a lower falling slope value and a narrower FWHM. Therefore the low and high cut on these two qualifiers will make possible to discriminate between the two pulses. Another qualifier is a so-called \emph{form factor} and is defined as the multiplication of measured amplitude and width. This qualifier is then compared to the measured area.
+
+
+%Every parameter set is saved into a histogram after analysis.  The falling slope is not even a physical quantity, but as will be shown later, can improve the identification. 
+
+
 \subsection{Real-time pulse shape analysis algorithm}
-\subsection{Device specifications and constraints}
-Lab measurements
+
+
+
 \subsection{Performance results}
-\subsubsection{Thermal neutron measurements}
+The device has been tested in the lab using a pulse generator as well as several radioactive sources. The results show that: 1) the amplitude, area and width measurement are linear across all input ranges, 2) the highest rate of the PSA algorithm is $\sim10^7$ pulses per second and 3) the lowest SNR where the algorithm still functions is $\sim$5. The 
+
+\subsubsection{Rate and linearity}
+frequency, pulse gen..
+
+\subsubsection{Calibration}
+alpha
+quadruple alpha
+
+\subsubsection{Pulse identification}
+Finally, the device was tested using two radioactive sources at the same time. The $^{241}Am$ source of 5.12~MeV $\upalpha$ particles was placed on one side of the diamond. The $^{60}$Co source of photons with the energy of 1.3~MeV was placed on the other side.
+alpha and cobalt
+
+% ---------------------------------------------------------------------------------------------------------------
+\clearpage
+\section{Neutron measurements}
+\label{sec:nm}
+% ---------------------------------------------------------------------------------------------------------------
+Semiconductor-based neutron detectors provide a compact technology for neutron detection. However, the cross section of a neutron with the diamond bulk is very low, since it interacts with the core of the atom. Diamond is mainly used to detect charged particles and photons. Hence, a converter foil has to be added to produce second order effects. Incoming neutrons interact with the foil, producing a set of secondary particles and photons. These can then be detected upon hitting the detector bulk. Common neutron interactions that are used in thermal neutron detection are \textsuperscript{10}B(n,$\alpha$)\textsuperscript{7}Li reaction and \textsuperscript{6}Li(n,$\alpha$)\textsuperscript{3}H reaction ($\alpha$ stands for $^4_2$He, see equation~\ref{eq:reaction}). The focus in this chapter will be on the latter of the two. With a foil installed, there are several possibilities for neutrons to interact with the detector system. Each of these interactions ionises the diamond bulk in its own way, resulting in a specific shape of the current pulse. A neutron can: 1) interact with the foil, producing an $\upalpha$ and a \textsuperscript{3}H, 2) interact with a carbon atom, producing an $\upalpha$ and a $\upgamma$ or even three $\upalpha$. The particles in the first case will be produced outside the diamond and will get stopped immediately upon hitting the sensor. The resulting pulses for both particles will have a rectangular shape of the same width, because the carriers will drift with the same speed in both cases. The difference is in the number of free carriers produced - the triton will release more of them, which will in turn induce a higher pulse. 
+\begin{equation}
+\label{eq:reaction}
+   ^6_3Li   +   ^1_0n \;\rightarrow\; ^3_1H_{(2.73 MeV)} + \alpha_{(2.05 MeV)}
+\end{equation}
+
+It turns out that neutron reactors emit large amounts of $\upgamma$ radiation in energy range up to 3~MeV. This already affects measurements of $\upalpha$ particles, the energy of which peaks at 2.05 MeV in the case of \textsuperscript{6}Li converter foil. However, $\upgamma$ background radiation could be suppressed by discriminating current pulses of photons and $\alpha$ particles. This idea has already been implemented in offline analysis. The results show that the background photons can be subtracted successfully. In order to improve the speed of the readout system and pulse analysis, the algorithm has been ported to FPGA where it discriminates particles in real time. 
 
 
-%\chapter{Particle discrimination}
-%
-%\section{Discrimination based on TCT pulses}
-%
-%\subsection{Ionisation profiles in diamond}
-%
-%
-%\subsection{Discrimination parameters}
-%FWHM, TCT falling edge (2 pg)
-%
-%
-%\section{Real-time pulse parametrisation}
-%(4 pg)
-%
-%\subsection{Readout device}
-%(2 pg)
-%
-%\subsection{Pulse shape analysis algorithm}
-%(8 pg)
-%
-%\subsection{Device specifications}
-%(5 pg)
-%
-%\subsection{Application: Thermal neutron counter}
-%(10 pg)
-%
-%
-%\section{}
+\subsection{Thermal neutron spectroscopy}
+ROSY readout device with the implemented Pulse Shape Analysis was put to a test at Atominstitut in Vienna. Their TRIGA2 neutron reactor is capable of delivering thermal neutrons with the energy 0.012~eV at a rate of 1000~neutrons cm$^{-2}$ $s^{-1}$, however with a considerable $\gamma$ background. 
+
+With the measurement setup already commissioned, the experiment started delivering data almost immediately. First, the device was calibrated using an unsealed monochromatic $\alpha$-source with the energy $E_\alpha=5.12MeV$. Then the diamond detector was exposed to the beam. Secondary reaction products ($\alpha$ and \textsuperscript{3}H particles), created by neutrons hitting the converter foil, were detected by the diamond sensor, together with a significant photon background. Then the pulse identification algorithm was applied to discriminate between the reaction products and the photons.
+
+\subsubsection{Measurement setup}
+%The diagram in figure~\ref{fig:rochain} shows the readout chain of the measurement system, which consists of a detector assembly, a signal preamplifier, a readout device and a controller PC. 
+The main parts of the detector were an scCVD diamond sensor sized $4.7\times4.7$~cm$^2$ and a $1.8~\upmu$m thick LiF converter foil, both embedded in an RF-tight PCB. The diamond sensor was biased with high voltage and capacitively coupled to CIVIDEC's C2 40~dB wide bandwidth signal preamplifier. A 5~m long BNC cable connected the preamplifier to CIVIDEC ROSY box. The detector assembly together with the preamplifier was fixed in front of an exit hole of the reactor.
+
+
+
+\subsubsection{Results}
+
 
 
 
