@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  17 OCT 2015 20:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  17 OCT 2015 21:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -339,16 +339,16 @@ Overfull \hbox (205.28477pt too wide) in paragraph at lines 116--117
 []
  []
 
-[5] [6]
+[5] [6] [7]
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 159.
+LaTeX Warning: Reference `' on page 8 undefined on input line 162.
 
 
-Overfull \hbox (164.90834pt too wide) in paragraph at lines 165--166
+Overfull \hbox (164.90834pt too wide) in paragraph at lines 168--169
 []
  []
 
-[7] [8] (./chapter.aux)
+[8] [9] (./chapter.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -356,11 +356,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  3678 strings out of 493488
  55380 string characters out of 3141326
- 111190 words of memory out of 3000000
+ 110190 words of memory out of 3000000
  6940 multiletter control sequences out of 15000+200000
  12294 words of font info for 45 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,10n,43p,2329b,291s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,43p,2333b,291s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
@@ -370,10 +370,10 @@ local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loc
 al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loca
 l/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on chapter.pdf (8 pages, 106413 bytes).
+Output written on chapter.pdf (9 pages, 108384 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
