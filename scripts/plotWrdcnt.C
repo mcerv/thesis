@@ -26,7 +26,10 @@
   gr->SetTitle("Thesis wordcount");
   gr->GetXaxis()->SetTitle("Time");
   gr->GetYaxis()->SetTitle("Words");
-
+  gr->GetXaxis()->SetTimeDisplay(1);
+  gr->GetXaxis()->SetNdivisions(-503);
+  gr->GetXaxis()->SetTimeFormat("%d.%m.%y");
+  gr->GetXaxis()->SetTimeOffset(0,"gmt");
 
 
   // if (!f.is_open()) {
