@@ -22,7 +22,7 @@
 #include "converters/storage/event.h"
 #include "converters/storage/plane.h"
 #include "converters/storage/hit.h"
-
+#include "TLatex.h"
 
 #define DEBUG 0
 #define S52 0
@@ -64,7 +64,7 @@ int32_t main (void) {
   cout<<"Plotting a longterm stability.."<<endl;
 
   const int32_t nSamples = 5;
-  const string sampleName[nSamples] = {"S52", "S79", "S37", "S52after", "S79after"};
+  const string sampleName[nSamples] = {"S37", "S79after", "S52after", "S79", "S52"};
   const string dir = "/Volumes/WINSTORAGE/Meas/Hysteresis/2015-08-03/longterm/";
 
   //Start graphs
@@ -110,7 +110,7 @@ int32_t main (void) {
 
   for (int32_t sample=0; sample<nSamples; sample++) {
     //average over ten hits
-    const int32_t averaging = 20;
+    const int32_t averaging = 50;
     int32_t avgCnt = 0;
     double amplSum = 0;
     double amplAvg = 0;
@@ -151,17 +151,27 @@ int32_t main (void) {
 
   TMultiGraph* mg = new TMultiGraph();
   TGraphErrors* gr[nSamples];
-  TLegend* leg = new TLegend(0.65,0.4,0.8,0.65);
+  TLegend* leg = new TLegend(0.62,0.4,0.83,0.67);
 
   for (int32_t sample=0; sample<nSamples; sample++) {
     gr[sample] = new TGraphErrors(amplitudeAvg.at(sample).size(), &timestampAvg.at(sample)[0], &amplitudeAvg.at(sample)[0],
                                   &timestampAvgError.at(sample)[0], &amplitudeAvgError.at(sample)[0]);
     dr->prettify(gr[sample]);
-    gr[sample]->SetLineColor(dr->clrVolt[sample]);
+    // gr[sample]->SetLineColor(dr->clrVolt[sample]);
+    gr[sample]->SetMarkerStyle(24-sample);
     mg->Add(gr[sample]);
     ss.str("");
-    ss << sampleName[sample];
-    leg->AddEntry(gr[sample], ss.str().c_str(),  "L");
+
+    string samName;
+    if (!sampleName[sample].compare("S52after"))
+      samName = "S52 primed";
+    else if (!sampleName[sample].compare("S79after"))
+      samName = "S79 primed";
+    else
+      samName = sampleName[sample];
+
+    ss << samName;
+    leg->AddEntry(gr[sample], ss.str().c_str(),  "LEP");
   }
   mg->Draw("ALP");
   dr->prettify(mg);
@@ -171,6 +181,9 @@ int32_t main (void) {
   mg->GetXaxis()->SetRangeUser(0,1150); //[s]
   leg->Draw("same");
 
+  TLatex *tex1 = new TLatex(5,0.01,"MEASUREMENT");
+  tex1->SetTextFont(132);
+  tex1->Draw("same");
 
 
   can->Update();

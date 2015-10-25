@@ -71,25 +71,28 @@ DrawFuns::~DrawFuns() {
 void DrawFuns::prettify (TGraph *gr ) {
   //gr->GetXaxis()->SetLogx();
     gStyle->SetOptStat(0);
-    gr->SetLineColor(kRed+1);
+    // gr->SetLineColor(kRed+1);
     //gr->Draw("AL.");
     //gr->SetMarkerColor(kBlack);
     //gr->GetYaxis()->SetRangeUser(minYd,maxYd);
     //gr->GetXaxis()->SetRangeUser(0,endPulsed-startPulsed);
-    gr->SetLineWidth(2);
+    gr->SetLineWidth(1);
     //gr->SetName("Graph");
     gr->SetTitle("");
     gr->GetXaxis()->SetTitle("X axis [unit]");
     gr->GetYaxis()->SetTitle("Y axis [unit]");
     gr->GetXaxis()->SetTitleSize(0.07);
     gr->GetYaxis()->SetTitleSize(0.07);
-    gr->GetXaxis()->SetTitleOffset(0.7);
-    gr->GetYaxis()->SetTitleOffset(0.7);
-    gr->GetXaxis()->SetTitleFont(132);
-    gr->GetYaxis()->SetTitleFont(132);
+    gr->GetXaxis()->SetTitleOffset(0.9);
+    gr->GetYaxis()->SetTitleOffset(0.9);
+    // gr->GetXaxis()->SetTitleFont(132);
+    // gr->GetYaxis()->SetTitleFont(132);
     gr->GetXaxis()->SetLabelSize(0.05);
     gr->GetYaxis()->SetLabelSize(0.05);
     gr->GetYaxis()->SetTickLength(0.01);
+
+    gr->SetMarkerColor(kBlack);
+    gr->SetMarkerStyle(20);
 }
 
 void DrawFuns::prettify (TGraphErrors *gr) {
@@ -102,10 +105,10 @@ void DrawFuns::prettify (TMultiGraph *gr) {
   gr->GetYaxis()->SetTitle("Y axis [unit]");
   gr->GetXaxis()->SetTitleSize(0.07);
   gr->GetYaxis()->SetTitleSize(0.07);
-  gr->GetXaxis()->SetTitleOffset(0.8);
-  gr->GetYaxis()->SetTitleOffset(0.7);
-  gr->GetXaxis()->SetTitleFont(132);
-  gr->GetYaxis()->SetTitleFont(132);
+  gr->GetXaxis()->SetTitleOffset(0.9);
+  gr->GetYaxis()->SetTitleOffset(0.9);
+  // gr->GetXaxis()->SetTitleFont(132);
+  // gr->GetYaxis()->SetTitleFont(132);
   gr->GetXaxis()->SetLabelSize(0.05);
   gr->GetYaxis()->SetLabelSize(0.05);
   gr->GetYaxis()->SetTickLength(0.01);
@@ -116,11 +119,11 @@ void DrawFuns::prettify (TVirtualPad *c, string histType = "th1") {
   c->SetGrid();
   // c->SetLogx();
   c->SetTopMargin(0.03);
-  c->SetBottomMargin(0.12);
-  c->SetLeftMargin(0.12);
+  c->SetBottomMargin(0.15);
+  c->SetLeftMargin(0.15);
   c->SetRightMargin(0.03);
   if (!histType.compare("th2")) {
-    c->SetRightMargin(0.13);
+    c->SetRightMargin(0.15);
   }
 
   c->SetTitle("");

@@ -9,6 +9,7 @@
 #include "TMultiGraph.h"
 #include "TF1.h"
 #include "TLegend.h"
+#include <fstream>
 
 using namespace std;
 
@@ -178,7 +179,19 @@ int32_t main (void) {
     // c[sample]->Update();
     // c[sample]->WaitPrimitive();
 
-
+    //save to a file
+    stringstream ssccd;
+    ssccd.str("");
+    ssccd << "ccd_" << sampleName[sample] << ".txt";
+    ofstream textfile (ssccd.str().c_str());
+    // textfile.open("ccd.txt");
+    for (int32_t i=0; i<num; i++) {
+      textfile  << field[i] << "\t"
+                << ccd[i] << "\t"
+                << fielde[i] << "\t"
+                << ccde[i] << "\n";
+    }
+    textfile.close();
 
 
 
@@ -216,7 +229,7 @@ int32_t main (void) {
   gr[1]->Draw("P SAME");
   gr[2]->Draw("P SAME");
   gr[0]->GetXaxis()->SetTitle("Bias voltage [V/ #mu m]");
-  gr[0]->GetYaxis()->SetTitle("Charge collection distance [ #m um]");
+  gr[0]->GetYaxis()->SetTitle("Charge collection distance [ #mu m]");
 
   TLegend* leg1 = new TLegend(0.7,0.7,0.95,0.95);
   leg1->AddEntry(gr[2],"S37 non-irrad","L");
@@ -279,7 +292,7 @@ int32_t main (void) {
   gp[0]->Draw("AP");
   fun->Draw("SAME");
   leg2->Draw("same");
-  gp[0]->GetXaxis()->SetTitle("Radiation dose [10{}^{14} pions cm{}^{-2}]");
+  gp[0]->GetXaxis()->SetTitle("Radiation dose [10{}^{14} #pi cm{}^{-2}]");
   gp[0]->GetYaxis()->SetTitle("Charge collection distance [ #mu m]");
   gp[0]->GetXaxis()->SetRangeUser(-2,20);
 
