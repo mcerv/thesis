@@ -1,10 +1,11 @@
 #include "histana.h"
 
-#define C25      1
-#define C21      1
-#define C2      0
-#define Cx      0
-
+#define C0      0
+#define C1      3
+#define C2      4
+#define C3      4
+#define C4      3
+#define Cx      2
 
 
 HistAna::HistAna() {
@@ -264,11 +265,11 @@ void HistAna::plotSpectrum() {
 
   dr->prettify(cxalpha);
   dr->normalise(m_vp.at(Cx).histMaxampl_acc_v4);
-  dr->normalise(m_vp.at(C2).histMaxampl_acc_v4);
-  dr->normalise(m_vp.at(C2).extHistArea_acc_v5);
+  dr->normalise(m_vp.at(0).histMaxampl_acc_v4);
+  dr->normalise(m_vp.at(0).extHistArea_acc_v5);
   dr->prettify(m_vp.at(Cx).histMaxampl_acc_v4,"red");
-  dr->prettify(m_vp.at(C2).histMaxampl_acc_v4,"light blue");
-  dr->prettify(m_vp.at(C2).extHistArea_acc_v5,"dark blue");
+  dr->prettify(m_vp.at(0).histMaxampl_acc_v4,"light blue");
+  dr->prettify(m_vp.at(0).extHistArea_acc_v5,"dark blue");
 
   m_vp.at(Cx).histMaxampl_acc_v4->Draw();
   m_vp.at(Cx).histMaxampl_acc_v4->GetXaxis()->SetTitle("Amplitude [ADC counts]");
@@ -284,12 +285,12 @@ void HistAna::plotSpectrum() {
   cxalpha->WaitPrimitive();
     // m_vp.at(Cx).histMaxampl_acc_v4->GetXaxis()->SetRangeUser(0,160);
 
-  m_vp.at(C2).histMaxampl_acc_v4->GetXaxis()->SetLimits(0,250);
-  m_vp.at(C2).histMaxampl_acc_v4->Draw("][sames");
+  m_vp.at(0).histMaxampl_acc_v4->GetXaxis()->SetLimits(0,250);
+  m_vp.at(0).histMaxampl_acc_v4->Draw("][sames");
 
-  m_vp.at(C2).extHistArea_acc_v5->Draw("][sames");
-  m_vp.at(C2).extHistArea_v5->Rebin(16);
-  m_vp.at(C2).extHistArea_acc_v5->GetXaxis()->SetLimits(0,254);
+  m_vp.at(0).extHistArea_acc_v5->Draw("][sames");
+  m_vp.at(0).extHistArea_v5->Rebin(16);
+  m_vp.at(0).extHistArea_acc_v5->GetXaxis()->SetLimits(0,254);
 
   TLegend *leg = new TLegend(0.65,0.7,0.95,0.95);
   stringstream ss;
@@ -307,20 +308,20 @@ void HistAna::plotSpectrum() {
       <<"  MEAN(X)  "<<fit1->GetParameter(1)
       <<"  SIGMA(X) "<<fit1->GetParameter(2)
       <<endl;
-  m_vp.at(C2).histMaxampl_acc_v4->Fit(fit1, "RQ");
+  m_vp.at(0).histMaxampl_acc_v4->Fit(fit1, "RQ");
   ss.str("");
-  ss<<"C2 amplitude RMS: "<<(float)(int32_t)(fit1->GetParameter(2)*2.35*10)/10<<" ADC counts";
-  leg->AddEntry(m_vp.at(C2).histMaxampl_acc_v4, ss.str().c_str(),"F");
-  cout<<" Fit results C2 ampl: "<<endl
+  ss<<"0 amplitude RMS: "<<(float)(int32_t)(fit1->GetParameter(2)*2.35*10)/10<<" ADC counts";
+  leg->AddEntry(m_vp.at(0).histMaxampl_acc_v4, ss.str().c_str(),"F");
+  cout<<" Fit results 0 ampl: "<<endl
       <<"  MEAN(Y)  "<<fit1->GetParameter(0)
       <<"  MEAN(X)  "<<fit1->GetParameter(1)
       <<"  SIGMA(X) "<<fit1->GetParameter(2)
       <<endl;
-  m_vp.at(C2).extHistArea_acc_v5->Fit(fit1, "RQ");
+  m_vp.at(0).extHistArea_acc_v5->Fit(fit1, "RQ");
   ss.str("");
-  ss<<"C2 area RMS: "<<(float)(int32_t)(fit1->GetParameter(2)*2.35*10)/10<<" ADC counts";
-  leg->AddEntry(m_vp.at(C2).extHistArea_acc_v5, ss.str().c_str(),"F");
-  cout<<" Fit results C2 area: "<<endl
+  ss<<"0 area RMS: "<<(float)(int32_t)(fit1->GetParameter(2)*2.35*10)/10<<" ADC counts";
+  leg->AddEntry(m_vp.at(0).extHistArea_acc_v5, ss.str().c_str(),"F");
+  cout<<" Fit results 0 area: "<<endl
       <<"  MEAN(Y)  "<<fit1->GetParameter(0)
       <<"  MEAN(X)  "<<fit1->GetParameter(1)
       <<"  SIGMA(X) "<<fit1->GetParameter(2)
@@ -344,80 +345,80 @@ void HistAna::plotLab() {
   DrawFuns *dr = new DrawFuns();
 
   //draw all four online histos
-  dr->prettify(m_vp.at(C2).histFwhm_v4, "light blue");
-  dr->prettify(m_vp.at(C2).histFwhm_acc_v4, "red");
-  dr->prettify(m_vp.at(C2).histMaxampl_v4, "light blue");
-  dr->prettify(m_vp.at(C2).histMaxampl_acc_v4, "red");
-  dr->prettify(m_vp.at(C2).extHistArea_v5, "light blue");
-  dr->prettify(m_vp.at(C2).extHistArea_acc_v5, "red");
-  dr->prettify(m_vp.at(C2).extHistFwhmSlope_v6);
-  dr->prettify(m_vp.at(C21).histFwhm_v4, "light blue");
-  dr->prettify(m_vp.at(C21).histFwhm_acc_v4, "red");
-  dr->prettify(m_vp.at(C21).histMaxampl_v4, "light blue");
-  dr->prettify(m_vp.at(C21).histMaxampl_acc_v4, "red");
-  dr->prettify(m_vp.at(C21).extHistArea_v5, "light blue");
-  dr->prettify(m_vp.at(C21).extHistArea_acc_v5, "red");
-  dr->prettify(m_vp.at(C21).extHistFwhmSlope_v6);
-  dr->prettify(m_vp.at(C25).histFwhm_v4, "light blue");
-  dr->prettify(m_vp.at(C25).histFwhm_acc_v4, "red");
-  dr->prettify(m_vp.at(C25).histMaxampl_v4, "light blue");
-  dr->prettify(m_vp.at(C25).histMaxampl_acc_v4, "red");
-  dr->prettify(m_vp.at(C25).extHistArea_v5, "light blue");
-  dr->prettify(m_vp.at(C25).extHistArea_acc_v5, "red");
-  dr->prettify(m_vp.at(C25).extHistFwhmSlope_v6);
+  dr->prettify(m_vp.at(0).histFwhm_v4, "light blue");
+  dr->prettify(m_vp.at(0).histFwhm_acc_v4, "red");
+  dr->prettify(m_vp.at(0).histMaxampl_v4, "light blue");
+  dr->prettify(m_vp.at(0).histMaxampl_acc_v4, "red");
+  dr->prettify(m_vp.at(0).extHistArea_v5, "light blue");
+  dr->prettify(m_vp.at(0).extHistArea_acc_v5, "red");
+  dr->prettify(m_vp.at(0).extHistFwhmSlope_v6);
+  // dr->prettify(m_vp.at(1).histFwhm_v4, "light blue");
+  // dr->prettify(m_vp.at(1).histFwhm_acc_v4, "red");
+  // dr->prettify(m_vp.at(1).histMaxampl_v4, "light blue");
+  // dr->prettify(m_vp.at(1).histMaxampl_acc_v4, "red");
+  // dr->prettify(m_vp.at(1).extHistArea_v5, "light blue");
+  // dr->prettify(m_vp.at(1).extHistArea_acc_v5, "red");
+  // dr->prettify(m_vp.at(1).extHistFwhmSlope_v6);
+  // dr->prettify(m_vp.at(2).histFwhm_v4, "light blue");
+  // dr->prettify(m_vp.at(2).histFwhm_acc_v4, "red");
+  // dr->prettify(m_vp.at(2).histMaxampl_v4, "light blue");
+  // dr->prettify(m_vp.at(2).histMaxampl_acc_v4, "red");
+  // dr->prettify(m_vp.at(2).extHistArea_v5, "light blue");
+  // dr->prettify(m_vp.at(2).extHistArea_acc_v5, "red");
+  // dr->prettify(m_vp.at(2).extHistFwhmSlope_v6);
 
   TCanvas* can;
   TBox* box[10];
 
   can = new TCanvas("pulses", "pulses", 1400, 900);
   // can->SetLogz();
-  m_vp.at(C2).extHistFwhmSlope_v6->Draw("colz");
-
-
-
-  can->Update();
-  can->WaitPrimitive();
-  can->Update();
+  // m_vp.at(0).extHistFwhmSlope_v6->Draw("colz");
+  //
+  //
+  //
+  // can->Update();
+  // can->WaitPrimitive();
+  // can->Update();
   can->Clear();
 
   can->Divide(3,3);
 
   dr->prettify(can->cd(1));
-  m_vp.at(C2).histFwhm_v4->Draw();
-  m_vp.at(C2).histFwhm_acc_v4->Draw("same");
-  m_vp.at(C2).histFwhm_v4->GetXaxis()->SetRangeUser(0,50);
+  m_vp.at(0).histFwhm_v4->Draw();
+  m_vp.at(0).histFwhm_acc_v4->Draw("same");
+  m_vp.at(0).histFwhm_v4->GetXaxis()->SetRangeUser(0,50);
   dr->prettify(can->cd(2));
   gPad->SetLogy();
-  m_vp.at(C2).histMaxampl_v4->Draw();
-  m_vp.at(C2).histMaxampl_acc_v4->Draw("same");
+  m_vp.at(0).histMaxampl_v4->Draw();
+  m_vp.at(0).histMaxampl_acc_v4->Draw("same");
   dr->prettify(can->cd(3));
   gPad->SetLogy();
-  m_vp.at(C2).extHistArea_v5->Draw();
-  m_vp.at(C2).extHistArea_acc_v5->Draw("same");
-  dr->prettify(can->cd(4));
-  m_vp.at(C25).histFwhm_v4->Draw();
-  m_vp.at(C25).histFwhm_acc_v4->Draw("same");
-  m_vp.at(C25).histFwhm_v4->GetXaxis()->SetRangeUser(0,50);
-  dr->prettify(can->cd(5));
-  gPad->SetLogy();
-  m_vp.at(C25).histMaxampl_v4->Draw();
-  m_vp.at(C25).histMaxampl_acc_v4->Draw("same");
-  dr->prettify(can->cd(6));
-  gPad->SetLogy();
-  m_vp.at(C21).extHistArea_v5->Draw();
-  m_vp.at(C21).extHistArea_acc_v5->Draw("same");
-  dr->prettify(can->cd(7));
-  m_vp.at(C21).histFwhm_v4->Draw();
-  m_vp.at(C21).histFwhm_acc_v4->Draw("same");
-  m_vp.at(C21).histFwhm_v4->GetXaxis()->SetRangeUser(0,50);
-  dr->prettify(can->cd(8));
-  gPad->SetLogy();
-  m_vp.at(C21).histMaxampl_v4->Draw();
-  m_vp.at(C21).histMaxampl_acc_v4->Draw("same");
-  dr->prettify(can->cd(9));
-  gPad->SetLogy();
-  m_vp.at(C21).extHistArea_v5->Draw();
-  m_vp.at(C21).extHistArea_acc_v5->Draw("same");
+  m_vp.at(0).extHistArea_v5->Draw();
+  m_vp.at(0).extHistArea_acc_v5->Draw("same");
+  // dr->prettify(can->cd(4));
+  // m_vp.at(1).histFwhm_v4->Draw();
+  // m_vp.at(1).histFwhm_acc_v4->Draw("same");
+  // m_vp.at(1).histFwhm_v4->GetXaxis()->SetRangeUser(0,50);
+  // dr->prettify(can->cd(5));
+  // gPad->SetLogy();
+  // m_vp.at(1).histMaxampl_v4->Draw();
+  // m_vp.at(1).histMaxampl_acc_v4->Draw("same");
+  // dr->prettify(can->cd(6));
+  // gPad->SetLogy();
+  // m_vp.at(2).extHistArea_v5->Draw();
+  // m_vp.at(2).extHistArea_acc_v5->Draw("same");
+  // dr->prettify(can->cd(7));
+  // m_vp.at(2).histFwhm_v4->Draw();
+  // m_vp.at(2).histFwhm_acc_v4->Draw("same");
+  // m_vp.at(2).histFwhm_v4->GetXaxis()->SetRangeUser(0,50);
+  // dr->prettify(can->cd(8));
+  // gPad->SetLogy();
+  // m_vp.at(2).histMaxampl_v4->Draw();
+  // m_vp.at(2).histMaxampl_acc_v4->Draw("same");
+  // dr->prettify(can->cd(9));
+  // gPad->SetLogy();
+  // m_vp.at(2).extHistArea_v5->Draw();
+  // m_vp.at(2).extHistArea_acc_v5->Draw("same");
 
 
   can->Update();
@@ -425,7 +426,7 @@ void HistAna::plotLab() {
   can->Update();
   can->Clear();
 
-  // m_vp.at(C2).
+  // m_vp.at(0).
 
 
 
@@ -441,6 +442,19 @@ void HistAna::plotLab() {
 }
 
 
+
+void HistAna::saveTxt() {
+
+  ofstream f ("hist.txt");
+
+  for (int32_t i=0; i<  m_vp.at(0).histMaxampl_v4->GetNbinsX(); i++) {
+    f << i << "\t" << m_vp.at(0).histMaxampl_v4->GetBinContent(i) << endl;
+  }
+  f.close();
+  cout << "Hist.txt written." << endl;
+    // m_vp.at(0).histMaxampl_v4->Draw();
+
+}
 // void HistAna::plotReactor() {
 //
 //

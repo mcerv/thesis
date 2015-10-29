@@ -34,6 +34,7 @@ public:
   void plotLab();
   void plotSpectrum();
   TH1D* extToNormal(TH1D*);//transform long histogram (4096) to normal (256);
+  void saveTxt();
 
 private:
 

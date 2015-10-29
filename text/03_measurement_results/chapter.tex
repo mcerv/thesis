@@ -18,6 +18,8 @@
 \renewcommand{\headrulewidth}{0.7pt}% Default \headrulewidth is 0.4pt
 %\renewcommand{\footrulewidth}{0.7pt}% Default \footrulewidth is 0pt
 %\rfoot{\thepage}
+\usepackage{lineno}
+  \linenumbers
 
 \begin{document}
 \baselineskip=15pt
@@ -46,11 +48,11 @@
 
 This chapter contains the measurement results of data taken with diamond sensors. The description of measurement setup (section~\ref{sec:meassetup}) 
 %and the experimental technique (section~\ref{sec:exptech}) 
-is followed by applying experimental techniques and a discussion of results in order to find operational limitations in sections \ref{sec:noiselimit}, \ref{sec:templimit} and \ref{sec:radlimit}. The aim of the chapter is to compare the experimentally acquired data with the theory from the previous chapter. 
+is followed by applying experimental techniques and a discussion of results in order to find operational limitations in sections \ref{sec:noiselimit}, \ref{sec:templimit} and \ref{sec:radlimit}. The aim of the chapter is to compare the experimentally acquired data with the theory from the previous chapter and to define limitations of the diamond detectors in terms of noise, radiation and temperature.
 
-Diamond sensors are mainly used for two types of measurements: particle counting and spectroscopy. The first type of measurements depends on the sensor's efficiency -- the ability to detect all or at least a known percentage of particles/photons that hit it. The energy of the radiation is not so important; what bears the information is the rate and the spatial distribution. Here the radiation does not necessarily stop in the bulk, but rather continues its way. In spectroscopy, on the other hand, the idea is that a particle stops within the sensor, depositing all its energy, which is then measured via the freed charge carriers. The aim of the experiments described in this chapter is to 1) quantify the efficiency of the sCVD diamond in counting mode, 2) quantify the efficiency degradation with received radiation dose, 3) quantify the macroscopic effects on charge carrier behaviour with received radiation dose and 4) define limitations for its use in spectroscopy.
+Diamond sensors are mainly used for two types of measurements: particle counting and spectroscopy. The first type of measurements depends on the sensor's efficiency -- the ability to detect all or at least a known percentage of particles/photons that hit it. The energy of the radiation is not so important; what bears the information is the rate and the spatial distribution. Here the radiation does not necessarily stop in the bulk, but rather continues its way. In spectroscopy, on the other hand, the idea is that a particle stops within the sensor, depositing all its energy, which is then measured via the freed charge carriers. The aim of the experiments described in this chapter is to 1) quantify the efficiency of the sCVD diamond in counting mode, 2) quantify the degradation of efficiency  with respect to the received radiation dose, 3) quantify the macroscopic effects on charge carrier behaviour with respect to the received radiation dose and 4) define limitations for its use in spectroscopy.
 
-The results discussed here show that there are several limitations of the diamond as a measurement device. All of them need to be taken into account for the measurement device to perform reliably and stably. The first step is to build a setup that is insensitive to environmental interferences and minimises electrical noise in the system. The setup needs to be calibrated before use. Then, the measurement conditions have to be defined, such as the type of radiation and its flux. This allows us to estimate the lifetime of the detector and predict the longterm change of the signal. This change can then be accounted for when interpreting the output data. 
+The results discussed here show that there are several limitations for using diamond as a measurement device. All of them need to be taken into account for the measurement device to perform reliably and stably. The first step is to build a setup that is insensitive to environmental interferences and minimises electrical noise in the system. The setup needs to be calibrated before use. Then, the measurement conditions have to be defined, such as the temperature, the type of radiation and its flux. This allows us to estimate the lifetime of the detector and predict the longterm change of the signal. This change can then be accounted for when interpreting the output data. 
 
 
 
@@ -61,7 +63,7 @@ The results discussed here show that there are several limitations of the diamon
 
 
 % ---------------------------------------------------------------------------------------------------------------
-%\clearpage
+\clearpage
 \section{Measurement setup}
 \label{sec:meassetup}
 % ---------------------------------------------------------------------------------------------------------------
@@ -96,7 +98,7 @@ The amplifiers were calibrated before use to determine their gain. Both were cal
 
 In the case of the Cx charge sensitive amplifier, the signal was routed through a capacitor with a calibration capacitance $C_{cal}=(0.717\pm0.014)$~pF and then to the input of the amplifier. The pulse area behind the capacitor was $a_{cal}=5.0\pm0.5)$~pVs and the signal amplitude on the output was $U_{amp}=(1.95\pm0.05)$~V. The input voltage step combined with the calibration capacitance yields a calibration charge $Q_{cal}=C_{cal}\cdot U_{in}=(181\pm5)$~fC. The gain of the Cx amplifier is therefore $A^{Q}_{Cx}=\frac{U_{Cx}{Q_{cal} }}=(9.3\pm0.4)$~mV/fC or  $A^{a}_{Cx}=\frac{U_{Cx}}{a_{cal} }=(390\pm40)$~mV/pVs. The area-based amplification factor has a higher uncertainty ($\sim10~\%$) than the amplitude-based factor ($\sim4~\%$) due to the measurement limitations of the oscilloscope. Nevertheless, it can be used as an estimate for the integrated charge of a current pulse.
 
-To calibrate the C2 current amplifier, only the amplitude gain had to be measured. The input signal amplitude had to be such that it kept the output amplitude within the amplifier's linear range, that is $\pm1$~V. The signal from the generator was therefore routed through a 36~dB attenuator to decrease its amplitude to $U_{inAtt}=(3.95\pm0.05)$~mV. The output of the amplifier was $U_{amp}=(860\pm5)$~mV. This yields the amplification gain equal to $A_{C2}=\frac{U_{inAtt}}{U_{C2}} =(217\pm3)$.
+To calibrate the C2 current amplifier, only the amplitude gain had to be measured. The input signal amplitude had to be such that it kept the output amplitude within the amplifier's linear range, that is $\pm1$~V. The signal from the generator was therefore routed through a 36~dB attenuator to decrease its amplitude to $U_{inAtt}=(3.95\pm0.05)$~mV. Two amplifiers with different gains were measured, because both were used for the measurements at different times. The output of the first amplifier was $U_{C2-1}=(860\pm5)$~mV. This yields the amplification gain equal to $A_{C2-1}=\frac{U_{inAtt}}{U_{C2-1}} =(217\pm3)$. The second amplifier had the output equal to $U_{C2-2}=(632\pm5)$~mV with the gain equal to $A_{C2-2}=(152\pm3)$. 
 
 
 
@@ -115,7 +117,6 @@ Table~\ref{tab:diamsamp} shows all the samples used for this study. Two of them 
 
 \begin{footnotesize}
 \begin{center}
-\captionof{table}{Diamond sensor samples used}
 \begin{tabular}{   l  c  c  c  c c }
 \hline
 Name & Type &Producer & Dimensions (x, y) [mm$^2$] & Thickness [$\upmu$m] & Irradiatied \\
@@ -128,6 +129,7 @@ ELSC & sCVD & E6 & $4.7\times4.7$ & 491 & no \\
 1scdhq & sCVD & IIa & $5.6\times5.3$ & 460 & no \\
 \hline
 \end{tabular}
+\captionof{table}{Diamond sensor samples used}
 \label{tab:diamsamp}
 \end{center}
 \end{footnotesize}
@@ -162,7 +164,7 @@ Room-temperature TCT measurements were carried out in the lab. The setup consist
 \label{sec:cryosetup}
 The experiment at cryogenic temperatures was carried out in the cryolab at CERN. The room-temperature TCT setup had to be modified to allow for measurements at temperatures as low as 2~K. It consisted of three parts: 1) a cryostat --  a thermally insulated cylinder capable of containing liquid helium, 2) an inlet -- an air-tight mechanical tube with valves and feedthroughs at the top that is lowered in the liquid helium and 3) the diamond sample, a temperature sensor, a heater and cables leading to the feedthroughs.
 
-When the diamond sample was placed in the PCB carrier and the $^{241}$Am source was in place, the inlet was sealed and lowered in the empty cryostat. Then the inside volume of the inlet was evacuated to down to $10^{-5}$~mbar while the liquid helium was flowing into the cryostat. To improve the thermal contact between the diamond and the outside of the inlet, a small amount of helium gas was added inside the evacuated inlet, setting the vacuum to around $10^{-3}$~mbar. This value changed with time, because the gas condensed on the walls of the inlet, reducing the number of floating particles. For this reason the helium gas had to be added from time. This caused a significant undershoot of the sample temperature, which had to be corrected for with the heater. Also, the added gas deteriorated the vacuum inside the inlet. It was very important to monitor the pressure so as not to let it rise above $10^{-2}$~mbar. The air at this pressure is significantly more conductive and could cause a short circuit between the two diamond plates or in the SMA connectors, destroying the amplifier. Actually, it once did. Furthermore, at approximately 60~K the helium gas had to be evacuated from the inlet to avoid a potential explosion due to the expansion of the gas with temperature. Anyway, when the sample was cooled to the minimum temperature achievable by use of liquid helium without over-pressurising it (4.2~K), the measurements started. After every temperature data point, the current through the heater placed in the PCB next to the diamond sample was increased, warming up the sample. The initial temperature time constant of the order of tenths of seconds at low temperatures increased with temperature and even more so when helium was evacuated from the inlet at 60-~K, removing the thermal bridge between the wall of the inlet and the diamond sample. At RT, the time constant was already of the order of minutes.
+When the diamond sample was placed in the PCB carrier and the $^{241}$Am source was in place, the inlet was sealed and lowered in the empty cryostat. Then the inside volume of the inlet was evacuated to down to $10^{-5}$~mbar while the liquid helium was flowing into the cryostat. To improve the thermal contact between the diamond and the outside of the inlet, a small amount of helium gas was added inside the evacuated inlet, setting the vacuum to around $10^{-3}$~mbar. This value changed with time, because the gas condensed on the walls of the inlet, reducing the number of floating particles. For this reason the helium gas had to be added from time. This caused a significant undershoot of the sample temperature, which had to be corrected for with the heater. Also, the added gas deteriorated the vacuum inside the inlet. It was very important to monitor the pressure so as not to let it rise above $10^{-2}$~mbar. The air at this pressure is significantly more conductive and could cause a short circuit between the two diamond plates or in the SMA connectors, destroying the amplifier. Actually, it once did. Furthermore, at approximately 60~K the helium gas had to be evacuated from the inlet to avoid a potential explosion due to the expansion of the gas with temperature. Anyway, when the sample was cooled to the minimum temperature achievable by use of liquid helium without over-pressurising it (4.2~K), the measurements started. After every temperature data point, the current through the heater placed in the PCB next to the diamond sample was increased, warming up the sample. The initial temperature time constant of the order of tenths of seconds at low temperatures increased with temperature and even more so when helium was evacuated from the inlet at 60~K, removing the thermal bridge between the wall of the inlet and the diamond sample. At RT, the time constant was already of the order of minutes.
 
 
 
@@ -175,7 +177,7 @@ When the diamond sample was placed in the PCB carrier and the $^{241}$Am source 
 
 
 % ---------------------------------------------------------------------------------------------------------------
-%\clearpage
+\clearpage
 \section{Particle and photon pulses and spectra}
 \label{sec:pulsespectra}
 % ---------------------------------------------------------------------------------------------------------------
@@ -188,13 +190,19 @@ Figure~\ref{fig:pulsesaby} shows a set of pulses and an averaged pulse for $\upa
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{rrr}
-%\subfloat[$\upalpha$ pulses]{\includegraphics[width=0.27\textwidth]{} \label{fig:alpha1}} &
-%\subfloat[$\upbeta$ pulses]{\includegraphics[width=0.27\textwidth]{}  \label{fig:beta1}} &
-%\subfloat[$\upgamma$ pulses]{\includegraphics[width=0.27\textwidth]{}  \label{fig:gamma1}}
+\subfloat[$\upalpha$ pulses]{\includegraphics[width=0.30\textwidth]{scripts/plots/samplePulses/alpha} \label{fig:alpha1}} &
+\subfloat[$\upbeta$ pulses]{\includegraphics[width=0.30\textwidth]{scripts/plots/samplePulses/beta}  \label{fig:beta1}} &
+\subfloat[$\upgamma$ pulses]{\includegraphics[width=0.30\textwidth]{scripts/plots/samplePulses/gamma}  \label{fig:gamma1}} \\
+\subfloat[$\upalpha$ pulses]{\includegraphics[width=0.30\textwidth]{scripts/plots/samplePulses/alphadist} \label{fig:alphadist1}} &
+\subfloat[$\upbeta$ pulses]{\includegraphics[width=0.30\textwidth]{scripts/plots/samplePulses/betadist}  \label{fig:betadist1}} &
+\subfloat[$\upgamma$ pulses]{\includegraphics[width=0.30\textwidth]{scripts/plots/samplePulses/gammadist}  \label{fig:gammadist1}}
 \end{tabular}
-\caption{PLACEHOLDER Current pulses for three types of radiation}
+\caption{Superimposed and averaged pulses (a, b and c, current amplifier) and distributions of deposited energy (d, e, f, charge amplifier) for three types of radiation. Mind the scale on the X axis of the distributions.}
 \label{fig:pulsesaby}
 \end{figure}
+
+
+
 
 %---------------------------------------------------------------------------------------------------------------
 %%\clearpage
@@ -211,22 +219,22 @@ Noise is a major limiting factor in particle detection. It defines the minimum m
 
 
 % ---------------------------------------------------------------------------------------------------------------
-%\clearpage
+\clearpage
 \section{Radiation limitations}
 \label{sec:radlimit}
 % ---------------------------------------------------------------------------------------------------------------
-Exposure to ionising radiation degrades sensors. It introduces so-called charge traps by damaging the sensor material. The electrons and holes created by the impinging particle get trapped in these traps, decreasing the induced current on the electrodes. This yields a lower integrated charge in an irradiated sensor than that in a non-irradiated one. Charge collection efficiency is therefore correlated with the level of irradiation. In semiconductors, it follows an inverse exponential curve ?????
+Exposure to ionising radiation degrades sensors. It introduces so-called charge traps by damaging the sensor material. The electrons and holes created by the impinging particle get trapped in these traps, decreasing the induced current on the electrodes. This yields a lower integrated charge in an irradiated sensor than that in a non-irradiated one. Charge collection efficiency is therefore correlated with the level of irradiation. This section tries to study the effects of pion ($\uppi_{300~MeV}$) irradiation on the efficiency of sCVD diamond detectors. To carry out this study, two diamond samples were irradiated to 1$\times10^{14}~\pi$~cm$^{-2}$ and S79 to 3.63$\times10^{14}~\pi$~cm$^{-2}$. Then a test beam campaign was carried out to observe the charge collection efficiency at different bias voltage settings. The highest achieved efficiency values were used to determine the effective drop in efficiency with respect to received radiation dose. A model defined by a collaboration researching diamond behaviour called RD42 was applied to the measured values and a damage factor was extracted. The factor agreed quite well with the results obtained by the RD42. The next subsection contains measurements and results of a long-term stability study using $\upalpha$ and $\upbeta$ particles. It is shown that the charge collection efficiency of the irradiated samples improves in time for $\upbeta$ radiation, but deteriorates severely for $\upalpha$ radiation. To investigate this effect on the scale of charge carriers, the change of TCT pulses with time is observed. Finally, a procedure that improves the pulse shape and with it the charge collection is proposed.
 
 \subsection{Quantifying radiation damage in diamonds}
-The last few decades have seen extensive efforts put into understanding and quantifying radiation damage in semiconductors. This varies with the type of radiation (particles or photons) and its energy. There are models existing that try to explain the impact of irradiation and to provide \emph{hardness factors} to compare the radiation damage between different particles. The standard way is to convert the damage into \emph{neutron equivalent}. Some models have been extensively verified with simulations and experimentally. In these experiments charge collection in sensors is measured before and after irradiation. This procedure is repeated several times, with a measurement point taken after every irradiation. When a set of measurements of charge collection is plotted against the radiation dose received by a specific particle at a specific , a damage factor $k_\lambda$ can be extracted. Damage factors across a range of energies and types of particles (photons) have to be measured to properly quantify the damage in the sensors. They are then compared against the simulations to verify that the experimental observations are in line with the theory.
+The last few decades have seen extensive efforts put into understanding and quantifying radiation damage in semiconductors. This varies with the type of radiation (particles or photons) and its energy. There are models existing that try to explain the impact of irradiation and to provide \emph{hardness factors} to compare the radiation damage between different particles. The standard way is to convert the damage into \emph{neutron equivalent}. Some models have been extensively verified with simulations and experimentally. In these experiments charge collection in sensors is measured before and after irradiation. This procedure is repeated several times, with a measurement point taken after every irradiation. When a set of measurements of charge collection is plotted against the radiation dose received by a specific particle at a specific energy, a damage factor $k_\lambda$ can be extracted. Damage factors have to be measured across a range of energies and types of particles (photons) to properly quantify the damage in the sensors. They are then compared against the simulations to verify that the experimental observations are in line with the theory.
 
-Radiation damage in silicon, for instance, is well understood and explained. Silicon sensor is relatively cheap and widespread, which facilitated the irradiation experiments. Diamond, however, is an expensive material and the technology is relatively new as compared to silicon. Therefore not many institutes are carrying out diamond irradiation studies. To join the efforts, a collaboration called RD42 was formed. It gathers the experimental data from diamond irradiation studies. Unlike with silicon, the experimental results so far show no significant correlation with the NIEL (non-ionising energy loss) model~\cite{XXX}, which correlates detector efficiency with the \emph{number of lattice displacements}. Therefore an alternative model was proposed by Karlsruhe Institute of Technology~\cite{XXX}, correlating the diamond efficiency with \emph{displacements per atom} (DPA) in the bulk. Figure~\ref{fig:kitdpa} shows the DPA model for a range of energies of proton, pion and neutron irradiation in diamond. It has been normalised to damage in 24~GeV protons. According to the plot, a 300~MeV pion beam damages the diamond bulk twice as much as a 24~GeV proton beam.
+Radiation damage in silicon, for instance, is well understood and explained. Silicon sensor is relatively cheap and widespread, which facilitates the irradiation experiments. Diamond, on the other hand, is an expensive material and the technology is relatively new as compared to silicon. Therefore not many institutes are carrying out diamond irradiation studies. To join the efforts, a collaboration called RD42 was formed. It gathers the experimental data from diamond irradiation studies. Unlike with silicon, the experimental results so far show no significant correlation with the NIEL (non-ionising energy loss) model~\cite{XXX}, which correlates detector efficiency with the \emph{number of lattice displacements}. Therefore an alternative model was proposed by Karlsruhe Institute of Technology~\cite{XXX}, correlating the diamond efficiency with \emph{displacements per atom} (DPA) in the bulk. Figure~\ref{fig:kitdpa} shows the DPA model for a range of energies of proton, pion and neutron irradiation in diamond. According to the plot, a 300~MeV pion beam damages the diamond bulk twice as much as a 24~GeV proton beam. The data points obtained by RD42 are also added to the plot. They have been normalised to damage by 24~GeV protons. In the end, the data point measured in the scope of this thesis was added for comparison.
 
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.6\textwidth]{scripts/plots/dpa1}
-\caption{Diamond radiation damage - a model based on displacements per atom. Courtesy Karlsruhe Institute of Technology~\cite{}}
+\includegraphics[width=0.7\textwidth]{scripts/plots/dpa1}
+\caption{Diamond radiation damage - a model based on displacements per atom, courtesy Karlsruhe Institute of Technology~\cite{}. Added are data points for protons and pions by RD42 and one data point for pions measured in the scope of this thesis.}
 \label{fig:kitdpa}
 \end{center}
 \end{figure}
@@ -236,7 +244,7 @@ Radiation damage in silicon, for instance, is well understood and explained. Sil
 \subsubsection{Pion irradiation}
 Paul Scherrer Institute (PSI) is the largest research institute for material sciences in Switzerland. Among other tasks they also carry out irradiation campaigns. They use a beam of    300~MeV/c pions $\pi$ (kinetic energy 191.31~MeV) with a flux of up to $1.5\times10^{14}~\pi$~cm$^{-2}$~day$^{-1}$. The machine has a 10~\% uncertainty on the beam energy. In addition, due to the uncertainty on the hardness factor, the equivalent fluences have an error of $\pm20~\%$. Looking at figure~\ref{fig:kitdpa}, $\pi_{300~MeV}$ sit on a steep section of the DPA function. After fitting a linear function to this part of the function (marked red), the error on the DPA due to the uncertainty on the beam energy amounts to 7~\%. Overall error on the fluence is therefore the root mean square of the uncertainty on the DPA and the uncertainty on the hardness factor: $\upsigma=21~\%$.
 
-Two diamond samples, S52 and S79, were exposed to the pion beam in the 2014 PSI irradiation campaign; S52 to $(1\pm0.21)\times10^{14}~\pi$~cm$^{-2}$ and S79 to $(3.63\pm0.77\times10^{14}~\pi$~cm$^{-2}$. During the process, the golden electrodes got slightly activated, but the activation decayed in two weeks.
+Two diamond samples, S52 and S79, were exposed to the pion beam in the 2014 PSI irradiation campaign; S52 to $(1\pm0.21)\times10^{14}~\pi$~cm$^{-2}$ and S79 to $(3.63\pm0.77)\times10^{14}~\pi$~cm$^{-2}$. During the process, the golden electrodes got slightly activated, but the activation decayed in two weeks.
 
 \subsubsection{Charge collection distance}
 Three diamonds -- non-irradiated S37 and irradiated S52 and S79 -- were exposed to a 120~GeV test beam before and after irradiation to estimate the charge collection distance (CCD) and its decrease after irradiation. The samples were primed ("pumped") prior to data taking using a $^{90}$Sr radioactive source. Data were then taken at a range of bias voltages from 30~V to 500~V, yielding up to 1~V/$\upmu$m electrical field in the bulk. Every data point contained approximately $5\times10^4$ measured particles. The charge deposited by the particles was measured using a CIVIDEC Cx charge preamplifier. As expected, the integrated amplitude spectrum followed a landau distribution.
@@ -278,14 +286,14 @@ The irradiation damage factor $k$ is a way to quantify irradiation damage of a s
 
 \begin{equation}
 \label{eq:radfactor}
-\frac{1}{\lambda} = \frac{1}{\lambda_0}+k_{\Lambda}\cdot\Phi
+\frac{1}{\lambda} = \frac{1}{\lambda_0}+k_{\lambda}\cdot\Phi
 \end{equation} 
 \begin{equation}
 \label{eq:radfactor1}
-\lambda = \frac{\lambda_0}{k_{\Lambda} \lambda_0 \Phi + 1}
+\lambda = \frac{\lambda_0}{k_{\lambda} \lambda_0 \Phi + 1}
 \end{equation} 
 
-The data points with the maximum CCD obtained in the test beam measurements were plotted against radiation dose received (see figure~\ref{fig:radfactor}). Function~\ref{eq:radfactor1} was fitted to the data points and a damage factor $k_{\Lambda}=(3.2\pm1)\times10^{-18}~\upmu$m$^{-1}$~cm~$^{-2}$ was obtained. This value is higher than the damage factor obtained by RD42. A possible cause is that the irradiated samples did not yet have a full charge collection at 1.5~V~$\upmu$m$^{-1}$.
+The data points with the maximum CCD obtained in the test beam measurements were plotted against radiation dose received (see figure~\ref{fig:radfactor}). Function~\ref{eq:radfactor1} was fitted to the data points and a damage factor $k_{\lambda}=(3.0\pm1.0)\times10^{-18}~\upmu$m$^{-1}$~cm~$^{-2}$ was obtained. This value is for a factor of two higher than the damage factor obtained by RD42. A possible cause is that the irradiated samples did not yet have a full charge collection at 1.5~V~$\upmu$m$^{-1}$. Also, with only two samples measured, the statistical uncertainty was high. Nevertheless, it can be concluded that the 300~MeV pions damage the diamond bulk more than the 24~GeV protons.
 
 
 
@@ -330,35 +338,63 @@ The first test was carried out using the Cx spectroscopic amplifier. The bias vo
 \end{center}
 \end{figure}
 
-The next step was to observe the behaviour of the current pulse shapes with time using a C2 current amplifier. The shape of the pulse holds more information about the micro-processes in the sensor than solely the value of the integrated charge. This time only the primed sensors were tested. Both hole and electron collection were observed to determine whether they behave differently or not. The samples were measured long enough for the pulse shapes to start changing. The data show that the pulses start changing in a chaotic way -- suddenly there are several different shapes, some still the same as at the beginning while the others with almost zero amplitude. These data are difficult to interpret. Nevertheless, the idea is that some charges get trapped in the charge traps in the bulk for a long time, building up regions of space charge. Since only one charge flavour is drifting through the bulk whereas the other is quickly recombined, this already determines the imbalance in spatial distribution of trapped charges. The built up space charge affects the electric field, making it non-uniform. The non-uniform field in turn affects the drifting carriers, slowing them down or speeding them up, depending on the field gradient. Since the movement of the carriers is the electric current, the field gradient can be observed in the signal. Unfortunately the effects are very convoluted, probably due to the impinging point of the $\upalpha$ particle. 
+The next step was to observe the behaviour of the current pulse shapes with time using a C2 current amplifier. The shape of the pulse holds more information about the micro-processes in the sensor than solely the value of the integrated charge. This time only the primed sensors were tested. Both hole and electron collection were observed to determine whether they behave differently or not. The samples were measured long enough for the pulse shapes to start changing. The data in figures~\ref{fig:lifetimeelecsholes} show that the pulses start changing in a chaotic way -- suddenly there are several different shapes, some still the same as at the beginning while the others with almost zero amplitude. These data are difficult to interpret. Nevertheless, the idea is that some charges get trapped in the charge traps in the bulk for a long time, building up regions of space charge. Since only one charge flavour is drifting through the bulk whereas the other is quickly recombined, this already determines the imbalance in spatial distribution of trapped charges. The built up space charge affects the electric field, making it non-uniform. The non-uniform field in turn affects the drifting carriers, slowing them down or speeding them up, depending on the field gradient. Since the movement of the carriers is the electric current, the field gradient can be observed in the signal. Unfortunately the effects are very convoluted, probably due to the impinging point of the $\upalpha$ particle. 
 
-TO-DO show the degrading pulses. PLOT!
+\begin{figure}[!t]
+%\centering
+\begin{tabular}{rrr}
+\subfloat[Holes at 0 min]{\includegraphics[width=0.30\textwidth]{scripts/plots/plotLifetime/holes0} \label{fig:holes0lt}} &
+\subfloat[Holes at 15 min]{\includegraphics[width=0.30\textwidth]{scripts/plots/plotLifetime/holes15}  \label{fig:holes15lt}} &
+\subfloat[Holes at 30 min]{\includegraphics[width=0.30\textwidth]{scripts/plots/plotLifetime/holes30}  \label{fig:holes30lt}} \\
+\subfloat[Electrons at 0 min]{\includegraphics[width=0.30\textwidth]{scripts/plots/plotLifetime/elecs0} \label{fig:elecs0lt}} &
+\subfloat[Electrons at 15 min]{\includegraphics[width=0.30\textwidth]{scripts/plots/plotLifetime/elecs15}  \label{fig:elecs15lt}} &
+\subfloat[Electrons at 30 min]{\includegraphics[width=0.30\textwidth]{scripts/plots/plotLifetime/elecs30}  \label{fig:elecs30lt}}
+\end{tabular}
+\caption{This plot shows the signal deterioration of the irradiated and primed S79 with time for both polarities. Every plot contains 60 superimposed pulses.}
+\label{fig:lifetimeelecsholes}
+\end{figure}
 
-Finally, an effort has been made to find a way for the pulse shapes to return to their initial state. Three methods were tested: 1) Priming with $\upbeta$ at bias voltage applied, 2) priming with $\upbeta$ without bias voltage and 3) priming with $\upgamma$ without bias voltage. It turns out that the first method degrades the shapes further. This effect has already been described in~\cite{Kramberger}. The second and third method, however, improve the pulse shapes. The "healing" process depends on the radiation rate and the time of exposure. The ionising radiation creates free charges, which quickly recombine close to the place of generation. It is likely that they also release the charges trapped during the measurement, reducing the overall effect of the space charge. The traps get filled with both flavours of carriers, thus neutralised. The pulse shape returns to its initial state.
+Finally, an effort has put into finding a way for the pulse shapes to return to their initial state. Five methods were tested: (1) Removing the source and leaving the bias voltage on, (2) Removing the source and switching the bias voltage off, (3) Priming with $\upgamma$ without bias voltage, (4) Priming with $\upbeta$ with bias voltage on and (5) priming with $\upbeta$ without bias voltage. The diamond sample S79 was first primed using a $^{90}$Sr source for about one hour. Then the bias voltage was switched on and an $^{241}$Am source was put on top. The pulses produced by the impinging $\upalpha$ particles had a proper rectangular pulse at the beginning, but then started changing in an erratic way. After approximately 30~minutes, one of the methods was tested.  Then the bias voltage was switched off and the sample was primed again to reset its state before starting with the next run. 
 
-TO-DO show the healing process. PLOT!
+At the beginning of every run, 60 reference pulses of the initial pulse were taken and plotted overlapped into a 2D histogram. An average pulse was extracted from this 2D distribution. Then a correlation between the reference pulses and the averaged pulse $\sigma_{ref}$ was calculated. When a "healing" procedure was started, a set of 60~pulses was taken at irregular points of time to observe the change in the pulse shape. At every data point the correlation with the initial averaged pulse $\sigma$ was calculated. From the initial correlation $\sigma_{ref}$ and discrete correlation values $\sigma$ in time, the correlation form $Corr_{form}$ was calculated and plotted against time on the plot in figure~\ref{fig:formCorr}.
+\begin{equation}
+\label{eq:correlation}
+Corr_{form} (t) = \frac{\sigma_{ref}}{\sigma} = \frac { \sum_x \sum_y w_{ref}\cdot ( y_{avg} - y_{ref})^2 } { \sum_x \sum_y w\cdot ( y_{avg} - y)^2 }
+\end{equation} 
+It turns out that the methods (3) and (5) improve the form, method (2) helps slowly, (1) does not show any change with time and (4) at first improves, but then significantly degrades the shape. The effect observed in method (4) has already been described in~\cite{Kramberger}. The "healing" process therefore depends on the rate of radiation, the bias voltage and the time of exposure. The ionising radiation creates free charges, which quickly recombine close to the place of generation. It is likely that they also release the charges trapped during the measurement, reducing the overall effect of the space charge. The traps get filled with both flavours of carriers, thus they are neutralised. The pulse shape gradually returns to its initial state.
+
+
+\begin{footnotesize}
+\begin{center}
+\begin{tabular}{   c  c  c  c c }
+\hline
+Procedure & Source & Bias voltage & Effectiveness \\
+\hline
+1 & / & ON & no \\
+2 & / & / & slow \\
+3 & $^{60}$Co & / & YES \\
+4 & $^{90}$Sr & ON & no \\
+5 & $^{90}$Sr & / & YES \\
+\hline
+\end{tabular}
+\captionof{table}{Effectiveness of healing procedures}
+\label{tab:healing}
+\end{center}
+\end{footnotesize}
+
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{scripts/plots/plotLifetime/formCorrelation}
+\caption{Five procedures of the "healing" process for an irradiated diamond that was exposed to $\upalpha$ radiation at bias voltage switched on for at least 30~minutes.}
+\label{fig:formCorr}
+\end{center}
+\end{figure}
 
 TO-DO conclusions: limitations
 
-
-%% sample landau distribution  
-%\begin{figure}[!t]
-%\begin{center}
-%%\includegraphics[width=0.6\textwidth]{}
-%\caption{Change of the pulse shape with time. PLACEHOLDER}
-%\label{fig:landausample}
-%\end{center}
-%\end{figure}
+To sum up, the shape of the pulses caused by $\upalpha$ radiation changes with time for irradiated samples. The form of the pulses gets distorted and becomes erratic. Charge collection decreases and its spread increases. This happens even faster for non-primed diamonds. To "heal" the diamond -- to bring the pulse shapes back to their initial form -- the sample must be primed using a $\upbeta$ or a $\upgamma$ source for several minutes at the bias voltage set to 0~V. Switching to the inverse polarity for a few seconds helps a bit, but in a long run distorts the signal, which cannot get back to its initial form.
 
 
-
-%\begin{figure}[!t]
-%\begin{center}
-%\includegraphics[width=1\textwidth]{plots/hysteresis/all_pulses_1}
-%\caption{S37 non-irrad; S52 $1\times10^{14}~p~cm^{-2}$ non-pumped, pumped; S79 $3.63\times10^{14}~p~cm^{-2}$ non-pumped, pumped PLACEHOLDER}
-%\label{fig:hystall}
-%\end{center}
-%\end{figure}
 
 
 
@@ -375,7 +411,7 @@ TO-DO conclusions: limitations
 
 
 % ---------------------------------------------------------------------------------------------------------------
-%\clearpage
+\clearpage
 \section{Temperature limitations}
 \label{sec:templimit}
 % ---------------------------------------------------------------------------------------------------------------
@@ -502,11 +538,11 @@ where $\tau_0$ is the lifetime for a non-irradiated sample (real lifetime, there
 % ---------------------------------------------------------------------------------------------------------------
 This chapter gave an overview of the capabilities and limitations of diamond as a particle detector. Three effects on diamond were studied -- noise, radiation and temperature, the focus being on the latter two. 
 
-Two sCVD diamond detectors were irradiated with 300~MeV pions. They were tested alongside a non-irradiated sample to observe the changes in the ability to detect $\upalpha$, $\upbeta$ and $\upgamma$ radiation. Their charge collection efficiency was measured in a test beam facility using . The results were compared to the results from the RD42 collaboration and a DPA model provided by Karlsruhe Institute of Technology, Germany. A radiation damage factor $k=(3.2\pm1)\times10^{-18}$ was obtained. The data point did not fully overlap with the data provided by RD42 nor the model. However, the irradiation process and the low number of tested samples hold a relatively high statistical uncertainty. These results will also be fed into the existing pool of data in the RD42 collaboration, increasing the otherwise rather low number of measurement points of irradiated diamond samples. 
+Two sCVD diamond detectors were irradiated with 300~MeV pions. They were tested alongside a non-irradiated sample to observe the changes in the ability to detect $\upalpha$, $\upbeta$ and $\upgamma$ radiation. Their charge collection efficiency was measured in a test beam facility using . The results were compared to the results from the RD42 collaboration and a DPA model provided by Karlsruhe Institute of Technology, Germany. A radiation damage factor $k=(3.0\pm1.0)\times10^{-18}~\upmu$m$^{-1}$~cm$^{-2}$ was obtained. The data point did not fully overlap with the data provided by RD42 nor the model. However, the irradiation process and the low number of tested samples hold a relatively high statistical uncertainty. These results will also be fed into the existing pool of data in the RD42 collaboration, increasing the otherwise rather low number of measurement points of irradiated diamond samples. 
 
 The next step was to test the long-term capabilities for $\upalpha$ detection. The shape of the ionisation profile was investigated to determine the behaviour of the charge carriers in the irradiated diamond. An exponential decay was observed in the pulse, proving that there are charge traps in the bulk that were created during irradiation.  Then a long-term stability test was carried out. The results show that the irradiated diamond detectors do not provide a stable and reliable long-term measurement of $\upalpha$ particles. Presumably this is due to a space-charge build-up in the bulk, which changes the electric field, affecting the charge carriers. A procedure to improve the pulse shape using $\upbeta$ and $\upgamma$ radiation was proposed.
 
-Finally, the diamond sensors were cooled down to temperatures between 4~K and 295~K. Their response to $\upalpha$ particles was observed. The results of the non-irradiated and irradiated samples were compared. The effect of reduction for the number of drifting charges due to exciton recombination was observed in both sets of data. The second set had a superimposed effect of charge trapping during the drift, which was represented by an exponential decay in the signal. The decay time constant did not change with temperature. Therefore all temperature points for individual samples were averaged and the decay time constants were plotted against the received radiation dose. A damage factor equal to $k=(3.6\pm0.8)\times10^{-16}$ for non-primed diamonds was defined.
+Finally, the diamond sensors were cooled down to temperatures between 4~K and 295~K. Their response to $\upalpha$ particles was observed. The results of the non-irradiated and irradiated samples were compared. The effect of reduction for the number of drifting charges due to exciton recombination was observed in both sets of data. The second set had a superimposed effect of charge trapping during the drift, which was represented by an exponential decay in the signal. The decay time constant did not change with temperature. Therefore all temperature points for individual samples were averaged and the decay time constants were plotted against the received radiation dose. A damage factor equal to $k=(3.6\pm0.8)\times10^{-16}$~s~cm$^2$~$\uppi_{300~MeV}^{-1}$ for non-primed diamonds was defined.
 
 
 

@@ -1,4 +1,5 @@
 #include "pulseana.h"
+#include "progbar.h"
 
 
 PulseAna::PulseAna() {
@@ -28,11 +29,13 @@ void PulseAna::clear() {
 void PulseAna::readPulseFile(string fName, string version) {
   streampos begin,end;
   ifstream _inRealFile;
+  cout<<" Opening file " << fName << endl;
   _inRealFile.open(fName.c_str(), ios::in | ios::ate | ios::binary);
   if (!_inRealFile.is_open())
     throw " PulseAna::readPulseFile : wrong file name. File not open.";
   // fileSize = _inRealFile.tellg();
-  const int32_t size = (int32_t)_inRealFile.tellg() /10;
+
+  const int32_t size = (int32_t)_inRealFile.tellg() /100;
   _inRealFile.seekg (0, ios::beg);
   begin = _inRealFile.tellg();
   cout<<" File size is "<<size<<" bytes."<<endl;
@@ -54,8 +57,7 @@ void PulseAna::readPulseFile(string fName, string version) {
   delete[] memblock;
 }
 
-void PulseAna::fillWaveformC2(std::vector<char> memblock)
-{
+void PulseAna::fillWaveformC2(std::vector<char> memblock) {
 
   // //print the buffer
   // for (int64_t i = 0; i < 1000; i = i + 32)
@@ -85,8 +87,7 @@ void PulseAna::fillWaveformC2(std::vector<char> memblock)
   bool trailer = false;
   bool data = false;
   //Read through buffer and find information on pulses
-  for (int32_t i = 0; i < memblock.size()-32; i = i + 4) //read in 32 bits at a time.
-  {
+  for (int32_t i = 0; i < memblock.size()-32; i = i + 4) {//read in 32 bits at a time.
     //----------read trailer---------------------------
     if (trailer) {
       //read fwhm width, max amplitude and classification
@@ -211,8 +212,7 @@ void PulseAna::fillWaveformC2(std::vector<char> memblock)
 
 
 
-void PulseAna::fillWaveform(std::vector<char> memblock)
-{
+void PulseAna::fillWaveform(std::vector<char> memblock) {
   //print the buffer
   // for (int32_t i = 0; i < memblock.size()-32; i = i + 32)
   // {
@@ -223,6 +223,7 @@ void PulseAna::fillWaveform(std::vector<char> memblock)
   //   cout<<dec<<endl;
   // }
 // getchar();
+  ProgBar pb;
   int32_t cntHeader = 0;
   int32_t cntTrailer = 0;
   int64_t timestamp = -1;
@@ -245,7 +246,7 @@ void PulseAna::fillWaveform(std::vector<char> memblock)
   bool pulseCompleted = false;
   bool data = false;
   //Read through buffer and find information on pulses
-  for (int32_t i = 0; i < memblock.size()-32; i = i + 4) //read in 32 bits at a time.
+  for (int32_t i = 0; i < memblock.size()-600; i = i + 4) //read in 32 bits at a time.
   {
       // if (cnt>3488) {
       //   for (int32_t j = 0; j < 4; j++)
@@ -282,10 +283,11 @@ void PulseAna::fillWaveform(std::vector<char> memblock)
       // // getchar();
       Pulse* pulse = new Pulse (0, cnt, maxAmplitude, 0, 0, 0, 0, 0);
       pulse->setWf(nSamples, bufX, bufY);
-      pulse->print();
+      // pulse->print();
       m_vp.push_back(*pulse);
       delete(pulse);
       cnt++;
+      pb.show(i,memblock.size());
 
 
       // if (maxAmplitude < 147)
@@ -420,6 +422,18 @@ void PulseAna::writeToHistFile(string fName) {
   outfile.close();
 }
 
+void PulseAna::plotCx() {
+  TApplication* app = new TApplication("app",0,0);
+  DrawFuns *dr = new DrawFuns();
+  TCanvas can ("c1","c1",800,600) ;//new TCanvas("can","can",800,600);
+  can.Clear();
+  // dr->prettify(&can);
+  // dr->prettify(m_vp.at(0).extHistArea_v5);
+  // m_vp.at(0).extHistArea_v5->Draw();
+  can.Update();
+  can.WaitPrimitive();
+  can.Update();
+}
 
 
 void PulseAna::showPulses() {
@@ -447,7 +461,7 @@ void PulseAna::showPulses() {
 
     can.Clear();
     // can =  TCanvas ("c1","c1",800,600);
-    m_vp.at(i).print();
+    // m_vp.at(i).print();
     can.Update();
     can.WaitPrimitive();
     can.Update();

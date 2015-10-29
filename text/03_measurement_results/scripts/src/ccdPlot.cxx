@@ -63,9 +63,9 @@ int32_t main (void) {
     float fielde[100];
 
     int num = 0;
-    const float amp = 9.0; // mV/fC
+    const float amp = 9.3; // mV/fC
     const float correctS37 = 1;//0.9;   // to account for surface problems
-    const float correctS79 = 1.12;  // because I haven't taken highest CCD points
+    const float correctS79 = 1;  // because I haven't taken highest CCD points
     // 1 C = 6.241e18 elecs ->
     const float fcToElecs = 6.241e3;
 
@@ -85,7 +85,7 @@ int32_t main (void) {
     gr[sample] = new TGraphErrors(fileName.c_str());
 
     if (!sampleName[sample].compare("S37")) {
-      for (int i=0;i<gr[sample]->GetN();i++) gr[sample]->GetY()[i] *= 0.95;
+      for (int i=0;i<gr[sample]->GetN();i++) gr[sample]->GetY()[i] *= 0.92;
     }
 
     //c[sample] = new TCanvas(fileName.c_str(),fileName.c_str(),800,600);
@@ -120,7 +120,7 @@ int32_t main (void) {
   gr[0]->GetXaxis()->SetTitle("Electric field [V/ #mu m]");
   gr[0]->GetYaxis()->SetTitle("Charge collection distance [ #mu m]");
 
-  TLegend* leg1 = new TLegend(0.60,0.20,0.95,0.40);
+  TLegend* leg1 = new TLegend(0.60,0.17,0.95,0.44);
   leg1->AddEntry(gr[2],"S37 non-irrad","lep");
   leg1->AddEntry(gr[0],"S79 1e14 #pi cm{}^{-2}","lep");
   leg1->AddEntry(gr[1],"S52 3.63e14 #pi cm{}^{-2}","lep");
@@ -172,7 +172,7 @@ int32_t main (void) {
       <<endl;
   cout<<" --------------------------------"<<endl;
 
-  TLegend* leg2 = new TLegend(0.5,0.7,0.95,0.95);
+  TLegend* leg2 = new TLegend(0.4,0.65,0.95,0.95);
   leg2->SetTextFont(132);
   leg2->AddEntry(fun,"RD42 fit: k = 1.8 #times 10^{-18}","l");
   leg2->AddEntry(gp[0],"CCD at >500 V","lep");
@@ -180,7 +180,7 @@ int32_t main (void) {
   // sskfit.str("");
   // sskfit << "Data fit: k_{fit} = " <<
   //        << 3.2#pm
-  leg2->AddEntry(fitf, "Data fit: k_{fit} = 3.2 #pm 1 #times 10^{-18}","l");
+  leg2->AddEntry(fitf, "Data fit: k_{fit} = 3.0 #pm 1.0 #times 10^{-18}","l");
 
 
   // gp[0]->GetXaxis()->SetTitle("Radiation dose [10^{14} pions cm{}^{-2}]");

@@ -136,7 +136,7 @@ void DrawFuns::prettify (TVirtualPad *c) {
 }
 
 void DrawFuns::prettify (TCanvas *c, string histType = "th1") {
-  prettify( (TVirtualPad*) c, "th1");
+  prettify( (TVirtualPad*) c, histType);
 }
 
 void DrawFuns::prettify (TCanvas *c) {
@@ -152,10 +152,10 @@ void DrawFuns::prettify (TH2 *h ) {
   h->GetYaxis()->SetTitle("Y axis [unit]");
   h->GetXaxis()->SetTitleSize(0.07);
   h->GetYaxis()->SetTitleSize(0.07);
-  h->GetYaxis()->SetTitleOffset(0.7);
-  h->GetXaxis()->SetTitleOffset(0.7);
-  h->GetXaxis()->SetTitleFont(132);
-  h->GetYaxis()->SetTitleFont(132);
+  h->GetYaxis()->SetTitleOffset(0.9);
+  h->GetXaxis()->SetTitleOffset(0.9);
+  // h->GetXaxis()->SetTitleFont(132);
+  // h->GetYaxis()->SetTitleFont(132);
   h->GetXaxis()->SetLabelSize(0.05);
   h->GetYaxis()->SetLabelSize(0.05);
   h->GetYaxis()->SetTickLength(0.01);
@@ -211,16 +211,15 @@ void DrawFuns::prettify (TH1 *h , std::string color = "red") {
   h->GetYaxis()->SetTitle("Y axis [unit]");
   h->GetXaxis()->SetTitleSize(0.07);
   h->GetYaxis()->SetTitleSize(0.07);
-  h->GetXaxis()->SetTitleOffset(0.7);
-  h->GetYaxis()->SetTitleOffset(0.7);
-  h->GetXaxis()->SetTitleFont(132);
-  h->GetYaxis()->SetTitleFont(132);
+  h->GetXaxis()->SetTitleOffset(0.9);
+  h->GetYaxis()->SetTitleOffset(0.9);
+  // h->GetXaxis()->SetTitleFont(132);
+  // h->GetYaxis()->SetTitleFont(132);
   h->GetXaxis()->SetLabelSize(0.05);
   h->GetYaxis()->SetLabelSize(0.05);
   h->GetYaxis()->SetTickLength(0.01);
   h->SetFillStyle(colorFill);
   h->SetFillColor(colorNum);
-
 }
 
 void DrawFuns::prettyGraphShade (int n, double *xaxis, double *yaxis,
@@ -261,11 +260,12 @@ double DrawFuns::relError (double X, double errX, double Y, double errY) {
 
 void DrawFuns::normalise(TH1D* h) {
   double sum = 0;
-  for (int32_t i=0; i<h->GetNbinsX(); i++) {
+  for (int32_t i=1; i<=h->GetNbinsX(); i++) {
     sum += h->GetBinContent(i);
   }
-  for (int32_t i=0; i<h->GetNbinsX(); i++) {
-    h->SetBinContent(i, h->GetBinContent(i)/sum );
+  for (int32_t i=1; i<=h->GetNbinsX(); i++) {
+    if (h->GetBinContent(i) != 0)
+      h->SetBinContent(i, h->GetBinContent(i)/sum );
   }
 }
 

@@ -19,16 +19,18 @@ int32_t main (void) {
 
   //---------- read from files int32_to a buffer vector ------------------
   stringstream ss, sshist;
-  for (int32_t i=9; i<10; i++) {
+  for (int32_t i=0; i<1; i++) {
     ss.str("");
     sshist.str("");
     // ss << "../../data/";
     // sshist << "../../data/";
-    ss << "../../../../../../Documents/MarieCurieTALENT/Software/PSA/data/2015-08-29_lab/";
-    sshist << "../../../../../../Documents/MarieCurieTALENT/Software/PSA/data/2015-08-29_lab/";
+    // ss << "../../../../../../Documents/MarieCurieTALENT/Software/PSA/data/2015-08-29_lab/";
+    // sshist << "../../../../../../Documents/MarieCurieTALENT/Software/PSA/data/2015-08-29_lab/";
+    ss << "/Volumes/WINSTORAGE/Meas/PSAcalib/Harsh/";
+    sshist << "/Volumes/WINSTORAGE/Meas/PSAcalib/Harsh/";
     if (i<10) {
-      ss<< "00";
-      sshist<< "00";
+      ss<< "30";
+      sshist<< "30";
     }
     else{
       ss<< "0";
@@ -36,15 +38,15 @@ int32_t main (void) {
     }
     ss<<i<<"_pulse.bin";
     sshist<<i<<"_hist.bin";
+    cout<<"Starting..."<<endl;
 
-    pana->readPulseFile(ss.str(),"C2");
-    cout<<"asdfas"<<endl<<flush;
+    pana->readPulseFile(ss.str(),"Cx");
     pana->analyse();
     cout<<ss.str()<<", "<<sshist.str()<< endl;
-    pana->showPulses();
+    // pana->showPulses();
     // pana->plot();
     // pana->plotCx();
-    // pana->writeToHistFile(sshist.str());
+    pana->writeToHistFile(sshist.str());
   } //end of reading int32_to a vector
 
   pana->clear();

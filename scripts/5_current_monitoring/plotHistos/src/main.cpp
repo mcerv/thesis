@@ -20,9 +20,12 @@ int32_t main (void) {
   //---------- read from files int32_to a buffer vector ------------------
   vector<vector<uint8_t>> buf;
   stringstream ss;
-  for (int32_t i=8; i<11; i++) {
+  int32_t num = 30;
+
+  for (int32_t i=num; i<num+1; i++) {
     ss.str("");
-    ss << "../../../../../../Documents/MarieCurieTALENT/Software/PSA/data/2015-08-29_lab/";
+    // ss << "../../../../../../Documents/MarieCurieTALENT/Software/PSA/data/2015-08-29_lab/";
+    ss << "/Volumes/WINSTORAGE/Meas/PSAcalib/Harsh/";
     if (i<10)
       ss<< "00";
     else
@@ -31,10 +34,11 @@ int32_t main (void) {
 
     //uint8_t *USBdata = new uint8_t[MAXBUFFBYTES];
     vector<uint8_t> USBdata;
-    if (i==4) {
-      buf.push_back(USBdata);
-      continue; //this run is missing
-    }
+    // if (i==4) {
+    //   buf.push_back(USBdata);
+    //   continue; //this run is missing
+    // }
+
     histAna->readFileIntoBuffer(ss.str().c_str(), USBdata);
     buf.push_back(USBdata);
     USBdata.clear();
@@ -45,7 +49,7 @@ int32_t main (void) {
   //--------------- write data into histograms ------------------------------
   string version = "";
   //std::vector<Plots> vecPlots;
-  for (int32_t i=0; i<3; i++) {
+  for (int32_t i=0; i<1; i++) {
     version = "6";
     //read from the buffer into histogram buffers
     Plots plot (i);// = new Plots();
@@ -59,6 +63,7 @@ int32_t main (void) {
   buf.clear();
   //--------------------------- analysis ------------------------------
   histAna->plotLab();
+  histAna->saveTxt();
   // histAna->plotSpectrum();
 
   cout<<"All done."<<endl;
