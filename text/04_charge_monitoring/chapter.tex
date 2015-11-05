@@ -90,14 +90,59 @@ One approach to luminosity monitoring is to count the number of particles produc
 \section{Diamond pixel module}
 \label{sec:atlasdbm}
 %---------------------------------------------------------------------------------------------------------------
-\subsection{Front-end electronics}
-%Currently, the ATLAS pixel detector consists of three layers of silicon pixel sensors utilising the FE-I3 front-end ASIC pixel readout chips. In order to increase the impact parameter resolution of the detector, a fourth layer of sensors will be installed around the beam pipe. 
-The FE-I4 (front-end version four) is an ASIC pixel chip designed specifically for the ATLAS pixel detector upgrade. The newly installed pixel layer called the Insertable B-Layer (IBL)~\cite{} is equipped with 336 FE-I4 modules. The DBM uses the same chips. The FE-I4's integrated circuit contains readout circuitry for 26880 pixels arranged in 80 columns on a 250~$\upmu$m pitch and 336 rows on a 50~$\upmu$m pitch. The size of the active area is therefore 20.0$\times$16.8~mm$^2$. This fine granularity allows for a high precision particle tracking. The chip operates at 40~MHz with a 25~ns acquisition window, which corresponds to the spacing of the particle bunches in the LHC. It is hence able to correlate hits/tracks to their corresponding bunch. Furthermore, each pixel is capable of measuring the deposited charge of a detected particle by using the Time-over-Threshold (ToT) method. The pixels are designed to collect the negative charge. Finally, the FEI4 has been designed to withstand a radiation dose up to 300 MGy. This ensures long term stability in the radiation hard forward region of the experiment.
+\subsection{pCVD diamond sensors}
+\subsection{Silicon sensors}
 
-\subsection{Positioning}
-The DBM is placed in the forward region of the ATLAS detector, very close to the beam pipe. The mechanical structure that holds the sensor planes is, due to its shape, referred to as a DBM telescope. A telescope is a system that consists of several pixel sensors placed in series one behind the other. Each DBM telescope houses three diamond pixel modules. Eight DBM telescopes reside approximately 1~m away from the collision region, four on each side. They are tilted with respect to the beam pipe for 10\textdegree. This is due to a specific phenomenon connected to erratic (dark) currents in diamond. Studies have shown~\cite{} that the erratic leakage currents that gradually develop in diamond can be suppressed under certain conditions. For instance, if a strong magnetic field is applied perpendicular to the electric field lines in the diamond bulk, the leakage current stabilises~\cite{}. The DBM was designed to exploit this phenomenon. The magnetic field lines in the ATLAS experiment are parallel to the beam. Hence, an angular displacement of the sensor with respect to the beam allows for the leakage current suppression. However, the DBM telescopes still need to be directed towards the interaction region. Taking these considerations into account, a 10\textdegree~angle with respect to the beam pipe was chosen. The influence of the magnetic field on the particle tracks at this angle is very low as the field lines are almost parallel to the tracks. The tracks are therefore straight, which reduces the track reconstruction complexity.
+
+\subsection{Front-end electronics}
+The FE-I4 (front-end version four) is an ASIC pixel chip designed specifically for the ATLAS pixel detector upgrade. It is built as a successor to the current pixel chip FE-I3, surpassing it in size of the active area (4$\times$ larger) as well as the number of channels/pixels (10$\times$ more). 336 such FE-I4 modules are used in the newly installed pixel layer called the Insertable B-Layer (IBL)~\cite{}, as well as the DBM. The FE-I4's integrated circuit contains readout circuitry for 26880 pixels arranged in 80 columns on a 250~$\upmu$m pitch and 336 rows on a 50~$\upmu$m pitch. The size of the active area is therefore 20.0$\times$16.8~mm$^2$. This fine granularity allows for a high-precision particle tracking. The chip operates at 40~MHz with a 25~ns acquisition window, which corresponds to the spacing of the particle bunches in the LHC. It is hence able to correlate hits/tracks to their corresponding bunch. Furthermore, each pixel is capable of measuring the deposited charge of a detected particle by using the Time-over-Threshold (ToT) method. Finally, the FEI4 has been designed to withstand a radiation dose up to 300 MGy. This ensures a longterm stability in the radiation hard forward region of the ATLAS experiment.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.45\textwidth]{pics/fei41}
+\caption{FE-I4 layout, top-down view. The pink area are pixels grouped into columns, the green area below is the common logic and the red strip at the bottom are the wire bond pads.}
+\label{fig:anapix}
+\end{figure}
+
+
+Each pixel is designed as a separate entity. Its electrical chain is shown in figure~\ref{fig:anapix}. The bump-bond pad -- the connection to the outside of the chip -- is the input of the electrical chain, connected to a free-running amplification stage with adjustable shaping using a 4-bit register at the feedback branch. The analog amplifier is designed to collect negative charge, therefore electrons. The output is routed through a discriminator with an adjustable threshold. This value in effect defines the level at which the circuit will detect a hit. In addition, there is a counter of the clock cycles (25~ns sampling) during which the signal is above the discriminator threshold. The value of the counter is proportional to the collected charge. The logic gates at the end of the chain are used to enable/disable the pixel and to issue a so-called HitOr flag -- this signal is set whenever at least one of the pixels was hit and is used as a trigger for the readout. The output of the chain -- HitOut -- is routed into the chip's logic where it is buffered and eventually sent out to the readout system. The module receives all its commands from the system via a 40~MHz LVDS line. The commands are either settings for the pixel registers or triggers that start the data readout. The data are sent via an LVDS line at up to 320~Mbit/s, but by default at 160~Mbit/s, four times faster than the device clock. This enables the device to clear out its buffers before new data are recorded, thus avoiding dead time. The FE-I4 has been successfully tested for trigger rates of up to 300~kHz. 
+
+%The pixels are designed to collect the negative charge.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.7\textwidth]{pics/analogPix}
+\caption{Schematic of an analog pixel. Courtesy of the FE-I4 collaboration.}
+\label{fig:anapix}
+\end{figure}
+
+%describe threshold and IF tuning
+The DBM uses pCVD diamond with $d_C=500~\upmu$m thickness and silicon with $d_{Si}=200~\upmu$m thickness as a sensor material. The resulting most probable value (MPV) of the deposited charge for a minimum ionising particle (MIP) is calculated with the formula $Q_S=d \cdot E_{e-h}$ and equals 18000~electrons and 17800~electrons, respectively, at a full charge collection efficiency. Unfortunately this is not the case with the pCVD material, whereby we can expect the charge collection efficiency to be of the order of 50~\%  -- around 9000~e. These values further decrease with received irradiation dose. Therefore in order to detect the particles depositing energy on the far left side of the landau spectrum, the threshold has to be set to a significantly lower value. On the other hand, too low threshold means that the electronic noise will trigger a false hit. The typical noise amplitudes being in the range of 120--200~e, a safe threshold range would be between $Th=$ 1000--3000~e.
+
+The analog amplifier is implemented in two stages to get a fast rise time at a low noise and a low power consumption. The output signal of the analog amplifier has a triangular shape with a fast rise time and a long decay.  The shape can be adjusted by tuning the amplifier feedback loop. Its length is proportional to the collected charge, but it needs to be calibrated first. This is done using the injection capacitors $C_{inj1}$ and $C_{inj2}$ seen in figure~\ref{fig:anapix} with well defined capacitances. A charge $Q_{cal}=V_{cal}\cdot(C_{inj1}+C_{inj2})$ is injected into the analog chain, the length of the output pulse is measured and the feedback value is changed to either lengthen or shorten the pulse in order to get to the required duration $t_{cal}$. The typical values are $Q_{cal}=5000-16000~$e at the time $t_{cal}=5-10~$ToT, depending on the sensor, radioactive source and application. Therefore the initial threshold $Th$ at 1~ToT and the calibrated value $Q_{cal}$ at $t_{cal}$~ToT give us a linear scale of collected charge with respect to time over threshold.
+However, in practice this relation is nonlinear for lower thresholds, but since the goal of the measurements is to track the particles rather than to measure their deposited energy precisely, this is sufficient. 
+ %The target values depend on the type of the sensor and the intended use of the device.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 % It is capable of carrying out position-resolved measurements by performing high-precision particle tracking.
+%Currently, the ATLAS pixel detector consists of three layers of silicon pixel sensors utilising the FE-I3 front-end ASIC pixel readout chips. In order to increase the impact parameter resolution of the detector, a fourth layer of sensors will be installed around the beam pipe. 
 
 
 %---------------------------------------------------------------------------------------------------------------
@@ -138,7 +183,16 @@ Judith~\cite{} is a software framework for analysing test beam data. It is capab
 Spatial resolution, efficiency, ToT
 
 
-\subsection{Operation during collisions}
+%---------------------------------------------------------------------------------------------------------------
+\section{Operation}
+\label{sec:operation}
+%---------------------------------------------------------------------------------------------------------------
+
+\subsection{Positioning}
+The DBM is placed in the forward region of the ATLAS detector, very close to the beam pipe. The mechanical structure that holds the sensor planes is, due to its shape, referred to as a DBM telescope. A telescope is a system that consists of several pixel sensors placed in series one behind the other. Each DBM telescope houses three diamond pixel modules. Eight DBM telescopes reside approximately 1~m away from the collision region, four on each side. They are tilted with respect to the beam pipe for 10\textdegree. This is due to a specific phenomenon connected to erratic (dark) currents in diamond. Studies have shown~\cite{} that the erratic leakage currents that gradually develop in diamond can be suppressed under certain conditions. For instance, if a strong magnetic field is applied perpendicular to the electric field lines in the diamond bulk, the leakage current stabilises~\cite{}. The DBM was designed to exploit this phenomenon. The magnetic field lines in the ATLAS experiment are parallel to the beam. Hence, an angular displacement of the sensor with respect to the beam allows for the leakage current suppression. However, the DBM telescopes still need to be directed towards the interaction region. Taking these considerations into account, a 10\textdegree~angle with respect to the beam pipe was chosen. The influence of the magnetic field on the particle tracks at this angle is very low as the field lines are almost parallel to the tracks. The tracks are therefore straight, which reduces the track reconstruction complexity.
+
+
+\subsection{Data taking during collisions}
 The DBM has been commissioned in ATLAS and is now taking data. Several issues still need to be resolved regarding the readout systems. Unfortunately, due to issues with the low voltage power supply regulators, six out of 24 modules died during operation: four silicon and two diamond modules. The system configured the modules into an unsteady state whereby they drew twice as much current as the allowed maximum. This current fused the wire bonds within minutes. This has left only five diamond telescopes still fully operational. The preliminary data obtained using the remaining telescopes show that the background rejection could indeed work. U
 
 
