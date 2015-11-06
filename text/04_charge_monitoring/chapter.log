@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  4 NOV 2015 02:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  6 NOV 2015 01:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -205,16 +205,42 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
+(/usr/local/texlive/2012/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip48
+\enit@outerparindent=\dimen112
+\enit@toks=\toks16
+\enit@inbox=\box26
+\enitdp@description=\count97
+)
 (./packages/fancyhdr.sty
-\fancy@headwidth=\skip48
-\f@ncyO@elh=\skip49
-\f@ncyO@erh=\skip50
-\f@ncyO@olh=\skip51
-\f@ncyO@orh=\skip52
-\f@ncyO@elf=\skip53
-\f@ncyO@erf=\skip54
-\f@ncyO@olf=\skip55
-\f@ncyO@orf=\skip56
+\fancy@headwidth=\skip49
+\f@ncyO@elh=\skip50
+\f@ncyO@erh=\skip51
+\f@ncyO@olh=\skip52
+\f@ncyO@orh=\skip53
+\f@ncyO@elf=\skip54
+\f@ncyO@erf=\skip55
+\f@ncyO@olf=\skip56
+\f@ncyO@orf=\skip57
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count98
+\output=\toks17
+\linenoprevgraf=\count99
+\linenumbersep=\dimen113
+\linenumberwidth=\dimen114
+\c@linenumber=\count100
+\c@pagewiselinenumber=\count101
+\c@LN@truepage=\count102
+\c@internallinenumber=\count103
+\c@internallinenumbers=\count104
+\quotelinenumbersep=\dimen115
+\bframerule=\dimen116
+\bframesep=\dimen117
+\bframebox=\box27
+LaTeX Info: Redefining \\ on input line 3056.
 ) (./chapter.aux
 
 LaTeX Warning: Label `fig:anapix' multiply defined.
@@ -225,38 +251,38 @@ LaTeX Warning: Label `sec:limitations' multiply defined.
 )
 \openout1 = `chapter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 25.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    ... okay on input line 25.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count97
-\scratchdimen=\dimen112
-\scratchbox=\box26
-\nofMPsegments=\count98
-\nofMParguments=\count99
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count100
-\MPscratchDim=\dimen113
-\MPnumerator=\count101
-\makeMPintoPDFobject=\count102
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count105
+\scratchdimen=\dimen118
+\scratchbox=\box28
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen119
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks19
 ) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -310,11 +336,11 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 Chapter 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 58.
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 58.
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -322,29 +348,69 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<../../scripts/4_charge_monitoring/plots/detArea.pdf, id=10, 569.12625pt x 410.
+53375pt>
+File: ../../scripts/4_charge_monitoring/plots/detArea.pdf Graphic file (type pd
+f)
+ <use ../../scripts/4_charge_monitoring/plots/detArea.pdf>
+Package pdftex.def Info: ../../scripts/4_charge_monitoring/plots/detArea.pdf us
+ed on input line 80.
+(pdftex.def)             Requested size: 260.17464pt x 187.68266pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 27.05003pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] <pics/fei41.png, id=14, 806.01125pt x 768.8725pt>
+[2 <../../scripts/4_charge_monitoring/plots/detArea.pdf, page is rotated 90 deg
+rees>] <pics/mod1.jpeg, id=59, 426.80597pt x 283.50488pt>
+File: pics/mod1.jpeg Graphic file (type jpg)
+ <use pics/mod1.jpeg>
+Package pdftex.def Info: pics/mod1.jpeg used on input line 107.
+(pdftex.def)             Requested size: 303.53267pt x 201.6316pt.
+
+<pics/wafer.jpg, id=60, 703.62875pt x 561.09625pt>
+File: pics/wafer.jpg Graphic file (type jpg)
+ <use pics/wafer.jpg>
+Package pdftex.def Info: pics/wafer.jpg used on input line 119.
+(pdftex.def)             Requested size: 303.53267pt x 242.04579pt.
+
+[3 <./pics/mod1.jpeg>] [4 <./pics/wafer.jpg>]
+<pics/fei41.png, id=71, 806.01125pt x 768.8725pt>
 File: pics/fei41.png Graphic file (type png)
  <use pics/fei41.png>
-Package pdftex.def Info: pics/fei41.png used on input line 102.
+Package pdftex.def Info: pics/fei41.png used on input line 133.
 (pdftex.def)             Requested size: 195.12767pt x 186.12872pt.
-
-[3 <./pics/fei41.png>] <pics/analogPix.png, id=20, 1266.7325pt x 691.58376pt>
+ [5 <./pics/fei41.png>] <pics/analogPix.png, id=75, 1266.7325pt x 691.58376pt>
 File: pics/analogPix.png Graphic file (type png)
 
 <use pics/analogPix.png>
-Package pdftex.def Info: pics/analogPix.png used on input line 113.
+Package pdftex.def Info: pics/analogPix.png used on input line 143.
 (pdftex.def)             Requested size: 303.53267pt x 165.70912pt.
- [4 <./pics/analogPix.png>] [5] [6] [7]
+ [6 <./pics/analogPix.png>] [7]
+<../../scripts/4_charge_monitoring/plots/production.pdf, id=85, 569.12625pt x 4
+10.53375pt>
+File: ../../scripts/4_charge_monitoring/plots/production.pdf Graphic file (type
+ pdf)
+ <use ../../scripts/4_charge_monitoring/plots/production.pdf>
+Package pdftex.def Info: ../../scripts/4_charge_monitoring/plots/production.pdf
+ used on input line 174.
+(pdftex.def)             Requested size: 260.17464pt x 187.68266pt.
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 181.
+[8] [9 <../../scripts/4_charge_monitoring/plots/production.pdf, page is rotated
+ 90 degrees>] [10]
 
-[8] [9] [10] (./chapter.aux)
+LaTeX Warning: Reference `' on page 11 undefined on input line 199.
+
+<pics/DBM-installed-colour1.jpg, id=138, 2276.505pt x 1710.39pt>
+File: pics/DBM-installed-colour1.jpg Graphic file (type jpg)
+
+<use pics/DBM-installed-colour1.jpg>
+Package pdftex.def Info: pics/DBM-installed-colour1.jpg used on input line 214.
+
+(pdftex.def)             Requested size: 390.25534pt x 293.1896pt.
+ [11] [12 <./pics/DBM-installed-colour1.jpg>] [13] (./chapter.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -353,13 +419,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3696 strings out of 493488
- 55677 string characters out of 3141326
- 109179 words of memory out of 3000000
- 6954 multiletter control sequences out of 15000+200000
- 12294 words of font info for 45 fonts, out of 3000000 for 9000
+ 4214 strings out of 493488
+ 64433 string characters out of 3141326
+ 118723 words of memory out of 3000000
+ 7454 multiletter control sequences out of 15000+200000
+ 12594 words of font info for 46 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,10n,43p,2263b,277s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,43p,2325b,390s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -367,15 +433,16 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 /local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
 cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loc
-al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
-l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
-texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local
-/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on chapter.pdf (10 pages, 1731266 bytes).
+al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local
+/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on chapter.pdf (13 pages, 4306094 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 190 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

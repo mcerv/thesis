@@ -5,6 +5,8 @@
 \usepackage{upgreek}
 \usepackage{subfig}
 \usepackage{textcomp}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0cm,labelindent=0cm}
 
 \usepackage{packages/fancyhdr}% http://ctan.org/pkg/fancyhdr
 \pagestyle{fancy}% Change page style to fancy
@@ -17,6 +19,8 @@
 \renewcommand{\headrulewidth}{0.7pt}% Default \headrulewidth is 0.4pt
 %\renewcommand{\footrulewidth}{0.7pt}% Default \footrulewidth is 0pt
 %\rfoot{\thepage}
+\usepackage{lineno}
+  \linenumbers
 
 \begin{document}
 \baselineskip=15pt
@@ -66,10 +70,17 @@ The material of choice for the inner detector layers in the HEP experiments is s
 %\section{The ATLAS Diamond Beam Monitor}
 %\label{sec:atlasdbm}
 %---------------------------------------------------------------------------------------------------------------
-The ATLAS Diamond Beam Monitor (DBM) is a novel high energy charged particle detector. Its function is to measure luminosity and beam background in the ATLAS experiment. The monitor's pCVD diamond sensors are instrumented with pixellated FE-I4 front-end chips. The pCVD diamond sensor material was chosen to ensure the durability of the sensors in a radiation-hard environment. The DBM was designed as an upgrade to the existing luminosity monitor called the Beam Conditions Monitor (BCM)~\cite{} consisting of eight diamond pad detectors. It is able to perform precise time-of-flight (ToF) measurements. The DBM complements the BCM's features by implementing tracking capability. Its pixelated front-end electronics significantly increase the spatial resolution of the system. Furthermore, the DBM is able to distinguish particle tracks originating in the collision region from the background hits. This capability is a result of its projective geometry pointing towards the interaction region. This chapter first describes the principles of luminosity measurements. It then explains how the DBM will carry out this task. Finally, some results from tests and from the real collisions are presented. 
+The ATLAS Diamond Beam Monitor (DBM) is a novel high energy charged particle detector. Its function is to measure luminosity and beam background in the ATLAS experiment. The monitor's pCVD diamond sensors are instrumented with pixellated FE-I4 front-end chips. The pCVD diamond sensor material was chosen to ensure the durability of the sensors in a radiation-hard environment. The DBM was designed as an upgrade to the existing luminosity monitor called the Beam Conditions Monitor (BCM)~\cite{} consisting of eight diamond pad detectors, which is able to perform precise time-of-flight (ToF) measurements. The DBM complements the BCM's features by implementing tracking capability. Its pixelated front-end electronics significantly increase the spatial resolution of the system. Furthermore, the DBM is able to distinguish particle tracks originating in the collision region from the background hits. This capability is a result of its projective geometry pointing towards the interaction region. This chapter first describes the principles of luminosity measurements. It then explains how the DBM will carry out this task. Finally, some results from tests and from the real collisions are presented. 
 
 When a particle traverses a sensor plane, a hit is recorded in the corresponding pixel. Thus, a precise spatial and timing information of the hit is extracted. With three or more sensors stacked one behind the other, it is also possible to define the particle's trajectory. This is the case with the DBM. Its projective geometry allows the particles to be tracked if they traverse the sensor planes. The DBM relates the luminosity to the number of particle tracks that originate from the collision region of the ATLAS experiment. Particles that hit the DBM from other directions are not taken into account.
 
+The DBM is not the first diamond detector used in HEP, but it is the largest pixellated detector installed so far (see figure~\ref{fig:areavsyear}).
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.6\textwidth]{../../scripts/4_charge_monitoring/plots/detArea}
+\caption{Diamond detectors installed in high-energy physics experiments in the last decade, sorted by the active sensor area. The first four detectors from the left are radiation monitors whereas the right two are pixel trackers.}
+\label{fig:areavsyear}
+\end{figure}
 
 %---------------------------------------------------------------------------------------------------------------
 %\clearpage
@@ -79,7 +90,7 @@ When a particle traverses a sensor plane, a hit is recorded in the corresponding
  \label{sec:lumi}
 Luminosity is one of the most important parameters of a particle collider. It is a measurement of the rate of particle collisions that are produced by two particle beams. It can be described as a function of beam parameters, such as: the number of colliding bunch pairs, the revolution frequency, the number of particles in each bunch and the transverse bunch dimensions. The first four parameters are well defined. However, the transverse bunch dimensions have to be determined experimentally during calibration. The ATLAS experiment uses the \emph{van der Meer scan} \cite{} during low-luminosity runs to calibrate the luminosity detectors. This scan is performed by displacing one beam in a given direction and measuring the rate of interactions as a function of the displacement. Transverse charge density of the bunches can be estimated on the basis of the interaction rate. The calibrated luminosity detectors can then operate during high-luminosity runs.
 
-One approach to luminosity monitoring is to count the number of particles produced by the collisions. The luminosity is then proportional to the number of detected particles. A detector has to be capable of distinguishing individual particles that fly from the interaction point through the active sensor area. If the detector has at least three layers, it can reconstruct the particle's track, which gives us more information on the particle's trajectory. This is one reason why detectors with a high time and/or spatial segmentation are more suitable for these applications. The second reason is that, with a high spatial segmentation, the detector will not saturate even at high particle fluences.
+One approach to luminosity monitoring is to count the number of particles produced by the collisions. The luminosity is then proportional to the number of detected particles. A detector has to be capable of distinguishing individual particles that fly from the interaction point through the active sensor area. If the detector has at least three layers, it can reconstruct the particle's track, which gives us more information on the particle's trajectory. This is one reason why detectors with a high time and/or spatial segmentation are more suitable for these applications. The second reason is that, with a high spatial segmentation, the detector will not saturate even at high particle fluencies.
 
 
 
@@ -90,8 +101,28 @@ One approach to luminosity monitoring is to count the number of particles produc
 \section{Diamond pixel module}
 \label{sec:atlasdbm}
 %---------------------------------------------------------------------------------------------------------------
-\subsection{pCVD diamond sensors}
-\subsection{Silicon sensors}
+The two most important parts of the diamond pixel module (seen in figure~\ref{fig:dbmmodule}) are the sensor, which detects ionising radiation, and the pixellated front-end chip, which collects the ionised charge, processes the recorded data and sends it to the readout system. This section describes the two main parts and their interconnection.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.7\textwidth]{pics/mod1}
+\caption{DBM module, top-down view. Visible is the flexible PCB with signal and power connections, the silicon sensor and a part of the FE-I4. Wire bonds from the PCB to the FE-I4 and to the sensor are also visible.}
+\label{fig:dbmmodule}
+\end{figure}
+\subsection{Sensors}
+The DBM modules are equipped with two types of sensors -- diamond and silicon. The silicon sensors are used as a fallback solution because there were simply not enough high-quality diamond sensors available. In addition, a comparative study of irradiation damage between silicon and diamond can be made.
+
+ 
+\begin{description}
+\item[Diamond sensors] The target material for this application is pVCD diamond, because the active area of an individual sensor must be approximately 4~cm$^2$, which is too large for the sCVD diamond. pCVD is also a bit cheaper, which makes a detector with a large active area more feasible to build. The samples were provided by three companies: DDL, E6 and II-IV. They are grown in 15~cm wafers, as seen in figure~\ref{fig:wafer}. Their thickness is equal to 500~$\upmu$m and the minimum required charge collection efficiency is 40~\%. They need to operate at bias voltages between 600--1000~V. On one side there is a single gold electrode whereas on the other side a pixellised metallisation is placed. 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.7\textwidth]{pics/wafer}
+\caption{A pCVD wafer. Golden dots on the surface are the electrodes that were applied to test the wafer across the surface and find the regions with the highest efficiency.}
+\label{fig:wafer}
+\end{figure}
+\item[Silicon sensors] were taken from the IBL production. They are standard $n^+ - in - n$ planar sensors with a 200~$\upmu$m thickness and were fabricated at CiS, a German company. They are designed to have nearly a 100~\% efficiency when non-irradiated. Their bulk resistivity is between 2--5~k$\Omega$cm and they were diffusion oxygenated at 1150~\textdegree C for 24~hours to increase their radiation hardness. One side is segmented into pixels. Guard rings at the edges of the sensor provide a controlled drop in potential, reducing the possibility of shorts at maximum design bias voltages of the order of 1000~V.
+\end{description}
+
 
 
 \subsection{Front-end electronics}
@@ -103,7 +134,6 @@ The FE-I4 (front-end version four) is an ASIC pixel chip designed specifically f
 \caption{FE-I4 layout, top-down view. The pink area are pixels grouped into columns, the green area below is the common logic and the red strip at the bottom are the wire bond pads.}
 \label{fig:anapix}
 \end{figure}
-
 
 Each pixel is designed as a separate entity. Its electrical chain is shown in figure~\ref{fig:anapix}. The bump-bond pad -- the connection to the outside of the chip -- is the input of the electrical chain, connected to a free-running amplification stage with adjustable shaping using a 4-bit register at the feedback branch. The analog amplifier is designed to collect negative charge, therefore electrons. The output is routed through a discriminator with an adjustable threshold. This value in effect defines the level at which the circuit will detect a hit. In addition, there is a counter of the clock cycles (25~ns sampling) during which the signal is above the discriminator threshold. The value of the counter is proportional to the collected charge. The logic gates at the end of the chain are used to enable/disable the pixel and to issue a so-called HitOr flag -- this signal is set whenever at least one of the pixels was hit and is used as a trigger for the readout. The output of the chain -- HitOut -- is routed into the chip's logic where it is buffered and eventually sent out to the readout system. The module receives all its commands from the system via a 40~MHz LVDS line. The commands are either settings for the pixel registers or triggers that start the data readout. The data are sent via an LVDS line at up to 320~Mbit/s, but by default at 160~Mbit/s, four times faster than the device clock. This enables the device to clear out its buffers before new data are recorded, thus avoiding dead time. The FE-I4 has been successfully tested for trigger rates of up to 300~kHz. 
 
@@ -123,40 +153,28 @@ However, in practice this relation is nonlinear for lower thresholds, but since 
  %The target values depend on the type of the sensor and the intended use of the device.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 % It is capable of carrying out position-resolved measurements by performing high-precision particle tracking.
 %Currently, the ATLAS pixel detector consists of three layers of silicon pixel sensors utilising the FE-I3 front-end ASIC pixel readout chips. In order to increase the impact parameter resolution of the detector, a fourth layer of sensors will be installed around the beam pipe. 
 
 
 %---------------------------------------------------------------------------------------------------------------
-\subsection{Module assembly and quality control}
+\section{Module assembly and quality control}
 %\label{sec:modass}
 %---------------------------------------------------------------------------------------------------------------
 Parts for the detector arrived separately and were assembled into modules at CERN's DSF lab after being checked for production faults. The assembled modules underwent a series of quality control (QC) and burn-in tests to determine their quality, efficiency and long-term stability.
-\subsubsection{Assembly}
+\subsection{Assembly}
 A single-chip module consists of a pixel module, a flexible PCB and the supporting mechanics (a ceramic plate and an aluminium plate). The chip arrives already bump-bonded to the sensor, be it diamond or silicon. First it is glued to the ceramic plate on one side and to the PCB on the other using either Araldite 2011 or Staystik 672/472. The choice of glue was a topic of a lengthy discussion. Staystik is re-workable and has a very high thermal conductivity. The latter is important because the FE-I4 chips tend to heat up significantly and need a good heat sink. The problem is that it has a curing temperature of 160/170~\textdegree C. This temperature could cause some unwanted tension build-up between the FE-I4 and the diamond sensor due to different coefficients of thermal expansion, disconnecting regions of pixels. To avoid this, an alternative glue was tried. Araldite~2011 can be cured at lower temperatures -- down to RT -- but it has a lower heat conductivity. In the end Araldite was chosen as the safer option. However, due to the longer curing, the whole assembly process using Araldite is extended to two working days. After curing, the module is wire-bonded and attached to the aluminium plate using screws made up of a radiation-resistant PEEK plastic. They have to be tightened with a great care, because their screw head is only 0.2--0.6~mm away from the sensor edge -- the sensor displacement tolerance during gluing is of the order of 0.5~mm. Finally, the module is put in an aluminium carrier which protects the module from mechanical damage or electrostatic discharges.
 
-\subsubsection{Testing}
+\subsection{Testing}
 The modules were tested in the lab using an RCE readout system and a moving stage with two degrees of freedom. They were placed onto the stage and connected to the readout system and the power supplies. After ensuring the low- and high voltage connectivity they were checked for the signal connectivity. If everything was operational, a series of automated tests was run. Each of these tests calibrates a certain value within a pixel, whether it is the signal threshold or the value for integrated charge. These are tuned in a way that the response to a predefined calibration signal is uniform for all pixels across the sensor. This procedure is referred to as \emph{tuning}. 
 
-When the modules were tuned, they were tested using a $^{90}$Sr radioactive source. Two things were tested: 1) operation of all pixels and 2) sensor efficiency. The first test was carried out by moving the module slowly under the source while taking data so that the whole surface was scanned uniformly. The resulting occupancy map revealed any pixels that were not electrically connected to the sensor via bump bonds. This was an important step in the DBM QC procedure, because it turned out that a significant portion of the flip-chipped diamond sensors exhibited very poor connectivity. The disconnected regions on the faulty modules ranged anywhere from 0.5--80~\% of the overall active surface. In two cases the sensor was even completely detached from the chip. The pixel connectivity turned out to be the most important qualification factor in the QC procedure. Unfortunately the only way to check it was to fully assemble a module and test it using a radioactive source. If the module turned out to be of poor quality, it was disassembled and sent for rework. The turnover time of this operation was of the order of one month, which affected the detector installation schedule significantly. Only the sensors that passed the pixel connectivity test underwent the second test stage in which the sensor's efficiency was estimated. In principle, a scintillator placed underneath the module was used as a trigger; a particle that crossed the DBM module and hit the scintillator, triggered the module readout. In the end, the number of triggers was compared to the number of hits/clusters recorded by the module. The resulting ratio was an estimate of the sensor's detection efficiency. The real sensor efficiency can only be measured in a particle beam and using a beam telescope as a reference detector. Nonetheless, the so-called \emph{pseudo-efficiency} gave a rough estimate of the sensors' quality. The results are shown in section~\ref{sec:perfresults}.  All in all, 79 modules went through the QC procedure -- 45 diamond modules and 34 silicon modules, 12 of the latter only for testing purposes. 18 diamond modules and 6 silicon modules were in the end chosen to be made up into DBM telescopes and installed into ATLAS.
+When the modules were tuned, they were tested using a $^{90}$Sr radioactive source. Two things were tested: 1) operation of all pixels and 2) sensor efficiency. The first test was carried out by moving the module slowly under the source while taking data so that the whole surface was scanned uniformly. The resulting occupancy map revealed any pixels that were not electrically connected to the sensor via bump bonds. This was an important step in the DBM QC procedure, because it turned out that a significant portion of the flip-chipped diamond sensors exhibited very poor connectivity. The disconnected regions on the faulty modules ranged anywhere from 0.5--80~\% of the overall active surface. In two cases the sensor was even completely detached from the chip. The pixel connectivity turned out to be the most important qualification factor in the QC procedure. Unfortunately the only way to check it was to fully assemble a module and test it using a radioactive source. If the module turned out to be of poor quality, it was disassembled and sent for rework. The turnover time of this operation was of the order of one month, which affected the detector installation schedule significantly. Only the sensors that passed the pixel connectivity test underwent the second test stage in which the sensor's efficiency was estimated. In principle, a scintillator placed underneath the module was used as a trigger; a particle that crossed the DBM module and hit the scintillator, triggered the module readout. In the end, the number of triggers was compared to the number of hits/clusters recorded by the module. The resulting ratio was an estimate of the sensor's detection efficiency. The real sensor efficiency can only be measured in a particle beam and using a beam telescope as a reference detector. Nonetheless, the so-called \emph{pseudo-efficiency} gave a rough estimate of the sensors' quality. The results are shown in section~\ref{sec:perfresults}.  All in all, 79 modules went through the QC procedure -- 43 diamond modules and 36 silicon modules, 12 of the latter only for testing purposes. Figure~\ref{fig:production} shows their production with time. 18 diamond modules and 6 silicon modules were in the end chosen to be made up into DBM telescopes and installed into ATLAS.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.6\textwidth]{../../scripts/4_charge_monitoring/plots/production}
+\caption{Module production with time}
+\label{fig:production}
+\end{figure}
 
 A very important issue was the so called erratic current. This term describes the leakage current in a pCVD diamond that becomes unstable. It can develop gradually or can be triggered with a $\upbeta$ source. Spikes appear in the otherwise stable leakage current. They can be up to three orders of magnitude higher than the base current. Sometimes the current also suddenly increases for a few orders of magnitude and stays at that level (e.g. from the initial 1~nA to 3~$\upmu$A). The amplitude differs in magnitude from sensor to sensor. This effect is still not fully explained, but the hypothesis is that the charges find a conductive channel along the grain boundaries, causing discharges. These discharges are picked up by the pixel amplifiers in the FE-I4. A single discharge can trigger a group of up to $\sim$500 pixels, resulting in a \emph{blob} on the detector occupancy map. Sometimes the conductive channel stays in a conductive state, making one or more pixels always to fire. These pixels are useless and have to be masked out during measurements. 
 
@@ -189,11 +207,18 @@ Spatial resolution, efficiency, ToT
 %---------------------------------------------------------------------------------------------------------------
 
 \subsection{Positioning}
-The DBM is placed in the forward region of the ATLAS detector, very close to the beam pipe. The mechanical structure that holds the sensor planes is, due to its shape, referred to as a DBM telescope. A telescope is a system that consists of several pixel sensors placed in series one behind the other. Each DBM telescope houses three diamond pixel modules. Eight DBM telescopes reside approximately 1~m away from the collision region, four on each side. They are tilted with respect to the beam pipe for 10\textdegree. This is due to a specific phenomenon connected to erratic (dark) currents in diamond. Studies have shown~\cite{} that the erratic leakage currents that gradually develop in diamond can be suppressed under certain conditions. For instance, if a strong magnetic field is applied perpendicular to the electric field lines in the diamond bulk, the leakage current stabilises~\cite{}. The DBM was designed to exploit this phenomenon. The magnetic field lines in the ATLAS experiment are parallel to the beam. Hence, an angular displacement of the sensor with respect to the beam allows for the leakage current suppression. However, the DBM telescopes still need to be directed towards the interaction region. Taking these considerations into account, a 10\textdegree~angle with respect to the beam pipe was chosen. The influence of the magnetic field on the particle tracks at this angle is very low as the field lines are almost parallel to the tracks. The tracks are therefore straight, which reduces the track reconstruction complexity.
+The DBM is placed in the forward region of the ATLAS detector, very close to the beam pipe (see figure~\ref{fig:dbminatlas}). The mechanical structure that holds the sensor planes is, due to its shape, referred to as a DBM telescope. A telescope is a system that consists of several pixel sensors placed in series one behind the other. Each DBM telescope houses three diamond pixel modules. Eight DBM telescopes reside approximately 1~m away from the collision region, four on each side. They are tilted with respect to the beam pipe for 10\textdegree. This is due to a specific phenomenon connected to erratic (dark) currents in diamond. Studies have shown~\cite{} that the erratic leakage currents that gradually develop in diamond can be suppressed under certain conditions. For instance, if a strong magnetic field is applied perpendicular to the electric field lines in the diamond bulk, the leakage current stabilises~\cite{}. The DBM was designed to exploit this phenomenon. The magnetic field lines in the ATLAS experiment are parallel to the beam. Hence, an angular displacement of the sensor with respect to the beam allows for the leakage current suppression. However, the DBM telescopes still need to be directed towards the interaction region. Taking these considerations into account, a 10\textdegree~angle with respect to the beam pipe was chosen. The influence of the magnetic field on the particle tracks at this angle is very low as the field lines are almost parallel to the tracks. The tracks are therefore straight, which reduces the track reconstruction complexity.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.9\textwidth]{pics/DBM-installed-colour1}
+\caption{This photo highlights four telescopes installed onto the nSQPs and around the pipe}
+\label{fig:dbminatlas}
+\end{figure}
 
 
 \subsection{Data taking during collisions}
-The DBM has been commissioned in ATLAS and is now taking data. Several issues still need to be resolved regarding the readout systems. Unfortunately, due to issues with the low voltage power supply regulators, six out of 24 modules died during operation: four silicon and two diamond modules. The system configured the modules into an unsteady state whereby they drew twice as much current as the allowed maximum. This current fused the wire bonds within minutes. This has left only five diamond telescopes still fully operational. The preliminary data obtained using the remaining telescopes show that the background rejection could indeed work. U
+The DBM has been commissioned in ATLAS and is now taking data. Several issues still need to be resolved regarding the readout systems. Unfortunately, due to issues with the low voltage power supply regulators, six out of 24 modules died during operation: four silicon and two diamond modules. The system configured the modules into an unsteady state whereby they drew twice as much current as the allowed maximum. This current fused the wire bonds within minutes. This has left only five diamond telescopes still fully operational. The preliminary data obtained using the remaining telescopes show that the background rejection could indeed work. 
 
 
 
