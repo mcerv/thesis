@@ -190,15 +190,26 @@ Due to time constraints, the telescopes were not built at the same time but inst
 %---------------------------------------------------------------------------------------------------------------
 This section gives an overview of the performance results of the DBM modules achieved during the QC and the test beam campaign. The source tests were performed to check for disconnected regions in the sensors and to measure the diamond's pseudo-efficiency. Only the modules with minimal disconnected regions and maximum pseudo-efficiency were chosen for installation. 
 \subsection{Source tests}
-All modules went through the same procedure when tested using a $^{90}$Sr source -- to check for disconnected regions and to measure the pseudo-efficiency. The majority of the silicon modules yielded the pseudo-efficiency of 94.3$\pm$0.2~\%. Silicon sensors being 99.99~\% efficient, this value vas underestimated by about 5~\%. The measured pseudo-efficiency of the diamond modules was anywhere between 5--80~\%, depending on the diamond quality, the set threshold and the applied bias voltage. These three settings were varied to check the behaviour of the modules under various conditions. 
+All modules went through the same procedure when tested using a $^{90}$Sr source -- to check for disconnected regions and to measure the pseudo-efficiency. Figure~\ref{fig:disconreg} shows the distribution of disconnected regions across all tested modules. Silicon modules were performing as expected, with a minimum number of disconnected pixels.
+\begin{figure}[!t]
+%\centering
+\begin{tabular}{cccc}
+\subfloat[Disconnected regions for all modules derived from the occupancy scans]{\includegraphics[width=0.45\textwidth]{../../scripts/4_charge_monitoring/plots/disconnectedregion} \label{fig:disconreg}} &
+\subfloat[Pseudo-efficiencies for all modules at various threshold and voltage settings]{\includegraphics[width=0.45\textwidth]{../../scripts/4_charge_monitoring/plots/pseudoefficiency}  \label{fig:pseudoeff}}
+\end{tabular}
+\caption{Measurements of pseudo-efficiency and disconnected regions for all modules that went through the QC procedure}
+\end{figure}
+The majority of the silicon modules yielded the pseudo-efficiency of (94.3$\pm$0.2)~\%. Silicon sensors being 99.99~\% efficient, this value vas underestimated by about 5~\%. The measured pseudo-efficiency of the diamond modules was $(65\pm7)$~\%, with outliers down to 10~\%. The value depended on the diamond quality, the set threshold and the applied bias voltage. The latter two settings were varied to check the behaviour of the modules under various conditions. 
+
+
 \subsection{Test beam results}
 The first two assembled prototype DBM modules, MDBM-01 and MDBM-03, were tested at DESY, Hamburg, in a test beam facility. The aim of the measurements was to measure their efficiency, the spatial distribution of the efficiency and the effect of the beam on the disconnected regions. A silicon module MSBM-02 was measured to crosscheck the measurements. Since the silicon module is almost 100~\% efficient, it was used as an "anchor" -- the diamond's efficiency was measured relative to the silicons' efficiency. Two beam telescopes were used as reference systems: Kartel~\cite{}, built by JSI institute from Ljubljana, and EUDET Aconite~\cite{}. Both are instrumented with six Mimosa26 pixel planes and capable of tracking particles with a 2~$\upmu$m tracking resolution.
 
-The test beam prototypes did not meet the acceptance criteria for production DBM modules in the following areas: first, the CCDs were slightly below 200~$\upmu$m, which would be the DBM minimum. Secondly, the applied bias voltages ranged from 1--2~V/$\upmu$m. In addition, the threshold cut could only be set to 1500~electrons, which is higher than the DBM minimum (1000~e). Nonetheless, the resulting module efficiencies were still in the range between 75--85~\%. The 
+The test beam prototypes did not meet the acceptance criteria for production DBM modules in the following areas: first, the CCDs were slightly below 200~$\upmu$m, which would be the DBM minimum. Secondly, the applied bias voltages ranged from 1--2~V/$\upmu$m. In addition, the threshold cut could only be set to 1500~electrons, which is higher than the DBM minimum (1000~e). Nonetheless, the resulting module efficiencies were still in the range between 75--85~\%.
 
-Judith~\cite{} is a software framework for analysing test beam data. It is capable of synchronising data streams from several detector systems only connected via a trigger system, reconstructing tracks and calculating efficiency for the DUTs. It was also used to reconstruct and analyse the acquired Kartel test beam data together with the silicon and diamond module as DUTs.A sample of the analysed data is shown in figure~\ref{}. 
+To analyse the test beam data, Judith~\cite{} software framework was used. Judith is capable of synchronising data streams from several detector systems only connected via a trigger system, reconstructing tracks and calculating efficiency for the DUTs. It was also used to reconstruct and analyse the acquired Kartel test beam data together with the silicon and diamond module as DUTs.A sample of the analysed data is shown in figure~\ref{}. 
 
-Spatial resolution, efficiency, ToT
+%Spatial resolution, efficiency, ToT
 
 
 %---------------------------------------------------------------------------------------------------------------

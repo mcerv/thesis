@@ -3,25 +3,31 @@ CFLAGS = -g
 LFLAGS = 
 OBJPATH = obj
 SRCPATH = src
-EXECUTABLE0 = plotDetArea
-EXECUTABLE1 = plotProduction
+EXECUTABLE0 = plotDB
+EXECUTABLE1 = plotDetArea
+EXECUTABLE2 = plotProduction
 BOOST = 
 BOOST_INCLUDES = 
 INCLUDES =  `root-config --cflags`
 LIBS =  `root-config --ldflags --glibs`
 OBJECTS = $(OBJPATH)/drawfuns.o 
-OBJMAIN0 = $(OBJPATH)/plotDetArea.o 
-OBJMAIN1 = $(OBJPATH)/plotProduction.o 
+OBJMAIN0 = $(OBJPATH)/plotDB.o 
+OBJMAIN1 = $(OBJPATH)/plotDetArea.o 
+OBJMAIN2 = $(OBJPATH)/plotProduction.o 
 
 all: exec
 
-exec: $(OBJECTS) $(OBJMAIN0) $(OBJMAIN1) 
+exec: $(OBJECTS) $(OBJMAIN0) $(OBJMAIN1) $(OBJMAIN2) 
 	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN0) -o $(EXECUTABLE0) 
 	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN1) -o $(EXECUTABLE1) 
+	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN2) -o $(EXECUTABLE2) 
 
 
 $(OBJPATH)/drawfuns.o: $(SRCPATH)/drawfuns.cpp
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/drawfuns.cpp -o $(OBJPATH)/drawfuns.o
+
+$(OBJPATH)/plotDB.o: $(SRCPATH)/plotDB.cxx
+	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/plotDB.cxx -o $(OBJPATH)/plotDB.o
 
 $(OBJPATH)/plotDetArea.o: $(SRCPATH)/plotDetArea.cxx
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/plotDetArea.cxx -o $(OBJPATH)/plotDetArea.o
@@ -30,4 +36,4 @@ $(OBJPATH)/plotProduction.o: $(SRCPATH)/plotProduction.cxx
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/plotProduction.cxx -o $(OBJPATH)/plotProduction.o
 
 clean:
-	 rm $(OBJPATH)/*.o plotDetArea plotProduction 
+	 rm $(OBJPATH)/*.o plotDB plotDetArea plotProduction 

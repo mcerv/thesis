@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  22 OCT 2015 20:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  17 NOV 2015 01:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -241,11 +241,11 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 Chapter 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -253,66 +253,72 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<plots/semilattice9.pdf, id=15, 259.46938pt x 252.945pt>
+<plots/semilattice9.pdf, id=8, 259.46938pt x 252.945pt>
 File: plots/semilattice9.pdf Graphic file (type pdf)
 
 <use plots/semilattice9.pdf>
-Package pdftex.def Info: plots/semilattice9.pdf used on input line 63.
+Package pdftex.def Info: plots/semilattice9.pdf used on input line 66.
 (pdftex.def)             Requested size: 173.44534pt x 169.09402pt.
 
-<plots/simpledrift.pdf, id=16, 128.98187pt x 73.77562pt>
+<plots/simpledrift.pdf, id=9, 128.98187pt x 73.77562pt>
 File: plots/simpledrift.pdf Graphic file (type pdf)
 
 <use plots/simpledrift.pdf>
-Package pdftex.def Info: plots/simpledrift.pdf used on input line 75.
+Package pdftex.def Info: plots/simpledrift.pdf used on input line 86.
 (pdftex.def)             Requested size: 195.12767pt x 111.62pt.
 
-<plots/simpledrifteq.pdf, id=17, 124.465pt x 66.2475pt>
+<plots/simpledrifteq.pdf, id=10, 124.465pt x 66.2475pt>
 File: plots/simpledrifteq.pdf Graphic file (type pdf)
 
 <use plots/simpledrifteq.pdf>
-Package pdftex.def Info: plots/simpledrifteq.pdf used on input line 76.
+Package pdftex.def Info: plots/simpledrifteq.pdf used on input line 87.
 (pdftex.def)             Requested size: 195.12767pt x 103.86726pt.
- [2
+ [2]
+Overfull \hbox (19.53363pt too wide) in paragraph at lines 95--96
+[]\OT1/cmr/m/n/12 There are sev-eral ways the par-ti-cles can in-ter-act with t
+he sen-sor: via bremsstrahlung [],
+ []
 
- <./plots/semilattice9.pdf>]
-<plots/energygap.pdf, id=43, 101.37875pt x 66.74937pt>
-File: plots/energygap.pdf Graphic file (type pdf)
+[3 <./plots/semilattice9.pdf> <./plots/simpledrift.pdf> <./plots/simpledrifteq.
+pdf>]
 
-<use plots/energygap.pdf>
-Package pdftex.def Info: plots/energygap.pdf used on input line 98.
-(pdftex.def)             Requested size: 173.44534pt x 114.20267pt.
- [3 <./plots/simpledrift.pdf> <./plots/simpledrifteq.pdf> <./plots/energygap.pd
-f>]
-<plots/Intrinsic_energy_res.pdf, id=105, 569.12625pt x 364.36125pt>
+LaTeX Warning: Reference `fig:bb2' on page 4 undefined on input line 100.
+
+<pics/bb2.jpg, id=88, 840.13875pt x 526.96875pt>
+File: pics/bb2.jpg Graphic file (type jpg)
+ <use pics/bb2.jpg>
+Package pdftex.def Info: pics/bb2.jpg used on input line 105.
+(pdftex.def)             Requested size: 303.53267pt x 190.38403pt.
+ [4 <./pics/bb2.jpg>] <plots/Intrinsic_energy_res.pdf, id=93, 569.12625pt x 364
+.36125pt>
 File: plots/Intrinsic_energy_res.pdf Graphic file (type pdf)
 
 <use plots/Intrinsic_energy_res.pdf>
-Package pdftex.def Info: plots/Intrinsic_energy_res.pdf used on input line 127.
+Package pdftex.def Info: plots/Intrinsic_energy_res.pdf used on input line 151.
 
 (pdftex.def)             Requested size: 346.89731pt x 222.0988pt.
- [4 <./plots/Intrinsic_energy_res.pdf, page is rotated 90 degrees>]
+ [5] [6 <./plots/Intrinsic_energy_res.pdf, page is rotated 90 degrees>]
 
-LaTeX Warning: Reference `XXXCHAPTER' on page 5 undefined on input line 164.
+LaTeX Warning: Reference `XXXCHAPTER' on page 7 undefined on input line 164.
 
-[5
+[7
 
-] <plots/curramp.pdf, id=158, 153.07187pt x 66.74937pt>
+] <plots/curramp.pdf, id=148, 153.07187pt x 66.74937pt>
 File: plots/curramp.pdf Graphic file (type pdf)
 
 <use plots/curramp.pdf>
 Package pdftex.def Info: plots/curramp.pdf used on input line 229.
 (pdftex.def)             Requested size: 260.17464pt x 113.45915pt.
- [6
+ [8
 
  <./plots/curramp.pdf>]
-<plots/chgamp.pdf, id=179, 153.07187pt x 90.83937pt>
+<plots/chgamp.pdf, id=168, 153.07187pt x 90.83937pt>
 File: plots/chgamp.pdf Graphic file (type pdf)
  <use plots/chgamp.pdf>
 Package pdftex.def Info: plots/chgamp.pdf used on input line 247.
 (pdftex.def)             Requested size: 260.17464pt x 154.40685pt.
 
-[7 <./plots/chgamp.pdf>] [8] (./chapter.aux)
+[9 <./plots/chgamp.pdf>] [10] (./chapter.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -321,13 +327,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3886 strings out of 493488
- 59759 string characters out of 3141326
- 117946 words of memory out of 3000000
- 7127 multiletter control sequences out of 15000+200000
- 14841 words of font info for 55 fonts, out of 3000000 for 9000
+ 3888 strings out of 493488
+ 59731 string characters out of 3141326
+ 121956 words of memory out of 3000000
+ 7128 multiletter control sequences out of 15000+200000
+ 14153 words of font info for 54 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,15n,46p,838b,416s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,16n,46p,2452b,422s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -343,12 +349,11 @@ e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
 012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
 2/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2012
-/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb>
-Output written on chapter.pdf (8 pages, 280971 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on chapter.pdf (10 pages, 411289 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
+ 244 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
