@@ -5,6 +5,7 @@
 \usepackage{upgreek}
 \usepackage[greek,english]{babel}
 \usepackage{subfig}
+%\usepackage{siunitx}
 \usepackage{enumitem}
 \setlist[description]{leftmargin=0cm,labelindent=0cm}
 \begin{document}
@@ -19,7 +20,7 @@ This chapter describes the fundamentals of signal formation in a diamond sensor,
 
 There are many types of radiation sensors existing, but in this chapter we will focus on semiconductors, in particular on diamond sensors. Diamond is a good insulator, but behaves as a semiconductor in certain cases.  In fact, the main principle of operation is the same for diamond, silicon and other semiconducting materials -- ionisation.  An impinging highly energetic charged particle ionises the atoms in the lattice, freeing electrons and holes, which then drift towards positively and negatively charged electrodes, inducing an electrical signal. A sensor converts the energy deposited by a particle or a photon and to an electrical signal.
 
-Currenty, silicon is considered the industry standard for particle detection. However, there are some disadvantages of using silicon instead of diamond, due to significant differences in the material properties. In particular, the properties of silicon change significantly with radiation. For instance, the leakage current increases, which in turn increases shot noise and can lead to thermal runaway. In addition, due to induced lattice defects, which act as charge traps, its charge collection efficiency starts dropping quickly. Both are true for diamond as well, but on a much smaller scale.
+Silicon is currently considered as the industry standard for particle detection. However, there are some disadvantages of using silicon instead of diamond, due to significant differences in the material properties. In particular, the properties of silicon change significantly with radiation. For instance, the leakage current increases, which in turn increases shot noise and can lead to thermal runaway. In addition, due to induced lattice defects, which act as charge traps, its charge collection efficiency starts dropping quickly. Both are true for diamond as well, but on a much smaller scale.
 
 Table~\ref{tab:semicompare} compares the properties of diamond and silicon. Some of these values will be revisited and used in the course of this thesis.
 
@@ -55,19 +56,20 @@ Avg. signal created/$\upmu$m (e) & 36 & 89 \\\hline
 \section{Principles of signal formation in semiconductors}
 \label{sec:princsigfor}
 % ---------------------------------------------------------------------------------------------------------------
-Lattice, electron-hole pair production (3 pg)
-Ramo theorem (2 pg)
-SC detector systems, pg. 43-73
+%Lattice, electron-hole pair production (3 pg)
+%Ramo theorem (2 pg)
+%SC detector systems, pg. 43-73
+There are several ways the particles can interact with the sensor: via bremsstrahlung~\cite{}, elastic or inelastic scattering (e-h pair production). Bremsstrahlung is radiation created when a particle is deflected from its original path due to attraction of the core of an atom. This is in principle an unwanted effect in semiconductors as it decreases the spatial resolution of the sensor. Elastic scattering is deflection of the particle's trajectory without energy loss. Inelastic scattering is the interaction through which the atom is ionised and an electron-hole pair is created. All these effects are competing and are dependent on the particle's mass, momentum etc. 
 
-Semiconductors are materials that are that are conductive only under specific conditions. They can be made up of atoms with four electrons in their valence band (e.g. silicon--Si, carbon--C or germanium--Ge) or as combinations of two or more different materials (e.g. gallium arsenide--GaAs). The atoms in the lattice form valence bonds with adjacent atoms, making solid crystal structures. These bonds can break up if sufficient external energy is applied. The electron that was forming the bond is kicked out, leaving behind a positively charged ion with a vacancy in its valence band (see figure~\ref{fig:semilattice9}). A free electron-hole pair is thus created. The free electron travels through the crystal until it is caught by another hole. Similarly, the hole also "travels" through the material. Its positive charge attracts a bound electron in the vicinity, which breaks from the current bond and moves to the vacancy, leaving a new hole behind. The process continues, making it look like the vacancy -- hole is traveling through the material.
+Semiconductors are materials that are that are conductive only under specific conditions. They can be made up of atoms with four electrons in their valence band (e.g. silicon--Si, carbon--C or germanium--Ge) or as combinations of two or more different materials (e.g. gallium arsenide--GaAs). The atoms in the lattice form valence bonds with adjacent atoms, making solid crystal structures. These bonds can break up if sufficient external energy is applied. The electron that was forming the bond is kicked out, leaving behind a positively charged ion with a vacancy in its valence band (see figure~\ref{fig:semilattice9}). A free electron-hole pair is thus created. The free electron travels through the crystal until it is caught by another hole. Similarly, the hole also "travels" through the material. Its positive charge attracts a bound electron in the vicinity, which breaks from the current bond and moves to the vacancy, leaving a new hole behind. The process continues, making it look like the vacancy -- the hole -- is traveling through the material.
 
-\begin{figure}[!t]
-\begin{center}
-\includegraphics[width=0.4\linewidth]{plots/semilattice9}
-\caption{Valence bonds in the crystalline structure can be broken, producing a free electron-hole pair}
-\label{fig:semilattice9}
-\end{center}
-\end{figure}
+%\begin{figure}[!t]
+%\begin{center}
+%\includegraphics[width=0.4\linewidth]{plots/semilattice9}
+%\caption{Valence bonds in the crystalline structure can be broken, producing a free electron-hole pair}
+%\label{fig:semilattice9}
+%\end{center}
+%\end{figure}
 
 
 
@@ -76,43 +78,105 @@ The electrons need to absorb a certain energy to get kicked out of the atomic bo
 \label{eq:intrinsiccarrier}
 n_i = T^{3/2} \cdot exp(-\frac{E_g}{2kT}) 
 \end{equation} 
-wherein $k = 1.381\times10^{-23}~$m$^2~$kg~s$^{-2}~$K$^{-1}$ is the Boltzmann constant and T is the temperature. 
-
+wherein $k = 1.381\times10^{-23}~$m$^2~$kg~s$^{-2}~$K$^{-1}$ is the Boltzmann constant and T is the temperature. The 
 
 If an external electric field is applied to the crystalline structure, the free electrons and holes drift toward the positive and negative potential, respectively (see figure~\ref{fig:simpledrift}). While drifting, the charges couple with the electrodes, inducing current in the circuit, which is explained by the Shockley--Ramo theorem~\cite{}. The charges recombine upon reaching the electrodes.
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[An electron-hole pair drifting in electric field]{\includegraphics[width=0.45\textwidth]{plots/simpledrift} \label{fig:simpledrift}} &
-\subfloat[Equivalent circuit]{\includegraphics[width=0.45\textwidth]{plots/simpledrifteq}  \label{fig:simpledrifteq}}
+\subfloat[Valence bonds in the crystalline structure can be broken, producing a free electron-hole pair]{\includegraphics[width=0.22\textwidth]{plots/semilattice9} \label{fig:semilattice9}} &
+\subfloat&
+\subfloat[The freed electron-hole pair starts drifting in the externally applied electric field. The electron and hole drift in the opposite directions towards the oppositely charged electrods]{\includegraphics[width=0.33\textwidth]{plots/simpledrift} \label{fig:simpledrift}} &
+\subfloat[Equivalent electrical circuit. The moving charges act as a current source]{\includegraphics[width=0.33\textwidth]{plots/simpledrifteq}  \label{fig:simpledrifteq}}
 \end{tabular}
-\caption{Electron-hole drift representation in a circuit}
+\caption{In the equivalent electrical circuit diagram, electron-hole creation and drift can be modelled as a current source with a capacitor in parallel }
 \end{figure}
 
 
-%RAMO
-%BETHE-BLOCH
-There are several ways the particles can interact with the sensor: via bremsstrahlung~\cite{}, elastic or inelastic scattering (e-h pair production). Bremsstrahlung is radiation created when a particle is deflected from its original path due to attraction of the core of an atom. This is in principle an unwanted effect in semiconductors as it decreases the spatial resolution of the sensor. Elastic scattering is deflection of the particle's trajectory without energy loss. Inelastic scattering is the interaction through which the atom is ionised and an electron-hole pair is created. All these effects are competing and are dependent on the particle's mass, momentum etc. The mean energy loss of a particle traversing the detector with respect to its momentum is given with the so-called Bethe-Bloch equation~\ref{eq:bethebloch}: 
-\begin{equation}
--\left\langle\frac{dE}{dx}\right\rangle = \frac{4\pi}{m_ec^2}  \cdot \frac{nz^2}{\beta^2}  \cdot  \left(\frac{e^2}{4\pi\epsilon_0}\right)^2  \cdot  \left[ ln \left(\frac{2m_ec^2\beta^2}{I\cdot(1-\beta^2)}\right)-\beta^2  \right]
-\label{eq:bethebloch}
-\end{equation}
-The resulting function for a muon (a heavy electron) is shown in figure~\ref{fig:bb2}. At the momentum of around 300~MeV/c the particle deposits the lowest amount of energy. That is called a minimum ionising particle or a MIP.
+
 
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.7\linewidth]{pics/bb2}
-\caption{Stopping power for muons according to the Bethe-Bloch formula}
-\label{fig:bb2}
+\includegraphics[width=0.8\linewidth]{plots/driftboth}
+\caption{Charge carrier drift in diamond for $\upbeta/\upgamma$ and for $\upalpha$ particles}
+\label{fig:drift}
 \end{center}
 \end{figure}
 
 
 
 
-%\subsubsection{Thermal noise in semiconductors}
+%RAMO
+%BETHE-BLOCH
+\begin{description}
+\item[Energy deposition of $\upalpha$ radiation and heavy ions]
+\item[Energy deposition of  $\upbeta$ and $\upgamma$ radiation] The mean energy loss of a particle traversing the detector with respect to its momentum is given with the so-called Bethe-Bloch equation~\cite{}: 
+\begin{equation}
+-\left\langle\frac{dE}{dx}\right\rangle = \frac{4\pi}{m_ec^2}  \cdot \frac{nz^2}{\beta^2}  \cdot  \left(\frac{e^2}{4\pi\epsilon_0}\right)^2  \cdot  \left[ ln \left(\frac{2m_ec^2\beta^2}{I\cdot(1-\beta^2)}\right)-\beta^2  \right]
+\label{eq:bethebloch}
+\end{equation}
+The resulting function for a muon (a heavy electron) is shown in figure~\ref{fig:bb2}. At the momentum of around 300~MeV/c the particle deposits the lowest amount of energy. That is called a minimum ionising particle or a MIP.
+\end{description}
 
+
+
+
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=0.7\linewidth]{pics/bb2}
+\caption{Stopping power for muons according to the Bethe-Bloch formula~\cite{}}
+\label{fig:bb2}
+\end{center}
+\end{figure}
+
+
+%Shockley-Ramo theorem
+\subsection{Signal induction by moving charges}
+W. Shockley~\cite{SHOCKLEY:00000} and S. Ramo~\cite{RAMO:00000} independently proposed a theory which explains how a moving point charge induces current in a conductor. The Shockley-Ramo theorem can be used to calculate the instantaneous electric current induced by the charge carrier or a group of charge carriers. The idea behind it lies in the coupling of the charge with the electrode. The electrode can be in this case modelled as an infinite conducting plane. The book~\cite{PDDC:00000} gives a simple introduction to understanding the induction in the plane. When a point-like charge $q$ is created (e.g. an electron-hole pair created via ionisation), its electrostatic field lines immediately couple with the electrode, as seen in figure~\ref{fig:chargeind1}. The electric field on the metal surface due to a point-like charge $q$ at the distance $z_0$ equals
+\begin{equation}
+E_z(x,y) = \frac{qz_0}{2\pi\epsilon_0(x^2+y^2+z_0^2)^\frac{3}{2}}~~~~~~~~~~E_y = E_z = 0.
+\end{equation}
+\begin{figure}[!t]
+%\centering
+\begin{tabular}{cccc}
+\subfloat[Newly created point charge couples with the conductive plane]{\includegraphics[width=0.30\textwidth]{plots/chargeind1} \label{fig:chargeind1}} &
+\subfloat[When the charge drifts, the charge density in the plane changes]{\includegraphics[width=0.30\textwidth]{plots/chargeind2} \label{fig:chargeind2}} &
+\subfloat[The changing charge density in the small regions of the plane induces current]{\includegraphics[width=0.30\textwidth]{plots/chargeind3}  \label{fig:chargeind3}}
+\end{tabular}
+\caption{A point-like charge inducing current in a conductive plane}
+\end{figure}
+A mirror charge appears on the conducting plane, with a charge density distribution
+\begin{equation}
+\label{eq:chgdnstydist}
+\sigma(x,y)=\epsilon_0E_z(x,y)=\frac{qz_0}{2\pi(x^2+y^2+z_0^2)^\frac{3}{2}}.
+\end{equation}
+The charge density integrated over the whole plane gives the mirror charge $Q$, which has the opposite value of the point charge $q$:
+\begin{equation}
+\label{eq:chargedensity}
+Q=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \sigma(x,y)dxdy = -q.
+\end{equation}
+Now we segment the plane into infinitely long strips with a width $w$ whereby each of the strips is grounded (figure~\ref{fig:chargeind3}). With the charge density distribution~\ref{eq:chgdnstydist}, the resulting mirror charge on a single strip $Q_2$ directly below the point charge $(x=0, y=0)$ will be equal to
+\begin{equation}
+\label{eq:stripcharge}
+Q_2(z_0)=\int_{-\infty}^{\infty}\int_{-w/2}^{w/2}\sigma(x,y)dxdy = -\frac{2q}{\pi}arctan\left(\frac{w}{2z_0}\right)
+\end{equation} 
+If the charge starts moving towards the conducting plane, the mirror charge density distribution also changes (see figure~\ref{fig:chargeind2}). This results in the $Q_2[z_0(t)]$ to change with time, inducing an electric current $i_n(t)$:
+ \begin{equation}
+ \label{eq:indcurr}
+ i_n(t) = -\frac{d}{dt}Q_2[z_0(t)] = -\frac{\partial Q_2[z_0(t)]}{\partial z_0}\frac{\partial z_0(t)}{\partial t} = \frac{4qw}{\pi[4z_0(t)^2 + w^2]}v. 
+ \end{equation}
+ The movement of the point-like charge therefore induces current in the conducting plane. The induced current is linearly dependent on the velocity of the point-like charge.
+
+
+
+
+
+%moving charge->changed i
+
+%shortened derivation
+
+%i=e/vd
 
 
 %The energy from an incoming particle can be absorbed by lattice excitation (phonon production) or by ionisation (formation of a mobile charge pair). For a single event, the deposited energy E$_{0}$ is equal to the sum of the energies going into excitation (E$_{ex}$) and ionisation (E$_{ion}$)
@@ -133,7 +197,6 @@ As seen the two types of interactions have well defined signal responses. Nuclea
 %beta
 %gamma
 %neutron
-%bethe-bloch
 
 
 \subsection{Signal charge fluctuations}
@@ -148,7 +211,7 @@ wherein E$_i(Si)$= 3.6~eV and E$_i(C)$= 13~eV. E.g., for an $\upalpha$ particle 
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{plots/Intrinsic_energy_res}
+\includegraphics[width=0.6\linewidth]{plots/Intrinsic_energy_res}
 \caption{Calculated intrinsic energy resolution for silicon and diamond}
 \label{fig:enerres}
 \end{center}
@@ -159,19 +222,19 @@ wherein E$_i(Si)$= 3.6~eV and E$_i(C)$= 13~eV. E.g., for an $\upalpha$ particle 
 
 % ---------------------------------------------------------------------------------------------------------------
 \clearpage
-\section{Carrier transport in a diamond sensor} % signal acquisition
+\section{Carrier transport in a diamond sensor} 
 % ---------------------------------------------------------------------------------------------------------------
 This section describes the carrier transport phenomena in diamond. This theory provides the basis for discussion about the measurements in chapter~\ref{XXXCHAPTER}. 
 
-Free charge carriers in a semiconductor get thermally excited and scatter in random directions with a thermal velocity $v_{th}$. Their integral movement due to thermal excitation equals zero. Their transport is instead by means of drift and diffusion. Diffusion is caused by the concentration gradient. In its presence the carriers tend to scatter in the direction of the lower concentration. Drift on the other hand is caused by an externally applied electrical field. In that case the carriers move in parallel to to the field lines. In a sensor with a high applied field the diffusion contribution is negligible. 
+Free charge carriers in a semiconductor get thermally excited and scatter in random directions with a thermal velocity $v_{th}$~\cite{}. Their integral movement due to thermal excitation equals zero. Their transport is instead by means of drift and diffusion. Diffusion is caused by the concentration gradient. In its presence the carriers tend to scatter in the direction of the lower concentration. Drift on the other hand is caused by an externally applied electrical field. In that case the carriers move in parallel to to the field lines. In a sensor with a high applied field the diffusion contribution is negligible. 
 
 \begin{description}
 
 \item[Diffusion]
-The concentration profile dissolves with time forming a Gaussian distribution with variance $\sigma(t)=\sqrt{Dt}$. 
+The concentration profile dissolves with time forming a Gaussian distribution with variance $\sigma(t)=\sqrt{Dt}$~\cite{} .
 
 \item[Drift velocity and mobility]
-The charge carriers drift through the diamond bulk with a drift velocity $v_{drift}(E)$, which is proportional to the electric field $E$ at low electric fields: $v_{drift} = \mu E$. The proportionality factor $\mu$ is defined as the mobility in cm$^2$V$^{-1}$s$^{-1}$. For higher fields, however, the velocity saturates. The final equation for $v_{drift}$ is therefore
+The charge carriers drift through the diamond bulk with a drift velocity $v_{drift}(E)$~\cite{}, which is proportional to the electric field $E$ at low electric fields: $v_{drift} = \mu E$. The proportionality factor $\mu$ is defined as the mobility in cm$^2$V$^{-1}$s$^{-1}$. For higher fields, however, the velocity saturates. The final equation for $v_{drift}$ is therefore
 \begin{equation}
 \label{eq:vsat}
 v_{drift}(E) = \mu(E)E= \frac{\mu_0 E}{1 + \frac{\mu_o E}{v_{sat}}}
@@ -184,7 +247,7 @@ where $\mu_0$ is the low drift mobility and $v_{sat}$ is saturation velocity. Th
 v_{drift}(E) = \frac{d}{t_t(E)}.
 \end{equation}
 
-The velocities for holes and electrons usually differ. 
+The velocities for holes and electrons usually differ. In diamond, the holes travel 30~\% faster than electrons~\cite{}.
 
 \item[Velocity saturation]
 At higher velocities the carriers lose more energy to the lattice (phonon transport).
@@ -224,14 +287,15 @@ Several types of amplifiers can be used, all of which affect the measured pulse 
 (0.5 pg)
 Figure~\ref{fig:curramp} shows the equivalent circuit of a capacitive source and a current amplifier. An amplifier operates in current mode if the source has a low charge collection time $t_c$ with respect to the $RC$ time constant of the circuit. In this case the sensor capacitance discharges rapidly and the output voltage is proportional to the instantaneous current $v_o \propto i_s(t)$. The amplifier is providing voltage gain, so the output signal voltage $v_o$ is directly proportional to the input voltage $v_i$.
 
-\begin{figure}[!t]
-\begin{center}
-\includegraphics[width=0.6\linewidth]{plots/curramp}
-\caption{Simplified equivalent circuit of a capacitive source and a current amplifier}
-\label{fig:curramp}
-\end{center}
-\end{figure}
 
+\begin{figure}[!t]
+%\centering
+\begin{tabular}{cccc}
+\subfloat[A capacitive source and a current amplifier]{\includegraphics[width=0.45\textwidth]{plots/curramp} \label{fig:curramp}} &
+\subfloat[A capacitive source and a charge amplifier]{\includegraphics[width=0.45\textwidth]{plots/chgamp}  \label{fig:chgamp}}
+\end{tabular}
+\caption{Simplified equivalent circuits of a current and charge amplifier }
+\end{figure}
 
 \subsubsection{Charge-sensitive amplifier}
 (0.5 pg)
@@ -241,14 +305,6 @@ In an ideal amplifier the output voltage $v_o$ equals $-Av_i$. Therefore voltage
 
 In reality, however, charge-sensitive amplifiers respond much slower to the than the time duration of the current pulse from the sensor. 
 
-
-\begin{figure}[!t]
-\begin{center}
-\includegraphics[width=0.6\linewidth]{plots/chgamp}
-\caption{Simplified equivalent circuit of a capacitive source and a charge amplifier}
-\label{fig:chgamp}
-\end{center}
-\end{figure}
 
 \subsubsection{Analogue electronic noise}
 (2 pg)
@@ -270,24 +326,27 @@ The quantisation error (or a round-off error) is a contribution of the digitisat
 Typically, the input signal amplitude is much larger than than the voltage resolution. Therefore the quantisation error is not directly correlated with the signal and has an approximately uniform distribution. 
 
 
-\subsection{Signal processing}
-(1 pg)
-After signal amplification and digitisation the data can be either processed immediately or they can be saved to a data storage for later analysis. Below are the examples of systems that carry out the data processing on the fly.
+\subsection{Digital signal processing}
+The digitised signal can be processed to extract useful information. Therefore after the signal amplification and digitisation the signal is routed in a device which handles the analysis. The signal can either be processed immediately (in real time) or it can be saved to a data storage for analysis at a later stage (offline). The devices carrying out the processing can be multipurpose (e.g. Field programmable gate arrays) or dedicated (e.g. application-specific integrated circuits). Each of the two has its advantages and disadvantages, which are listed below. 
 
-\subsubsection{Field programmable gate array}
-(0.5 pg)
-Field programmable gate array (FPGA) is an integrated circuit designed to be reprogrammable and configured after manufacturing. It consists of a set of logic gates that can be interconnected in numerous combinations to carry out a logic operation. Many such logic operations can take place in parallel, making the FPGA a powerful tool for signal processing.
+\begin{description}
+\item[Field programmable gate array] (FPGA) is an integrated circuit designed to be reprogrammable and configured after manufacturing. It consists of a set of logic gates that can be interconnected in numerous combinations to carry out a logic operation. Many such logic operations can take place in parallel, making the FPGA a powerful tool for signal processing. FPGAs are often used during system development or in systems in which the requirements might change with time. They can be reprogrammed in the order of seconds. In addition, the logic design only needs minor changes when migrating to a newer version of the FPGA chip of the same vendor. They also offer faster time-to-market with comparison to application-specific solutions, which have to be developed. On the other hand, the price per part can be significantly higher than for the application-specific solutions. Also, their other major disadvantages are a high power consumption and relatively low speed. However, today's solutions are capable of speeds of the order of 500~MHz. Together with the integrated digital signal processing blocks, embedded processors and other modules, they are already very powerful and versatile. All in all, FPGAs are a good choice for prototyping and limited production, for projects with a limited requirements for speed and complexity.
 
+\item[Application-specific integrated circuit] (ASIC) is an integrated circuit designed for a specific use. The design cannot be modified after chip production, as compared to FPGAs. On the other hand, the ASICs can be optimised to perform a required operation at a high speed and low power. In addition, due to the specific design the size of the chip can be much smaller. ASICs can be designed as hybrid chips, containing both a digital and an analog part.  
+To update the chip, the design has to be submitted to a foundry, which produces the new chips with a turnover time of 4---6 weeks. The costs of a submission start at \$~50\,000, but the price per part can be reduced significantly with a high volume. To sum up, ASICs are used for high volume designs with well defined requirements where some stringent constraints in terms of power consumption and speed have to be met.
+\end{description} 
 
-\subsubsection{Application-specific integrated circuit}
-FE-I4 functional description, characteristics
- (2 pg)
+\begin{figure}[!t]
+%\centering
+\begin{tabular}{cccc}
+\subfloat[Xilinx Virtex 5 FPGA~\cite{FPGA:00000}]{\includegraphics[width=0.45\textwidth]{pics/fpga} \label{fig:fpga}} & 
+\subfloat[ASIC~\cite{ASIC:00000}]{\includegraphics[width=0.45\textwidth]{pics/asic}  \label{fig:asic}}
+\end{tabular}
+\caption{An example of an FPGA and an ASIC chip}
+\end{figure}
 
-Application-specific integrated circuit (ASIC) is an integrated circuit designed for a specific use. The design cannot be modified after chip production, as opposed to FPGAs. On the other hand, the ASICs can be optimised to perform a required operation at high speed and low power. 
-
- 
-\subsection{Full detector readout chain}
-(1 pg)
+\bibliography{bib2}{}
+\bibliographystyle{plain}
 
 
 % ---------------------------- comment out when compiling the full document -------------------

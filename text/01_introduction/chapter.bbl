@@ -1,0 +1,68 @@
+\begin{thebibliography}{10}
+
+\bibitem{AtomInst:00000}
+\emph{Atominstitut, Technical University of Vienna, Austria}.
+
+\bibitem{CERN:00000}
+\emph{European Centre for Nuclear Research, CERN}.
+
+\bibitem{NTOF:00000}
+\emph{Neutron Time-of-flight experiment}.
+
+\bibitem{Triga:00000}
+\emph{TRIGA MARK II neutron reactor}.
+
+\bibitem{GeneralAtomics}
+General Atomics.
+\newblock \emph{View of the TRIGA reactor.}
+\newblock 2015.
+
+\bibitem{Maximilien:1304589}
+Maximilien Brice.
+\newblock \emph{View of the nTOF detector}.
+\newblock Oct 2010.
+
+\bibitem{Maximilien:1324852}
+Maximilien Brice.
+\newblock \emph{LHC tunnel}.
+\newblock Jan 2011.
+
+\bibitem{Dominguez:2002395}
+Daniel Dominguez.
+\newblock \emph{Standard Model. Le modele standard}.
+\newblock General Photo, Mar 2015.
+
+\bibitem{Cividec:00000}
+CIVIDEC~Instrumentation GmbH.
+\newblock \emph{sCVD diamond sensor}.
+\newblock 2015.
+
+\bibitem{MarcelloniDeOliveira:1702006}
+Claudia Marcelloni De~Oliveira.
+\newblock \emph{IBL installation into the inner detector of the ATLAS
+  Experiment side C}.
+\newblock General Photo, May 2014.
+
+\bibitem{Mills:133232}
+W~P~C Mills.
+\newblock \emph{The present performance of the SPS}.
+\newblock {\em IEEE Trans. Nucl. Sci.}, 26(CERN-SPS-AOP-79-9):3176--3178. 3 p,
+  Mar 1979.
+
+\bibitem{Novaes:1999yn}
+S.~F. Novaes.
+\newblock \emph{Standard model: An Introduction}.
+\newblock In {\em {Particles and fields. Proceedings, 10th Jorge Andre Swieca
+  Summer School, Sao Paulo, Brazil, February 6-12, 1999}}, 1999.
+
+\bibitem{Pequenao:1095924}
+Joao Pequenao.
+\newblock \emph{Computer generated image of the whole ATLAS detector}.
+\newblock Mar 2008.
+
+\bibitem{Pernegger:1985432}
+Heinz Pernegger.
+\newblock \emph{The Pixel Detector of the ATLAS Experiment for LHC Run-2}.
+\newblock Technical Report ATL-INDET-PROC-2015-001, CERN, Geneva, Feb 2015.
+
+\end{thebibliography}
