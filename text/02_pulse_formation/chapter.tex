@@ -81,8 +81,8 @@ n_i = T^{3/2} \cdot exp(-\frac{E_g}{2kT})
 wherein $k = 1.381\times10^{-23}~$m$^2~$kg~s$^{-2}~$K$^{-1}$ is the Boltzmann constant and T is the temperature. The 
 
 If an external electric field is applied to the crystalline structure, the free electrons and holes drift toward the positive and negative potential, respectively (see figure~\ref{fig:simpledrift}). While drifting, the charges couple with the electrodes, inducing current in the circuit, which is explained by the Shockley--Ramo theorem~\cite{}. The charges recombine upon reaching the electrodes.
+
 \begin{figure}[!t]
-%\centering
 \begin{tabular}{cccc}
 \subfloat[Valence bonds in the crystalline structure can be broken, producing a free electron-hole pair]{\includegraphics[width=0.22\textwidth]{plots/semilattice9} \label{fig:semilattice9}} &
 \subfloat&
@@ -94,32 +94,16 @@ If an external electric field is applied to the crystalline structure, the free 
 
 
 
-
-
-\begin{figure}[!t]
-\begin{center}
-\includegraphics[width=0.8\linewidth]{plots/driftboth}
-\caption{Charge carrier drift in diamond for $\upbeta/\upgamma$ and for $\upalpha$ particles}
-\label{fig:drift}
-\end{center}
-\end{figure}
-
-
-
-
-%RAMO
 %BETHE-BLOCH
 \begin{description}
 \item[Energy deposition of $\upalpha$ radiation and heavy ions]
-\item[Energy deposition of  $\upbeta$ and $\upgamma$ radiation] The mean energy loss of a particle traversing the detector with respect to its momentum is given with the so-called Bethe-Bloch equation~\cite{}: 
+\item[Energy deposition of  $\upbeta$ and $\upgamma$ radiation] The mean energy loss of a particle traversing the detector with respect to its momentum is given with the the Bethe-Bloch equation~\cite{}: 
 \begin{equation}
 -\left\langle\frac{dE}{dx}\right\rangle = \frac{4\pi}{m_ec^2}  \cdot \frac{nz^2}{\beta^2}  \cdot  \left(\frac{e^2}{4\pi\epsilon_0}\right)^2  \cdot  \left[ ln \left(\frac{2m_ec^2\beta^2}{I\cdot(1-\beta^2)}\right)-\beta^2  \right]
 \label{eq:bethebloch}
 \end{equation}
 The resulting function for a muon (a heavy electron) is shown in figure~\ref{fig:bb2}. At the momentum of around 300~MeV/c the particle deposits the lowest amount of energy. That is called a minimum ionising particle or a MIP.
 \end{description}
-
-
 
 
 \begin{figure}[!t]
@@ -133,7 +117,7 @@ The resulting function for a muon (a heavy electron) is shown in figure~\ref{fig
 
 %Shockley-Ramo theorem
 \subsection{Signal induction by moving charges}
-W. Shockley~\cite{SHOCKLEY:00000} and S. Ramo~\cite{RAMO:00000} independently proposed a theory which explains how a moving point charge induces current in a conductor. The Shockley-Ramo theorem can be used to calculate the instantaneous electric current induced by the charge carrier or a group of charge carriers. The idea behind it lies in the coupling of the charge with the electrode. The electrode can be in this case modelled as an infinite conducting plane. The book~\cite{PDDC:00000} gives a simple introduction to understanding the induction in the plane. When a point-like charge $q$ is created (e.g. an electron-hole pair created via ionisation), its electrostatic field lines immediately couple with the electrode, as seen in figure~\ref{fig:chargeind1}. The electric field on the metal surface due to a point-like charge $q$ at the distance $z_0$ equals
+The book~\cite{PDDC:00000} gives a simple introduction to understanding signal induction in a conducting plane by a point-like charge. The idea behind it lies in the coupling of the charge with the electrode. The electrode can be in this case modelled as an infinite conducting plane. When the point charge $q$ is created (e.g. an electron-hole pair created via ionisation), its electrostatic field lines immediately couple with the electrode, as seen in figure~\ref{fig:chargeind1}. The electric field on the metal surface due to a point-like charge $q$ at the distance $z_0$ equals
 \begin{equation}
 E_z(x,y) = \frac{qz_0}{2\pi\epsilon_0(x^2+y^2+z_0^2)^\frac{3}{2}}~~~~~~~~~~E_y = E_z = 0.
 \end{equation}
@@ -168,8 +152,17 @@ If the charge starts moving towards the conducting plane, the mirror charge dens
  \end{equation}
  The movement of the point-like charge therefore induces current in the conducting plane. The induced current is linearly dependent on the velocity of the point-like charge.
 
-
-
+W. Shockley~\cite{SHOCKLEY:00000} and S. Ramo~\cite{RAMO:00000} independently proposed a theory which explains how a moving point charge induces current in a conductor. The Shockley-Ramo theorem can therefore be used to calculate the instantaneous electric current induced by the charge carrier or a group of charge carriers. It can be used for any number of electrodes. It states that the current $I_n^{ind}(t)$ induced on the grounded electrode $n$ by a point charge $q$ moving along a trajectory $\textbf{x}(t)$ equals
+\begin{equation}
+\label{eq:ramo}
+I_n^{ind}(t) = -\frac{dQ_n(t)}{dt} =  -\frac{q}{V_w}\nabla\Psi_n[\textbf{x}(t)]v(t)  =  -\frac{q}{V_w}E_n[\textbf{x}(t)]v(t),
+\end{equation}
+where $\textbf{E}_n(\textbf{x})$ is the electric field in the case where the charge q is removed, electrode $n$ is  set to voltage $V_w=1$ and all other electrodes are grounded. $\textbf{E}_n(\textbf{x})$ is also called the \emph{weighting field} of electrode $n$ and is defined as the spatial differential of the \emph{weighting potential}: $\textbf{E}_n(\textbf{x})=\nabla \Psi_n(\textbf{x})$. In the case of two parallel electrodes, the weighting field is $E_w = -\frac{d\Psi}{dx} = -1/d$, where $d$ is the distance between the electrodes. The resulting induced current is therefore
+\begin{equation}
+\label{eq:ramoparallel}
+i(t) = \frac{q}{d}v_{drift}(x,t),
+\end{equation} 
+whhereby $v_{drift}$ is the drift velocity of the point-like charge and $d$ is the distance between the electrodes.
 
 
 %moving charge->changed i
@@ -188,7 +181,13 @@ If the charge starts moving towards the conducting plane, the mirror charge dens
 
 
 \subsection{Radiation-induced electrical pulses}
-When a highly-energetic particle travels through the sensor, it interacts with atoms in the lattice. It ionises the valence electrons, creating electron-hole (e-h) pairs on its way. It can either deposit only a fraction of its energy and fly exit the sensor on the other side or it can get stopped in the bulk, depositing all of its energy. A special case is when it interacts with the core of the atom in the middle of the sensor via a nuclear interaction. All these various types interactions produce different amounts and different spatial distributions of e-h pairs. The induced electrical current will therefore differ for different types of interaction. Two most frequent types are shown in the diagrams below. The first diagram shows the interaction of a minimum ionising particle (an electron or a proton) or in some cases a photon, if it is energetic enough. The electrons and holes are created all along the trajectory of the particle and immediately start drifting towards the positive and negative electrode, respectively. At the beginning, all charges drift and contribute to the induced current. Those closest to the electrodes have a very short drift path and recombine quickly, reducing the induced current. Gradually all the charge carriers recombine. The resulting current signal is a triangular pulse with a sharp rising edge and a linear falling edge. The accumulated charge $Q_s$ equals to the sum of the contributions of the positive and negative charge carriers. The second type of interaction happens when the particle is stopped in the diamond close to the point of entry. Most of its energy is deposited in one point. A cloud of charge carriers is created and the charges with the shorter path to the electrode recombine almost instantly. The carriers of the opposite charge, however, start drifting through the sensor to the other electrode. In an ideal diamond sensor, their velocity is constant throughout the drift up until they recombine on the other side. The contribution of the first charge cloud is a peak with a short time. The cloud drifting through the sensor, on the other side, induces a current signal with a flat top. The resulting signal is rectangular shaped, with a spike in the beginning. This spike is filtered out in a real device because it is too fast for the electronics existing currently. The accumulated charge $Q_s$ is equal to a half of the deposited charge by the stopped particle.
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{plots/driftboth}
+\caption{Charge carrier drift in diamond for $\upbeta/\upgamma$ and for $\upalpha$ particles}
+\label{fig:drift}
+\end{center}
+\end{figure}When a highly-energetic particle travels through the sensor, it interacts with atoms in the lattice. It ionises the valence electrons, creating electron-hole (e-h) pairs on its way. It can either deposit only a fraction of its energy and fly exit the sensor on the other side or it can get stopped in the bulk, depositing all of its energy. A special case is when it interacts with the core of the atom in the middle of the sensor via a nuclear interaction. All these various types interactions produce different amounts and different spatial distributions of e-h pairs. The induced electrical current will therefore differ for different types of interaction. Two most frequent types are shown in figure~\ref{fig:drift}. The first diagram shows the interaction of a minimum ionising particle (an electron or a proton) or in some cases a photon, if it is energetic enough. The electrons and holes are created all along the trajectory of the particle and immediately start drifting towards the positive and negative electrode, respectively. At the beginning, all charges drift and contribute to the induced current. Those closest to the electrodes have a very short drift path and recombine quickly, reducing the induced current. Gradually all the charge carriers recombine. The resulting current signal is a triangular pulse with a sharp rising edge and a linear falling edge. The accumulated charge $Q_s$ equals to the sum of the contributions of the positive and negative charge carriers. The second type of interaction happens when the particle is stopped in the diamond close to the point of entry. Most of its energy is deposited in one point. A cloud of charge carriers is created and the charges with the shorter path to the electrode recombine almost instantly. The carriers of the opposite charge, however, start drifting through the sensor to the other electrode. In an ideal diamond sensor, their velocity is constant throughout the drift up until they recombine on the other side. The contribution of the first charge cloud is a peak with a short time. The cloud drifting through the sensor, on the other side, induces a current signal with a flat top. The resulting signal is rectangular shaped, with a spike in the beginning. This spike is filtered out in a real device because it is too fast for the electronics existing currently. The accumulated charge $Q_s$ is equal to a half of the deposited charge by the stopped particle.
 
 As seen the two types of interactions have well defined signal responses. Nuclear interactions on the other hand yield various results. The resulting signal shape depends on the decay products of the interaction -- they can be $\upalpha$, $\upbeta$ or $\upgamma$ quanta, inducing a mixed shaped signal. 
 %
@@ -206,12 +205,12 @@ Two of the important sensor characteristics are the magnitude of the signal and 
 \label{eq:efwhm}
 \Updelta E_{FWHM} = 2.35 \sqrt{FEE_i} 
 \end{equation} 
-wherein E$_i(Si)$= 3.6~eV and E$_i(C)$= 13~eV. E.g., for an $\upalpha$ particle with energy E$_\alpha$ = 5.486 MeV the calculated $\Updelta$E$_{\alpha FWHM}$ = 5.6~keV. This defines the minimum achievable resolution for energy spectroscopy with diamond. Figure~\ref{fig:enerres} shows the calculated energy resolution function for silicon and diamond.
+wherein E$_i(Si)$= 3.6~eV and E$_i(C)$= 13~eV. E.g., for an $\upalpha$ particle with energy E$_\alpha$ = 5.486 MeV the calculated resolution in diamond is equal to $\Updelta$E$_{FWHM}$ = 5.6~keV. This defines the minimum achievable resolution for energy spectroscopy with diamond. Figure~\ref{fig:enerres} shows the calculated energy resolution function for silicon and diamond.
 
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{plots/Intrinsic_energy_res}
+\includegraphics[width=0.45\linewidth]{../../scripts/02_pulse_formation/plots/resolution}
 \caption{Calculated intrinsic energy resolution for silicon and diamond}
 \label{fig:enerres}
 \end{center}
@@ -240,7 +239,7 @@ The charge carriers drift through the diamond bulk with a drift velocity $v_{dri
 v_{drift}(E) = \mu(E)E= \frac{\mu_0 E}{1 + \frac{\mu_o E}{v_{sat}}}
 \end{equation}
 
-where $\mu_0$ is the low drift mobility and $v_{sat}$ is saturation velocity. The drift velocity can be retrieved experimentally via the transit time measured with so-called Transient Current Technique (TCT). This technique enables the measurement of transit time $t_t$ of the carriers through the sensor with the thickness $d$. 
+where $\mu_0$ is the low drift mobility and $v_{sat}$ is saturation velocity. The drift velocity can be retrieved experimentally via the transit time measured with the Transient Current Technique (TCT). This technique enables the measurement of transit time $t_t$ of the carriers through the sensor with the thickness $d$. 
 
 \begin{equation}
 \label{eq:vsat}
