@@ -1,0 +1,38 @@
+too much like lab report
+
+too many results in the introductions
+
+Non-Italic !
+
+credit already by citing.
+
+more figures/diagrams
+
+so-called
+
+Plots:
+-always write the irradiation in the legend
+-consistent small or large caps Figure
+capital - easier to see
+
+functions -> equations
+
+
+form -> shape
+
+An actual list instead of text on page 16.
+
+quotation marks!
+
+
+damage factors both named k.
+
+Introductory very casual.
+Technical part better understood.
+
+
+
+cds bibtech
+[29] Claudia Marcelloni De Oliveira. IBL installation into the inner detector of the ATLAS Experiment side C. https://cds.cern.ch/record/1702006, May 2014.
+
+

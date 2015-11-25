@@ -273,57 +273,80 @@ At higher velocities the carriers lose more energy to the lattice (phonon transp
 \section{Electronics for signal processing} % signal acquisition
 % ---------------------------------------------------------------------------------------------------------------
 \label{sec:elecsigproc}
-This section describes the electronics of a detector, starting with description of signal amplifiers and then discussing the digitisation and signal processing.
+This section describes the electronics of a detector, starting with a description of signal amplifiers and then discussing the digitisation and signal processing. All these stages are necessary to extract information from the sensor. First, the signal has to be amplified. Then it is digitised and finally processed in a specially designed processor or a logic unit.
 
 \subsection{Signal preamplifiers}
-(2 pg)
-The signal charge generated in the sensor is of the order of fC and has to be pre-amplified before processing. The preamplifiers have to be designed carefully to minimise electronic noise while maximising gain -- thus maximising signal-to-noise ratio (SNR). A critical parameter is the total capacitance, i.e. sensor capacitance and input capacitance of the preamplifier. Decreased capacitance improves the SNR. 
-
-Several types of amplifiers can be used, all of which affect the measured pulse shape. They behave differently for resistive or capacitive sources. Given that semiconductors are capacitive sources, we will focus on these. Two preamplifiers are used most commonly, a current and a charge amplifier. Both are described below in detail. 
-
-
-\subsubsection{Current-sensitive amplifier}
-(0.5 pg)
-Figure~\ref{fig:curramp} shows the equivalent circuit of a capacitive source and a current amplifier. An amplifier operates in current mode if the source has a low charge collection time $t_c$ with respect to the $RC$ time constant of the circuit. In this case the sensor capacitance discharges rapidly and the output voltage is proportional to the instantaneous current $v_o \propto i_s(t)$. The amplifier is providing voltage gain, so the output signal voltage $v_o$ is directly proportional to the input voltage $v_i$.
-
+The signal charge generated in the sensor by a single highly energetic particle or photon is of the order of fC. The induced current is ranging between $10^{-8}$~A ($\upbeta, \upgamma$ radiation) and $3\times10^{-7}$~A ($\upalpha$ radiation). Signals as low as these have to be pre-amplified before processing. Depending on the measurement, several types of signal amplifiers can be used. The preamplifiers have to be designed carefully to minimise electronic noise while maximising gain -- thus maximising the signal-to-noise ratio (SNR). A critical parameter is the total capacitance, i.e. sensor capacitance and input capacitance of the preamplifier. The SNR improves with a lower capacitance. Several types of amplifiers can be used, all of which affect the measured pulse shape. They behave differently for resistive or capacitive sources. Given that semiconductors are capacitive sources, we will focus on these. Two preamplifiers are used most commonly, a current and a charge amplifier. Both are described below in detail. 
 
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[A capacitive source and a current amplifier]{\includegraphics[width=0.45\textwidth]{plots/curramp} \label{fig:curramp}} &
-\subfloat[A capacitive source and a charge amplifier]{\includegraphics[width=0.45\textwidth]{plots/chgamp}  \label{fig:chgamp}}
+\subfloat[A capacitive source and a current amplifier]{\includegraphics[width=0.50\textwidth]{plots/curramp} \label{fig:curramp}} &
+\subfloat[A capacitive source and a charge amplifier]{\includegraphics[width=0.40\textwidth]{plots/chgamp}  \label{fig:chgamp}}
 \end{tabular}
 \caption{Simplified equivalent circuits of a current and charge amplifier }
 \end{figure}
+
+
+\subsubsection{Current-sensitive amplifier}
+Figure~\ref{fig:curramp} shows the equivalent circuit of a capacitive source and a current amplifier. An amplifier operates in current mode if the source has a low charge collection time $t_c$ with respect to the $R_iC_d$ time constant of the circuit. In this case the sensor capacitance discharges rapidly and the output current $i_o$ is proportional to the instantaneous current $i_i$. The amplifier is providing a voltage gain, so the output signal voltage $u_o$ is directly proportional to the input voltage $u_i$:
+\begin{equation}
+u_o(t) = A \cdot R_i \cdot i_s(t).
+\end{equation}
+The detector capacitance $C_{det}$ together with the input resistance of the amplifier $R_i$ defines the time constant of the signal (see figure~\ref{fig:currc}). The higher the $C_{det}$ is, the slower will be the response of the amplifier. For the case of the diamond sensor, which has the capacitance of the order of 2~pF and the input resistance of 50~$\Omega$, the resulting time constant is $\tau=10^{-10}$~s. This yields the signal rise time $t_r\sim2.2\tau=0.22~ns$.
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=0.45\linewidth]{plots/currrc}
+\caption{Input and output signal of the current amplifier}
+\label{fig:currc}
+\end{center}
+\end{figure}
+
+
+
 
 \subsubsection{Charge-sensitive amplifier}
 (0.5 pg)
 In order to measure integrated charge in the sensor, a feedback loop is added to the amplifier (see figure~\ref{fig:chgamp}). The feedback can be used to control the gain and input resistance, as well as integrating the input signal. The charge amplifier is in principle an inverting voltage amplifier with a high input resistance. 
  
-In an ideal amplifier the output voltage $v_o$ equals $-Av_i$. Therefore voltage difference across the capacitor $C_f$ is $V_f=(A+1)v_i$ and the charge deposited on the capacitor $Q_f=C_f v_f = C_f (A+1)v_i$. Since no current can flow into the amplifier, all of the signal current must charge up the feedback capacitance, so $Q_f = Q_i$.
+In an ideal amplifier the output voltage $u_o$ equals $-Au_i$. Therefore voltage difference across the capacitor $C_f$ is $u_f=(A+1)u_i$ and the charge deposited on the capacitor $Q_f=C_f u_f = C_f (A+1)u_i$. Since no current can flow into the amplifier, all of the signal current must charge up the feedback capacitance, so $Q_f = Q_i$.
 
-In reality, however, charge-sensitive amplifiers respond much slower to the than the time duration of the current pulse from the sensor. 
-
+In reality, however, charge-sensitive amplifiers respond much slower to the than the time duration of the current pulse from the sensor. In addition, a resistor is added to the feedback line in parallel to the capacitor. The resistor and capacitor define the decay time constant of the pulse (see figure~\ref{fig:chgrc}). This is necessary to return the signal to its initial state and ready for a new measurement.
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=0.45\linewidth]{plots/chgrc}
+\caption{Input and output signal of the charge amplifier}
+\label{fig:chgrc}
+\end{center}
+\end{figure}
 
 \subsubsection{Analogue electronic noise}
 (2 pg)
 Electronic noise determines the ability of a system to distinguish signal levels.
 
 \subsection{Analogue-to-digital converters}
-(1 pg)
-An analog-to-digital converter (ADC) is a device that converts analogue electrical signal on the input to its digital representation - a digital number. This involves a quantisation -- \emph{sampling} of the signal at a defined sampling period, resulting in a sequence of samples at a discrete time and a discrete amplitude. The resolution of the ADC is the number of output levels it can quantise to and is expressed in bits. For instance, an 8-bit ADC with an input voltage range of 100~mV and a sampling period of 1~ns would produce 1~GSPS (gigasample per second) at a voltage resolution $Q$ of 
+An analogue-to-digital converter (ADC) is a device that converts the analogue electrical signal on the input to its digital representation - a series of digital values. This involves a quantisation -- \emph{sampling} of the signal at a defined sampling period, resulting in a sequence of samples at a discrete time period and with discrete amplitude values. The resolution of the ADC is the number of output levels the ADC can quantise to and is expressed in bits. For instance, an ADC with a resolution $n=8$~bit will have the dynamic range $N=2^n=256$~steps. The resulting voltage resolution $Q_{ADC}$ at the input voltage range of $V_{ADC}\pm$50~mV is then equal to 
 \begin{equation}
 \label{eq:mvpercnt}
-Q=\frac{Input~voltage~range}{2^{~resolution}}  = \frac{100~mV}{2^8~ADC counts} = 0.39~mV/ADC count
+Q_{ADC}=\frac{V_{ADC}}{2^{n}}  = \frac{100~mV}{2^8~steps} = 0.39~mV/step.
 \end{equation} 
+With a sampling period of $t_s=$1~ns it will produce the sampling rate of $f_s=$1~GSPS (gigasample per second).
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=0.55\linewidth]{plots/qerr}
+\caption{Input signal digitisation and quantisation error}
+\label{fig:qerr}
+\end{center}
+\end{figure}
 
-
-\subsubsection{Quantisation error and quantisation noise}
-(1 pg)
-The quantisation error (or a round-off error) is a contribution of the digitisation to the overall measurement error. It is defined as a difference between the actual analog value and a digitised representation of this value.
-
-Typically, the input signal amplitude is much larger than than the voltage resolution. Therefore the quantisation error is not directly correlated with the signal and has an approximately uniform distribution. 
-
+\begin{description}
+\item[Quantisation error and quantisation noise] (or a round-off error) is a contribution to the overall measurement error due to digitisation (rounding). It is defined as a difference between the actual analog value and a digitised representation of this value. The error is defined by the least significant bit (LSB), as seen in figure~\ref{fig:qerr}. Typically, the input signal amplitude is much larger than than the voltage resolution. Therefore the quantisation error is not directly correlated with the signal and has an approximately uniform distribution: 
+\begin{equation}
+\label{eq:qerr}
+\Delta Q_{ADC}=\frac{1}{\sqrt{12}}LSB\sim0.289~LSB.
+\end{equation} 
+For the example above the quantisation error will be $\Delta Q_{ADC}=0.289\cdot 0.39$~mV=0.11~mV. The error depends strongly on the linearity of the ADC, but this will not be discussed in this document as the devices used have ADCs with a linear response.
+\end{description}
 
 \subsection{Digital signal processing}
 The digitised signal can be processed to extract useful information. Therefore after the signal amplification and digitisation the signal is routed in a device which handles the analysis. The signal can either be processed immediately (in real time) or it can be saved to a data storage for analysis at a later stage (offline). The devices carrying out the processing can be multipurpose (e.g. Field programmable gate arrays) or dedicated (e.g. application-specific integrated circuits). Each of the two has its advantages and disadvantages, which are listed below. 

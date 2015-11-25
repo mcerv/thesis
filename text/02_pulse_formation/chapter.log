@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  22 NOV 2015 01:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  25 NOV 2015 17:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -367,34 +367,59 @@ LaTeX Warning: Reference `XXXCHAPTER' on page 8 undefined on input line 226.
 
 [8
 
-] <plots/curramp.pdf, id=244, 153.07187pt x 66.74937pt>
+] <plots/curramp.pdf, id=244, 198.24063pt x 70.2625pt>
 File: plots/curramp.pdf Graphic file (type pdf)
 
 <use plots/curramp.pdf>
-Package pdftex.def Info: plots/curramp.pdf used on input line 293.
-(pdftex.def)             Requested size: 195.12767pt x 85.09258pt.
- <plots/chgamp.pdf, id=245, 153.07187pt x 90.83937pt>
+Package pdftex.def Info: plots/curramp.pdf used on input line 284.
+(pdftex.def)             Requested size: 216.81pt x 76.84618pt.
+ <plots/chgamp.pdf, id=245, 157.08687pt x 108.90688pt>
 File: plots/chgamp.pdf Graphic file (type pdf)
 
 <use plots/chgamp.pdf>
-Package pdftex.def Info: plots/chgamp.pdf used on input line 294.
-(pdftex.def)             Requested size: 195.12767pt x 115.8027pt.
+Package pdftex.def Info: plots/chgamp.pdf used on input line 285.
+(pdftex.def)             Requested size: 173.44534pt x 120.25323pt.
  [9
 
- <./plots/curramp.pdf> <./plots/chgamp.pdf>] [10]
-<pics/fpga.jpg, id=284, 168.1482pt x 134.904pt>
+ <./plots/curramp.pdf> <./plots/chgamp.pdf>]
+<plots/currrc.pdf, id=281, 156.08313pt x 63.23625pt>
+File: plots/currrc.pdf Graphic file (type pdf)
+ <use plots/currrc.pdf>
+Package pdftex.def Info: plots/currrc.pdf used on input line 299.
+(pdftex.def)             Requested size: 195.12767pt x 79.05667pt.
+
+<plots/chgrc.pdf, id=282, 161.10187pt x 64.24pt>
+File: plots/chgrc.pdf Graphic file (type pdf)
+ <use plots/chgrc.pdf>
+Package pdftex.def Info: plots/chgrc.pdf used on input line 317.
+(pdftex.def)             Requested size: 195.12767pt x 77.811pt.
+ [10 <./plots/currrc.pdf> <./plots/chgrc.pdf>]
+<plots/qerr.pdf, id=325, 138.5175pt x 100.87688pt>
+File: plots/qerr.pdf Graphic file (type pdf)
+ <use plots/qerr.pdf>
+Package pdftex.def Info: plots/qerr.pdf used on input line 336.
+(pdftex.def)             Requested size: 238.49231pt x 173.68645pt.
+
+Overfull \hbox (11.97449pt too wide) in paragraph at lines 347--349
+\OT1/cmr/m/n/12 For the ex-am-ple above the quan-ti-sa-tion er-ror will be $^^A
+\OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 289 \
+OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 39$ mV=0
+.11 mV.
+ []
+
+[11 <./plots/qerr.pdf>] <pics/fpga.jpg, id=351, 168.1482pt x 134.904pt>
 File: pics/fpga.jpg Graphic file (type jpg)
- <use pics/fpga.jpg>
-Package pdftex.def Info: pics/fpga.jpg used on input line 341.
+
+<use pics/fpga.jpg>
+Package pdftex.def Info: pics/fpga.jpg used on input line 364.
 (pdftex.def)             Requested size: 195.12767pt x 156.55461pt.
-
-<pics/asic.png, id=285, 421.575pt x 322.20375pt>
+ <pics/asic.png, id=352, 421.575pt x 322.20375pt>
 File: pics/asic.png Graphic file (type png)
- <use pics/asic.png>
-Package pdftex.def Info: pics/asic.png used on input line 342.
-(pdftex.def)             Requested size: 195.12767pt x 149.13489pt.
 
-(./chapter.bbl [11 <./pics/fpga.jpg> <./pics/asic.png>]) [12
+<use pics/asic.png>
+Package pdftex.def Info: pics/asic.png used on input line 365.
+(pdftex.def)             Requested size: 195.12767pt x 149.13489pt.
+ (./chapter.bbl [12] [13 <./pics/fpga.jpg> <./pics/asic.png>]) [14
 
 ] (./chapter.aux)
 
@@ -405,10 +430,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3946 strings out of 493488
- 60850 string characters out of 3141326
- 125144 words of memory out of 3000000
- 7176 multiletter control sequences out of 15000+200000
+ 3965 strings out of 493488
+ 61155 string characters out of 3141326
+ 125191 words of memory out of 3000000
+ 7192 multiletter control sequences out of 15000+200000
  14153 words of font info for 54 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,16n,46p,2485b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -429,10 +454,10 @@ e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2012/te
 xmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on chapter.pdf (12 pages, 1102806 bytes).
+Output written on chapter.pdf (14 pages, 1152896 bytes).
 PDF statistics:
- 349 PDF objects out of 1000 (max. 8388607)
- 241 compressed objects within 3 object streams
+ 419 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
