@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  9 NOV 2015 02:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 NOV 2015 20:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -245,9 +245,6 @@ LaTeX Info: Redefining \\ on input line 3056.
 
 LaTeX Warning: Label `fig:anapix' multiply defined.
 
-
-LaTeX Warning: Label `sec:limitations' multiply defined.
-
 )
 \openout1 = `chapter.aux'.
 
@@ -348,13 +345,13 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../../scripts/4_charge_monitoring/plots/detArea.pdf, id=10, 569.12625pt x 410.
-53375pt>
-File: ../../scripts/4_charge_monitoring/plots/detArea.pdf Graphic file (type pd
-f)
- <use ../../scripts/4_charge_monitoring/plots/detArea.pdf>
-Package pdftex.def Info: ../../scripts/4_charge_monitoring/plots/detArea.pdf us
-ed on input line 80.
+<../../scripts/04_charge_monitoring/plots/detArea.pdf, id=10, 569.12625pt x 410
+.53375pt>
+File: ../../scripts/04_charge_monitoring/plots/detArea.pdf Graphic file (type p
+df)
+ <use ../../scripts/04_charge_monitoring/plots/detArea.pdf>
+Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/detArea.pdf u
+sed on input line 80.
 (pdftex.def)             Requested size: 260.17464pt x 187.68266pt.
 
 
@@ -363,20 +360,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <../../scripts/4_charge_monitoring/plots/detArea.pdf, page is rotated 90 deg
-rees>] <pics/mod1.jpeg, id=59, 426.80597pt x 283.50488pt>
+[2 <../../scripts/04_charge_monitoring/plots/detArea.pdf, page is rotated 90 de
+grees>] <pics/mod1.jpeg, id=59, 426.80597pt x 283.50488pt>
 File: pics/mod1.jpeg Graphic file (type jpg)
- <use pics/mod1.jpeg>
+
+<use pics/mod1.jpeg>
 Package pdftex.def Info: pics/mod1.jpeg used on input line 107.
 (pdftex.def)             Requested size: 303.53267pt x 201.6316pt.
-
-<pics/wafer.jpg, id=60, 703.62875pt x 561.09625pt>
+ <pics/wafer.jpg, id=60, 703.62875pt x 561.09625pt>
 File: pics/wafer.jpg Graphic file (type jpg)
- <use pics/wafer.jpg>
+
+<use pics/wafer.jpg>
 Package pdftex.def Info: pics/wafer.jpg used on input line 119.
 (pdftex.def)             Requested size: 303.53267pt x 242.04579pt.
-
-[3 <./pics/mod1.jpeg>] [4 <./pics/wafer.jpg>]
+ [3 <./pics/mod1.jpeg>] [4 <./pics/wafer.jpg>]
 <pics/fei41.png, id=71, 806.01125pt x 768.8725pt>
 File: pics/fei41.png Graphic file (type png)
  <use pics/fei41.png>
@@ -389,51 +386,110 @@ File: pics/analogPix.png Graphic file (type png)
 Package pdftex.def Info: pics/analogPix.png used on input line 143.
 (pdftex.def)             Requested size: 303.53267pt x 165.70912pt.
  [6 <./pics/analogPix.png>] [7]
-<../../scripts/4_charge_monitoring/plots/production.pdf, id=85, 569.12625pt x 4
-10.53375pt>
-File: ../../scripts/4_charge_monitoring/plots/production.pdf Graphic file (type
- pdf)
- <use ../../scripts/4_charge_monitoring/plots/production.pdf>
-Package pdftex.def Info: ../../scripts/4_charge_monitoring/plots/production.pdf
- used on input line 174.
-(pdftex.def)             Requested size: 260.17464pt x 187.68266pt.
+<../../scripts/04_charge_monitoring/plots/production.png, id=85, 569.05399pt x 
+410.4936pt>
+File: ../../scripts/04_charge_monitoring/plots/production.png Graphic file (typ
+e png)
+ <use ../../scripts/04_charge_monitoring/plots/production.png>
+Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/production.pn
+g used on input line 174.
+(pdftex.def)             Requested size: 260.17464pt x 187.6831pt.
 
-[8] [9 <../../scripts/4_charge_monitoring/plots/production.pdf, page is rotated
- 90 degrees>]
-<../../scripts/4_charge_monitoring/plots/disconnectedregion.pdf, id=135, 569.12
-625pt x 410.53375pt>
-File: ../../scripts/4_charge_monitoring/plots/disconnectedregion.pdf Graphic fi
-le (type pdf)
-
-<use ../../scripts/4_charge_monitoring/plots/disconnectedregion.pdf>
-Package pdftex.def Info: ../../scripts/4_charge_monitoring/plots/disconnectedre
-gion.pdf used on input line 197.
+[8] [9 <../../scripts/04_charge_monitoring/plots/production.png>] [10]
+<../../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf, id=97, 569.12625pt x
+ 410.53375pt>
+File: ../../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf Graphic file (ty
+pe pdf)
+ <use ../../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf>
+Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/MSBM-34-occ.p
+df used on input line 205.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<../../scripts/4_charge_monitoring/plots/pseudoefficiency.pdf, id=136, 569.1262
-5pt x 410.53375pt>
-File: ../../scripts/4_charge_monitoring/plots/pseudoefficiency.pdf Graphic file
- (type pdf)
-
-<use ../../scripts/4_charge_monitoring/plots/pseudoefficiency.pdf>
-Package pdftex.def Info: ../../scripts/4_charge_monitoring/plots/pseudoefficien
-cy.pdf used on input line 198.
+<../../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf, id=98, 569.12625pt x
+ 410.53375pt>
+File: ../../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf Graphic file (ty
+pe pdf)
+ <use ../../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf>
+Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/MDBM-23-occ.p
+df used on input line 206.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
- [10 <../../scripts/4_charge_monitoring/plots/disconnectedregion.pdf, page is r
-otated 90 degrees> <../../scripts/4_charge_monitoring/plots/pseudoefficiency.pd
-f, page is rotated 90 degrees>]
 
-LaTeX Warning: Reference `' on page 11 undefined on input line 210.
+<../../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf, id=99, 569.12625pt x
+ 410.53375pt>
+File: ../../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf Graphic file (ty
+pe pdf)
+ <use ../../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf>
+Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/MSBM-34-eff.p
+df used on input line 207.
+(pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-[11] <pics/DBM-installed-colour1.jpg, id=230, 2276.505pt x 1710.39pt>
+<../../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf, id=100, 569.12625pt 
+x 410.53375pt>
+File: ../../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf Graphic file (ty
+pe pdf)
+ <use ../../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf>
+Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/MDBM-23-eff.p
+df used on input line 208.
+(pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
+
+<../../scripts/04_charge_monitoring/plots/disconnectedregion.png, id=101, 569.0
+5399pt x 410.4936pt>
+File: ../../scripts/04_charge_monitoring/plots/disconnectedregion.png Graphic f
+ile (type png)
+
+<use ../../scripts/04_charge_monitoring/plots/disconnectedregion.png>
+Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/disconnectedr
+egion.png used on input line 217.
+(pdftex.def)             Requested size: 195.12767pt x 140.75606pt.
+
+<../../scripts/04_charge_monitoring/plots/pseudoefficiency.png, id=102, 569.053
+99pt x 410.4936pt>
+File: ../../scripts/04_charge_monitoring/plots/pseudoefficiency.png Graphic fil
+e (type png)
+
+<use ../../scripts/04_charge_monitoring/plots/pseudoefficiency.png>
+Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/pseudoefficie
+ncy.png used on input line 218.
+(pdftex.def)             Requested size: 195.12767pt x 140.75606pt.
+ [11 <../../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf, page is rotated
+ 90 degrees> <../../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf, page is
+ rotated 90 degrees> <../../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf,
+ page is rotated 90 degrees> <../../scripts/04_charge_monitoring/plots/MDBM-23-
+eff.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: Reference `' on page 12 undefined on input line 230.
+
+[12 <../../scripts/04_charge_monitoring/plots/disconnectedregion.png> <../../sc
+ripts/04_charge_monitoring/plots/pseudoefficiency.png>]
+<pics/DBM-installed-colour1.jpg, id=285, 2276.505pt x 1710.39pt>
 File: pics/DBM-installed-colour1.jpg Graphic file (type jpg)
 
 <use pics/DBM-installed-colour1.jpg>
-Package pdftex.def Info: pics/DBM-installed-colour1.jpg used on input line 225.
+Package pdftex.def Info: pics/DBM-installed-colour1.jpg used on input line 241.
 
 (pdftex.def)             Requested size: 390.25534pt x 293.1896pt.
- [12 <./pics/DBM-installed-colour1.jpg>]
-[13] (./chapter.aux)
+ [13 <./pics/DBM-installed-colour1.jpg>]
+<../../scripts/04_charge_monitoring/plots/z-r-distance.pdf, id=290, 242.9075pt 
+x 179.16937pt>
+File: ../../scripts/04_charge_monitoring/plots/z-r-distance.pdf Graphic file (t
+ype pdf)
+ <use ../../scripts/04_charge_monitoring/plots/z-r-distance.pdf>
+Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/z-r-distance.
+pdf used on input line 266.
+(pdftex.def)             Requested size: 303.53267pt x 223.88461pt.
+
+
+Package caption Warning: \label without proper \caption on input line 277.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:realdata' on page 14 undefined on input line 271.
+
+
+[14]
+No file chapter.bbl.
+[15 <../../scripts/04_charge_monitoring/plots/z-r-distance.pdf>] (./chapter.aux
+)
 
 LaTeX Warning: There were undefined references.
 
@@ -442,13 +498,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4230 strings out of 493488
- 65124 string characters out of 3141326
- 118767 words of memory out of 3000000
- 7468 multiletter control sequences out of 15000+200000
+ 4267 strings out of 493488
+ 66637 string characters out of 3141326
+ 118922 words of memory out of 3000000
+ 7499 multiletter control sequences out of 15000+200000
  12594 words of font info for 46 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,16n,46p,2325b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,15n,46p,2325b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -463,10 +519,10 @@ xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texli
 ve/2012/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/tex
 live/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on chapter.pdf (13 pages, 4343988 bytes).
+Output written on chapter.pdf (15 pages, 5602088 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
+ 358 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  25 NOV 2015 17:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  26 NOV 2015 00:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -397,29 +397,31 @@ Package pdftex.def Info: plots/chgrc.pdf used on input line 317.
 <plots/qerr.pdf, id=325, 138.5175pt x 100.87688pt>
 File: plots/qerr.pdf Graphic file (type pdf)
  <use plots/qerr.pdf>
-Package pdftex.def Info: plots/qerr.pdf used on input line 336.
+Package pdftex.def Info: plots/qerr.pdf used on input line 343.
 (pdftex.def)             Requested size: 238.49231pt x 173.68645pt.
 
-Overfull \hbox (11.97449pt too wide) in paragraph at lines 347--349
+[11]
+Overfull \hbox (11.97449pt too wide) in paragraph at lines 354--356
 \OT1/cmr/m/n/12 For the ex-am-ple above the quan-ti-sa-tion er-ror will be $^^A
 \OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 289 \
 OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 39$ mV=0
 .11 mV.
  []
 
-[11 <./plots/qerr.pdf>] <pics/fpga.jpg, id=351, 168.1482pt x 134.904pt>
+[12 <./plots/qerr.pdf>] <pics/fpga.jpg, id=354, 168.1482pt x 134.904pt>
 File: pics/fpga.jpg Graphic file (type jpg)
 
 <use pics/fpga.jpg>
-Package pdftex.def Info: pics/fpga.jpg used on input line 364.
+Package pdftex.def Info: pics/fpga.jpg used on input line 371.
 (pdftex.def)             Requested size: 195.12767pt x 156.55461pt.
- <pics/asic.png, id=352, 421.575pt x 322.20375pt>
+ <pics/asic.png, id=355, 421.575pt x 322.20375pt>
 File: pics/asic.png Graphic file (type png)
 
 <use pics/asic.png>
-Package pdftex.def Info: pics/asic.png used on input line 365.
+Package pdftex.def Info: pics/asic.png used on input line 372.
 (pdftex.def)             Requested size: 195.12767pt x 149.13489pt.
- (./chapter.bbl [12] [13 <./pics/fpga.jpg> <./pics/asic.png>]) [14
+ (./chapter.bbl [13 <./pics/fpga.jpg> <./pics/asic.png>])
+[14
 
 ] (./chapter.aux)
 
@@ -430,10 +432,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3965 strings out of 493488
- 61155 string characters out of 3141326
- 125191 words of memory out of 3000000
- 7192 multiletter control sequences out of 15000+200000
+ 3966 strings out of 493488
+ 61170 string characters out of 3141326
+ 125203 words of memory out of 3000000
+ 7193 multiletter control sequences out of 15000+200000
  14153 words of font info for 54 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,16n,46p,2485b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -454,7 +456,7 @@ e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2012/te
 xmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on chapter.pdf (14 pages, 1152896 bytes).
+Output written on chapter.pdf (14 pages, 1155659 bytes).
 PDF statistics:
  419 PDF objects out of 1000 (max. 8388607)
  293 compressed objects within 3 object streams
