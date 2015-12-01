@@ -4,18 +4,51 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Limitations to particle identification\relax }}{2}}
 \newlabel{tab:limits}{{1.1}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Application for real-time particle identification}{3}}
-\newlabel{sec:rtpi}{{1.1}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Device specifications and constraints}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Pulse parameters}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}Real-time pulse shape analysis algorithm}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.4}Performance results}{4}}
-\@writefile{toc}{\contentsline {subsubsection}{Rate and linearity}{4}}
-\@writefile{toc}{\contentsline {subsubsection}{Calibration}{4}}
-\@writefile{toc}{\contentsline {subsubsection}{Pulse identification test}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Neutron measurements}{6}}
-\newlabel{sec:nm}{{1.2}{6}}
-\newlabel{eq:reaction}{{1.1}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Thermal neutron spectroscopy}{6}}
-\@writefile{toc}{\contentsline {subsubsection}{Measurement setup}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{Results}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Real-time particle identification}{2}}
+\newlabel{sec:rtpi}{{1.1}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Device specifications and constraints}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Pulse parameters}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Applications}{4}}
+\newlabel{sec:applications}{{1.4}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Firmware design structure\relax }}{5}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:application}{{1.1}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Description of the firmware}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.1}Analysis module}{5}}
+\newlabel{subsec:algorithm}{{1.5.1}{5}}
+\newlabel{eq:formfactor1}{{1.1}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.2}Vector cleaning for area and width measurements}{7}}
+\newlabel{sec:vecclean}{{1.5.2}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces A sample pulse. The first vector shows which samples are above the width measurement height. The second vector is a clean vector. The third line shows the position of the maximum amplitude. The vector cleaning algorithm starts from the maximum amplitude and continues in both ways along the vector.\relax }}{8}}
+\newlabel{fig:samplepulse}{{1.2}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{Vector cleaning}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces Vector cleaning routine outputs two vectors - one forward in time and one back in time from the peak of the pulse.\relax }}{9}}
+\newlabel{fig:routine}{{1.3}{9}}
+\@writefile{toc}{\contentsline {subsubsection}{Algorithm}{9}}
+\newlabel{fig:logic1}{{1.4a}{9}}
+\newlabel{sub@fig:logic1}{{(a)}{a}}
+\newlabel{fig:logic2}{{1.4b}{9}}
+\newlabel{sub@fig:logic2}{{(b)}{b}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces One logic step in the algorithm chain before and after Karnaugh minimisation.\relax }}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.3}Width measurement}{10}}
+\newlabel{fig:width_meas}{{1.5a}{10}}
+\newlabel{sub@fig:width_meas}{{(a)}{a}}
+\newlabel{fig:width}{{1.5b}{10}}
+\newlabel{sub@fig:width}{{(b)}{b}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces This block counts the remaining binary ones in the clean vectors and outputs this value as the pulse width.\relax }}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.4}Area measurement}{10}}
+\newlabel{fig:area_meas}{{1.6a}{10}}
+\newlabel{sub@fig:area_meas}{{(a)}{a}}
+\newlabel{fig:area}{{1.6b}{10}}
+\newlabel{sub@fig:area}{{(b)}{b}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces This block masks the input data with the clean vector and sums the remaining samples.\relax }}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.5}Performance results}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{Rate and linearity}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{Calibration}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{Pulse identification test}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}Neutron measurements}{12}}
+\newlabel{sec:nm}{{1.6}{12}}
+\newlabel{eq:reaction}{{1.2}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.1}Thermal neutron spectroscopy}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{Measurement setup}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{Results}{13}}

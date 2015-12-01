@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 NOV 2015 20:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 NOV 2015 21:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -479,7 +479,7 @@ pdf used on input line 266.
 (pdftex.def)             Requested size: 303.53267pt x 223.88461pt.
 
 
-Package caption Warning: \label without proper \caption on input line 277.
+Package caption Warning: \label without proper \caption on input line 278.
 See the caption package documentation for explanation.
 
 

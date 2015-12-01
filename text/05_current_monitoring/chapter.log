@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  22 OCT 2015 20:14
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  1 DEC 2015 00:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -131,39 +131,43 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 \f@ncyO@olf=\skip55
 \f@ncyO@orf=\skip56
 )
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 12.
-
+(/usr/local/texlive/2012/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip57
+\enit@outerparindent=\dimen112
+\enit@toks=\toks16
+\enit@inbox=\box26
+\enitdp@description=\count97
+)
 (./chapter.aux)
 \openout1 = `chapter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count97
-\scratchdimen=\dimen112
-\scratchbox=\box26
-\nofMPsegments=\count98
-\nofMParguments=\count99
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count100
-\MPscratchDim=\dimen113
-\MPnumerator=\count101
-\makeMPintoPDFobject=\count102
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count98
+\scratchdimen=\dimen113
+\scratchbox=\box27
+\nofMPsegments=\count99
+\nofMParguments=\count100
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count101
+\MPscratchDim=\dimen114
+\MPnumerator=\count102
+\makeMPintoPDFobject=\count103
+\everyMPtoPDFconversion=\toks18
 ) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -217,20 +221,20 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 Chapter 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 32.
+LaTeX Font Info:    Try loading font information for U+msa on input line 35.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 32.
+LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 
-LaTeX Warning: Reference `' on page 1 undefined on input line 32.
+LaTeX Warning: Reference `' on page 1 undefined on input line 35.
 
 
-LaTeX Warning: Reference `' on page 1 undefined on input line 34.
+LaTeX Warning: Reference `' on page 1 undefined on input line 37.
 
 [1
 
@@ -242,41 +246,129 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]
-Overfull \hbox (1.07973pt too wide) in paragraph at lines 81--81
-[]\OT1/cmr/bx/n/17.28 Application for real-time par-ti-cle iden-ti-fi-ca-tion 
+[2] [3] [4
+
+] <plots/application.pdf, id=24, 318.18875pt x 175.15437pt>
+File: plots/application.pdf Graphic file (type pdf)
+
+<use plots/application.pdf>
+Package pdftex.def Info: plots/application.pdf used on input line 133.
+(pdftex.def)             Requested size: 390.25534pt x 214.8239pt.
+
+
+LaTeX Warning: Reference `fig:architecture' on page 5 undefined on input line 1
+44.
+
+[5 <./plots/application.pdf>]
+
+LaTeX Warning: Reference `fig:triggerwin' on page 6 undefined on input line 158
+.
+
+
+LaTeX Warning: Reference `subsec:hardware' on page 6 undefined on input line 16
+8.
+
+
+LaTeX Warning: Reference `fig:maxval' on page 6 undefined on input line 168.
+
+[6] <plots/pulse1.pdf, id=47, 472.76625pt x 243.91125pt>
+File: plots/pulse1.pdf Graphic file (type pdf)
+
+<use plots/pulse1.pdf>
+Package pdftex.def Info: plots/pulse1.pdf used on input line 195.
+(pdftex.def)             Requested size: 303.53267pt x 156.60138pt.
+ [7]
+<plots/vector_clean.pdf, id=52, 351.81438pt x 139.52126pt>
+File: plots/vector_clean.pdf Graphic file (type pdf)
+
+<use plots/vector_clean.pdf>
+Package pdftex.def Info: plots/vector_clean.pdf used on input line 210.
+(pdftex.def)             Requested size: 303.53267pt x 120.37338pt.
+ [8 <./plots/pulse1.pdf>]
+<plots/logic1.pdf, id=76, 160.09813pt x 41.15375pt>
+File: plots/logic1.pdf Graphic file (type pdf)
+ <use plots/logic1.pdf>
+Package pdftex.def Info: plots/logic1.pdf used on input line 230.
+(pdftex.def)             Requested size: 203.80193pt x 52.38899pt.
+
+<plots/logic2.pdf, id=77, 137.01187pt x 63.73813pt>
+File: plots/logic2.pdf Graphic file (type pdf)
+ <use plots/logic2.pdf>
+Package pdftex.def Info: plots/logic2.pdf used on input line 231.
+(pdftex.def)             Requested size: 203.80193pt x 94.81624pt.
+
+Overfull \hbox (5.81714pt too wide) in paragraph at lines 229--233
+[][] 
  []
 
-[3
+[9 <./plots/vector_clean.pdf> <./plots/logic1.pdf> <./plots/logic2.pdf>]
+<plots/width_meas.pdf, id=133, 162.6075pt x 50.1875pt>
+File: plots/width_meas.pdf Graphic file (type pdf)
 
-] [4] [5] [6
+<use plots/width_meas.pdf>
+Package pdftex.def Info: plots/width_meas.pdf used on input line 246.
+(pdftex.def)             Requested size: 117.07924pt x 36.13649pt.
+ <plots/width.pdf, id=134, 263.98625pt x 42.1575pt>
+File: plots/width.pdf Graphic file (type pdf)
 
-] [7] (./chapter.aux)
+<use plots/width.pdf>
+Package pdftex.def Info: plots/width.pdf used on input line 247.
+(pdftex.def)             Requested size: 290.5246pt x 46.39845pt.
+
+Overfull \hbox (5.81712pt too wide) in paragraph at lines 245--249
+[][] 
+ []
+
+<plots/area_meas.pdf, id=135, 192.72pt x 101.37875pt>
+File: plots/area_meas.pdf Graphic file (type pdf)
+
+<use plots/area_meas.pdf>
+Package pdftex.def Info: plots/area_meas.pdf used on input line 256.
+(pdftex.def)             Requested size: 130.08731pt x 68.43079pt.
+ <plots/area.pdf, id=136, 263.48438pt x 63.23625pt>
+File: plots/area.pdf Graphic file (type pdf)
+
+<use plots/area.pdf>
+Package pdftex.def Info: plots/area.pdf used on input line 257.
+(pdftex.def)             Requested size: 277.51653pt x 66.60745pt.
+
+Overfull \hbox (5.81712pt too wide) in paragraph at lines 255--259
+[][] 
+ []
+
+[10 <./plots/width_meas.pdf> <./plots/width.pdf> <./plots/area_meas.pdf> <./plo
+ts/area.pdf>] [11
+
+
+] [12
+
+] [13] (./chapter.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3217 strings out of 493488
- 48241 string characters out of 3141326
- 107666 words of memory out of 3000000
- 6490 multiletter control sequences out of 15000+200000
- 11605 words of font info for 43 fonts, out of 3000000 for 9000
+ 3572 strings out of 493488
+ 54363 string characters out of 3141326
+ 113071 words of memory out of 3000000
+ 6830 multiletter control sequences out of 15000+200000
+ 11957 words of font info for 44 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,10n,43p,1700b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,12n,43p,1700b,397s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
 usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loca
-l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
-/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on chapter.pdf (7 pages, 107900 bytes).
+ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
+/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on chapter.pdf (13 pages, 260238 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 259 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
