@@ -10,6 +10,9 @@
 
 \usepackage{packages/fancyhdr}% http://ctan.org/pkg/fancyhdr
 \pagestyle{fancy}% Change page style to fancy
+\fancyhead[OR]{\renewcommand\thesection}
+\fancyhead[ER]{\renewcommand\chaptername}
+
 %\fancyhf{}% Clear header/footer
 %\fancyhead{}
 %\fancyhead[RO, LE]{Introduction}	
@@ -227,7 +230,7 @@ The first two assembled prototype DBM modules, MDBM-01 and MDBM-03, were tested 
 
 The test beam prototypes did not meet the acceptance criteria for production DBM modules in the following areas: first, the CCDs were slightly below 200~$\upmu$m, which would be the DBM minimum. Secondly, the applied bias voltages ranged from 1--2~V/$\upmu$m. In addition, the threshold cut could only be set to 1500~electrons, which is higher than the DBM minimum (1000~e). Nonetheless, the resulting module efficiencies were still in the range between 75--85~\%.
 
-To analyse the test beam data, Judith~\cite{} software framework was used. Judith is capable of synchronising data streams from several detector systems only connected via a trigger system, reconstructing tracks and calculating efficiency for the DUTs. It was also used to reconstruct and analyse the acquired Kartel test beam data together with the silicon and diamond module as DUTs.A sample of the analysed data is shown in figure~\ref{}. 
+To analyse the test beam data, Judith~\cite{} software framework was used. Judith is capable of synchronising data streams from several detector systems only connected via a trigger system, reconstructing tracks and calculating efficiency for the DUTs. It was also used to reconstruct and analyse the acquired Kartel test beam data together with the silicon and diamond module as DUTs. A sample of the analysed data is shown in figure~\ref{}. 
 
 %Spatial resolution, efficiency, ToT
 

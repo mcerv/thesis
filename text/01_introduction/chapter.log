@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  22 NOV 2015 01:33
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  2 DEC 2015 00:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -245,24 +245,24 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 (./chapter.aux)
 \openout1 = `chapter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 38.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    ... okay on input line 38.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -337,7 +337,7 @@ Chapter 1.
 <pics/sm.png, id=9, 3854.4pt x 2168.1pt>
 File: pics/sm.png Graphic file (type png)
  <use pics/sm.png>
-Package pdftex.def Info: pics/sm.png used on input line 80.
+Package pdftex.def Info: pics/sm.png used on input line 83.
 (pdftex.def)             Requested size: 260.17464pt x 146.3239pt.
 
 
@@ -349,12 +349,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [2
 
  <./pics/sm.png>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 90.
+LaTeX Font Info:    Try loading font information for U+msa on input line 93.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 90.
+LaTeX Font Info:    Try loading font information for U+msb on input line 93.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -362,41 +362,41 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 <pics/lhc.jpg, id=20, 749.80125pt x 563.10374pt>
 File: pics/lhc.jpg Graphic file (type jpg)
  <use pics/lhc.jpg>
-Package pdftex.def Info: pics/lhc.jpg used on input line 106.
+Package pdftex.def Info: pics/lhc.jpg used on input line 109.
 (pdftex.def)             Requested size: 260.17464pt x 195.39659pt.
  [4 <./pics/lhc.jpg>] <pics/atlas3.jpg, id=26, 810.52812pt x 520.94624pt>
 File: pics/atlas3.jpg Graphic file (type jpg)
 
 <use pics/atlas3.jpg>
-Package pdftex.def Info: pics/atlas3.jpg used on input line 117.
+Package pdftex.def Info: pics/atlas3.jpg used on input line 120.
 (pdftex.def)             Requested size: 346.89731pt x 222.9612pt.
  [5 <./pics/atlas3.jpg>]
 <pics/triga.jpg, id=30, 732.7375pt x 301.125pt>
 File: pics/triga.jpg Graphic file (type jpg)
  <use pics/triga.jpg>
-Package pdftex.def Info: pics/triga.jpg used on input line 137.
+Package pdftex.def Info: pics/triga.jpg used on input line 140.
 (pdftex.def)             Requested size: 346.89731pt x 142.56259pt.
  [6]
 <pics/ntof.jpg, id=34, 4156.52875pt x 3758.04pt>
 File: pics/ntof.jpg Graphic file (type jpg)
  <use pics/ntof.jpg>
-Package pdftex.def Info: pics/ntof.jpg used on input line 157.
+Package pdftex.def Info: pics/ntof.jpg used on input line 160.
 (pdftex.def)             Requested size: 260.17464pt x 235.22098pt.
  [7 <./pics/triga.jpg>] [8 <./pics/ntof.jpg>]
 <pics/ibl.jpg, id=42, 1561.032pt x 1040.688pt>
 File: pics/ibl.jpg Graphic file (type jpg)
  <use pics/ibl.jpg>
-Package pdftex.def Info: pics/ibl.jpg used on input line 178.
+Package pdftex.def Info: pics/ibl.jpg used on input line 181.
 (pdftex.def)             Requested size: 260.17464pt x 173.45287pt.
  [9 <./pics/ibl.jpg>] <pics/cividecpcvd.png, id=46, 1104.125pt x 727.71875pt>
 File: pics/cividecpcvd.png Graphic file (type png)
 
 <use pics/cividecpcvd.png>
-Package pdftex.def Info: pics/cividecpcvd.png used on input line 188.
+Package pdftex.def Info: pics/cividecpcvd.png used on input line 191.
 (pdftex.def)             Requested size: 260.17464pt x 171.4803pt.
 
 
-LaTeX Warning: Reference `' on page 10 undefined on input line 192.
+LaTeX Warning: Reference `' on page 10 undefined on input line 195.
 
 [10 <./pics/cividecpcvd.png>] (./chapter.bbl [11]) [12
 
@@ -408,7 +408,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  4225 strings out of 493488
  64150 string characters out of 3141326
- 119766 words of memory out of 3000000
+ 119758 words of memory out of 3000000
  7465 multiletter control sequences out of 15000+200000
  12594 words of font info for 46 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -423,7 +423,7 @@ cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
 al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 /texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/
 texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on chapter.pdf (12 pages, 22383590 bytes).
+Output written on chapter.pdf (12 pages, 22383268 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream

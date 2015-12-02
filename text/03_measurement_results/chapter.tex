@@ -10,9 +10,12 @@
 
 \usepackage{packages/fancyhdr}% http://ctan.org/pkg/fancyhdr
 \pagestyle{fancy}% Change page style to fancy
+\fancyhead[OR]{\renewcommand\thesection}
+\fancyhead[ER]{\renewcommand\chaptername}
+
 %\fancyhf{}% Clear header/footer
-\fancyhead{}
-\fancyhead[RO, LE]{Experimental results}
+%\fancyhead{}
+%\fancyhead[RO, LE]{Experimental results}
 %\fancyfoot{}
 %\fancyfoot[RO, LE]{\thepage}% \fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0.7pt}% Default \headrulewidth is 0.4pt

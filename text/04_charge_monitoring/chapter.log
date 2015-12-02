@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 NOV 2015 21:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  2 DEC 2015 01:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -224,6 +224,10 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \f@ncyO@olf=\skip56
 \f@ncyO@orf=\skip57
 )
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 14.
+
 (/usr/local/texlive/2012/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count98
@@ -248,24 +252,24 @@ LaTeX Warning: Label `fig:anapix' multiply defined.
 )
 \openout1 = `chapter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    ... okay on input line 28.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -333,11 +337,11 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 Chapter 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 62.
+LaTeX Font Info:    Try loading font information for U+msa on input line 65.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 62.
+LaTeX Font Info:    Try loading font information for U+msb on input line 65.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -351,12 +355,12 @@ File: ../../scripts/04_charge_monitoring/plots/detArea.pdf Graphic file (type p
 df)
  <use ../../scripts/04_charge_monitoring/plots/detArea.pdf>
 Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/detArea.pdf u
-sed on input line 80.
+sed on input line 83.
 (pdftex.def)             Requested size: 260.17464pt x 187.68266pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 27.05003pt.
+ Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
@@ -365,25 +369,25 @@ grees>] <pics/mod1.jpeg, id=59, 426.80597pt x 283.50488pt>
 File: pics/mod1.jpeg Graphic file (type jpg)
 
 <use pics/mod1.jpeg>
-Package pdftex.def Info: pics/mod1.jpeg used on input line 107.
+Package pdftex.def Info: pics/mod1.jpeg used on input line 110.
 (pdftex.def)             Requested size: 303.53267pt x 201.6316pt.
  <pics/wafer.jpg, id=60, 703.62875pt x 561.09625pt>
 File: pics/wafer.jpg Graphic file (type jpg)
 
 <use pics/wafer.jpg>
-Package pdftex.def Info: pics/wafer.jpg used on input line 119.
+Package pdftex.def Info: pics/wafer.jpg used on input line 122.
 (pdftex.def)             Requested size: 303.53267pt x 242.04579pt.
  [3 <./pics/mod1.jpeg>] [4 <./pics/wafer.jpg>]
 <pics/fei41.png, id=71, 806.01125pt x 768.8725pt>
 File: pics/fei41.png Graphic file (type png)
  <use pics/fei41.png>
-Package pdftex.def Info: pics/fei41.png used on input line 133.
+Package pdftex.def Info: pics/fei41.png used on input line 136.
 (pdftex.def)             Requested size: 195.12767pt x 186.12872pt.
  [5 <./pics/fei41.png>] <pics/analogPix.png, id=75, 1266.7325pt x 691.58376pt>
 File: pics/analogPix.png Graphic file (type png)
 
 <use pics/analogPix.png>
-Package pdftex.def Info: pics/analogPix.png used on input line 143.
+Package pdftex.def Info: pics/analogPix.png used on input line 146.
 (pdftex.def)             Requested size: 303.53267pt x 165.70912pt.
  [6 <./pics/analogPix.png>] [7]
 <../../scripts/04_charge_monitoring/plots/production.png, id=85, 569.05399pt x 
@@ -392,7 +396,7 @@ File: ../../scripts/04_charge_monitoring/plots/production.png Graphic file (typ
 e png)
  <use ../../scripts/04_charge_monitoring/plots/production.png>
 Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/production.pn
-g used on input line 174.
+g used on input line 177.
 (pdftex.def)             Requested size: 260.17464pt x 187.6831pt.
 
 [8] [9 <../../scripts/04_charge_monitoring/plots/production.png>] [10]
@@ -402,7 +406,7 @@ File: ../../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf Graphic file (ty
 pe pdf)
  <use ../../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf>
 Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/MSBM-34-occ.p
-df used on input line 205.
+df used on input line 208.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
 <../../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf, id=98, 569.12625pt x
@@ -411,7 +415,7 @@ File: ../../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf Graphic file (ty
 pe pdf)
  <use ../../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf>
 Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/MDBM-23-occ.p
-df used on input line 206.
+df used on input line 209.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
 <../../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf, id=99, 569.12625pt x
@@ -420,7 +424,7 @@ File: ../../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf Graphic file (ty
 pe pdf)
  <use ../../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf>
 Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/MSBM-34-eff.p
-df used on input line 207.
+df used on input line 210.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
 <../../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf, id=100, 569.12625pt 
@@ -429,7 +433,7 @@ File: ../../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf Graphic file (ty
 pe pdf)
  <use ../../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf>
 Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/MDBM-23-eff.p
-df used on input line 208.
+df used on input line 211.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
 <../../scripts/04_charge_monitoring/plots/disconnectedregion.png, id=101, 569.0
@@ -439,7 +443,7 @@ ile (type png)
 
 <use ../../scripts/04_charge_monitoring/plots/disconnectedregion.png>
 Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/disconnectedr
-egion.png used on input line 217.
+egion.png used on input line 220.
 (pdftex.def)             Requested size: 195.12767pt x 140.75606pt.
 
 <../../scripts/04_charge_monitoring/plots/pseudoefficiency.png, id=102, 569.053
@@ -449,7 +453,7 @@ e (type png)
 
 <use ../../scripts/04_charge_monitoring/plots/pseudoefficiency.png>
 Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/pseudoefficie
-ncy.png used on input line 218.
+ncy.png used on input line 221.
 (pdftex.def)             Requested size: 195.12767pt x 140.75606pt.
  [11 <../../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf, page is rotated
  90 degrees> <../../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf, page is
@@ -457,7 +461,7 @@ ncy.png used on input line 218.
  page is rotated 90 degrees> <../../scripts/04_charge_monitoring/plots/MDBM-23-
 eff.pdf, page is rotated 90 degrees>]
 
-LaTeX Warning: Reference `' on page 12 undefined on input line 230.
+LaTeX Warning: Reference `' on page 12 undefined on input line 233.
 
 [12 <../../scripts/04_charge_monitoring/plots/disconnectedregion.png> <../../sc
 ripts/04_charge_monitoring/plots/pseudoefficiency.png>]
@@ -465,7 +469,7 @@ ripts/04_charge_monitoring/plots/pseudoefficiency.png>]
 File: pics/DBM-installed-colour1.jpg Graphic file (type jpg)
 
 <use pics/DBM-installed-colour1.jpg>
-Package pdftex.def Info: pics/DBM-installed-colour1.jpg used on input line 241.
+Package pdftex.def Info: pics/DBM-installed-colour1.jpg used on input line 244.
 
 (pdftex.def)             Requested size: 390.25534pt x 293.1896pt.
  [13 <./pics/DBM-installed-colour1.jpg>]
@@ -475,15 +479,15 @@ File: ../../scripts/04_charge_monitoring/plots/z-r-distance.pdf Graphic file (t
 ype pdf)
  <use ../../scripts/04_charge_monitoring/plots/z-r-distance.pdf>
 Package pdftex.def Info: ../../scripts/04_charge_monitoring/plots/z-r-distance.
-pdf used on input line 266.
+pdf used on input line 269.
 (pdftex.def)             Requested size: 303.53267pt x 223.88461pt.
 
 
-Package caption Warning: \label without proper \caption on input line 278.
+Package caption Warning: \label without proper \caption on input line 281.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:realdata' on page 14 undefined on input line 271.
+LaTeX Warning: Reference `fig:realdata' on page 14 undefined on input line 274.
 
 
 [14]
@@ -500,7 +504,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  4267 strings out of 493488
  66637 string characters out of 3141326
- 118922 words of memory out of 3000000
+ 118914 words of memory out of 3000000
  7499 multiletter control sequences out of 15000+200000
  12594 words of font info for 46 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -519,7 +523,7 @@ xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texli
 ve/2012/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/tex
 live/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on chapter.pdf (15 pages, 5602088 bytes).
+Output written on chapter.pdf (15 pages, 5600255 bytes).
 PDF statistics:
  358 PDF objects out of 1000 (max. 8388607)
  181 compressed objects within 2 object streams
