@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  2 DEC 2015 00:42
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  5 DEC 2015 19:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -192,24 +192,24 @@ LaTeX Warning: Label `fig:spcchg' multiply defined.
 )
 \openout1 = `chapter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 20.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 19.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 19.
  (/usr/local/texlive/2012/texmf-dist/tex/generic/babel/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    ... okay on input line 19.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -277,11 +277,11 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 Chapter 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 39.
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 39.
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -289,7 +289,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (1.90881pt too wide) in paragraph at lines 71--72
+Overfull \hbox (1.90881pt too wide) in paragraph at lines 70--71
 \OT1/cmr/m/n/12 There are sev-eral ways the par-ti-cles can in-ter-act with the
  sen-sor: via bremsstrahlung [],
  []
@@ -319,11 +319,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--96
 
 Underfull \hbox (badness 10000) in paragraph at lines 96--96
 \OT1/cmr/m/n/10 struc-ture can be
- []
-
-
-Underfull \hbox (badness 3078) in paragraph at lines 96--96
-\OT1/cmr/m/n/10 bro-ken, pro-duc-ing a
  []
 
 <plots/simpledrift.pdf, id=23, 128.98187pt x 73.77562pt>
@@ -399,92 +394,91 @@ File: ../../scripts/02_pulse_formation/plots/resolution.pdf Graphic file (type
 pdf)
  <use ../../scripts/02_pulse_formation/plots/resolution.pdf>
 Package pdftex.def Info: ../../scripts/02_pulse_formation/plots/resolution.pdf 
-used on input line 222.
+used on input line 220.
 (pdftex.def)             Requested size: 195.12767pt x 124.92084pt.
 
-[7 <../../scripts/02_pulse_formation/plots/resolution.pdf, page is rotated 90 d
-egrees>]
+[7] [8 <../../scripts/02_pulse_formation/plots/resolution.pdf, page is rotated 
+90 degrees>]
 
-LaTeX Warning: Reference `XXXCHAPTER' on page 8 undefined on input line 235.
+LaTeX Warning: Reference `XXXCHAPTER' on page 9 undefined on input line 233.
 
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 258.
+LaTeX Warning: Reference `' on page 9 undefined on input line 253.
 
-<plots/spcchg.pdf, id=242, 188.20313pt x 96.36pt>
+<plots/spcchg.pdf, id=245, 188.20313pt x 96.36pt>
 File: plots/spcchg.pdf Graphic file (type pdf)
  <use plots/spcchg.pdf>
-Package pdftex.def Info: plots/spcchg.pdf used on input line 271.
+Package pdftex.def Info: plots/spcchg.pdf used on input line 266.
 (pdftex.def)             Requested size: 260.17464pt x 133.21951pt.
 
-[8
+[9
 
 ]
 
-LaTeX Warning: Reference `fig:raddamage' on page 9 undefined on input line 279.
+LaTeX Warning: Reference `fig:raddamage' on page 10 undefined on input line 274
+.
 
-
-<plots/raddamage.pdf, id=247, 395.4775pt x 187.70125pt>
+<plots/raddamage.pdf, id=250, 395.4775pt x 187.70125pt>
 File: plots/raddamage.pdf Graphic file (type pdf)
 
 <use plots/raddamage.pdf>
-Package pdftex.def Info: plots/raddamage.pdf used on input line 290.
+Package pdftex.def Info: plots/raddamage.pdf used on input line 285.
 (pdftex.def)             Requested size: 260.17464pt x 123.48509pt.
- [9 <./plots/spcchg.pdf>] [10 <./plots/raddamage.pdf>] <plots/curramp.pdf, id=2
-94, 198.24063pt x 70.2625pt>
+ [10 <./plots/spcchg.pdf>] [11 <./plots/raddamage.pdf>] <plots/curramp.pdf, id=
+297, 198.24063pt x 70.2625pt>
 File: plots/curramp.pdf Graphic file (type pdf)
  <use plots/curramp.pdf>
-Package pdftex.def Info: plots/curramp.pdf used on input line 323.
+Package pdftex.def Info: plots/curramp.pdf used on input line 318.
 (pdftex.def)             Requested size: 216.81pt x 76.84618pt.
 
-<plots/chgamp.pdf, id=295, 157.08687pt x 108.90688pt>
+<plots/chgamp.pdf, id=298, 157.08687pt x 108.90688pt>
 File: plots/chgamp.pdf Graphic file (type pdf)
  <use plots/chgamp.pdf>
-Package pdftex.def Info: plots/chgamp.pdf used on input line 324.
+Package pdftex.def Info: plots/chgamp.pdf used on input line 319.
 (pdftex.def)             Requested size: 173.44534pt x 120.25323pt.
 
-[11
+[12
 
  <./plots/curramp.pdf> <./plots/chgamp.pdf>]
-<plots/currrc.pdf, id=332, 156.08313pt x 63.23625pt>
+<plots/currrc.pdf, id=335, 156.08313pt x 63.23625pt>
 File: plots/currrc.pdf Graphic file (type pdf)
  <use plots/currrc.pdf>
-Package pdftex.def Info: plots/currrc.pdf used on input line 338.
+Package pdftex.def Info: plots/currrc.pdf used on input line 333.
 (pdftex.def)             Requested size: 195.12767pt x 79.05667pt.
 
-<plots/chgrc.pdf, id=333, 161.10187pt x 64.24pt>
+<plots/chgrc.pdf, id=336, 161.10187pt x 64.24pt>
 File: plots/chgrc.pdf Graphic file (type pdf)
  <use plots/chgrc.pdf>
-Package pdftex.def Info: plots/chgrc.pdf used on input line 356.
+Package pdftex.def Info: plots/chgrc.pdf used on input line 351.
 (pdftex.def)             Requested size: 195.12767pt x 77.811pt.
- [12 <./plots/currrc.pdf> <./plots/chgrc.pdf>]
-<plots/qerr.pdf, id=375, 138.5175pt x 100.87688pt>
+ [13 <./plots/currrc.pdf>] <plots/qerr.pdf, id=357, 138.5175pt x 100.87688pt>
 File: plots/qerr.pdf Graphic file (type pdf)
- <use plots/qerr.pdf>
-Package pdftex.def Info: plots/qerr.pdf used on input line 382.
-(pdftex.def)             Requested size: 238.49231pt x 173.68645pt.
 
-[13]
-Overfull \hbox (11.97449pt too wide) in paragraph at lines 393--395
+<use plots/qerr.pdf>
+Package pdftex.def Info: plots/qerr.pdf used on input line 377.
+(pdftex.def)             Requested size: 238.49231pt x 173.68645pt.
+ [14 <./plots/chgrc.pdf>]
+Overfull \hbox (11.97449pt too wide) in paragraph at lines 388--390
 \OT1/cmr/m/n/12 For the ex-am-ple above the quan-ti-sa-tion er-ror will be $^^A
 \OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 289 \
 OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 39$ mV=0
 .11 mV.
  []
 
-[14 <./plots/qerr.pdf>] <pics/fpga.jpg, id=405, 168.1482pt x 134.904pt>
+[15 <./plots/qerr.pdf>] <pics/fpga.jpg, id=408, 168.1482pt x 134.904pt>
 File: pics/fpga.jpg Graphic file (type jpg)
 
 <use pics/fpga.jpg>
-Package pdftex.def Info: pics/fpga.jpg used on input line 410.
+Package pdftex.def Info: pics/fpga.jpg used on input line 405.
 (pdftex.def)             Requested size: 195.12767pt x 156.55461pt.
- <pics/asic.png, id=406, 421.575pt x 322.20375pt>
+ <pics/asic.png, id=409, 421.575pt x 322.20375pt>
 File: pics/asic.png Graphic file (type png)
 
 <use pics/asic.png>
-Package pdftex.def Info: pics/asic.png used on input line 411.
+Package pdftex.def Info: pics/asic.png used on input line 406.
 (pdftex.def)             Requested size: 195.12767pt x 149.13489pt.
- (./chapter.bbl [15 <./pics/fpga.jpg> <./pics/asic.png>])
-[16
+ (./chapter.bbl [16 <./pics/fpga.jpg> <./pics/asic.png>])
+[17
 
 ] (./chapter.aux)
 
@@ -501,7 +495,7 @@ Here is how much of TeX's memory you used:
  7533 multiletter control sequences out of 15000+200000
  14805 words of font info for 56 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,16n,46p,2485b,450s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,16n,46p,2518b,450s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -521,10 +515,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2012/texmf
 -dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on chapter.pdf (16 pages, 1225849 bytes).
+Output written on chapter.pdf (17 pages, 1226527 bytes).
 PDF statistics:
- 476 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
+ 479 PDF objects out of 1000 (max. 8388607)
+ 337 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1903,8 +1903,8 @@
 			<integer>775</integer>
 			<key>Points</key>
 			<array>
-				<string>{677.06194336174167, 247.18833927301355}</string>
-				<string>{683.04324531645523, 280.04253353130622}</string>
+				<string>{679.2322626546071, 236.59976801527682}</string>
+				<string>{684.11806866447375, 279.89770684361361}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1917,6 +1917,11 @@
 					<key>TailArrow</key>
 					<string>0</string>
 				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>685</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -6484,7 +6489,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2015-12-01 23:05:54 +0000</string>
+	<string>2015-12-02 08:38:40 +0000</string>
 	<key>Modifier</key>
 	<string>Matevz Cerv</string>
 	<key>NotesVisible</key>

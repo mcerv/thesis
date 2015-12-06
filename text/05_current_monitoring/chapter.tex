@@ -9,6 +9,10 @@
 \pagestyle{fancy}% Change page style to fancy
 \fancyhead[OR]{\renewcommand\thesection}
 \fancyhead[ER]{\renewcommand\chaptername}
+\newcommand\Chapter[2]{\chapter
+  [#1\hfil\hbox{}\protect\linebreak{\itshape#2}]%
+  {#1\\[2ex]\Large\itshape#2}%
+}
 
 %\fancyhf{}% Clear header/footer
 %\fancyhead{}
@@ -29,11 +33,11 @@
 
 
 % ---------------------------------------------------------------------------------------------------------------
-\chapter{Current monitoring}
+\Chapter{Current monitoring}{Real-time particle identification}
 % ---------------------------------------------------------------------------------------------------------------
-	- Real-time particle identification
-		- Pulse shape (width, area. . .) and its constraints
-		- Device constraints
+%	- Real-time particle identification
+%		- Pulse shape (width, area. . .) and its constraints
+%		- Device constraints
 
 Diamond sensors have a very fast signal response due to their low capacitance. The electrical signal created by drifting charge carriers retains its shape without significant distortion. When the sensor is used together with a fast current amplifier with a high broadband limit ($\sim$2~GHz) and a readout device with a similar limit, the information about the drifting charges is retained. For instance, a proton creates the free e-h pairs along its trajectory. The electrons and holes start drifting immediately. Those closest to the electrodes recombine quickly whereas those at the opposite side contribute to the induced signal for longer. The resulting signal is therefore a triangular pulse with a steep rising edge and a gentle falling edge. This means that it is possible to determine, with a certain probability, the type of radiation detected by the diamond sensor. Furthermore, it is possible to determine the speed of the charge carriers, as was done in chapter~\ref{}. This, however, only applies to sCVD diamond . Its uniform carbon lattice allows the ionisation profiles to retain their shape, unlike in pCVD material, laden with grain boundaries, or in even in silicon where the shape is deformed due to p-n junction non-uniformities.
 
