@@ -76,7 +76,7 @@ void DrawFuns::prettify (TGraph *gr ) {
     //gr->SetMarkerColor(kBlack);
     //gr->GetYaxis()->SetRangeUser(minYd,maxYd);
     //gr->GetXaxis()->SetRangeUser(0,endPulsed-startPulsed);
-    gr->SetLineWidth(1);
+    gr->SetLineWidth(2);
     //gr->SetName("Graph");
     gr->SetTitle("");
     gr->GetXaxis()->SetTitle("X axis [unit]");
@@ -112,6 +112,7 @@ void DrawFuns::prettify (TMultiGraph *gr) {
   gr->GetXaxis()->SetLabelSize(0.05);
   gr->GetYaxis()->SetLabelSize(0.05);
   gr->GetYaxis()->SetTickLength(0.01);
+  // gr->SetLineWidth(2);
 }
 
 void DrawFuns::prettify (TVirtualPad *c, string histType = "th1") {

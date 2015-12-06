@@ -104,7 +104,7 @@ int32_t main (void) {
   // mg->GetXaxis()->SetLimits(0.9, 100000);
   mg->GetYaxis()->SetRangeUser(0.01,1);
   mg->GetXaxis()->SetTitle("Time [s]");
-  mg->GetYaxis()->SetTitle("Form correlation");
+  mg->GetYaxis()->SetTitle("Shape correlation");
   leg->Draw("same");
 
 

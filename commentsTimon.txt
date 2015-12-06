@@ -6,14 +6,14 @@ Non-Italic !
 
 #credit already by citing.
 
-more figures/diagrams
+#more figures/diagrams
 
 #so-called
 
 Plots:
--always write the irradiation in the legend
--consistent small or large caps Figure
-capital - easier to see
+#-always write the irradiation in the legend
+#-consistent small or large caps Figure
+#capital - easier to see
 
 #functions -> equations
 

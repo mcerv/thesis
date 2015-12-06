@@ -3,87 +3,97 @@ CFLAGS = -g
 LFLAGS = 
 OBJPATH = obj
 SRCPATH = src
-EXECUTABLE0 = calcHealingElecs1
-EXECUTABLE1 = calcHealingElecs2
-EXECUTABLE2 = calcHealingHoles0
-EXECUTABLE3 = calcHealingHoles3
-EXECUTABLE4 = calcHealingHoles4
-EXECUTABLE5 = ccdPlot
-EXECUTABLE6 = colours
-EXECUTABLE7 = decay
-EXECUTABLE8 = decaycompare
-EXECUTABLE9 = decaysolver
-EXECUTABLE10 = decaytau
-EXECUTABLE11 = dpa
-EXECUTABLE12 = funs
-EXECUTABLE13 = grab_healing
-EXECUTABLE14 = grab_hystc2
-EXECUTABLE15 = grab_longtermc2
-EXECUTABLE16 = grab_longtermc2_lpf
-EXECUTABLE17 = grab_setoffc2
-EXECUTABLE18 = grab_voltincreasec2
-EXECUTABLE19 = grabpulses
-EXECUTABLE20 = grabsamplepulses
-EXECUTABLE21 = grabvalues
-EXECUTABLE22 = hyst_hyst
-EXECUTABLE23 = hyst_longterm
-EXECUTABLE24 = hysteresisLongterm
-EXECUTABLE25 = landaus
-EXECUTABLE26 = plotCorrHealing
-EXECUTABLE27 = plotgraphs
-EXECUTABLE28 = plotLifetimeElecs
-EXECUTABLE29 = plotLifetimeHoles
-EXECUTABLE30 = sampledist
-EXECUTABLE31 = scLifetimeElecs
-EXECUTABLE32 = scLifetimeHoles
-EXECUTABLE33 = templatedecaysolver
-EXECUTABLE34 = tempVar
-EXECUTABLE35 = wanaresultsincl
+EXECUTABLE0 = calcDecreasingCorr
+EXECUTABLE1 = calcHealingElecs1
+EXECUTABLE2 = calcHealingElecs2
+EXECUTABLE3 = calcHealingHoles0
+EXECUTABLE4 = calcHealingHoles3
+EXECUTABLE5 = calcHealingHoles4
+EXECUTABLE6 = ccdPlot
+EXECUTABLE7 = colours
+EXECUTABLE8 = decay
+EXECUTABLE9 = decaycompare
+EXECUTABLE10 = decaysolver
+EXECUTABLE11 = decaytau
+EXECUTABLE12 = dpa
+EXECUTABLE13 = funs
+EXECUTABLE14 = grab_deteriorating_corr
+EXECUTABLE15 = grab_deteriorating_corr_elecs
+EXECUTABLE16 = grab_deteriorating_corr_holes
+EXECUTABLE17 = grab_healing
+EXECUTABLE18 = grab_hystc2
+EXECUTABLE19 = grab_longtermc2
+EXECUTABLE20 = grab_longtermc2_lpf
+EXECUTABLE21 = grab_setoffc2
+EXECUTABLE22 = grab_voltincreasec2
+EXECUTABLE23 = grabpulses
+EXECUTABLE24 = grabsamplepulses
+EXECUTABLE25 = grabvalues
+EXECUTABLE26 = hyst_hyst
+EXECUTABLE27 = hyst_longterm
+EXECUTABLE28 = hysteresisLongterm
+EXECUTABLE29 = landaus
+EXECUTABLE30 = plotCorrDeteriorating
+EXECUTABLE31 = plotCorrHealing
+EXECUTABLE32 = plotgraphs
+EXECUTABLE33 = plotLifetimeElecs
+EXECUTABLE34 = plotLifetimeHoles
+EXECUTABLE35 = sampledist
+EXECUTABLE36 = scLifetimeElecs
+EXECUTABLE37 = scLifetimeHoles
+EXECUTABLE38 = templatedecaysolver
+EXECUTABLE39 = tempVar
+EXECUTABLE40 = wanaresultsincl
 BOOST = 
 BOOST_INCLUDES = 
 INCLUDES =  `root-config --cflags`
 LIBS =  `root-config --ldflags --glibs`
 OBJECTS = $(OBJPATH)/drawfuns.o $(OBJPATH)/waveform.o $(OBJPATH)/waveformana.o $(OBJPATH)/cluster.o $(OBJPATH)/event.o $(OBJPATH)/hit.o $(OBJPATH)/plane.o $(OBJPATH)/storageio.o $(OBJPATH)/track.o 
-OBJMAIN0 = $(OBJPATH)/calcHealingElecs1.o 
-OBJMAIN1 = $(OBJPATH)/calcHealingElecs2.o 
-OBJMAIN2 = $(OBJPATH)/calcHealingHoles0.o 
-OBJMAIN3 = $(OBJPATH)/calcHealingHoles3.o 
-OBJMAIN4 = $(OBJPATH)/calcHealingHoles4.o 
-OBJMAIN5 = $(OBJPATH)/ccdPlot.o 
-OBJMAIN6 = $(OBJPATH)/colours.o 
-OBJMAIN7 = $(OBJPATH)/decay.o 
-OBJMAIN8 = $(OBJPATH)/decaycompare.o 
-OBJMAIN9 = $(OBJPATH)/decaysolver.o 
-OBJMAIN10 = $(OBJPATH)/decaytau.o 
-OBJMAIN11 = $(OBJPATH)/dpa.o 
-OBJMAIN12 = $(OBJPATH)/funs.o 
-OBJMAIN13 = $(OBJPATH)/grab_healing.o 
-OBJMAIN14 = $(OBJPATH)/grab_hystc2.o 
-OBJMAIN15 = $(OBJPATH)/grab_longtermc2.o 
-OBJMAIN16 = $(OBJPATH)/grab_longtermc2_lpf.o 
-OBJMAIN17 = $(OBJPATH)/grab_setoffc2.o 
-OBJMAIN18 = $(OBJPATH)/grab_voltincreasec2.o 
-OBJMAIN19 = $(OBJPATH)/grabpulses.o 
-OBJMAIN20 = $(OBJPATH)/grabsamplepulses.o 
-OBJMAIN21 = $(OBJPATH)/grabvalues.o 
-OBJMAIN22 = $(OBJPATH)/hyst_hyst.o 
-OBJMAIN23 = $(OBJPATH)/hyst_longterm.o 
-OBJMAIN24 = $(OBJPATH)/hysteresisLongterm.o 
-OBJMAIN25 = $(OBJPATH)/landaus.o 
-OBJMAIN26 = $(OBJPATH)/plotCorrHealing.o 
-OBJMAIN27 = $(OBJPATH)/plotgraphs.o 
-OBJMAIN28 = $(OBJPATH)/plotLifetimeElecs.o 
-OBJMAIN29 = $(OBJPATH)/plotLifetimeHoles.o 
-OBJMAIN30 = $(OBJPATH)/sampledist.o 
-OBJMAIN31 = $(OBJPATH)/scLifetimeElecs.o 
-OBJMAIN32 = $(OBJPATH)/scLifetimeHoles.o 
-OBJMAIN33 = $(OBJPATH)/templatedecaysolver.o 
-OBJMAIN34 = $(OBJPATH)/tempVar.o 
-OBJMAIN35 = $(OBJPATH)/wanaresultsincl.o 
+OBJMAIN0 = $(OBJPATH)/calcDecreasingCorr.o 
+OBJMAIN1 = $(OBJPATH)/calcHealingElecs1.o 
+OBJMAIN2 = $(OBJPATH)/calcHealingElecs2.o 
+OBJMAIN3 = $(OBJPATH)/calcHealingHoles0.o 
+OBJMAIN4 = $(OBJPATH)/calcHealingHoles3.o 
+OBJMAIN5 = $(OBJPATH)/calcHealingHoles4.o 
+OBJMAIN6 = $(OBJPATH)/ccdPlot.o 
+OBJMAIN7 = $(OBJPATH)/colours.o 
+OBJMAIN8 = $(OBJPATH)/decay.o 
+OBJMAIN9 = $(OBJPATH)/decaycompare.o 
+OBJMAIN10 = $(OBJPATH)/decaysolver.o 
+OBJMAIN11 = $(OBJPATH)/decaytau.o 
+OBJMAIN12 = $(OBJPATH)/dpa.o 
+OBJMAIN13 = $(OBJPATH)/funs.o 
+OBJMAIN14 = $(OBJPATH)/grab_deteriorating_corr.o 
+OBJMAIN15 = $(OBJPATH)/grab_deteriorating_corr_elecs.o 
+OBJMAIN16 = $(OBJPATH)/grab_deteriorating_corr_holes.o 
+OBJMAIN17 = $(OBJPATH)/grab_healing.o 
+OBJMAIN18 = $(OBJPATH)/grab_hystc2.o 
+OBJMAIN19 = $(OBJPATH)/grab_longtermc2.o 
+OBJMAIN20 = $(OBJPATH)/grab_longtermc2_lpf.o 
+OBJMAIN21 = $(OBJPATH)/grab_setoffc2.o 
+OBJMAIN22 = $(OBJPATH)/grab_voltincreasec2.o 
+OBJMAIN23 = $(OBJPATH)/grabpulses.o 
+OBJMAIN24 = $(OBJPATH)/grabsamplepulses.o 
+OBJMAIN25 = $(OBJPATH)/grabvalues.o 
+OBJMAIN26 = $(OBJPATH)/hyst_hyst.o 
+OBJMAIN27 = $(OBJPATH)/hyst_longterm.o 
+OBJMAIN28 = $(OBJPATH)/hysteresisLongterm.o 
+OBJMAIN29 = $(OBJPATH)/landaus.o 
+OBJMAIN30 = $(OBJPATH)/plotCorrDeteriorating.o 
+OBJMAIN31 = $(OBJPATH)/plotCorrHealing.o 
+OBJMAIN32 = $(OBJPATH)/plotgraphs.o 
+OBJMAIN33 = $(OBJPATH)/plotLifetimeElecs.o 
+OBJMAIN34 = $(OBJPATH)/plotLifetimeHoles.o 
+OBJMAIN35 = $(OBJPATH)/sampledist.o 
+OBJMAIN36 = $(OBJPATH)/scLifetimeElecs.o 
+OBJMAIN37 = $(OBJPATH)/scLifetimeHoles.o 
+OBJMAIN38 = $(OBJPATH)/templatedecaysolver.o 
+OBJMAIN39 = $(OBJPATH)/tempVar.o 
+OBJMAIN40 = $(OBJPATH)/wanaresultsincl.o 
 
 all: exec
 
-exec: $(OBJECTS) $(OBJMAIN0) $(OBJMAIN1) $(OBJMAIN2) $(OBJMAIN3) $(OBJMAIN4) $(OBJMAIN5) $(OBJMAIN6) $(OBJMAIN7) $(OBJMAIN8) $(OBJMAIN9) $(OBJMAIN10) $(OBJMAIN11) $(OBJMAIN12) $(OBJMAIN13) $(OBJMAIN14) $(OBJMAIN15) $(OBJMAIN16) $(OBJMAIN17) $(OBJMAIN18) $(OBJMAIN19) $(OBJMAIN20) $(OBJMAIN21) $(OBJMAIN22) $(OBJMAIN23) $(OBJMAIN24) $(OBJMAIN25) $(OBJMAIN26) $(OBJMAIN27) $(OBJMAIN28) $(OBJMAIN29) $(OBJMAIN30) $(OBJMAIN31) $(OBJMAIN32) $(OBJMAIN33) $(OBJMAIN34) $(OBJMAIN35) 
+exec: $(OBJECTS) $(OBJMAIN0) $(OBJMAIN1) $(OBJMAIN2) $(OBJMAIN3) $(OBJMAIN4) $(OBJMAIN5) $(OBJMAIN6) $(OBJMAIN7) $(OBJMAIN8) $(OBJMAIN9) $(OBJMAIN10) $(OBJMAIN11) $(OBJMAIN12) $(OBJMAIN13) $(OBJMAIN14) $(OBJMAIN15) $(OBJMAIN16) $(OBJMAIN17) $(OBJMAIN18) $(OBJMAIN19) $(OBJMAIN20) $(OBJMAIN21) $(OBJMAIN22) $(OBJMAIN23) $(OBJMAIN24) $(OBJMAIN25) $(OBJMAIN26) $(OBJMAIN27) $(OBJMAIN28) $(OBJMAIN29) $(OBJMAIN30) $(OBJMAIN31) $(OBJMAIN32) $(OBJMAIN33) $(OBJMAIN34) $(OBJMAIN35) $(OBJMAIN36) $(OBJMAIN37) $(OBJMAIN38) $(OBJMAIN39) $(OBJMAIN40) 
 	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN0) -o $(EXECUTABLE0) 
 	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN1) -o $(EXECUTABLE1) 
 	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN2) -o $(EXECUTABLE2) 
@@ -120,6 +130,11 @@ exec: $(OBJECTS) $(OBJMAIN0) $(OBJMAIN1) $(OBJMAIN2) $(OBJMAIN3) $(OBJMAIN4) $(O
 	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN33) -o $(EXECUTABLE33) 
 	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN34) -o $(EXECUTABLE34) 
 	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN35) -o $(EXECUTABLE35) 
+	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN36) -o $(EXECUTABLE36) 
+	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN37) -o $(EXECUTABLE37) 
+	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN38) -o $(EXECUTABLE38) 
+	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN39) -o $(EXECUTABLE39) 
+	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN40) -o $(EXECUTABLE40) 
 
 
 $(OBJPATH)/drawfuns.o: $(SRCPATH)/drawfuns.cpp
@@ -148,6 +163,9 @@ $(OBJPATH)/storageio.o: $(SRCPATH)/converters/storage/storageio.cpp
 
 $(OBJPATH)/track.o: $(SRCPATH)/converters/storage/track.cpp
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/converters/storage/track.cpp -o $(OBJPATH)/track.o
+
+$(OBJPATH)/calcDecreasingCorr.o: $(SRCPATH)/calcDecreasingCorr.cxx
+	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/calcDecreasingCorr.cxx -o $(OBJPATH)/calcDecreasingCorr.o
 
 $(OBJPATH)/calcHealingElecs1.o: $(SRCPATH)/calcHealingElecs1.cxx
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/calcHealingElecs1.cxx -o $(OBJPATH)/calcHealingElecs1.o
@@ -188,6 +206,15 @@ $(OBJPATH)/dpa.o: $(SRCPATH)/dpa.cxx
 $(OBJPATH)/funs.o: $(SRCPATH)/funs.cxx
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/funs.cxx -o $(OBJPATH)/funs.o
 
+$(OBJPATH)/grab_deteriorating_corr.o: $(SRCPATH)/grab_deteriorating_corr.cxx
+	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/grab_deteriorating_corr.cxx -o $(OBJPATH)/grab_deteriorating_corr.o
+
+$(OBJPATH)/grab_deteriorating_corr_elecs.o: $(SRCPATH)/grab_deteriorating_corr_elecs.cxx
+	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/grab_deteriorating_corr_elecs.cxx -o $(OBJPATH)/grab_deteriorating_corr_elecs.o
+
+$(OBJPATH)/grab_deteriorating_corr_holes.o: $(SRCPATH)/grab_deteriorating_corr_holes.cxx
+	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/grab_deteriorating_corr_holes.cxx -o $(OBJPATH)/grab_deteriorating_corr_holes.o
+
 $(OBJPATH)/grab_healing.o: $(SRCPATH)/grab_healing.cxx
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/grab_healing.cxx -o $(OBJPATH)/grab_healing.o
 
@@ -227,6 +254,9 @@ $(OBJPATH)/hysteresisLongterm.o: $(SRCPATH)/hysteresisLongterm.cxx
 $(OBJPATH)/landaus.o: $(SRCPATH)/landaus.cxx
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/landaus.cxx -o $(OBJPATH)/landaus.o
 
+$(OBJPATH)/plotCorrDeteriorating.o: $(SRCPATH)/plotCorrDeteriorating.cxx
+	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/plotCorrDeteriorating.cxx -o $(OBJPATH)/plotCorrDeteriorating.o
+
 $(OBJPATH)/plotCorrHealing.o: $(SRCPATH)/plotCorrHealing.cxx
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/plotCorrHealing.cxx -o $(OBJPATH)/plotCorrHealing.o
 
@@ -258,4 +288,4 @@ $(OBJPATH)/wanaresultsincl.o: $(SRCPATH)/wanaresultsincl.cxx
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/wanaresultsincl.cxx -o $(OBJPATH)/wanaresultsincl.o
 
 clean:
-	 rm $(OBJPATH)/*.o calcHealingElecs1 calcHealingElecs2 calcHealingHoles0 calcHealingHoles3 calcHealingHoles4 ccdPlot colours decay decaycompare decaysolver decaytau dpa funs grab_healing grab_hystc2 grab_longtermc2 grab_longtermc2_lpf grab_setoffc2 grab_voltincreasec2 grabpulses grabsamplepulses grabvalues hyst_hyst hyst_longterm hysteresisLongterm landaus plotCorrHealing plotgraphs plotLifetimeElecs plotLifetimeHoles sampledist scLifetimeElecs scLifetimeHoles templatedecaysolver tempVar wanaresultsincl 
+	 rm $(OBJPATH)/*.o calcDecreasingCorr calcHealingElecs1 calcHealingElecs2 calcHealingHoles0 calcHealingHoles3 calcHealingHoles4 ccdPlot colours decay decaycompare decaysolver decaytau dpa funs grab_deteriorating_corr grab_deteriorating_corr_elecs grab_deteriorating_corr_holes grab_healing grab_hystc2 grab_longtermc2 grab_longtermc2_lpf grab_setoffc2 grab_voltincreasec2 grabpulses grabsamplepulses grabvalues hyst_hyst hyst_longterm hysteresisLongterm landaus plotCorrDeteriorating plotCorrHealing plotgraphs plotLifetimeElecs plotLifetimeHoles sampledist scLifetimeElecs scLifetimeHoles templatedecaysolver tempVar wanaresultsincl 

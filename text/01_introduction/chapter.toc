@@ -1,0 +1,10 @@
+\contentsline {chapter}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {1.1}Fundamental research}{3}
+\contentsline {subsection}{\numberline {1.1.1}CERN}{4}
+\contentsline {subsection}{\numberline {1.1.2}Particle accelerators}{5}
+\contentsline {subsection}{\numberline {1.1.3}The ATLAS experiment}{6}
+\contentsline {subsection}{\numberline {1.1.4}Atominstitut, Vienna}{7}
+\contentsline {subsection}{\numberline {1.1.5}n-ToF}{8}
+\contentsline {section}{\numberline {1.2}Particle detectors}{9}
+\contentsline {subsection}{\numberline {1.2.1}Semiconductor detectors}{10}
+\contentsline {subsection}{\numberline {1.2.2}Diamond sensors}{11}

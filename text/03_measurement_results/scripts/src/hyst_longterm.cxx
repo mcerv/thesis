@@ -35,6 +35,7 @@
 #define STAGE2 1
 #define STAGE3 2
 #define EMPTYPOINT -9999.9
+#define SCALING 1e3/10.6
 
 using namespace std;
 
@@ -65,6 +66,9 @@ int32_t main (void) {
 
   const int32_t nSamples = 5;
   const string sampleName[nSamples] = {"S37", "S79after", "S52after", "S79", "S52"};
+  const string sampleTitle[nSamples] = {"S37", "S79 1#times10^{14} #pi cm^{-2} primed",
+      "S52 3.63#times10^{14} #pi cm^{-2} primed", "S79 1#times10^{14} #pi cm^{-2}",
+      "S52 3.63#times10^{14} #pi cm^{-2}"};
   const string dir = "/Volumes/WINSTORAGE/Meas/Hysteresis/2015-08-03/longterm/";
 
   //Start graphs
@@ -133,8 +137,8 @@ int32_t main (void) {
         //      << " Error= " << amplSumError
         //      << endl;
         //write out
-        amplitudeAvg.at(sample).push_back(amplAvg); //the average of "averaging" hits
-        amplitudeAvgError.at(sample).push_back(amplSumError);
+        amplitudeAvg.at(sample).push_back(amplAvg*SCALING); //the average of "averaging" hits
+        amplitudeAvgError.at(sample).push_back(amplSumError*SCALING);
         timestampAvg.at(sample).push_back(timestamp.at(sample).at(i-averaging/2) );//averaged timestamp
         timestampAvgError.at(sample).push_back(0.0);
         amplSum = 0;
@@ -151,7 +155,7 @@ int32_t main (void) {
 
   TMultiGraph* mg = new TMultiGraph();
   TGraphErrors* gr[nSamples];
-  TLegend* leg = new TLegend(0.62,0.4,0.83,0.67);
+  TLegend* leg = new TLegend(0.46,0.4,0.83,0.67);
 
   for (int32_t sample=0; sample<nSamples; sample++) {
     gr[sample] = new TGraphErrors(amplitudeAvg.at(sample).size(), &timestampAvg.at(sample)[0], &amplitudeAvg.at(sample)[0],
@@ -171,17 +175,18 @@ int32_t main (void) {
       samName = sampleName[sample];
 
     ss << samName;
-    leg->AddEntry(gr[sample], ss.str().c_str(),  "LEP");
+    // leg->AddEntry(gr[sample], ss.str().c_str(),  "LEP");
+    leg->AddEntry(gr[sample], sampleTitle[sample].c_str(),  "LEP");
   }
   mg->Draw("ALP");
   dr->prettify(mg);
   mg->GetXaxis()->SetTitle("Time [s]");
-  mg->GetYaxis()->SetTitle("Amplitude [V]");
-  mg->GetYaxis()->SetRangeUser(0,0.7); //[V]
+  mg->GetYaxis()->SetTitle("Collected charge [fC]");
+  mg->GetYaxis()->SetRangeUser(0,0.7*SCALING); //[V]
   mg->GetXaxis()->SetRangeUser(0,1150); //[s]
   leg->Draw("same");
 
-  TLatex *tex1 = new TLatex(5,0.01,"MEASUREMENT");
+  TLatex *tex1 = new TLatex(5,0.01*SCALING,"MEASUREMENT");
   tex1->SetTextFont(132);
   tex1->Draw("same");
 

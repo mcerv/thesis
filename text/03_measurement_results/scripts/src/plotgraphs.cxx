@@ -213,6 +213,7 @@ int32_t main (void) {
         dr->prettify(gr[sampleNonIrrad][temp][volt]);
         gr[sample][temp][volt]->SetLineColor(dr->clrTemp[clrCnt+1]);
         gr[sampleNonIrrad][temp][volt]->SetLineColor(dr->clrTemp[clrCnt]);
+        gr[sampleNonIrrad][temp][volt]->SetLineWidth(2);
         //clrCnt++;
         mg2[sample][temp][i]->Add(gr[sample][temp][volt],"l");
         mg2[sample][temp][i]->Add(gr[sampleNonIrrad][temp][volt],"l");
