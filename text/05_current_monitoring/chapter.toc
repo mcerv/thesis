@@ -3,22 +3,24 @@
 \contentsline {section}{\numberline {1.2}Requirements}{3}
 \contentsline {section}{\numberline {1.3}Device specifications}{4}
 \contentsline {section}{\numberline {1.4}Pulse parameters}{4}
-\contentsline {section}{\numberline {1.5}Applications}{6}
-\contentsline {section}{\numberline {1.6}Description of the firmware}{7}
+\contentsline {section}{\numberline {1.5}Applications}{5}
+\contentsline {section}{\numberline {1.6}Description of the firmware}{6}
 \contentsline {subsection}{\numberline {1.6.1}Analysis module}{7}
-\contentsline {subsection}{\numberline {1.6.2}Vector cleaning for area and width measurements}{9}
-\contentsline {subsubsection}{Vector cleaning}{10}
+\contentsline {subsection}{\numberline {1.6.2}Vector cleaning for area and width measurements}{8}
+\contentsline {subsubsection}{Vector cleaning}{9}
 \contentsline {subsubsection}{Algorithm}{11}
-\contentsline {subsection}{\numberline {1.6.3}Width measurement}{12}
-\contentsline {subsection}{\numberline {1.6.4}Area measurement}{12}
-\contentsline {section}{\numberline {1.7}Performance results}{13}
-\contentsline {subsection}{\numberline {1.7.1}Trigger rate}{13}
-\contentsline {subsection}{\numberline {1.7.2}Linearity and stability}{13}
-\contentsline {subsection}{\numberline {1.7.3}Comparison between the charge- and current-sensitive spectroscopy}{13}
-\contentsline {subsection}{\numberline {1.7.4}Pulse identification test}{15}
-\contentsline {section}{\numberline {1.8}Source calibration}{16}
-\contentsline {section}{\numberline {1.9}Neutron reactor measurements}{26}
-\contentsline {subsection}{\numberline {1.9.1}Thermal neutron spectroscopy - TRIGA reactor}{26}
-\contentsline {subsubsection}{Measurements}{27}
-\contentsline {subsubsection}{Results}{27}
-\contentsline {subsection}{\numberline {1.9.2}Fast neutron spectroscopy - CASTOR reactor}{30}
+\contentsline {section}{\numberline {1.7}Control and data interface}{11}
+\contentsline {subsection}{\numberline {1.7.1}Software}{11}
+\contentsline {subsection}{\numberline {1.7.2}Data readout}{11}
+\contentsline {section}{\numberline {1.8}Performance results}{13}
+\contentsline {subsection}{\numberline {1.8.1}Comparison between the charge- and current-sensitive spectroscopy}{14}
+\contentsline {section}{\numberline {1.9}Source calibration}{14}
+\contentsline {subsection}{\numberline {1.9.1}Source measurements - scatter plots}{18}
+\contentsline {subsection}{\numberline {1.9.2}Discussion}{26}
+\contentsline {subsection}{\numberline {1.9.3}Space charge build-up}{27}
+\contentsline {section}{\numberline {1.10}Neutron reactor measurements}{29}
+\contentsline {subsection}{\numberline {1.10.1}Thermal neutron spectroscopy - TRIGA reactor}{29}
+\contentsline {subsubsection}{Measurements}{30}
+\contentsline {subsubsection}{Results}{30}
+\contentsline {subsection}{\numberline {1.10.2}Fast neutron spectroscopy - CROCUS reactor}{30}
+\contentsline {section}{\numberline {1.11}Conclusion}{33}

@@ -5,9 +5,9 @@
 \contentsline {subsection}{\numberline {1.1.2}Diamond samples}{5}
 \contentsline {subsection}{\numberline {1.1.3}Readout devices}{6}
 \contentsline {subsection}{\numberline {1.1.4}Setup for the efficiency study using $\upbeta $ particles}{6}
-\contentsline {subsection}{\numberline {1.1.5}$\upalpha $-TCT setup}{7}
+\contentsline {subsection}{\numberline {1.1.5}Room temperature $\upalpha $-TCT setup}{7}
 \contentsline {subsection}{\numberline {1.1.6}Cryogenic $\upalpha $-TCT setup}{7}
-\contentsline {section}{\numberline {1.2}Particle and photon pulses and spectra}{9}
+\contentsline {section}{\numberline {1.2}Charged particle pulses and spectra}{9}
 \contentsline {subsection}{\numberline {1.2.1}Noise limitations}{9}
 \contentsline {section}{\numberline {1.3}Radiation limitations}{10}
 \contentsline {subsection}{\numberline {1.3.1}Quantifying radiation damage in diamonds}{11}
@@ -21,5 +21,5 @@
 \contentsline {subsection}{\numberline {1.4.1}Temperature-variant $\upalpha $-TCT before irradiation}{20}
 \contentsline {subsection}{\numberline {1.4.2}Temperature-variant $\upalpha $-TCT after irradiation}{21}
 \contentsline {subsubsection}{Collected charge as a function of temperature}{23}
-\contentsline {subsubsection}{Charge trapping}{24}
-\contentsline {section}{\numberline {1.5}Conclusion}{27}
+\contentsline {subsubsection}{Charge trapping}{25}
+\contentsline {section}{\numberline {1.5}Conclusion}{28}
