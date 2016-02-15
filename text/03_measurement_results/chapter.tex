@@ -302,12 +302,12 @@ The resulting CCD for the three measured samples at bias voltages ranging from 0
 
 % CCD against HV 
 \begin{figure}[!t]
-%\centering
+\centering
 \begin{tabular}{cccc}
-\subfloat[CCD for S37, S79 and S52]{\includegraphics[width=0.45\textwidth]{scripts/plots/ccd} \label{fig:ccd}} &
-\subfloat[Comparing the data points obtained in a test beam against the RD42 data]{\includegraphics[width=0.45\textwidth]{scripts/plots/radfactor}  \label{fig:radfactor}}
+\subfloat[CCD for S37, S79 and S52]{\includegraphics[width=0.80\textwidth]{scripts/plots/ccd} \label{fig:ccd}} \\
+\subfloat[Comparing the data points obtained in a test beam against the RD42 data]{\includegraphics[width=0.80\textwidth]{scripts/plots/radfactor}  \label{fig:radfactor}}
 \end{tabular}
-\caption{The charge collection distance at 500~V bias voltage for the three diamond samples was compared to the RD42 data for pion irradiation. The data points are about 5--15~\% lower than expected from the RD42 data.}
+\caption{The charge collection distance at 500~V bias voltage for the three diamond samples was compared to the RD42 data for pion irradiation. The data points are about 5--15~\% lower than expected from the RD42 data~\cite{}.}
 \end{figure}
 
 \subsubsection{Irradiation damage factor}
@@ -323,49 +323,61 @@ The irradiation damage factor $k$ is a way to quantify irradiation damage of a s
 \lambda = \frac{\lambda_\mathrm{0}}{k_{\lambda} \lambda_0 \Phi + 1}
 \end{equation} 
 
-The data points with the maximum CCD obtained in the test beam measurements were plotted against radiation dose received (see figure~\ref{fig:radfactor}). Equation~\ref{eq:radfactor1} was fitted to the data points and a damage factor $k_{\mathrm{\lambda}}=(3.0\pm1.0)\times10^{-18}~\upmu$m$^{-1}$~cm~$^{-2}$ was obtained. This value is for a factor of two higher than the damage factor obtained by RD42. A possible cause is that the irradiated samples did not yet have a full charge collection at 1.5~V~$\upmu$m$^{-1}$. Also, with only two samples measured, the statistical uncertainty was high. Nevertheless, it can be concluded that the 300~MeV pions damage the diamond bulk more than the 24~GeV protons.
+The data points with the maximum CCD obtained in the test beam measurements are plotted against radiation dose received (see figure~\ref{fig:radfactor}). Equation~\ref{eq:radfactor1} is fitted to the data points and a damage factor $k_{\mathrm{\lambda}}=(3.0\pm1.0)\times10^{-18}~\upmu$m$^{-1}$~cm~$^{-2}$ was obtained. This value is for a factor of two higher than the damage factor obtained by RD42. %The irradiated samples do not yet have a full charge collection at 1.0~V~$\upmu$m$^{-1}$. 
+Also, with only two samples measured, the statistical uncertainty is high. Nevertheless, it can be concluded that the 300~MeV pions damage the diamond bulk more than the 24~GeV protons.
 
 
 
 
 \subsection{Long-term measurement stability}
-An important requirement for particle detectors is stable performance over long periods of time. For instance, the charge collection for a defined type and quantity of radiation must not change over time or has to change in a predicted way. Diamonds are stable as long as their environment and their operating point does not change significantly. The stability of diamond detectors depends on many external factors. The aim is to study the behaviour of diamond under controlled conditions, with the goal to understand its limitations. One of these limitations is for sure the received radiation dose. It might affect the long-term stability of the sensor during operation. 
+An important requirement for particle detectors is a stable performance over long periods of time. For instance, the charge collection for a defined radiation type and quantity must not change over time or has to change in a predicted way. Diamonds are stable as long as their environment and their operating point does not change significantly. The stability of diamond detectors depends on many factors (material purity, polishing process, electrode material, irradiation damage etc.). The aim is to study the behaviour of diamond under controlled conditions, with the goal to understand its limitations. One of these limitations is for sure the received radiation dose as it can affect the long-term stability of the sensor during operation. 
 
-The three diamond samples (S37, S79 and S52) were exposed to two different types of ionising radiation for a longer period to see if their behaviour changes over time. Two parameters were observed in particular: 1) charge collection of $\upbeta$ particles and 2) charge collection and ionisation profile of $\upalpha$ particles. The results showed in both cases that priming plays an important role in diamond measurement stability. The $\upbeta$ particles have a ``healing'' effect on the diamond; MIP detection is therefore rather stable in the long run, despite the fact that the sensors had been degraded by means of irradiation. Alpha particles, on the other hand, deteriorate the measurement, probably by introducing space charge into the sensor bulk. 
+The three diamond samples (S37, S79 and S52) have been exposed to two different types of ionising radiation for a longer period to see if their behaviour changes over time. Two parameters have been observed in particular: 
+\begin{enumerate}
+\item Charge collection of $\upbeta$ particles and 
+\item Charge collection and ionisation profile of $\upalpha$ particles.
+\end{enumerate}
+The results in this and in the next section will show that, in both cases, priming plays an important role in improving the diamond measurement stability. 
+%NOTE I can use this part for conclusion
+%The $\upbeta$ particles have a ``healing'' effect on the diamond; MIP detection is therefore rather stable in the long run, despite the fact that the sensors had been degraded by means of irradiation. Alpha particles, on the other hand, deteriorate the measurement, probably by introducing space charge into the sensor bulk. 
 
 \subsubsection{$\upbeta$ long-term stability}
-The samples were intentionally not primed before the measurements took place. The same initial conditions are usually found in HEP experiments. The measurement setup consisted of a diamond sample with the Cx spectroscopic amplifier, a silicon diode with a C6 amplifier for a trigger and a $^{90}$Sr source on top. A particle emitted by the source traversed the sensor bulk and hit the silicon diode, triggering the analogue signal readout. The source was left on the top for the course of the experiment. The measurements, however, took place at discrete times. For every data point, approximately $10^4$ triggers were recorded. The offline analysis of the recorded signal pulse amplitudes yielded a landau distribution for every data point. The resulting graph of charge collection over time (see figure~\ref{fig:ccincrease}) shows that the charge collection efficiency improves over time when the diamond sensor is primed with a $\upbeta$ source. This is especially evident in the case of the two irradiated samples. S79 achieves close to full efficiency whereas S52 reaches about 50~\%. Both increases are significant. After approximately 30~minutes the signal stabilises. As expected, the signal of the non-irradiated S37 did not change with time -- this pure sCVD diamond sample had the maximum collection distance from the start.
+The diamond samples have undergone a long-term stability test using $\upbeta$ radiation. This has been done using a $^{90}$Sr source emitting $\sim$2~MeV electrons at a rate of approximately $10^4$~e$^-$~cm$^{-2}$. To simulate the initial conditions in HEP experiments, the sensors must not be primed before starting the measurements. The measurement setup consists of a diamond sample (S37, S52 or S79) with the Cx spectroscopic amplifier, a silicon diode with a C6 amplifier for a trigger and a $^{90}$Sr source on top. A particle emitted by the source traverses the sensor bulk and hits the silicon diode, triggering the analogue signal readout. The source is left on the top for the course of the experiment. The measurements, however, are taken at discrete times. For every data point, approximately $10^4$ triggers are recorded. The offline analysis of the recorded signal pulse amplitudes yields a landau distribution for every data point. The most probable value (MPV) of the distribution is proportional to the collected charge by the diamond sensor. The resulting graph of charge collection over time (see figure~\ref{fig:ccincrease}) shows that the charge collection efficiency improves when the diamond sensor is primed with a $\upbeta$ source. This is especially evident in the case of the two irradiated samples. S79 achieves close to a full efficiency whereas S52 reaches about 50~\%. Both increases are significant. At a received dose of approximately 4$\times10^6$~particles the signal stabilises. As expected, the signal of the non-irradiated S37 does not change with time -- this pure sCVD diamond sample has the maximum collection distance from the start of the measurement.
 
 It should be noted that the $\sim$2.28~MeV electrons emitted by this source are not MIPs; their charge deposition is higher than that of an electron MIP, according to the Bethe-Bloch distribution~\cite{}. Nevertheless, for the purpose of these measurements this energy was adequate since only the relative change in charge collection was of our interest.
 
-To sum up, diamond is a good choice for $\upbeta$ radiation detection. Even if damaged by radiation, it reaches a stable charge collection in the order of an hour. The efficiency decreases with received radiation dose, but the decrease can be accounted for if the damage factor and the rate energy of the particles are known. $\upgamma$ radiation has a similar impact on the diamond as the $\upbeta$. The impinging photons, if they interact with the diamond, prime the bulk, causing the increase in charge collection efficiency. The difference, however, is in the interaction probability (cross section), which is several orders of magnitude lower for gammas.
+To sum up, diamond is a good choice for $\upbeta$ radiation detection. Even if damaged by radiation, it reaches a stable charge collection at a received dose of $\sim$4$\times10^6$~MIP particles. The efficiency decreases with a high irradiation dose (effects visible above 10$^{12}$~MIP~cm$^{-2}$). However, the decrease can be accounted for if the damage factor and the rate and energy of the particles are known. $\upgamma$ radiation has a similar impact on the diamond as the $\upbeta$ because the ionisation mechanism is the same. The impinging photons, if they interact with the diamond, prime the bulk, causing the increase in charge collection efficiency. The difference, however, is that the interaction probability (cross section) is lower for gammas~\cite{}.
 
 %%longterm pumping plot
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{plots/ccdpriming}
-\caption{Increase of charge collection over time due to priming with the $^{90}$Sr radioactive source}
+\caption{Increase of charge collection over time due to priming with the $^{90}$Sr radioactive source. The bias voltage for this measurement is 1~V/$\upmu$m.}
 \label{fig:ccincrease}
 \end{center}
 \end{figure}
 
 
 \subsubsection{$\upalpha$ long-term stability}
-This part discusses the stability of irradiated diamond sensors during $\upalpha$ measurements. It is safe to assume that they will behave differently than when subject to $\beta$ radiation. This is due to the point-like charge carrier creation when an $\upalpha$ particle impinges the bulk. The energy is approximately 20 times higher than the most probable value of a MIP; deposited in a small volume, it will behave differently to the track-like energy deposition of MIPs. In addition, carriers of only one polarity drift through the sensor while the others almost instantly recombine with the adjacent electrode. Taking into account that the diamond bulk has been damaged by irradiation, these two phenomena might have an effect on the operation of the detector on a macro scale.
+This part discusses the stability of irradiated diamond sensors during $\upalpha$ measurements. An $^{241}$Am source is used, emitting $\upalpha$ particles with a mean energy of 5.5~MeV. It is safe to assume that they will behave differently than when subject to $\beta$ radiation. This is due to the point-like charge carrier creation when an $\upalpha$ particle penetrates the bulk and stops at a depth of $\sim$14~$\upmu$m (for a 5.5~MeV particle). The deposited energy produces $\frac{5.5~MeV}{13.6~eV} = 4\times10^5$ e-h pairs. Compared to a MIP, which produces an MPV of $500~\upmu m~\times~36~e-h~\upmu m^{-1} = 18\times10^3$ e-h pairs in a 500~$\upmu$m, the collected charge is for a factor of 22 higher. In addition, the energy is deposited in a small volume -- 14~$\upmu$m in depth and $\sim$20~nm radially~\cite{}. This dense distribution of charge carriers affects their behaviour at the start of the drift. Furthermore, carriers of only one polarity drift through the sensor while those of the opposite polarity almost instantly recombine with the adjacent electrode. Taking into account that the diamond bulk has been damaged by irradiation, these two phenomena might have an effect on the operation of the detector on a macro scale.
 
-The measurement setup consisted of a PCB carrier for a diamond with a fitted $^{241}$Am source and a vacuum chamber. The carrier was placed into the chamber, which was then evacuated. t acted as shielding for external noise pickup and ensured that the $\upalpha$ particles didn't lose energy traveling through air. An SMA feedthrough ensured the electrical connection to the outside. The samples were measured before and after priming, at both polarities, to compare the behaviour of both electrons and holes as charge carriers. The scope of the measurements was to observe the changes in charge collection efficiency and/or in the pulse shapes. 
+%The measurement setup consisted of a PCB carrier for a diamond with a fitted $^{241}$Am source and a vacuum chamber. The carrier was placed into the chamber, which was then evacuated. t acted as shielding for external noise pickup and ensured that the $\upalpha$ particles didn't lose energy traveling through air. An SMA feedthrough ensured the electrical connection to the outside. The samples were measured before and after priming, at both polarities, to compare the behaviour of both electrons and holes as charge carriers. The scope of the measurements was to observe the changes in charge collection efficiency and/or in the pulse shapes. 
 
-The first test was carried out using the Cx spectroscopic amplifier. The bias voltage of the samples was set to +500~V and the signals from the diamond were measured for $\sim$15~minutes. Figure~\ref{fig:longtermcx} shows the results of these measurements. The collected charge for the non-irradiated sample was stable with time. It was expected that the irradiated samples will have a lower charge collection efficiency than the non-irradiated sample. However, their initial efficiency suddenly dropped after a certain period of time. The initial efficiency was improved after priming, but eventually the it deteriorated again. In addition, the spread of measured energies increased significantly. Also, the particle counting rate decreased with the decreased efficiency.
-
+The first test has been carried out using the Cx spectroscopic amplifier, with the bias voltage of the samples set to +500~V. Figure~\ref{fig:longtermcx} shows the results of 6500 recorded hits at a rate of $\sim$7~particles per second. The collected charge for the non-irradiated sample is stable with time. It is expected that the irradiated samples will have a lower charge collection efficiency than the non-irradiated sample. However, their initial efficiency suddenly drops after a certain period of time. The initial efficiency is improved after priming with $\upbeta$ particles, but eventually it deteriorates again. In addition, the spread of measured energies increases significantly. Finally, the particle counting rate decreases with the decreased efficiency. 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.6\textwidth]{scripts/plots/amplvstimecx}
+\includegraphics[width=0.8\textwidth]{scripts/plots/amplvstimecx}
 \caption{Comparison of collected charge with time for non-irradiated and irradiated diamond samples.}
 \label{fig:longtermcx}
 \end{center}
 \end{figure}
 
-The next step was to observe the behaviour of the current pulse shapes with time using a C2 current amplifier. The shape of the pulse holds more information about the charge carrier properties in the sensor than solely the value of the integrated charge. This time only the primed S79 sample was tested. Both hole and electron collection were observed to determine whether they behave differently or not. The sample was measured long enough for the pulse shapes to start changing. The data in figures~\ref{fig:lifetimeelecsholes} show that the initially stable pulses start deteriorating -- suddenly there are several different shapes, some still the same as at the beginning while the others with almost zero amplitude. These data are difficult to interpret. Nevertheless, the idea is that some charges get trapped in the charge traps in the bulk for a long time, building up regions of space charge. Since only one charge flavour is drifting through the bulk whereas the other is quickly recombined, this already determines the imbalance in spatial distribution of trapped charges. The built up space charge affects the electric field, making it non-uniform. The non-uniform field in turn affects the drifting carriers, slowing them down or speeding them up, depending on the field gradient. Since the movement of the carriers is inducing  the electric current, the field gradient can be observed in the signal. Unfortunately the effects are very convoluted, probably due to the entry point of the $\upalpha$ particle. 
+To investigate this sudden drop in efficiency, the current pulse shapes using a C2 current amplifier have to be observed (see figure~\ref{fig:lifetimeelecsholes}). The shape of the pulse holds more information about the charge carrier properties in the sensor than solely the value of the integrated charge. This time only the primed S79 sample has been tested. Both hole and electron collection are observed to determine whether they behave differently or not. The sample has been measured long enough for the pulse shapes to start changing. The data in figures~\ref{fig:lifetimeelecsholes} show that the initially stable pulses start deteriorating -- suddenly several different shapes start appearing, some still very similar to those from the beginning while the others with almost zero amplitude. 
+
+Some charges get stopped in the charge traps in the bulk for a long time, building up regions of space charge. 
+%DISCUSSION!!!
+%Since only one charge flavour is drifting through the bulk whereas the other is quickly recombined, this already determines the imbalance in spatial distribution of trapped charges. 
+The built up space charge affects the electric field, making it non-uniform. The non-uniform field in turn affects the drifting carriers, slowing them down or speeding them up, depending on the field gradient. Since the movement of the carriers is inducing  the electric current, the field gradient can be observed in the signal. 
 
 \begin{figure}[!t]
 %\centering
@@ -381,18 +393,22 @@ The next step was to observe the behaviour of the current pulse shapes with time
 \label{fig:lifetimeelecsholes}
 \end{figure}
 
-At the beginning of every run, 60 reference pulses of the initial pulse were taken and plotted overlapped into a 2D histogram. An average pulse was extracted from this 2D distribution. Then a reference correlation between the reference pulses and the averaged pulse $\sigma_{\mathrm{ref}}$ was calculated. Subsequent data points also consisted of a set of 60 pulses. At every data point the correlation with the initial averaged pulse $\sigma$ was calculated. From the ratio between the initial correlation $\sigma_{\mathrm{ref}}$ and discrete correlation values $\sigma$ in time, the shape correlation $Corr_{\mathrm{shape}}$ was calculated:
-\begin{equation}
-\label{eq:correlation}
-Corr_{\mathrm{shape}} (t) = \frac{\sigma_{\mathrm{ref}}}{\sigma} = \frac { \sum_\mathrm{x} \sum_\mathrm{y} w_{\mathrm{ref}}\cdot ( y_{\mathrm{avg}} - y_{\mathrm{ref}})^2 } { \sum_\mathrm{x} \sum_\mathrm{y} w\cdot ( y_{\mathrm{avg}} - y)^2 },
-\end{equation} 
-where $y_{\mathrm{avg}}$ is the amplitude of the current averaged pulse at time $x$, $y_{\mathrm{ref}}$ is the amplitude of the initial averaged pulse at time $x$, $y$ is the amplitude of the superimposed pulses in the 2D histogram and $w$ and $w_{\mathrm{ref}}$ are weights for the superimposed pulses for the current data point and the initial data point.
+The second test with the C2 current amplifier has been carried out as follows: At the beginning of the test when the diamond is still operating stably, 60 pulses are recorded. An average pulse is calculated. This is a reference pulse for the subsequent measurement points.
+% and plotted overlapped into a 2D histogram. An average pulse is extracted from this 2D distribution. 
+Then an RMS of the single pulses with respect to the reference pulse is calculated and the values are summed together ($\sigma_\mathrm{ref}$). 
 
-Figure~\ref{fig:longtermc2corr} shows the resulting time-resolved shape correlations. From the data obtained it can be concluded initial pulse shape quickly starts deteriorating. In fact, the deterioration of the shape correlation follows an exponential decay function, which was fitted to the data. The resulting decay constants for electrons and holes are $\tau_{\mathrm{corr_e}}=(631\pm20)$~ns$^{-1}$ and $\tau_{\mathrm{corr_h}}=(471\pm21)$~ns$^{-1}$. The electrons seem to retain the initial shape for longer. The deteriorated shapes also seem to be for a factor of 2 better than those of the holes. 
+All the subsequent data points also consist of a set of 60 pulses. At every data point the summation of the RMS values of the individual pulses with respect to the initial averaged pulse is calculated ($\sigma$). The ratio between the initial $\sigma_{\mathrm{ref}}$ and discrete values $\sigma$ gives a measure of change of the pulse shape with respect to the reference pulse at the start of the measurement.
+%, the shape correlation $Corr_{\mathrm{shape}}$ is calculated:
+%\begin{equation}
+%\label{eq:correlation}
+%Corr_{\mathrm{shape}} (t) = \frac{\sigma_{\mathrm{ref}}}{\sigma} = \frac { \sum_\mathrm{x} \sum_\mathrm{y} w_{\mathrm{ref}}\cdot ( y_{\mathrm{avg}} - y_{\mathrm{ref}})^2 } { \sum_\mathrm{x} \sum_\mathrm{y} w\cdot ( y_{\mathrm{avg}} - y)^2 },
+%\end{equation} 
+%where $y_{\mathrm{avg}}$ is the amplitude of the current averaged pulse at time $x$, $y_{\mathrm{ref}}$ is the amplitude of the initial averaged pulse at time $x$, $y$ is the amplitude of the superimposed pulses in the 2D histogram and $w$ and $w_{\mathrm{ref}}$ are weights for the superimposed pulses for the current data point and the initial data point.
+Figure~\ref{fig:longtermc2corr} shows the ratio $\frac{\sigma_\mathrm{ref} }{\sigma(\alpha~dose)}$. From the data obtained it can be concluded that initial pulse shape quickly starts deteriorating. In fact, the deterioration of the shape correlation follows an exponential decay function, which can be fitted to the data. The resulting decay constants for electrons and holes are $\tau_{\mathrm{corr_e}}=(631\pm20)$~s$^{-1}$ and $\tau_{\mathrm{corr_h}}=(471\pm21)$~s$^{-1}$. The electrons seem to retain the initial shape for longer. The deteriorated shapes also seem to be for a factor of 2 better than those of the holes. 
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.6\textwidth]{scripts/plots/plotLifetime/corrlifetime}
+\includegraphics[width=0.8\textwidth]{scripts/plots/plotLifetime/corrlifetime}
 \caption{Deterioration of the pulse correlation with time }
 \label{fig:longtermc2corr}
 \end{center}
@@ -404,9 +420,9 @@ Finally, an effort has made to find a way for the pulse shapes to return to thei
 \begin{enumerate}[itemsep=0.1\baselineskip]
 \item Removing the source and leaving the bias voltage switched on, 
 \item Removing the source and switching the bias voltage off, 
-\item Priming with $\upgamma$ without bias voltage, 
-\item Priming with $\upbeta$ with bias voltage switched on and 
-\item Priming with $\upbeta$ without bias voltage. 
+\item Priming with $\upgamma$ at a rate of 400~s$^{-1}$cm$^{-1}$ without applied bias voltage, 
+\item Priming with $\upbeta$ at a rate of 1000~s$^{-1}$cm$^{-1}$ with applied bias voltage and 
+\item Priming with $\upbeta$ at a rate of 1000~s$^{-1}$cm$^{-1}$ without applied bias voltage. 
 \end{enumerate}
 The diamond sample S79 was first primed using a $^{90}$Sr source for about one hour. Then the bias voltage was switched on and an $^{241}$Am source was put on top. The pulses produced by the impinging $\upalpha$ particles had a proper rectangular pulse at the beginning, but then started changing in an erratic way, as described in the text above. After approximately 30~minutes, one of the methods was tested. When a ``healing'' procedure was started, a set of 60~pulses was taken at irregular points of time to observe the change in the pulse shape and to assess the quality of the ``healing'' procedure. Then the bias voltage was switched off and the sample was primed again to reset its state before starting with the next run. 
 
@@ -595,12 +611,13 @@ where $\tau_\mathrm{0}$ is the lifetime for a non-irradiated sample (real lifeti
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[Carrier lifetime as a function of temperature]{\includegraphics[width=0.45\textwidth]{scripts/plots/taunew/lifetimevstemp} \label{fig:lifetimevstemp}} &
-\subfloat[Carrier lifetime averaged over all temperatures as a function of $\pi$ irradiation dose]{\includegraphics[width=0.45\textwidth]{scripts/plots/taunew/avglifetime}  \label{fig:lifetimevsdose}}
+\subfloat[Carrier lifetime as a function of temperature]
+{\includegraphics[width=0.8\textwidth]{scripts/plots/taunew/lifetimevstemp} \label{fig:lifetimevstemp}} \\
+\subfloat[Carrier lifetime averaged over all temperatures as a function of $\pi$ irradiation dose]{\includegraphics[width=0.8\textwidth]{scripts/plots/taunew/avglifetime}  \label{fig:lifetimevsdose}}
 \end{tabular}
 \caption{Charge carrier lifetime decreases with irradiation, but is stable across the range of temperatures between 4~K -- 75~K and 150~K -- 295~K.}
+\label{fig:carrlifetime}
 \end{figure}
-
 
 
 
