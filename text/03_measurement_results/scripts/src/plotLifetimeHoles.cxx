@@ -227,7 +227,7 @@ int32_t main (void) {
         // texEH1sam[num]->SetTextFont(22);
 
         // leg[temp][toPlot[num]]->Draw("same");
-        tex1[num]->Draw("same");
+        // tex1[num]->Draw("same");
         texEH1[num]->Draw("same");
         texEH1sam[num]->Draw("same");
         cout << " num " << toPlot[num] << endl;

@@ -43,7 +43,7 @@ int32_t main (void) {
   TFile* f;
   double samplingTime = 0.1; //ns
   //set the input data
-  const int nSamples = 4;
+  const int nSamples = 5;
   const int nVoltages = 16;
   // const int nVoltages = 14;
   const int nTemp = 18;
@@ -54,7 +54,7 @@ int32_t main (void) {
   double voltage[nVoltages] = {700.0, 600.0, 500.0, 400.0, 300.0, 200.0, 150.0, 100.0,
                         -100.0, -150.0, -200.0, -300.0, -400.0, -500.0, -600.0, -700.0};
   // double voltage[nVoltages] = {500.0, 400.0, -400.0, -500.0};
-  string sampleName[nSamples] = {"S52","S79","S37","S52_3-63e14"};
+  string sampleName[nSamples] = {"S52","S79", "S37" , "S52_3-63e14", "S79_1e14"};
   // string sampleName[nSamples] = {"S79_1e14","S52_3-63e14","S37"};
   // string sampleName[nSamples] = {"S52", "S52_3-63e14"};
   // string sampleName[nSamples] = {"S79_1e14"};
@@ -123,36 +123,36 @@ int32_t main (void) {
           missingprof[sample][temp][volt] = true;
           continue;
         }
-        if (!((TParameter<float>*)f->Get("IntCorr"))->GetVal() ) {
-          cout<<" File " << ss.str().c_str() << " doesn't include IntCorr!" << endl;
-          missingprof[sample][temp][volt] = true;
-          continue;
-        }
-        if (!((TParameter<float>*)f->Get("newS_x"))->GetVal() ) {
-          cout<<" File " << ss.str().c_str() << " doesn't include newS_x!" << endl;
-          missingprof[sample][temp][volt] = true;
-          continue;
-        }
-        if (!((TParameter<float>*)f->Get("enewS_x"))->GetVal() ) {
-          cout<<" File " << ss.str().c_str() << " doesn't include enewS_x!" << endl;
-          missingprof[sample][temp][volt] = true;
-          continue;
-        }
-        if (!((TParameter<float>*)f->Get("newE_x"))->GetVal() ) {
-          cout<<" File " << ss.str().c_str() << " doesn't include newE_x!" << endl;
-          missingprof[sample][temp][volt] = true;
-          continue;
-        }
-        if (!((TParameter<float>*)f->Get("enewE_x"))->GetVal() ) {
-          cout<<" File " << ss.str().c_str() << " doesn't include enewE_x!" << endl;
-          missingprof[sample][temp][volt] = true;
-          continue;
-        }
-        S_x[sample][temp][volt] = (double) ((TParameter<float>*)f->Get("newS_x"))->GetVal();
-	      E_x[sample][temp][volt] = (double)((TParameter<float>*)f->Get("newE_x"))->GetVal();
-	      S_xe[sample][temp][volt] = (double)((TParameter<float>*)f->Get("enewS_x"))->GetVal();
-	      E_xe[sample][temp][volt] = (double)((TParameter<float>*)f->Get("enewE_x"))->GetVal();
-	      charge[sample][temp][volt] = (double)((TParameter<float>*)f->Get("IntCorr"))->GetVal()*Qconstant;
+        // if (!((TParameter<float>*)f->Get("IntCorr"))->GetVal() ) {
+        //   cout<<" File " << ss.str().c_str() << " doesn't include IntCorr!" << endl;
+        //   missingprof[sample][temp][volt] = true;
+        //   continue;
+        // }
+        // if (!((TParameter<float>*)f->Get("newS_x"))->GetVal() ) {
+        //   cout<<" File " << ss.str().c_str() << " doesn't include newS_x!" << endl;
+        //   missingprof[sample][temp][volt] = true;
+        //   continue;
+        // }
+        // if (!((TParameter<float>*)f->Get("enewS_x"))->GetVal() ) {
+        //   cout<<" File " << ss.str().c_str() << " doesn't include enewS_x!" << endl;
+        //   missingprof[sample][temp][volt] = true;
+        //   continue;
+        // }
+        // if (!((TParameter<float>*)f->Get("newE_x"))->GetVal() ) {
+        //   cout<<" File " << ss.str().c_str() << " doesn't include newE_x!" << endl;
+        //   missingprof[sample][temp][volt] = true;
+        //   continue;
+        // }
+        // if (!((TParameter<float>*)f->Get("enewE_x"))->GetVal() ) {
+        //   cout<<" File " << ss.str().c_str() << " doesn't include enewE_x!" << endl;
+        //   missingprof[sample][temp][volt] = true;
+        //   continue;
+        // }
+        // S_x[sample][temp][volt] = (double) ((TParameter<float>*)f->Get("newS_x"))->GetVal();
+	      // E_x[sample][temp][volt] = (double)((TParameter<float>*)f->Get("newE_x"))->GetVal();
+	      // S_xe[sample][temp][volt] = (double)((TParameter<float>*)f->Get("enewS_x"))->GetVal();
+	      // E_xe[sample][temp][volt] = (double)((TParameter<float>*)f->Get("enewE_x"))->GetVal();
+	      // charge[sample][temp][volt] = (double)((TParameter<float>*)f->Get("IntCorr"))->GetVal()*Qconstant;
 
         cntPulses++;
       	prof = (*(TProfile*)f->Get("avgpulses_filt"));
@@ -182,106 +182,106 @@ int32_t main (void) {
   TGraphErrors* gVdrift[nSamples][nTemp];//
   TMultiGraph* gMultiVdrift[nSamples];
 
-  //prepare the values
-  for (int32_t sample = 0; sample < nSamples; sample++) {
-    double thick = 0;
-    switch (sample) {
-      case S52 : thick = 515e-4;
-      case S37 : thick = 548e-4;
-      case S79 : thick = 519e-4;
-      case S52_363e14 : thick = 515e-4;
-      case S79_1e14 : thick = 515e-4;
-    }
-    int32_t clrCnt=0;
-    gMultiVdrift[sample] = new TMultiGraph();
-    for (int32_t temp = 0; temp < nTemp; temp++) {
-      if (!(temp==11 || temp==13 || temp==15 || temp==17)) {
-        continue;
-      }
-      gVdrift[sample][temp] = new TGraphErrors();
-      int32_t cnt = 0;
-      for (int32_t volt = 0; volt < nVoltages/2; volt++) {
-        if (missingprof[sample][temp][volt])
-          continue;
-        t_c[sample][temp][volt] = (E_x[sample][temp][volt]-S_x[sample][temp][volt])*1e-9; //into ns
-        Vdrift[sample][temp][volt] = thick/t_c[sample][temp][volt];
-        cout<<"sample "<<sample<<" temp "<<temp<<" volt "<<volt
-            <<" 1/Vdrift"<<1/Vdrift[sample][temp][volt]<<endl;
-        gVdrift[sample][temp]->SetPoint(cnt, 1/Vdrift[sample][temp][volt], charge[sample][temp][volt] );
-        cnt++;
-      }
-      dr->prettify(gVdrift[sample][temp]);
-      gVdrift[sample][temp]->SetLineColor(dr->clrTemp[clrCnt]);
-      clrCnt++;
-      gMultiVdrift[sample]->Add(gVdrift[sample][temp]);
-    }
-  }
-
-  TCanvas* can = new TCanvas("can","can",800,600);
-  dr->prettify(can);
-  for (int32_t sample = 0; sample < nSamples; sample++) {
-    if (!sample)
-      gMultiVdrift[sample]->Draw("AL*");
-    else
-      gMultiVdrift[sample]->Draw("L* SAME");
-    dr->prettify(gMultiVdrift[sample]);
-    gMultiVdrift[sample]->GetYaxis()->SetRangeUser(20e-15,55e-15);
-    gMultiVdrift[sample]->GetXaxis()->SetRangeUser(0,0.3e-6);
-    gMultiVdrift[sample]->GetYaxis()->SetTitle("Measured charge [C]");
-    gMultiVdrift[sample]->GetXaxis()->SetTitle("1/v_{drift} [s/cm]");
-    can->Update();
-    can->WaitPrimitive();
-    can->Update();
-    can->Clear();
-  }
-
-
-
-
-  delete can;
-
-
-
-
-
-
-  for (int32_t sample = 0; sample < nSamples; sample++) {
-    for (int32_t temp = 0; temp < nTemp; temp++) {
-        delete gVdrift[sample][temp];
-    }
-  }
-
-
-
-  // //----------------- Save the pulses -------------------------------
-  // TDirectory* dirp;
-  // TDirectory* dirs;
-  // TDirectory* dirt;
-  // stringstream sst;
-  //
-  // //------------ open file for saving plots --------------------------
-  // sst.str("");
-  // sst << "plots/pulses.root";
-  // TFile* filePlots = new TFile(sst.str().c_str(),"recreate");
-  // cout<<" Saving in file "<<sst.str()<<endl;
-  //
+  // //prepare the values
   // for (int32_t sample = 0; sample < nSamples; sample++) {
-  //   sst.str("");
-  //   sst << "Sample_" << sampleName[sample];
-  //   dirs = filePlots->mkdir(sst.str().c_str());
-  //   dirs->cd();
-  //   // filePlots->cd(sst.str().c_str());
+  //   double thick = 0;
+  //   switch (sample) {
+  //     case S52 : thick = 515e-4;
+  //     case S37 : thick = 548e-4;
+  //     case S79 : thick = 519e-4;
+  //     case S52_363e14 : thick = 515e-4;
+  //     case S79_1e14 : thick = 515e-4;
+  //   }
+  //   int32_t clrCnt=0;
+  //   gMultiVdrift[sample] = new TMultiGraph();
   //   for (int32_t temp = 0; temp < nTemp; temp++) {
-  //     for (int32_t volt = 0; volt < nVoltages; volt++) {
-  //       if (missingprof[sample][temp][volt]) {
-  //         continue;
-  //       }
-  //       profvec[sample][temp][volt].Write();
+  //     if (!(temp==11 || temp==13 || temp==15 || temp==17)) {
+  //       continue;
   //     }
+  //     gVdrift[sample][temp] = new TGraphErrors();
+  //     int32_t cnt = 0;
+  //     for (int32_t volt = 0; volt < nVoltages/2; volt++) {
+  //       if (missingprof[sample][temp][volt])
+  //         continue;
+  //       t_c[sample][temp][volt] = (E_x[sample][temp][volt]-S_x[sample][temp][volt])*1e-9; //into ns
+  //       Vdrift[sample][temp][volt] = thick/t_c[sample][temp][volt];
+  //       cout<<"sample "<<sample<<" temp "<<temp<<" volt "<<volt
+  //           <<" 1/Vdrift"<<1/Vdrift[sample][temp][volt]<<endl;
+  //       gVdrift[sample][temp]->SetPoint(cnt, 1/Vdrift[sample][temp][volt], charge[sample][temp][volt] );
+  //       cnt++;
+  //     }
+  //     dr->prettify(gVdrift[sample][temp]);
+  //     gVdrift[sample][temp]->SetLineColor(dr->clrTemp[clrCnt]);
+  //     clrCnt++;
+  //     gMultiVdrift[sample]->Add(gVdrift[sample][temp]);
   //   }
   // }
-  // filePlots->Close();
-  // delete(filePlots);
+  //
+  // TCanvas* can = new TCanvas("can","can",800,600);
+  // dr->prettify(can);
+  // for (int32_t sample = 0; sample < nSamples; sample++) {
+  //   if (!sample)
+  //     gMultiVdrift[sample]->Draw("AL*");
+  //   else
+  //     gMultiVdrift[sample]->Draw("L* SAME");
+  //   dr->prettify(gMultiVdrift[sample]);
+  //   gMultiVdrift[sample]->GetYaxis()->SetRangeUser(20e-15,55e-15);
+  //   gMultiVdrift[sample]->GetXaxis()->SetRangeUser(0,0.3e-6);
+  //   gMultiVdrift[sample]->GetYaxis()->SetTitle("Measured charge [C]");
+  //   gMultiVdrift[sample]->GetXaxis()->SetTitle("1/v_{drift} [s/cm]");
+  //   can->Update();
+  //   can->WaitPrimitive();
+  //   can->Update();
+  //   can->Clear();
+  // }
+  //
+  //
+  //
+  //
+  // delete can;
+  //
+  //
+  //
+  //
+  //
+  //
+  // for (int32_t sample = 0; sample < nSamples; sample++) {
+  //   for (int32_t temp = 0; temp < nTemp; temp++) {
+  //       delete gVdrift[sample][temp];
+  //   }
+  // }
+
+
+
+  //----------------- Save the pulses -------------------------------
+  TDirectory* dirp;
+  TDirectory* dirs;
+  TDirectory* dirt;
+  stringstream sst;
+
+  //------------ open file for saving plots --------------------------
+  sst.str("");
+  sst << "plots/pulses.root";
+  TFile* filePlots = new TFile(sst.str().c_str(),"recreate");
+  cout<<" Saving in file "<<sst.str()<<endl;
+
+  for (int32_t sample = 0; sample < nSamples; sample++) {
+    sst.str("");
+    sst << "Sample_" << sampleName[sample];
+    dirs = filePlots->mkdir(sst.str().c_str());
+    dirs->cd();
+    // filePlots->cd(sst.str().c_str());
+    for (int32_t temp = 0; temp < nTemp; temp++) {
+      for (int32_t volt = 0; volt < nVoltages; volt++) {
+        if (missingprof[sample][temp][volt]) {
+          continue;
+        }
+        profvec[sample][temp][volt].Write();
+      }
+    }
+  }
+  filePlots->Close();
+  delete(filePlots);
   delete dr;
   delete app;
   cout<<" All done."<<endl;

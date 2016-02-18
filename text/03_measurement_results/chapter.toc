@@ -22,4 +22,4 @@
 \contentsline {subsection}{\numberline {1.4.2}Temperature-variant $\upalpha $-TCT after irradiation}{22}
 \contentsline {subsubsection}{Collected charge as a function of temperature}{24}
 \contentsline {subsubsection}{Charge trapping}{25}
-\contentsline {section}{\numberline {1.5}Conclusion}{28}
+\contentsline {section}{\numberline {1.5}Conclusion}{30}

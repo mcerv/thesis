@@ -9,6 +9,8 @@
 #include "TCanvas.h"
 #include "TAxis.h"
 #include "TColor.h"
+#include "TExec.h"
+// #include "TMPalette.h"
 //#include "TSpectrum.h"
 #include "TH1.h"
 #include "TH2.h"
@@ -35,6 +37,7 @@ public:
   double relError (double X, double errX, double Y, double errY);
   void normalise(TH1D*); //normalises the histogram to maximum 1.
   //void normaliseSecondPeak(TH1D*); //normalises the histogram to maximum 1.
+  void setColourScheme(string); // for 2D histograms
   DrawFuns();
   ~DrawFuns();
 

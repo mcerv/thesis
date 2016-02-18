@@ -57,7 +57,7 @@ int32_t main (void) {
 
   TLatex *tex1 = new TLatex(0.0007,6e-23,"SIMULATION");
   tex1->SetTextFont(132);
-  tex1->Draw("same");
+  // tex1->Draw("same");
 
 
   TFitResultPtr ptr;
@@ -115,9 +115,9 @@ int32_t main (void) {
   rd42pi->SetMarkerStyle(20);
   mypi->SetMarkerStyle(21);
 
-  rd42->SetMarkerSize(1.5);
-  rd42pi->SetMarkerSize(1.5);
-  mypi->SetMarkerSize(1.5);
+  // rd42->SetMarkerSize(1.5);
+  // rd42pi->SetMarkerSize(1.5);
+  // mypi->SetMarkerSize(1.5);
 
 
   rd42->Draw("P SAME");

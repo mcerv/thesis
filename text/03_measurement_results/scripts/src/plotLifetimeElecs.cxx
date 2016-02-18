@@ -230,7 +230,7 @@ int32_t main (void) {
         texEH1sam[num]->SetTextSize(0.07);
 
         // leg[temp][toPlot[num]]->Draw("same");
-        tex1[num]->Draw("same");
+        // tex1[num]->Draw("same");
         texEH1[num]->Draw("same");
         texEH1sam[num]->Draw("same");
         cout << " num " << toPlot[num] << endl;

@@ -30,6 +30,8 @@
 #define S79_1e14 4
 #define SCDHQ 5
 
+#define PARTICLESPERSEC 2500
+
 
 
 
@@ -73,6 +75,7 @@ int32_t main (void) {
     while (f.good()) {
       f >> run[proc][i] >> delay[proc][i] >> corr[proc][i];
       corrNorm[proc][i] = corr[proc][0] / corr[proc][i];
+      delay[proc][i] = delay[proc][i]*PARTICLESPERSEC;
       cout << run[proc][i] << " " << delay[proc][i] << " " << corr[proc][i]
            << " " << corrNorm[proc][i] << endl;
       i++;
@@ -100,11 +103,11 @@ int32_t main (void) {
   gPad->SetLogy();
   mg->Draw("APL");
   dr->prettify(mg);
-  mg->GetXaxis()->SetRangeUser(0.9, 100000);
+  // mg->GetXaxis()->SetRangeUser(0.9, 100000);
   // mg->GetXaxis()->SetLimits(0.9, 100000);
   mg->GetYaxis()->SetRangeUser(0.01,1);
-  mg->GetXaxis()->SetTitle("Time [s]");
-  mg->GetYaxis()->SetTitle("Shape correlation");
+  mg->GetXaxis()->SetTitle("Received dose #Phi [#beta]");
+  mg->GetYaxis()->SetTitle("#frac{#sigma(#Phi)}{#sigma_{ref} }");
   leg->Draw("same");
 
 

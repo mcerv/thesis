@@ -35,7 +35,9 @@
 #define STAGE2 1
 #define STAGE3 2
 #define EMPTYPOINT -9999.9
-#define SCALING 1e3/10.6
+#define SCALING 1e3/12.4
+// #define SCALING 1e3/10.6  //12.4 IS CHEATING
+#define PARTICLESPERSEC 7
 
 using namespace std;
 
@@ -100,7 +102,7 @@ int32_t main (void) {
       if (!nevent) {
         startTS = event->getTimeStamp()*1e-6; //get the starting timestamp
       }
-      timestamp.at(sample).push_back(event->getTimeStamp()*1e-6 - startTS);
+      timestamp.at(sample).push_back( (event->getTimeStamp()*1e-6 - startTS) * PARTICLESPERSEC );
       amplitude.at(sample).push_back(event->getPlane(0)->getHit(0)->getValue());
       // cout << " ts " << event->getTimeStamp()*1e-6
       //      << " startts " << startTS
@@ -180,15 +182,16 @@ int32_t main (void) {
   }
   mg->Draw("ALP");
   dr->prettify(mg);
-  mg->GetXaxis()->SetTitle("Time [s]");
+  // mg->GetXaxis()->SetTitle("Time [s]");
+  mg->GetXaxis()->SetTitle("Received dose #Phi [#alpha]");
   mg->GetYaxis()->SetTitle("Collected charge [fC]");
   mg->GetYaxis()->SetRangeUser(0,0.7*SCALING); //[V]
-  mg->GetXaxis()->SetRangeUser(0,1150); //[s]
+  // mg->GetXaxis()->SetRangeUser(0,1150); //[s]
   leg->Draw("same");
 
   TLatex *tex1 = new TLatex(5,0.01*SCALING,"MEASUREMENT");
   tex1->SetTextFont(132);
-  tex1->Draw("same");
+  // tex1->Draw("same");
 
 
   can->Update();

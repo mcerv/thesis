@@ -78,7 +78,7 @@ int32_t main (void) {
   //                       -100.0, -200.0, -300.0, -400.0, -500.0, -600.0, -700.0};
   double voltage[nVoltages] = {500.0, 400.0, -400.0, -500.0};
   // string sampleRealName[nSamples] = {"S52","S79","S37","S79_1e14","S52_3-63e14"};
-  string sampleRealName[nSamples] = {"S52","S79","S37","S79 1#times10^{14} #pi cm^{-2}","S52 3.6#times10^{14} #pi cm^{-2}"};
+  string sampleRealName[nSamples] = {"S52","S79","S37","S52 3.6#times10^{14} #pi cm^{-2}", "S79 1#times10^{14} #pi cm^{-2}"};
   string sampleName[nSamples] = {"S52","S79","S37","S52_3-63e14","S79_1e14"};
 
   double irrad[nSamples] = {0,0,0,3.63,1};
@@ -531,7 +531,7 @@ int32_t main (void) {
   dr->prettify(can);
   can->SetLogy();
   can->SetLogx();
-  TLegend* legTau = new TLegend(0.22,0.57,0.44,0.8); //for All, Odd and Even
+  TLegend* legTau = new TLegend(0.22,0.57,0.52,0.8); //for All, Odd and Even
   TMultiGraph *mgTau = new TMultiGraph();
   bool first4 = true;
 
@@ -555,14 +555,14 @@ int32_t main (void) {
   mgTau->GetXaxis()->SetRangeUser(3,400);
   mgTau->GetXaxis()->SetLimits(3,400);
   mgTau->GetXaxis()->SetTitle("Temperature [K]");
-  mgTau->GetYaxis()->SetTitle("Carrier lifetime #tau [s{}^{-1}]");
+  mgTau->GetYaxis()->SetTitle("Carrier lifetime #tau [ns{}^{-1}]");
 
   // legTau->SetHeader("For #pm 400 V, #pm 500 V");
   // legTau->SetTextSize(0.04);
   legTau->Draw("same");
   TLatex *texTau = new TLatex(3.3,4.3,"MEASUREMENT");
   texTau->SetTextFont(132);
-  texTau->Draw("same");
+  // texTau->Draw("same");
   can->Update();
   can->Write();
   can->WaitPrimitive();
@@ -695,15 +695,15 @@ int32_t main (void) {
   dr->prettify(grTau1All);
   grTau1All->SetMarkerStyle(20);
   grTau1All->Draw("AP");
-  grTau1All->GetXaxis()->SetTitle("Radiation dose [10{}^{14} #pi cm{}^{-2}]");
-  grTau1All->GetYaxis()->SetTitle("Carrier lifetime #tau [s{}^{-1}]");
+  grTau1All->GetXaxis()->SetTitle("Radiation dose [10^{14} #pi cm{}^{-2}]");
+  grTau1All->GetYaxis()->SetTitle("Carrier lifetime #tau [ns{}^{-1}]");
   grTau1All->GetXaxis()->SetRangeUser(-0.3,5);
   grTau1All->GetXaxis()->SetLimits(-0.3,5);
   grTau1All->GetYaxis()->SetRangeUser(4,500);
   grTau1All->GetYaxis()->SetLimits(4,500);
   TLatex *tex3 = new TLatex(-0.23,4.5,"MEASUREMENT");
   tex3->SetTextFont(132);
-  tex3->Draw("same");
+  // tex3->Draw("same");
 
   TF1* fitf = new TF1("fit","[0] / ([0]*[1]*x + 1) ", 0, 20);
   fitf->SetParameter(0,300);

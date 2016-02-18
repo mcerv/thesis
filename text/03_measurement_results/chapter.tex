@@ -404,7 +404,7 @@ All the subsequent data points also consist of a set of 60 pulses. At every data
 %Corr_{\mathrm{shape}} (t) = \frac{\sigma_{\mathrm{ref}}}{\sigma} = \frac { \sum_\mathrm{x} \sum_\mathrm{y} w_{\mathrm{ref}}\cdot ( y_{\mathrm{avg}} - y_{\mathrm{ref}})^2 } { \sum_\mathrm{x} \sum_\mathrm{y} w\cdot ( y_{\mathrm{avg}} - y)^2 },
 %\end{equation} 
 %where $y_{\mathrm{avg}}$ is the amplitude of the current averaged pulse at time $x$, $y_{\mathrm{ref}}$ is the amplitude of the initial averaged pulse at time $x$, $y$ is the amplitude of the superimposed pulses in the 2D histogram and $w$ and $w_{\mathrm{ref}}$ are weights for the superimposed pulses for the current data point and the initial data point.
-Figure~\ref{fig:longtermc2corr} shows the ratio $\frac{\sigma_\mathrm{ref} }{\sigma(\alpha~dose)}$. From the data obtained it can be concluded that initial pulse shape quickly starts deteriorating. In fact, the deterioration of the shape correlation follows an exponential decay function, which can be fitted to the data. The resulting decay constants for electrons and holes are $\tau_{\mathrm{corr_e}}=(631\pm20)$~s$^{-1}$ and $\tau_{\mathrm{corr_h}}=(471\pm21)$~s$^{-1}$. The electrons seem to retain the initial shape for longer. The deteriorated shapes also seem to be for a factor of 2 better than those of the holes. 
+Figure~\ref{fig:longtermc2corr} shows the ratio $\frac{\sigma_\mathrm{ref} }{\sigma(\alpha~dose)}$. From the data obtained it can be concluded that initial pulse shape quickly starts deteriorating. In fact, the deterioration of the shape correlation follows an exponential decay function, which can be fitted to the data. The resulting decay constants for electrons and holes are $\tau_{\mathrm{e}}=(4400\pm150)$~$\upalpha^{-1}$ and $\tau_{\mathrm{h}}=(3300\pm140)$~$\upalpha^{-1}$. The electrons retain the initial shape for longer. The deteriorated shapes also seem to be for a factor of 2 better than those of the holes. 
 
 \begin{figure}[!t]
 \begin{center}
@@ -450,7 +450,7 @@ Procedure & Source & Bias voltage & Effectiveness \\
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.7\textwidth]{scripts/plots/plotLifetime/formCorrelation}
-\caption{Five procedures of the ``healing'' process for an irradiated diamond that was exposed to $\upalpha$ radiation at bias voltage switched on for at least 30~minutes.}
+\caption{Five procedures of the ``healing'' process for an irradiated diamond that was exposed to $\upalpha$ radiation at bias voltage switched on for at least 30~minutes at a rate of $10^4$~s$^{-1}$.}
 \label{fig:formCorr}
 \end{center}
 \end{figure}
@@ -609,13 +609,14 @@ where $\tau_\mathrm{0}$ is the lifetime for a non-irradiated sample (real lifeti
 %introduce the kTau factor
 
 \begin{figure}[!t]
-%\centering
+\centering
 \begin{tabular}{cccc}
-\subfloat[Carrier lifetime as a function of temperature]
+\subfloat
 {\includegraphics[width=0.8\textwidth]{scripts/plots/taunew/lifetimevstemp} \label{fig:lifetimevstemp}} \\
-\subfloat[Carrier lifetime averaged over all temperatures as a function of $\pi$ irradiation dose]{\includegraphics[width=0.8\textwidth]{scripts/plots/taunew/avglifetime}  \label{fig:lifetimevsdose}}
+\subfloat
+{\includegraphics[width=0.8\textwidth]{scripts/plots/taunew/avglifetime}  \label{fig:lifetimevsdose}}
 \end{tabular}
-\caption{Charge carrier lifetime decreases with irradiation, but is stable across the range of temperatures between 4~K -- 75~K and 150~K -- 295~K.}
+\caption{Charge carrier lifetime decreases with irradiation, but is stable across the range of temperatures between 4~K -- 75~K and 150~K -- 295~K. The first figure shows the carrier lifetime s a function of temperature whereas the second figure depcits the carrier lifetime averaged over all temperatures and plotted against the $\pi$ irradiation dose}
 \label{fig:carrlifetime}
 \end{figure}
 
@@ -629,7 +630,7 @@ where $\tau_\mathrm{0}$ is the lifetime for a non-irradiated sample (real lifeti
 
 
 % ---------------------------------------------------------------------------------------------------------------
-%\clearpage
+\clearpage
 \section{Conclusion}
 \label{sec:radlimit}
 % ---------------------------------------------------------------------------------------------------------------

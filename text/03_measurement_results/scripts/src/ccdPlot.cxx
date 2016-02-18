@@ -27,6 +27,7 @@ int32_t main (void) {
 
   // string sampleName[nSamples] = {"S79","S52","S37"};
   string sampleName[nSamples] = {"S52","S79","S37"};
+  string realSampleName[nSamples] = {"S79","S52","S37"};
   float sampleThick[nSamples] = {515.0, 529.0, 548.0};  //um -- REAL
 
   TGraphErrors *gr[nSamples];
@@ -120,10 +121,10 @@ int32_t main (void) {
   gr[0]->GetXaxis()->SetTitle("Electric field [V/ #mu m]");
   gr[0]->GetYaxis()->SetTitle("Charge collection distance [ #mu m]");
 
-  TLegend* leg1 = new TLegend(0.60,0.17,0.95,0.44);
+  TLegend* leg1 = new TLegend(0.57,0.17,0.965,0.44);
   leg1->AddEntry(gr[2],"S37 non-irrad","lep");
-  leg1->AddEntry(gr[0],"S79 1e14 #pi cm{}^{-2}","lep");
-  leg1->AddEntry(gr[1],"S52 3.63e14 #pi cm{}^{-2}","lep");
+  leg1->AddEntry(gr[1],"S79 1e14 #pi cm{}^{-2}","lep");
+  leg1->AddEntry(gr[0],"S52 3.63e14 #pi cm{}^{-2}","lep");
   leg1->Draw("same");
   c2->Update();
   c2->WaitPrimitive();
@@ -162,7 +163,7 @@ int32_t main (void) {
 
   TF1* fitf = new TF1("fit","[0] / ([0]*[1]*x + 1) ", 0, 20);
   fitf->SetParameter(0,500);
-  fitf->SetParameter(1,1.8e-4);
+  fitf->SetParameter(1,2.2e-4);
   fitf->SetLineColor(kBlack);
   TFitResultPtr ptr = gp[0]->Fit("fit","SR");
   cout<<endl<<" --------------------------------"<<endl;
@@ -174,8 +175,8 @@ int32_t main (void) {
 
   TLegend* leg2 = new TLegend(0.4,0.65,0.95,0.95);
   leg2->SetTextFont(132);
-  leg2->AddEntry(fun,"RD42 fit: k = 1.8 #times 10^{-18}","l");
-  leg2->AddEntry(gp[0],"CCD at >500 V","lep");
+  leg2->AddEntry(fun,"RD42 fit: k = 2.2 #times 10^{-18}","l");
+  leg2->AddEntry(gp[0],"CCD at 1 V/#mu m","lep");
   // stringstream sskfit;
   // sskfit.str("");
   // sskfit << "Data fit: k_{fit} = " <<

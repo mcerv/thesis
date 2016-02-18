@@ -29,6 +29,7 @@
 #define S52_363e14 3
 #define S79_1e14 4
 #define SCDHQ 5
+#define PARTICLESPERSEC 7
 
 
 
@@ -59,7 +60,7 @@ int32_t main (void) {
                           "S79 1#times10^{14} #pi cm^{-2} - Holes"  };
 
 
-  TLegend *leg = new TLegend (0.4,0.62,0.95,0.95);
+  TLegend *leg = new TLegend (0.5,0.66,0.95,0.95);
 
   TF1* decayfun = new TF1("decay","[0] + ([1]-[0])*exp(-(x+[3])/[2])");
   decayfun->SetParName(0,"chgInf");     //charge at infinity
@@ -68,12 +69,12 @@ int32_t main (void) {
   decayfun->SetParName(3,"xDisp");      //displacement in x direction
   decayfun->SetParameter(0,0.01);
   decayfun->SetParameter(1,1);
-  decayfun->SetParameter(2,500);
+  decayfun->SetParameter(2,5000);
   decayfun->SetParameter(3,0);
   decayfun->SetParLimits(0,0.01,1);
   decayfun->SetParLimits(1,0.9,1.3);
-  decayfun->SetParLimits(2,1,2000);
-  decayfun->SetParLimits(3,-200,100);
+  decayfun->SetParLimits(2,1,20000);
+  decayfun->SetParLimits(3,-2000,1000);
 
   TFitResultPtr ptr[nFiles];
 
@@ -90,6 +91,8 @@ int32_t main (void) {
     while (f.good()) {
       f >> run[fil][i] >> delay[fil][i] >> corr[fil][i];
       corrNorm[fil][i] = corr[fil][0] / corr[fil][i];
+      //time to particles per seconds
+      delay[fil][i] = delay[fil][i]*PARTICLESPERSEC;
       // cout << run[fil][i] << " " << delay[fil][i] << " " << corr[fil][i]
       //      << " " << corrNorm[fil][i] << endl;
       i++;
@@ -104,27 +107,21 @@ int32_t main (void) {
     //FIT the decay function
     leg->AddEntry(gr[fil],fileTitleLeg[fil].c_str(),"lep");
 
-    ptr[fil] = gr[fil]->Fit("decay", "S" );
-    // * = *p;
+    // ptr[fil] = gr[fil]->Fit("decay", "S" ); //used to fit the TAU
 
-    // if (fil)
-    //   gr[fil]->SetMarkerColor(kGray);
     ss.str("");
-    // TCanvas *c1 = new TCanvas ("c1","c1", 800,600);
-    // gr[fil]->Draw("AP");
-    // c1->Update();
-    // c1->WaitPrimitive();
+
 
     // ss << << fil;
-    ss.str("");
-    ss << "#tau_{corr} = ("
-       << setprecision(3) << ptr[fil]->Parameter(2)
-       << "#pm"
-       << setprecision(2) << ptr[fil]->ParError(2)
-       << ")"
-       << " s^{-1}";
+    // ss.str("");
+    // ss << "#tau_{corr} = ("
+    //    << setprecision(3) << ptr[fil]->Parameter(2)
+    //    << "#pm"
+    //    << setprecision(2) << ptr[fil]->ParError(2)
+    //    << ")"
+    //    << " s^{-1}";
       //  cout << ss.str() << endl;
-    leg->AddEntry(gr[fil], ss.str().c_str(), "");    // if (!fil)
+    // leg->AddEntry(gr[fil], ss.str().c_str(), "");    // if (!fil)
     mg->Add(gr[fil]);
   }
   // for (int32_t fil=0; fil<nFiles; fil++) {
@@ -141,8 +138,8 @@ int32_t main (void) {
   mg->GetXaxis()->SetRangeUser(0.9, 100000);
   // mg->GetXaxis()->SetLimits(0.9, 100000);
   mg->GetYaxis()->SetRangeUser(0.01,1);
-  mg->GetXaxis()->SetTitle("Time [s]");
-  mg->GetYaxis()->SetTitle("Shape correlation");
+  mg->GetXaxis()->SetTitle("Received dose #Phi [#alpha]");
+  mg->GetYaxis()->SetTitle("#frac{#sigma(#Phi)}{#sigma_{ref}}");
   leg->Draw("same");
 
 
