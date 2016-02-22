@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter.aux
+The style file: plain.bst
+Database file #1: bib3.bib
+Warning--to sort, need author or key in E6:00000
+Warning--to sort, need author or key in IIA:00000
+Warning--to sort, need author or key in DRS4:00000
+Warning--to sort, need author, editor, or key in NEQ:00000
+Warning--to sort, need author or key in RD42:00000
+Warning--to sort, need author or key in PSI:00000
+Warning--empty author in DRS4:00000
+Warning--empty author in E6:00000
+Warning--empty author in IIA:00000
+Warning--empty author in PSI:00000
+Warning--empty author in RD42:00000
+Warning--empty author and editor in NEQ:00000
+Warning--empty title in BETHE:00000
+Warning--there's a number but no volume in PASCHEN:00000
+You've used 18 entries,
+            2118 wiz_defined-function locations,
+            616 strings with 6722 characters,
+and the built_in function-call counts, 4348 in all, are:
+= -- 433
+> -- 167
+< -- 2
++ -- 70
+- -- 52
+* -- 293
+:= -- 747
+add.period$ -- 50
+call.type$ -- 18
+change.case$ -- 76
+chr.to.int$ -- 0
+cite$ -- 32
+duplicate$ -- 173
+empty$ -- 344
+format.name$ -- 52
+if$ -- 892
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 11
+newline$ -- 89
+num.names$ -- 24
+pop$ -- 68
+preamble$ -- 1
+purify$ -- 62
+quote$ -- 0
+skip$ -- 112
+stack$ -- 0
+substring$ -- 226
+swap$ -- 19
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 68
+warning$ -- 14
+while$ -- 32
+width$ -- 20
+write$ -- 181
+(There were 14 warnings)

@@ -50,7 +50,7 @@ int32_t main (void) {
   //--------------get the profiles from the file ------------------------
   TProfile* prof[nSamples][nTemp][nVoltages];
   bool missingprof[nSamples][nTemp][nVoltages];
-  stringstream ss;
+  stringstream ss, ssf;
   TFile* f = new TFile ("plots/pulses.root","read");// = new TFile();
   if (!f->IsOpen()) {
     cout<<" File " << ss.str().c_str() << " not open properly!" << endl;

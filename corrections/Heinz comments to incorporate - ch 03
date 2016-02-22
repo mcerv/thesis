@@ -1,0 +1,31 @@
+Red points in ch. 03
+
+Levels: 1-easy, 2-medium, 3-hard
+
+Page	Level	Description
+all		References DONE
+ 5	1	Include electrode info in the table
+ 8	1	Add schematics
+10	2	7-How does ion. rad. degrade sensors? Diamonds specifically. Energy level
+		in band gap -> leakage; charge trapping -> space charge & field;
+10	2	Noise for charge sensitive amplifier - shot noise is important as well as
+		dependance on detector capacitance. See Spieler’s lectures! Expand in Ch2.
+		Give the actual quantisation noise: thermal, capacitive etc as formulas
+10	2	Explain the model for Q vs Flux 
+11	2	What is equivalent fluence? Why does it relate to hardness factor?
+12	1	Explain DPA -> see references
+13	1	Revise the CCD to be at 1 V/um
+14	1	Give stability in terms of deltaQ/Q in text
+15	1	Revise the electron energy
+16	3	Need to explain why efficiency drops. This is the most critical result
+		from this measurement
+17	2	The space charge region has to do with range of alpha, but NOT with one
+		charge drifting. Mention that space charge causes polarisation field which
+		contracts applied field.
+19	3	The space charge is neutralised how?
+20	1	40%? where from?
+20	1	Move text.
+24	3	What is the interpretation of the difference in charge collection at
+		different temps in terms of exitons and charge traps?
+
+

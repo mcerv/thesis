@@ -93,7 +93,7 @@ void DrawFuns::prettify (TGraph *gr ) {
 
     gr->SetMarkerColor(kBlack);
     gr->SetMarkerStyle(20);
-    gr->SetMarkerSize(1.6);
+    gr->SetMarkerSize(1.2);
 }
 
 void DrawFuns::prettify (TGraphErrors *gr) {

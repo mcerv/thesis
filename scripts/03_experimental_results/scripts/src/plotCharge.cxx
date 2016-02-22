@@ -76,7 +76,7 @@ int32_t main (void) {
   //
   //
   for (int volt=0; volt<nvolts; volt++) {
-    c[volt] = new TCanvas (voltstr[volt].c_str(), voltstr[volt].c_str(), 1200,800);
+    c[volt] = new TCanvas (voltstr[volt].c_str(), voltstr[volt].c_str(), 800 ,600);
     dr->prettify(c[volt]->cd() );
     c[volt]->SetTopMargin(0.06);
     leg[volt] = new TLegend (0.49,0.18,0.9,0.47);

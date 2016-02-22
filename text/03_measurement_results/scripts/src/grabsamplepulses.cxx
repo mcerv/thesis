@@ -193,7 +193,7 @@ int32_t main (void) {
         }
         dr->prettify(&histvec[sample][temp][volt]);
         gr[sample][temp][volt]->SetLineColor(kBlack);
-        gr[sample][temp][volt]->SetLineWidth(3);
+        gr[sample][temp][volt]->SetLineWidth(4);
         leg[sample][temp][volt] = new TLegend (0.66,0.75,0.95,0.95);
         ss.str("");
         ss << radiation[temp] << " pulses";
@@ -236,6 +236,8 @@ int32_t main (void) {
         dr->prettify(can[temp][volt]);
         histvec[sample][temp][volt].Draw("col");
         histvec[sample][temp][volt].GetXaxis()->SetTitle("Time [ns]");
+        histvec[sample][temp][volt].GetXaxis()->SetTitleFont(42);
+        histvec[sample][temp][volt].GetYaxis()->SetTitleFont(42);
         histvec[sample][temp][volt].GetYaxis()->SetTitle("Voltage [V]");
         histvec[sample][temp][volt].GetYaxis()->SetRangeUser(-0.02,0.10); //[V]
         // histvec[sample][temp][volt].GetYaxis()->SetLimits(-0.02,0.10); //[V](-0.02*96.62,0.10*96.62); //[V]

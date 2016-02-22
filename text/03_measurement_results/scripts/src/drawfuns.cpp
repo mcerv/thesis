@@ -161,6 +161,9 @@ void DrawFuns::prettify (TMultiGraph *gr) {
 void DrawFuns::prettify (TVirtualPad *c, string histType = "th1") {
   gStyle->SetOptStat(0);
   c->SetGrid();
+      gStyle->SetGridColor(kGray);
+      gStyle->SetGridWidth(0);
+      // gStyle->SetGridStyle(1001);
   // c->SetLogx();
   c->SetTopMargin(0.03);
   c->SetBottomMargin(0.15);
