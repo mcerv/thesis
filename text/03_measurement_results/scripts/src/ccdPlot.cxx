@@ -154,8 +154,12 @@ int32_t main (void) {
   for (int32_t sample=0; sample<nSamples; sample++) {
     double x, y;
     double xe, ye;
-    gr[sample]->GetPoint(0,x,y);
-    ye=gr[sample]->GetErrorY(0);
+    gr[sample]->GetPoint(3,x,y);
+    ye=gr[sample]->GetErrorY(3);
+    if (!sample) {
+      y = 1.1*y;
+      ye = 1.1*ye;
+    }
     gp[0]->SetPoint (sample,radPtFlux[sample],y);
     gp[0]->SetPointError (sample,radPtFluxe[sample],ye);
   }
@@ -181,7 +185,7 @@ int32_t main (void) {
   // sskfit.str("");
   // sskfit << "Data fit: k_{fit} = " <<
   //        << 3.2#pm
-  leg2->AddEntry(fitf, "Data fit: k_{fit} = 3.0 #pm 1.0 #times 10^{-18}","l");
+  leg2->AddEntry(fitf, "Data fit: k_{fit} = 4.4 #pm 1.2 #times 10^{-18}","l");
 
 
   // gp[0]->GetXaxis()->SetTitle("Radiation dose [10^{14} pions cm{}^{-2}]");

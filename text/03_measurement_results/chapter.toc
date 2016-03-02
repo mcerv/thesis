@@ -10,16 +10,16 @@
 \contentsline {section}{\numberline {1.2}Charged particle pulses and spectra}{9}
 \contentsline {subsection}{\numberline {1.2.1}Noise limitations}{9}
 \contentsline {section}{\numberline {1.3}Radiation limitations}{11}
-\contentsline {subsection}{\numberline {1.3.1}Quantifying radiation damage in diamonds}{11}
+\contentsline {subsection}{\numberline {1.3.1}Quantifying radiation damage in diamonds}{12}
 \contentsline {subsubsection}{Irradiation with a $\uppi _\mathrm {300\nobreakspace {}MeV}$ beam}{12}
 \contentsline {subsubsection}{Charge collection efficiency and charge collection distance}{13}
-\contentsline {subsubsection}{Irradiation damage factor}{13}
+\contentsline {subsubsection}{Irradiation damage factor}{14}
 \contentsline {subsection}{\numberline {1.3.2}Long-term measurement stability}{15}
-\contentsline {subsubsection}{$\upbeta $ long-term stability}{15}
-\contentsline {subsubsection}{$\upalpha $ long-term stability}{16}
+\contentsline {subsubsection}{$\upbeta $ long-term stability}{16}
+\contentsline {subsubsection}{$\upalpha $ long-term stability}{17}
 \contentsline {section}{\numberline {1.4}Temperature limitations}{21}
-\contentsline {subsection}{\numberline {1.4.1}Temperature-variant $\upalpha $-TCT before irradiation}{22}
-\contentsline {subsection}{\numberline {1.4.2}Temperature-variant $\upalpha $-TCT after irradiation}{23}
+\contentsline {subsection}{\numberline {1.4.1}Temperature-variant $\upalpha $-TCT before irradiation}{23}
+\contentsline {subsection}{\numberline {1.4.2}Temperature-variant $\upalpha $-TCT after irradiation}{25}
 \contentsline {subsubsection}{Collected charge as a function of temperature}{26}
-\contentsline {subsubsection}{Charge trapping}{27}
-\contentsline {section}{\numberline {1.5}Conclusion}{31}
+\contentsline {subsubsection}{Charge trapping}{28}
+\contentsline {section}{\numberline {1.5}Conclusion}{32}

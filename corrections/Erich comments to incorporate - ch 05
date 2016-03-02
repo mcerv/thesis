@@ -1,0 +1,108 @@
+Corrections 19.02.2016
+Chapter 05
+
+- Device specifications
+- More in-depth block diagrams
+- Describe multiplexing - 256bit into 32 sam
+- Show the connectivity A/D —> FPGA …
+- Pulse params:
+	- Show a reference pulse with parameters
+	- Fall slope show continuous difference of consecutive samples
+	- Prominent diagrams, optcally appealing, unified
+- Don’t mention the Picoscope.
+- Diagrams - grid?
+
+- scientific work left out
+- too much like a tech report
+- discussion of a signal shape in theory/practice. Include neutrons
+- Derive 13.6 eV from pulse area
+
+SOURCE CALIBRATION
+- Particle signature - reference, plot
+- Selective spectroscopy
+- Single source compares to theory
+- Teach the reader about the complexity
+- Characterisation of int er. measured by the instrument similar for Beta and Alpha
+- 0 amplitude qn the baseline of the pulse
+- Little energy deposited
+- 2.88 fC —>
+- 60 fC —> 
+- Show that only N/2 is collected for alpha
+- neutron ballistic centre show
+- Range because Landau
+- Landau - starts at 2/3, ends at 10 MPV
+- Remove Berilium from Calibration
+- Calibration:
+   - Energy plot.
+   - beta,gamma same, therefore take beta
+
+NOISE
+- min. el. noise? thermal noise of a 50ohm sqrt(4ktBR)
+	- R=50ohm, B=1GHz, T=300k, eg. open loop voltage of the current source
+- internal trigger
+- U x Aamp -> intrinsic noise in mV
+- Noise considerations
+- calculate noise
+- compare
+- eq. input noise current EINC (0.3 uA)
+- provided by 50ohm thermal source
+
+- calculate MPV from Ramo i=Qv/d=Q/td
+- RMS noise at 0.3 uA
+- MPV peak 1.2 uA -> how many sigma away? -> cannot trigger -> only at 5 RMS (5sigma); 2 uA
+- only measuring tail of landau
+- show landau and gaussian in the same plot
+- Beta meas for pulse shapes
+- show a nice alpha and beta particle 
+- discuss what the reader sees
+- what do I want to teach the reader?
+- FormFactor: why such? how is it ideal? why does the plot looke like it doues?
+- why is there a difference between alpha and beta?
+- derive a scientific output
+- theory
+- meas
+- deal cases for 2 types of interaction.
+- prove understanding of the principle of interactions
+- every alpha can to gamma emission -> electron-like emission.
+
+NEUTRON MEAS
+- domain of the application of the method
+- derive criteria
+- FF: useful : set thresholds to ….
+- optimised set of qualifiers is…
+- PuBe - decision on one set of quals?
+- RT PSD
+- discuss total spectrum. Draw on the pots.
+- Prepare the reader from calibration for use in neutrons.
+- Show on 2 pages: all pulses, selected pulses
+- what do i want to show?
+- present only 1 example
+- complex triggering unit WRT identification of particles
+- according to ionisation profile in diamonds via read out current -> gives us possibility to analyse in RT pulse shapes -> estimate the type of interaction a, b, g, n
+- Show landau beta, gauss alpha, landau gamma, pulse shapes.
+- start with thermal neutrons - easy. explain. Pavel’s publication - refer. Show 1-D also. Put this in realtime! Motivation: flux 
+- Motivation n+: known that by selecting … the cleanest meas. (nuclear fusion) is crucial for temperature measurement of neutron plasma confinement of 14MeV n+. (fusion fuel)
+- Confinement best measured in the centre (4 ns)
+- Many parasitic signals
+- Combination of Width and FormFactor provides a slection for this interaction in BallisticCentre
+-Refer to Christina -> motivation C12, C13
+- 14MEV measured via C12
+
+LIMITS
+- noise
+- triggering
+- energy deposition higher than …
+- timing resolution
+  - area calculation
+- count rate
+
+- Check Recoil protons (absorbed in diamond)
+- how to get them?
+- rejection efficiency
+
+
+1) gamma background rejection -> flux
+2) select 14MeV neutrons -> temperature in ITER
+3) select recoil protons
+4) select n+, but only 1-2 MeV -> flux of n+. academic motivation.
+

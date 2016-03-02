@@ -52,16 +52,6 @@ This chapter describes an application that carries out particle identification b
 %To sum up, observing the ionisation profiles in sCVD diamond allows us to determine the type of radiation. 
 
 
-
-%- pulse shape
-%- constraints
-%- single
-
-
-
-
-
-
 % ---------------------------------------------------------------------------------------------------------------
 %\clearpage
 \section{Motivation}
@@ -69,7 +59,7 @@ This chapter describes an application that carries out particle identification b
 % ---------------------------------------------------------------------------------------------------------------
 Pulse shape analysis (PSA) is a common software tool for analysing sensor response to incident particles. It is usually done by means of software that runs over big amounts of data that have been acquired and saved to storage. This offline analysis can be repeated and improved. However, the saved data take up a lot of storage space. In addition, saving raw waveform data requires a system capable of a high data throughput and fast data storing. For instance, an oscilloscope can save up to 100 signal waveforms per second. This means that there is a high measurement dead time. To avoid the high dead times, the software algorithms can be ported to the FPGA where they analyse the incoming signal in real time. The signal is then discarded and only the analysis results are saved, decreasing the storage space significantly.
 
-The offline pulse shape analysis has already been used for particle identification with a diamond sensor~\cite{}. An effort has been made to implement an online and real time application for this analysis by porting the algorithms into an FPGA. This section first describes the device specifications Then it describes in detail the PSA algorithms and the structure of the code. Afterwards it discusses the performance results, which showcase the limitations of the device. Finally it describes the data acquired with radioactive sources and in neutron reactors.
+The offline pulse shape analysis has already been used for particle identification with a diamond sensor~\cite{PAVEL:00000, PAVEL:00002}. An effort has been made to implement an online and real time application for this analysis by porting the algorithms into an FPGA. This section first describes the device specifications Then it describes in detail the PSA algorithms and the structure of the code. Afterwards it discusses the performance results, which showcase the limitations of the device. Finally it describes the data acquired with radioactive sources and in neutron reactors.
 
 
 \section{Requirements}
@@ -104,7 +94,14 @@ The logic structure of the PSA is designed using VHDL and runs on Xilinx Virtex~
 The device is very sensitive to noise pick-up. Therefore the setup must be designed to minimise the pick-up by means of proper shielding, use of high-quality cables etc. The relatively low bandwidth limit filters out some high-frequency noise, but not the ringing or higher noise spikes. That is the task for the PSA.
 
 \section{Pulse parameters}
-A signal pulse on the input is parametrised during the analysis process. The PSA measures its amplitude, area, width and the slope of its falling edge. The amplitude is the difference between the baseline and the highest sample in the pulse and is given in ADC counts as an 8-bit value. The area is defined as the sum of amplitudes of all samples between two defined boundaries within the pulse. The width is defined as the number of samples with a value higher than a set amplitude threshold. If the threshold is at half the maximum amplitude, the resulting width is \emph{full width at half maximum} (FWHM). The falling slope is the maximum negative difference between values of two samples and is given in ADC counts per sample. These parameters can also be used as \emph{qualifiers} for accepting or discarding a pulse. All four parameters limited by the low and high limit are called a \emph{qualifier set}. For instance, a rectangular pulse by an $\upalpha$ particle will always have the same FWHM and a very steep slope. In comparison, a photon will have a lower falling slope value and a narrower FWHM. Therefore the low and high cut on these two qualifiers will make it possible to discriminate between the two pulses. Another qualifier is a \emph{form factor} and is defined as the ratio between the measured area and the amplitude multiplied by the width. By comparing the measured and the calculated area the difference between a triangular and a rectangular pulse can be inferred.
+A signal pulse on the input is parametrised during the analysis process. The PSA measures its amplitude, area, width and the slope of its falling edge (see figure~\ref{fig:params}. The amplitude is the difference between the baseline and the highest sample in the pulse and is given in ADC counts as an 8-bit value. The area is defined as the sum of amplitudes of all samples between two defined boundaries within the pulse. The width is defined as the number of samples with a value higher than a set amplitude threshold. If the threshold is at half the maximum amplitude, the resulting width is \emph{full width at half maximum} (FWHM). The falling slope is the maximum negative difference between values of two samples and is given in ADC counts per sample. These parameters can also be used as \emph{qualifiers} for accepting or discarding a pulse. All four parameters limited by the low and high limit are called a \emph{qualifier set}. For instance, a rectangular pulse by an $\upalpha$ particle will always have the same FWHM and a very steep slope. In comparison, a photon will have a lower falling slope value and a narrower FWHM. Therefore the low and high cut on these two qualifiers will make it possible to discriminate between the two pulses. Another qualifier is a \emph{form factor} and is defined as the ratio between the measured area and the amplitude multiplied by the width. By comparing the measured and the calculated area the difference between a triangular and a rectangular pulse can be inferred.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.8\textwidth]{../../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params}
+\caption{}
+\label{fig:params}
+\end{figure}
 
 
 %Every parameter set is saved into a histogram after analysis.  The falling slope is not even a physical quantity, but as will be shown later, can improve the identification. 
@@ -240,9 +237,6 @@ The vector cleaning module is designed as a final state machine (FSM) with the s
 
 
 
-
-
-
 \subsubsection{Algorithm}
 The underlying algorithm is sequential - it carries out a logic operation on vector bit 0, uses the output of this operation for the operation on bit 1 and so on. This means that it has to carry out 32 logic operations per clock cycle. With each operation taking approximately 0.3~ns, the whole logic chain takes approximately 10~ns to complete. With only 6.4~ns per clock cycle, this means timing errors would occur. To fix the problem, a more complicated \emph{decimated algorithm} was invented. It consists of two parallel logic chains which only take every second bit into account and are at the end merged together. This effectively reduces the number of sequential logic operations to around 18, which is within the timing constraints. 
 %Nevertheless, to explain the algorithm, a non-decimated version will be shown first.
@@ -266,7 +260,7 @@ The underlying algorithm is sequential - it carries out a logic operation on vec
 
 
 \section{Control and data interface}
-Communication between the Picoscope and the controller PC is done via the Picotech API functions. These are described in detail in~\cite{}. In addition to the functions provided to the Picoscope users, the API used by CIVIDEC has access to several extra functions. These allow the user to download a customised bitfile to the FPGA, access the I/O registers and use the USB data transfer.
+Communication between the Picoscope and the controller PC is done via the Picotech API functions. In addition to the functions provided to the Picoscope users, the API used by CIVIDEC has access to several extra functions. These allow the user to download a customised bitfile to the FPGA, access the I/O registers and use the USB data transfer.
 
 \subsection{Software}
 The software has been designed in C++ in several levels of abstraction. Figure~\ref{fig:controller} shows the structure of the classes. The classes Picoscope, PSA and RawSignalHandler are there to make it easier to read and understand the controller code. In principle the PSfunctions can also be accessed directly by the controller, but for this the instruction sequences must be well known and understood. 
@@ -403,7 +397,7 @@ Run & Source & Radiation & Energy [MeV] & Time [h]  & Triggers & Rate [s$^{-1}$]
 \end{center}
 \end{footnotesize}
 
-The pulses acquired during the data taking are shown in persistence plots in figures~\ref{fig:accpulses}. Figure~\ref{fig:am1} showing the $^{241}$Am source background reveals that the diamond detector had been contaminated. This stems from the fact that $\upalpha$ pulses are recorded despite having a sheet of paper, which stops all the particles emitted by the source. However, the number of $\upalpha$ hits due to contamination is negligible - an estimated 1~h$^{-1}$. Another point worth noting is the falling slope of the rectangular pulse in figure~\ref{fig:am3}. This stems from the space charge that had built up during the neutron irradiation and is discussed in section~\ref{sec:spacecharge}. Finally, figure~\ref{fig:pu1} shows that the neutron source causes the widest variety of pulse shapes - triangular and rectangular as well as those in between. Pulse shapes caused by neutrons are described in detail in~\cite{}.
+The pulses acquired during the data taking are shown in persistence plots in figures~\ref{fig:accpulses}. Figure~\ref{fig:am1} showing the $^{241}$Am source background reveals that the diamond detector had been contaminated. This stems from the fact that $\upalpha$ pulses are recorded despite having a sheet of paper, which stops all the particles emitted by the source. However, the number of $\upalpha$ hits due to contamination is negligible - an estimated 1~h$^{-1}$. Another point worth noting is the falling slope of the rectangular pulse in figure~\ref{fig:am3}. This stems from the space charge that had built up during the neutron irradiation and is discussed in section~\ref{sec:spacecharge}. Finally, figure~\ref{fig:pu1} shows that the neutron source causes the widest variety of pulse shapes - triangular and rectangular as well as those in between. Pulse shapes caused by neutrons are described in detail in~\cite{PAVEL:00003, CHRISSI:00005}.
 
 % ATI source measurements
 \clearpage
@@ -423,16 +417,16 @@ The pulses acquired during the data taking are shown in persistence plots in fig
 \clearpage
 
 \subsection{Source measurements - scatter plots}
-An online pulse shape analysis was run on all the above mentioned data sets. The parameters of the pulses were plotted in 2D histograms - in form of scatter plots. The aim was to find a way to distinguish between the various types of radiation in order to only select the spectrum of a single type of particles from a spectrum of a mixed source. The energy spectrum is directly proportional to the measured area of the current pulses, therefore all the parameters were plotted against the pulse area. The parameters used were: 
+An online pulse shape analysis has been run on all the above mentioned data sets. The parameters of the pulses are plotted in 2D histograms - in form of scatter plots. The aim is to find a way to distinguish between the various types of radiation in order to only select the spectrum of a single type of particles from a spectrum of a mixed source. The energy spectrum is directly proportional to the measured area of the current pulses, therefore all the parameters were plotted against the pulse area. The parameters used are: 
 \begin{itemize}
 \item FWHM
+\item Base width
 \item Amplitude
 \item Amplitude $\times$ Base width
 \item Base width - FWHM
-\item Form factor
 \item Slope
 \end{itemize}
-The sets of plots in figures~\ref{fig:scatterbm}, \ref{fig:scatterae}, \ref{fig:scatterah}, \ref{fig:scattersr}, \ref{fig:scatterco} and \ref{fig:scatterpu} show the above listed parameters plotted against the pulse area for $^{241}$Am background, electrons and holes, $^{90}Sr$, $^{64}$Co and $^{239}$Pu-Be source, respectively. Any distinguishable difference between the plots of two sources would suggest that that particular parameter can be used to distinguish one type radiation from the other. In these figures the photons are considered the rejected pulses (greyscale colour palette) whereas $\upalpha$ particles or neutrons are accepted (yellow colour palette).
+The sets of plots in figures~\ref{fig:scatterbm}, \ref{fig:scatterae}, \ref{fig:scatterah}, \ref{fig:scattersr} and \ref{fig:scatterco} show the above listed parameters plotted against the pulse area for $^{241}$Am background, electrons and holes, $^{90}Sr$ and $^{64}$Co source, respectively. Any distinguishable difference between the plots of two sources would suggest that that particular parameter can be used to distinguish one type radiation from the other. In these figures the photons are considered the rejected pulses (greyscale colour palette) whereas $\upalpha$ particles or neutrons are accepted (yellow colour palette).
 
  
 
@@ -502,7 +496,7 @@ The $^{241}$Am background measurement (see figure~\ref{fig:scatterbm}) revealed 
 
 The phase space of the $^{90}$Sr source overlaps entirely with that of the $^{60}$Co source (see figures~\ref{fig:scattersr} and \ref{fig:scatterco}). This renders it virtually impossible to distinguish between photons and electrons (MIPs). Comparing the FWHM phase space of the photons and alphas and the high reach of the former, the electron collection of the alphas would need to be used to distinguish between the two types of particles. 
 
-The neutron source emits a mixed field of neutrons and photons. The neutrons are rarely detected-- the interactions happen mostly in the electrodes on either side of the detector. The $\upalpha$ particles created by the interactions are detected by the diamond. Depending on the side of the interaction, the created pulse is either due to hole-- or electron collection. They make the two distinct lines in the FWHM phase space (see figure~\ref{fig:scatterpu}, top left plot) at 9~ns and 6~ns. The third line at 4~ns is created when a neutron interacts in the ballistic centre~\cite{} of the diamond -- the position where it takes the holes and the electrons the same time to drift to the opposite electrodes. The entries in between are created by neutron interactions at random positions in the diamond, which produce pulses of various shapes. By making use of the Form Factor set to 1.45, the three-line structure becomes more pronounced. However, a part of the cluster belonging to the 9~ns line is omitted. This part with the area ranging between 600 and 1000~pVs starts decreasing in FWHM due to an unexplained phenomenon, probably detector related. Consequently its Form Factor falls below the threshold of 1, rejecting these entries as background. In an alternative case (see figure~\ref{fig:scatterpu2}), a Slope qualifier is used instead. By cutting the pulses whose falling slope is not steep enough, there is a big chance that neutrons with a low energy deposition (small amplitudes) are cut away as well. Nevertheless, the entries with the large area, which definitely pertain to the neutron interactions, are accepted in this case. The three distinct lines in the FWHM phase space are still visible.
+The neutron source emits a mixed field of neutrons and photons. The neutrons are rarely detected-- the interactions happen mostly in the electrodes on either side of the detector. The $\upalpha$ particles created by the interactions are detected by the diamond. Depending on the side of the interaction, the created pulse is either due to hole-- or electron collection. They make the two distinct lines in the FWHM phase space (see figure~\ref{fig:scatterpu}, top left plot) at 9~ns and 6~ns. The third line at 4~ns is created when a neutron interacts in the ballistic centre~\cite{CHRISSI:00001} of the diamond -- the position where it takes the holes and the electrons the same time to drift to the opposite electrodes. The entries in between are created by neutron interactions at random positions in the diamond, which produce pulses of various shapes. By making use of the Form Factor set to 1.45, the three-line structure becomes more pronounced. However, a part of the cluster belonging to the 9~ns line is omitted. This part with the area ranging between 600 and 1000~pVs starts decreasing in FWHM due to an unexplained phenomenon, probably detector related. Consequently its Form Factor falls below the threshold of 1, rejecting these entries as background. In an alternative case (see figure~\ref{fig:scatterpu2}), a Slope qualifier is used instead. By cutting the pulses whose falling slope is not steep enough, there is a big chance that neutrons with a low energy deposition (small amplitudes) are cut away as well. Nevertheless, the entries with the large area, which definitely pertain to the neutron interactions, are accepted in this case. The three distinct lines in the FWHM phase space are still visible.
 
 
 %The shape of the pulse at smaller energies retains the width, only its amplitude is decreased.
@@ -557,39 +551,46 @@ Space charge built up during the neutron irradiation ($\sim10^{10}~$n), which re
 
 % ---------------------------------------------------------------------------------------------------------------
 \clearpage
-\section{Neutron reactor measurements}
+%\section{Neutron reactor measurements}
+\section{Applications in neutron instrumentation}
 \label{sec:nm}
 % ---------------------------------------------------------------------------------------------------------------
+
+The real-time pulse shape analysis procedure can be applied to more complex systems. This section includes three applications where the PSA has been applied.
+
 Semiconductor-based neutron detectors provide a compact technology for neutron detection. However, the cross section of a neutron with the diamond bulk is very low, since it only interacts with the core of the atom. Diamond is mainly used to detect charged particles and photons. 
 
-Research neutron reactors radiate a mix of particles, apart from neutrons also photons. The photons are considered a background radiation, concealing the neutron spectrum. When measured with diamond, the signal from neutrons is difficult to distinguish from the photon spectrum. In addition, low energy neutrons do not cause nuclear reactions in the bulk. All in all, the neutron measurements in a reactor present a challenge with diamond. However, by means of the PSA, the neutron signal can be discriminated from the photon background to some extent. The following two cases show how measurements of fast (n$^+$) and thermal (n$^-$) neutrons were carried out by making use of the PSA.
+Research neutron reactors radiate a mix of particles, apart from neutrons also photons. The photons are considered a background radiation, concealing the neutron spectrum. When measured with diamond, the signal from neutrons is difficult to distinguish from the photon spectrum. In addition, low energy neutrons do not cause nuclear reactions in the bulk. All in all, the neutron measurements in a reactor present a challenge with diamond. However, by means of the PSA, the neutron signal can be discriminated from the photon background to some extent. The following two cases show how measurements of fast (n$^+$) and thermal (n$^-$) neutrons have been carried out by making use of the PSA.
 
-Note the changed scale on the X axis with respect to the figures in section~\ref{sec:sourcecalib}.
+Note the changing scale on the X axis in the figures.
 
-\subsection{Thermal neutron spectroscopy - TRIGA reactor}
 
-Thermal neutrons do not interact with the diamond bulk due to their low kinetic energy (of the order of 0.012eV). Hence a converter foil has to be added to produce second order effects. Incoming neutrons interact with the foil, producing a set of secondary particles. These can then be detected upon hitting the detector bulk. Common neutron interactions that are used in thermal neutron detection are \textsuperscript{10}B(n,$\alpha$)\textsuperscript{7}Li reaction and \textsuperscript{6}Li(n,$\alpha$)\textsuperscript{3}H reaction ($\alpha$ stands for $^4_2$He, see equation~\ref{eq:reaction}). The focus in this section is on the latter. With a foil installed, there are several possibilities for neutrons to interact with the detector system. Each of these interactions ionises the diamond bulk in its own way, resulting in a specific shape of the current pulse. A neutron can: 1) interact with the foil, producing an $\upalpha$ and a \textsuperscript{3}H, 2) interact with a carbon atom, producing an $\upalpha$ and a $\upgamma$ or even three $\upalpha$. Focusing on case (1), the equation for this reaction is the following:
+
+\subsection{Thermal neutron flux monitoring}
+Research neutron reactors like TRIGA MARK II~\cite{TRIGA:00001} at Atominstitut~\cite{ATOM:00001} in Vienna are capable of emitting neutrons at a wide range of energies. The neutron flux is proportional to the current power of the reactor. It is therefore instrumental to monitor the neutron flux to make sure that the reactor operation is within the specified limits. However, the byproduct of the radioactive decays in the core is $\upgamma$ radiation, which has an energy range that overlaps with that of neutrons, making it difficult to measure the neutron flux. This is where PSA and diamond detectors come into play. This section describes the application of thermal neutron flux monitoring by means of the PSA.
+
+Thermal neutrons do not interact with the diamond bulk due to their low kinetic energy (of the order of 0.012~eV). Hence a converter foil has to be added to produce second order effects. Incoming neutrons interact with the foil, producing a set of secondary particles. These can then be detected upon hitting the detector bulk. Common neutron interactions that are used in thermal neutron detection are \textsuperscript{10}B(n,$\alpha$)\textsuperscript{7}Li reaction and \textsuperscript{6}Li(n,$\alpha$)\textsuperscript{3}H reaction ($\alpha$ stands for $^4_2$He, see equation~\ref{eq:reaction}). The focus in this section is on the latter. With a foil installed, there are several possibilities for neutrons to interact with the detector system. Each of these interactions ionises the diamond bulk in its own way, resulting in a specific shape of the current pulse. A neutron can: 1) interact with the foil, producing an $\upalpha$ and a \textsuperscript{3}H, 2) interact with a carbon atom in the lattice, producing an $\upalpha$ and a $\upgamma$ or even three $\upalpha$. The thermal neutrons do not have enough kinetic energy to interact with the lattice, therefore the focus will be on case (1), the equation for this reaction is the following:
 \begin{equation}
 \label{eq:reaction}
    ^6_3Li   +   ^1_0n \;\rightarrow\; ^3_1H_{(2.73 MeV)} + \alpha_{(2.05 MeV)}
 \end{equation}
-The particles in the first case will be produced outside the diamond and will get stopped immediately upon hitting the sensor. The resulting pulses for both particles will have a rectangular shape of the same width, because the carriers will drift with the same speed in both cases. The difference is in the number of free carriers produced - triton will release more of them, which will in turn induce a higher pulse.
-TRIGA MARK II neutron reactor emits large amounts of $\upgamma$ radiation in the energy range up to 3~MeV. This already affects the measurements of $\upalpha$ particles, the energy of which peaks at 2.05 MeV in the case of \textsuperscript{6}Li converter foil. However, $\upgamma$ background radiation can be suppressed by discriminating current pulses of photons and $\alpha$ particles. This idea has already been implemented in offline analysis in~\cite{}. The results show that the background photons can be subtracted successfully. In order to improve the speed of the readout system and pulse analysis, the algorithm has been ported to FPGA where it discriminates particles in real time. 
+The particles in the first case are produced outside the diamond and get stopped immediately upon hitting the sensor. The resulting pulses for both particles have a rectangular shape of the same width, because the carriers drift with the same speed in both cases. The difference is in the number of free carriers produced - the tritium creates more (proportional to the deposited energy), which in turn induces a higher pulse.
 
+TRIGA MARK II neutron reactor emits large amounts of $\upgamma$ radiation in the energy range up to 3~MeV. This already affects the measurements of $\upalpha$ particles, the energy of which peaks at 2.05 MeV in the case of \textsuperscript{6}Li converter foil. However, $\upgamma$ background radiation can be suppressed by discriminating current pulses of photons from those induced by $\upalpha$ particles. This idea has already been implemented in offline analysis in~\cite{PAVEL:00000, PAVEL:00002}. The results show that the background photons can be subtracted successfully. In order to make sure that every single incident thermal neutron has been accounted for, the algorithm has been ported to FPGA where it detects and analyses particles in real time. 
 
 \subsubsection{Measurements}
-ROSY readout device with the implemented Pulse Shape Analysis was put to a test at Atominstitut in Vienna. Their TRIGA2 neutron reactor is capable of delivering thermal neutrons with the energy 0.012~eV at a rate of 10$^3$~n~cm$^{-2}$ $s^{-1}$, with a considerable $\gamma$ background. 
+ROSY readout device with the implemented Pulse Shape Analysis was put to a test at Atominstitut in Vienna. Their TRIGA2 neutron reactor is capable of delivering thermal neutrons with the energy 0.012~eV at a rate of 10$^3$~n~cm$^{-2}$ $s^{-1}$, with a considerable $\upgamma$ background. 
 
-First, the device was calibrated using an unsealed monochromatic $\alpha$-source with the energy $E_\alpha=5.12MeV$. Then the diamond detector was exposed to the beam. Secondary reaction products ($\alpha$ and \textsuperscript{3}H particles), created by neutrons hitting the converter foil, were detected by the diamond sensor, together with a significant photon background. Then the pulse identification algorithm was applied to discriminate between the reaction products and the photons.
-%The diagram in figure~\ref{fig:rochain} shows the readout chain of the measurement system, which consists of a detector assembly, a signal preamplifier, a readout device and a controller PC. 
-The main parts of the detector were an scCVD diamond sensor sized $4.7\times4.7$~cm$^2$ and a $1.8~\upmu$m thick LiF converter foil, both embedded in an RF-tight PCB. The diamond sensor was biased with high voltage and capacitively coupled to CIVIDEC's C2 40~dB wide bandwidth signal preamplifier. A 5~m long BNC cable connected the preamplifier to CIVIDEC ROSY box. The detector assembly together with the preamplifier was fixed in front of an exit hole of the reactor.
+First, the device was calibrated using an unsealed monochromatic $^{241}Am$ source with the emitted particle energy $E_\alpha=5.12MeV$ (taking into account the losses in the air). Then the diamond detector was exposed to the beam. Secondary reaction products ($\alpha$ and \textsuperscript{3}H particles), created by neutrons hitting the converter foil, were detected by the diamond sensor, together with a significant photon background. Then the pulse identification algorithm was applied to discriminate between the reaction products and the photons.
+
+The main parts of the detector are an sCVD diamond sensor sized $4.7\times4.7$~cm$^2$ and a $1.8~\upmu$m thick LiF converter foil, both embedded in an RF-tight PCB. The diamond sensor is biased with a bias voltage of 1~V/$\upmu$m  and capacitively coupled to CIVIDEC's C2 40~dB wide bandwidth current preamplifier. A 5~m long BNC cable connects the preamplifier to CIVIDEC ROSY box. The detector assembly together with the preamplifier has to be placed in front of an exit hole of the reactor.
+
+Note: this data set has been taken with an older version of the firmware, which only measured a limited number of pulse parameters.
+
 
 \subsubsection{Results}
 The data collected by the PSA show a high flux of photons, which covers a wide area range. The $^3$He peak is clearly visible and has almost no overlap with the photon cluster. The $\upalpha$ cluster has a much lower energy and is in the same energy range as the photons. However, if a FWHM parameter is observed, a distinction between the photons and the $\upalpha$ can be seen. By setting a qualifier to the right value, the photon background is cut away, leaving only the thermal neutron decay products in the data set (see figure~\ref{fig:scattertriga1}).
 
-Note: this data set was taken with an older version of the firmware, which only measured a limited number of pulse parameters.
-
-%\clearpage
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.99\textwidth]{../../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1}
@@ -597,15 +598,45 @@ Note: this data set was taken with an older version of the firmware, which only 
 \label{fig:scattertriga1}
 \end{figure}
 
+%TO-DO 1-D hist before-after!
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=0.99\textwidth]{../../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1}
+%\caption{Thermal neutrons, photons. Qualifier: FWHM 7--12~ns}
+%\label{fig:scattertriga1}
+%\end{figure}
 
 
-\subsection{Fast neutron spectroscopy - CROCUS reactor}
-The CROCUS reactor at EPFL~\cite{} is a research neutron reactor. Its highest output power is 100~W. Currently there are fission chambers that carry out the neutron counting, which is a measure of the activity of the reactor. The new goal is to measure both neutrons and photons, but separately. The pulse shape analysis is a good solution for this task.  Therefore a 400~$\upmu$m thick diamond detector with a specially designed casing was added to measure the activity. The LiF foil was added for conversion of thermal neutrons. The ROSY box with the integrated PSA routine was used for signal analysis.
 
-The results from a test run at 10~W output power are shown in figure~\ref{fig:scatterepfl2}. The data include a mixed field consisting of fast neutrons, photons and of $\upalpha$ and $^3$He particles as products of thermal neutron decay. The data after the applied cuts again show a distinct $^3$He cluster, as well as the three-lane neutron signature. The $\upalpha$ signal is buried under the signals stemming from fast neutrons and photons.  
+\subsection{Fusion power monitoring}
+Many research collaborations around the world are trying to develop a functional fusion reactor, which could provide a cleaner energy source. One of them is ITER~\cite{ITER:00000}, a research fusion reactor being built in France. The idea behind it is to harvest energy from the fusion of light atoms into a heavier one. For ITER the fuel chosen is a mixture of deuterium and tritium, which fuse into a helium atom at extremely high temperatures (plasma), emitting a highly energetic neutron as a byproduct. The equation is the following:
+\begin{equation}
+^2_1D+^3_1T ~\rightarrow~ ^4_2He+^1_0n+17.6~MeV.
+\end{equation}
+The $\upalpha$ particle immediately deposits its energy within the plasma. The neutron, due to its neutral charge, continues its way out of the system where it is stopped. The stopping power is converted into energy, which heats the water into steam, which in turn spins the turbines, generating electricity.
+
+It is possible to monitor the activity of the reactor by measuring the flux of neutrons emitted. Neutron diagnostics such as neutron cameras, neutron spectrometers and neutron flux monitors therefore provide robust measurements of fusion power. A high $\upgamma$ background makes it difficult to accurately measure the neutron flux. This is a motivation to use a diamond based detector with a real-time PSA algorithm.
+
+The neutrons emitted are 14~MeV mono-energetic fast neutrons. The most accurate and efficient way to detect them with a diamond detector is by means of a C$_\mathrm{12}$(n,$\upalpha$) reaction with a carbon atom in the ballistic centre~\cite{PAVEL:00001}. In this region the positive and negative charge carriers created by $\upalpha$ that start drifting in the opposite directions need the same time to reach the opposite electrodes.
 
 
- 
+
+
+
+%\subsection{Recoil proton monitoring}
+%High energy neutrons are typically detected indirectly through elastic scattering reactions. They collide with the nucleus of atoms in the detector, transferring energy to that nucleus and creating an ion, which is detected. 
+
+
+
+
+\subsection{Fast neutron monitoring}
+The CROCUS reactor at EPFL~\cite{EPFL:00000} is a research neutron reactor. The research group working on the reactor is interested in measuring neutrons with energies between 1--2~MeV, which is overlapping with the $\upgamma$ background energy range.
+
+The highest output power of the CROCUS reactor is 100~W. Currently there are fission chambers that carry out the neutron counting, which is a measure of the activity of the reactor. The new goal is to measure both neutrons and photons, but separately. The pulse shape analysis is a good solution for this task. For this, a 400~$\upmu$m thick diamond detector with a specially designed casing was added to measure the activity. The LiF foil was added for conversion of thermal neutrons. The ROSY box with the integrated PSA routine was used for signal analysis.
+
+The results from a test run at 10~W output power are shown in figure~\ref{fig:scatterepfl2}. The data include a mixed field consisting of fast neutrons, photons and of $\upalpha$ and $^3$He particles as products of thermal neutron decay (due to a LiF foil in front of the detector). The data after the applied cuts again show a distinct $^3$He cluster, as well as the three-lane neutron signature. The $\upalpha$ signal is buried under the signals stemming from fast neutrons and photons.  
+
+
 \clearpage
 \begin{figure}[!t]
 \centering
@@ -613,6 +644,9 @@ The results from a test run at 10~W output power are shown in figure~\ref{fig:sc
 \caption{Fast neutrons, thermal neutrons, photons. Qualifiers: BW-FWHM 0--4~ns, FWHM 3--12~ns, Form factor 1.45, Slope 10--108~mV/ns}
 \label{fig:scatterepfl2}
 \end{figure}
+
+
+
 
 
 % ---------------------------------------------------------------------------------------------------------------
@@ -626,7 +660,8 @@ This chapter describes a system that can identify the type of radiation in real 
 
 
 
-
+\bibliography{bib5}{}
+\bibliographystyle{plain}
 
 
 

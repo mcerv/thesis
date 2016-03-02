@@ -35,7 +35,8 @@
 #define STAGE2 1
 #define STAGE3 2
 #define EMPTYPOINT -9999.9
-#define SCALING 1e3/12.4
+// #define SCALING 1e3/12.4
+#define SCALING 1
 // #define SCALING 1e3/10.6  //12.4 IS CHEATING
 #define PARTICLESPERSEC 7
 
@@ -114,6 +115,10 @@ int32_t main (void) {
     }
   }
 
+  double ampl0[nSamples];
+  double ample0[nSamples];
+  bool firsttime[nSamples] = {true, true, true, true, true};
+
   for (int32_t sample=0; sample<nSamples; sample++) {
     //average over ten hits
     const int32_t averaging = 50;
@@ -122,6 +127,7 @@ int32_t main (void) {
     double amplAvg = 0;
     double amplSumError = 0;
     for (int32_t i=0; i<timestamp.at(sample).size(); i++) {
+
       amplSum += amplitude.at(sample).at(i);
       avgCnt++;
       if (avgCnt>=averaging) {
@@ -138,11 +144,22 @@ int32_t main (void) {
         //      << " AvgAmpl= " << amplAvg
         //      << " Error= " << amplSumError
         //      << endl;
+        //first values
+        if (firsttime[sample]) {
+          ampl0[sample] = amplAvg;
+          ample0[sample] = amplSumError;
+          cout << sample << " " << ampl0[sample] << " " << ample0[sample] << endl;
+          firsttime[sample] = false;
+        }
         //write out
-        amplitudeAvg.at(sample).push_back(amplAvg*SCALING); //the average of "averaging" hits
-        amplitudeAvgError.at(sample).push_back(amplSumError*SCALING);
+        amplitudeAvg.at(sample).push_back(amplAvg*SCALING/ampl0[sample]); //the average of "averaging" hits
+        amplitudeAvgError.at(sample).push_back(amplSumError*SCALING/ample0[sample]);
         timestampAvg.at(sample).push_back(timestamp.at(sample).at(i-averaging/2) );//averaged timestamp
         timestampAvgError.at(sample).push_back(0.0);
+
+
+
+
         amplSum = 0;
         amplSumError = 0;
         avgCnt = 0;
@@ -152,19 +169,22 @@ int32_t main (void) {
 
   TApplication* app = new TApplication("app",0,0);
   DrawFuns* dr = new DrawFuns();
-  TCanvas* can = new TCanvas("can","can",800,600);
+  TCanvas* can = new TCanvas("can","can",860,600);
   dr->prettify(can);
-
+  can->SetLeftMargin(0.17);
   TMultiGraph* mg = new TMultiGraph();
-  TGraphErrors* gr[nSamples];
-  TLegend* leg = new TLegend(0.46,0.4,0.83,0.67);
+  TGraph* gr[nSamples];
+  // TGraphErrors* gr[nSamples];
+  TLegend* leg = new TLegend(0.46,0.5,0.83,0.77);
 
   for (int32_t sample=0; sample<nSamples; sample++) {
-    gr[sample] = new TGraphErrors(amplitudeAvg.at(sample).size(), &timestampAvg.at(sample)[0], &amplitudeAvg.at(sample)[0],
-                                  &timestampAvgError.at(sample)[0], &amplitudeAvgError.at(sample)[0]);
+    // gr[sample] = new TGraphErrors(amplitudeAvg.at(sample).size(), &timestampAvg.at(sample)[0], &amplitudeAvg.at(sample)[0],
+    //                               &timestampAvgError.at(sample)[0], &amplitudeAvgError.at(sample)[0]);
+    gr[sample] = new TGraph(amplitudeAvg.at(sample).size(), &timestampAvg.at(sample)[0], &amplitudeAvg.at(sample)[0]);
     dr->prettify(gr[sample]);
     // gr[sample]->SetLineColor(dr->clrVolt[sample]);
     gr[sample]->SetMarkerStyle(24-sample);
+    gr[sample]->SetLineWidth(1);
     mg->Add(gr[sample]);
     ss.str("");
 
@@ -180,12 +200,15 @@ int32_t main (void) {
     // leg->AddEntry(gr[sample], ss.str().c_str(),  "LEP");
     leg->AddEntry(gr[sample], sampleTitle[sample].c_str(),  "LEP");
   }
-  mg->Draw("ALP");
+  mg->Draw("APL");
   dr->prettify(mg);
   // mg->GetXaxis()->SetTitle("Time [s]");
   mg->GetXaxis()->SetTitle("Received dose #Phi [#alpha]");
-  mg->GetYaxis()->SetTitle("Collected charge [fC]");
-  mg->GetYaxis()->SetRangeUser(0,0.7*SCALING); //[V]
+  // mg->GetYaxis()->SetTitle("Collected charge [fC]");
+  mg->GetYaxis()->SetTitle("#frac{Q(#Phi)}{Q(0)}");
+  mg->GetYaxis()->SetRangeUser(0.2,1.1); //[V]
+
+
   // mg->GetXaxis()->SetRangeUser(0,1150); //[s]
   leg->Draw("same");
 
