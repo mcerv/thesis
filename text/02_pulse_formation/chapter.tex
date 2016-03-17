@@ -1,33 +1,9 @@
-% ---------------------------- comment out when compiling the full document -------------------
-\documentclass[twoside,12pt]{packages/mytustyle}  % default square logo 
-\usepackage{amssymb}
-\usepackage{caption}
-\usepackage{upgreek}
-\usepackage[greek,english]{babel}
-\usepackage{subfig}
-\usepackage{packages/fancyhdr}% http://ctan.org/pkg/fancyhdr
-\pagestyle{fancy}% Change page style to fancy
-\fancyhead[OR]{\renewcommand\thesection}
-\fancyhead[ER]{\renewcommand\chaptername}
-
-\usepackage{lineno}
-  \linenumbers
-
-%\usepackage{siunitx}
-\usepackage{enumitem}
-\setlist[description]{leftmargin=0cm,labelindent=0cm}
-\begin{document}
-\baselineskip=15pt
-\newcommand{\ga}{\greektext a\latintext}
-\newcommand{\gmu}{\greektext m\latintext}
-% ---------------------------------------------------------------------------------------------------------------
-\tableofcontents
 
 \chapter{Signal formation in diamond}
 
 This chapter describes the fundamentals of signal formation in a diamond sensor, as well as its use as a particle detector. This is described in section~\ref{sec:princsigfor} where energy deposition and signal formation mechanism are explained. Then some examples of ionisation are shown. Later, some of the internal lattice defects that effect the signal are described. The final section contains the description of the remaining part of the signal chain -- signal amplifiers, digitisers and devices for signal processing. Noise contributions are discussed at every stage of the signal chain.
 
-There are many types of radiation sensors existing, but in this chapter we will focus on semiconductors, in particular on diamond sensors. Diamond is a good insulator, but behaves as a semiconductor in certain cases.  In fact, the main principle of operation is the same for diamond, silicon and other semiconducting materials -- ionisation.  An impinging highly energetic charged particle ionises the atoms in the lattice, freeing electrons and holes, which then drift towards positively and negatively charged electrodes, inducing an electrical signal. A sensor converts the energy deposited by a particle or a photon to an electrical signal.
+There are many types of radiation sensors existing, but in this chapter we will focus on semiconductors, in particular on diamond sensors. Diamond is a good insulator, but behaves as a semiconductor in certain cases.  In fact, the main principle of operation is the same for diamond, silicon and other semiconducting materials -- ionisation.  An incident highly energetic charged particle ionises the atoms in the lattice, freeing electrons and holes, which then drift towards positively and negatively charged electrodes, inducing an electrical signal. A sensor converts the energy deposited by a particle or a photon to an electrical signal.
 
 Silicon is currently considered as the industry standard for particle detection. However, there are some disadvantages of using silicon instead of diamond, due to significant differences in the material properties. In particular, the properties of silicon change significantly with radiation. For instance, the leakage current increases, which in turn increases shot noise and can lead to a thermal runaway. In addition, due to induced lattice defects, which act as charge traps, its charge collection efficiency starts dropping quickly. Both are true for diamond as well, but on a much smaller scale.
 
@@ -74,7 +50,7 @@ Semiconductors are materials that are that are conductive only under specific co
 
 %\begin{figure}[!t]
 %\begin{center}
-%\includegraphics[width=0.4\linewidth]{plots/semilattice9}
+%\includegraphics[width=0.4\linewidth]{02_pulse_formation/pics/plots/semilattice9}
 %\caption{Valence bonds in the crystalline structure can be broken, producing a free electron-hole pair}
 %\label{fig:semilattice9}
 %\end{center}
@@ -94,10 +70,10 @@ If an external electric field is applied to the crystalline structure, the free 
 
 \begin{figure}[!t]
 \begin{tabular}{cccc}
-\subfloat[Valence bonds in the crystalline structure can be broken, creating a free electron-hole pair]{\includegraphics[width=0.22\textwidth]{plots/semilattice9} \label{fig:semilattice9}} &
+\subfloat[Valence bonds in the crystalline structure can be broken, creating a free electron-hole pair]{\includegraphics[width=0.22\textwidth]{02_pulse_formation/pics/plots/semilattice9} \label{fig:semilattice9}} &
 \subfloat&
-\subfloat[The freed electron-hole pair starts drifting in the externally applied electric field. The electron and hole drift in the opposite directions towards the oppositely charged electrods]{\includegraphics[width=0.33\textwidth]{plots/simpledrift} \label{fig:simpledrift}} &
-\subfloat[Equivalent electrical circuit. The moving charges act as a current source]{\includegraphics[width=0.33\textwidth]{plots/simpledrifteq}  \label{fig:simpledrifteq}}
+\subfloat[The freed electron-hole pair starts drifting in the externally applied electric field. The electron and hole drift in the opposite directions towards the oppositely charged electrods]{\includegraphics[width=0.33\textwidth]{02_pulse_formation/pics/plots/simpledrift} \label{fig:simpledrift}} &
+\subfloat[Equivalent electrical circuit. The moving charges act as a current source]{\includegraphics[width=0.33\textwidth]{02_pulse_formation/pics/plots/simpledrifteq}  \label{fig:simpledrifteq}}
 \end{tabular}
 \caption{In the equivalent electrical circuit diagram, electron-hole creation and drift can be modelled as a current source with a capacitor in parallel }
 \end{figure}
@@ -118,7 +94,7 @@ The resulting function for a muon (a heavy electron) is shown in figure~\ref{fig
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.7\linewidth]{pics/bb2}
+\includegraphics[width=0.7\linewidth]{02_pulse_formation/pics/bb2}
 \caption{Stopping power for muons according to the Bethe-Bloch formula~\cite{}}
 \label{fig:bb2}
 \end{center}
@@ -134,9 +110,9 @@ E_\mathrm{z}(x,y) = \frac{qz_\mathrm{0}}{2\pi\epsilon_\mathrm{0}(x^2+y^2+z_0^2)^
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[Newly created point charge couples with the conductive plane]{\includegraphics[width=0.30\textwidth]{plots/chargeind1} \label{fig:chargeind1}} &
-\subfloat[When the charge drifts, the charge density in the plane changes]{\includegraphics[width=0.30\textwidth]{plots/chargeind2} \label{fig:chargeind2}} &
-\subfloat[The changing charge density in the small regions of the plane induces current]{\includegraphics[width=0.30\textwidth]{plots/chargeind3}  \label{fig:chargeind3}}
+\subfloat[Newly created point charge couples with the conductive plane]{\includegraphics[width=0.30\textwidth]{02_pulse_formation/pics/plots/chargeind1} \label{fig:chargeind1}} &
+\subfloat[When the charge drifts, the charge density in the plane changes]{\includegraphics[width=0.30\textwidth]{02_pulse_formation/pics/plots/chargeind2} \label{fig:chargeind2}} &
+\subfloat[The changing charge density in the small regions of the plane induces current]{\includegraphics[width=0.30\textwidth]{02_pulse_formation/pics/plots/chargeind3}  \label{fig:chargeind3}}
 \end{tabular}
 \caption{A point-like charge inducing current in a conductive plane}
 \end{figure}
@@ -193,7 +169,7 @@ whereby $v_{\mathrm{drift}}$ is the drift velocity of the point-like charge and 
 \subsection{Radiation-induced electrical pulses}
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{plots/driftboth}
+\includegraphics[width=0.8\linewidth]{02_pulse_formation/pics/plots/driftboth}
 \caption{Charge carrier drift in diamond for $\upbeta/\upgamma$ and for $\upalpha$ particles}
 \label{fig:drift}
 \end{center}
@@ -218,7 +194,7 @@ wherein $E_\mathrm{i}(Si)$=~3.6~eV and E$_\mathrm{i}(C)$=~13~eV. E.g., for an $\
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.45\linewidth]{../../scripts/02_pulse_formation/plots/resolution}
+\includegraphics[width=0.45\linewidth]{../scripts/02_pulse_formation/plots/resolution}
 \caption{Calculated intrinsic energy resolution for silicon and diamond}
 \label{fig:enerres}
 \end{center}
@@ -264,7 +240,7 @@ Poisson's equation shows that
 where $\rho(x)$ is the space charge distribution, $E$ is the electrical field and $\Phi$ is the voltage potential. In an ideal diamond, the externally applied high voltage potential on the two electrodes decreases linearly through the bulk. The electrical field is therefore constant throughout the sensor and the space charge distribution across it equals 0. However, in some cases space charge is introduced in the bulk, uniformly or non-uniformly. It can do so by means of trapping of charge carriers in the non-uniformities in the lattice or it can already be introduced during the production of the diamond material. The space charge can be either permanent or changing -- sometimes it is possible to reduce it by means of priming. All in all, it is very important to reduce it because it affects the shape of the electrical signal. Since the drift velocity of the charge carriers is proportional to the electrical field, the charges change their velocity while drifting through the space charge region. Figure~\ref{fig:spcchg} compares the voltage potential, electrical field, space charge for an ideal sensor and for that with a uniformly distributed positive space charge.
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{plots/spcchg}
+\includegraphics[width=0.6\linewidth]{02_pulse_formation/pics/plots/spcchg}
 \caption{Introduction of space charge in the diamond bulk. The induced current signal is proportional to the effective electrical field. $d$ is the thickness of the diamond sensor.}
 \label{fig:spcchg}
 \end{center}
@@ -283,7 +259,7 @@ These non-uniformities -- traps -- form new energy levels in the forbidden gap. 
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{plots/raddamage}
+\includegraphics[width=0.6\linewidth]{02_pulse_formation/pics/plots/raddamage}
 \caption{Introduction of impurities and non-uniformities into the crystal lattice due to radiation damage.}
 \label{fig:spcchg}
 \end{center}
@@ -316,8 +292,8 @@ The signal charge generated in the sensor by a single highly energetic particle 
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[A capacitive source and a current amplifier]{\includegraphics[width=0.50\textwidth]{plots/curramp} \label{fig:curramp}} &
-\subfloat[A capacitive source and a charge amplifier]{\includegraphics[width=0.40\textwidth]{plots/chgamp}  \label{fig:chgamp}}
+\subfloat[A capacitive source and a current amplifier]{\includegraphics[width=0.50\textwidth]{02_pulse_formation/pics/plots/curramp} \label{fig:curramp}} &
+\subfloat[A capacitive source and a charge amplifier]{\includegraphics[width=0.40\textwidth]{02_pulse_formation/pics/plots/chgamp}  \label{fig:chgamp}}
 \end{tabular}
 \caption{Simplified equivalent circuits of a current and charge amplifier }
 \end{figure}
@@ -331,7 +307,7 @@ u_\mathrm{o}(t) = A \cdot R_\mathrm{i} \cdot i_\mathrm{s}(t).
 The detector capacitance $C_\mathrm{det}$ together with the input resistance of the amplifier $R_\mathrm{i}$ defines the time constant of the signal (see figure~\ref{fig:currc}). The higher the $C_\mathrm{det}$ is, the slower will be the response of the amplifier. For the case of the diamond sensor, which has the capacitance of the order of 2~pF and the input resistance of 50~$\Omega$, the resulting time constant is $\tau=10^{-10}$~s. This yields the signal rise time $t_\mathrm{r}\sim2.2\tau=0.22~ns$.
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.45\linewidth]{plots/currrc}
+\includegraphics[width=0.45\linewidth]{02_pulse_formation/pics/plots/currrc}
 \caption{Input and output signal of the current amplifier}
 \label{fig:currc}
 \end{center}
@@ -349,7 +325,7 @@ In an ideal amplifier the output voltage $u_\mathrm{o}$ equals $-Au_\mathrm{i}$.
 In reality, however, charge-sensitive amplifiers respond much slower than is the duration of the current pulse from the sensor. In addition, a resistor is added to the feedback line in parallel to the capacitor. The resistor and capacitor define the decay time constant of the pulse (see figure~\ref{fig:chgrc}). This is necessary to return the signal to its initial state and ready for a new measurement.
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.45\linewidth]{plots/chgrc}
+\includegraphics[width=0.45\linewidth]{02_pulse_formation/pics/plots/chgrc}
 \caption{Input and output signal of the charge amplifier}
 \label{fig:chgrc}
 \end{center}
@@ -375,7 +351,7 @@ Q_\mathrm{ADC}=\frac{V_\mathrm{ADC}}{2^{n}}  = \frac{100~mV}{2^8~steps} = 0.39~m
 With a sampling period of $t_\mathrm{s}=$1~ns this will produce the sampling rate of $f_\mathrm{s}=$1~GSPS (gigasample per second).
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.55\linewidth]{plots/qerr}
+\includegraphics[width=0.55\linewidth]{02_pulse_formation/pics/plots/qerr}
 \caption{Input signal digitisation and quantisation error}
 \label{fig:qerr}
 \end{center}
@@ -403,16 +379,8 @@ To update the chip, the design has to be submitted to a foundry, which produces 
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[Xilinx Virtex 5 FPGA~\cite{FPGA:00000}]{\includegraphics[width=0.45\textwidth]{pics/fpga} \label{fig:fpga}} & 
-\subfloat[ASIC~\cite{ASIC:00000}]{\includegraphics[width=0.45\textwidth]{pics/asic}  \label{fig:asic}}
+\subfloat[Xilinx Virtex 5 FPGA~\cite{FPGA:00000}]{\includegraphics[width=0.45\textwidth]{02_pulse_formation/pics/fpga} \label{fig:fpga}} & 
+\subfloat[ASIC~\cite{ASIC:00000}]{\includegraphics[width=0.45\textwidth]{02_pulse_formation/pics/asic}  \label{fig:asic}}
 \end{tabular}
 \caption{An example of an FPGA and an ASIC chip}
 \end{figure}
-
-\bibliography{bib2}{}
-\bibliographystyle{plain}
-
-
-% ---------------------------- comment out when compiling the full document -------------------
-\end{document}
-% ---------------------------------------------------------------------------------------------------------------

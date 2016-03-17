@@ -1,0 +1,49 @@
+% ---------------------------- comment out when compiling the full document -------------------
+\documentclass[twoside,12pt]{packages/mytustyle}  % default square logo 
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{upgreek}
+\usepackage{subfig}
+\usepackage{textcomp}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0cm,labelindent=0cm}
+
+\newcommand\Chapter[2]{\chapter
+  [#1\hfil\hbox{}\protect\linebreak{\itshape#2}]%
+  {#1\\[2ex]\Large\itshape#2}%
+}
+
+\usepackage{packages/fancyhdr}% http://ctan.org/pkg/fancyhdr
+\pagestyle{fancy}% Change page style to fancy
+\fancyhead[OR]{\renewcommand\thesection}
+\fancyhead[ER]{\renewcommand\chaptername}
+\graphicspath{ ../../scripts/04_charge_monitoring/plots/ }
+%\fancyhf{}% Clear header/footer
+%\fancyhead{}
+%\fancyhead[RO, LE]{Introduction}	
+%\fancyhead[RO, LE]{\rightmark}	
+%\fancyfoot{}
+%\fancyfoot[RO, LE]{\thepage}% \fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.7pt}% Default \headrulewidth is 0.4pt
+%\renewcommand{\footrulewidth}{0.7pt}% Default \footrulewidth is 0pt
+%\rfoot{\thepage}
+\usepackage{lineno}
+  \linenumbers
+
+\begin{document}
+\baselineskip=15pt
+% ---------------------------------------------------------------------------------------------------------------
+
+%\tableofcontents
+
+% ---------------------------------------------------------------------------------------------------------------
+\include{02_pulse_formation/chapter}
+% ---------------------------------------------------------------------------------------------------------------
+\bibliography{02_pulse_formation/bib}{}
+\bibliographystyle{plain}
+
+
+
+% ---------------------------- comment out when compiling the full document -------------------
+\end{document}
+% ---------------------------------------------------------------------------------------------------------------

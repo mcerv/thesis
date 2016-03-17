@@ -1,41 +1,3 @@
-% ---------------------------- comment out when compiling the full document -------------------
-\documentclass[twoside,12pt]{packages/mytustyle}  % default square logo 
-\usepackage{amssymb}
-\usepackage{caption}
-\usepackage{upgreek}
-\usepackage{subfig}
-\usepackage{textcomp}
-\usepackage{enumitem}
-\setlist[description]{leftmargin=0cm,labelindent=0cm}
-
-\newcommand\Chapter[2]{\chapter
-  [#1\hfil\hbox{}\protect\linebreak{\itshape#2}]%
-  {#1\\[2ex]\Large\itshape#2}%
-}
-
-\usepackage{packages/fancyhdr}% http://ctan.org/pkg/fancyhdr
-\pagestyle{fancy}% Change page style to fancy
-\fancyhead[OR]{\renewcommand\thesection}
-\fancyhead[ER]{\renewcommand\chaptername}
-\graphicspath{ ../../scripts/04_charge_monitoring/plots/ }
-%\fancyhf{}% Clear header/footer
-%\fancyhead{}
-%\fancyhead[RO, LE]{Introduction}	
-%\fancyhead[RO, LE]{\rightmark}	
-%\fancyfoot{}
-%\fancyfoot[RO, LE]{\thepage}% \fancyfoot[R]{\thepage}
-\renewcommand{\headrulewidth}{0.7pt}% Default \headrulewidth is 0.4pt
-%\renewcommand{\footrulewidth}{0.7pt}% Default \footrulewidth is 0pt
-%\rfoot{\thepage}
-\usepackage{lineno}
-  \linenumbers
-
-\begin{document}
-\baselineskip=15pt
-% ---------------------------------------------------------------------------------------------------------------
-
-\tableofcontents
-
 % ---------------------------------------------------------------------------------------------------------------
 \Chapter{Charge monitoring}{The ATLAS Diamond Beam Monitor}
 %\chapter{Charge monitoring}
@@ -76,7 +38,7 @@ When a particle traverses a sensor plane, a hit is recorded in the corresponding
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.6\textwidth]{../../scripts/04_charge_monitoring/plots/detArea}
+\includegraphics[width=0.6\textwidth]{../scripts/04_charge_monitoring/plots/detArea}
 \caption{Diamond detectors installed in high-energy physics experiments in the last decade, sorted by the active sensor area. The first four detectors from the left are radiation monitors whereas the right two are pixel trackers.}
 \label{fig:areavsyear}
 \end{figure}
@@ -103,7 +65,7 @@ One approach to luminosity monitoring is to count the number of particles produc
 The two most important parts of the diamond pixel module (seen in figure~\ref{fig:dbmmodule}) are the sensor, which detects ionising radiation, and the pixellated front-end chip, which collects the ionised charge with a high spatial segmentation, processes the recorded data and sends them to the readout system. This section describes these two main parts of the module and their interconnection.
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{pics/mod1}
+\includegraphics[width=0.7\textwidth]{04_charge_monitoring/pics/mod1}
 \caption{DBM module, top-down view. Visible is the flexible PCB with signal and power connections, the silicon sensor and a part of the FE-I4. Wire bonds from the PCB to the FE-I4 and to the sensor are also visible.}
 \label{fig:dbmmodule}
 \end{figure}
@@ -115,7 +77,7 @@ The DBM modules are instrumented with two types of sensors -- pCVD diamond and s
 \item[Diamond sensors] The target material for this application is pVCD diamond. The reason for this is that the active area of an individual sensor must be approximately 4~cm$^2$, which is too large for the sCVD diamond. pCVD material is also a bit cheaper, which makes a detector with a large active area more feasible to build. The material is provided by three companies: DDL, E6 and II-IV and it is grown in 15~cm wafers, as seen in figure~\ref{fig:wafer}. The target thickness of the wafers is 500~$\upmu$m and the minimum required charge collection efficiency is 40~\% (CCD $\geq$ 200~um). They need to be operated at bias voltages between 600--1000~V. On one side there is a single gold electrode applied across the whole surface. On the other side a pixellated metallisation is added. 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{pics/wafer}
+\includegraphics[width=0.7\textwidth]{04_charge_monitoring/pics/wafer}
 \caption{A pCVD wafer. The golden dots on the surface are the electrodes that are applied during the qualification test. The wafer is measured across the surface to find the regions with the highest efficiency.}
 \label{fig:wafer}
 \end{figure}
@@ -129,7 +91,7 @@ The FE-I4 (front-end version four)~\cite{} is an ASIC pixel chip designed specif
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.45\textwidth]{pics/fei41}
+\includegraphics[width=0.45\textwidth]{04_charge_monitoring/pics/fei41}
 \caption{FE-I4 layout, top-down view. The pink area are pixels grouped into columns, the green area below is the common logic and the red strip at the bottom are the wire bond pads.}
 \label{fig:anapix}
 \end{figure}
@@ -138,7 +100,7 @@ Each pixel is designed as a separate entity. Its electrical chain is shown in fi
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{pics/analogPix}
+\includegraphics[width=0.7\textwidth]{04_charge_monitoring/pics/analogPix}
 \caption{Schematic of an analog pixel. Courtesy of the FE-I4 collaboration.}
 \label{fig:anapix}
 \end{figure}
@@ -171,7 +133,7 @@ Only the modules that passed the pixel connectivity test undergo the second test
 The results for the DBM QC are shown in section~\ref{sec:perfresults}.  All in all, 79 modules went through the QC procedure -- 43 diamond modules and 36 silicon modules, 12 of the latter only for testing purposes. Figure~\ref{fig:production} shows their production with time. 18 diamond modules and 6 silicon modules were in the end chosen to be made up into DBM telescopes and installed into ATLAS.
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.6\textwidth]{../../scripts/04_charge_monitoring/plots/production}
+\includegraphics[width=0.6\textwidth]{../scripts/04_charge_monitoring/plots/production}
 \caption{Module production with time}
 \label{fig:production}
 \end{figure}
@@ -193,19 +155,19 @@ This section gives an overview of the performance results of the DBM modules ach
 \subsection{Source tests}
 All modules went through the same procedure when tested using a $^{90}$Sr source -- to check for disconnected regions and to measure the pseudo-efficiency. 
 
-The setup consisted of a placeholder for the $^{90}$Sr source, an X-Y moving stage with a holder for the module and a scintillator with a photomultiplier placed below the source and the module. The scintillator was used as a trigger -- when it detected a particle, it triggered the readout of the module. If the module was placed in between the source and the scintillator, the particle had to traverse the module to hit the scintillator. Therefore, in the case of a module with a 100~\% efficiency the triggered data read out by the module would need to contain at least one hit in the module. In reality the $\upbeta$ particles scatter around the setup and sometimes hit the scintillator from other directions, without impinging the module. This produces empty triggers. The phenomenon sets the limitation of measuring with a radioactive source as compared to the measurements in a test beam, in which the particles in principle always travel in one direction and their scattering is minimal. 
+The setup consisted of a placeholder for the $^{90}$Sr source, an X-Y moving stage with a holder for the module and a scintillator with a photomultiplier placed below the source and the module. The scintillator was used as a trigger -- when it detected a particle, it triggered the readout of the module. If the module was placed in between the source and the scintillator, the particle had to traverse the module to hit the scintillator. Therefore, in the case of a module with a 100~\% efficiency the triggered data read out by the module would need to contain at least one hit in the module. In reality the $\upbeta$ particles scatter around the setup and sometimes hit the scintillator from other directions, without incident the module. This produces empty triggers. The phenomenon sets the limitation of measuring with a radioactive source as compared to the measurements in a test beam, in which the particles in principle always travel in one direction and their scattering is minimal. 
 
 The test for disconnected regions was carried out by moving the module under the source in X and Y direction so that the exposure over the whole plane was uniform. This resulted in an occupancy scan seen in figures~\ref{fig:MSBM-34-occ} and~\ref{fig:MDBM-23-occ}. The silicon module had a very uniform occupancy plot. So much so that the features of the overlaying flexible PCB can be observed. The rectangular shadows are the passive components whereas the lines are the traces in the PCB. Furthermore, a circular-shaped edge of the PCB can be seen on the bottom right side of the plot. These darker areas are such because fewer electrons can penetrate the material with a high density. In the case of the diamond, the features of the PCB can be observed as well, but are much less distinguishable. In principle, the plot is much more granulated -- less uniform. This high variance in the diamond's detection ability is due to the grain boundaries in the pCVD material which trap the drifting charges, rendering some regions much less efficient. 
 
-The pseudo-efficiency test was carried out by placing the module directly below the source and collimating the particles so that their trajectory was impinging the module in the middle. For every trigger by the scintillator, a script checked whether there was a hit recorded in the module or not. The resulting ratio between the number of triggers and number of hits recorded in the module is a pseudo-efficiency -- an estimation of the sensor's efficiency. It cannot give a precise value due to the triggers produced by scattered particles, but at least gives a rough estimate.
+The pseudo-efficiency test was carried out by placing the module directly below the source and collimating the particles so that their trajectory was incident the module in the middle. For every trigger by the scintillator, a script checked whether there was a hit recorded in the module or not. The resulting ratio between the number of triggers and number of hits recorded in the module is a pseudo-efficiency -- an estimation of the sensor's efficiency. It cannot give a precise value due to the triggers produced by scattered particles, but at least gives a rough estimate.
 
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[Occupancy scan for MSBM-34]{\includegraphics[width=0.45\textwidth]{../../scripts/04_charge_monitoring/plots/MSBM-34-occ} \label{fig:MSBM-34-occ}} &
-\subfloat[Occupancy scan for MDBM-23]{\includegraphics[width=0.45\textwidth]{../../scripts/04_charge_monitoring/plots/MDBM-23-occ}  \label{fig:MDBM-23-occ}} \\
-\subfloat[Pseudo-efficiency scan for MSBM-34]{\includegraphics[width=0.45\textwidth]{../../scripts/04_charge_monitoring/plots/MSBM-34-eff} \label{fig:MSBM-34-eff}} &
-\subfloat[Pseudo-efficiency scan for MDBM-23]{\includegraphics[width=0.45\textwidth]{../../scripts/04_charge_monitoring/plots/MDBM-23-eff}  \label{fig:MDBM-23-eff}}
+\subfloat[Occupancy scan for MSBM-34]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MSBM-34-occ} \label{fig:MSBM-34-occ}} &
+\subfloat[Occupancy scan for MDBM-23]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MDBM-23-occ}  \label{fig:MDBM-23-occ}} \\
+\subfloat[Pseudo-efficiency scan for MSBM-34]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MSBM-34-eff} \label{fig:MSBM-34-eff}} &
+\subfloat[Pseudo-efficiency scan for MDBM-23]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MDBM-23-eff}  \label{fig:MDBM-23-eff}}
 \end{tabular}
 \caption{Occupancy and pseudo-efficiency scans for the silicon (left) and diamond sensor (right) to check for disconnected regions and estimate the sensor's efficiency. Shadows of the electronic components are clearly visible because fewer electrons were able to traverse through such a higher amount of material. }
 \end{figure}
@@ -213,8 +175,8 @@ The pseudo-efficiency test was carried out by placing the module directly below 
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[Disconnected regions for all modules derived from the occupancy scans]{\includegraphics[width=0.45\textwidth]{../../scripts/04_charge_monitoring/plots/disconnectedregion} \label{fig:disconreg}} &
-\subfloat[Pseudo-efficiencies for all modules at various threshold and voltage settings]{\includegraphics[width=0.45\textwidth]{../../scripts/04_charge_monitoring/plots/pseudoefficiency}  \label{fig:pseudoeff}}
+\subfloat[Disconnected regions for all modules derived from the occupancy scans]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/disconnectedregion} \label{fig:disconreg}} &
+\subfloat[Pseudo-efficiencies for all modules at various threshold and voltage settings]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/pseudoefficiency}  \label{fig:pseudoeff}}
 \end{tabular}
 \caption{Measurements of pseudo-efficiency and disconnected regions for all modules that went through the QC procedure}
 \end{figure}
@@ -232,8 +194,8 @@ To analyse the test beam data, Judith~\cite{} software framework was used. Judit
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[This is an efficiency distribution. Each bin corresponds to a single pixel. The triggering scintillator of the Kartel telescope was smaller than the DUT. Hence, the recorded hits can only be seen in the top half of the sensor. ]{\includegraphics[width=0.45\textwidth]{../../scripts/04_charge_monitoring/plots/map} \label{fig:beammap}} &
-\subfloat[Pseudo-efficiencies for all modules at various threshold and voltage settings]{\includegraphics[width=0.45\textwidth]{../../scripts/04_charge_monitoring/plots/distribution}  \label{fig:beamdist}}
+\subfloat[This is an efficiency distribution. Each bin corresponds to a single pixel. The triggering scintillator of the Kartel telescope was smaller than the DUT. Hence, the recorded hits can only be seen in the top half of the sensor. ]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/map} \label{fig:beammap}} &
+\subfloat[Pseudo-efficiencies for all modules at various threshold and voltage settings]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/distribution}  \label{fig:beamdist}}
 \end{tabular}
 \caption{An efficiency study of a prototype DBM diamond module in a test beam. The statistics are low ($\sim$~10~hits/pixel) as the data was collected during a short run. }
 \end{figure}
@@ -247,7 +209,7 @@ To analyse the test beam data, Judith~\cite{} software framework was used. Judit
 %---------------------------------------------------------------------------------------------------------------
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.9\textwidth]{pics/DBM-installed-colour1}
+\includegraphics[width=0.9\textwidth]{04_charge_monitoring/pics/DBM-installed-colour1}
 \caption{This photo highlights four telescopes installed onto the nSQPs and around the pipe}
 \label{fig:dbminatlas}
 \end{figure}
@@ -257,7 +219,7 @@ The DBM is placed in the forward region of the ATLAS detector, very close to the
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.8\textwidth]{../../scripts/04_charge_monitoring/plots/DBM-positioning}
+\includegraphics[width=0.8\textwidth]{../scripts/04_charge_monitoring/plots/DBM-positioning}
 \caption{Position of the DBM in the ATLAS experiment}
 \label{fig:dbminatlas}
 \end{figure}
@@ -270,8 +232,7 @@ The DBM has been commissioned in ATLAS and is now taking data. Several issues st
 The first step of the system test was to take data during collisions and check the occupancy in the individual modules. The occupancies were plotted side by side for comparison. Figure~\ref{fig:collocc} shows some of the occupancy values. At the time, the readout system was not yet configured to read out all telescopes in parallel. 
 \begin{figure}[!t]
 \centering
-**FIGURE PLACEHOLDER**
-%\includegraphics[width=0.8\textwidth]{pics/dbm-coll-occupancy}
+\includegraphics[width=0.8\textwidth]{04_charge_monitoring/pics/occupancy}
 \caption{Occupancy of individual modules during collisions. Only 16 modules were taking data.}
 \label{fig:collocc}
 \end{figure}
@@ -279,7 +240,7 @@ The first step of the system test was to take data during collisions and check t
 The second step was to test the detector's capability of particle tracking. Only one telescope was used to take data with the beam. If all three planes of the telescope were hit during a bunch crossing, a linear line was fitted to the hits. This line represented the particle's trajectory. It was projected towards the interaction point. Two parameters were calculated where the line is the closest to the interaction point: the radial distance and the longitudinal distance between the line and the interaction point (see figure~\ref{fig:z-r-distance}). This was done for the events with two colliding bunches as well as for events with only one, non-colliding bunch. The tracks recorded during the events with two colliding bunches could either come from the collisions or could the background scattering. Tracks recorded during a non-colliding bunch, on the other hand, are definitely background particles since, in principle, there should be no collisions taking place. 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{../../scripts/04_charge_monitoring/plots/z-r-distance}
+\includegraphics[width=0.7\textwidth]{../scripts/04_charge_monitoring/plots/z-r-distance}
 \caption{A diagram showing the radial distance $R_\mathrm{0}$ and longitudinal distance $Z_\mathrm{0}$ of the trajectory from the interaction point at the minimal distance $d$. Z is the axis along the beam line. Three module planes intercept a particle and reconstruct its trajectory.}
 \label{fig:z-r-distance}
 \end{figure}
@@ -289,8 +250,8 @@ A comparison of the data acquired (see figures~\ref{fig:raddist} and~\ref{fig:lo
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[Radial distance of the particle trajectories from the interaction point]{\includegraphics[width=0.45\textwidth]{../../scripts/04_charge_monitoring/plots/D0} \label{fig:raddist}} &
-\subfloat[Longitudinal distance of the particle trajectories (along the beam path) from the interaction point]{\includegraphics[width=0.45\textwidth]{../../scripts/04_charge_monitoring/plots/Z0}  \label{fig:longdist}}
+\subfloat[Radial distance of the particle trajectories from the interaction point]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/D0} \label{fig:raddist}} &
+\subfloat[Longitudinal distance of the particle trajectories (along the beam path) from the interaction point]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/Z0}  \label{fig:longdist}}
 \end{tabular}
 \caption{These two plots show two parameters of particle tracks recorded by one of the DBM telescopes: radial and longitudinal distance of the projected tracks from the interaction point.}
 \end{figure}
@@ -308,13 +269,3 @@ A comparison of the data acquired (see figures~\ref{fig:raddist} and~\ref{fig:lo
 \label{sec:limitations}
 %---------------------------------------------------------------------------------------------------------------
 The Diamond Beam Monitor has been designed as an upgrade to the existing luminosity detectors in the ATLAS experiment. It is the first diamond pixel tracking detector installed in a high-energy physics experiment. The pixelated front-end electronic chips ensure precise spatial detection of the charged high-energy particles. The projective geometry allows for particle tracking and background rejection. The detector is placed in a high-radiation forward region of the experiment. Therefore, radiation hardness of the chosen pCVD diamond sensors is an important requirement. The tests carried out in the test beam and in the laboratory confirmed that enough detector-grade DBM modules have been built to be installed in the experiment. The DBM is now running in ATLAS during collisions. Further improvements have to be made on the readout firmware before it is included in the main readout stream. 
-
-
-
-\bibliography{bib4}{}
-\bibliographystyle{plain}
-
-
-%---------------------------- comment out when compiling the full document -------------------
-\end{document}
-%---------------------------------------------------------------------------------------------------------------

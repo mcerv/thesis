@@ -1,0 +1,942 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  17 MAR 2016 01:27
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**05_makechapter.tex
+(./05_makechapter.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(./packages/mytustyle.cls
+
+LaTeX Warning: You have requested document class `packages/mytustyle',
+               but the document class provides `mytustyle'.
+
+Document Class: mytustyle 2010/11/22 v2.2 OCIAM thesis class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@indent=\dimen108
+\caption@parindent=\dimen109
+\caption@hangindent=\dimen110
+)
+\c@ContinuedFloat=\count89
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/was/upgreek.sty
+Package: upgreek 2003/02/12 v2.0 (WaS)
+Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
+\symugrf@m=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
+(Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count90
+\sf@farskip=\skip43
+\sf@captopadj=\dimen111
+\sf@capskip=\skip44
+\sf@nearskip=\skip45
+\c@subfigure=\count91
+\c@subfigure@save=\count92
+\c@lofdepth=\count93
+\c@subtable=\count94
+\c@subtable@save=\count95
+\c@lotdepth=\count96
+\sf@top=\skip46
+\sf@bottom=\skip47
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip48
+\enit@outerparindent=\dimen112
+\enit@toks=\toks16
+\enit@inbox=\box26
+\enitdp@description=\count97
+)
+(./packages/fancyhdr.sty
+\fancy@headwidth=\skip49
+\f@ncyO@elh=\skip50
+\f@ncyO@erh=\skip51
+\f@ncyO@olh=\skip52
+\f@ncyO@orh=\skip53
+\f@ncyO@elf=\skip54
+\f@ncyO@erf=\skip55
+\f@ncyO@olf=\skip56
+\f@ncyO@orf=\skip57
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count98
+\output=\toks17
+\linenoprevgraf=\count99
+\linenumbersep=\dimen113
+\linenumberwidth=\dimen114
+\c@linenumber=\count100
+\c@pagewiselinenumber=\count101
+\c@LN@truepage=\count102
+\c@internallinenumber=\count103
+\c@internallinenumbers=\count104
+\quotelinenumbersep=\dimen115
+\bframerule=\dimen116
+\bframesep=\dimen117
+\bframebox=\box27
+LaTeX Info: Redefining \\ on input line 3056.
+)
+(./05_makechapter.aux (./05_current_monitoring/chapter.aux))
+\openout1 = `05_makechapter.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 33.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 33.
+
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count105
+\scratchdimen=\dimen118
+\scratchbox=\box28
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen119
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks19
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+\openout2 = `05_current_monitoring/chapter.aux'.
+
+
+(./05_current_monitoring/chapter.tex
+Chapter 1.
+LaTeX Font Info:    Try loading font information for U+msa on input line 9.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 9.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+
+LaTeX Warning: Reference `' on page 1 undefined on input line 9.
+
+[1
+
+
+
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `PAVEL:00000' on page 2 undefined on input line 29.
+
+
+LaTeX Warning: Citation `PAVEL:00002' on page 2 undefined on input line 29.
+
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 33.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+
+Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
+ Make it at least 27.05003pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
+<../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params.pdf, id=23, 569.12625p
+t x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params.pdf Graphic file 
+(type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/pulse/alpha1param
+s.pdf used on input line 69.
+(pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
+ [4 <../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params.pdf, page is rotat
+ed 90 degrees>]
+<05_current_monitoring/plots/application.pdf, id=70, 318.18875pt x 175.15437pt>
+File: 05_current_monitoring/plots/application.pdf Graphic file (type pdf)
+<use 05_current_monitoring/plots/application.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/application.pdf used on in
+put line 104.
+(pdftex.def)             Requested size: 390.25534pt x 214.8239pt.
+ [5]
+<05_current_monitoring/plots/analysis1.pdf, id=74, 2720.1625pt x 1776.6375pt>
+File: 05_current_monitoring/plots/analysis1.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/analysis1.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/analysis1.pdf used on inpu
+t line 126.
+(pdftex.def)             Requested size: 390.25534pt x 254.88136pt.
+ [6 <./05_current_monitoring/plots/application.pdf>] [7 <./05_current_monitorin
+g/plots/analysis1.pdf>] [8]
+<05_current_monitoring/plots/pulse1.pdf, id=117, 472.76625pt x 243.91125pt>
+File: 05_current_monitoring/plots/pulse1.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/pulse1.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/pulse1.pdf used on input l
+ine 173.
+(pdftex.def)             Requested size: 303.53267pt x 156.60138pt.
+ [9 <./05_current_monitoring/plots/pulse1.pdf>]
+<05_current_monitoring/plots/width_meas.pdf, id=141, 162.6075pt x 50.1875pt>
+File: 05_current_monitoring/plots/width_meas.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/width_meas.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/width_meas.pdf used on inp
+ut line 184.
+(pdftex.def)             Requested size: 117.07924pt x 36.13649pt.
+
+<05_current_monitoring/plots/width.pdf, id=142, 263.98625pt x 42.1575pt>
+File: 05_current_monitoring/plots/width.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/width.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/width.pdf used on input li
+ne 185.
+(pdftex.def)             Requested size: 290.5246pt x 46.39845pt.
+
+Overfull \hbox (5.81712pt too wide) in paragraph at lines 183--188
+[][] 
+ []
+
+<05_current_monitoring/plots/area_meas.pdf, id=143, 192.72pt x 101.37875pt>
+File: 05_current_monitoring/plots/area_meas.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/area_meas.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/area_meas.pdf used on inpu
+t line 195.
+(pdftex.def)             Requested size: 130.08731pt x 68.43079pt.
+
+<05_current_monitoring/plots/area.pdf, id=144, 263.48438pt x 63.23625pt>
+File: 05_current_monitoring/plots/area.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/area.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/area.pdf used on input lin
+e 196.
+(pdftex.def)             Requested size: 277.51653pt x 66.60745pt.
+
+Overfull \hbox (5.81712pt too wide) in paragraph at lines 194--199
+[][]
+ []
+
+
+<05_current_monitoring/plots/vector_clean.pdf, id=145, 351.81438pt x 139.52126p
+t>
+File: 05_current_monitoring/plots/vector_clean.pdf Graphic file (type pdf)
+ <use 05_current_monitoring/plots/vector_clean.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/vector_clean.pdf used on i
+nput line 208.
+(pdftex.def)             Requested size: 390.25534pt x 154.7661pt.
+ [10 <./05_current_monitoring/plots/width_meas.pdf> <./05_current_monitoring/pl
+ots/width.pdf> <./05_current_monitoring/plots/area_meas.pdf> <./05_current_moni
+toring/plots/area.pdf> <./05_current_monitoring/plots/vector_clean.pdf>]
+<05_current_monitoring/plots/logic1.pdf, id=244, 160.09813pt x 41.15375pt>
+File: 05_current_monitoring/plots/logic1.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/logic1.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/logic1.pdf used on input l
+ine 225.
+(pdftex.def)             Requested size: 203.80193pt x 52.38899pt.
+
+<05_current_monitoring/plots/logic2.pdf, id=245, 137.01187pt x 63.73813pt>
+File: 05_current_monitoring/plots/logic2.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/logic2.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/logic2.pdf used on input l
+ine 226.
+(pdftex.def)             Requested size: 203.80193pt x 94.81624pt.
+
+Overfull \hbox (5.81714pt too wide) in paragraph at lines 224--228
+[][] 
+ []
+
+[11 <./05_current_monitoring/plots/logic1.pdf> <./05_current_monitoring/plots/l
+ogic2.pdf>]
+<05_current_monitoring/plots/controller.pdf, id=281, 1761.58125pt x 1590.94376p
+t>
+File: 05_current_monitoring/plots/controller.pdf Graphic file (type pdf)
+ <use 05_current_monitoring/plots/controller.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/controller.pdf used on inp
+ut line 246.
+(pdftex.def)             Requested size: 260.17464pt x 234.96562pt.
+ [12 <./05_current_monitoring/plots/controller.pdf>]
+<../scripts/05_current_monitoring/PulseGenTests/plots/freq.pdf, id=301, 569.126
+25pt x 368.37625pt>
+File: ../scripts/05_current_monitoring/PulseGenTests/plots/freq.pdf Graphic fil
+e (type pdf)
+
+<use ../scripts/05_current_monitoring/PulseGenTests/plots/freq.pdf>
+Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/f
+req.pdf used on input line 299.
+(pdftex.def)             Requested size: 346.89731pt x 224.54616pt.
+
+
+LaTeX Warning: Reference `fif:ratioAmpl1' on page 13 undefined on input line 30
+5.
+
+[13 <../scripts/05_current_monitoring/PulseGenTests/plots/freq.pdf, page is rot
+ated 90 degrees>]
+<../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1.pdf, id=350, 5
+69.12625pt x 368.37625pt>
+File: ../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1.pdf Graph
+ic file (type pdf)
+
+<use ../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1.pdf>
+Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/r
+atioAmpl1.pdf used on input line 314.
+(pdftex.def)             Requested size: 195.12767pt x 126.29738pt.
+
+<../scripts/05_current_monitoring/PulseGenTests/plots/snrAmpl1.pdf, id=351, 569
+.12625pt x 368.37625pt>
+File: ../scripts/05_current_monitoring/PulseGenTests/plots/snrAmpl1.pdf Graphic
+ file (type pdf)
+
+<use ../scripts/05_current_monitoring/PulseGenTests/plots/snrAmpl1.pdf>
+Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/s
+nrAmpl1.pdf used on input line 315.
+(pdftex.def)             Requested size: 195.12767pt x 126.29738pt.
+
+<../scripts/05_current_monitoring/PulseGenTests/plots/ratioWidth1.pdf, id=352, 
+569.12625pt x 368.37625pt>
+File: ../scripts/05_current_monitoring/PulseGenTests/plots/ratioWidth1.pdf Grap
+hic file (type pdf)
+
+<use ../scripts/05_current_monitoring/PulseGenTests/plots/ratioWidth1.pdf>
+Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/r
+atioWidth1.pdf used on input line 317.
+(pdftex.def)             Requested size: 195.12767pt x 126.29738pt.
+
+<../scripts/05_current_monitoring/PulseGenTests/plots/snrWidth1.pdf, id=353, 56
+9.12625pt x 368.37625pt>
+File: ../scripts/05_current_monitoring/PulseGenTests/plots/snrWidth1.pdf Graphi
+c file (type pdf)
+
+<use ../scripts/05_current_monitoring/PulseGenTests/plots/snrWidth1.pdf>
+Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/s
+nrWidth1.pdf used on input line 318.
+(pdftex.def)             Requested size: 195.12767pt x 126.29738pt.
+
+<../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1.pdf, id=354, 569
+.12625pt x 368.37625pt>
+File: ../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1.pdf Graphic
+ file (type pdf)
+
+<use ../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1.pdf>
+Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/s
+nrArea1.pdf used on input line 321.
+(pdftex.def)             Requested size: 195.12767pt x 126.29738pt.
+
+<../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare.pdf, id=355, 5
+69.12625pt x 364.36125pt>
+File: ../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare.pdf Graph
+ic file (type pdf)
+
+<use ../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare.pdf>
+Package pdftex.def Info: ../scripts/05_current_monitoring/plot4alpha/plots/4alp
+haCompare.pdf used on input line 334.
+(pdftex.def)             Requested size: 346.89731pt x 222.0988pt.
+
+[14] [15 <../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1.pdf, 
+page is rotated 90 degrees> <../scripts/05_current_monitoring/PulseGenTests/plo
+ts/snrAmpl1.pdf, page is rotated 90 degrees> <../scripts/05_current_monitoring/
+PulseGenTests/plots/ratioWidth1.pdf, page is rotated 90 degrees> <../scripts/05
+_current_monitoring/PulseGenTests/plots/snrWidth1.pdf, page is rotated 90 degre
+es> <../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1.pdf, page is
+ rotated 90 degrees>] [16 <../scripts/05_current_monitoring/plot4alpha/plots/4a
+lphaCompare.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: Reference `sec:spacecharge' on page 17 undefined on input line 3
+77.
+
+
+LaTeX Warning: Citation `PAVEL:00003' on page 17 undefined on input line 377.
+
+
+LaTeX Warning: Citation `CHRISSI:00005' on page 17 undefined on input line 377.
+
+
+[17
+
+]
+<../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1.pdf, id=6
+31, 569.12625pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1.pdf 
+Graphic file (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/27-puls
+e-background-1.pdf used on input line 384.
+(pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/10-pulse-alpha-e-0.pdf, id=632,
+ 569.12625pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-pulse-alpha-e-0.pdf Gra
+phic file (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/10-pulse-alpha-e-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-puls
+e-alpha-e-0.pdf used on input line 385.
+(pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/18-pulse-alpha-h-0.pdf, id=633,
+ 569.12625pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-pulse-alpha-h-0.pdf Gra
+phic file (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/18-pulse-alpha-h-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-puls
+e-alpha-h-0.pdf used on input line 386.
+(pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0.pdf, id=634, 56
+9.12625pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0.pdf Graphi
+c file (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-puls
+e-beta-0.pdf used on input line 387.
+(pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0.pdf, id=635, 5
+69.12625pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0.pdf Graph
+ic file (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-puls
+e-gamma-0.pdf used on input line 388.
+(pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/15-pulse-neutron-0.pdf, id=636,
+ 569.12625pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-pulse-neutron-0.pdf Gra
+phic file (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/15-pulse-neutron-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-puls
+e-neutron-0.pdf used on input line 389.
+(pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
+
+[18
+
+ <../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1.pdf, pag
+e is rotated 90 degrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/10-pul
+se-alpha-e-0.pdf, page is rotated 90 degrees> <../../../CIVIDEC/dataRead/data/p
+lots/reportATI/18-pulse-alpha-h-0.pdf, page is rotated 90 degrees> <../../../CI
+VIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0.pdf, page is rotated 90 deg
+rees> <../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0.pdf, pag
+e is rotated 90 degrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/15-pul
+se-neutron-0.pdf, page is rotated 90 degrees>] [19
+
+]
+<../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0.pdf, id=904, 531.9
+875pt x 739.76375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0.pdf Graphic f
+ile (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scat
+ter-0.pdf used on input line 443.
+(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf, id=905, 531.9
+875pt x 739.76375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf Graphic f
+ile (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-scat
+ter-0.pdf used on input line 451.
+(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0.pdf, id=906, 569.1262
+5pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0.pdf Graphic file
+ (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-area
+-0.pdf used on input line 461.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0.pdf, id=907, 569.1262
+5pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0.pdf Graphic file
+ (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-area
+-0.pdf used on input line 462.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[20]
+
+LaTeX Warning: Text page 21 contains only floats.
+
+[21 <../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0.pdf>]
+
+LaTeX Warning: Text page 22 contains only floats.
+
+[22 <../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf>] [23 <../
+../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0.pdf, page is rotated 90 d
+egrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0.pdf, page is 
+rotated 90 degrees>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 474.
+
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf, id=1093, 531.
+9875pt x 739.76375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf Graphic f
+ile (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-scat
+ter-0.pdf used on input line 476.
+(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 482.
+
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf, id=1094, 531.
+9875pt x 739.76375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf Graphic f
+ile (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-scat
+ter-0.pdf used on input line 484.
+(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 489.
+
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0.pdf, id=1095, 569.126
+25pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0.pdf Graphic file
+ (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-area
+-0.pdf used on input line 492.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf, id=1096, 569.126
+25pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf Graphic file
+ (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-area
+-0.pdf used on input line 493.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
+ [24
+
+]
+[25 <../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf>] [26 <../
+../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf>] [27 <../../../CI
+VIDEC/dataRead/data/plots/reportATI/13-area-0.pdf, page is rotated 90 degrees> 
+<../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf, page is rotated 
+90 degrees>]
+
+LaTeX Warning: Citation `TRIGA:00001' on page 28 undefined on input line 583.
+
+
+LaTeX Warning: Citation `ATOM:00001' on page 28 undefined on input line 583.
+
+[28
+
+]
+
+LaTeX Warning: Citation `PAVEL:00000' on page 29 undefined on input line 592.
+
+
+LaTeX Warning: Citation `PAVEL:00002' on page 29 undefined on input line 592.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 603.
+
+
+<../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1.pdf, id=1286, 569.1262
+5pt x 275.0275pt>
+File: ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1.pdf Graphic file 
+(type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-
+1.pdf used on input line 605.
+(pdftex.def)             Requested size: 429.28616pt x 207.45775pt.
+ [29]
+<../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf, id=1291, 569.12625pt
+ x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf Graphic file (ty
+pe pdf)
+ <use ../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.p
+df used on input line 616.
+(pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
+
+
+LaTeX Warning: Citation `ITER:00000' on page 30 undefined on input line 637.
+
+[30 <../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1.pdf, page is rotat
+ed 90 degrees>]
+
+LaTeX Warning: Citation `PAVEL:00001' on page 31 undefined on input line 645.
+
+[31 <../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf, page is rotated 
+90 degrees>]
+
+LaTeX Warning: Citation `CHRISSI:00001' on page 32 undefined on input line 650.
+
+
+
+LaTeX Warning: Citation `????' on page 32 undefined on input line 654.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 664.
+
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0.pdf, id=1385, 531.
+9875pt x 739.76375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0.pdf Graphic f
+ile (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scat
+ter-0.pdf used on input line 666.
+(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 671.
+
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf, id=1386, 569.126
+25pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf Graphic file
+ (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-area
+-4.pdf used on input line 673.
+(pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
+
+
+LaTeX Warning: Citation `EPFL:00000' on page 32 undefined on input line 695.
+
+[32] [33 <../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0.pdf>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 703.
+
+
+<../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1.pdf, id=1436, 531.9875pt x
+ 739.76375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1.pdf Graphic file (typ
+e pdf)
+ <use ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1.pd
+f used on input line 705.
+(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 710.
+
+
+<../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf, id=1437, 569.12625pt x 4
+10.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf Graphic file (type p
+df)
+ <use ../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf u
+sed on input line 712.
+(pdftex.def)             Requested size: 429.28616pt x 309.67233pt.
+ [34 <../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf, page is rot
+ated 90 degrees>] [35 <../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1.pdf>
+]
+[36 <../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf, page is rotated 90 d
+egrees>] [37]) [38
+
+]
+No file 05_makechapter.bbl.
+(./05_makechapter.aux (./05_current_monitoring/chapter.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4602 strings out of 493488
+ 80613 string characters out of 3141326
+ 121083 words of memory out of 3000000
+ 7684 multiletter control sequences out of 15000+200000
+ 15501 words of font info for 58 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 38i,16n,48p,1599b,442s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/
+2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on 05_makechapter.pdf (38 pages, 1469755 bytes).
+PDF statistics:
+ 1641 PDF objects out of 1728 (max. 8388607)
+ 800 compressed objects within 8 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+

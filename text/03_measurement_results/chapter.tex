@@ -1,40 +1,4 @@
 
-% ---------------------------- comment out when compiling the full document -------------------
-\documentclass[twoside,12pt]{packages/mytustyle}  % default square logo 
-\usepackage{amssymb}
-\usepackage{caption}
-\usepackage{upgreek}
-\usepackage{subfig}
-\usepackage{enumitem}
-\setlist[description]{leftmargin=0cm,labelindent=0cm}
-
-\usepackage{packages/fancyhdr}% http://ctan.org/pkg/fancyhdr
-\pagestyle{fancy}% Change page style to fancy
-\fancyhead[OR]{\renewcommand\thesection}
-\fancyhead[ER]{\renewcommand\chaptername}
-\newcommand\Chapter[2]{\chapter
-  [#1\hfil\hbox{}\protect\linebreak{\itshape#2}]%
-  {#1\\[2ex]\Large\itshape#2}%
-}
-
-
-%\fancyhf{}% Clear header/footer
-%\fancyhead{}
-%\fancyhead[RO, LE]{Experimental results}
-%\fancyfoot{}
-%\fancyfoot[RO, LE]{\thepage}% \fancyfoot[R]{\thepage}
-\renewcommand{\headrulewidth}{0.7pt}% Default \headrulewidth is 0.4pt
-%\renewcommand{\footrulewidth}{0.7pt}% Default \footrulewidth is 0pt
-%\rfoot{\thepage}
-\usepackage{lineno}
-  \linenumbers
-
-\begin{document}
-\baselineskip=15pt
-% ---------------------------------------------------------------------------------------------------------------
-
-\tableofcontents
-
 % ---------------------------------------------------------------------------------------------------------------
 \Chapter{Experimental results}{Diamond irradiation study}
 % ---------------------------------------------------------------------------------------------------------------
@@ -85,7 +49,7 @@ The measurements using diamond that are explained in these chapters were carried
 
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{plots/ro-chain}
+\includegraphics[width=0.8\textwidth]{03_measurement_results/plots/ro-chain}
 \caption{Diagram of a diamond detector readout chain.}
 \label{fig:ro-chain}
 \end{figure}
@@ -98,8 +62,8 @@ Two preamplifiers are used for the measurements, one sensitive to charge and the
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[Cx charge sensing preamplifier]{\includegraphics[width=0.45\textwidth]{pics/setup/Cx} \label{fig:ampcx}} &
-\subfloat[C2 fast charge preamplifier]{\includegraphics[width=0.45\textwidth]{pics/setup/C2}  \label{fig:ampc2}}
+\subfloat[Cx charge sensing preamplifier]{\includegraphics[width=0.45\textwidth]{03_measurement_results/pics/setup/Cx} \label{fig:ampcx}} &
+\subfloat[C2 fast charge preamplifier]{\includegraphics[width=0.45\textwidth]{03_measurement_results/pics/setup/C2}  \label{fig:ampc2}}
 \end{tabular}
 \caption{Amplifiers used for the charge and current measurements}
 \end{figure}
@@ -124,7 +88,7 @@ The sensor samples used for these studies were bought at Element Six (E6)~\cite{
 One of the samples with dimensions of $5.6\times5.3$~mm$^2$ produced by IIa Singapore~\cite{IIA:00000} was also sent to CERN to be characterised. The target thickness for all the samples is 500~$\upmu$m. Diamonds this thick yield a high enough signal-to-noise ratio for MIPs to be measured by the electronics.
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{pics/setup/diamond4}
+\includegraphics[width=0.8\textwidth]{03_measurement_results/pics/setup/diamond4}
 \caption{Two scCVD diamond samples: A IIa 1scdhq (left) and an E6 S37 (right)}
 \label{fig:diams}
 \end{figure}
@@ -174,8 +138,8 @@ This TCT study is a follow-up of an extensive diamond TCT study at cryogenic tem
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[PCB carrier with an embedded diamond sample]{\includegraphics[width=0.45\textwidth]{pics/setup/carrier2} \label{fig:carrier}} &
-\subfloat[Radioactive source over the carrier]{\includegraphics[width=0.45\textwidth]{pics/setup/carriersource2}  \label{fig:carsrc}}
+\subfloat[PCB carrier with an embedded diamond sample]{\includegraphics[width=0.45\textwidth]{03_measurement_results/pics/setup/carrier2} \label{fig:carrier}} &
+\subfloat[Radioactive source over the carrier]{\includegraphics[width=0.45\textwidth]{03_measurement_results/pics/setup/carriersource2}  \label{fig:carsrc}}
 \end{tabular}
 \caption{Positioning of the $\upalpha$-source on top of the sensor carrier}
 \end{figure}
@@ -219,12 +183,12 @@ Figure~\ref{fig:pulsesaby} shows a set of pulses and an averaged pulse for $\upa
 \begin{figure}[!t]
 \centering
 \begin{tabular}{rrr}
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/samplePulses/alpha} \label{fig:alpha1}} &
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/samplePulses/alphadist} \label{fig:alphadist1}} \\
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/samplePulses/beta}  \label{fig:beta1}} &
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/samplePulses/betadist}  \label{fig:betadist1}} \\
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/samplePulses/gamma}  \label{fig:gamma1}} &
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/samplePulses/gammadist}  \label{fig:gammadist1}} 
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/samplePulses/alpha} \label{fig:alpha1}} &
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/samplePulses/alphadist} \label{fig:alphadist1}} \\
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/samplePulses/beta}  \label{fig:beta1}} &
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/samplePulses/betadist}  \label{fig:betadist1}} \\
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/samplePulses/gamma}  \label{fig:gamma1}} &
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/samplePulses/gammadist}  \label{fig:gammadist1}} 
 \end{tabular}
 \caption{Superimposed and averaged pulses (a, b and c, current amplifier) and distributions of deposited energy (d, e, f, charge amplifier) for three types of radiation. Note the scale on the X axis of the distributions.}
 \label{fig:pulsesaby}
@@ -267,7 +231,7 @@ Diamond is an expensive material and the technology is relatively new as compare
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{scripts/plots/dpa1}
+\includegraphics[width=0.8\textwidth]{03_measurement_results/scripts/plots/dpa1}
 \caption{Diamond radiation damage - a model based on displacements per atom~\cite{Guthoff:2014223}. Added are data points for protons and pions by RD42~\cite{RD42IRRAD:00000} and one data point for pions measured in the scope of this thesis.}
 \label{fig:kitdpa}
 \end{center}
@@ -298,7 +262,7 @@ CCD = \frac{Q_\mathrm{i}}{\delta_\mathrm{}d}
 % sample landau distribution  
 %\begin{figure}[!t]
 %\begin{center}
-%\includegraphics[width=0.6\textwidth]{scripts/pics/S37_500}
+%\includegraphics[width=0.6\textwidth]{03_measurement_results/scripts/pics/S37_500}
 %\caption{An example of a landau distribution acquired by S37 at 500~V bias voltage PLACEHOLDER}
 %\label{fig:landausample}
 %\end{center}
@@ -309,8 +273,8 @@ The resulting CCD for the three measured samples at bias voltages ranging from 0
 \begin{figure}[!t]
 \centering
 \begin{tabular}{cccc}
-\subfloat{\includegraphics[width=0.80\textwidth]{scripts/plots/ccd} \label{fig:ccd}} \\
-\subfloat{\includegraphics[width=0.80\textwidth]{scripts/plots/radfactor1}  \label{fig:radfactor}}
+\subfloat{\includegraphics[width=0.80\textwidth]{03_measurement_results/scripts/plots/ccd} \label{fig:ccd}} \\
+\subfloat{\includegraphics[width=0.80\textwidth]{03_measurement_results/scripts/plots/radfactor1}  \label{fig:radfactor}}
 \end{tabular}
 \caption{First figure shows the CCD for S37, S79 and S52 at a range of bias voltage settings. The charge collection distance at 1~V/$\upmu$m bias voltage for the three diamond samples is then compared to the RD42 data for pion irradiation in the second figure. The data points are about 15--25~\% lower than expected from the RD42 data~\cite{RD42IRRAD:00000}.}
 \end{figure}
@@ -356,7 +320,7 @@ To sum up, diamond is a good choice for $\upbeta$ radiation detection. Even if d
 %%longterm pumping plot
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{plots/ccdpriming}
+\includegraphics[width=0.8\textwidth]{03_measurement_results/plots/ccdpriming}
 \caption{Relative increase of charge collection over time due to priming with the $^{90}$Sr radioactive source. The bias voltage for this measurement is 1~V/$\upmu$m.}
 \label{fig:ccincrease}
 \end{center}
@@ -371,7 +335,7 @@ This part discusses the stability of irradiated diamond sensors during $\upalpha
 The first test has been carried out using the Cx spectroscopic amplifier, with the bias voltage of the samples set to +500~V. Figure~\ref{fig:longtermcx} shows the results of 6500 recorded hits at a rate of $\sim$7~particles per second. The collected charge $Q(\Phi)$ for the non-irradiated sample is stable as compared to the initial collected charge $Q(0)$ (plotted as a relative value $\frac{Q(\Phi)}{Q(0)}$). It is expected that the irradiated samples will have a lower charge collection efficiency than the non-irradiated sample. However, their initial efficiency suddenly drops after a certain period of time. The initial efficiency after priming with $\upbeta$ particles is higher than that without priming, but eventually it deteriorates again. In addition, the spread of measured energies increases significantly. Finally, the particle counting rate decreases with the decreased efficiency. 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{scripts/plots/amplvstimecx4}
+\includegraphics[width=0.8\textwidth]{03_measurement_results/scripts/plots/amplvstimecx4}
 \caption{Relative decrease of collected charge with time for non-irradiated and irradiated diamond samples.}
 \label{fig:longtermcx}
 \end{center}
@@ -387,12 +351,12 @@ The built up space charge affects the electric field, making it non-uniform. The
 \begin{figure}[!t]
 \centering
 \begin{tabular}{rrr}
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/plotLifetime/holes0} \label{fig:holes0lt}} &
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/plotLifetime/elecs0} \label{fig:elecs0lt}} \\
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/plotLifetime/holes15}  \label{fig:holes15lt}} &
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/plotLifetime/elecs15}  \label{fig:elecs15lt}} \\
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/plotLifetime/holes30}  \label{fig:holes30lt}} &
-\subfloat{\includegraphics[width=0.45\textwidth]{scripts/plots/plotLifetime/elecs30}  \label{fig:elecs30lt}}
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/plotLifetime/holes0} \label{fig:holes0lt}} &
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/plotLifetime/elecs0} \label{fig:elecs0lt}} \\
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/plotLifetime/holes15}  \label{fig:holes15lt}} &
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/plotLifetime/elecs15}  \label{fig:elecs15lt}} \\
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/plotLifetime/holes30}  \label{fig:holes30lt}} &
+\subfloat{\includegraphics[width=0.45\textwidth]{03_measurement_results/scripts/plots/plotLifetime/elecs30}  \label{fig:elecs30lt}}
 \end{tabular}
 \caption{The signal of the irradiated and primed S79 deteriorates with time for both polarities. Every plot contains 60 superimposed pulses.}
 \label{fig:lifetimeelecsholes}
@@ -413,7 +377,7 @@ Figure~\ref{fig:longtermc2corr} shows the ratio $\frac{\sigma_\mathrm{ref} }{\si
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{scripts/plots/plotLifetime/corrlifetime}
+\includegraphics[width=0.8\textwidth]{03_measurement_results/scripts/plots/plotLifetime/corrlifetime}
 \caption{Deterioration of the pulse shapes with time }
 \label{fig:longtermc2corr}
 \end{center}
@@ -454,7 +418,7 @@ Procedure & Source & Bias voltage & Effectiveness \\
 
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{scripts/plots/plotLifetime/formCorrelation}
+\includegraphics[width=0.8\textwidth]{03_measurement_results/scripts/plots/plotLifetime/formCorrelation}
 \caption{Five procedures for the ``healing'' process for an irradiated diamond that was exposed to $\upalpha$ radiation at bias voltage switched on for at least 30~minutes at a rate of $10^4$~s$^{-1}$.}
 \label{fig:formCorr}
 \end{center}
@@ -508,8 +472,8 @@ Three sCVD diamond samples have been tested at a range of temperatures using the
 
 \begin{figure}[!t]
 \begin{tabular}{rr}
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulsesVolt/varVolt_S52_elecs_260k} \label{fig:S52cTplus}} &
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulsesVolt/varVolt_S52_holes_260k}  \label{fig:S52ctTminus}}
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_elecs_260k} \label{fig:S52cTplus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_holes_260k}  \label{fig:S52ctTminus}}
 \end{tabular}
 \caption{Varied bias voltage at a fixed temperature}
 \label{fig:voltpulse}
@@ -521,12 +485,12 @@ Figure~\ref{fig:temppulses} shows pulses at a bias voltage set to $\pm500$~V acr
 
 \begin{figure}%[!t]
 \begin{tabular}{rr}
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S37_elecs} \label{fig:S37plus}} &
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S37_holes}  \label{fig:S37minus}} \\
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S79_elecs} \label{fig:S79plus}} &
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S79_holes}  \label{fig:S79minus}} \\
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S52_elecs} \label{fig:S52plus}} &
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S52_holes}  \label{fig:S52minus}}
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S37_elecs} \label{fig:S37plus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S37_holes}  \label{fig:S37minus}} \\
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S79_elecs} \label{fig:S79plus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S79_holes}  \label{fig:S79minus}} \\
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S52_elecs} \label{fig:S52plus}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S52_holes}  \label{fig:S52minus}}
 \end{tabular}
 \caption{Several data points between 4~K and 295~K at a bias voltage of $\pm$500~V}
 \label{fig:temppulses}
@@ -553,10 +517,10 @@ Unfortunately, options (1) and (2) are very time consuming and would increase th
 
 \begin{figure}[!t]
 \begin{tabular}{rr}
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_230k} \label{fig:S52cTplusAfter230}} &
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes_230k}  \label{fig:S52ctTminusAfter230}} \\
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_260k} \label{fig:S52cTplusAfter260}} &
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes_260k}  \label{fig:S52ctTminusAfter260}}
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_230k} \label{fig:S52cTplusAfter230}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes_230k}  \label{fig:S52ctTminusAfter230}} \\
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_260k} \label{fig:S52cTplusAfter260}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes_260k}  \label{fig:S52ctTminusAfter260}}
 \end{tabular}
 \caption{Varied bias voltage at a fixed temperature for an irradiated sample}
 \label{fig:voltpulseAfter}
@@ -568,12 +532,12 @@ Figure~\ref{fig:temppulsesAfter} shows the irradiated S52 and S79 as well as the
 
 \begin{figure}[!t]
 \begin{tabular}{rr}
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S37_elecs} \label{fig:S37plusAfter}} &
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S37_holes}  \label{fig:S37minusAfter}} \\
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S79_1e14_elecs} \label{fig:S79plusAfter}} &
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S79_1e14_holes}  \label{fig:S79minusAfter}} \\
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S52_3-63e14_elecs} \label{fig:S52plusAfter}} &
-\subfloat{\includegraphics[width=0.47\textwidth]{scripts/plots/pulses/S52_3-63e14_holes}  \label{fig:S52minusAfter}}
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S37_elecs} \label{fig:S37plusAfter}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S37_holes}  \label{fig:S37minusAfter}} \\
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S79_1e14_elecs} \label{fig:S79plusAfter}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S79_1e14_holes}  \label{fig:S79minusAfter}} \\
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S52_3-63e14_elecs} \label{fig:S52plusAfter}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{03_measurement_results/scripts/plots/pulses/S52_3-63e14_holes}  \label{fig:S52minusAfter}}
 \end{tabular}
 \caption{After irradiation: several data points between 4~K and 295~K at a bias voltage of $\pm$500~V}
 \label{fig:temppulsesAfter}
@@ -590,8 +554,8 @@ The collected charge drops significantly from 150~K down to 75~K. In the non-irr
 \begin{figure}[!t]
 \centering
 \begin{tabular}{cccc}
-\subfloat{\includegraphics[width=0.80\textwidth]{scripts/plots/charge500V} \label{fig:chgtempelecs}} \\
-\subfloat{\includegraphics[width=0.80\textwidth]{scripts/plots/charge-500V}  \label{fig:chgtempholes}}
+\subfloat{\includegraphics[width=0.80\textwidth]{03_measurement_results/scripts/plots/charge500V} \label{fig:chgtempelecs}} \\
+\subfloat{\includegraphics[width=0.80\textwidth]{03_measurement_results/scripts/plots/charge-500V}  \label{fig:chgtempholes}}
 \end{tabular}
 \caption{Collected charge as a function of temperature}
 \label{fig:chgtemp}
@@ -625,9 +589,9 @@ where $\tau_\mathrm{0}$ is the lifetime for a non-irradiated sample (real lifeti
 \centering
 \begin{tabular}{cccc}
 \subfloat
-{\includegraphics[width=0.8\textwidth]{scripts/plots/taunew/lifetimevstemp} \label{fig:lifetimevstemp}} \\
+{\includegraphics[width=0.8\textwidth]{03_measurement_results/scripts/plots/taunew/lifetimevstemp} \label{fig:lifetimevstemp}} \\
 \subfloat
-{\includegraphics[width=0.8\textwidth]{scripts/plots/taunew/avglifetime}  \label{fig:lifetimevsdose}}
+{\includegraphics[width=0.8\textwidth]{03_measurement_results/scripts/plots/taunew/avglifetime}  \label{fig:lifetimevsdose}}
 \end{tabular}
 \caption{Charge carrier lifetime decreases with irradiation, but is stable across the range of temperatures between 4~K -- 75~K and 150~K -- 295~K. The first figure shows the carrier lifetime s a function of temperature whereas the second figure depcits the carrier lifetime averaged over all temperatures and plotted against the $\pi$ irradiation dose}
 \label{fig:carrlifetime}
@@ -654,13 +618,3 @@ Two sCVD diamond detectors were irradiated with 300~MeV pions. They were tested 
 The next step was to test the long-term capabilities for $\upalpha$ detection. The shape of the ionisation profile was investigated to determine the behaviour of the charge carriers in the irradiated diamond. An exponential decay was observed in the pulses of irradiated samples, proving that there are charge traps in the bulk that were created during irradiation. Then a long-term stability test was carried out. The results show that the irradiated diamond detectors do not provide a stable and reliable long-term measurement of $\upalpha$ particles. This might be due to a space-charge build-up in the bulk, which changes the electric field, affecting the charge carriers. A procedure to improve the pulse shape using $\upbeta$ and $\upgamma$ radiation was proposed.
 
 Finally, the diamond sensors were cooled down to temperatures between 4~K and 295~K. Their response to $\upalpha$ particles was observed. The results of the non-irradiated and irradiated samples were compared. The effect of reduction for the number of drifting charges due to exciton recombination was observed in both sets of data. The second set had a superimposed effect of charge trapping during the drift, which was represented by an exponential decay in the signal. The decay time constant did not change with temperature. Therefore all temperature points for individual samples were averaged and the decay time constants were plotted against the received radiation dose. A damage factor equal to $\kappa_{\mathrm{\tau}}=(3.5\pm0.8)\times10^{-16}$~s~cm$^2$~$\uppi_{\mathrm{300~MeV}}^{-1}$ for non-primed diamonds was defined.
-
-
-\bibliography{bib3}{}
-\bibliographystyle{plain}
-
-
-
-% ---------------------------- comment out when compiling the full document -------------------
-\end{document}
-% ---------------------------------------------------------------------------------------------------------------

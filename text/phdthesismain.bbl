@@ -1,0 +1,242 @@
+\begin{thebibliography}{10}
+
+\bibitem{ASIC:00000}
+\emph{ASIC}.
+\newblock
+  http://www.embedded-systems-portal.com/CTB/CTB\_images/L2/L2\_ASIC.jpg.
+
+\bibitem{AtomInst:00000}
+\emph{Atominstitut, Technical University of Vienna, Austria}.
+\newblock http://ati.tuwien.ac.at/startpage/EN/.
+
+\bibitem{EPFL:00000}
+\emph{CROCUS neutron reactor}.
+\newblock http://lrs.epfl.ch/page-55655-en.html.
+
+\bibitem{DRS4:00000}
+\emph{DRS4}.
+\newblock https://www.psi.ch/drs/evaluation-board.
+
+\bibitem{E6:00000}
+\emph{Element Six}.
+\newblock http://www.e6.com.
+
+\bibitem{CERN:00000}
+\emph{European Centre for Nuclear Research, CERN}.
+\newblock http://home.cern.
+
+\bibitem{IIA:00000}
+\emph{IIa Technologies Pte. Ltd.}
+\newblock https://www.2atechnologies.com.
+
+\bibitem{ITER:00000}
+\emph{ITER fusion reactor}.
+\newblock https://www.iter.org/.
+
+\bibitem{NTOF:00000}
+\emph{Neutron Time-of-flight experiment}.
+\newblock https://ntof-exp.web.cern.ch/ntof-exp/.
+
+\bibitem{PSI:00000}
+\emph{Paul Scherrer Institute}.
+\newblock https://www.psi.ch/.
+
+\bibitem{RD42:00000}
+\emph{RD42 collaboration}.
+\newblock http://rd42.web.cern.ch/rd42/.
+
+\bibitem{Triga:00000}
+\emph{TRIGA MARK II neutron reactor}.
+\newblock http://ati.tuwien.ac.at/reactor/EN/.
+
+\bibitem{FPGA:00000}
+\emph{Xilinx Virtex 5 FPGA}.
+\newblock http://www.hdl.co.jp/XCM-109/top.560.jpg.
+
+\bibitem{NEQ:00000}
+{\em {Determination of operational dose equivalent quantities for neutrons}}.
+\newblock ICRU, Washington, DC, 2001.
+
+\bibitem{GeneralAtomics}
+General Atomics.
+\newblock \emph{View of the TRIGA reactor.}
+\newblock 2015.
+
+\bibitem{BETHE:00000}
+H.~Bethe and J.~Ashkin.
+\newblock {\em {Experimental Nuclear Physics, ed. E. Segre}}, page 253, 1953.
+
+\bibitem{PDDC:00000}
+W.~Blum, W.~Riegler, and L.~Rolandi.
+\newblock {\em \emph{Particle Detection with Drift Chambers}}, volume~2 of {\em
+  2}.
+\newblock Springer-Verlag, Berlin Heidelberg, 2008.
+
+\bibitem{Brianti:604383}
+Giorgio Brianti.
+\newblock {SPS North Experimental Area}.
+\newblock Technical Report CERN-SPSC-T-73-8. LabII-EA-Note-73-4, CERN, Geneva,
+  1973.
+
+\bibitem{Maximilien:1304589}
+Maximilien Brice.
+\newblock \emph{View of the nTOF detector}.
+\newblock Oct 2010.
+
+\bibitem{Maximilien:1324852}
+Maximilien Brice.
+\newblock \emph{LHC tunnel}.
+\newblock Jan 2011.
+
+\bibitem{PASCHEN:00000}
+P.~Carazzetti and H.~R. Shea.
+\newblock \emph{Electrical breakdown at low pressure for planar
+  microelectromechanical systems with 10- to 500~$\upmu$m gaps}.
+\newblock {\em J. Micro/Nanolith. MEMS MOEMS}, (8(3), 031305), Jul-Sep 2009.
+
+\bibitem{Dominguez:2002395}
+Daniel Dominguez.
+\newblock \emph{Standard Model. Le modele standard}.
+\newblock General Photo, Mar 2015.
+
+\bibitem{Cividec:00000}
+CIVIDEC~Instrumentation GmbH.
+\newblock \emph{sCVD diamond sensor}.
+\newblock http://www.cividec.at, 2015.
+
+\bibitem{PAVEL:00002}
+E.~Griesmayer, R.~Bergmann, H.~B{\"o}ck, M.~Cagnazzo, P.~Kavrigin,
+  B.~Morgenbesser, and M.~Villa.
+\newblock \emph{A Novel Neutron Flux Monitor Based On Diamond Detectors at the
+  Vienna TRIGA Mark II Reactor}.
+\newblock {\em submitted to the proceedings of ICRR 2015}, 2015.
+
+\bibitem{Griesmayer20121997}
+E.~Griesmayer and B.~Dehning.
+\newblock Diamonds for beam instrumentation.
+\newblock {\em Physics Procedia}, 37:1997 -- 2004, 2012.
+\newblock Proceedings of the 2nd International Conference on Technology and
+  Instrumentation in Particle Physics (TIPP 2011).
+
+\bibitem{Guthoff:2014223}
+Moritz Guthoff, Wim de~Boer, and Steffen Müller.
+\newblock Simulation of beam induced lattice defects of diamond detectors using
+  \{FLUKA\}.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 735:223 --
+  228, 2014.
+
+\bibitem{2002NIMPA}
+M.~{Huhtinen}.
+\newblock {Simulation of non-ionising energy loss and defect formation in
+  silicon}.
+\newblock {\em Nuclear Instruments and Methods in Physics Research A},
+  491:194--215, September 2002.
+
+\bibitem{Jansen:1956431}
+Hendrik Jansen, Norbert Wermes, and Heinz Pernegger.
+\newblock {\em {Chemical Vapour Deposition Diamond - Charge Carrier Movement at
+  Low Temperatures and Use in Time-Critical Applications}}.
+\newblock PhD thesis, Bonn U., Sep 2013.
+\newblock Presented 10 Dec 2013.
+
+\bibitem{PAVEL:00000}
+P.~Kavrigin, P.~Finocchiaro, E.~Griesmayer, E.~Jericha, A.~Pappalardo, and
+  C.~Weiss.
+\newblock \emph{Pulse-shape analysis for gamma background rejection in thermal
+  neutron radiation using CVD diamond detectors}.
+\newblock {\em Nuclear Instruments and Methods in Physics Research A}, (795),
+  2015.
+
+\bibitem{PAVEL:00001}
+P.~Kavrigin, E.~Griesmayer, F.~Belloni, A.J.M. Plompen, P.~Schillebeeckx, and
+  C.~Weiss.
+\newblock \emph{$\mathbf{^{13}}$C(n,$\mathbf{\alpha_{0}}$)$\mathbf{^{10}}$Be
+  cross section measurement with sCVD diamond detector}.
+\newblock {\em submitted to EPJA}, 2016.
+
+\bibitem{CHTR:00000}
+Claude~A. Klein.
+\newblock Radiation-induced energy levels in silicon.
+\newblock {\em Journal of Applied Physics}, 30(8):1222--1231, 1959.
+
+\bibitem{Kramberger:2013wva}
+Gregor Kramberger, V.~Cindro, A.~Gorisek, I.~Mandic, M.~Mikuz, and
+  M.~Zavrtanik.
+\newblock {Effects of bias voltage during priming on operation of diamond
+  detectors}.
+\newblock {\em PoS}, Vertex2012:013, 2013.
+
+\bibitem{1970PhyEd...5..226L}
+W.~Y. {Liang}.
+\newblock {Excitons}.
+\newblock {\em Physics Education}, 5:226--228, July 1970.
+
+\bibitem{MarcelloniDeOliveira:1702006}
+Claudia Marcelloni De~Oliveira.
+\newblock \emph{IBL installation into the inner detector of the ATLAS
+  Experiment side C}.
+\newblock General Photo, May 2014.
+
+\bibitem{RD42IRRAD:00000}
+M.~Miku\v{z}.
+\newblock \emph{Diamond sensors for high energy radiation and particle
+  detection}.
+\newblock TIPP, 2011.
+
+\bibitem{Mills:133232}
+W~P~C Mills.
+\newblock \emph{The present performance of the SPS}.
+\newblock {\em IEEE Trans. Nucl. Sci.}, 26(CERN-SPS-AOP-79-9):3176--3178. 3 p,
+  Mar 1979.
+
+\bibitem{Novaes:1999yn}
+S.~F. Novaes.
+\newblock \emph{Standard model: An Introduction}.
+\newblock In {\em {Particles and fields. Proceedings, 10th Jorge Andre Swieca
+  Summer School, Sao Paulo, Brazil, February 6-12, 1999}}, 1999.
+
+\bibitem{Pequenao:1095924}
+Joao Pequenao.
+\newblock \emph{Computer generated image of the whole ATLAS detector}.
+\newblock Mar 2008.
+
+\bibitem{Pernegger:1985432}
+Heinz Pernegger.
+\newblock \emph{The Pixel Detector of the ATLAS Experiment for LHC Run-2}.
+\newblock Technical Report ATL-INDET-PROC-2015-001, CERN, Geneva, Feb 2015.
+
+\bibitem{RAMO:00000}
+S.~Ramo.
+\newblock \emph{Currents Induced by Electron Motion}.
+\newblock {\em Proceedings of the IRE}, 27:584--585, 1939.
+
+\bibitem{sarin2014comprehensive}
+V.~Sarin.
+\newblock {\em Comprehensive Hard Materials}.
+\newblock Elsevier Science, 2014.
+\newblock p. 411.
+
+\bibitem{SHOCKLEY:00000}
+W.~Shockley.
+\newblock \emph{Currents to Conductors Induced by a Moving Point Charge}.
+\newblock {\em Journal of applied Physics}, 9:635, 1938.
+
+\bibitem{CHRISSI:00005}
+C.~Weiss.
+\newblock {\em \emph{A CVD diamond detector for (n,$\alpha$) cross-section
+  measurements}}.
+\newblock PhD thesis, TU Wien, Vienna, 2014.
+
+\bibitem{PAVEL:00003}
+C.~Weiss, H.~Frais-K{\"o}lbl, E.~Griesmayer, and P.~Kavrigin.
+\newblock \emph{Ionization signals of diamond detectors in fast neutron
+  fields}.
+\newblock {\em publication in preparation}, 2016.
+
+\bibitem{PhysRevLett.13.13}
+J.~L. Yarnell, J.~L. Warren, and R.~G. Wenzel.
+\newblock Lattice vibrations in diamond.
+\newblock {\em Phys. Rev. Lett.}, 13:13--15, Jul 1964.
+
+\end{thebibliography}

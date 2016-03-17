@@ -1,0 +1,31 @@
+To-do today:
+
+- merge the five chapters. DONE. 108 pages at the moment.
+
+A quick overview of the document yields these observations:
+
+Chapter 1
+- Unify image dimensions
+
+Chapter 2
+- Triplets of images: uniform image size!
+- I/O signal of cur/chg amp: bigger images
+- FPGA, ASIC images on the previous page
+
+Chapter 4
+- unify image sizes
+- delete the figure placeholder or add the occupancy
+- 
+
+Chapter 5
+- Sort out the numerous figures
+- fig 5.1 caption
+- analysis block diagram
+- figure dimensions
+
+
+Bibliography
+- Chapter 1 and 2: add urls.
+- Chapter 4: add all citations (also in the text)
+
+

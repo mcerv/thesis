@@ -1,0 +1,95 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: phdthesismain.aux
+A level-1 auxiliary file: 01_introduction/chapter.aux
+A level-1 auxiliary file: 02_pulse_formation/chapter.aux
+A level-1 auxiliary file: 03_measurement_results/chapter.aux
+A level-1 auxiliary file: 04_charge_monitoring/chapter.aux
+A level-1 auxiliary file: 05_current_monitoring/chapter.aux
+The style file: plain.bst
+Database file #1: 01_introduction/bib.bib
+Database file #2: 02_pulse_formation/bib.bib
+Database file #3: 03_measurement_results/bib.bib
+Database file #4: 04_charge_monitoring/bib.bib
+Database file #5: 05_current_monitoring/bib.bib
+Warning--I didn't find a database entry for "CHRISSI:00001"
+Warning--I didn't find a database entry for "TRIGA:00001"
+Warning--I didn't find a database entry for "ATOM:00001"
+Warning--to sort, need author or key in CERN:00000
+Warning--to sort, need author or key in AtomInst:00000
+Warning--to sort, need author or key in Triga:00000
+Warning--to sort, need author or key in NTOF:00000
+Warning--to sort, need author or key in FPGA:00000
+Warning--to sort, need author or key in ASIC:00000
+Warning--to sort, need author or key in E6:00000
+Warning--to sort, need author or key in IIA:00000
+Warning--to sort, need author or key in DRS4:00000
+Warning--to sort, need author, editor, or key in NEQ:00000
+Warning--to sort, need author or key in RD42:00000
+Warning--to sort, need author or key in PSI:00000
+Warning--to sort, need author or key in ITER:00000
+Warning--to sort, need author or key in EPFL:00000
+Warning--empty author in ASIC:00000
+Warning--empty author in AtomInst:00000
+Warning--empty author in EPFL:00000
+Warning--empty author in DRS4:00000
+Warning--empty author in E6:00000
+Warning--empty author in CERN:00000
+Warning--empty author in IIA:00000
+Warning--empty author in ITER:00000
+Warning--empty author in NTOF:00000
+Warning--empty author in PSI:00000
+Warning--empty author in RD42:00000
+Warning--empty author in Triga:00000
+Warning--empty author in FPGA:00000
+Warning--empty author and editor in NEQ:00000
+Warning--empty note in GeneralAtomics
+Warning--empty title in BETHE:00000
+Warning--empty note in Maximilien:1304589
+Warning--empty note in Maximilien:1324852
+Warning--there's a number but no volume in PASCHEN:00000
+Warning--there's a number but no volume in PAVEL:00000
+Warning--empty note in RD42IRRAD:00000
+Warning--empty note in Pequenao:1095924
+You've used 45 entries,
+            2118 wiz_defined-function locations,
+            777 strings with 10458 characters,
+and the built_in function-call counts, 10194 in all, are:
+= -- 1008
+> -- 418
+< -- 4
++ -- 177
+- -- 132
+* -- 677
+:= -- 1794
+add.period$ -- 123
+call.type$ -- 45
+change.case$ -- 195
+chr.to.int$ -- 0
+cite$ -- 81
+duplicate$ -- 392
+empty$ -- 777
+format.name$ -- 132
+if$ -- 2046
+int.to.chr$ -- 0
+int.to.str$ -- 45
+missing$ -- 22
+newline$ -- 216
+num.names$ -- 62
+pop$ -- 167
+preamble$ -- 1
+purify$ -- 156
+quote$ -- 0
+skip$ -- 258
+stack$ -- 0
+substring$ -- 464
+swap$ -- 34
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 174
+warning$ -- 36
+while$ -- 75
+width$ -- 47
+write$ -- 432
+(There were 39 warnings)

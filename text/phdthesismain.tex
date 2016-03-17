@@ -1,0 +1,98 @@
+% ---------------------------- comment out when compiling the full document -------------------
+\documentclass[twoside,12pt]{packages/mytustyle}  % default square logo 
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{upgreek}
+\usepackage{subfig}
+\usepackage{textcomp}
+\usepackage{enumitem}
+\setlist[description]{leftmargin=0cm,labelindent=0cm}
+
+\newcommand\Chapter[2]{\chapter
+  [#1\hfil\hbox{}\protect\linebreak{\itshape#2}]%
+  {#1\\[2ex]\Large\itshape#2}%
+}
+
+\usepackage{packages/fancyhdr}% http://ctan.org/pkg/fancyhdr
+\pagestyle{fancy}% Change page style to fancy
+\fancyhead[OR]{\renewcommand\thesection}
+\fancyhead[ER]{\renewcommand\chaptername}
+\graphicspath{ ../../scripts/04_charge_monitoring/plots/ }
+%\fancyhf{}% Clear header/footer
+%\fancyhead{}
+%\fancyhead[RO, LE]{Introduction}	
+%\fancyhead[RO, LE]{\rightmark}	
+%\fancyfoot{}
+%\fancyfoot[RO, LE]{\thepage}% \fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.7pt}% Default \headrulewidth is 0.4pt
+%\renewcommand{\footrulewidth}{0.7pt}% Default \footrulewidth is 0pt
+%\rfoot{\thepage}
+\usepackage{lineno}
+  \linenumbers
+
+
+
+\title{Exploiting CVD diamond   \\[1ex]     %your thesis title,
+properties for particle   \\[1ex]     %your thesis title,
+detection and identification}   %note \\[1ex] is a line break in the title
+
+\author{Matev\v{z} \v{C}erv}             %your name
+%\supervisor{Dr. Erich Griesmayer}             %supervisor
+
+\college{Vienna University of Technology}  %your college
+
+%\renewcommand{\submittedtext}{change the default text here if needed}
+\degree{Doctor of technical sciences}     %the degree
+\degreedate{Geneva 2016}         %the degree date
+
+%end the preamble and start the document
+\begin{document}
+
+%this baselineskip gives sufficient line spacing for an examiner to easily
+%markup the thesis with comments
+%\baselineskip=18pt plus1pt
+\baselineskip=15pt
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+\maketitle                  % create a title page from the preamble info
+
+\begin{romanpages}          % start roman page numbering
+\tableofcontents            % generate and include a table of contents
+\listoffigures              % generate and include a list of figures
+\end{romanpages}            % end roman page numbering
+
+%now include the files of latex for each of the chapters etc
+%\include{00_preface/abstract}
+%\include{00_preface/acknowledgements}
+%\include{00_preface/dedication}
+\include{01_introduction/chapter}
+\include{02_pulse_formation/chapter}
+\include{03_measurement_results/chapter}
+\include{04_charge_monitoring/chapter}
+\include{05_current_monitoring/chapter}
+%\include{text/09_conclusions/chapter}
+%\include{text/10_appendices/chapter}
+
+
+%now enable appendix numbering format and include any appendices
+%\appendix
+%\include{text/10_appendices/appendix1}
+%\include{text/10_appendices/appendix2}
+
+
+
+%next line adds the Bibliography to the contents page
+%   \addcontentsline{toc}{chapter}{Bibliography}
+%uncomment next line to change bibliography name to references
+%\renewcommand{\bibname}{References}
+%   \bibliography{refs}        %use a bibtex bibliography file refs.bib
+%   \bibliographystyle{plain}  %use the plain bibliography style
+\bibliography{01_introduction/bib,02_pulse_formation/bib,03_measurement_results/bib,04_charge_monitoring/bib,05_current_monitoring/bib}{}
+\bibliographystyle{plain}
+
+\end{document}
+
