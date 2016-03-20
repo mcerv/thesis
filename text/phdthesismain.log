@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 MAR 2016 23:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  20 MAR 2016 21:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -265,9 +265,6 @@ LaTeX Warning: Label `fig:dbminatlas' multiply defined.
 
 LaTeX Warning: Label `tab:semicompare' multiply defined.
 
-
-LaTeX Warning: Label `fig:sm' multiply defined.
-
 ))
 \openout1 = `phdthesismain.aux'.
 
@@ -427,38 +424,39 @@ File: 01_introduction/pics/sm.png Graphic file (type png)
 
 <use 01_introduction/pics/sm.png>
 Package pdftex.def Info: 01_introduction/pics/sm.png used on input line 41.
-(pdftex.def)             Requested size: 260.17464pt x 146.31087pt.
+(pdftex.def)             Requested size: 390.25534pt x 219.46263pt.
  [2
 
- <./01_introduction/pics/sm.png>] [3]
+] [3 <./01_introduction/pics/sm.png>]
 <01_introduction/pics/lhc.jpg, id=66, 749.80125pt x 563.10374pt>
 File: 01_introduction/pics/lhc.jpg Graphic file (type jpg)
 
 <use 01_introduction/pics/lhc.jpg>
 Package pdftex.def Info: 01_introduction/pics/lhc.jpg used on input line 67.
-(pdftex.def)             Requested size: 260.17464pt x 195.39659pt.
- [4 <./01_introduction/pics/lhc.jpg>]
+(pdftex.def)             Requested size: 390.25534pt x 293.08199pt.
+ [4]
 <01_introduction/pics/atlas3.jpg, id=71, 810.52812pt x 520.94624pt>
 File: 01_introduction/pics/atlas3.jpg Graphic file (type jpg)
 
 <use 01_introduction/pics/atlas3.jpg>
 Package pdftex.def Info: 01_introduction/pics/atlas3.jpg used on input line 78.
 
-(pdftex.def)             Requested size: 346.89731pt x 222.9612pt.
- [5 <./01_introduction/pics/atlas3.jpg>]
-<01_introduction/pics/triga.jpg, id=75, 732.7375pt x 301.125pt>
+(pdftex.def)             Requested size: 390.25534pt x 250.83035pt.
+ [5 <./01_introduction/pics/lhc.jpg>]
+[6 <./01_introduction/pics/atlas3.jpg>]
+<01_introduction/pics/triga.jpg, id=78, 732.7375pt x 301.125pt>
 File: 01_introduction/pics/triga.jpg Graphic file (type jpg)
 
 <use 01_introduction/pics/triga.jpg>
 Package pdftex.def Info: 01_introduction/pics/triga.jpg used on input line 98.
-(pdftex.def)             Requested size: 346.89731pt x 142.56259pt.
- [6]
+(pdftex.def)             Requested size: 390.25534pt x 160.3812pt.
+
 <01_introduction/pics/ntof.jpg, id=79, 4156.52875pt x 3758.04pt>
 File: 01_introduction/pics/ntof.jpg Graphic file (type jpg)
 
 <use 01_introduction/pics/ntof.jpg>
 Package pdftex.def Info: 01_introduction/pics/ntof.jpg used on input line 118.
-(pdftex.def)             Requested size: 260.17464pt x 235.22098pt.
+(pdftex.def)             Requested size: 390.25534pt x 352.83148pt.
  [7 <./01_introduction/pics/triga.jpg>]
 [8 <./01_introduction/pics/ntof.jpg>]
 <01_introduction/pics/ibl.jpg, id=86, 426.69412pt x 284.56313pt>
@@ -466,26 +464,26 @@ File: 01_introduction/pics/ibl.jpg Graphic file (type jpg)
 
 <use 01_introduction/pics/ibl.jpg>
 Package pdftex.def Info: 01_introduction/pics/ibl.jpg used on input line 139.
-(pdftex.def)             Requested size: 260.17464pt x 173.50943pt.
- [9 <./01_introduction/pics/ibl.jpg>]
+(pdftex.def)             Requested size: 390.25534pt x 260.26414pt.
+ [9]
 <01_introduction/pics/cividecpcvd.png, id=91, 284.56313pt x 187.70125pt>
 File: 01_introduction/pics/cividecpcvd.png Graphic file (type png)
 
 <use 01_introduction/pics/cividecpcvd.png>
 Package pdftex.def Info: 01_introduction/pics/cividecpcvd.png used on input lin
 e 149.
-(pdftex.def)             Requested size: 260.17464pt x 171.63039pt.
+(pdftex.def)             Requested size: 390.25534pt x 257.44415pt.
 
 
 LaTeX Warning: Reference `' on page 10 undefined on input line 153.
 
-[10 <./01_introduction/pics/cividecpcvd.png>]) [11]
+[10 <./01_introduction/pics/ibl.jpg>] [11 <./01_introduction/pics/cividecpcvd.p
+ng>]) [12]
 \openout2 = `02_pulse_formation/chapter.aux'.
 
-
-(./02_pulse_formation/chapter.tex
+ (./02_pulse_formation/chapter.tex
 Chapter 2.
-[12
+[13
 
 
 
@@ -495,8 +493,8 @@ Overfull \hbox (1.90881pt too wide) in paragraph at lines 47--48
  sen-sor: via bremsstrahlung [],
  []
 
-[13]
-<02_pulse_formation/pics/plots/semilattice9.pdf, id=109, 259.46938pt x 252.945p
+[14]
+<02_pulse_formation/pics/plots/semilattice9.pdf, id=112, 259.46938pt x 252.945p
 t>
 File: 02_pulse_formation/pics/plots/semilattice9.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/semilattice9.pdf>
@@ -519,7 +517,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--73
  []
 
 
-<02_pulse_formation/pics/plots/simpledrift.pdf, id=110, 128.98187pt x 73.77562p
+<02_pulse_formation/pics/plots/simpledrift.pdf, id=113, 128.98187pt x 73.77562p
 t>
 File: 02_pulse_formation/pics/plots/simpledrift.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/simpledrift.pdf>
@@ -527,7 +525,7 @@ Package pdftex.def Info: 02_pulse_formation/pics/plots/simpledrift.pdf used on
 input line 75.
 (pdftex.def)             Requested size: 143.09538pt x 81.85585pt.
 
-<02_pulse_formation/pics/plots/simpledrifteq.pdf, id=111, 124.465pt x 66.2475pt
+<02_pulse_formation/pics/plots/simpledrifteq.pdf, id=114, 124.465pt x 66.2475pt
 >
 File: 02_pulse_formation/pics/plots/simpledrifteq.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/simpledrifteq.pdf>
@@ -544,17 +542,17 @@ Overfull \hbox (13.31726pt too wide) in paragraph at lines 86--87
 []\OT1/cmr/m/n/12 The mean en-ergy loss of a par-ti-cle travers-
  []
 
-<02_pulse_formation/pics/bb2.jpg, id=112, 840.13875pt x 526.96875pt>
+<02_pulse_formation/pics/bb2.jpg, id=115, 840.13875pt x 526.96875pt>
 File: 02_pulse_formation/pics/bb2.jpg Graphic file (type jpg)
 
 <use 02_pulse_formation/pics/bb2.jpg>
 Package pdftex.def Info: 02_pulse_formation/pics/bb2.jpg used on input line 97.
 
-(pdftex.def)             Requested size: 303.53267pt x 190.38403pt.
- [14 <./02_pulse_formation/pics/plots/semilattice9.pdf> <./02_pulse_formation/p
+(pdftex.def)             Requested size: 368.57964pt x 231.18349pt.
+ [15 <./02_pulse_formation/pics/plots/semilattice9.pdf> <./02_pulse_formation/p
 ics/plots/simpledrift.pdf> <./02_pulse_formation/pics/plots/simpledrifteq.pdf>]
 
-<02_pulse_formation/pics/plots/chargeind1.pdf, id=179, 115.93312pt x 94.85437pt
+<02_pulse_formation/pics/plots/chargeind1.pdf, id=183, 115.93312pt x 94.85437pt
 >
 File: 02_pulse_formation/pics/plots/chargeind1.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/chargeind1.pdf>
@@ -567,7 +565,7 @@ Underfull \hbox (badness 1478) in paragraph at lines 113--113
  []
 
 
-<02_pulse_formation/pics/plots/chargeind2.pdf, id=180, 117.94063pt x 88.83188pt
+<02_pulse_formation/pics/plots/chargeind2.pdf, id=184, 117.94063pt x 88.83188pt
 >
 File: 02_pulse_formation/pics/plots/chargeind2.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/chargeind2.pdf>
@@ -575,7 +573,7 @@ Package pdftex.def Info: 02_pulse_formation/pics/plots/chargeind2.pdf used on i
 nput line 114.
 (pdftex.def)             Requested size: 130.08731pt x 97.98238pt.
 
-<02_pulse_formation/pics/plots/chargeind3.pdf, id=181, 117.43875pt x 81.30376pt
+<02_pulse_formation/pics/plots/chargeind3.pdf, id=185, 117.43875pt x 81.30376pt
 >
 File: 02_pulse_formation/pics/plots/chargeind3.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/chargeind3.pdf>
@@ -587,55 +585,56 @@ Overfull \hbox (4.39182pt too wide) in paragraph at lines 112--117
 [][] 
  []
 
-[15 <./02_pulse_formation/pics/bb2.jpg> <./02_pulse_formation/pics/plots/charge
-ind1.pdf> <./02_pulse_formation/pics/plots/chargeind2.pdf> <./02_pulse_formatio
-n/pics/plots/chargeind3.pdf>]
-<02_pulse_formation/pics/plots/driftboth.pdf, id=247, 189.20688pt x 139.52126pt
+[16 <./02_pulse_formation/pics/bb2.jpg>] [17 <./02_pulse_formation/pics/plots/c
+hargeind1.pdf> <./02_pulse_formation/pics/plots/chargeind2.pdf> <./02_pulse_for
+mation/pics/plots/chargeind3.pdf>]
+<02_pulse_formation/pics/plots/driftboth.pdf, id=253, 189.20688pt x 139.52126pt
 >
 File: 02_pulse_formation/pics/plots/driftboth.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/driftboth.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/driftboth.pdf used on in
 put line 172.
 (pdftex.def)             Requested size: 346.89731pt x 255.82593pt.
- [16] [17 <./02_pulse_formation/pics/plots/driftboth.pdf>]
-<../scripts/02_pulse_formation/plots/resolution.pdf, id=280, 569.12625pt x 364.
+ [18 <./02_pulse_formation/pics/plots/driftboth.pdf>]
+<../scripts/02_pulse_formation/plots/resolution.pdf, id=283, 569.12625pt x 364.
 36125pt>
 File: ../scripts/02_pulse_formation/plots/resolution.pdf Graphic file (type pdf
 )
  <use ../scripts/02_pulse_formation/plots/resolution.pdf>
 Package pdftex.def Info: ../scripts/02_pulse_formation/plots/resolution.pdf use
 d on input line 197.
-(pdftex.def)             Requested size: 195.12767pt x 124.92084pt.
+(pdftex.def)             Requested size: 346.89731pt x 222.0988pt.
 
 
-LaTeX Warning: Reference `XXXCHAPTER' on page 18 undefined on input line 210.
+LaTeX Warning: Reference `XXXCHAPTER' on page 19 undefined on input line 210.
 
-[18]
+[19]
 
-LaTeX Warning: Reference `' on page 19 undefined on input line 230.
+LaTeX Warning: Reference `' on page 20 undefined on input line 230.
 
-<02_pulse_formation/pics/plots/spcchg.pdf, id=284, 188.20313pt x 96.36pt>
+[20 <../scripts/02_pulse_formation/plots/resolution.pdf, page is rotated 90 deg
+rees>]
+<02_pulse_formation/pics/plots/spcchg.pdf, id=333, 188.20313pt x 96.36pt>
 File: 02_pulse_formation/pics/plots/spcchg.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/spcchg.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/spcchg.pdf used on input
  line 243.
 (pdftex.def)             Requested size: 260.17464pt x 133.21951pt.
- [19 <../scripts/02_pulse_formation/plots/resolution.pdf, page is rotated 90 de
-grees>]
 
-LaTeX Warning: Reference `fig:raddamage' on page 20 undefined on input line 251
+
+LaTeX Warning: Reference `fig:raddamage' on page 21 undefined on input line 251
 .
 
-
-<02_pulse_formation/pics/plots/raddamage.pdf, id=331, 395.4775pt x 187.70125pt>
+[21 <./02_pulse_formation/pics/plots/spcchg.pdf>]
+<02_pulse_formation/pics/plots/raddamage.pdf, id=363, 395.4775pt x 187.70125pt>
 File: 02_pulse_formation/pics/plots/raddamage.pdf Graphic file (type pdf)
 <use 02_pulse_formation/pics/plots/raddamage.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/raddamage.pdf used on in
 put line 262.
-(pdftex.def)             Requested size: 260.17464pt x 123.48509pt.
- [20 <./02_pulse_formation/pics/plots/spcchg.pdf>]
-<02_pulse_formation/pics/plots/curramp.pdf, id=360, 198.24063pt x 70.2625pt>
+(pdftex.def)             Requested size: 346.89731pt x 164.64488pt.
+ [22 <./02_pulse_formation/pics/plots/raddamage.pdf>]
+<02_pulse_formation/pics/plots/curramp.pdf, id=383, 198.24063pt x 70.2625pt>
 File: 02_pulse_formation/pics/plots/curramp.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/curramp.pdf>
@@ -643,40 +642,40 @@ Package pdftex.def Info: 02_pulse_formation/pics/plots/curramp.pdf used on inpu
 t line 295.
 (pdftex.def)             Requested size: 216.81pt x 76.84618pt.
 
-<02_pulse_formation/pics/plots/chgamp.pdf, id=361, 157.08687pt x 108.90688pt>
+<02_pulse_formation/pics/plots/chgamp.pdf, id=384, 157.08687pt x 108.90688pt>
 File: 02_pulse_formation/pics/plots/chgamp.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/chgamp.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chgamp.pdf used on input
  line 296.
 (pdftex.def)             Requested size: 173.44534pt x 120.25323pt.
- [21 <./02_pulse_formation/pics/plots/raddamage.pdf>]
-<02_pulse_formation/pics/plots/currrc.pdf, id=382, 156.08313pt x 63.23625pt>
+
+<02_pulse_formation/pics/plots/currrc.pdf, id=385, 156.08313pt x 63.23625pt>
 File: 02_pulse_formation/pics/plots/currrc.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/currrc.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/currrc.pdf used on input
  line 310.
-(pdftex.def)             Requested size: 195.12767pt x 79.05667pt.
-
-<02_pulse_formation/pics/plots/chgrc.pdf, id=383, 161.10187pt x 64.24pt>
+(pdftex.def)             Requested size: 346.89731pt x 140.56172pt.
+ [23 <./02_pulse_formation/pics/plots/curramp.pdf> <./02_pulse_formation/pics/p
+lots/chgamp.pdf>]
+<02_pulse_formation/pics/plots/chgrc.pdf, id=421, 161.10187pt x 64.24pt>
 File: 02_pulse_formation/pics/plots/chgrc.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/chgrc.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chgrc.pdf used on input 
 line 328.
-(pdftex.def)             Requested size: 195.12767pt x 77.811pt.
- [22 <./02_pulse_formation/pics/plots/curramp.pdf> <./02_pulse_formation/pics/p
-lots/chgamp.pdf> <./02_pulse_formation/pics/plots/currrc.pdf>] [23 <./02_pulse_
-formation/pics/plots/chgrc.pdf>]
-<02_pulse_formation/pics/plots/qerr.pdf, id=460, 138.5175pt x 100.87688pt>
+(pdftex.def)             Requested size: 303.53267pt x 121.03978pt.
+ [24 <./02_pulse_formation/pics/plots/currrc.pdf> <./02_pulse_formation/pics/pl
+ots/chgrc.pdf>]
+<02_pulse_formation/pics/plots/qerr.pdf, id=463, 138.5175pt x 100.87688pt>
 File: 02_pulse_formation/pics/plots/qerr.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/qerr.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/qerr.pdf used on input l
 ine 354.
-(pdftex.def)             Requested size: 238.49231pt x 173.68645pt.
-
+(pdftex.def)             Requested size: 303.53267pt x 221.07704pt.
+ [25]
 Overfull \hbox (10.7695pt too wide) in paragraph at lines 365--367
 \OT1/cmr/m/n/12 For the ex-am-ple above the quan-ti-sa-tion er-ror will be $^^A
 \OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 289 \
@@ -684,8 +683,8 @@ OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 39$ mV=0
 .11 mV.
  []
 
-[24 <./02_pulse_formation/pics/plots/qerr.pdf>]
-<02_pulse_formation/pics/fpga.jpg, id=487, 168.1482pt x 134.904pt>
+[26 <./02_pulse_formation/pics/plots/qerr.pdf>]
+<02_pulse_formation/pics/fpga.jpg, id=493, 168.1482pt x 134.904pt>
 File: 02_pulse_formation/pics/fpga.jpg Graphic file (type jpg)
 
 <use 02_pulse_formation/pics/fpga.jpg>
@@ -693,48 +692,31 @@ Package pdftex.def Info: 02_pulse_formation/pics/fpga.jpg used on input line 38
 2.
 (pdftex.def)             Requested size: 195.12767pt x 156.55461pt.
 
-<02_pulse_formation/pics/asic.png, id=488, 421.575pt x 322.20375pt>
+<02_pulse_formation/pics/asic.png, id=494, 421.575pt x 322.20375pt>
 File: 02_pulse_formation/pics/asic.png Graphic file (type png)
 
 <use 02_pulse_formation/pics/asic.png>
 Package pdftex.def Info: 02_pulse_formation/pics/asic.png used on input line 38
 3.
 (pdftex.def)             Requested size: 195.12767pt x 149.13489pt.
-) [25] [26 <./02_pulse_formation/pics/fpga.jpg> <./02_pulse_formation/pics/asic
-.png>]
+) [27 <./02_pulse_formation/pics/fpga.jpg> <./02_pulse_formation/pics/asic.png>
+]
 \openout2 = `03_measurement_results/chapter.aux'.
 
-
-(./03_measurement_results/chapter.tex
+ (./03_measurement_results/chapter.tex
 Chapter 3.
-[27
+[28
 
 
 
 ]
-<03_measurement_results/plots/ro-chain.pdf, id=500, 217.81375pt x 60.225pt>
+<03_measurement_results/plots/ro-chain.pdf, id=503, 217.81375pt x 60.225pt>
 File: 03_measurement_results/plots/ro-chain.pdf Graphic file (type pdf)
 
 <use 03_measurement_results/plots/ro-chain.pdf>
 Package pdftex.def Info: 03_measurement_results/plots/ro-chain.pdf used on inpu
 t line 52.
 (pdftex.def)             Requested size: 346.89731pt x 95.91624pt.
- [28 <./03_measurement_results/plots/ro-chain.pdf>]
-<03_measurement_results/pics/setup/Cx.png, id=526, 903.375pt x 501.875pt>
-File: 03_measurement_results/pics/setup/Cx.png Graphic file (type png)
-
-<use 03_measurement_results/pics/setup/Cx.png>
-Package pdftex.def Info: 03_measurement_results/pics/setup/Cx.png used on input
- line 65.
-(pdftex.def)             Requested size: 195.12767pt x 108.39879pt.
-
-<03_measurement_results/pics/setup/C2.png, id=527, 903.375pt x 503.8825pt>
-File: 03_measurement_results/pics/setup/C2.png Graphic file (type png)
-
-<use 03_measurement_results/pics/setup/C2.png>
-Package pdftex.def Info: 03_measurement_results/pics/setup/C2.png used on input
- line 66.
-(pdftex.def)             Requested size: 195.12767pt x 108.83238pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -742,9 +724,25 @@ Package Fancyhdr Warning: \headheight is too small (14.49998pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29 <./03_measurement_results/pics/setup/Cx.png> <./03_measurement_results/pics
-/setup/C2.png>]
-<03_measurement_results/pics/setup/diamond4.jpeg, id=532, 1421.31pt x 657.45625
+[29 <./03_measurement_results/plots/ro-chain.pdf>]
+<03_measurement_results/pics/setup/Cx.png, id=529, 903.375pt x 501.875pt>
+File: 03_measurement_results/pics/setup/Cx.png Graphic file (type png)
+
+<use 03_measurement_results/pics/setup/Cx.png>
+Package pdftex.def Info: 03_measurement_results/pics/setup/Cx.png used on input
+ line 65.
+(pdftex.def)             Requested size: 195.12767pt x 108.39879pt.
+
+<03_measurement_results/pics/setup/C2.png, id=530, 903.375pt x 503.8825pt>
+File: 03_measurement_results/pics/setup/C2.png Graphic file (type png)
+
+<use 03_measurement_results/pics/setup/C2.png>
+Package pdftex.def Info: 03_measurement_results/pics/setup/C2.png used on input
+ line 66.
+(pdftex.def)             Requested size: 195.12767pt x 108.83238pt.
+ [30 <./03_measurement_results/pics/setup/Cx.png> <./03_measurement_results/pic
+s/setup/C2.png>]
+<03_measurement_results/pics/setup/diamond4.jpeg, id=535, 1421.31pt x 657.45625
 pt>
 File: 03_measurement_results/pics/setup/diamond4.jpeg Graphic file (type jpg)
  <use 03_measurement_results/pics/setup/diamond4.jpeg>
@@ -756,15 +754,15 @@ Overfull \hbox (18.981pt too wide) in paragraph at lines 99--111
  [] 
  []
 
-[30 <./03_measurement_results/pics/setup/diamond4.jpeg>] [31]
-<03_measurement_results/pics/setup/carrier2.jpg, id=539, 1638.12pt x 1228.59pt>
+[31 <./03_measurement_results/pics/setup/diamond4.jpeg>] [32]
+<03_measurement_results/pics/setup/carrier2.jpg, id=542, 1638.12pt x 1228.59pt>
 File: 03_measurement_results/pics/setup/carrier2.jpg Graphic file (type jpg)
 <use 03_measurement_results/pics/setup/carrier2.jpg>
 Package pdftex.def Info: 03_measurement_results/pics/setup/carrier2.jpg used on
  input line 141.
 (pdftex.def)             Requested size: 195.12767pt x 146.33713pt.
 
-<03_measurement_results/pics/setup/carriersource2.jpg, id=540, 1638.12pt x 1228
+<03_measurement_results/pics/setup/carriersource2.jpg, id=543, 1638.12pt x 1228
 .59pt>
 File: 03_measurement_results/pics/setup/carriersource2.jpg Graphic file (type j
 pg)
@@ -772,9 +770,9 @@ pg)
 Package pdftex.def Info: 03_measurement_results/pics/setup/carriersource2.jpg u
 sed on input line 142.
 (pdftex.def)             Requested size: 195.12767pt x 146.33713pt.
- [32] [33 <./03_measurement_results/pics/setup/carrier2.jpg> <./03_measurement_
+ [33] [34 <./03_measurement_results/pics/setup/carrier2.jpg> <./03_measurement_
 results/pics/setup/carriersource2.jpg>]
-<03_measurement_results/scripts/plots/samplePulses/alpha.pdf, id=548, 569.12625
+<03_measurement_results/scripts/plots/samplePulses/alpha.pdf, id=551, 569.12625
 pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/samplePulses/alpha.pdf Graphic file 
 (type pdf)
@@ -784,7 +782,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/alph
 a.pdf used on input line 186.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<03_measurement_results/scripts/plots/samplePulses/alphadist.pdf, id=549, 569.1
+<03_measurement_results/scripts/plots/samplePulses/alphadist.pdf, id=552, 569.1
 2625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/samplePulses/alphadist.pdf Graphic f
 ile (type pdf)
@@ -794,7 +792,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/alph
 adist.pdf used on input line 187.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<03_measurement_results/scripts/plots/samplePulses/beta.pdf, id=550, 569.12625p
+<03_measurement_results/scripts/plots/samplePulses/beta.pdf, id=553, 569.12625p
 t x 410.53375pt>
 File: 03_measurement_results/scripts/plots/samplePulses/beta.pdf Graphic file (
 type pdf)
@@ -804,7 +802,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/beta
 .pdf used on input line 188.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<03_measurement_results/scripts/plots/samplePulses/betadist.pdf, id=551, 569.12
+<03_measurement_results/scripts/plots/samplePulses/betadist.pdf, id=554, 569.12
 625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/samplePulses/betadist.pdf Graphic fi
 le (type pdf)
@@ -814,7 +812,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/beta
 dist.pdf used on input line 189.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<03_measurement_results/scripts/plots/samplePulses/gamma.pdf, id=552, 569.12625
+<03_measurement_results/scripts/plots/samplePulses/gamma.pdf, id=555, 569.12625
 pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/samplePulses/gamma.pdf Graphic file 
 (type pdf)
@@ -824,7 +822,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/gamm
 a.pdf used on input line 190.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<03_measurement_results/scripts/plots/samplePulses/gammadist.pdf, id=553, 569.1
+<03_measurement_results/scripts/plots/samplePulses/gammadist.pdf, id=556, 569.1
 2625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/samplePulses/gammadist.pdf Graphic f
 ile (type pdf)
@@ -833,25 +831,25 @@ ile (type pdf)
 Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/gamm
 adist.pdf used on input line 191.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
- [34]
-[35 <./03_measurement_results/scripts/plots/samplePulses/alpha.pdf, page is rot
+ [35]
+[36 <./03_measurement_results/scripts/plots/samplePulses/alpha.pdf, page is rot
 ated 90 degrees> <./03_measurement_results/scripts/plots/samplePulses/alphadist
 .pdf, page is rotated 90 degrees> <./03_measurement_results/scripts/plots/sampl
 ePulses/beta.pdf, page is rotated 90 degrees> <./03_measurement_results/scripts
 /plots/samplePulses/betadist.pdf, page is rotated 90 degrees> <./03_measurement
 _results/scripts/plots/samplePulses/gamma.pdf, page is rotated 90 degrees> <./0
 3_measurement_results/scripts/plots/samplePulses/gammadist.pdf, page is rotated
- 90 degrees>] [36]
-<03_measurement_results/scripts/plots/dpa1.pdf, id=822, 569.12625pt x 410.53375
+ 90 degrees>] [37]
+<03_measurement_results/scripts/plots/dpa1.pdf, id=825, 569.12625pt x 410.53375
 pt>
 File: 03_measurement_results/scripts/plots/dpa1.pdf Graphic file (type pdf)
  <use 03_measurement_results/scripts/plots/dpa1.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/dpa1.pdf used on 
 input line 234.
 (pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
- [37] [38 <./03_measurement_results/scripts/plots/dpa1.pdf, page is rotated 90 
+ [38] [39 <./03_measurement_results/scripts/plots/dpa1.pdf, page is rotated 90 
 degrees>]
-<03_measurement_results/scripts/plots/ccd.pdf, id=872, 569.12625pt x 410.53375p
+<03_measurement_results/scripts/plots/ccd.pdf, id=876, 569.12625pt x 410.53375p
 t>
 File: 03_measurement_results/scripts/plots/ccd.pdf Graphic file (type pdf)
  <use 03_measurement_results/scripts/plots/ccd.pdf>
@@ -859,7 +857,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/ccd.pdf used on i
 nput line 276.
 (pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
 
-<03_measurement_results/scripts/plots/radfactor1.pdf, id=873, 569.12625pt x 410
+<03_measurement_results/scripts/plots/radfactor1.pdf, id=877, 569.12625pt x 410
 .53375pt>
 File: 03_measurement_results/scripts/plots/radfactor1.pdf Graphic file (type pd
 f)
@@ -867,23 +865,23 @@ f)
 Package pdftex.def Info: 03_measurement_results/scripts/plots/radfactor1.pdf us
 ed on input line 277.
 (pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
- [39]
+ [40]
 Overfull \vbox (12.50719pt too high) has occurred while \output is active []
 
 
-[40 <./03_measurement_results/scripts/plots/ccd.pdf, page is rotated 90 degrees
+[41 <./03_measurement_results/scripts/plots/ccd.pdf, page is rotated 90 degrees
 > <./03_measurement_results/scripts/plots/radfactor1.pdf, page is rotated 90 de
-grees>] [41]
-<03_measurement_results/plots/ccdpriming.pdf, id=971, 569.12625pt x 381.425pt>
+grees>] [42]
+<03_measurement_results/plots/ccdpriming.pdf, id=974, 569.12625pt x 381.425pt>
 File: 03_measurement_results/plots/ccdpriming.pdf Graphic file (type pdf)
 
 <use 03_measurement_results/plots/ccdpriming.pdf>
 Package pdftex.def Info: 03_measurement_results/plots/ccdpriming.pdf used on in
 put line 323.
 (pdftex.def)             Requested size: 346.89731pt x 232.50012pt.
- [42 <./03_measurement_results/plots/ccdpriming.pdf, page is rotated 90 degrees
+ [43 <./03_measurement_results/plots/ccdpriming.pdf, page is rotated 90 degrees
 >]
-<03_measurement_results/scripts/plots/amplvstimecx4.pdf, id=1018, 569.12625pt x
+<03_measurement_results/scripts/plots/amplvstimecx4.pdf, id=1021, 569.12625pt x
  381.425pt>
 File: 03_measurement_results/scripts/plots/amplvstimecx4.pdf Graphic file (type
  pdf)
@@ -892,9 +890,9 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/amplvstimecx4.pdf
  used on input line 338.
 (pdftex.def)             Requested size: 346.89731pt x 232.50012pt.
 
-[43 <./03_measurement_results/scripts/plots/amplvstimecx4.pdf, page is rotated 
+[44 <./03_measurement_results/scripts/plots/amplvstimecx4.pdf, page is rotated 
 90 degrees>]
-<03_measurement_results/scripts/plots/plotLifetime/holes0.pdf, id=1065, 569.126
+<03_measurement_results/scripts/plots/plotLifetime/holes0.pdf, id=1068, 569.126
 25pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/plotLifetime/holes0.pdf Graphic file
  (type pdf)
@@ -904,7 +902,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/hole
 s0.pdf used on input line 354.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<03_measurement_results/scripts/plots/plotLifetime/elecs0.pdf, id=1066, 569.126
+<03_measurement_results/scripts/plots/plotLifetime/elecs0.pdf, id=1069, 569.126
 25pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/plotLifetime/elecs0.pdf Graphic file
  (type pdf)
@@ -914,7 +912,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/elec
 s0.pdf used on input line 355.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<03_measurement_results/scripts/plots/plotLifetime/holes15.pdf, id=1067, 569.12
+<03_measurement_results/scripts/plots/plotLifetime/holes15.pdf, id=1070, 569.12
 625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/plotLifetime/holes15.pdf Graphic fil
 e (type pdf)
@@ -924,7 +922,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/hole
 s15.pdf used on input line 356.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<03_measurement_results/scripts/plots/plotLifetime/elecs15.pdf, id=1068, 569.12
+<03_measurement_results/scripts/plots/plotLifetime/elecs15.pdf, id=1071, 569.12
 625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/plotLifetime/elecs15.pdf Graphic fil
 e (type pdf)
@@ -934,7 +932,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/elec
 s15.pdf used on input line 357.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<03_measurement_results/scripts/plots/plotLifetime/holes30.pdf, id=1069, 569.12
+<03_measurement_results/scripts/plots/plotLifetime/holes30.pdf, id=1072, 569.12
 625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/plotLifetime/holes30.pdf Graphic fil
 e (type pdf)
@@ -944,7 +942,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/hole
 s30.pdf used on input line 358.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<03_measurement_results/scripts/plots/plotLifetime/elecs30.pdf, id=1070, 569.12
+<03_measurement_results/scripts/plots/plotLifetime/elecs30.pdf, id=1073, 569.12
 625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/plotLifetime/elecs30.pdf Graphic fil
 e (type pdf)
@@ -953,7 +951,7 @@ e (type pdf)
 Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/elec
 s30.pdf used on input line 359.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
- [44 <./03_measurement_results/scripts/plots/plotLifetime/holes0.pdf, page is r
+ [45 <./03_measurement_results/scripts/plots/plotLifetime/holes0.pdf, page is r
 otated 90 degrees> <./03_measurement_results/scripts/plots/plotLifetime/elecs0.
 pdf, page is rotated 90 degrees> <./03_measurement_results/scripts/plots/plotLi
 fetime/holes15.pdf, page is rotated 90 degrees> <./03_measurement_results/scrip
@@ -961,7 +959,7 @@ ts/plots/plotLifetime/elecs15.pdf, page is rotated 90 degrees> <./03_measuremen
 t_results/scripts/plots/plotLifetime/holes30.pdf, page is rotated 90 degrees> <
 ./03_measurement_results/scripts/plots/plotLifetime/elecs30.pdf, page is rotate
 d 90 degrees>]
-<03_measurement_results/scripts/plots/plotLifetime/corrlifetime.pdf, id=1333, 5
+<03_measurement_results/scripts/plots/plotLifetime/corrlifetime.pdf, id=1337, 5
 69.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/plotLifetime/corrlifetime.pdf Graphi
 c file (type pdf)
@@ -971,9 +969,9 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/corr
 lifetime.pdf used on input line 380.
 (pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
 
-[45 <./03_measurement_results/scripts/plots/plotLifetime/corrlifetime.pdf, page
+[46 <./03_measurement_results/scripts/plots/plotLifetime/corrlifetime.pdf, page
  is rotated 90 degrees>]
-<03_measurement_results/scripts/plots/plotLifetime/formCorrelation.pdf, id=1381
+<03_measurement_results/scripts/plots/plotLifetime/formCorrelation.pdf, id=1384
 , 569.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/plotLifetime/formCorrelation.pdf Gra
 phic file (type pdf)
@@ -983,17 +981,17 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/form
 Correlation.pdf used on input line 421.
 (pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
 
-[46]
+[47]
 Overfull \hbox (45.8329pt too wide) in paragraph at lines 457--461
 []\OT1/cmr/m/n/12 ]). This means that the lat-tice within the ion-i-sa-tion vol
 -ume (ap-prox-i-mately $\OMS/cmsy/m/n/12 ^^X$\OT1/cmr/m/n/12 15 $\U/eur/m/n/12 
 ^^V$\OT1/cmr/m/n/12 m$\OMS/cmsy/m/n/12 ^^B ^^X$\OT1/cmr/m/n/12 2 nm
  []
 
-[47 <./03_measurement_results/scripts/plots/plotLifetime/formCorrelation.pdf, p
+[48 <./03_measurement_results/scripts/plots/plotLifetime/formCorrelation.pdf, p
 age is rotated 90 degrees>]
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_elecs_260k.pdf, id
-=1432, 569.12625pt x 410.53375pt>
+=1435, 569.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_elecs_260k.pd
 f Graphic file (type pdf)
 
@@ -1004,7 +1002,7 @@ t_S52_elecs_260k.pdf used on input line 475.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_holes_260k.pdf, id
-=1433, 569.12625pt x 410.53375pt>
+=1436, 569.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_holes_260k.pd
 f Graphic file (type pdf)
 
@@ -1019,7 +1017,7 @@ Overfull \hbox (5.81714pt too wide) in paragraph at lines 474--478
  []
 
 
-<03_measurement_results/scripts/plots/pulses/S37_elecs.pdf, id=1434, 569.12625p
+<03_measurement_results/scripts/plots/pulses/S37_elecs.pdf, id=1437, 569.12625p
 t x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S37_elecs.pdf Graphic file (t
 ype pdf)
@@ -1029,7 +1027,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S37_elecs.
 pdf used on input line 488.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S37_holes.pdf, id=1435, 569.12625p
+<03_measurement_results/scripts/plots/pulses/S37_holes.pdf, id=1438, 569.12625p
 t x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S37_holes.pdf Graphic file (t
 ype pdf)
@@ -1039,7 +1037,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S37_holes.
 pdf used on input line 489.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S79_elecs.pdf, id=1436, 569.12625p
+<03_measurement_results/scripts/plots/pulses/S79_elecs.pdf, id=1439, 569.12625p
 t x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S79_elecs.pdf Graphic file (t
 ype pdf)
@@ -1049,7 +1047,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S79_elecs.
 pdf used on input line 490.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S79_holes.pdf, id=1437, 569.12625p
+<03_measurement_results/scripts/plots/pulses/S79_holes.pdf, id=1440, 569.12625p
 t x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S79_holes.pdf Graphic file (t
 ype pdf)
@@ -1059,7 +1057,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S79_holes.
 pdf used on input line 491.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S52_elecs.pdf, id=1438, 569.12625p
+<03_measurement_results/scripts/plots/pulses/S52_elecs.pdf, id=1441, 569.12625p
 t x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S52_elecs.pdf Graphic file (t
 ype pdf)
@@ -1069,7 +1067,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S52_elecs.
 pdf used on input line 492.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S52_holes.pdf, id=1439, 569.12625p
+<03_measurement_results/scripts/plots/pulses/S52_holes.pdf, id=1442, 569.12625p
 t x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S52_holes.pdf Graphic file (t
 ype pdf)
@@ -1083,9 +1081,9 @@ Overfull \hbox (5.81714pt too wide) in paragraph at lines 487--495
 [][] 
  []
 
-[48 <./03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_elecs_260k.p
+[49 <./03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_elecs_260k.p
 df, page is rotated 90 degrees> <./03_measurement_results/scripts/plots/pulsesV
-olt/varVolt_S52_holes_260k.pdf, page is rotated 90 degrees>] [49 <./03_measurem
+olt/varVolt_S52_holes_260k.pdf, page is rotated 90 degrees>] [50 <./03_measurem
 ent_results/scripts/plots/pulses/S37_elecs.pdf, page is rotated 90 degrees> <./
 03_measurement_results/scripts/plots/pulses/S37_holes.pdf, page is rotated 90 d
 egrees> <./03_measurement_results/scripts/plots/pulses/S79_elecs.pdf, page is r
@@ -1094,12 +1092,12 @@ otated 90 degrees> <./03_measurement_results/scripts/plots/pulses/S79_holes.pdf
 2_elecs.pdf, page is rotated 90 degrees> <./03_measurement_results/scripts/plot
 s/pulses/S52_holes.pdf, page is rotated 90 degrees>]
 
-LaTeX Warning: Reference `fig:S52cTminusAfter230' on page 50 undefined on input
+LaTeX Warning: Reference `fig:S52cTminusAfter230' on page 51 undefined on input
  line 509.
 
-[50]
+[51]
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_230k
-.pdf, id=1794, 569.12625pt x 410.53375pt>
+.pdf, id=1798, 569.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs
 _230k.pdf Graphic file (type pdf)
 
@@ -1110,7 +1108,7 @@ t_S52_3-63e14_elecs_230k.pdf used on input line 520.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes_230k
-.pdf, id=1795, 569.12625pt x 410.53375pt>
+.pdf, id=1799, 569.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes
 _230k.pdf Graphic file (type pdf)
 
@@ -1121,7 +1119,7 @@ t_S52_3-63e14_holes_230k.pdf used on input line 521.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_260k
-.pdf, id=1796, 569.12625pt x 410.53375pt>
+.pdf, id=1800, 569.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs
 _260k.pdf Graphic file (type pdf)
 
@@ -1132,7 +1130,7 @@ t_S52_3-63e14_elecs_260k.pdf used on input line 522.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes_260k
-.pdf, id=1797, 569.12625pt x 410.53375pt>
+.pdf, id=1801, 569.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes
 _260k.pdf Graphic file (type pdf)
 
@@ -1160,7 +1158,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S37_holes.
 pdf used on input line 536.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S79_1e14_elecs.pdf, id=1798, 569.1
+<03_measurement_results/scripts/plots/pulses/S79_1e14_elecs.pdf, id=1802, 569.1
 2625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S79_1e14_elecs.pdf Graphic fi
 le (type pdf)
@@ -1170,7 +1168,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S79_1e14_e
 lecs.pdf used on input line 537.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S79_1e14_holes.pdf, id=1799, 569.1
+<03_measurement_results/scripts/plots/pulses/S79_1e14_holes.pdf, id=1803, 569.1
 2625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S79_1e14_holes.pdf Graphic fi
 le (type pdf)
@@ -1180,7 +1178,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S79_1e14_h
 oles.pdf used on input line 538.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S52_3-63e14_elecs.pdf, id=1800, 56
+<03_measurement_results/scripts/plots/pulses/S52_3-63e14_elecs.pdf, id=1804, 56
 9.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S52_3-63e14_elecs.pdf Graphic
  file (type pdf)
@@ -1190,7 +1188,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S52_3-63e1
 4_elecs.pdf used on input line 539.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S52_3-63e14_holes.pdf, id=1801, 56
+<03_measurement_results/scripts/plots/pulses/S52_3-63e14_holes.pdf, id=1805, 56
 9.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S52_3-63e14_holes.pdf Graphic
  file (type pdf)
@@ -1204,18 +1202,18 @@ Overfull \hbox (5.81714pt too wide) in paragraph at lines 534--542
 [][] 
  []
 
-[51 <./03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elec
+[52 <./03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elec
 s_230k.pdf, page is rotated 90 degrees> <./03_measurement_results/scripts/plots
 /pulsesVolt/varVolt_S52_3-63e14_holes_230k.pdf, page is rotated 90 degrees> <./
 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_260k.
 pdf, page is rotated 90 degrees> <./03_measurement_results/scripts/plots/pulses
-Volt/varVolt_S52_3-63e14_holes_260k.pdf, page is rotated 90 degrees>] [52 <./03
+Volt/varVolt_S52_3-63e14_holes_260k.pdf, page is rotated 90 degrees>] [53 <./03
 _measurement_results/scripts/plots/pulses/S79_1e14_elecs.pdf, page is rotated 9
 0 degrees> <./03_measurement_results/scripts/plots/pulses/S79_1e14_holes.pdf, p
 age is rotated 90 degrees> <./03_measurement_results/scripts/plots/pulses/S52_3
 -63e14_elecs.pdf, page is rotated 90 degrees> <./03_measurement_results/scripts
 /plots/pulses/S52_3-63e14_holes.pdf, page is rotated 90 degrees>]
-<03_measurement_results/scripts/plots/charge500V.pdf, id=2155, 569.12625pt x 41
+<03_measurement_results/scripts/plots/charge500V.pdf, id=2158, 569.12625pt x 41
 0.53375pt>
 File: 03_measurement_results/scripts/plots/charge500V.pdf Graphic file (type pd
 f)
@@ -1224,7 +1222,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/charge500V.pdf us
 ed on input line 557.
 (pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
 
-<03_measurement_results/scripts/plots/charge-500V.pdf, id=2156, 569.12625pt x 4
+<03_measurement_results/scripts/plots/charge-500V.pdf, id=2159, 569.12625pt x 4
 10.53375pt>
 File: 03_measurement_results/scripts/plots/charge-500V.pdf Graphic file (type p
 df)
@@ -1232,11 +1230,11 @@ df)
 Package pdftex.def Info: 03_measurement_results/scripts/plots/charge-500V.pdf u
 sed on input line 558.
 (pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
- [53]
-[54 <./03_measurement_results/scripts/plots/charge500V.pdf, page is rotated 90 
+ [54]
+[55 <./03_measurement_results/scripts/plots/charge500V.pdf, page is rotated 90 
 degrees> <./03_measurement_results/scripts/plots/charge-500V.pdf, page is rotat
 ed 90 degrees>]
-<03_measurement_results/scripts/plots/taunew/lifetimevstemp.pdf, id=2250, 569.1
+<03_measurement_results/scripts/plots/taunew/lifetimevstemp.pdf, id=2253, 569.1
 2625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/taunew/lifetimevstemp.pdf Graphic fi
 le (type pdf)
@@ -1246,7 +1244,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/taunew/lifetimevs
 temp.pdf used on input line 592.
 (pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
 
-<03_measurement_results/scripts/plots/taunew/avglifetime.pdf, id=2251, 569.1262
+<03_measurement_results/scripts/plots/taunew/avglifetime.pdf, id=2254, 569.1262
 5pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/taunew/avglifetime.pdf Graphic file 
 (type pdf)
@@ -1255,25 +1253,25 @@ File: 03_measurement_results/scripts/plots/taunew/avglifetime.pdf Graphic file
 Package pdftex.def Info: 03_measurement_results/scripts/plots/taunew/avglifetim
 e.pdf used on input line 594.
 (pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
- [55]
+ [56]
 
-LaTeX Warning: Text page 56 contains only floats.
+LaTeX Warning: Text page 57 contains only floats.
 
-[56 <./03_measurement_results/scripts/plots/taunew/lifetimevstemp.pdf, page is 
+[57 <./03_measurement_results/scripts/plots/taunew/lifetimevstemp.pdf, page is 
 rotated 90 degrees> <./03_measurement_results/scripts/plots/taunew/avglifetime.
-pdf, page is rotated 90 degrees>]) [57
+pdf, page is rotated 90 degrees>]) [58
 
 ]
 \openout2 = `04_charge_monitoring/chapter.aux'.
 
  (./04_charge_monitoring/chapter.tex
 Chapter 4.
-[58
+[59
 
 
 
 ]
-<../scripts/04_charge_monitoring/plots/detArea.pdf, id=2351, 569.12625pt x 410.
+<../scripts/04_charge_monitoring/plots/detArea.pdf, id=2355, 569.12625pt x 410.
 53375pt>
 File: ../scripts/04_charge_monitoring/plots/detArea.pdf Graphic file (type pdf)
 
@@ -1281,51 +1279,51 @@ File: ../scripts/04_charge_monitoring/plots/detArea.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/detArea.pdf used
  on input line 41.
 (pdftex.def)             Requested size: 260.17464pt x 187.68266pt.
- [59 <../scripts/04_charge_monitoring/plots/detArea.pdf, page is rotated 90 deg
+ [60 <../scripts/04_charge_monitoring/plots/detArea.pdf, page is rotated 90 deg
 rees>]
-<04_charge_monitoring/pics/mod1.jpeg, id=2399, 426.80597pt x 283.50488pt>
+<04_charge_monitoring/pics/mod1.jpeg, id=2402, 426.80597pt x 283.50488pt>
 File: 04_charge_monitoring/pics/mod1.jpeg Graphic file (type jpg)
 
 <use 04_charge_monitoring/pics/mod1.jpeg>
 Package pdftex.def Info: 04_charge_monitoring/pics/mod1.jpeg used on input line
  68.
 (pdftex.def)             Requested size: 303.53267pt x 201.6316pt.
- [60 <./04_charge_monitoring/pics/mod1.jpeg>]
-<04_charge_monitoring/pics/wafer.jpg, id=2403, 703.62875pt x 561.09625pt>
+ [61 <./04_charge_monitoring/pics/mod1.jpeg>]
+<04_charge_monitoring/pics/wafer.jpg, id=2406, 703.62875pt x 561.09625pt>
 File: 04_charge_monitoring/pics/wafer.jpg Graphic file (type jpg)
 
 <use 04_charge_monitoring/pics/wafer.jpg>
 Package pdftex.def Info: 04_charge_monitoring/pics/wafer.jpg used on input line
  80.
 (pdftex.def)             Requested size: 303.53267pt x 242.04579pt.
- [61 <./04_charge_monitoring/pics/wafer.jpg>]
-<04_charge_monitoring/pics/fei41.png, id=2407, 806.01125pt x 768.8725pt>
+ [62 <./04_charge_monitoring/pics/wafer.jpg>]
+<04_charge_monitoring/pics/fei41.png, id=2410, 806.01125pt x 768.8725pt>
 File: 04_charge_monitoring/pics/fei41.png Graphic file (type png)
 
 <use 04_charge_monitoring/pics/fei41.png>
 Package pdftex.def Info: 04_charge_monitoring/pics/fei41.png used on input line
  94.
 (pdftex.def)             Requested size: 195.12767pt x 186.12872pt.
- [62 <./04_charge_monitoring/pics/fei41.png>]
-<04_charge_monitoring/pics/analogPix.png, id=2411, 1266.7325pt x 691.58376pt>
+ [63 <./04_charge_monitoring/pics/fei41.png>]
+<04_charge_monitoring/pics/analogPix.png, id=2415, 1266.7325pt x 691.58376pt>
 File: 04_charge_monitoring/pics/analogPix.png Graphic file (type png)
 
 <use 04_charge_monitoring/pics/analogPix.png>
 Package pdftex.def Info: 04_charge_monitoring/pics/analogPix.png used on input 
 line 103.
-(pdftex.def)             Requested size: 303.53267pt x 165.70912pt.
- [63 <./04_charge_monitoring/pics/analogPix.png>] [64]
-<../scripts/04_charge_monitoring/plots/production.png, id=2419, 569.05399pt x 4
+(pdftex.def)             Requested size: 346.89731pt x 189.38939pt.
+ [64 <./04_charge_monitoring/pics/analogPix.png>] [65]
+<../scripts/04_charge_monitoring/plots/production.png, id=2422, 569.05399pt x 4
 10.4936pt>
 File: ../scripts/04_charge_monitoring/plots/production.png Graphic file (type p
 ng)
  <use ../scripts/04_charge_monitoring/plots/production.png>
 Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/production.png u
 sed on input line 136.
-(pdftex.def)             Requested size: 260.17464pt x 187.6831pt.
- [65]
-[66 <../scripts/04_charge_monitoring/plots/production.png>] [67]
-<../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf, id=2430, 569.12625pt x 
+(pdftex.def)             Requested size: 346.89731pt x 250.24414pt.
+ [66]
+[67 <../scripts/04_charge_monitoring/plots/production.png>] [68]
+<../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf, id=2433, 569.12625pt x 
 410.53375pt>
 File: ../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf Graphic file (type 
 pdf)
@@ -1334,7 +1332,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf
 used on input line 167.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf, id=2431, 569.12625pt x 
+<../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf, id=2434, 569.12625pt x 
 410.53375pt>
 File: ../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf Graphic file (type 
 pdf)
@@ -1343,7 +1341,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf
 used on input line 168.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf, id=2432, 569.12625pt x 
+<../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf, id=2435, 569.12625pt x 
 410.53375pt>
 File: ../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf Graphic file (type 
 pdf)
@@ -1352,7 +1350,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf
 used on input line 169.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf, id=2433, 569.12625pt x 
+<../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf, id=2436, 569.12625pt x 
 410.53375pt>
 File: ../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf Graphic file (type 
 pdf)
@@ -1361,7 +1359,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf
 used on input line 170.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<../scripts/04_charge_monitoring/plots/disconnectedregion.png, id=2434, 569.053
+<../scripts/04_charge_monitoring/plots/disconnectedregion.png, id=2437, 569.053
 99pt x 410.4936pt>
 File: ../scripts/04_charge_monitoring/plots/disconnectedregion.png Graphic file
  (type png)
@@ -1371,7 +1369,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/disconnectedregi
 on.png used on input line 178.
 (pdftex.def)             Requested size: 195.12767pt x 140.75606pt.
 
-<../scripts/04_charge_monitoring/plots/pseudoefficiency.png, id=2435, 569.05399
+<../scripts/04_charge_monitoring/plots/pseudoefficiency.png, id=2438, 569.05399
 pt x 410.4936pt>
 File: ../scripts/04_charge_monitoring/plots/pseudoefficiency.png Graphic file (
 type png)
@@ -1380,8 +1378,12 @@ type png)
 Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/pseudoefficiency
 .png used on input line 179.
 (pdftex.def)             Requested size: 195.12767pt x 140.75606pt.
- [68]
-<../scripts/04_charge_monitoring/plots/map.pdf, id=2439, 569.12625pt x 410.5337
+ [69] [70 <../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf, page is rotat
+ed 90 degrees> <../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf, page is 
+rotated 90 degrees> <../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf, pag
+e is rotated 90 degrees> <../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf
+, page is rotated 90 degrees>]
+<../scripts/04_charge_monitoring/plots/map.pdf, id=2619, 569.12625pt x 410.5337
 5pt>
 File: ../scripts/04_charge_monitoring/plots/map.pdf Graphic file (type pdf)
  <use ../scripts/04_charge_monitoring/plots/map.pdf>
@@ -1389,7 +1391,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/map.pdf used on
 input line 197.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<../scripts/04_charge_monitoring/plots/distribution.pdf, id=2440, 569.12625pt x
+<../scripts/04_charge_monitoring/plots/distribution.pdf, id=2620, 569.12625pt x
  410.53375pt>
 File: ../scripts/04_charge_monitoring/plots/distribution.pdf Graphic file (type
  pdf)
@@ -1398,12 +1400,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/distribution.pdf
  used on input line 198.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-[69 <../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf, page is rotated 90 
-degrees> <../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf, page is rotate
-d 90 degrees> <../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf, page is r
-otated 90 degrees> <../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf, page
- is rotated 90 degrees>]
-<04_charge_monitoring/pics/DBM-installed-colour1.jpg, id=2618, 2276.505pt x 171
+<04_charge_monitoring/pics/DBM-installed-colour1.jpg, id=2621, 2276.505pt x 171
 0.39pt>
 File: 04_charge_monitoring/pics/DBM-installed-colour1.jpg Graphic file (type jp
 g)
@@ -1411,11 +1408,12 @@ g)
 Package pdftex.def Info: 04_charge_monitoring/pics/DBM-installed-colour1.jpg us
 ed on input line 212.
 (pdftex.def)             Requested size: 390.25534pt x 293.1896pt.
- [70 <../scripts/04_charge_monitoring/plots/disconnectedregion.png> <../scripts
+ [71 <../scripts/04_charge_monitoring/plots/disconnectedregion.png> <../scripts
 /04_charge_monitoring/plots/pseudoefficiency.png> <../scripts/04_charge_monitor
 ing/plots/map.pdf, page is rotated 90 degrees> <../scripts/04_charge_monitoring
-/plots/distribution.pdf, page is rotated 90 degrees>]
-<../scripts/04_charge_monitoring/plots/DBM-positioning.pdf, id=2710, 2163.08125
+/plots/distribution.pdf, page is rotated 90 degrees>] [72 <./04_charge_monitori
+ng/pics/DBM-installed-colour1.jpg>]
+<../scripts/04_charge_monitoring/plots/DBM-positioning.pdf, id=2716, 2163.08125
 pt x 682.55pt>
 File: ../scripts/04_charge_monitoring/plots/DBM-positioning.pdf Graphic file (t
 ype pdf)
@@ -1424,8 +1422,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/DBM-positioning.
 pdf used on input line 222.
 (pdftex.def)             Requested size: 346.89731pt x 109.46019pt.
 
-[71 <./04_charge_monitoring/pics/DBM-installed-colour1.jpg>]
-<04_charge_monitoring/pics/occupancy.png, id=2714, 696.6025pt x 476.78125pt>
+<04_charge_monitoring/pics/occupancy.png, id=2717, 696.6025pt x 476.78125pt>
 File: 04_charge_monitoring/pics/occupancy.png Graphic file (type png)
 
 <use 04_charge_monitoring/pics/occupancy.png>
@@ -1433,7 +1430,7 @@ Package pdftex.def Info: 04_charge_monitoring/pics/occupancy.png used on input
 line 235.
 (pdftex.def)             Requested size: 346.89731pt x 237.42972pt.
 
-<../scripts/04_charge_monitoring/plots/z-r-distance.pdf, id=2715, 242.9075pt x 
+<../scripts/04_charge_monitoring/plots/z-r-distance.pdf, id=2718, 242.9075pt x 
 179.16937pt>
 File: ../scripts/04_charge_monitoring/plots/z-r-distance.pdf Graphic file (type
  pdf)
@@ -1442,43 +1439,45 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/z-r-distance.pdf
  used on input line 243.
 (pdftex.def)             Requested size: 303.53267pt x 223.88461pt.
 
-[72 <../scripts/04_charge_monitoring/plots/DBM-positioning.pdf> <./04_charge_mo
-nitoring/pics/occupancy.png>]
-<../scripts/04_charge_monitoring/plots/D0.pdf, id=2736, 569.12625pt x 410.53375
+[73 <../scripts/04_charge_monitoring/plots/DBM-positioning.pdf>] [74 <./04_char
+ge_monitoring/pics/occupancy.png> <../scripts/04_charge_monitoring/plots/z-r-di
+stance.pdf>]
+<../scripts/04_charge_monitoring/plots/D0.pdf, id=2760, 569.12625pt x 410.53375
 pt>
 File: ../scripts/04_charge_monitoring/plots/D0.pdf Graphic file (type pdf)
  <use ../scripts/04_charge_monitoring/plots/D0.pdf>
 Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/D0.pdf used on i
 nput line 253.
-(pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
-<../scripts/04_charge_monitoring/plots/Z0.pdf, id=2737, 569.12625pt x 410.53375
+<../scripts/04_charge_monitoring/plots/Z0.pdf, id=2761, 569.12625pt x 410.53375
 pt>
 File: ../scripts/04_charge_monitoring/plots/Z0.pdf Graphic file (type pdf)
  <use ../scripts/04_charge_monitoring/plots/Z0.pdf>
 Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/Z0.pdf used on i
 nput line 254.
-(pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
-) [73 <../scripts/04_charge_monitoring/plots/z-r-distance.pdf>] [74 <../scripts
-/04_charge_monitoring/plots/D0.pdf, page is rotated 90 degrees> <../scripts/04_
-charge_monitoring/plots/Z0.pdf, page is rotated 90 degrees>]
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
+ [75 <../scripts/04_charge_monitoring/plots/D0.pdf, page is rotated 90 degrees>
+ <../scripts/04_charge_monitoring/plots/Z0.pdf, page is rotated 90 degrees>]) [
+76]
 \openout2 = `05_current_monitoring/chapter.aux'.
 
- (./05_current_monitoring/chapter.tex
+
+(./05_current_monitoring/chapter.tex
 Chapter 5.
 
-LaTeX Warning: Reference `' on page 75 undefined on input line 9.
+LaTeX Warning: Reference `' on page 77 undefined on input line 9.
 
-[75
+[77
 
 
 
 ]
 
-LaTeX Warning: Reference `' on page 76 undefined on input line 33.
+LaTeX Warning: Reference `' on page 78 undefined on input line 33.
 
-[76] [77]
-<../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params.pdf, id=2859, 569.1262
+[78] [79]
+<../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params.pdf, id=2865, 569.1262
 5pt x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params.pdf Graphic file 
 (type pdf)
@@ -1487,115 +1486,117 @@ File: ../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params.pdf Graphic file
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/pulse/alpha1param
 s.pdf used on input line 69.
 (pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
- [78 <../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params.pdf, page is rota
-ted 90 degrees>]
-<05_current_monitoring/plots/application.pdf, id=2906, 318.18875pt x 175.15437p
+
+<05_current_monitoring/plots/formfac1.pdf, id=2866, 2067.725pt x 652.4375pt>
+File: 05_current_monitoring/plots/formfac1.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/formfac1.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/formfac1.pdf used on input
+ line 77.
+(pdftex.def)             Requested size: 390.25534pt x 123.1381pt.
+ [80 <../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params.pdf, page is rota
+ted 90 degrees> <./05_current_monitoring/plots/formfac1.pdf>] [81]
+<05_current_monitoring/plots/application.pdf, id=2956, 318.18875pt x 175.15437p
 t>
 File: 05_current_monitoring/plots/application.pdf Graphic file (type pdf)
  <use 05_current_monitoring/plots/application.pdf>
 Package pdftex.def Info: 05_current_monitoring/plots/application.pdf used on in
-put line 104.
+put line 111.
 (pdftex.def)             Requested size: 390.25534pt x 214.8239pt.
- [79]
-<05_current_monitoring/plots/analysis1.pdf, id=2910, 2720.1625pt x 1776.6375pt>
+ [82 <./05_current_monitoring/plots/application.pdf>]
+<05_current_monitoring/plots/analysis1.pdf, id=2976, 2720.1625pt x 1776.6375pt>
 File: 05_current_monitoring/plots/analysis1.pdf Graphic file (type pdf)
 <use 05_current_monitoring/plots/analysis1.pdf>
 Package pdftex.def Info: 05_current_monitoring/plots/analysis1.pdf used on inpu
-t line 126.
+t line 133.
 (pdftex.def)             Requested size: 390.25534pt x 254.88136pt.
- [80 <./05_current_monitoring/plots/application.pdf>] [81 <./05_current_monitor
-ing/plots/analysis1.pdf>]
-[82]
-<05_current_monitoring/plots/pulse1.pdf, id=2953, 472.76625pt x 243.91125pt>
+ [83 <./05_current_monitoring/plots/analysis1.pdf>] [84]
+<05_current_monitoring/plots/pulse1.pdf, id=3000, 472.76625pt x 243.91125pt>
 File: 05_current_monitoring/plots/pulse1.pdf Graphic file (type pdf)
 
 <use 05_current_monitoring/plots/pulse1.pdf>
 Package pdftex.def Info: 05_current_monitoring/plots/pulse1.pdf used on input l
-ine 173.
+ine 180.
 (pdftex.def)             Requested size: 303.53267pt x 156.60138pt.
- [83 <./05_current_monitoring/plots/pulse1.pdf>]
-<05_current_monitoring/plots/width_meas.pdf, id=2977, 162.6075pt x 50.1875pt>
-File: 05_current_monitoring/plots/width_meas.pdf Graphic file (type pdf)
+ [85]
 
-<use 05_current_monitoring/plots/width_meas.pdf>
-Package pdftex.def Info: 05_current_monitoring/plots/width_meas.pdf used on inp
-ut line 184.
-(pdftex.def)             Requested size: 117.07924pt x 36.13649pt.
-
-<05_current_monitoring/plots/width.pdf, id=2978, 263.98625pt x 42.1575pt>
-File: 05_current_monitoring/plots/width.pdf Graphic file (type pdf)
-
-<use 05_current_monitoring/plots/width.pdf>
-Package pdftex.def Info: 05_current_monitoring/plots/width.pdf used on input li
-ne 185.
-(pdftex.def)             Requested size: 290.5246pt x 46.39845pt.
-
-Overfull \hbox (5.81712pt too wide) in paragraph at lines 183--188
-[][] 
- []
-
-<05_current_monitoring/plots/area_meas.pdf, id=2979, 192.72pt x 101.37875pt>
-File: 05_current_monitoring/plots/area_meas.pdf Graphic file (type pdf)
-
-<use 05_current_monitoring/plots/area_meas.pdf>
-Package pdftex.def Info: 05_current_monitoring/plots/area_meas.pdf used on inpu
-t line 195.
-(pdftex.def)             Requested size: 130.08731pt x 68.43079pt.
-
-<05_current_monitoring/plots/area.pdf, id=2980, 263.48438pt x 63.23625pt>
-File: 05_current_monitoring/plots/area.pdf Graphic file (type pdf)
-
-<use 05_current_monitoring/plots/area.pdf>
-Package pdftex.def Info: 05_current_monitoring/plots/area.pdf used on input lin
-e 196.
-(pdftex.def)             Requested size: 277.51653pt x 66.60745pt.
-
-Overfull \hbox (5.81712pt too wide) in paragraph at lines 194--199
-[][]
- []
+Package caption Warning: \label without proper \caption on input line 191.
+See the caption package documentation for explanation.
 
 
-<05_current_monitoring/plots/vector_clean.pdf, id=2981, 351.81438pt x 139.52126
+LaTeX Warning: Reference `fig:width' on page 86 undefined on input line 187.
+
+
+Package caption Warning: \label without proper \caption on input line 197.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:area' on page 86 undefined on input line 187.
+
+<05_current_monitoring/plots/width2.pdf, id=3004, 3227.05624pt x 642.4pt>
+File: 05_current_monitoring/plots/width2.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/width2.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/width2.pdf used on input l
+ine 191.
+(pdftex.def)             Requested size: 411.93767pt x 81.99557pt.
+
+<05_current_monitoring/plots/area2.pdf, id=3005, 3227.05624pt x 843.15pt>
+File: 05_current_monitoring/plots/area2.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/area2.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/area2.pdf used on input li
+ne 197.
+(pdftex.def)             Requested size: 411.93767pt x 107.6192pt.
+
+<05_current_monitoring/plots/vector_clean.pdf, id=3006, 351.81438pt x 139.52126
 pt>
 File: 05_current_monitoring/plots/vector_clean.pdf Graphic file (type pdf)
  <use 05_current_monitoring/plots/vector_clean.pdf>
 Package pdftex.def Info: 05_current_monitoring/plots/vector_clean.pdf used on i
-nput line 208.
-(pdftex.def)             Requested size: 303.53267pt x 120.37338pt.
- [84 <./05_current_monitoring/plots/width_meas.pdf> <./05_current_monitoring/pl
-ots/width.pdf> <./05_current_monitoring/plots/area_meas.pdf> <./05_current_moni
-toring/plots/area.pdf> <./05_current_monitoring/plots/vector_clean.pdf>]
-<05_current_monitoring/plots/logic1.pdf, id=3080, 160.09813pt x 41.15375pt>
+nput line 207.
+(pdftex.def)             Requested size: 390.25534pt x 154.7661pt.
+ [86 <./05_current_monitoring/plots/pulse1.pdf> <./05_current_monitoring/plots/
+width2.pdf>] [87 <./05_current_monitoring/plots/area2.pdf> <./05_current_monito
+ring/plots/vector_clean.pdf>]
+<05_current_monitoring/plots/logic1.pdf, id=3094, 160.09813pt x 41.15375pt>
 File: 05_current_monitoring/plots/logic1.pdf Graphic file (type pdf)
 
 <use 05_current_monitoring/plots/logic1.pdf>
 Package pdftex.def Info: 05_current_monitoring/plots/logic1.pdf used on input l
-ine 225.
+ine 224.
 (pdftex.def)             Requested size: 203.80193pt x 52.38899pt.
 
-<05_current_monitoring/plots/logic2.pdf, id=3081, 137.01187pt x 63.73813pt>
+<05_current_monitoring/plots/logic2.pdf, id=3095, 137.01187pt x 63.73813pt>
 File: 05_current_monitoring/plots/logic2.pdf Graphic file (type pdf)
 
 <use 05_current_monitoring/plots/logic2.pdf>
 Package pdftex.def Info: 05_current_monitoring/plots/logic2.pdf used on input l
-ine 226.
+ine 225.
 (pdftex.def)             Requested size: 203.80193pt x 94.81624pt.
 
-Overfull \hbox (5.81714pt too wide) in paragraph at lines 224--228
+Overfull \hbox (5.81714pt too wide) in paragraph at lines 223--227
 [][] 
  []
 
-[85 <./05_current_monitoring/plots/logic1.pdf> <./05_current_monitoring/plots/l
-ogic2.pdf>]
-<05_current_monitoring/plots/controller.pdf, id=3118, 1761.58125pt x 1590.94376
+<05_current_monitoring/plots/algobase.pdf, id=3096, 1530.71875pt x 983.675pt>
+File: 05_current_monitoring/plots/algobase.pdf Graphic file (type pdf)
+
+<use 05_current_monitoring/plots/algobase.pdf>
+Package pdftex.def Info: 05_current_monitoring/plots/algobase.pdf used on input
+ line 232.
+(pdftex.def)             Requested size: 303.53267pt x 195.05043pt.
+ [88 <./05_current_monitoring/plots/logic1.pdf> <./05_current_monitoring/plots/
+logic2.pdf> <./05_current_monitoring/plots/algobase.pdf>]
+<05_current_monitoring/plots/controller.pdf, id=3153, 1761.58125pt x 1590.94376
 pt>
 File: 05_current_monitoring/plots/controller.pdf Graphic file (type pdf)
  <use 05_current_monitoring/plots/controller.pdf>
 Package pdftex.def Info: 05_current_monitoring/plots/controller.pdf used on inp
 ut line 246.
 (pdftex.def)             Requested size: 260.17464pt x 234.96562pt.
- [86 <./05_current_monitoring/plots/controller.pdf>] [87]
-<../scripts/05_current_monitoring/PulseGenTests/plots/freq.pdf, id=3142, 569.12
+ [89 <./05_current_monitoring/plots/controller.pdf>]
+<../scripts/05_current_monitoring/PulseGenTests/plots/freq.pdf, id=3173, 569.12
 625pt x 368.37625pt>
 File: ../scripts/05_current_monitoring/PulseGenTests/plots/freq.pdf Graphic fil
 e (type pdf)
@@ -1603,17 +1604,14 @@ e (type pdf)
 <use ../scripts/05_current_monitoring/PulseGenTests/plots/freq.pdf>
 Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/f
 req.pdf used on input line 299.
-(pdftex.def)             Requested size: 390.25534pt x 252.61162pt.
+(pdftex.def)             Requested size: 346.89731pt x 224.54616pt.
 
 
-LaTeX Warning: Reference `fif:ratioAmpl1' on page 88 undefined on input line 30
+LaTeX Warning: Reference `fif:ratioAmpl1' on page 90 undefined on input line 30
 5.
 
-[88
-
- <../scripts/05_current_monitoring/PulseGenTests/plots/freq.pdf, page is rotate
-d 90 degrees>]
-<../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1.pdf, id=3189, 
+[90]
+<../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1.pdf, id=3177, 
 569.12625pt x 368.37625pt>
 File: ../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1.pdf Graph
 ic file (type pdf)
@@ -1623,7 +1621,7 @@ Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/r
 atioAmpl1.pdf used on input line 314.
 (pdftex.def)             Requested size: 195.12767pt x 126.29738pt.
 
-<../scripts/05_current_monitoring/PulseGenTests/plots/snrAmpl1.pdf, id=3190, 56
+<../scripts/05_current_monitoring/PulseGenTests/plots/snrAmpl1.pdf, id=3178, 56
 9.12625pt x 368.37625pt>
 File: ../scripts/05_current_monitoring/PulseGenTests/plots/snrAmpl1.pdf Graphic
  file (type pdf)
@@ -1633,7 +1631,7 @@ Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/s
 nrAmpl1.pdf used on input line 315.
 (pdftex.def)             Requested size: 195.12767pt x 126.29738pt.
 
-<../scripts/05_current_monitoring/PulseGenTests/plots/ratioWidth1.pdf, id=3191,
+<../scripts/05_current_monitoring/PulseGenTests/plots/ratioWidth1.pdf, id=3179,
  569.12625pt x 368.37625pt>
 File: ../scripts/05_current_monitoring/PulseGenTests/plots/ratioWidth1.pdf Grap
 hic file (type pdf)
@@ -1643,7 +1641,7 @@ Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/r
 atioWidth1.pdf used on input line 317.
 (pdftex.def)             Requested size: 195.12767pt x 126.29738pt.
 
-<../scripts/05_current_monitoring/PulseGenTests/plots/snrWidth1.pdf, id=3192, 5
+<../scripts/05_current_monitoring/PulseGenTests/plots/snrWidth1.pdf, id=3180, 5
 69.12625pt x 368.37625pt>
 File: ../scripts/05_current_monitoring/PulseGenTests/plots/snrWidth1.pdf Graphi
 c file (type pdf)
@@ -1653,7 +1651,7 @@ Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/s
 nrWidth1.pdf used on input line 318.
 (pdftex.def)             Requested size: 195.12767pt x 126.29738pt.
 
-<../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1.pdf, id=3193, 56
+<../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1.pdf, id=3181, 56
 9.12625pt x 368.37625pt>
 File: ../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1.pdf Graphic
  file (type pdf)
@@ -1663,7 +1661,7 @@ Package pdftex.def Info: ../scripts/05_current_monitoring/PulseGenTests/plots/s
 nrArea1.pdf used on input line 321.
 (pdftex.def)             Requested size: 195.12767pt x 126.29738pt.
 
-<../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare.pdf, id=3194, 
+<../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare.pdf, id=3182, 
 569.12625pt x 364.36125pt>
 File: ../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare.pdf Graph
 ic file (type pdf)
@@ -1671,268 +1669,311 @@ ic file (type pdf)
 <use ../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare.pdf>
 Package pdftex.def Info: ../scripts/05_current_monitoring/plot4alpha/plots/4alp
 haCompare.pdf used on input line 334.
-(pdftex.def)             Requested size: 390.25534pt x 249.85837pt.
+(pdftex.def)             Requested size: 346.89731pt x 222.0988pt.
 
-[89] [90 <../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1.pdf, 
-page is rotated 90 degrees> <../scripts/05_current_monitoring/PulseGenTests/plo
-ts/snrAmpl1.pdf, page is rotated 90 degrees> <../scripts/05_current_monitoring/
-PulseGenTests/plots/ratioWidth1.pdf, page is rotated 90 degrees> <../scripts/05
-_current_monitoring/PulseGenTests/plots/snrWidth1.pdf, page is rotated 90 degre
-es> <../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1.pdf, page is
- rotated 90 degrees>] [91 <../scripts/05_current_monitoring/plot4alpha/plots/4a
-lphaCompare.pdf, page is rotated 90 degrees>]
+[91 <../scripts/05_current_monitoring/PulseGenTests/plots/freq.pdf, page is rot
+ated 90 degrees>] [92 <../scripts/05_current_monitoring/PulseGenTests/plots/rat
+ioAmpl1.pdf, page is rotated 90 degrees> <../scripts/05_current_monitoring/Puls
+eGenTests/plots/snrAmpl1.pdf, page is rotated 90 degrees> <../scripts/05_curren
+t_monitoring/PulseGenTests/plots/ratioWidth1.pdf, page is rotated 90 degrees> <
+../scripts/05_current_monitoring/PulseGenTests/plots/snrWidth1.pdf, page is rot
+ated 90 degrees> <../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1
+.pdf, page is rotated 90 degrees>] [93 <../scripts/05_current_monitoring/plot4a
+lpha/plots/4alphaCompare.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: Reference `sec:spacecharge' on page 94 undefined on input line 3
+78.
+
+[94
+
+]
 <../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1.pdf, id=3
-463, 569.12625pt x 410.53375pt>
+498, 569.12625pt x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1.pdf 
 Graphic file (type pdf)
 
 <use ../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/27-puls
-e-background-1.pdf used on input line 383.
+e-background-1.pdf used on input line 385.
 (pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/10-pulse-alpha-e-0.pdf, id=3464
+<../../../CIVIDEC/dataRead/data/plots/reportATI/10-pulse-alpha-e-0.pdf, id=3499
 , 569.12625pt x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-pulse-alpha-e-0.pdf Gra
 phic file (type pdf)
 
 <use ../../../CIVIDEC/dataRead/data/plots/reportATI/10-pulse-alpha-e-0.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-puls
-e-alpha-e-0.pdf used on input line 384.
+e-alpha-e-0.pdf used on input line 386.
 (pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/18-pulse-alpha-h-0.pdf, id=3465
+<../../../CIVIDEC/dataRead/data/plots/reportATI/18-pulse-alpha-h-0.pdf, id=3500
 , 569.12625pt x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-pulse-alpha-h-0.pdf Gra
 phic file (type pdf)
 
 <use ../../../CIVIDEC/dataRead/data/plots/reportATI/18-pulse-alpha-h-0.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-puls
-e-alpha-h-0.pdf used on input line 385.
+e-alpha-h-0.pdf used on input line 387.
 (pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0.pdf, id=3466, 5
+<../../../CIVIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0.pdf, id=3501, 5
 69.12625pt x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0.pdf Graphi
 c file (type pdf)
 
 <use ../../../CIVIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-puls
-e-beta-0.pdf used on input line 386.
+e-beta-0.pdf used on input line 388.
 (pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0.pdf, id=3467, 
+<../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0.pdf, id=3502, 
 569.12625pt x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0.pdf Graph
 ic file (type pdf)
 
 <use ../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-puls
-e-gamma-0.pdf used on input line 387.
+e-gamma-0.pdf used on input line 389.
 (pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/15-pulse-neutron-0.pdf, id=3468
+<../../../CIVIDEC/dataRead/data/plots/reportATI/15-pulse-neutron-0.pdf, id=3503
 , 569.12625pt x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-pulse-neutron-0.pdf Gra
 phic file (type pdf)
 
 <use ../../../CIVIDEC/dataRead/data/plots/reportATI/15-pulse-neutron-0.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-puls
-e-neutron-0.pdf used on input line 388.
+e-neutron-0.pdf used on input line 390.
 (pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
 
-[92
+[95 <../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1.pdf, 
+page is rotated 90 degrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/10-
+pulse-alpha-e-0.pdf, page is rotated 90 degrees> <../../../CIVIDEC/dataRead/dat
+a/plots/reportATI/18-pulse-alpha-h-0.pdf, page is rotated 90 degrees> <../../..
+/CIVIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0.pdf, page is rotated 90 
+degrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0.pdf, 
+page is rotated 90 degrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/15-
+pulse-neutron-0.pdf, page is rotated 90 degrees>] [96
 
- <../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1.pdf, pag
-e is rotated 90 degrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/10-pul
-se-alpha-e-0.pdf, page is rotated 90 degrees> <../../../CIVIDEC/dataRead/data/p
-lots/reportATI/18-pulse-alpha-h-0.pdf, page is rotated 90 degrees> <../../../CI
-VIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0.pdf, page is rotated 90 deg
-rees> <../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0.pdf, pag
-e is rotated 90 degrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/15-pul
-se-neutron-0.pdf, page is rotated 90 degrees>] [93
 
 ]
-<../../../CIVIDEC/dataRead/data/plots/reportATI/29-scatter-0.pdf, id=3735, 531.
-9875pt x 739.76375pt>
-File: ../../../CIVIDEC/dataRead/data/plots/reportATI/29-scatter-0.pdf Graphic f
-ile (type pdf)
+<../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add.pdf, id=3769, 
+597.52231pt x 845.0471pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add.pdf Graph
+ic file (type pdf)
 
-<use ../../../CIVIDEC/dataRead/data/plots/reportATI/29-scatter-0.pdf>
-Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/29-scat
-ter-0.pdf used on input line 416.
-(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
-
-
-LaTeX Warning: Text page 94 contains only floats.
-
-[94
-
- <../../../CIVIDEC/dataRead/data/plots/reportATI/29-scatter-0.pdf>]
-<../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0.pdf, id=3782, 531.
-9875pt x 739.76375pt>
-File: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0.pdf Graphic f
-ile (type pdf)
-
-<use ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0.pdf>
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scat
-ter-0.pdf used on input line 424.
-(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
+ter-0_add.pdf used on input line 444.
+(pdftex.def)             Requested size: 429.28616pt x 607.13112pt.
 
-
-LaTeX Warning: Text page 95 contains only floats.
-
-[95
-
- <../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0.pdf>]
-<../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf, id=3830, 531.
+<../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf, id=3770, 531.
 9875pt x 739.76375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf Graphic f
 ile (type pdf)
 
 <use ../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-scat
-ter-0.pdf used on input line 432.
+ter-0.pdf used on input line 452.
 (pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
 
+<../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0.pdf, id=3771, 569.126
+25pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0.pdf Graphic file
+ (type pdf)
 
-LaTeX Warning: Text page 96 contains only floats.
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-area
+-0.pdf used on input line 462.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
-[96
+<../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0.pdf, id=3772, 569.126
+25pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0.pdf Graphic file
+ (type pdf)
 
- <../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf>]
-<../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf, id=3877, 531.
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-area
+-0.pdf used on input line 463.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
+ [97]
+[98 <../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add.pdf>]
+[99 <../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf>] [100 <..
+/../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0.pdf, page is rotated 90 
+degrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0.pdf, page is
+ rotated 90 degrees>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 475.
+
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf, id=3953, 531.
 9875pt x 739.76375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf Graphic f
 ile (type pdf)
 
 <use ../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-scat
-ter-0.pdf used on input line 440.
+ter-0.pdf used on input line 477.
 (pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
 
 
-LaTeX Warning: Text page 97 contains only floats.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 483.
 
-[97
 
- <../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf>]
-<../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf, id=3924, 531.
+<../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf, id=3954, 531.
 9875pt x 739.76375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf Graphic f
 ile (type pdf)
 
 <use ../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-scat
-ter-0.pdf used on input line 448.
+ter-0.pdf used on input line 485.
 (pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
 
 
-LaTeX Warning: Text page 98 contains only floats.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 490.
 
-[98
 
- <../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf>]
-<../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0.pdf, id=3971, 531.
-9875pt x 739.76375pt>
-File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0.pdf Graphic f
-ile (type pdf)
+<../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0.pdf, id=3955, 569.126
+25pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0.pdf Graphic file
+ (type pdf)
 
-<use ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0.pdf>
-Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scat
-ter-0.pdf used on input line 456.
-(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
- [99 <../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0.pdf>]
-<../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-1.pdf, id=4019, 531.
-9875pt x 739.76375pt>
-File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-1.pdf Graphic f
-ile (type pdf)
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-area
+-0.pdf used on input line 493.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
-<use ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-1.pdf>
-Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scat
-ter-1.pdf used on input line 464.
-(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
- [100 <../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-1.pdf>]
+<../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf, id=3956, 569.126
+25pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf Graphic file
+ (type pdf)
 
-LaTeX Warning: Citation `CHRISSI:00001' on page 101 undefined on input line 475
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-area
+-0.pdf used on input line 494.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
+ [101
+
+]
+[102 <../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf>]
+[103 <../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf>]
+[104 <../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0.pdf, page is rot
+ated 90 degrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf,
+ page is rotated 90 degrees>]
+
+LaTeX Warning: Citation `TRIGA:00001' on page 105 undefined on input line 584.
+
+
+LaTeX Warning: Citation `ATOM:00001' on page 105 undefined on input line 584.
+
+[105
+
+]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 604.
+
+
+<../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add1.pdf, id=4146, 614
+.295pt x 311.27312pt>
+File: ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add1.pdf Graphic 
+file (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add1.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-
+1_add1.pdf used on input line 606.
+(pdftex.def)             Requested size: 429.28616pt x 217.52872pt.
+ [106]
+<../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf, id=4150, 569.12625pt
+ x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf Graphic file (ty
+pe pdf)
+ <use ../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.p
+df used on input line 617.
+(pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
+
+[107 <../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add1.pdf>]
+[108 <../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf, page is rotated
+ 90 degrees>]
+
+LaTeX Warning: Citation `CHRISSI:00001' on page 109 undefined on input line 651
 .
 
-[101
+
+LaTeX Warning: Citation `????' on page 109 undefined on input line 655.
 
 
-
-]
-<../../../CIVIDEC/dataRead/data/plots/reportATI/16-pulse-alpha-sc-1.pdf, id=407
-0, 569.12625pt x 410.53375pt>
-File: ../../../CIVIDEC/dataRead/data/plots/reportATI/16-pulse-alpha-sc-1.pdf Gr
-aphic file (type pdf)
-
-<use ../../../CIVIDEC/dataRead/data/plots/reportATI/16-pulse-alpha-sc-1.pdf>
-Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/16-puls
-e-alpha-sc-1.pdf used on input line 489.
-(pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
-
-<../../../CIVIDEC/dataRead/data/plots/reportATI/17-pulse-alpha-sc-1.pdf, id=407
-1, 569.12625pt x 410.53375pt>
-File: ../../../CIVIDEC/dataRead/data/plots/reportATI/17-pulse-alpha-sc-1.pdf Gr
-aphic file (type pdf)
-
-<use ../../../CIVIDEC/dataRead/data/plots/reportATI/17-pulse-alpha-sc-1.pdf>
-Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/17-puls
-e-alpha-sc-1.pdf used on input line 490.
-(pdftex.def)             Requested size: 190.79385pt x 137.62518pt.
-
-<../../../CIVIDEC/dataRead/data/plots/spaceChargeStudy.pdf, id=4072, 569.12625p
-t x 410.53375pt>
-File: ../../../CIVIDEC/dataRead/data/plots/spaceChargeStudy.pdf Graphic file (t
-ype pdf)
-
-<use ../../../CIVIDEC/dataRead/data/plots/spaceChargeStudy.pdf>
-Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/spaceChargeStudy.
-pdf used on input line 498.
-(pdftex.def)             Requested size: 260.17464pt x 187.68266pt.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 665.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add1.pdf, id=4233,
+ 597.52231pt x 845.0471pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add1.pdf Grap
+hic file (type pdf)
 
-[102 <../../../CIVIDEC/dataRead/data/plots/reportATI/16-pulse-alpha-sc-1.pdf, p
-age is rotated 90 degrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/17-p
-ulse-alpha-sc-1.pdf, page is rotated 90 degrees>] [103 <../../../CIVIDEC/dataRe
-ad/data/plots/spaceChargeStudy.pdf, page is rotated 90 degrees>]
-
-LaTeX Warning: Citation `TRIGA:00001' on page 104 undefined on input line 546.
-
-
-LaTeX Warning: Citation `ATOM:00001' on page 104 undefined on input line 546.
-
-[104
-
-] [105]
-<../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1.pdf, id=4215, 569.1262
-5pt x 273.02pt>
-File: ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1.pdf Graphic file 
-(type pdf)
-
-<use ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1.pdf>
-Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-
-1.pdf used on input line 572.
-(pdftex.def)             Requested size: 429.28616pt x 205.94345pt.
- [106 <../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1.pdf, page is rot
-ated 90 degrees>] [107]
-<../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1.pdf, id=4265, 531.9875pt x
- 739.76375pt>
-File: ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1.pdf Graphic file (typ
-e pdf)
- <use ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1.pdf>
-Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1.pd
-f used on input line 619.
-(pdftex.def)             Requested size: 429.28616pt x 596.95906pt.
-
-[108 <../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1.pdf>]) [109
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add1.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scat
+ter-0_add1.pdf used on input line 667.
+(pdftex.def)             Requested size: 429.28616pt x 607.13112pt.
 
 
-]
-(./phdthesismain.bbl
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 672.
+
+
+<../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf, id=4234, 569.126
+25pt x 410.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf Graphic file
+ (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-area
+-4.pdf used on input line 674.
+(pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
+ [109]
+[110 <../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add1.pdf>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 705.
+
+
+<../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add1.pdf, id=4280, 597.522
+31pt x 845.0471pt>
+File: ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add1.pdf Graphic file
+ (type pdf)
+
+<use ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add1.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_ad
+d1.pdf used on input line 707.
+(pdftex.def)             Requested size: 429.28616pt x 607.13112pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 712.
+
+
+<../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf, id=4281, 569.12625pt x 4
+10.53375pt>
+File: ../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf Graphic file (type p
+df)
+ <use ../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf>
+Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf u
+sed on input line 714.
+(pdftex.def)             Requested size: 346.89731pt x 250.24356pt.
+ [111 <../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf, page is ro
+tated 90 degrees>] [112 <../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_ad
+d1.pdf>]
+[113 <../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf, page is rotated 90 
+degrees>]) [114
+
+] (./phdthesismain.bbl
 Overfull \hbox (39.1973pt too wide) in paragraph at lines 4--7
 []\OT1/cmr/m/it/12 ASIC\OT1/cmr/m/n/12 .  http://www.embedded-systems-portal.co
 m/CTB/CTB[]images/L2/L2[]ASIC.jpg. 
@@ -1944,7 +1985,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
 OT1/cmr/m/n/12 .
  []
 
-[110
+[115
 
 
 ]
@@ -1962,7 +2003,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
- [111]) [112]
+ [116]) [117]
 (./phdthesismain.aux (./01_introduction/chapter.aux)
 (./02_pulse_formation/chapter.aux) (./03_measurement_results/chapter.aux)
 (./04_charge_monitoring/chapter.aux) (./05_current_monitoring/chapter.aux))
@@ -1974,10 +2015,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5671 strings out of 493488
- 118189 string characters out of 3141326
- 130363 words of memory out of 3000000
- 8321 multiletter control sequences out of 15000+200000
+ 5683 strings out of 493488
+ 118698 string characters out of 3141326
+ 128351 words of memory out of 3000000
+ 8330 multiletter control sequences out of 15000+200000
  18358 words of font info for 68 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,16n,48p,2577b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2005,10 +2046,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2012/texmf-dis
 t/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2012/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on phdthesismain.pdf (122 pages, 16285585 bytes).
+Output written on phdthesismain.pdf (127 pages, 16655595 bytes).
 PDF statistics:
- 4405 PDF objects out of 5155 (max. 8388607)
- 2117 compressed objects within 22 object streams
+ 4500 PDF objects out of 5155 (max. 8388607)
+ 2214 compressed objects within 23 object streams
  0 named destinations out of 1000 (max. 500000)
- 651 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 661 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -100,7 +100,7 @@ Each pixel is designed as a separate entity. Its electrical chain is shown in fi
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{04_charge_monitoring/pics/analogPix}
+\includegraphics[width=0.8\textwidth]{04_charge_monitoring/pics/analogPix}
 \caption{Schematic of an analog pixel. Courtesy of the FE-I4 collaboration.}
 \label{fig:anapix}
 \end{figure}
@@ -133,7 +133,7 @@ Only the modules that passed the pixel connectivity test undergo the second test
 The results for the DBM QC are shown in section~\ref{sec:perfresults}.  All in all, 79 modules went through the QC procedure -- 43 diamond modules and 36 silicon modules, 12 of the latter only for testing purposes. Figure~\ref{fig:production} shows their production with time. 18 diamond modules and 6 silicon modules were in the end chosen to be made up into DBM telescopes and installed into ATLAS.
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.6\textwidth]{../scripts/04_charge_monitoring/plots/production}
+\includegraphics[width=0.8\textwidth]{../scripts/04_charge_monitoring/plots/production}
 \caption{Module production with time}
 \label{fig:production}
 \end{figure}
@@ -248,10 +248,10 @@ The second step was to test the detector's capability of particle tracking. Only
 A comparison of the data acquired (see figures~\ref{fig:raddist} and~\ref{fig:longdist}) showed that, for the colliding bunches, the majority of the reconstructed tracks had the origin in the interaction point, with an expected spread in $Z$ and $R$. For non-colliding bunches, the distribution is more spread out. In the $Z_\mathrm{0}$ plot the distribution has one peak in the middle, which means that the empty RF buckets still held some particles. The two peaks on the sides, however, show that a significant number of tracks had their origin at the radius of the beam pipe. Therefore these tracks were made by stray protons colliding with the beam pipe. These collisions are unwanted as they do not produce any meaningful physics while still damaging the ATLAS detector by means of the scattered radiation.
 
 \begin{figure}[!t]
-%\centering
+\centering
 \begin{tabular}{cccc}
-\subfloat[Radial distance of the particle trajectories from the interaction point]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/D0} \label{fig:raddist}} &
-\subfloat[Longitudinal distance of the particle trajectories (along the beam path) from the interaction point]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/Z0}  \label{fig:longdist}}
+\subfloat[Radial distance of the particle trajectories from the interaction point]{\includegraphics[width=0.7\textwidth]{../scripts/04_charge_monitoring/plots/D0} \label{fig:raddist}} \\
+\subfloat[Longitudinal distance of the particle trajectories (along the beam path) from the interaction point]{\includegraphics[width=0.7\textwidth]{../scripts/04_charge_monitoring/plots/Z0}  \label{fig:longdist}}
 \end{tabular}
 \caption{These two plots show two parameters of particle tracks recorded by one of the DBM telescopes: radial and longitudinal distance of the projected tracks from the interaction point.}
 \end{figure}

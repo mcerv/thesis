@@ -62,7 +62,7 @@ The device is very sensitive to noise pick-up. Therefore the setup must be desig
 
 
 \section{Pulse parameters}
-A signal pulse on the input is parametrised during the analysis process. The PSA measures its amplitude, area, width and the slope of its falling edge (see figure~\ref{fig:params}. The amplitude is the difference between the baseline and the highest sample in the pulse and is given in ADC counts as an 8-bit value. The area is defined as the sum of amplitudes of all samples between two defined boundaries within the pulse. The width is defined as the number of samples with a value higher than a set amplitude threshold. If the threshold is at half the maximum amplitude, the resulting width is \emph{full width at half maximum} (FWHM). The falling slope is the maximum negative difference between values of two samples and is given in ADC counts per sample. These parameters can also be used as \emph{qualifiers} for accepting or discarding a pulse. All four parameters limited by the low and high limit are called a \emph{qualifier set}. For instance, a rectangular pulse by an $\upalpha$ particle will always have the same FWHM and a very steep slope. In comparison, a photon will have a lower falling slope value and a narrower FWHM. Therefore the low and high cut on these two qualifiers will make it possible to discriminate between the two pulses. Another qualifier is a \emph{form factor} and is defined as the ratio between the measured area and the amplitude multiplied by the width. By comparing the measured and the calculated area the difference between a triangular and a rectangular pulse can be inferred.
+A signal pulse on the input is parametrised during the analysis process. The PSA measures its amplitude, area, width and the slope of its falling edge (see figure~\ref{fig:params}. The amplitude is the difference between the baseline and the highest sample in the pulse and is given in ADC counts as an 8-bit value. The area is defined as the sum of amplitudes of all samples between two defined boundaries within the pulse. The width is defined as the number of samples with a value higher than a set amplitude threshold. If the threshold is at half the maximum amplitude, the resulting width is \emph{full width at half maximum} (FWHM). The falling slope is the maximum negative difference between values of two samples and is given in ADC counts per sample. These parameters can also be used as \emph{qualifiers} for accepting or discarding a pulse. All four parameters limited by the low and high limit are called a \emph{qualifier set}. For instance, a rectangular pulse by an $\upalpha$ particle will always have the same FWHM and a very steep slope. In comparison, a photon will have a lower falling slope value and a narrower FWHM. Therefore the low and high cut on these two qualifiers will make it possible to discriminate between the two pulses. Another qualifier is a \emph{form factor} and is defined as the ratio between the measured area and the amplitude multiplied by the width. By comparing the measured and the calculated area the difference between a triangular and a rectangular pulse can be inferred (see figure~\ref{fig:formfac1}).
 
 \begin{figure}[!t]
 \centering
@@ -71,6 +71,13 @@ A signal pulse on the input is parametrised during the analysis process. The PSA
 \label{fig:params}
 \end{figure}
 
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/formfac1}
+\caption{Form Factor is the ratio between the measured area ($a$) and the calculated area ($A\times BW$) of the pulse. The calculated area is significantly larger than the measured area for a triangular triangular pulse, but less so for the rectangular one. The red and blue dot in the right plot are the value entries of the two pulses shown. The red and blue oval shapes depict the regions for the values expected from triangular and rectangular pulses. By carefully choosing the linear qualifier (dashed line) and taking only the entries below the cut rectangular pulses can be identified.}
+\label{fig:formfac1}
+\end{figure}
 
 %Every parameter set is saved into a histogram after analysis.  The falling slope is not even a physical quantity, but as will be shown later, can improve the identification. 
 
@@ -121,7 +128,7 @@ The firmware is written entirely in VHDL. The diagram in figure~\ref{fig:applica
 This module is different for different applications. The Pulse Shape Analysis (PSA) application has the most complex module design. The spectroscopy application only uses a small part of that design and the Counter application an even smaller one.
 
 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 \centering
 \includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/analysis1}
 \caption{Code design plan}
@@ -162,9 +169,9 @@ where $a$ is the measured area, $A$ is the amplitude, $BW$ is the baseline width
 \end{description}
 
 
-\subsection{Vector cleaning for area and width measurements}
+\subsection{Area and width measurement}
 \label{sec:vecclean}
-The routine for measuring pulse area and width was designed to improve the measurements with respect to the previous implementation. The core difference is that the new routine precisely defines the edges of a pulse. It does so by means of \emph{vector cleaning}, presented in figure~\ref{fig:samplepulse}. An important input, beside the ADC data and the measurement threshold, is the position of the sample with the highest amplitude. 
+The routine for measuring pulse area and width must have a specific algorithm implemented to carry out the measurements correctly. The core point is that the routine precisely defines the edges of a pulse. It does so by means of \emph{vector cleaning}, presented in figure~\ref{fig:samplepulse}. An important input, beside the ADC data and the measurement threshold, is the position of the sample with the highest amplitude. 
 
 The signal arrives from the ADC as a set of 32 8-bit samples every every clock cycle with a period of 6.4~ns. All 32 samples are compared against the width measurement threshold. If a sample value is equal or higher than this threshold, a binary 1 is set in a 32-bit \emph{vector} on the position corresponding to the position of the sample in the incoming ADC data set. The resulting vector might also include some noise at the edges of the pulse, depending on the height of the width measurement threshold. The old routine simply counts the binary ones in this vector to get the pulse width. This works well for measuring the FWHM because the threshold was high. However, for width measurements at 25~\%, 12.5~\% or 6.25~\% of the pulse height this might already become a problem, because the noise might be counted in as well. This is why the new routine cleans the outliers in this vector before counting the remaining ones in the clean vector. 
 
@@ -177,25 +184,17 @@ The signal arrives from the ADC as a set of 32 8-bit samples every every clock c
 
 The routine starts from the position of the maximum height. It follows the vector in both ways and finds the first falling edge (0 at this position and 1 at the previous one). From there on it rewrites any binary 1 with a binary 0. The resulting clean vector only has one bunched set of binary ones which are summed, yielding a precise pulse width. The area measurement is similar - it only integrates over the samples marked in the clean vector. Both measurement routines, for area and for width, are implemented separately so that the area routine can have a different threshold set.
 
-This section explains how the algorithm is designed. First, the idea for it was tested using Excel and was only afterwards ported to the VHDL. The underlying algorithm first cleans the vector. Then it passes the cleaned vector either to the width or area measurement (see figures~\ref{fig:width_meas}, \ref{fig:width}, \ref{fig:area_meas} and \ref{fig:area}). The width measurement module only sums the ones in the vector whereas the area measurement module sums the data samples marked by the cleaned vector. Both modules issue a \emph{valid} signal when they finish the measurement.
+This section explains how the algorithm is designed. First, the idea for it was tested using Excel and was only afterwards ported to the VHDL. The underlying algorithm first cleans the vector. Then it passes the cleaned vector either to the width or area measurement (see figures~\ref{fig:width} and \ref{fig:area}). The width measurement module only sums the ones in the vector whereas the area measurement module sums the data samples marked by the cleaned vector. Both modules issue a \emph{valid} signal when they finish the measurement.
 
 \begin{figure}[!t]
-\begin{tabular}{rr}
-\subfloat{\includegraphics[width=0.27\textwidth]{05_current_monitoring/plots/width_meas} \label{fig:width_meas}} &
-\subfloat{\includegraphics[width=0.67\textwidth]{05_current_monitoring/plots/width}  \label{fig:width}}
-\label{fig:cleanwidth}
-\end{tabular}
-
+\centering
+\includegraphics[width=0.95\textwidth]{05_current_monitoring/plots/width2}  \label{fig:width}
 \caption{This block counts the remaining binary ones in the clean vectors and outputs this value as the pulse width.}
 \end{figure}
 
 
 \begin{figure}[!t]
-\begin{tabular}{rr}
-\subfloat{\includegraphics[width=0.30\textwidth]{05_current_monitoring/plots/area_meas} \label{fig:area_meas}} &
-\subfloat{\includegraphics[width=0.64\textwidth]{05_current_monitoring/plots/area}  \label{fig:area}}
-\end{tabular}
-\label{fig:cleanarea}
+\centering\includegraphics[width=0.95\textwidth]{05_current_monitoring/plots/area2}  \label{fig:area}
 \caption{This block masks the input data with the clean vector and sums the remaining samples.}
 \end{figure}
 
@@ -214,9 +213,9 @@ The vector cleaning module is designed as a final state machine (FSM) with the s
 
 
 \subsubsection{Algorithm}
-The underlying algorithm is sequential - it carries out a logic operation on vector bit 0, uses the output of this operation for the operation on bit 1 and so on. This means that it has to carry out 32 logic operations per clock cycle. With each operation taking approximately 0.3~ns, the whole logic chain takes approximately 10~ns to complete. With only 6.4~ns per clock cycle, this means timing errors would occur. To fix the problem, a more complicated \emph{decimated algorithm} was invented. It consists of two parallel logic chains which only take every second bit into account and are at the end merged together. This effectively reduces the number of sequential logic operations to around 18, which is within the timing constraints. 
+The underlying algorithm is sequential - it carries out a logic operation on vector bit on position 0, uses the output of this operation for the operation on bit on position 1 and so on. This means that it has to carry out 32 logic operations per clock cycle. With each operation taking approximately 0.3~ns, the whole logic chain takes approximately 10~ns to complete. With only 6.4~ns per clock cycle, this means timing errors would occur. To fix the problem, a more complicated \emph{decimated algorithm} has been designed. It consists of two parallel logic chains. Each of the two only takes every second bit into account (chain one: 0, 2, 4 ..., 30. Chain two: 1, 3, 5 ..., 31). This makes the chains effectively 16 bits long. The algorithm is run on the two chains and the results are merged together at the end as shown in figure~\ref{fig:algobase}. This effectively reduces the number of sequential logic operations to around 18, which is within the timing constraints. 
 %Nevertheless, to explain the algorithm, a non-decimated version will be shown first.
-
+%This would need to be explained more in detail I guess...
 
 
 
@@ -228,11 +227,12 @@ The underlying algorithm is sequential - it carries out a logic operation on vec
 \caption{One logic step in the algorithm chain before and after Karnaugh minimisation.}
 \end{figure}
 
-
-
-
-
-
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.7\textwidth]{05_current_monitoring/plots/algobase}
+\caption{Vector is divided into two 16-bit logic chains. The algorithm logic is then run on the two chains separately. The results are then merged into one 32-bit clean vector by using a set of AND gates.}
+\label{fig:algobase}
+\end{figure}
 
 
 \section{Control and data interface}
@@ -297,7 +297,7 @@ A pulse generator was used to verify the highest achievable rate at which the PS
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.8\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/freq}
-\caption{This figure shows the capability of the device to analyse all arriving pulses for a range of input frequencies. The highest achievable rate with zero lost pulses is $5\times10^6~s^{-1}$.}
+\caption{This figure shows the capability of the device to analyse all arriving pulses for a range of input frequencies. The highest achievable rate with zero lost pulses is $5\times10^6$~s$^{-1}$.}
 \label{fig:trigrate}
 \end{figure}
 
@@ -353,7 +353,7 @@ The $^{241}$Am peak measured by the Cx amplifier has an RMS of 0.8~ADC, which co
 \section{Source calibration}
 \label{sec:sourcecalib}
 % ---------------------------------------------------------------------------------------------------------------
-The operation of the pulse shape analysis was tested using several radioactive sources. In particular, an $\upalpha$, a $\upbeta$, a $\upgamma$ and a $n$ source were used. Each source was placed on top of the diamond detector and left for a predefined time depending on its activity. Table~\ref{tab:semicompare} shows the sources used, the time of exposure and their rate during this time. The data for the $\upalpha$ source were taken for both polarities. In addition, a long run with an $\upalpha$ source with a sheet of paper in between the source and the diamond was taken. The paper stopped the $\upalpha$ particles but let through the photons, which helped to estimate the background photon radiation of the source.
+The operation of the pulse shape analysis has been tested using several radioactive sources. In particular, an $\upalpha$, a $\upbeta$ and a $\upgamma$ source have been used. Each source has been placed on top of the diamond detector and left for a predefined time depending on its activity. Table~\ref{tab:semicompare} shows the sources used, the time of exposure and their rate during this time. The data for the $\upalpha$ source have been taken for both polarities. In addition, a long run with an $\upalpha$ source with a sheet of paper in between the source and the diamond has been taken. The paper stops the $\upalpha$ particles but lets through the photons, which helps to estimate the background photon radiation of the source.
 
 \begin{footnotesize}
 \begin{center}
@@ -366,7 +366,8 @@ Run & Source & Radiation & Energy [MeV] & Time [h]  & Triggers & Rate [s$^{-1}$]
 3&$^{241}$Am  & $\upalpha$ & 5.5 & 18 & 11454 & 0.18 & -500 \\
 4&$^{90}$Sr  & $\upbeta$ & 2.3 & 0.42 & 1.07e6 & 1000 & 500 \\
 5&$^{60}$Co  & $\upgamma$ & 1.3 & 0.28 & 1.34e6 & 3300 & 500 \\
-6&$^{239}$Pu~Be  & $n$ & 1--10 & 2.5 & 1.5e6 & 230 & 500 \\ \hline
+6&$^{239}$Pu~Be  & $n$ & 1--10 & 2.5 & 1.5e6 & 230 & 500 \\ 
+\hline
 \end{tabular}
 \captionof{table}{Measurements carried out at Atominstitut}
 \label{tab:semicompare}
@@ -378,7 +379,7 @@ However, the number of $\upalpha$ hits due to contamination is negligible - an e
 
 % ATI source measurements
 \clearpage
-\begin{figure}[!h]
+\begin{figure}[!t]
 %\centering
 \begin{tabular}{rrr}
 \subfloat[$^{241}$Am background]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1} \label{fig:am1}} &
@@ -440,8 +441,8 @@ The amplitude increase with area in the [area, amplitude] subfigure is similar f
 %\clearpage
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0}
-\caption{$^{241}$Am, e$^{-}$ collection. Qualifier: FWHM 7--10~ns.}
+\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add}
+\caption{$^{241}$Am, e$^{-}$ collection. Qualifier: FWHM. Optional qualifiers: Amplitude, Form Factor.}
 \label{fig:scatterae}
 \end{figure}
 
@@ -449,19 +450,19 @@ The amplitude increase with area in the [area, amplitude] subfigure is similar f
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0}
-\caption{$^{241}$Am, h$^{+}$ collection. Qualifier: FWHM 5.5--8~ns.}
+\caption{$^{241}$Am, h$^{+}$ collection. Qualifier: FWHM.}
 \label{fig:scatterah}
 \end{figure}
 
 Figures~\ref{fig:1dearea} and~\ref{fig:1dharea} show a one-dimensional area distribution of the acquired data for electron and hole collection. The blue histogram represents all collected data whereas the red one marks the data whereby the pulse parameters are within the qualifiers. In both figures the $\upalpha$ peak at 600~pVs is clearly visible, followed by a $\upgamma$ quasi-Landau distribution with an MPV of $\sim$70~pVs and a noise peak at the very left of the area distribution. These two contributions have been rejected by the FWHM qualifier.
 
-\begin{figure}[!h]
+\begin{figure}[!t]
 \centering
 \begin{tabular}{cc}
 \subfloat[$^{241}$Am, e$^{-}$ collection]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0} \label{fig:1dearea}} \\
 \subfloat[$^{241}$Am, h$^+$ collection]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0}  \label{fig:1dharea}}
 \end{tabular}
-\caption{}
+\caption{$^{241}$Am area histograms for electron and hole collection.}
 \label{fig:1dalphaarea}
 \end{figure}
 
@@ -474,7 +475,7 @@ The one-dimensional histograms in figure~\ref{fig:1dcosrarea} show a quasi-Landa
 \begin{figure}[]
 \centering
 \includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0}
-\caption{$^{90}$Sr}
+\caption{$^{90}$Sr scatter plots}
 \label{fig:scattersr}
 \end{figure}
 
@@ -482,7 +483,7 @@ The one-dimensional histograms in figure~\ref{fig:1dcosrarea} show a quasi-Landa
 \begin{figure}[]
 \centering
 \includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0}
-\caption{$^{60}$Co}
+\caption{$^{60}$Co scatter plots}
 \label{fig:scatterco}
 \end{figure}
 
@@ -492,7 +493,7 @@ The one-dimensional histograms in figure~\ref{fig:1dcosrarea} show a quasi-Landa
 \subfloat[$^{90}$Sr]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0} \label{fig:1dsrarea}} \\
 \subfloat[$^{60}$Co]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0}  \label{fig:1coharea}}
 \end{tabular}
-\caption{}
+\caption{Energy distributions for $\upgamma$ and $\upbeta$ particles.}
 \label{fig:1dcosrarea}
 \end{figure}
 
@@ -520,7 +521,7 @@ The one-dimensional histograms in figure~\ref{fig:1dcosrarea} show a quasi-Landa
 %Space charge built up during the neutron irradiation ($\sim10^{10}~$n), which reflected on the pulse shapes. Instead of a flat top, they developed a slope. This was of opposite signs for the two polarities, as can be seen in figures~\ref{fig:sc1} and~\ref{fig:sc2}. The figures contain a set of 64 superimposed pulses taken at $\pm$500~V bias. The shape persisted until the space charge was neutralised by means of a $\upbeta$ source irradiation at a 0~V bias. Figure~\ref{fig:sm} shows the decreasing of the slope coefficient as a function of received $\upbeta$ dose.
 %
 %
-%\begin{figure}[!h]
+%\begin{figure}[!t]
 %\centering
 %\begin{tabular}{rrr}
 %\subfloat[$^{241}$Am, e$^{-}$ collection]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/16-pulse-alpha-sc-1} \label{fig:sc1}} &
@@ -530,7 +531,7 @@ The one-dimensional histograms in figure~\ref{fig:1dcosrarea} show a quasi-Landa
 %\label{fig:sc}
 %\end{figure}
 %
-%\begin{figure}[!h]
+%\begin{figure}[!t]
 %\centering
 %\includegraphics[width=0.8\textwidth]{../../../CIVIDEC/dataRead/data/plots/spaceChargeStudy}
 %\caption{Using $\upbeta$ radiation to reduce space charge in diamond}
@@ -601,9 +602,9 @@ The main parts of the detector are an sCVD diamond sensor sized $4.7\times4.7$~c
 Note: this data set has been taken with an older version of the firmware, which only measured a limited number of pulse parameters.
 
 \begin{figure}[]
-\centering
-\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1}
-\caption{Thermal neutrons, photons. Qualifier: FWHM 7--10~ns}
+\centering-
+\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add1}
+\caption{Thermal neutrons, photons. Qualifier: FWHM.}
 \label{fig:scattertriga1}
 \end{figure}
 
@@ -663,8 +664,8 @@ The result could be further improved by further constraining the identification,
 
 \begin{figure}[]
 \centering
-\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0}
-\caption{$^{239}$Pu~Be. Qualifiers: BW-FWHM 0.2--4~ns, FWHM 3--12~ns, Form factor 1.45}
+\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add1}
+\caption{$^{239}$Pu~Be. Qualifiers: BW-FWHM, FWHM, Form Factor}
 \label{fig:scatterpu}
 \end{figure}
 
@@ -697,31 +698,30 @@ The CROCUS reactor at EPFL~\cite{EPFL:00000} is a research neutron reactor. The 
 The highest output power of the CROCUS reactor is 100~W. Currently there are fission chambers that carry out the neutron counting, which is a measure of the activity of the reactor. The new goal is to measure both neutrons and photons, but separately. The pulse shape analysis is a good solution for this task. For this, a 400~$\upmu$m thick diamond detector with a specially designed casing was added to measure the activity. The LiF foil was added for conversion of thermal neutrons. The ROSY box with the integrated PSA routine was used for signal analysis.
 
 \subsubsection{Measurements}
-The results from a test run at 10~W output power are shown in figure~\ref{fig:scatterepfl2}. The data include a mixed field consisting of fast neutrons, photons and of $\upalpha$ and $^3$H particles as products of thermal neutron decay in the LiF foil in front of the detector. The energy deposited in the diamond is not as high as that from the $^{239}$Pu~Be source. In addition, the analog noise during this measurement is higher than in the previous application. These conditions combined make particle identification a challenging task.
+At the highest reactor activity the system counts particles at a rate of $\sim1.5\times10^{5}$~s$^{-1}$. The results from a test run at 10~W output power are shown in figure~\ref{fig:scatterepfl2}. The data include a mixed field consisting of fast neutrons, photons and of $\upalpha$ and $^3$H particles as products of thermal neutron decay in the LiF foil in front of the detector. The energy deposited in the diamond is not as high as that from the $^{239}$Pu~Be source. In addition, the analog noise during this measurement is higher than in the previous application. These conditions combined make particle identification at CROCUS a challenging task.
 
 
 
 \begin{figure}[]
 \centering
-\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1}
-\caption{Fast neutrons, thermal neutrons, photons. Qualifiers: BW-FWHM 0--4~ns, FWHM 3--12~ns, Form factor 1.45, Slope 10--108~mV/ns}
+\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add1}
+\caption{Fast neutrons, thermal neutrons, photons. Qualifiers: BW-FWHM, FWHM, Form factor, Slope.}
 \label{fig:scatterepfl2}
 \end{figure}
 
 \begin{figure}[]
 \centering
-\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/epfl-area-1}
-\caption{}
+\includegraphics[width=0.8\textwidth]{../../../CIVIDEC/dataRead/data/plots/epfl-area-1}
+\caption{Energy spectrum in CROCUS before and after applied qualifiers}
 \label{fig:scatterepfl2area}
 \end{figure}
 
 
 \subsubsection{Results and discussion}
-ADD THE DESCRIPTION OF CUTS
-The data after the applied cuts again show a distinct $^3$H cluster, as well as the three-lane fast-neutron signature. The $\upalpha$ signal is buried under the signals stemming from fast neutrons and photons.  
+The aim of this exercise is to identify both thermal and fast neutrons. For this the main qualifier used is the Form Factor - the linear line in the [area, amplitude$\times$base value] phase space. Additional FWHM, FWHM-BW and slope constant qualifiers are used to clean the outlying entries. The resulting accepted entries in figure~\ref{fig:scatterepfl2} have the distinctive three-line fast neutron signature in the [area, FWHM] subfigure with two superimposed islands by the $\upalpha$ and $^3$H cluster produced by thermal neutrons in the LiF foil. The $\upgamma$ background is sufficiently suppressed. The resulting one-dimensional histogram of the area/energy distribution is shown in figure~\ref{fig:scatterepfl2area}.
 
 \subsubsection{Conclusion}
-ADD CONCLUSION
+By applying the Form Factor qualifier both fast and thermal neutrons can be identified, suppressing the $\upgamma$ background.
 
 
 
@@ -730,6 +730,6 @@ ADD CONCLUSION
 \section{Conclusion}
 \label{sec:conclcurrent}
 % ---------------------------------------------------------------------------------------------------------------
-This chapter describes a system that can identify the type of radiation in real time. The system is implemented on an FPGA in a CIVIDEC ROSY box and is used with diamond detectors. The signal from the diamond sensor is read in and analysed in the firmware. First the shape of the pulse is parametrised. Then the logic determines the type of particle according to the user defined cuts. Finally the parameters are written into a histogram, which is read out by the user. The firmware is designed to carry out the pulse shape analysis of a single pulse in $\sim$200~ns, yielding a maximum pulse rate of $5\times10^6$ particles per second. The rate as well as the linearity the measurement stability with respect to noise have been verified using a pulse generator. Then several radioactive sources were used to calibrate the device. Finally the system was installed in two neutron reactors to test the operation in a mixed field containing thermal neutrons, fast neutrons and photons. Various cuts were tested to optimise the identification.
+This chapter describes a system that can identify the type of radiation in real time. The system is implemented on an FPGA in a CIVIDEC ROSY box and is used with diamond detectors. The signal from the diamond sensor is read in and analysed in the firmware. First the shape of the pulse is parametrised. Then the logic determines the type of particle according to the user defined cuts. Finally the parameters are written into a histogram, which is read out by the user. The firmware is designed to carry out the pulse shape analysis of a single pulse in $\sim$200~ns, yielding a maximum pulse rate of $5\times10^6$ particles per second. The rate as well as the linearity the measurement stability with respect to noise have been verified using a pulse generator. Then several radioactive sources were used to calibrate the device. Finally the system has been set up in two neutron reactors to test the operation in a mixed field containing thermal neutrons, fast neutrons and photons. The identification can be optimised using a combination of qualifiers to achieve the desired effect.
 
 
