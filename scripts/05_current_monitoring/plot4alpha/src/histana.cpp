@@ -276,7 +276,7 @@ void HistAna::plotSpectrum() {
   m_vp.at(Cx).histMaxampl_acc_v4->GetXaxis()->SetRangeUser(0,150);
   TLatex* text = new TLatex();
   text->SetTextFont(42);
-  text->DrawLatex(70,0.15,"^{148}Ga");
+  text->DrawLatex(70,0.15,"^{148}Gd");
   text->DrawLatex(105,0.08,"^{239}Pu");
   text->DrawLatex(121,0.085,"^{241}Am");
   text->DrawLatex(136,0.072,"^{244}Cm");
@@ -328,7 +328,7 @@ void HistAna::plotSpectrum() {
       <<"  MEAN(X)  "<<fit1->GetParameter(1)
       <<"  SIGMA(X) "<<fit1->GetParameter(2)
       <<endl;
-  m_vp.at(C2).extHistArea_acc_v5->Fit(fit1, "RQ");    
+  m_vp.at(C2).extHistArea_acc_v5->Fit(fit1, "RQ");
   cout<<" Fit results C2 area: "<<endl
       <<"  MEAN(Y)  "<<fit1->GetParameter(0)
       <<"  MEAN(X)  "<<fit1->GetParameter(1)

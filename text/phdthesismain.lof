@@ -41,11 +41,11 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Superimposed and averaged pulses (a, b and c, current amplifier) and distributions of deposited energy (d, e, f, charge amplifier) for three types of radiation. Note the scale on the X axis of the distributions.\relax }}{36}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Diamond radiation damage - a model based on displacements per atom\nobreakspace {}\cite {Guthoff:2014223}. Added are data points for protons and pions by RD42\nobreakspace {}\cite {RD42IRRAD:00000} and one data point for pions measured in the scope of this thesis.\relax }}{39}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces First figure shows the CCD for S37, S79 and S52 at a range of bias voltage settings. The charge collection distance at 1\nobreakspace {}V/$\upmu $m bias voltage for the three diamond samples is then compared to the RD42 data for pion irradiation in the second figure. The data points are about 15--25\nobreakspace {}\% lower than expected from the RD42 data\nobreakspace {}\cite {RD42IRRAD:00000}.\relax }}{41}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Relative increase of charge collection over time due to priming with the $^{90}$Sr radioactive source. The bias voltage for this measurement is 1\nobreakspace {}V/$\upmu $m.\relax }}{43}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Relative increase of charge collection over time due to priming with the $^{90}$Sr radioactive source. The charge collection for the non-irradiated S37 stays constant. The bias voltage for this measurement is 1\nobreakspace {}V/$\upmu $m.\relax }}{43}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Relative decrease of collected charge with time for non-irradiated and irradiated diamond samples.\relax }}{44}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces The signal of the irradiated and primed S79 deteriorates with time for both polarities. Every plot contains 60 superimposed pulses.\relax }}{45}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Deterioration of the pulse shapes with time \relax }}{46}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Five procedures for the ``healing'' process for an irradiated diamond that was exposed to $\upalpha $ radiation at bias voltage switched on for at least 30\nobreakspace {}minutes at a rate of $10^4$\nobreakspace {}s$^{-1}$.\relax }}{48}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Comparison of the five procedures for the ``healing'' process for an irradiated diamond that had been exposed to $\upalpha $ radiation with a rate of $10^1$\nobreakspace {}s$^{-1}$, with the bias voltage switched on, for at least 30\nobreakspace {}minutes.\relax }}{48}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Varied bias voltage at a fixed temperature\relax }}{49}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Several data points between 4\nobreakspace {}K and 295\nobreakspace {}K at a bias voltage of $\pm $500\nobreakspace {}V\relax }}{50}
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Varied bias voltage at a fixed temperature for an irradiated sample\relax }}{52}
@@ -58,25 +58,26 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces A pCVD wafer. The golden dots on the surface are the electrodes that are applied during the qualification test. The wafer is measured across the surface to find the regions with the highest efficiency.\relax }}{62}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces FE-I4 layout, top-down view. The pink area are pixels grouped into columns, the green area below is the common logic and the red strip at the bottom are the wire bond pads.\relax }}{63}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Schematic of an analog pixel. Courtesy of the FE-I4 collaboration.\relax }}{64}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Module production with time\relax }}{67}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Occupancy and pseudo-efficiency scans for the silicon (left) and diamond sensor (right) to check for disconnected regions and estimate the sensor's efficiency. Shadows of the electronic components are clearly visible because fewer electrons were able to traverse through such a higher amount of material. \relax }}{70}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces An assembled DBM module\relax }}{66}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Module production with time\relax }}{67}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Occupancy and pseudo-efficiency scans for the silicon (left) and diamond sensor (right) to check for disconnected regions and estimate the sensor's efficiency. Shadows of the electronic components are clearly visible because fewer electrons were able to traverse through such a higher amount of material. \relax }}{70}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Occupancy scan for MSBM-34}}}{70}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Occupancy scan for MDBM-23}}}{70}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Pseudo-efficiency scan for MSBM-34}}}{70}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Pseudo-efficiency scan for MDBM-23}}}{70}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Measurements of pseudo-efficiency and disconnected regions for all modules that went through the QC procedure\relax }}{71}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Measurements of pseudo-efficiency and disconnected regions for all modules that went through the QC procedure\relax }}{71}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Disconnected regions for all modules derived from the occupancy scans}}}{71}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pseudo-efficiencies for all modules at various threshold and voltage settings}}}{71}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces An efficiency study of a prototype DBM diamond module in a test beam. The statistics are low ($\sim $\nobreakspace {}10\nobreakspace {}hits/pixel) as the data was collected during a short run. \relax }}{71}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {This is an efficiency distribution. Each bin corresponds to a single pixel. The triggering scintillator of the Kartel telescope was smaller than the DUT. Hence, the recorded hits can only be seen in the top half of the sensor. }}}{71}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pseudo-efficiencies for all modules at various threshold and voltage settings}}}{71}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces This photo highlights four telescopes installed onto the nSQPs and around the pipe\relax }}{72}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Position of the DBM in the ATLAS experiment\relax }}{73}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Occupancy of individual modules during collisions. Only 16 modules were taking data.\relax }}{74}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces A diagram showing the radial distance $R_\mathrm {0}$ and longitudinal distance $Z_\mathrm {0}$ of the trajectory from the interaction point at the minimal distance $d$. Z is the axis along the beam line. Three module planes intercept a particle and reconstruct its trajectory.\relax }}{74}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces These two plots show two parameters of particle tracks recorded by one of the DBM telescopes: radial and longitudinal distance of the projected tracks from the interaction point.\relax }}{75}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Radial distance of the particle trajectories from the interaction point}}}{75}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Longitudinal distance of the particle trajectories (along the beam path) from the interaction point}}}{75}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces An efficiency study of a prototype DBM diamond module in a test beam. The statistics are low ($\sim $\nobreakspace {}10\nobreakspace {}hits/pixel) as the data was collected during a short run. \relax }}{72}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {This is an efficiency distribution. Each bin corresponds to a single pixel. The triggering scintillator of the Kartel telescope was smaller than the DUT. Hence, the recorded hits can only be seen in the top half of the sensor. }}}{72}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pseudo-efficiencies for all modules at various threshold and voltage settings}}}{72}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces This photo highlights four telescopes installed onto the nSQPs and around the pipe\relax }}{73}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Position of the DBM in the ATLAS experiment\relax }}{73}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Occupancy of individual modules during collisions. Only 16 modules were taking data.\relax }}{74}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces A diagram showing the radial distance $R_\mathrm {0}$ and longitudinal distance $Z_\mathrm {0}$ of the trajectory from the interaction point at the minimal distance $d$. Z is the axis along the beam line. Three module planes intercept a particle and reconstruct its trajectory.\relax }}{75}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces These two plots show two parameters of particle tracks recorded by one of the DBM telescopes: radial and longitudinal distance of the projected tracks from the interaction point.\relax }}{76}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Radial distance of the particle trajectories from the interaction point}}}{76}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Longitudinal distance of the particle trajectories (along the beam path) from the interaction point}}}{76}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces A pulse and its parameters\relax }}{80}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Form Factor is the ratio between the measured area ($a$) and the calculated area ($A\times BW$) of the pulse. The calculated area is significantly larger than the measured area for a triangular triangular pulse, but less so for the rectangular one. The red and blue dot in the right plot are the value entries of the two pulses shown. The red and blue oval shapes depict the regions for the values expected from triangular and rectangular pulses. By carefully choosing the linear qualifier (dashed line) and taking only the entries below the cut rectangular pulses can be identified.\relax }}{80}

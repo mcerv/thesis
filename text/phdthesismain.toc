@@ -54,14 +54,14 @@
 \contentsline {section}{\numberline {4.3}Module assembly and quality control}{65}
 \contentsline {subsection}{\numberline {4.3.1}Assembly}{65}
 \contentsline {subsection}{\numberline {4.3.2}Testing}{66}
-\contentsline {subsection}{\numberline {4.3.3}Installation and commissioning}{67}
-\contentsline {section}{\numberline {4.4}Performance results}{68}
-\contentsline {subsection}{\numberline {4.4.1}Source tests}{68}
-\contentsline {subsection}{\numberline {4.4.2}Test beam results}{69}
+\contentsline {subsection}{\numberline {4.3.3}Installation and commissioning}{68}
+\contentsline {section}{\numberline {4.4}Performance results}{69}
+\contentsline {subsection}{\numberline {4.4.1}Source tests}{69}
+\contentsline {subsection}{\numberline {4.4.2}Test beam results}{71}
 \contentsline {section}{\numberline {4.5}Operation}{72}
 \contentsline {subsection}{\numberline {4.5.1}Positioning}{72}
 \contentsline {subsection}{\numberline {4.5.2}Data taking during collisions}{73}
-\contentsline {section}{\numberline {4.6}Conclusion}{76}
+\contentsline {section}{\numberline {4.6}Conclusion}{75}
 \contentsline {chapter}{\numberline {5}Current monitoring\hfil \hbox {}\linebreak {\itshape Real-time particle identification}}{77}
 \contentsline {section}{\numberline {5.1}Motivation}{78}
 \contentsline {section}{\numberline {5.2}Requirements}{78}
