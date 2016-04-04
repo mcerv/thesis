@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  21 MAR 2016 20:41
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  23 MAR 2016 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -213,7 +213,14 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box26
 \enitdp@description=\count97
 )
-(./packages/fancyhdr.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (./packages/fancyhdr.sty
 \fancy@headwidth=\skip49
 \f@ncyO@elh=\skip50
 \f@ncyO@erh=\skip51
@@ -268,24 +275,24 @@ LaTeX Warning: Label `tab:semicompare' multiply defined.
 ))
 \openout1 = `phdthesismain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 51.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    ... okay on input line 51.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -356,21 +363,21 @@ Package caption Info: End \AtBeginDocument code.
 File: pics/titlepage/cern_logo.pdf Graphic file (type pdf)
 
 <use pics/titlepage/cern_logo.pdf>
-Package pdftex.def Info: pics/titlepage/cern_logo.pdf used on input line 61.
+Package pdftex.def Info: pics/titlepage/cern_logo.pdf used on input line 63.
 (pdftex.def)             Requested size: 68.2866pt x 68.2867pt.
 
 <pics/titlepage/tu_logo.png, id=2, 123.0999pt x 123.0999pt>
 File: pics/titlepage/tu_logo.png Graphic file (type png)
 
 <use pics/titlepage/tu_logo.png>
-Package pdftex.def Info: pics/titlepage/tu_logo.png used on input line 61.
+Package pdftex.def Info: pics/titlepage/tu_logo.png used on input line 63.
 (pdftex.def)             Requested size: 68.2866pt x 68.2893pt.
 
 <pics/titlepage/talent_logo.png, id=4, 1303.87125pt x 895.345pt>
 File: pics/titlepage/talent_logo.png Graphic file (type png)
 
 <use pics/titlepage/talent_logo.png>
-Package pdftex.def Info: pics/titlepage/talent_logo.png used on input line 61.
+Package pdftex.def Info: pics/titlepage/talent_logo.png used on input line 63.
 (pdftex.def)             Requested size: 125.19212pt x 85.96034pt.
  [1
 
@@ -590,7 +597,7 @@ mation/pics/plots/chargeind3.pdf>]
 File: 02_pulse_formation/pics/plots/driftboth.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/driftboth.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/driftboth.pdf used on in
-put line 173.
+put line 174.
 (pdftex.def)             Requested size: 346.89731pt x 255.82593pt.
  [18 <./02_pulse_formation/pics/plots/driftboth.pdf>]
 <../scripts/02_pulse_formation/plots/resolution.pdf, id=283, 569.12625pt x 364.
@@ -599,7 +606,7 @@ File: ../scripts/02_pulse_formation/plots/resolution.pdf Graphic file (type pdf
 )
  <use ../scripts/02_pulse_formation/plots/resolution.pdf>
 Package pdftex.def Info: ../scripts/02_pulse_formation/plots/resolution.pdf use
-d on input line 198.
+d on input line 201.
 (pdftex.def)             Requested size: 346.89731pt x 222.0988pt.
  [19] [20 <../scripts/02_pulse_formation/plots/resolution.pdf, page is rotated 
 90 degrees>]
@@ -608,11 +615,11 @@ File: 02_pulse_formation/pics/plots/spcchg.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/spcchg.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/spcchg.pdf used on input
- line 244.
+ line 247.
 (pdftex.def)             Requested size: 260.17464pt x 133.21951pt.
 
 
-LaTeX Warning: Reference `fig:raddamage' on page 21 undefined on input line 252
+LaTeX Warning: Reference `fig:raddamage' on page 21 undefined on input line 255
 .
 
 [21 <./02_pulse_formation/pics/plots/spcchg.pdf>]
@@ -620,7 +627,7 @@ LaTeX Warning: Reference `fig:raddamage' on page 21 undefined on input line 252
 File: 02_pulse_formation/pics/plots/raddamage.pdf Graphic file (type pdf)
 <use 02_pulse_formation/pics/plots/raddamage.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/raddamage.pdf used on in
-put line 263.
+put line 266.
 (pdftex.def)             Requested size: 346.89731pt x 164.64488pt.
  [22 <./02_pulse_formation/pics/plots/raddamage.pdf>]
 <02_pulse_formation/pics/plots/curramp.pdf, id=383, 198.24063pt x 70.2625pt>
@@ -628,7 +635,7 @@ File: 02_pulse_formation/pics/plots/curramp.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/curramp.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/curramp.pdf used on inpu
-t line 296.
+t line 299.
 (pdftex.def)             Requested size: 216.81pt x 76.84618pt.
 
 <02_pulse_formation/pics/plots/chgamp.pdf, id=384, 157.08687pt x 108.90688pt>
@@ -636,7 +643,7 @@ File: 02_pulse_formation/pics/plots/chgamp.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/chgamp.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chgamp.pdf used on input
- line 297.
+ line 300.
 (pdftex.def)             Requested size: 173.44534pt x 120.25323pt.
 
 <02_pulse_formation/pics/plots/currrc.pdf, id=385, 156.08313pt x 63.23625pt>
@@ -644,7 +651,7 @@ File: 02_pulse_formation/pics/plots/currrc.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/currrc.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/currrc.pdf used on input
- line 311.
+ line 314.
 (pdftex.def)             Requested size: 346.89731pt x 140.56172pt.
  [23 <./02_pulse_formation/pics/plots/curramp.pdf> <./02_pulse_formation/pics/p
 lots/chgamp.pdf>]
@@ -653,7 +660,7 @@ File: 02_pulse_formation/pics/plots/chgrc.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/chgrc.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chgrc.pdf used on input 
-line 329.
+line 332.
 (pdftex.def)             Requested size: 303.53267pt x 121.03978pt.
  [24 <./02_pulse_formation/pics/plots/currrc.pdf> <./02_pulse_formation/pics/pl
 ots/chgrc.pdf>]
@@ -662,14 +669,14 @@ File: 02_pulse_formation/pics/plots/qerr.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/qerr.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/qerr.pdf used on input l
-ine 355.
+ine 358.
 (pdftex.def)             Requested size: 303.53267pt x 221.07704pt.
  [25]
-Overfull \hbox (10.7695pt too wide) in paragraph at lines 366--368
-\OT1/cmr/m/n/12 For the ex-am-ple above the quan-ti-sa-tion er-ror will be $^^A
-\OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 289 \
-OMS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 39$ mV=0
-.11 mV.
+Overfull \hbox (9.52924pt too wide) in paragraph at lines 369--371
+\OT1/cmr/m/n/12 For the ex-am-ple above the quan-ti-sa-tion er-ror equals $^^A\
+OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 289 \O
+MS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 39$ mV=0.
+11 mV.
  []
 
 [26 <./02_pulse_formation/pics/plots/qerr.pdf>]
@@ -678,16 +685,21 @@ File: 02_pulse_formation/pics/fpga.jpg Graphic file (type jpg)
 
 <use 02_pulse_formation/pics/fpga.jpg>
 Package pdftex.def Info: 02_pulse_formation/pics/fpga.jpg used on input line 38
-3.
-(pdftex.def)             Requested size: 195.12767pt x 156.55461pt.
+6.
+(pdftex.def)             Requested size: 203.80193pt x 163.5143pt.
 
 <02_pulse_formation/pics/asic.png, id=494, 421.575pt x 322.20375pt>
 File: 02_pulse_formation/pics/asic.png Graphic file (type png)
 
 <use 02_pulse_formation/pics/asic.png>
 Package pdftex.def Info: 02_pulse_formation/pics/asic.png used on input line 38
-4.
-(pdftex.def)             Requested size: 195.12767pt x 149.13489pt.
+7.
+(pdftex.def)             Requested size: 203.80193pt x 155.76224pt.
+
+Overfull \hbox (5.81711pt too wide) in paragraph at lines 385--389
+[][] 
+ []
+
 ) [27 <./02_pulse_formation/pics/fpga.jpg> <./02_pulse_formation/pics/asic.png>
 ]
 \openout2 = `03_measurement_results/chapter.aux'.
@@ -2026,13 +2038,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5692 strings out of 493488
- 118944 string characters out of 3141326
- 127386 words of memory out of 3000000
- 8338 multiletter control sequences out of 15000+200000
+ 5776 strings out of 493488
+ 120158 string characters out of 3141326
+ 128366 words of memory out of 3000000
+ 8418 multiletter control sequences out of 15000+200000
  18358 words of font info for 68 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,16n,48p,2577b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,16n,48p,2558b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -2057,7 +2069,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2012/texmf-dis
 t/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2012/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on phdthesismain.pdf (127 pages, 18872661 bytes).
+Output written on phdthesismain.pdf (127 pages, 18872524 bytes).
 PDF statistics:
  4502 PDF objects out of 5155 (max. 8388607)
  2214 compressed objects within 23 object streams

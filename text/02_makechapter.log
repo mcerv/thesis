@@ -1,0 +1,711 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  2 APR 2016 16:42
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**02_makechapter.tex
+(./02_makechapter.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(./packages/mytustyle.cls
+
+LaTeX Warning: You have requested document class `packages/mytustyle',
+               but the document class provides `mytustyle'.
+
+Document Class: mytustyle 2010/11/22 v2.2 OCIAM thesis class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@indent=\dimen108
+\caption@parindent=\dimen109
+\caption@hangindent=\dimen110
+)
+\c@ContinuedFloat=\count89
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/was/upgreek.sty
+Package: upgreek 2003/02/12 v2.0 (WaS)
+Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
+\symugrf@m=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
+(Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count90
+\sf@farskip=\skip43
+\sf@captopadj=\dimen111
+\sf@capskip=\skip44
+\sf@nearskip=\skip45
+\c@subfigure=\count91
+\c@subfigure@save=\count92
+\c@lofdepth=\count93
+\c@subtable=\count94
+\c@subtable@save=\count95
+\c@lotdepth=\count96
+\sf@top=\skip46
+\sf@bottom=\skip47
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip48
+\enit@outerparindent=\dimen112
+\enit@toks=\toks16
+\enit@inbox=\box26
+\enitdp@description=\count97
+)
+(./packages/fancyhdr.sty
+\fancy@headwidth=\skip49
+\f@ncyO@elh=\skip50
+\f@ncyO@erh=\skip51
+\f@ncyO@olh=\skip52
+\f@ncyO@orh=\skip53
+\f@ncyO@elf=\skip54
+\f@ncyO@erf=\skip55
+\f@ncyO@olf=\skip56
+\f@ncyO@orf=\skip57
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count98
+\output=\toks17
+\linenoprevgraf=\count99
+\linenumbersep=\dimen113
+\linenumberwidth=\dimen114
+\c@linenumber=\count100
+\c@pagewiselinenumber=\count101
+\c@LN@truepage=\count102
+\c@internallinenumber=\count103
+\c@internallinenumbers=\count104
+\quotelinenumbersep=\dimen115
+\bframerule=\dimen116
+\bframesep=\dimen117
+\bframebox=\box27
+LaTeX Info: Redefining \\ on input line 3056.
+)
+(./02_makechapter.aux)
+\openout1 = `02_makechapter.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 33.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 33.
+
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count105
+\scratchdimen=\dimen118
+\scratchbox=\box28
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen119
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks19
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+\openout2 = `02_pulse_formation/chapter.aux'.
+
+
+(./02_pulse_formation/chapter.tex
+Chapter 1.
+
+LaTeX Warning: Reference `sec:princsigfor' on page 1 undefined on input line 5.
+
+
+
+LaTeX Warning: Reference `tab:semicompare' on page 1 undefined on input line 11
+.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [1
+
+
+
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `' on page 2 undefined on input line 34.
+
+
+LaTeX Warning: Citation `Jansen:1956431' on page 2 undefined on input line 34.
+
+
+LaTeX Warning: Citation `' on page 2 undefined on input line 34.
+
+
+LaTeX Warning: Citation `Jansen:1956431' on page 2 undefined on input line 34.
+
+
+LaTeX Warning: Reference `fig:semilattice9' on page 2 undefined on input line 5
+0.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+
+LaTeX Warning: Reference `fig:simpledrift' on page 3 undefined on input line 70
+.
+
+
+LaTeX Warning: Reference `fig:simpledrifteq' on page 3 undefined on input line 
+70.
+
+
+<02_pulse_formation/pics/plots/semilattice9.pdf, id=22, 259.46938pt x 252.945pt
+>
+File: 02_pulse_formation/pics/plots/semilattice9.pdf Graphic file (type pdf)
+ <use 02_pulse_formation/pics/plots/semilattice9.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/semilattice9.pdf used on
+ input line 74.
+(pdftex.def)             Requested size: 95.39693pt x 92.99765pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+[]\OT1/cmr/m/n/10 (a) |Va-lence bonds
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+\OT1/cmr/m/n/10 in the crys-talline
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+\OT1/cmr/m/n/10 struc-ture can be
+ []
+
+
+<02_pulse_formation/pics/plots/simpledrift.pdf, id=23, 128.98187pt x 73.77562pt
+>
+File: 02_pulse_formation/pics/plots/simpledrift.pdf Graphic file (type pdf)
+ <use 02_pulse_formation/pics/plots/simpledrift.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/simpledrift.pdf used on 
+input line 75.
+(pdftex.def)             Requested size: 138.76157pt x 79.37701pt.
+
+<02_pulse_formation/pics/plots/simpledrifteq.pdf, id=24, 124.465pt x 66.2475pt>
+File: 02_pulse_formation/pics/plots/simpledrifteq.pdf Graphic file (type pdf)
+<use 02_pulse_formation/pics/plots/simpledrifteq.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/simpledrifteq.pdf used o
+n input line 76.
+(pdftex.def)             Requested size: 147.4292pt x 78.47765pt.
+
+Underfull \hbox (badness 1789) in paragraph at lines 76--76
+[]\OT1/cmr/m/n/10 (c) |Equiv-a-lent elec-tri-cal cir-cuit.
+ []
+
+
+Overfull \hbox (13.31726pt too wide) in paragraph at lines 86--87
+[]\OT1/cmr/m/n/12 The mean en-ergy loss of a par-ti-cle travers-
+ []
+
+
+LaTeX Warning: Reference `fig:bb2' on page 3 undefined on input line 91.
+
+<02_pulse_formation/pics/bb2.jpg, id=25, 840.13875pt x 526.96875pt>
+File: 02_pulse_formation/pics/bb2.jpg Graphic file (type jpg)
+
+<use 02_pulse_formation/pics/bb2.jpg>
+Package pdftex.def Info: 02_pulse_formation/pics/bb2.jpg used on input line 97.
+
+(pdftex.def)             Requested size: 368.57964pt x 231.18349pt.
+
+
+LaTeX Warning: Citation `PDDC:00000' on page 3 undefined on input line 106.
+
+
+LaTeX Warning: Reference `fig:chargeind1' on page 3 undefined on input line 106
+.
+
+[3 <./02_pulse_formation/pics/plots/semilattice9.pdf> <./02_pulse_formation/pic
+s/plots/simpledrift.pdf> <./02_pulse_formation/pics/plots/simpledrifteq.pdf>]
+<02_pulse_formation/pics/plots/chargeind1.pdf, id=91, 115.93312pt x 94.85437pt>
+File: 02_pulse_formation/pics/plots/chargeind1.pdf Graphic file (type pdf)
+<use 02_pulse_formation/pics/plots/chargeind1.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/chargeind1.pdf used on i
+nput line 113.
+(pdftex.def)             Requested size: 130.08731pt x 106.44456pt.
+
+Underfull \hbox (badness 1478) in paragraph at lines 113--113
+\OT1/cmr/m/n/10 cou-ples with the con-duc-tive
+ []
+
+
+<02_pulse_formation/pics/plots/chargeind2.pdf, id=92, 117.94063pt x 88.83188pt>
+File: 02_pulse_formation/pics/plots/chargeind2.pdf Graphic file (type pdf)
+<use 02_pulse_formation/pics/plots/chargeind2.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/chargeind2.pdf used on i
+nput line 114.
+(pdftex.def)             Requested size: 130.08731pt x 97.98238pt.
+
+<02_pulse_formation/pics/plots/chargeind3.pdf, id=93, 117.43875pt x 81.30376pt>
+File: 02_pulse_formation/pics/plots/chargeind3.pdf Graphic file (type pdf)
+<use 02_pulse_formation/pics/plots/chargeind3.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/chargeind3.pdf used on i
+nput line 115.
+(pdftex.def)             Requested size: 130.08731pt x 90.06088pt.
+
+Overfull \hbox (4.39182pt too wide) in paragraph at lines 112--117
+[][] 
+ []
+
+
+LaTeX Warning: Reference `fig:chargeind3' on page 4 undefined on input line 129
+.
+
+
+LaTeX Warning: Reference `eq:chgdnstydist' on page 4 undefined on input line 12
+9.
+
+[4 <./02_pulse_formation/pics/bb2.jpg>]
+
+LaTeX Warning: Reference `fig:chargeind2' on page 5 undefined on input line 134
+.
+
+
+LaTeX Warning: Citation `SHOCKLEY:00000' on page 5 undefined on input line 141.
+
+
+
+LaTeX Warning: Citation `RAMO:00000' on page 5 undefined on input line 141.
+
+[5 <./02_pulse_formation/pics/plots/chargeind1.pdf> <./02_pulse_formation/pics/
+plots/chargeind2.pdf> <./02_pulse_formation/pics/plots/chargeind3.pdf>]
+<02_pulse_formation/pics/plots/driftboth.pdf, id=163, 189.20688pt x 139.52126pt
+>
+File: 02_pulse_formation/pics/plots/driftboth.pdf Graphic file (type pdf)
+ <use 02_pulse_formation/pics/plots/driftboth.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/driftboth.pdf used on in
+put line 173.
+(pdftex.def)             Requested size: 346.89731pt x 255.82593pt.
+
+
+LaTeX Warning: Reference `fig:drift' on page 6 undefined on input line 179.
+
+[6 <./02_pulse_formation/pics/plots/driftboth.pdf>]
+
+LaTeX Warning: Reference `fig:enerres' on page 7 undefined on input line 196.
+
+
+<../scripts/02_pulse_formation/plots/resolution.pdf, id=193, 569.12625pt x 364.
+36125pt>
+File: ../scripts/02_pulse_formation/plots/resolution.pdf Graphic file (type pdf
+)
+ <use ../scripts/02_pulse_formation/plots/resolution.pdf>
+Package pdftex.def Info: ../scripts/02_pulse_formation/plots/resolution.pdf use
+d on input line 200.
+(pdftex.def)             Requested size: 346.89731pt x 222.0988pt.
+
+
+LaTeX Warning: Reference `ch:meas' on page 7 undefined on input line 213.
+
+[7]
+
+LaTeX Warning: Reference `ch:meas' on page 8 undefined on input line 233.
+
+[8 <../scripts/02_pulse_formation/plots/resolution.pdf, page is rotated 90 degr
+ees>]
+
+LaTeX Warning: Reference `fig:spcchg' on page 9 undefined on input line 243.
+
+<02_pulse_formation/pics/plots/spcchg.pdf, id=244, 188.20313pt x 96.36pt>
+File: 02_pulse_formation/pics/plots/spcchg.pdf Graphic file (type pdf)
+
+<use 02_pulse_formation/pics/plots/spcchg.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/spcchg.pdf used on input
+ line 246.
+(pdftex.def)             Requested size: 260.17464pt x 133.21951pt.
+
+
+LaTeX Warning: Reference `fig:raddamage' on page 9 undefined on input line 254.
+
+
+[9 <./02_pulse_formation/pics/plots/spcchg.pdf>]
+<02_pulse_formation/pics/plots/raddamage.pdf, id=272, 395.4775pt x 187.70125pt>
+File: 02_pulse_formation/pics/plots/raddamage.pdf Graphic file (type pdf)
+<use 02_pulse_formation/pics/plots/raddamage.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/raddamage.pdf used on in
+put line 265.
+(pdftex.def)             Requested size: 346.89731pt x 164.64488pt.
+ [10 <./02_pulse_formation/pics/plots/raddamage.pdf>]
+<02_pulse_formation/pics/plots/curramp.pdf, id=292, 198.24063pt x 70.2625pt>
+File: 02_pulse_formation/pics/plots/curramp.pdf Graphic file (type pdf)
+
+<use 02_pulse_formation/pics/plots/curramp.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/curramp.pdf used on inpu
+t line 298.
+(pdftex.def)             Requested size: 216.81pt x 76.84618pt.
+
+<02_pulse_formation/pics/plots/chgamp.pdf, id=293, 157.08687pt x 108.90688pt>
+File: 02_pulse_formation/pics/plots/chgamp.pdf Graphic file (type pdf)
+
+<use 02_pulse_formation/pics/plots/chgamp.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/chgamp.pdf used on input
+ line 299.
+(pdftex.def)             Requested size: 173.44534pt x 120.25323pt.
+
+
+LaTeX Warning: Reference `fig:curramp' on page 11 undefined on input line 306.
+
+
+LaTeX Warning: Reference `fig:currc' on page 11 undefined on input line 310.
+
+<02_pulse_formation/pics/plots/currrc.pdf, id=294, 156.08313pt x 63.23625pt>
+File: 02_pulse_formation/pics/plots/currrc.pdf Graphic file (type pdf)
+
+<use 02_pulse_formation/pics/plots/currrc.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/currrc.pdf used on input
+ line 313.
+(pdftex.def)             Requested size: 346.89731pt x 140.56172pt.
+
+
+LaTeX Warning: Reference `fig:chgamp' on page 11 undefined on input line 324.
+
+[11 <./02_pulse_formation/pics/plots/curramp.pdf> <./02_pulse_formation/pics/pl
+ots/chgamp.pdf>]
+
+LaTeX Warning: Reference `fig:chgrc' on page 12 undefined on input line 328.
+
+<02_pulse_formation/pics/plots/chgrc.pdf, id=331, 161.10187pt x 64.24pt>
+File: 02_pulse_formation/pics/plots/chgrc.pdf Graphic file (type pdf)
+
+<use 02_pulse_formation/pics/plots/chgrc.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/chgrc.pdf used on input 
+line 331.
+(pdftex.def)             Requested size: 303.53267pt x 121.03978pt.
+ [12 <./02_pulse_formation/pics/plots/currrc.pdf> <./02_pulse_formation/pics/pl
+ots/chgrc.pdf>]
+<02_pulse_formation/pics/plots/qerr.pdf, id=373, 138.5175pt x 100.87688pt>
+File: 02_pulse_formation/pics/plots/qerr.pdf Graphic file (type pdf)
+
+<use 02_pulse_formation/pics/plots/qerr.pdf>
+Package pdftex.def Info: 02_pulse_formation/pics/plots/qerr.pdf used on input l
+ine 357.
+(pdftex.def)             Requested size: 303.53267pt x 221.07704pt.
+
+
+LaTeX Warning: Reference `fig:qerr' on page 13 undefined on input line 364.
+
+[13]
+Overfull \hbox (9.52924pt too wide) in paragraph at lines 368--370
+\OT1/cmr/m/n/12 For the ex-am-ple above the quan-ti-sa-tion er-ror equals $^^A\
+OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 289 \O
+MS/cmsy/m/n/12 ^^A \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 39$ mV=0.
+11 mV.
+ []
+
+[14 <./02_pulse_formation/pics/plots/qerr.pdf>]
+<02_pulse_formation/pics/fpga.jpg, id=403, 168.1482pt x 134.904pt>
+File: 02_pulse_formation/pics/fpga.jpg Graphic file (type jpg)
+
+<use 02_pulse_formation/pics/fpga.jpg>
+Package pdftex.def Info: 02_pulse_formation/pics/fpga.jpg used on input line 38
+5.
+(pdftex.def)             Requested size: 203.80193pt x 163.5143pt.
+
+
+LaTeX Warning: Citation `FPGA:00000' on page 15 undefined on input line 385.
+
+
+LaTeX Warning: Citation `FPGA:00000' on page 15 undefined on input line 385.
+
+<02_pulse_formation/pics/asic.png, id=404, 421.575pt x 322.20375pt>
+File: 02_pulse_formation/pics/asic.png Graphic file (type png)
+
+<use 02_pulse_formation/pics/asic.png>
+Package pdftex.def Info: 02_pulse_formation/pics/asic.png used on input line 38
+6.
+(pdftex.def)             Requested size: 203.80193pt x 155.76224pt.
+
+
+LaTeX Warning: Citation `ASIC:00000' on page 15 undefined on input line 386.
+
+
+LaTeX Warning: Citation `ASIC:00000' on page 15 undefined on input line 386.
+
+
+Overfull \hbox (5.81711pt too wide) in paragraph at lines 384--388
+[][] 
+ []
+
+) [15 <./02_pulse_formation/pics/fpga.jpg> <./02_pulse_formation/pics/asic.png>
+]
+No file 02_makechapter.bbl.
+(./02_makechapter.aux (./02_pulse_formation/chapter.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4400 strings out of 493488
+ 69911 string characters out of 3141326
+ 119705 words of memory out of 3000000
+ 7563 multiletter control sequences out of 15000+200000
+ 15450 words of font info for 58 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 38i,16n,52p,2563b,475s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/
+2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2012/tex
+mf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2012/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on 02_makechapter.pdf (15 pages, 1220321 bytes).
+PDF statistics:
+ 474 PDF objects out of 1000 (max. 8388607)
+ 334 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+

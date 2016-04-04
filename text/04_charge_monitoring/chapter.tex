@@ -32,7 +32,7 @@ Particle detectors in high energy physics experiments need to meet very stringen
 
 The material of choice for the inner detector layers in the HEP experiments is silicon. It can withstand relatively high doses of radiation, it is highly efficient (of the order of $\sim$99.9~\%) and relatively low cost due to using existing industrial processes for its production. Its downside is that, with increasing irradiation levels, it needs to be cooled to increasingly low temperatures to ensure a stable operation. This is not the case with diamond. In addition, diamond has a lower radiation damage factor, which means it can operate in a radiation-heavy environment for a longer period.
 
-The ATLAS Diamond Beam Monitor (DBM)~\cite{} is a novel high energy charged particle detector. Its function is to measure luminosity and beam background in the ATLAS experiment. Given its position in a region with a high radiation dose, diamond was chosen as the sensing material. The monitor's pCVD diamond sensors are instrumented with pixellated FE-I4 front-end chips. The pCVD diamond sensor material was chosen to ensure the durability of the sensors in a radiation-hard environment and the size of its active area. The DBM is not the first diamond detector used in HEP, but it is the largest pixellated detector installed so far (see figure~\ref{fig:areavsyear}). It was designed as an upgrade to the existing luminosity monitor called the Beam Conditions Monitor (BCM)~\cite{} consisting of eight diamond pad detectors, which is able to perform precise time-of-flight (ToF) measurements. The DBM complements the BCM's features by implementing tracking capability. Its pixelated front-end electronics significantly increase the spatial resolution of the system. Furthermore, the DBM is able to distinguish particle tracks originating in the collision region from the background hits. This capability is a result of its projective geometry pointing towards the interaction region. This chapter first describes the principles of luminosity measurements. It then explains how the DBM will carry out this task. Finally, some results from tests and from the real collisions are presented. 
+The ATLAS Diamond Beam Monitor (DBM)~\cite{} is a novel high energy charged particle detector. Its function is to measure luminosity and beam background in the ATLAS experiment. Given its position in a region with a high radiation dose, diamond was chosen as the sensing material. The monitor's pCVD diamond sensors are instrumented with pixellated FE-I4 front-end chips. The pCVD diamond sensor material was chosen to ensure the durability of the sensors in a radiation-hard environment and the size of its active area. The DBM is not the first diamond detector used in HEP, but it is the largest pixellated detector installed so far (see figure~\ref{fig:areavsyear}). It was designed as an upgrade to the existing luminosity monitor called the Beam Conditions Monitor (BCM)~\cite{} consisting of eight diamond pad detectors, which is able to perform precise time-of-flight (ToF) measurements. The DBM complements the BCM's features by implementing tracking capability. Its pixelated front-end electronics significantly increase the spatial resolution of the system. Furthermore, the DBM is able to distinguish particle tracks originating in the collision region from the background hits. This capability is a result of its projective geometry pointing towards the interaction region. This chapter first describes the principles of luminosity measurements. It then explains how the DBM carries out this task. Finally, some results from tests and from the real collisions are presented. 
 
 When a particle traverses a sensor plane, a hit is recorded in the corresponding pixel. Thus, a precise spatial and timing information of the hit is extracted. With three or more sensors stacked one behind the other, it is also possible to define the particle's trajectory. This is the case with the DBM. Its projective geometry allows the particles to be tracked if they traverse the sensor planes. The DBM relates the luminosity to the number of particle tracks that originate from the collision region of the ATLAS experiment. Particles that hit the DBM from other directions are rejected as background radiation.
 
@@ -51,7 +51,7 @@ When a particle traverses a sensor plane, a hit is recorded in the corresponding
  \label{sec:lumi}
 Luminosity is one of the most important parameters of a particle collider. It is a measurement of the rate of particle collisions that are produced by two particle beams. It can be described as a function of beam parameters, such as: the number of colliding bunch pairs, the revolution frequency, the number of particles in each bunch and the transverse bunch dimensions. The first four parameters are well defined. However, the transverse bunch dimensions have to be determined experimentally during calibration. The ATLAS experiment uses the \emph{van der Meer scan}~\cite{} during low-luminosity runs to calibrate the luminosity detectors. This scan is performed by displacing one beam in a given direction and measuring the rate of interactions as a function of the displacement. Transverse charge density of the bunches can be estimated on the basis of the interaction rate. The calibrated luminosity detectors can then operate during high-luminosity runs.
 
-One approach to luminosity monitoring is to count the number of particles produced by the collisions. The luminosity is then proportional to the number of detected particles. A detector has to be capable of distinguishing individual particles that fly from the interaction point through the active sensor area. If the detector has at least three layers, it can reconstruct the particles' tracks, which in turn yields more information on the their trajectory. This is one reason why detectors with a high timing- and spatial segmentation are more suitable for these applications. The second reason is that, with a high spatial segmentation, the detector will not saturate even at high particle fluencies.
+One approach to luminosity monitoring is to count the number of particles produced by the collisions. The luminosity is then proportional to the number of detected particles. A detector has to be capable of distinguishing individual particles that fly from the interaction point through the active sensor area. If the detector has at least three layers, it can reconstruct the particles' tracks, which in turn yields more information on the their trajectory. This is one reason why detectors with a high timing- and spatial segmentation are more suitable for these applications. The second reason is that, with a high spatial segmentation, the detector does not saturate even at high particle fluencies.
 
 
 
@@ -96,7 +96,7 @@ The FE-I4 (front-end version four)~\cite{} is an ASIC pixel chip designed specif
 \label{fig:anapix}
 \end{figure}
 
-Each pixel is designed as a separate entity. Its electrical chain is shown in figure~\ref{fig:anapix}. The bump-bond pad -- the connection to the outside of the chip -- is the input of the electrical chain, connected to a free-running amplification stage with adjustable shaping using a 4-bit register at the feedback branch. The analog amplifier is designed to collect negative charge, therefore electrons. The output is routed through a discriminator with an adjustable threshold. This value in effect defines the level at which the circuit will detect a hit. In addition, there is a counter of the clock cycles (25~ns sampling) during which the signal is above the discriminator threshold. The value of the counter is proportional to the collected charge. The logic gates at the end of the chain are used to enable/disable the pixel and to issue a so-called HitOr flag -- this signal is set whenever at least one of the pixels was hit and is used as a trigger for the readout. The output of the chain -- HitOut -- is routed into the logic of the chip where it is buffered and eventually sent out to the readout system. The module receives all its commands from the system via a 40~MHz LVDS line. The commands are either settings for the pixel registers or triggers that start the data readout. The data are sent via an LVDS line at up to 320~Mbit/s, but by default at 160~Mbit/s, four times faster than the clock of the device. This allows the chip to clear out its buffers before new data are recorded, thus avoiding dead time and data pile-up. The FE-I4 has been successfully tested for trigger rates of up to 300~kHz. 
+Each pixel is designed as a separate entity. Its electrical chain is shown in figure~\ref{fig:anapix}. The bump-bond pad -- the connection to the outside of the chip -- is the input of the electrical chain, connected to a free-running amplification stage with adjustable shaping using a 4-bit register at the feedback branch. The analog amplifier is designed to collect negative charge, therefore electrons. The output is routed through a discriminator with an adjustable threshold. This value in effect defines the level at which the circuit detects a hit. In addition, there is a counter of the clock cycles (25~ns sampling) during which the signal is above the discriminator threshold. The value of the counter is proportional to the collected charge. The logic gates at the end of the chain are used to enable/disable the pixel and to issue a so-called HitOr flag -- this signal is set whenever at least one of the pixels was hit and is used as a trigger for the readout. The output of the chain -- HitOut -- is routed into the logic of the chip where it is buffered and eventually sent out to the readout system. The module receives all its commands from the system via a 40~MHz LVDS line. The commands are either settings for the pixel registers or triggers that start the data readout. The data are sent via an LVDS line at up to 320~Mbit/s, but by default at 160~Mbit/s, four times faster than the clock of the device. This allows the chip to clear out its buffers before new data are recorded, thus avoiding dead time and data pile-up. The FE-I4 has been successfully tested for trigger rates of up to 300~kHz. 
 
 \begin{figure}[!t]
 \centering
@@ -127,7 +127,7 @@ A single-chip module consists of a pixel module, a flexible PCB and the supporti
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.8\textwidth]{05_current_monitoring/plots/dbmmod1}
-\caption{An assembled DBM module}
+\caption{An assembled DBM module.}
 \label{fig:completedmod}
 \end{figure}
 
@@ -142,7 +142,7 @@ The results for the DBM QC are shown in section~\ref{sec:perfresults}.  All in a
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.8\textwidth]{../scripts/04_charge_monitoring/plots/production}
-\caption{Module production with time}
+\caption{Module production with time.}
 \label{fig:production}
 \end{figure}
 
@@ -173,21 +173,21 @@ The pseudo-efficiency test was carried out by placing the module directly below 
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[Occupancy scan for MSBM-34]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MSBM-34-occ} \label{fig:MSBM-34-occ}} &
-\subfloat[Occupancy scan for MDBM-23]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MDBM-23-occ}  \label{fig:MDBM-23-occ}} \\
-\subfloat[Pseudo-efficiency scan for MSBM-34]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MSBM-34-eff} \label{fig:MSBM-34-eff}} &
-\subfloat[Pseudo-efficiency scan for MDBM-23]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MDBM-23-eff}  \label{fig:MDBM-23-eff}}
+\subfloat[Occupancy scan for MSBM-34.]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MSBM-34-occ} \label{fig:MSBM-34-occ}} &
+\subfloat[Occupancy scan for MDBM-23.]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MDBM-23-occ}  \label{fig:MDBM-23-occ}} \\
+\subfloat[Pseudo-efficiency scan for MSBM-34.]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MSBM-34-eff} \label{fig:MSBM-34-eff}} &
+\subfloat[Pseudo-efficiency scan for MDBM-23.]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/MDBM-23-eff}  \label{fig:MDBM-23-eff}}
 \end{tabular}
-\caption{Occupancy and pseudo-efficiency scans for the silicon (left) and diamond sensor (right) to check for disconnected regions and estimate the sensor's efficiency. Shadows of the electronic components are clearly visible because fewer electrons were able to traverse through such a higher amount of material. }
+\caption{Occupancy and pseudo-efficiency scans for the silicon (left) and diamond sensor (right) to check for disconnected regions and estimate the sensor's efficiency. Shadows of the electronic components are clearly visible because fewer electrons were able to traverse through such a higher amount of material.}
 \end{figure}
 
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[Disconnected regions for all modules derived from the occupancy scans]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/disconnectedregion} \label{fig:disconreg}} &
-\subfloat[Pseudo-efficiencies for all modules at various threshold and voltage settings]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/pseudoefficiency}  \label{fig:pseudoeff}}
+\subfloat[Disconnected regions for all modules derived from the occupancy scans.]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/disconnectedregion} \label{fig:disconreg}} &
+\subfloat[Pseudo-efficiencies for all modules at various threshold and voltage settings.]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/pseudoefficiency}  \label{fig:pseudoeff}}
 \end{tabular}
-\caption{Measurements of pseudo-efficiency and disconnected regions for all modules that went through the QC procedure}
+\caption{Measurements of pseudo-efficiency and disconnected regions for all modules that went through the QC procedure.}
 \end{figure}
 
 Figure~\ref{fig:disconreg} shows the distribution of disconnected regions across all tested modules. Silicon modules were performing as expected, with a minimum number of disconnected pixels. The majority of the silicon modules yielded the pseudo-efficiency of (94.3$\pm$0.2)~\%. Silicon sensors being 99.99~\% efficient, this value vas underestimated by about 5~\%. The measured pseudo-efficiency of the diamond modules was $(65\pm7)$~\%, with outliers down to 10~\%. The value depended on the diamond quality, the set threshold and the applied bias voltage. The latter two settings were varied to check the behaviour of the modules under various conditions. 
@@ -204,7 +204,7 @@ To analyse the test beam data, Judith~\cite{} software framework was used. Judit
 %\centering
 \begin{tabular}{cccc}
 \subfloat[This is an efficiency distribution. Each bin corresponds to a single pixel. The triggering scintillator of the Kartel telescope was smaller than the DUT. Hence, the recorded hits can only be seen in the top half of the sensor. ]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/map} \label{fig:beammap}} &
-\subfloat[Pseudo-efficiencies for all modules at various threshold and voltage settings]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/distribution}  \label{fig:beamdist}}
+\subfloat[Pseudo-efficiencies for all modules at various threshold and voltage settings.]{\includegraphics[width=0.45\textwidth]{../scripts/04_charge_monitoring/plots/distribution}  \label{fig:beamdist}}
 \end{tabular}
 \caption{An efficiency study of a prototype DBM diamond module in a test beam. The statistics are low ($\sim$~10~hits/pixel) as the data was collected during a short run. }
 \end{figure}
@@ -219,7 +219,7 @@ To analyse the test beam data, Judith~\cite{} software framework was used. Judit
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.9\textwidth]{04_charge_monitoring/pics/DBM-installed-colour1}
-\caption{This photo highlights four telescopes installed onto the nSQPs and around the pipe}
+\caption{This photo highlights four telescopes installed onto the nSQPs and around the pipe.}
 \label{fig:dbminatlas}
 \end{figure}
 
@@ -229,7 +229,7 @@ The DBM is placed in the forward region of the ATLAS detector, very close to the
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.8\textwidth]{../scripts/04_charge_monitoring/plots/DBM-positioning}
-\caption{Position of the DBM in the ATLAS experiment}
+\caption{Position of the DBM in the ATLAS experiment.}
 \label{fig:dbminatlas}
 \end{figure}
 
@@ -259,8 +259,8 @@ A comparison of the data acquired (see figures~\ref{fig:raddist} and~\ref{fig:lo
 \begin{figure}[!t]
 \centering
 \begin{tabular}{cccc}
-\subfloat[Radial distance of the particle trajectories from the interaction point]{\includegraphics[width=0.7\textwidth]{../scripts/04_charge_monitoring/plots/D0} \label{fig:raddist}} \\
-\subfloat[Longitudinal distance of the particle trajectories (along the beam path) from the interaction point]{\includegraphics[width=0.7\textwidth]{../scripts/04_charge_monitoring/plots/Z0}  \label{fig:longdist}}
+\subfloat[Radial distance of the particle trajectories from the interaction point.]{\includegraphics[width=0.7\textwidth]{../scripts/04_charge_monitoring/plots/D0} \label{fig:raddist}} \\
+\subfloat[Longitudinal distance of the particle trajectories (along the beam path) from the interaction point.]{\includegraphics[width=0.7\textwidth]{../scripts/04_charge_monitoring/plots/Z0}  \label{fig:longdist}}
 \end{tabular}
 \caption{These two plots show two parameters of particle tracks recorded by one of the DBM telescopes: radial and longitudinal distance of the projected tracks from the interaction point.}
 \end{figure}

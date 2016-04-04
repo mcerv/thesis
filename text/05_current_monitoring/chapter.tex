@@ -47,7 +47,7 @@ Charge carriers & holes \\
 Bias voltage & $\sim$1~V $\upmu$m$^{-1}$ \\
 Signal-to-noise & 5 \\
 \end{tabular}
-\captionof{table}{Limitations to particle identification}
+\captionof{table}{Limitations to particle identification.}
 \label{tab:limits}
 \end{center}
 
@@ -57,18 +57,18 @@ Signal-to-noise & 5 \\
 \section{Device specifications}
 The ROSY box has a single BNC input with the termination $50~\Omega$ or $1~M\Omega$ with a DC or AC coupling. The analog chain has a 250~MHz bandwidth limit. The input range can be set from $\pm$50~mV up to $\pm$5~V. The signal offset can be set to any value within this range. The ADC samples this signal with an 8-bit precision at a rate of up to 5~GSPS. The PSA uses the highest sampling to achieve width measurement resolution of 0.2~ns. The spectroscopic application does not need such a fine timing resolution and therefore operates at a reduced sampling rate of 0.8~ns. The amplitude resolution depends on the chosen input range, but at 256 ADC counts per sample, it can be as low as 0.39~mV~s$^{-1}$ at the range of $\pm$50~mV and as high as 39~mV~s$^{-1}$ at the range of $\pm$5~V.
 
-The logic structure of the PSA is designed using VHDL and runs on Xilinx Virtex~5. The PSA is capable of a maximum counting rate of $1.56\times10^8$ pulses per second, yielding a 6.4~ns double pulse resolution. The analysis is more time consuming; the maximum throughput rate of the pulse shape analysis is $\sim5\times10^6$ pulses per second. This means that after every pulse, the device has a dead time of approximately (200$\pm$15)~ns, depending on the width of the pulse being analysed. Any pulse arriving during the analysis of the previous one will be counted, but not analysed. Any two pulses with the distance between the rising edges lower than 6.4~ns will be counted as a single pulse.
+The logic structure of the PSA is designed using VHDL and runs on Xilinx Virtex~5. The PSA is capable of a maximum counting rate of $1.56\times10^8$ pulses per second, yielding a 6.4~ns double pulse resolution. The analysis is more time consuming; the maximum throughput rate of the pulse shape analysis is $\sim5\times10^6$ pulses per second. This means that after every pulse, the device has a dead time of approximately (200$\pm$15)~ns, depending on the width of the pulse being analysed. Any pulse arriving during the analysis of the previous one is counted, but not analysed. Any two pulses with the distance between the rising edges lower than 6.4~ns are counted as a single pulse.
 
 The device is very sensitive to noise pick-up. Therefore the setup must be designed to minimise the pick-up by means of proper shielding, use of high-quality cables etc. The relatively low bandwidth limit filters out some high-frequency noise, but not the ringing or higher noise spikes. That is the task for the PSA.
 
 
 \section{Pulse parameters}
-A signal pulse on the input is parametrised during the analysis process. The PSA measures its amplitude, area, width and the slope of its falling edge (see figure~\ref{fig:params}. The amplitude is the difference between the baseline and the highest sample in the pulse and is given in ADC counts as an 8-bit value. The area is defined as the sum of amplitudes of all samples between two defined boundaries within the pulse. The width is defined as the number of samples with a value higher than a set amplitude threshold. If the threshold is at half the maximum amplitude, the resulting width is \emph{full width at half maximum} (FWHM). The falling slope is the maximum negative difference between values of two samples and is given in ADC counts per sample. These parameters can also be used as \emph{qualifiers} for accepting or discarding a pulse. All four parameters limited by the low and high limit are called a \emph{qualifier set}. For instance, a rectangular pulse by an $\upalpha$ particle will always have the same FWHM and a very steep slope. In comparison, a photon will have a lower falling slope value and a narrower FWHM. Therefore the low and high cut on these two qualifiers will make it possible to discriminate between the two pulses. Another qualifier is a \emph{form factor} and is defined as the ratio between the measured area and the amplitude multiplied by the width. By comparing the measured and the calculated area the difference between a triangular and a rectangular pulse can be inferred (see figure~\ref{fig:formfac1}).
+A signal pulse on the input is parametrised during the analysis process. The PSA measures its amplitude, area, width and the slope of its falling edge (see figure~\ref{fig:params}. The amplitude is the difference between the baseline and the highest sample in the pulse and is given in ADC counts as an 8-bit value. The area is defined as the sum of amplitudes of all samples between two defined boundaries within the pulse. The width is defined as the number of samples with a value higher than a set amplitude threshold. If the threshold is at half the maximum amplitude, the resulting width is \emph{full width at half maximum} (FWHM). The falling slope is the maximum negative difference between values of two samples and is given in ADC counts per sample. These parameters can also be used as \emph{qualifiers} for accepting or discarding a pulse. All four parameters limited by the low and high limit are called a \emph{qualifier set}. For instance, a rectangular pulse by an $\upalpha$ particle always has the same FWHM and a very steep slope. In comparison, a photon has a lower falling slope value and a narrower FWHM. Therefore the low and high cut on these two qualifiers allow for a discrimination between the two pulses. Another qualifier is a \emph{form factor} and is defined as the ratio between the measured area and the amplitude multiplied by the width. By comparing the measured and the calculated area the difference between a triangular and a rectangular pulse can be inferred (see figure~\ref{fig:formfac1}).
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.8\textwidth]{../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params}
-\caption{A pulse and its parameters}
+\caption{A pulse and its parameters.}
 \label{fig:params}
 \end{figure}
 
@@ -110,7 +110,7 @@ The firmware is written entirely in VHDL. The diagram in figure~\ref{fig:applica
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/application}
-\caption{Firmware design structure}
+\caption{Firmware design structure.}
 \label{fig:application}
 \end{figure}
 
@@ -132,7 +132,7 @@ This module is different for different applications. The Pulse Shape Analysis (P
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/analysis1}
-\caption{Code design plan}
+\caption{Code design plan.}
 \label{fig:architecture}
 \end{figure}
 
@@ -141,7 +141,7 @@ The analysis (or parametrisation) is carried out in several steps, as shown in f
 %Figure~\ref{fig:pulseana} shows the timing of the data flow within the block. All submodules are described in detail in the following subsections. The waveform in figure~\ref{fig:waveform1} is a simplified representation of the pulse analysis process. The logic bits show which modules within the PSA are active at which stage of the analysis.
 \begin{description}
 \item[Triggering] module handles signal polarity swapping, triggering on threshold and defining the trigger window. The real-time processing algorithm allows for a positive or an inverted input signal. However, the PSA only handles positive-polarity pulses. Therefore a negative signal is swapped in the \textit{triggering} block. Signal analysis and readout are then triggered when the signal crosses a user-defined threshold. In addition, the signal has to be over the threshold for a defined number of samples. This is to avoid triggering on noise spikes.
-A double clock cycle delay is used on the signal to make sure that the recorded signal window will include the rising edge of the pulse as well as some baseline before it. A \textit{trigger active} signal marks a window that contains the whole pulse including some baseline signal before and after it. 
+A double clock cycle delay is used on the signal to make sure that the recorded signal window includes the rising edge of the pulse as well as some baseline before it. A \textit{trigger active} signal marks a window that contains the whole pulse including some baseline signal before and after it. 
 The trigger can be vetoed by three signals: if the pulse analysis is still taking place, if the input signal exceeds the maximum voltage range or if the data transfer FSM is pausing the analysis due to data transfer to the controller.
 
 %\subsubsection{Baseline producer}
@@ -245,7 +245,7 @@ The software has been designed in C++ in several levels of abstraction. Figure~\
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.6\textwidth]{05_current_monitoring/plots/controller}
-\caption{Abstraction levels of the controller software}
+\caption{Abstraction levels of the controller software.}
 \label{fig:controller}
 \end{figure}
 
@@ -312,14 +312,14 @@ The input pulse signal was superimposed with white noise generated by a noise ge
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{rrr}
-\subfloat[Linearity across the amplitude range]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1} \label{fig:ratioAmpl1}} &
-\subfloat[Amplitude stability]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/snrAmpl1} \label{fig:snrAmpl1}} \\
+\subfloat[Linearity across the amplitude range.]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1} \label{fig:ratioAmpl1}} &
+\subfloat[Amplitude stability.]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/snrAmpl1} \label{fig:snrAmpl1}} \\
 
-\subfloat[Linearity across the width range]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/ratioWidth1}  \label{fig:ratioWidth1}} &
-\subfloat[Width stability]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/snrWidth1}  \label{fig:snrWidth1}} \\
+\subfloat[Linearity across the width range.]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/ratioWidth1}  \label{fig:ratioWidth1}} &
+\subfloat[Width stability.]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/snrWidth1}  \label{fig:snrWidth1}} \\
  &
 %\subfloat[Linearity across the area range]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/ratioAmpl1}  \label{fig:ratioArea1}} \\
-\subfloat[Area stability]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1}  \label{fig:snrArea1}}
+\subfloat[Area stability.]{\includegraphics[width=0.45\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/snrArea1}  \label{fig:snrArea1}}
 \end{tabular}
 \caption{These diagrams show the linearity of the measurements and their stability with respect to analog noise.}
 \label{fig:ratiosnr}
@@ -333,7 +333,7 @@ The calibration was done using a \textsuperscript{148}Gd\textsuperscript{239}Pu\
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.8\textwidth]{../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare}
-\caption{Spectrum of a \textsuperscript{148}Gd\textsuperscript{239}Pu\textsuperscript{241}Am\textsuperscript{244}Cm source using a Cx and a C2 amplifier}
+\caption{Spectrum of a \textsuperscript{148}Gd\textsuperscript{239}Pu\textsuperscript{241}Am\textsuperscript{244}Cm source using a Cx and a C2 amplifier.}
 \label{fig:c2cx4alpha}
 \end{figure}
 The $^{241}$Am peak measured by the Cx amplifier has an RMS of 0.8~ADC, which corresponds to a 32~keV energy resolution. For comparison, the C2 amplifier measures this peak with an RMS of 1.9~ADC, which corresponds to a 75~keV energy resolution. Therefore the energy spectrum measured by the current amplifier has a lower energy resolution.
@@ -370,7 +370,7 @@ Run & Source & Radiation & Energy [MeV] & Time [h]  & Triggers & Rate [s$^{-1}$]
 6&$^{239}$Pu~Be  & $n$ & 1--10 & 2.5 & 1.5e6 & 230 & 500 \\ 
 \hline
 \end{tabular}
-\captionof{table}{Measurements carried out at Atominstitut}
+\captionof{table}{Measurements carried out at Atominstitut.}
 \label{tab:semicompare}
 \end{center}
 \end{footnotesize}
@@ -383,14 +383,14 @@ However, the number of $\upalpha$ hits due to contamination is negligible - an e
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{rrr}
-\subfloat[$^{241}$Am background]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1} \label{fig:am1}} &
-\subfloat[$^{241}$Am, e$^{-}$ collection]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-pulse-alpha-e-0}  \label{fig:am2}} \\
-\subfloat[$^{241}$Am, h$^+$ collection]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/18-pulse-alpha-h-0}  \label{fig:am3}} &
-\subfloat[$^{90}$Sr]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0} \label{fig:sr1}} \\
-\subfloat[$^{60}$Co]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0}  \label{fig:co1}} &
-\subfloat[$^{239}$Pu~Be]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/15-pulse-neutron-0}  \label{fig:pu1}} 
+\subfloat[$^{241}$Am background.]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1} \label{fig:am1}} &
+\subfloat[$^{241}$Am, e$^{-}$ collection.]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-pulse-alpha-e-0}  \label{fig:am2}} \\
+\subfloat[$^{241}$Am, h$^+$ collection.]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/18-pulse-alpha-h-0}  \label{fig:am3}} &
+\subfloat[$^{90}$Sr.]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-pulse-beta-0} \label{fig:sr1}} \\
+\subfloat[$^{60}$Co.]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-pulse-gamma-0}  \label{fig:co1}} &
+\subfloat[$^{239}$Pu~Be.]{\includegraphics[width=0.44\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/15-pulse-neutron-0}  \label{fig:pu1}} 
 \end{tabular}
-\caption{Accumulated pulses for all runs}
+\caption{Accumulated pulses for all runs.}
 \label{fig:accpulses}
 \end{figure}
 \clearpage
@@ -460,8 +460,8 @@ Figures~\ref{fig:1dearea} and~\ref{fig:1dharea} show a one-dimensional area dist
 \begin{figure}[!t]
 \centering
 \begin{tabular}{cc}
-\subfloat[$^{241}$Am, e$^{-}$ collection]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0} \label{fig:1dearea}} \\
-\subfloat[$^{241}$Am, h$^+$ collection]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0}  \label{fig:1dharea}}
+\subfloat[$^{241}$Am, e$^{-}$ collection.]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0} \label{fig:1dearea}} \\
+\subfloat[$^{241}$Am, h$^+$ collection.]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0}  \label{fig:1dharea}}
 \end{tabular}
 \caption{$^{241}$Am area histograms for electron and hole collection.}
 \label{fig:1dalphaarea}
@@ -476,7 +476,7 @@ The one-dimensional histograms in figure~\ref{fig:1dcosrarea} show a quasi-Landa
 \begin{figure}[]
 \centering
 \includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0}
-\caption{$^{90}$Sr scatter plots}
+\caption{$^{90}$Sr scatter plots.}
 \label{fig:scattersr}
 \end{figure}
 
@@ -484,15 +484,15 @@ The one-dimensional histograms in figure~\ref{fig:1dcosrarea} show a quasi-Landa
 \begin{figure}[]
 \centering
 \includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0}
-\caption{$^{60}$Co scatter plots}
+\caption{$^{60}$Co scatter plots.}
 \label{fig:scatterco}
 \end{figure}
 
 \begin{figure}[]
 \centering
 \begin{tabular}{cc}
-\subfloat[$^{90}$Sr]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0} \label{fig:1dsrarea}} \\
-\subfloat[$^{60}$Co]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0}  \label{fig:1coharea}}
+\subfloat[$^{90}$Sr.]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0} \label{fig:1dsrarea}} \\
+\subfloat[$^{60}$Co.]{\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0}  \label{fig:1coharea}}
 \end{tabular}
 \caption{Energy distributions for $\upgamma$ and $\upbeta$ particles.}
 \label{fig:1dcosrarea}
@@ -584,7 +584,7 @@ Note the changing scale on the X axis in the figures.
 \subsection{Thermal neutron flux monitoring}
 Research neutron reactors like TRIGA MARK II~\cite{TRIGA:00001} at Atominstitut~\cite{ATOM:00001} in Vienna are capable of emitting neutrons at a wide range of energies. The neutron flux is proportional to the current power of the reactor. It is therefore instrumental to monitor the neutron flux to make sure that the reactor operation is within the specified limits. However, the byproduct of the radioactive decays in the core is $\upgamma$ radiation, which has an energy range that overlaps with that of neutrons, making it difficult to measure the neutron flux. This is where PSA and diamond detectors come into play. This section describes the application of thermal neutron flux monitoring by means of the PSA.
 
-Thermal neutrons do not interact with the diamond bulk due to their low kinetic energy (of the order of 0.012~eV). Hence a converter foil has to be added to produce second order effects. Incoming neutrons interact with the foil, producing a set of secondary particles. These can then be detected upon hitting the detector bulk. Common neutron interactions that are used in thermal neutron detection are \textsuperscript{10}B(n,$\alpha$)\textsuperscript{7}Li reaction and \textsuperscript{6}Li(n,$\alpha$)\textsuperscript{3}H reaction ($\alpha$ stands for $^4_2$He, see equation~\ref{eq:reaction}). The focus in this section is on the latter. With a foil installed, there are several possibilities for neutrons to interact with the detector system. Each of these interactions ionises the diamond bulk in its own way, resulting in a specific shape of the current pulse. A neutron can: 1) interact with the foil, producing an $\upalpha$ and a \textsuperscript{3}H, 2) interact with a carbon atom in the lattice, producing an $\upalpha$ and a $\upgamma$ or even three $\upalpha$. The thermal neutrons do not have enough kinetic energy to interact with the lattice, therefore the focus will be on case (1), the equation for this reaction is the following:
+Thermal neutrons do not interact with the diamond bulk due to their low kinetic energy (of the order of 0.012~eV). Hence a converter foil has to be added to produce second order effects. Incoming neutrons interact with the foil, producing a set of secondary particles. These can then be detected upon hitting the detector bulk. Common neutron interactions that are used in thermal neutron detection are \textsuperscript{10}B(n,$\alpha$)\textsuperscript{7}Li reaction and \textsuperscript{6}Li(n,$\alpha$)\textsuperscript{3}H reaction ($\alpha$ stands for $^4_2$He, see equation~\ref{eq:reaction}). The focus in this section is on the latter. With a foil installed, there are several possibilities for neutrons to interact with the detector system. Each of these interactions ionises the diamond bulk in its own way, resulting in a specific shape of the current pulse. A neutron can: 1) interact with the foil, producing an $\upalpha$ and a \textsuperscript{3}H, 2) interact with a carbon atom in the lattice, producing an $\upalpha$ and a $\upgamma$ or even three $\upalpha$. The thermal neutrons do not have enough kinetic energy to interact with the lattice, therefore the focus is on case (1). The equation for this reaction is the following:
 \begin{equation}
 \label{eq:reaction}
    ^6_3Li   +   ^1_0n \;\rightarrow\; ^3_1H_{(2.73 MeV)} + \alpha_{(2.05 MeV)}
