@@ -67,7 +67,7 @@ n_\mathrm{i} = T^{3/2} \cdot \exp\left(-\frac{E_\mathrm{g}}{2k_\mathrm{B}T}\righ
 wherein $k_\mathrm{B} = 1.381\times10^{-23}~$m$^2~$kg~s$^{-2}~$K$^{-1}$ is the Boltzmann constant and $T$ is the temperature in K. 
 %CONTINEUE 
 
-If an external electric field is applied to the crystalline structure, the free electrons and holes drift toward the positive and negative potential, respectively, as shown in figure~\ref{fig:simpledrift}. While drifting, the charges couple with the electrodes, inducing current in the circuit, which is explained by the Shockley--Ramo theorem (see subsection below). The charges recombine upon reaching the electrodes. The equivalent electrical circuit is shown in figure~\ref{fig:simpledrifteq}.
+If an external electric field is applied to the crystalline structure, the free electrons and holes drift toward the positive and negative potential, respectively, as shown in figure~\ref{fig:simpledrift}. While drifting, the charges couple with the electrodes, inducing current in the circuit, which is explained by the Shockley--Ramo theorem below. The charges recombine upon reaching the electrodes. The equivalent electrical circuit is shown in figure~\ref{fig:simpledrifteq}.
 
 \begin{figure}[!t]
 \begin{tabular}{cccc}
@@ -131,7 +131,7 @@ The plane is segmented into infinitely long strips with a width $w$ whereby each
 \label{eq:stripcharge}
 Q_\mathrm{2}(z_\mathrm{0})=\int_{-\infty}^{\infty}\int_{-w/2}^{w/2}\sigma(x,y)\mathrm{d}x\mathrm{d}y = -\frac{2q}{\pi}\arctan\left(\frac{w}{2z_\mathrm{0}}\right)
 \end{equation} 
-If the charge starts moving towards the conducting plane, the mirror charge density distribution also changes (see figure~\ref{fig:chargeind2}). This results in the $Q_2[z_0(t)]$ to change with time, inducing an electric current $i_n(t)$:
+If the charge starts moving towards the conducting plane, the mirror charge density distribution also changes, as shown in figure~\ref{fig:chargeind2}. This results in the $Q_2[z_0(t)]$ to change with time, inducing an electric current $i_n(t)$:
  \begin{equation}
  \label{eq:indcurr}
  i_n(t) = -\frac{d}{dt}Q_\mathrm{2}[z_\mathrm{0}(t)] = -\frac{\partial Q_\mathrm{2}[z_\mathrm{0}(t)]}{\partial z_\mathrm{0}}\frac{\partial z_\mathrm{0}(t)}{\partial t} = \frac{4qw}{\pi[4z_\mathrm{0}(t)^2 + w^2]}v. 
@@ -315,7 +315,7 @@ Figure~\ref{fig:curramp} shows the equivalent circuit of a capacitive source and
 \begin{equation}
 u_\mathrm{o}(t) = A \cdot R_\mathrm{i} \cdot i_\mathrm{s}(t).
 \end{equation}
-The detector capacitance $C_\mathrm{det}$ together with the input resistance of the amplifier $R_\mathrm{i}$ defines the time constant of the signal (see figure~\ref{fig:currc}). The higher the $C_\mathrm{det}$, the slower is the response of the amplifier. For the case of the diamond sensor, which has the capacitance of the order of 2~pF and the input resistance of 50~$\Omega$, the resulting time constant is $\tau=10^{-10}$~s. This yields the signal rise time $t_\mathrm{r}\sim2.2\tau=2.2\times10^{-10}$$~s.
+The detector capacitance $C_\mathrm{det}$ together with the input resistance of the amplifier $R_\mathrm{i}$ defines the time constant of the signal, as shown in figure~\ref{fig:currc}. The higher the $C_\mathrm{det}$, the slower is the response of the amplifier. For the case of the diamond sensor, which has the capacitance of the order of 2~pF and the input resistance of 50~$\Omega$, the resulting time constant is $\tau=10^{-10}$~s. This yields the signal rise time $t_\mathrm{r}\sim2.2\tau=2.2\times10^{-10}$~s.
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.8\linewidth]{02_pulse_formation/pics/plots/currrc}
@@ -329,11 +329,11 @@ The detector capacitance $C_\mathrm{det}$ together with the input resistance of 
 
 \subsubsection{Charge-sensitive amplifier}
 %(0.5 pg)
-In order to measure integrated charge in the sensor, a feedback loop is added to the amplifier (see figure~\ref{fig:chgamp}). The feedback can be used to control the gain and input resistance, as well as to integrate the input signal. The charge amplifier is in principle an inverting voltage amplifier with a high input resistance. 
+In order to measure integrated charge in the sensor, a feedback loop is added to the amplifier, as shown in figure~\ref{fig:chgamp}. The feedback can be used to control the gain and input resistance, as well as to integrate the input signal. The charge amplifier is in principle an inverting voltage amplifier with a high input resistance. 
  
 In an ideal amplifier the output voltage $u_\mathrm{o}$ equals $-Au_\mathrm{i}$. Therefore the voltage difference across the capacitor $C_\mathrm{f}$ is $u_\mathrm{f}=(A+1)u_\mathrm{i}$ and the charge deposited on the capacitor is $Q_\mathrm{f}=C_\mathrm{f}u_\mathrm{f} = C_\mathrm{f}(A+1)u_\mathrm{i}$. Since no current can flow into the amplifier, all of the signal current must charge up the feedback capacitance, so $Q_\mathrm{f} = Q_\mathrm{i}$.
 
-In reality, however, charge-sensitive amplifiers respond much slower than is the duration of the current pulse from the sensor. In addition, a resistor is added to the feedback line in parallel to the capacitor. The resistor and capacitor define the decay time constant of the pulse (see figure~\ref{fig:chgrc}). This is necessary to return the signal to its initial state and ready for a new measurement.
+In reality, however, charge-sensitive amplifiers respond much slower than is the duration of the current pulse from the sensor. In addition, a resistor is added to the feedback line in parallel to the capacitor. The resistor and capacitor define the decay time constant of the pulse, as shown in figure~\ref{fig:chgrc}. This is necessary to return the signal to its initial state and ready for a new measurement.
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.7\linewidth]{02_pulse_formation/pics/plots/chgrc}
@@ -357,7 +357,7 @@ Contributions of shot noise, flicker noise and burst noise and other types are n
 An analogue-to-digital converter (ADC) is a device that converts the analogue electrical signal on the input to its digital representation - a series of digital values. This involves a quantisation -- \emph{sampling} of the signal at a defined sampling period, resulting in a sequence of samples at a discrete time period and with discrete amplitude values. The resolution of the ADC is the number of output levels the ADC can quantise to and is expressed in bits. For instance, an ADC with a resolution equal to $n=8$~bit  has a dynamic range of $N=2^n=256$~steps. The resulting voltage resolution $Q_\mathrm{ADC}$ at the input voltage range of $V_\mathrm{ADC}=\pm$50~mV is then equal to 
 \begin{equation}
 \label{eq:mvpercnt}
-Q_\mathrm{ADC}=\frac{V_\mathrm{ADC}}{2^{n}}  = \frac{100~mV}{2^8~steps} = 0.39~mV/step.
+Q_\mathrm{ADC}=\frac{V_\mathrm{ADC}}{2^{n}}  = \frac{100~\mathrm{mV}}{2^8~\mathrm{bit}} = 0.39~\mathrm{mV/bit}.
 \end{equation} 
 With a sampling period of $t_\mathrm{s}=$1~ns the sampling rate is $f_\mathrm{s}=$1~GSPS (gigasample per second).
 \begin{figure}[!t]
@@ -369,21 +369,21 @@ With a sampling period of $t_\mathrm{s}=$1~ns the sampling rate is $f_\mathrm{s}
 \end{figure}
 
 \begin{description}
-\item[Quantisation error and quantisation noise] (or a round-off error) is a contribution to the overall measurement error due to digitisation (rounding). It is defined as a difference between the actual analog value and a digitised representation of this value. The error is defined by the least significant bit (LSB), as seen in figure~\ref{fig:qerr}. Typically, the input signal amplitude is much larger than than the voltage resolution. Therefore the quantisation error is not directly correlated with the signal and has an approximately uniform distribution~\cite{}: 
+\item[Quantisation error and quantisation noise] (or a round-off error) is a contribution to the overall measurement error due to digitisation (rounding). It is defined as a difference between the actual analog value and the closest digitised representation of this value. The error is defined by the least significant bit (LSB), as seen in figure~\ref{fig:qerr}. Typically, the input signal amplitude is much larger than than the voltage resolution. Therefore the quantisation error is not directly correlated with the signal and has an approximately uniform distribution~\cite{}: 
 \begin{equation}
 \label{eq:qerr}
-\Delta Q_\mathrm{ADC}=\frac{1}{\sqrt{12}}LSB\sim0.289~LSB.
+\Delta Q_\mathrm{ADC}=\frac{1}{\sqrt{12}}\mathrm{LSB}\sim0.289~\mathrm{LSB}.
 \end{equation} 
-For the example above the quantisation error equals $\Delta Q_\mathrm{ADC}=0.289\cdot 0.39$~mV=0.11~mV. The error depends strongly on the linearity of the ADC, but this is not discussed in this document as the devices used have ADCs with a linear response.
+For the example above the quantisation error equals $\Delta Q_\mathrm{ADC}=0.289\cdot 0.39$~mV~$=0.11$~mV. The error depends strongly on the linearity of the ADC, but this is out of scope of this document as the devices used have ADCs with a linear response.
 \end{description}
 
 \subsection{Digital signal processing}
-The digitised signal can be processed to extract useful information. Therefore after the signal amplification and digitisation the signal is routed in a device which handles the analysis. The signal can either be processed immediately (in real time) or it can be saved to a data storage for analysis at a later stage (offline). The devices carrying out the processing can be multipurpose (e.g. Field programmable gate arrays) or dedicated (e.g. application-specific integrated circuits). Each of the two has its advantages and disadvantages, which are listed below. 
+The digitised signal can be processed to extract useful information. Therefore after the signal amplification and digitisation the signal is routed in a device which handles the digital analysis. The signal can either be processed immediately (in real time) or it can be saved to a data storage for analysis at a later stage (offline). The devices carrying out the processing can be multipurpose (e.g. Field Programmable Gate Arrays) or dedicated (e.g. Application-Specific Integrated Circuits).
 
 \begin{description}
-\item[Field programmable gate array] (FPGA) is an integrated circuit designed to be reprogrammable and reconfigured after manufacturing. It consists of a set of logic gates that can be interconnected in numerous combinations to carry out a logic operation. Many such logic operations can take place in parallel, making the FPGA a powerful tool for signal processing. FPGAs are often used during system development or in systems in which the requirements might change with time. They can be reprogrammed in the order of seconds. In addition, the logic design only needs minor changes when migrating to a newer version of the FPGA chip of the same vendor. They also offer faster time-to-market with comparison to application-specific solutions, which have to be developed. On the other hand, the price per part can be significantly higher than for the application-specific solutions. Also, their other major disadvantages are a high power consumption and a relatively low speed. However, today's solutions are capable of clock speeds of the order of 500~MHz. Together with the integrated digital signal processing blocks, embedded processors and other modules, they are already very powerful and versatile. All in all, FPGAs are a good choice for prototyping and limited production, for projects with a limited requirements for speed and complexity.
+\item[Field Programmable Gate Array] (FPGA) is an integrated circuit designed to be reprogrammable and reconfigured after manufacturing. It consists of a set of logic gates that can be interconnected in numerous combinations to carry out a set of logic operations. Many such logic operations can take place in parallel, making the FPGA a powerful tool for signal processing. FPGAs are often used during system development or in systems in which the requirements might change with time. They can be reprogrammed in the order of seconds. In addition, the logic design only needs minor changes when migrating to a newer version of the FPGA chip of the same vendor. The FPGAs also offer faster time-to-market with comparison to application-specific solutions, which have to be developed. On the other hand, the price per part can be significantly higher than for the application-specific solutions. Also, their other major disadvantages are a high power consumption and a relatively low speed as compared to more application-specific solutions. However, today's solutions are capable of clock speeds higher than 500~MHz. Together with the integrated digital signal processing blocks, embedded processors and other modules, they are already very powerful and versatile. All in all, FPGAs are a good choice for prototyping and limited production, for projects with limited requirements for speed and complexity.
 
-\item[Application-specific integrated circuit] (ASIC) is an integrated circuit designed for a specific use. The design cannot be modified after chip production, as compared to FPGAs. On the other hand, the ASICs can be optimised to perform a required operation at a high speed and at a low power consumption. In addition, due to the specific design the size of the chip can be much smaller. ASICs can be designed as hybrid chips, containing both a digital and an analog part.  
+\item[Application-Specific Integrated Circuit] (ASIC) is an integrated circuit designed for a specific use. The design cannot be modified after chip production, as is the case with FPGAs. On the other hand, the ASICs can be optimised to perform a required operation at a high speed and at a low power consumption. In addition, due to the specific design the size of the chip can be much smaller. ASICs can be designed as hybrid chips, containing both a digital and an analog part.  
 To update the chip, the design has to be submitted to a foundry, which produces the new chips with a turnover time of 4---6 weeks. The costs of a submission start at \$~50\,000, but the price per part can be reduced significantly with a high volume. To sum up, ASICs are used for high volume designs with well defined requirements where some stringent constraints in terms of power consumption and speed have to be met.
 \end{description} 
 
