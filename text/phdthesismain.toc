@@ -3,11 +3,11 @@
 \contentsline {subsection}{\numberline {1.1.1}CERN}{3}
 \contentsline {subsection}{\numberline {1.1.2}Particle accelerators}{4}
 \contentsline {subsection}{\numberline {1.1.3}The ATLAS experiment}{5}
-\contentsline {subsection}{\numberline {1.1.4}Atominstitut, Vienna}{6}
+\contentsline {subsection}{\numberline {1.1.4}Atominstitut, Vienna}{7}
 \contentsline {subsection}{\numberline {1.1.5}n-ToF}{7}
 \contentsline {section}{\numberline {1.2}Particle detectors}{8}
 \contentsline {subsection}{\numberline {1.2.1}Semiconductor detectors}{9}
-\contentsline {subsection}{\numberline {1.2.2}Diamond sensors}{10}
+\contentsline {subsection}{\numberline {1.2.2}Diamond sensors}{11}
 \contentsline {chapter}{\numberline {2}Signal formation in diamond}{13}
 \contentsline {section}{\numberline {2.1}Principles of signal formation in semiconductors}{14}
 \contentsline {subsection}{\numberline {2.1.1}Signal induction by moving charges}{16}
@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {2.1.3}Signal charge fluctuations}{19}
 \contentsline {section}{\numberline {2.2}Carrier transport in a diamond sensor}{19}
 \contentsline {section}{\numberline {2.3}Electronics for signal processing}{22}
-\contentsline {subsection}{\numberline {2.3.1}Signal preamplifiers}{22}
+\contentsline {subsection}{\numberline {2.3.1}Signal preamplifiers}{23}
 \contentsline {subsubsection}{\numberline {2.3.1.1}Current-sensitive amplifier}{23}
 \contentsline {subsubsection}{\numberline {2.3.1.2}Charge-sensitive amplifier}{24}
 \contentsline {subsubsection}{\numberline {2.3.1.3}Analogue electronic noise}{25}
@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {3.2.1}Noise limitations}{35}
 \contentsline {section}{\numberline {3.3}Radiation limitations}{37}
 \contentsline {subsection}{\numberline {3.3.1}Quantifying radiation damage in diamonds}{38}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Irradiation with a $\uppi _\mathrm {300\nobreakspace {}MeV}$ beam}{38}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Irradiation with a $\uppi _\mathrm {300\nobreakspace {}MeV}$ beam}{39}
 \contentsline {subsubsection}{\numberline {3.3.1.2}Charge collection efficiency and charge collection distance}{39}
 \contentsline {subsubsection}{\numberline {3.3.1.3}Irradiation damage factor}{40}
 \contentsline {subsection}{\numberline {3.3.2}Long-term measurement stability}{41}
@@ -74,7 +74,7 @@
 \contentsline {subsection}{\numberline {5.6.3}Area and width measurement}{85}
 \contentsline {subsubsection}{\numberline {5.6.3.1}Vector cleaning}{86}
 \contentsline {subsubsection}{\numberline {5.6.3.2}Algorithm}{87}
-\contentsline {section}{\numberline {5.7}Control and data interface}{88}
+\contentsline {section}{\numberline {5.7}Control and data interface}{89}
 \contentsline {subsection}{\numberline {5.7.1}Software}{89}
 \contentsline {subsection}{\numberline {5.7.2}Data readout}{89}
 \contentsline {section}{\numberline {5.8}Performance results}{90}

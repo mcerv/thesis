@@ -103,7 +103,7 @@ The resulting function for a muon (a heavy electron) is shown in figure~\ref{fig
 
 %Shockley-Ramo theorem
 \subsection{Signal induction by moving charges}
-The book~\cite{PDDC:00000} gives a derivation of signal induction in a conducting plane by a point-like charge, which couples with an electrode. The electrode can in this case be modelled as an infinite conducting plane. When a point charge $q$ is created (e.g. an electron-hole pair created via ionisation), its electrostatic field lines immediately couple with the electrode, as seen in figure~\ref{fig:chargeind1}. The electric field on the metal surface due to a point-like charge $q$ at the distance $z_\mathrm{0}$ equals
+The signal induction in a conducting plane by a point-like charge, which couples with an electrode, is derived in~\cite{PDDC:00000}. The electrode can in this case be modelled as an infinite conducting plane. When a point charge $q$ is created (e.g. an electron-hole pair created via ionisation), its electrostatic field lines immediately couple with the electrode, as seen in figure~\ref{fig:chargeind1}. The electric field on the metal surface due to a point-like charge $q$ at the distance $z_\mathrm{0}$ equals
 \begin{equation}
 E_\mathrm{z}(x,y) = \frac{qz_\mathrm{0}}{2\pi\epsilon_\mathrm{0}(x^2+y^2+z_0^2)^\frac{3}{2}}~~~~~~~~~~E_\mathrm{y} = E_\mathrm{z} = 0.
 \end{equation}
@@ -138,6 +138,7 @@ If the charge starts moving towards the conducting plane, the mirror charge dens
  \end{equation}
  The movement of the point-like charge therefore induces current in the conducting plane. The induced current is linearly dependent on the velocity of the point-like charge.
 
+\subsection{Shockley-Ramo theorem}
 W. Shockley~\cite{SHOCKLEY:00000} and S. Ramo~\cite{RAMO:00000} independently proposed a theory which explains how a moving point charge induces current in a conductor. The Shockley-Ramo theorem can therefore be used to calculate the instantaneous electric current induced by the charge carrier or a group of charge carriers. It can be used for any number of electrodes. It states that the current $I_\mathrm{n}^{\mathrm{ind}}(t)$ induced on the grounded electrode $n$ by a point charge $q$ moving along a trajectory $\textbf{x}(t)$ reads
 \begin{equation}
 \label{eq:ramo}
@@ -188,10 +189,10 @@ The two aforementioned types of interactions have well defined signal responses.
 
 
 \subsection{Signal charge fluctuations}
-Two important sensor properties are the magnitude of the signal and the fluctuations of the signal at a given absorbed energy. They determine the relative resolution $\Updelta E/E$. For semiconductors the signal fluctuations are smaller than the simple statistical variance $\upsigma_\mathrm{Q}=\sqrt{N_\mathrm{Q}}$. Here $N_\mathrm{Q}$ is the number of released charge pairs, i.e. the ratio between the total deposited energy $E_\mathrm{0}$ and the average energy deposition $E_\mathrm{i}$ required to produce an electron-hole pair. \cite{} shows that the variance is $\upsigma_\mathrm{Q}=\sqrt{F N_\mathrm{Q}}$, where $F$ is the Fano factor~\cite{} (0.08 for diamond and 0.115 for silicon ~\cite{}). Thus, the variance of the signal charge is smaller than expected, $\upsigma_\mathrm{Q}\approx0.3 \sqrt{N_\mathrm{Q}}$. The resulting intrinsic resolution of semiconductor detectors is 
+Two important sensor properties are the magnitude of the signal and the fluctuations of the signal at a given absorbed energy. They determine the relative resolution $\Updelta E/E$. For semiconductors the signal fluctuations are smaller than the simple statistical standard deviation $\upsigma_\mathrm{Q}=\sqrt{N_\mathrm{Q}}$. Here $N_\mathrm{Q}$ is the number of released charge pairs, i.e. the ratio between the total deposited energy $E_\mathrm{0}$ and the average energy deposition $E_\mathrm{i}$ required to produce an electron-hole pair. \cite{} shows that the standard deviation is $\upsigma_\mathrm{Q}=\sqrt{F N_\mathrm{Q}}$, where $F$ is the Fano factor~\cite{} (0.08 for diamond and 0.115 for silicon ~\cite{}). Thus, the standard deviation of the signal charge is smaller than expected, $\upsigma_\mathrm{Q}\approx0.3 \sqrt{N_\mathrm{Q}}$. The resulting intrinsic resolution of semiconductor detectors is 
 \begin{equation}
 \label{eq:efwhm}
-\Updelta E_{FWHM} = 2.35 \sqrt{FEE_\mathrm{i}} 
+\Updelta E_\mathrm{FWHM} = 2.35 \sqrt{FEE_\mathrm{i}} 
 \end{equation} 
 wherein $E_\mathrm{i}(Si)$=~3.6~eV and E$_\mathrm{i}(C)$=~13~eV. E.g., for an $\upalpha$ particle with energy $E_\upalpha$ = 5.486 MeV the calculated resolution in diamond is equal to $\Updelta E_{\mathrm{FWHM}}$ = 5.6~keV. This defines the minimum achievable resolution for energy spectroscopy with semiconductors. Figure~\ref{fig:enerres} shows the resolution limit as a function of energy in silicon and diamond.
 
@@ -226,7 +227,7 @@ Drift is caused by an externally applied electrical field. In that case the carr
 \item[Drift velocity, saturation velocity and mobility]
 The charge carriers drift through the diamond bulk with a drift velocity $v_\mathrm{drift}(E)$~\cite{}, which is proportional to the electric field $E$ at low electric fields: $v_\mathrm{drift} = \mu E$. The proportionality factor $\mu$ is defined as the mobility in cm$^2$V$^{-1}$s$^{-1}$.
 
-For higher fields, however, the velocity saturates as the carriers lose more energy to the lattice at a higher velocity. They induce increasingly more lattice vibrations (phonon transport). There is a velocity limit above which the carriers cannot reach -- velocity saturation. Paper~\cite{} defines this velocity to be $v^e_\mathrm{sat}=v^h_\mathrm{sat}=(14.23\pm0.12)\times10^6$~cm/s for both positive and negative charge carriers.
+For higher fields, however, the velocity saturates as the carriers lose more energy to the lattice at a higher velocity. They induce increasingly more lattice vibrations (phonon transport). There is a velocity limit above which the carriers cannot reach -- velocity saturation. The $v^e_\mathrm{sat}=v^h_\mathrm{sat}=(14.23\pm0.12)\times10^6$~cm/s for both positive and negative charge carriers~\cite{JANSEN:00001}.
 
 The final equation for $v_\mathrm{drift}$ is therefore
 \begin{equation}
@@ -298,7 +299,7 @@ The trapped carriers do not contribute to the overall induced current on the ele
 This section describes the electronics of a detector, starting with a description of signal amplifiers and then discussing the digitisation and signal processing. All these stages are necessary to extract information from the sensor. First, the signal has to be amplified. Then it is digitised and finally processed in a specially designed processor or a logic unit.
 
 \subsection{Signal preamplifiers}
-The signal charge generated in the sensor by a single highly energetic particle or photon is of the order of fC. The induced current is ranging between $10^{-8}$~A ($\upbeta, \upgamma$ radiation) and $3\times10^{-7}$~A ($\upalpha$ radiation). Signals as low as these have to be pre-amplified before processing. Depending on the measurement, several types of signal amplifiers can be used. The preamplifiers are designed to minimise electronic noise while maximising gain, thus maximising the signal-to-noise ratio (SNR). In addition, a high bandwidth limit is preferred to minimise the information loss due to signal shape deformation. A critical parameter is the total capacitance, i.e. the sensor capacitance together with the input capacitance of the preamplifier. The SNR improves with a lower capacitance. Several types of amplifiers can be used, all of which affect the measured pulse shape. They behave differently for resistive or capacitive sources. This thesis focuses on semiconductors as capacitive sources. Two preamplifiers are used most commonly, a current and a charge amplifier. Both are described below in detail. 
+The signal charge generated in the sensor by a single energetic particle is of the order of fC. The induced current range is typically between $10^{-8}$~A ($\upbeta, \upgamma$ radiation) and $3\times10^{-7}$~A ($\upalpha$ radiation). Signals as low as these have to be pre-amplified before processing. Depending on the measurement, several types of signal amplifiers can be used. The preamplifiers are designed to minimise electronic noise while maximising gain, thus maximising the signal-to-noise ratio (SNR). In addition, a high bandwidth limit is preferred to minimise the information loss due to signal shape deformation. A critical parameter is the total capacitance, i.e. the sensor capacitance together with the input capacitance of the preamplifier. The SNR improves with a lower capacitance. Several types of amplifiers can be used, all of which affect the measured pulse shape. They behave differently for resistive or capacitive sources. This thesis focuses on semiconductors as capacitive sources. Two preamplifiers are used most commonly, a current and a charge amplifier. Both are described in detail below. 
 
 \begin{figure}[!t]
 %\centering
@@ -333,7 +334,7 @@ In order to measure integrated charge in the sensor, a feedback loop is added to
  
 In an ideal amplifier the output voltage $u_\mathrm{o}$ equals $-Au_\mathrm{i}$. Therefore the voltage difference across the capacitor $C_\mathrm{f}$ is $u_\mathrm{f}=(A+1)u_\mathrm{i}$ and the charge deposited on the capacitor is $Q_\mathrm{f}=C_\mathrm{f}u_\mathrm{f} = C_\mathrm{f}(A+1)u_\mathrm{i}$. Since no current can flow into the amplifier, all of the signal current must charge up the feedback capacitance, so $Q_\mathrm{f} = Q_\mathrm{i}$.
 
-In reality, however, charge-sensitive amplifiers respond much slower than is the duration of the current pulse from the sensor. In addition, a resistor is added to the feedback line in parallel to the capacitor. The resistor and capacitor define the decay time constant of the pulse, as shown in figure~\ref{fig:chgrc}. This is necessary to return the signal to its initial state and ready for a new measurement.
+In reality, however, charge-sensitive amplifiers respond much slower than is the duration of the current pulse from the sensor. In addition, a resistor is added to the feedback line in parallel to the capacitor. The resistor and capacitor define the decay time constant of the pulse, as shown in figure~\ref{fig:chgrc}. This is necessary to return the signal to its initial state to be ready for a new measurement.
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.7\linewidth]{02_pulse_formation/pics/plots/chgrc}
@@ -354,12 +355,12 @@ where $k_\mathrm{B}$ is the Boltzmann constant, $R$ is the input resistance of t
 Contributions of shot noise, flicker noise and burst noise and other types are not significant relative to the thermal noise. However, the contributions of external factors can severely deteriorate the signal. This means the noise produced by capacitive or inductive coupling with an external source, which causes interference in the signal. These effects can be reduced by shielding the electronics and avoiding ground loops. 
 
 \subsection{Analogue-to-digital converters}
-An analogue-to-digital converter (ADC) is a device that converts the analogue electrical signal on the input to its digital representation - a series of digital values. This involves a quantisation -- \emph{sampling} of the signal at a defined sampling period, resulting in a sequence of samples at a discrete time period and with discrete amplitude values. The resolution of the ADC is the number of output levels the ADC can quantise to and is expressed in bits. For instance, an ADC with a resolution equal to $n=8$~bit  has a dynamic range of $N=2^n=256$~steps. The resulting voltage resolution $Q_\mathrm{ADC}$ at the input voltage range of $V_\mathrm{ADC}=\pm$50~mV is then equal to 
+An analogue-to-digital converter (ADC) is a device that converts the analogue electrical signal on the input to its digital representation - a series of digital values. This involves a quantisation -- \emph{sampling} of the signal at a defined sampling period, resulting in a sequence of samples at a discrete time period and with discrete amplitude values. The resolution of the ADC is the number of output levels the ADC can quantise to and is expressed in bits. For instance, an ADC with a resolution equal to $n=8$~bit  has a dynamic range of $N=2^n=256$~steps. The resulting voltage resolution $Q_\mathrm{ADC}$ at the input voltage range of $V_\mathrm{ADC}=\pm$50~mV is then
 \begin{equation}
 \label{eq:mvpercnt}
 Q_\mathrm{ADC}=\frac{V_\mathrm{ADC}}{2^{n}}  = \frac{100~\mathrm{mV}}{2^8~\mathrm{bit}} = 0.39~\mathrm{mV/bit}.
 \end{equation} 
-With a sampling period of $t_\mathrm{s}=$1~ns the sampling rate is $f_\mathrm{s}=$1~GSPS (gigasample per second).
+With a sampling period of $t_\mathrm{s}=$1~ns the sampling rate is $f_\mathrm{s}=$1~GS/s (gigasample per second).
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.7\linewidth]{02_pulse_formation/pics/plots/qerr}
@@ -383,15 +384,16 @@ The digitised signal can be processed to extract useful information. Therefore a
 \begin{description}
 \item[Field Programmable Gate Array] (FPGA) is an integrated circuit designed to be reprogrammable and reconfigured after manufacturing. It consists of a set of logic gates that can be interconnected in numerous combinations to carry out a set of logic operations. Many such logic operations can take place in parallel, making the FPGA a powerful tool for signal processing. FPGAs are often used during system development or in systems in which the requirements might change with time. They can be reprogrammed in the order of seconds. In addition, the logic design only needs minor changes when migrating to a newer version of the FPGA chip of the same vendor. The FPGAs also offer faster time-to-market with comparison to application-specific solutions, which have to be developed. On the other hand, the price per part can be significantly higher than for the application-specific solutions. Also, their other major disadvantages are a high power consumption and a relatively low speed as compared to more application-specific solutions. However, today's solutions are capable of clock speeds higher than 500~MHz. Together with the integrated digital signal processing blocks, embedded processors and other modules, they are already very powerful and versatile. All in all, FPGAs are a good choice for prototyping and limited production, for projects with limited requirements for speed and complexity.
 
-\item[Application-Specific Integrated Circuit] (ASIC) is an integrated circuit designed for a specific use. The design cannot be modified after chip production, as is the case with FPGAs. On the other hand, the ASICs can be optimised to perform a required operation at a high speed and at a low power consumption. In addition, due to the specific design the size of the chip can be much smaller. ASICs can be designed as hybrid chips, containing both a digital and an analog part.  
+\item[Application-Specific Integrated Circuit] (ASIC) is an integrated circuit designed for a specific use. The design cannot be modified after chip production, as is the case with FPGAs. On the other hand, the ASICs can be optimised to perform a required operation at a high speed and at a low power consumption. In addition, due to the specific design the size of the chip can be much smaller. ASICs can be designed as hybrid chips, containing both a digital and an analog part. Finally, ASICs can be designed to withstand much higher irradiation doses than FPGAs and can therefore be used in harsh environments like in space or in particle colliders.
+
 To update the chip, the design has to be submitted to a foundry, which produces the new chips with a turnover time of 4---6 weeks. The costs of a submission start at \$~50\,000, but the price per part can be reduced significantly with a high volume. To sum up, ASICs are used for high volume designs with well defined requirements where some stringent constraints in terms of power consumption and speed have to be met.
 \end{description} 
 
 \begin{figure}[!t]
 %\centering
 \begin{tabular}{cccc}
-\subfloat[Xilinx Virtex 5 FPGA~\cite{FPGA:00000}.]{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/fpga} \label{fig:fpga}} & 
-\subfloat[ASIC~\cite{ASIC:00000}.]{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/asic}  \label{fig:asic}}
+\subfloat{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/fpga} \label{fig:fpga}} & 
+\subfloat{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/asic}  \label{fig:asic}}
 \end{tabular}
-\caption{An example of an FPGA and an ASIC chip.}
+\caption{An example of a Xilinx Virtex 5 FPGA~\cite{FPGA:00000} and an FE-I4 ASIC chip~\cite{ASIC:00000}.}
 \end{figure}

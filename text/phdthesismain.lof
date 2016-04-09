@@ -3,14 +3,14 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces The Large Hadron Collider \cite {Maximilien:1324852}.\relax }}{5}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces The ATLAS Experiment \cite {Pequenao:1095924}.\relax }}{6}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces The TRIGA MARK II neutron reactor \cite {GeneralAtomics}.\relax }}{7}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces The calorimeter in the n-ToF area \cite {Maximilien:1304589}.\relax }}{8}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The calorimeter in the n-ToF area \cite {Maximilien:1304589}.\relax }}{9}
 \contentsline {figure}{\numberline {1.6}{\ignorespaces The Insertable B-Layer -- a silicon particle tracker installed in the ATLAS experiment in 2014 \cite {MarcelloniDeOliveira:1702006}.\relax }}{10}
 \contentsline {figure}{\numberline {1.7}{\ignorespaces A pCVD diamond pad detector \cite {Cividec:00000}.\relax }}{11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces In the equivalent electrical circuit diagram, electron-hole creation and drift can be modelled as a current source with a capacitor in parallel.\relax }}{15}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces In the equivalent electrical circuit diagram the electron-hole creation and drift can be modelled as a current source with a capacitor in parallel.\relax }}{15}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Valence bonds in the crystalline structure can be broken, creating a free electron-hole pair}}}{15}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {The freed electron-hole pair starts drifting in the externally applied electric field. The electron and the hole both drift in the opposite directions towards the oppositely charged electrods.}}}{15}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Equivalent electrical circuit. The moving charges act as a current source.}}}{15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The freed electron-hole pair starts drifting in the externally applied electric field. The electron and the hole both drift in the opposite directions towards the oppositely charged electrods.}}}{15}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Equivalent electrical circuit. The moving charges act as a current source.}}}{15}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Stopping power for muons according to the Bethe-Bloch formula\nobreakspace {}\cite {}.\relax }}{16}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces A point-like charge inducing current in a conductive plane.\relax }}{17}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Newly created point charge couples with the conductive plane.}}}{17}
@@ -18,8 +18,8 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {The changing charge density in the small regions of the plane induces current.}}}{17}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Charge carrier drift in diamond for $\upbeta /\upgamma $ and for $\upalpha $ particles.\relax }}{18}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Calculated intrinsic energy resolution for silicon and diamond.\relax }}{20}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Introduction of space charge in the diamond bulk. The induced current signal is proportional to the effective electrical field. $d$ is the thickness of the diamond sensor.\relax }}{21}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Introduction of impurities and non-uniformities into the crystal lattice due to radiation damage.\relax }}{22}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Left figure shows a profile of a diamond sensor only with an externally applied electric field. In the figure on the right a uniformly distributed space charge is added in the diamond, contributing to the internal electric field distribution. The induced current signal is proportional to the electrical field. $d$ is the thickness of the diamond sensor.\relax }}{21}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Impurities and non-uniformities in the crystal lattice due to radiation damage.\relax }}{22}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Simplified equivalent circuits of a current and charge amplifier.\relax }}{23}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {A capacitive source and a current amplifier.}}}{23}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {A capacitive source and a charge amplifier.}}}{23}
@@ -32,14 +32,14 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram of a diamond detector readout chain.\relax }}{29}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Amplifiers used for the charge and current measurements.\relax }}{30}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cx charge sensing preamplifier.}}}{30}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cx charge sensitive preamplifier.}}}{30}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {C2 fast charge preamplifier.}}}{30}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Two scCVD diamond samples: A IIa 1scdhq (left) and an E6 S37 (right).\relax }}{31}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Positioning of the $\upalpha $-source on top of the sensor carrier.\relax }}{34}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {PCB carrier with an embedded diamond sample.}}}{34}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Radioactive source over the carrier.}}}{34}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Superimposed and averaged pulses (a, b and c, current amplifier) and distributions of deposited energy (d, e, f, charge amplifier) for three types of radiation. Note the scale on the X axis of the distributions.\relax }}{36}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diamond radiation damage - a model based on displacements per atom\nobreakspace {}\cite {Guthoff:2014223}. Added are data points for protons and pions by RD42\nobreakspace {}\cite {RD42IRRAD:00000} and one data point for pions measured in the scope of this thesis.\relax }}{39}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Superimposed and averaged pulses (left figures, current amplifier) and distributions of deposited energy (right figures, charge amplifier) for three types of radiation. Note the scale on the X axis of the distributions.\relax }}{36}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diamond radiation damage - a model based on displacements per atom\nobreakspace {}\cite {Guthoff:2014223}. Added are data points for protons and pions by RD42\nobreakspace {}\cite {RD42IRRAD:00000} and one data point for pions measured in the scope of this study.\relax }}{39}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces First figure shows the CCD for S37, S79 and S52 at a range of bias voltage settings. The charge collection distance at 1\nobreakspace {}V/$\upmu $m bias voltage for the three diamond samples is then compared to the RD42 data for pion irradiation in the second figure. The data points are about 15--25\nobreakspace {}\% lower than expected from the RD42 data\nobreakspace {}\cite {RD42IRRAD:00000}.\relax }}{41}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Relative increase of charge collection over time due to priming with the $^{90}$Sr radioactive source. The charge collection for the non-irradiated S37 stays constant. The bias voltage for this measurement is 1\nobreakspace {}V/$\upmu $m.\relax }}{43}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Relative decrease of collected charge with time for non-irradiated and irradiated diamond samples.\relax }}{44}
@@ -51,7 +51,7 @@
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Varied bias voltage at a fixed temperature for an irradiated sample.\relax }}{52}
 \contentsline {figure}{\numberline {3.16}{\ignorespaces After irradiation: several data points between 4\nobreakspace {}K and 295\nobreakspace {}K at a bias voltage of $\pm $500\nobreakspace {}V.\relax }}{53}
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Collected charge as a function of temperature.\relax }}{55}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Charge carrier lifetime decreases with irradiation, but is stable across the range of temperatures between 4\nobreakspace {}K -- 75\nobreakspace {}K and 150\nobreakspace {}K -- 295\nobreakspace {}K. The first figure shows the carrier lifetime s a function of temperature whereas the second figure depcits the carrier lifetime averaged over all temperatures and plotted against the $\pi $ irradiation dose.\relax }}{57}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Charge carrier lifetime decreases with irradiation, but is stable across the range of temperatures between 4\nobreakspace {}K -- 75\nobreakspace {}K and 150\nobreakspace {}K -- 295\nobreakspace {}K. The first figure shows the carrier lifetime s a function of temperature whereas the second figure depicts the carrier lifetime averaged over all temperatures and plotted as a function of the $\uppi $ irradiation dose.\relax }}{57}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Diamond detectors installed in high-energy physics experiments in the last decade, sorted by the active sensor area. The first four detectors from the left are radiation monitors whereas the right two are pixel trackers.\relax }}{60}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces DBM module, top-down view. Visible is the flexible PCB with signal and power connections, the silicon sensor and a part of the FE-I4. Wire bonds from the PCB to the FE-I4 and to the sensor are also visible.\relax }}{61}
