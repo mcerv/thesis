@@ -2,14 +2,13 @@
 \chapter{Signal formation in diamond}
 \label{ch:diamond}
 
-This chapter describes the fundamentals of signal formation in a diamond sensor, as well as its use as a particle detector. This is described in section~\ref{sec:princsigfor} where the energy deposition principles are explained. Then examples of ionisation are shown. Later the internal lattice defects that affect the signal are described. The final section contains the description of the remaining part of the signal chain -- signal amplifiers, digitisers and devices for signal processing. Noise contributions are discussed at every stage of the signal chain.
+This chapter describes the fundamentals of signal formation in a diamond sensor, as well as its use as a particle detector. This is described in section~\ref{sec:princsigfor} where the principles of energy deposition are explained. Then the current signal shapes of different types of radiation are shown. Later on the internal lattice defects that affect the signal are described. The final section contains the description of the remaining part of the signal chain -- signal amplifiers, digitisers and devices for signal processing. Noise contributions are discussed at every stage of the signal chain.
 
-Ionisation is the main signal generation mechanism in diamond, silicon and other semiconducting materials. A semiconductor sensor converts the energy deposited by an incident energetic charged particle to an electrical signal. In particular, the particle ionises the atoms in the lattice, freeing electrons and holes, which then drift towards positively and negatively charged electrodes due to an externally applied electrical field, inducing an electrical signal on the electrodes. 
+Ionisation is the main signal generation mechanism in diamond, silicon and other semiconducting materials. A semiconductor sensor converts the energy deposited by an incident energetic particle to an electrical signal. In particular, the particle ionises the atoms in the lattice, freeing electrons and holes, which then drift towards positively and negatively charged electrodes due to an externally applied electrical field, inducing an electrical signal on the electrodes. 
 
-Silicon is currently considered as the industry standard for particle detection. However, there are several disadvantages of using silicon instead of diamond, due to significant differences in the material properties. In particular, the properties of silicon change significantly with radiation. For instance, the leakage current increases, which in turn increases shot noise and can lead to a thermal runaway. In addition, due to induced lattice defects, which act as charge traps, its charge collection efficiency is decreased. Both are true for diamond as well, but on a much smaller scale.
+Silicon is currently considered as the industry standard for particle detection. However, there are several disadvantages of using silicon instead of diamond, due to significant differences in the material properties. In particular, the properties of silicon change significantly with radiation. Due to radiation-induced lattice defects, which act as charge traps, the charge collection efficiency is decreased. The defects are also responsible for the increase of the leakage current, increasing the shot noise eventually leading to a thermal runaway. The same is true for diamond, but on a smaller scale.
 
 Table~\ref{tab:semicompare} compares the properties of diamond and silicon. Some of these values are revisited and used in the course of this thesis. 
-
 
 \begin{footnotesize}
 \begin{center}
@@ -47,7 +46,9 @@ Avg. signal created/$\upmu$m (e) & 36 & 89 \\\hline
 %SC detector systems, pg. 43-73
 Particles can interact with the sensor in several ways, e.g. via bremsstrahlung~\cite{}, elastic or inelastic scattering (e-h pair production) or nuclear reactions. Bremsstrahlung is radiation created when a particle is deflected from its original path due to attraction of the core of an atom. This is in principle an unwanted effect in semiconductors as it deteriorate the spatial resolution of the sensor. Elastic scattering is deflection of the particle's trajectory due to the pull from the nucleus without depositing any energy in it. Inelastic scattering is the interaction through which an atom is ionised and an electron-hole pair is created. All these effects are competing and are dependent on the particle's mass, momentum etc. 
 
-Semiconductors are materials with a conductance between that of insulators and that of metals -- of the order of  $10^{?5}~\Upomega^{-1}$~cm$^{?1}$. They can be made up of atoms with four electrons in their valence band (e.g. silicon--Si, carbon--C or germanium--Ge) or as combinations of two or more different materials (e.g. gallium arsenide--GaAs). The atoms in the lattice form valence bonds with adjacent atoms, making solid crystal structures. These bonds can break apart if sufficient external energy is deposited. The electron that was forming the bond is kicked out, leaving behind a positively charged ion with a vacancy -- a hole -- in its valence band, as shown in figure~\ref{fig:semilattice9}. A free electron-hole pair is thus created. The free electron travels through the crystal until it is recombined with another hole. Similarly, the hole also ``travels'' through the material. Its positive charge attracts a bound electron in the vicinity, which breaks from the current bond and moves to the vacancy, leaving a new hole behind. The process continues, making it look like the hole is traveling through the material.
+Semiconductors are materials with a conductance between that of insulators and that of metals -- of the order of  $10^{?5}~\Upomega^{-1}$~cm$^{?1}$. They can be made up of atoms with four electrons in their valence band (e.g. silicon--Si, carbon--C or germanium--Ge) or as combinations of two or more different materials (e.g. gallium arsenide--GaAs). The atoms in the lattice form valence bonds with adjacent atoms, making solid crystal structures. 
+
+The valence bonds between atoms in the crystal lattice can break apart if sufficient external energy is deposited. The electron that was forming the bond is excited into the conductance band, leaving behind a positively charged ion with a vacancy -- a hole -- in its valence band, as shown in figure~\ref{fig:semilattice9}. A free electron-hole pair is thus created. The free electron travels through the crystal until it is recombined with another hole. Similarly, the hole also ``travels'' through the material. Its positive charge attracts a bound electron in the vicinity, which breaks from the current bond and moves to the vacancy, leaving a new hole behind. The process continues, making it look like the hole is traveling through the material.
 
 %\begin{figure}[!t]
 %\begin{center}
@@ -103,7 +104,7 @@ The resulting function for a muon (a heavy electron) is shown in figure~\ref{fig
 
 %Shockley-Ramo theorem
 \subsection{Signal induction by moving charges}
-The signal induction in a conducting plane by a point-like charge, which couples with an electrode, is derived in~\cite{PDDC:00000}. The electrode can in this case be modelled as an infinite conducting plane. When a point charge $q$ is created (e.g. an electron-hole pair created via ionisation), its electrostatic field lines immediately couple with the electrode, as seen in figure~\ref{fig:chargeind1}. The electric field on the metal surface due to a point-like charge $q$ at the distance $z_\mathrm{0}$ equals
+The signal induction in a conducting plane by a point-like charge, which couples with an electrode, is derived in~\cite{PDDC:00000}. The electrode can in this case be modelled as an infinite conducting plane. When a point charge $q$ is created (e.g. an electron-hole pair created via ionisation), its electrostatic field lines immediately couple with the electrode, as seen in figure~\ref{fig:chargeind1}. The electric field on the metal surface due to a point-like charge $q$ at the distance $z_\mathrm{0}$ is
 \begin{equation}
 E_\mathrm{z}(x,y) = \frac{qz_\mathrm{0}}{2\pi\epsilon_\mathrm{0}(x^2+y^2+z_0^2)^\frac{3}{2}}~~~~~~~~~~E_\mathrm{y} = E_\mathrm{z} = 0.
 \end{equation}
@@ -177,7 +178,7 @@ whereby $v_{\mathrm{drift}}$ is the drift velocity of the point-like charge and 
 \end{center}
 \end{figure}
 
-When a highly-energetic particle travels through the sensor, it interacts with atoms in the lattice. It ionises the valence electrons, creating electron-hole (e-h) pairs on its way. It can either deposit only a fraction of its energy and fly exit the sensor on the other side or it can get stopped in the bulk, depositing all of its energy. A special case is when it interacts with the core of the atom in the middle of the sensor via a nuclear interaction. All these various types interactions produce different amounts and different spatial distributions of e-h pairs. The induced electrical current therefore differs for different types of interaction. Two most frequent types are shown in figure~\ref{fig:drift}. The first diagram shows the interaction of a minimum ionising particle. The electrons and holes are created all along the trajectory of the particle and immediately start drifting towards the positive and negative electrode, respectively. At the beginning, all charges drift and contribute to the induced current. Those closest to the electrodes have a very short drift path and recombine quickly, reducing the induced current. Gradually all the charge carriers recombine. The resulting current signal is a triangular pulse with a sharp rising edge and a linear falling edge. The accumulated charge $Q_\mathrm{s}$ equals to the sum of the contributions of the positive and negative charge carriers. The second type of interaction happens when the particle is stopped in the diamond close to the point of entry. Most of its energy is deposited in a small volume close to the electrode. A cloud of charge carriers is created and the charges with the shorter path to the electrode recombine almost instantly. The carriers of the opposite charge, however, start drifting through the sensor to the other electrode. In an ideal diamond sensor, their velocity is constant throughout the drift up until they are collected at the opposite electrode. The contribution of the first charge cloud is a peak with a short time. The cloud drifting through the sensor, on the other hand, induces a current signal with a flat top. The resulting signal has a shape of a rectangle, with a spike in the beginning. This spike is filtered out in a real device because it is too fast for the electronics existing currently. The accumulated charge $Q_\mathrm{s}$ is equal to a half of the deposited charge by the stopped particle.
+When a highly-energetic particle travels through the sensor, it interacts with atoms in the lattice. It ionises the valence electrons, creating electron-hole (e-h) pairs on its way. It can either deposit only a fraction of its energy and exit the sensor on the other side or it can get stopped in the bulk, depositing all of its energy. A special case is when it interacts with the core of the atom in the middle of the sensor via a nuclear interaction. All these various types interactions produce different amounts and different spatial distributions of e-h pairs. The induced electrical current therefore differs for different types of interaction. Two most frequent types are shown in figure~\ref{fig:drift}. The first diagram shows the interaction of a minimum ionising particle. The electrons and holes are created all along the trajectory of the particle and immediately start drifting towards the positive and negative electrode, respectively. At the beginning, all charges drift and contribute to the induced current. Those closest to the electrodes have a very short drift path, reducing the induced current. Gradually all the charge carriers reach the electrode. The resulting current signal is a triangular pulse with a sharp rising edge and a linear falling edge. The accumulated charge $Q_\mathrm{s}$ equals to the sum of the contributions of the positive and negative charge carriers. The second type of interaction happens when the particle is stopped in the diamond close to the point of entry. Most of its energy is deposited in a small volume close to the electrode. A cloud of charge carriers is created and the charges with the shorter path to the electrode disappear almost instantly. The carriers of the opposite charge, however, start drifting through the sensor to the other electrode. In an ideal diamond sensor, their velocity is constant throughout the drift up until they are collected at the opposite electrode. The contribution of the first charge cloud is a peak with a short time. The cloud drifting through the sensor, on the other hand, induces a current signal with a flat top. The resulting signal has a shape of a rectangle, with a spike in the beginning. This spike is filtered out in a real device because it is too fast for the electronics existing currently. The accumulated charge $Q_\mathrm{s}$ is equal to a half of the deposited charge by the stopped particle.
 
 The two aforementioned types of interactions have well defined signal responses. Nuclear interactions on the other hand yield various results. The resulting signal shape depends on the decay products of the interaction, which can be $\upalpha$, $\upbeta$ or $\upgamma$ quanta, inducing a mixed shaped signal. 
 %
@@ -210,6 +211,7 @@ wherein $E_\mathrm{i}(Si)$=~3.6~eV and E$_\mathrm{i}(C)$=~13~eV. E.g., for an $\
 % ---------------------------------------------------------------------------------------------------------------
 %\clearpage
 \section{Carrier transport in a diamond sensor} 
+\label{sec:carrtransp}
 % ---------------------------------------------------------------------------------------------------------------
 This section describes the carrier transport phenomena in diamond. This theory provides the basis for discussion about the measurements in chapter~\ref{ch:meas}. 
 
@@ -227,7 +229,7 @@ Drift is caused by an externally applied electrical field. In that case the carr
 \item[Drift velocity, saturation velocity and mobility]
 The charge carriers drift through the diamond bulk with a drift velocity $v_\mathrm{drift}(E)$~\cite{}, which is proportional to the electric field $E$ at low electric fields: $v_\mathrm{drift} = \mu E$. The proportionality factor $\mu$ is defined as the mobility in cm$^2$V$^{-1}$s$^{-1}$.
 
-For higher fields, however, the velocity saturates as the carriers lose more energy to the lattice at a higher velocity. They induce increasingly more lattice vibrations (phonon transport). There is a velocity limit above which the carriers cannot reach -- velocity saturation. The $v^e_\mathrm{sat}=v^h_\mathrm{sat}=(14.23\pm0.12)\times10^6$~cm/s for both positive and negative charge carriers~\cite{JANSEN:00001}.
+For higher fields and higher velocities, however, the carriers lose more energy to the lattice. They induce increasingly more lattice vibrations (phonon transport). There is a velocity limit above which the carriers cannot reach -- velocity saturation. The $v^e_\mathrm{sat}=v^h_\mathrm{sat}=(14.23\pm0.12)\times10^6$~cm/s for both positive and negative charge carriers has been derived from the measurements in~\cite{JANSEN:00001}.
 
 The final equation for $v_\mathrm{drift}$ is therefore
 \begin{equation}
@@ -241,8 +243,8 @@ v_\mathrm{drift}(E) = \frac{d}{t_\mathrm{t}(E)}.
 \end{equation}
 The velocities for holes and electrons usually differ. In diamond, the holes travel 30~\% faster than electrons~\cite{}. The measurements in chapter~\ref{ch:meas} empirically confirm this statement.
 
-\item[Space carge] 
-Poisson's equation shows that 
+\item[Space charge] 
+The Poisson equation shows that 
 \begin{equation}
 \label{eq:poisson}
 \frac{d^2\Phi(x)}{\mathrm{d}x^2} = \frac{dE(x)}{\mathrm{d}x} = \frac{\rho(x)}{\epsilon}
@@ -375,7 +377,7 @@ With a sampling period of $t_\mathrm{s}=$1~ns the sampling rate is $f_\mathrm{s}
 \label{eq:qerr}
 \Delta Q_\mathrm{ADC}=\frac{1}{\sqrt{12}}\mathrm{LSB}\sim0.289~\mathrm{LSB}.
 \end{equation} 
-For the example above the quantisation error equals $\Delta Q_\mathrm{ADC}=0.289\cdot 0.39$~mV~$=0.11$~mV. The error depends strongly on the linearity of the ADC, but this is out of scope of this document as the devices used have ADCs with a linear response.
+For the example above the quantisation error equals $\Delta Q_\mathrm{ADC}=0.289\cdot 0.39$~mV~$=0.11$~mV. The error depends strongly on the linearity of the ADC, but this is out of scope of this document as the devices used have ADCs with a very good linearity.
 \end{description}
 
 \subsection{Digital signal processing}
