@@ -1,10 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{ASIC:00000}
-\emph{ASIC}.
-\newblock
-  http://www.embedded-systems-portal.com/CTB/CTB\_images/L2/L2\_ASIC.jpg.
-
 \bibitem{AtomInst:00000}
 \emph{Atominstitut, Technical University of Vienna, Austria}.
 \newblock http://ati.tuwien.ac.at/startpage/EN/.
@@ -88,16 +83,15 @@ Maximilien Brice.
 \newblock \emph{LHC tunnel}.
 \newblock Jan 2011.
 
-\bibitem{PASCHEN:00000}
-P.~Carazzetti and H.~R. Shea.
-\newblock \emph{Electrical breakdown at low pressure for planar
-  microelectromechanical systems with 10- to 500~$\upmu$m gaps}.
-\newblock {\em J. Micro/Nanolith. MEMS MOEMS}, (8(3), 031305), Jul-Sep 2009.
-
 \bibitem{Dominguez:2002395}
 Daniel Dominguez.
 \newblock \emph{Standard Model. Le modele standard}.
 \newblock General Photo, Mar 2015.
+
+\bibitem{ASIC:00000}
+M.~Garcia-Sciveres.
+\newblock {ATLAS Experiment Pixel Detector Upgrades}.
+\newblock 2011.
 
 \bibitem{Cividec:00000}
 CIVIDEC~Instrumentation GmbH.
@@ -132,6 +126,13 @@ M.~{Huhtinen}.
   silicon}.
 \newblock {\em Nuclear Instruments and Methods in Physics Research A},
   491:194--215, September 2002.
+
+\bibitem{JANSEN:00001}
+Hendrik Jansen, Daniel Dobos, Thomas Eisel, Heinz Pernegger, Vladimir Eremin,
+  and Norbert Wermes.
+\newblock Temperature dependence of charge carrier mobility in single-crystal
+  chemical vapour deposition diamond.
+\newblock {\em Journal of Applied Physics}, 113(17), 2013.
 
 \bibitem{Jansen:1956431}
 Hendrik Jansen, Norbert Wermes, and Heinz Pernegger.
@@ -221,6 +222,12 @@ V.~Sarin.
 W.~Shockley.
 \newblock \emph{Currents to Conductors Induced by a Moving Point Charge}.
 \newblock {\em Journal of applied Physics}, 9:635, 1938.
+
+\bibitem{IIA:00001}
+M.~\v{C}erv, P.~Sarin, H.~Pernegger, P.~Vageeswaran, and E.~Griesmayer.
+\newblock Diamond detector for beam profile monitoring in comet experiment at
+  j-parc.
+\newblock {\em Journal of Instrumentation}, 10(06):C06016, 2015.
 
 \bibitem{CHRISSI:00005}
 C.~Weiss.

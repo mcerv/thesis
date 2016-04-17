@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  6 APR 2016 22:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  15 APR 2016 16:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -571,7 +571,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  4406 strings out of 493089
  71132 string characters out of 6134843
- 125520 words of memory out of 5000000
+ 125530 words of memory out of 5000000
  7762 multiletter control sequences out of 15000+600000
  12953 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -590,7 +590,7 @@ l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on 04_makechapter.pdf (18 pages, 8027062 bytes).
+Output written on 04_makechapter.pdf (18 pages, 8027089 bytes).
 PDF statistics:
  565 PDF objects out of 1000 (max. 8388607)
  270 compressed objects within 3 object streams

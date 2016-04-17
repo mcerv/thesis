@@ -44,11 +44,11 @@ Avg. signal created/$\upmu$m (e) & 36 & 89 \\\hline
 %Lattice, electron-hole pair production (3 pg)
 %Ramo theorem (2 pg)
 %SC detector systems, pg. 43-73
-Particles can interact with the sensor in several ways, e.g. via bremsstrahlung~\cite{}, elastic or inelastic scattering (e-h pair production) or nuclear reactions. Bremsstrahlung is radiation created when a particle is deflected from its original path due to attraction of the core of an atom. This is in principle an unwanted effect in semiconductors as it deteriorate the spatial resolution of the sensor. Elastic scattering is deflection of the particle's trajectory due to the pull from the nucleus without depositing any energy in it. Inelastic scattering is the interaction through which an atom is ionised and an electron-hole pair is created. All these effects are competing and are dependent on the particle's mass, momentum etc. 
+Particles can interact with the sensor in several ways, e.g. via bremsstrahlung~\cite{}, elastic or inelastic scattering (e-h pair production) or nuclear reactions. Bremsstrahlung is radiation created when a particle is decelerated due to interaction with the electric field of the core of an atom. Elastic scattering is deflection of the particle's trajectory due to the pull from the nucleus without depositing any energy in it. This is in principle an unwanted effect in semiconductors as it deteriorates the spatial resolution of the sensor. Inelastic scattering is the interaction through which an atom is ionised and an electron-hole pair is created. All these effects are competing and are dependent on the particle's mass, momentum etc. 
 
 Semiconductors are materials with a conductance between that of insulators and that of metals -- of the order of  $10^{?5}~\Upomega^{-1}$~cm$^{?1}$. They can be made up of atoms with four electrons in their valence band (e.g. silicon--Si, carbon--C or germanium--Ge) or as combinations of two or more different materials (e.g. gallium arsenide--GaAs). The atoms in the lattice form valence bonds with adjacent atoms, making solid crystal structures. 
 
-The valence bonds between atoms in the crystal lattice can break apart if sufficient external energy is deposited. The electron that was forming the bond is excited into the conductance band, leaving behind a positively charged ion with a vacancy -- a hole -- in its valence band, as shown in figure~\ref{fig:semilattice9}. A free electron-hole pair is thus created. The free electron travels through the crystal until it is recombined with another hole. Similarly, the hole also ``travels'' through the material. Its positive charge attracts a bound electron in the vicinity, which breaks from the current bond and moves to the vacancy, leaving a new hole behind. The process continues, making it look like the hole is traveling through the material.
+The valence bonds between atoms in the crystal lattice can break apart if sufficient external energy is deposited. The electron that was forming the bond is excited into the conductance band, leaving behind a positively charged ion with a vacancy -- a hole -- in its valence band, as shown in figure~\ref{fig:semilattice9}. A free electron-hole pair is thus created. The free electron travels through the crystal until it is recombined with another hole. Similarly, the hole also travels through the material. Its positive charge attracts a bound electron in the vicinity, which breaks from the current bond and moves to the vacancy, leaving a new hole behind. The process continues, making it look like the hole is traveling through the material~\cite{}.
 
 %\begin{figure}[!t]
 %\begin{center}
@@ -65,10 +65,10 @@ The electrons need to absorb a certain energy to get to get ionised. The minimal
 \label{eq:intrinsiccarrier}
 n_\mathrm{i} = T^{3/2} \cdot \exp\left(-\frac{E_\mathrm{g}}{2k_\mathrm{B}T}\right)
 \end{equation} 
-wherein $k_\mathrm{B} = 1.381\times10^{-23}~$m$^2~$kg~s$^{-2}~$K$^{-1}$ is the Boltzmann constant and $T$ is the temperature in K. 
+wherein $k_\mathrm{B} = 1.381\times10^{-23}~$m$^2~$kg~s$^{-2}~$K$^{-1}$ is the Boltzmann constant, $E_\mathrm{g}$ is the energy band gap of the semiconductor and $T$ is the temperature in K. 
 %CONTINEUE 
 
-If an external electric field is applied to the crystalline structure, the free electrons and holes drift toward the positive and negative potential, respectively, as shown in figure~\ref{fig:simpledrift}. While drifting, the charges couple with the electrodes, inducing current in the circuit, which is explained by the Shockley--Ramo theorem below. The charges recombine upon reaching the electrodes. The equivalent electrical circuit is shown in figure~\ref{fig:simpledrifteq}.
+If an external electric field is applied to the crystalline structure, the free electrons and holes drift toward the positive and negative potential, respectively, as shown in figure~\ref{fig:simpledrift}. While drifting, the charges couple with the electrodes, inducing current in the circuit, which is explained by the Shockley--Ramo theorem below. Upon reaching the electrodes the charges stop inducing the current. The equivalent electrical circuit is shown in figure~\ref{fig:simpledrifteq}.
 
 \begin{figure}[!t]
 \begin{tabular}{cccc}
@@ -83,13 +83,12 @@ If an external electric field is applied to the crystalline structure, the free 
 
 %BETHE-BLOCH
 \begin{description}
-\item[Energy deposition of $\upalpha$ radiation and heavy ions]
-\item[Energy deposition of  $\upbeta$ and $\upgamma$ radiation] The mean energy loss of a particle traversing the detector as a function of the momentum is given with the the Bethe-Bloch equation~\cite{}: 
+\item[Mean energy loss] of a particle traversing the detector as a function of the momentum is given with the the Bethe-Bloch equation~\cite{}: 
 \begin{equation}
 -\left\langle\frac{\mathrm{d}E}{\mathrm{d}x}\right\rangle = \frac{4\pi}{m_\mathrm{e}c^2}  \cdot \frac{nz^2}{\beta^2}  \cdot  \left(\frac{e^2}{4\pi\epsilon_\mathrm{0}}\right)^2  \cdot  \left( \ln \left(\frac{2m_\mathrm{e}c^2\beta^2}{I\cdot(1-\beta^2)}\right)-\beta^2  \right)
 \label{eq:bethebloch}
 \end{equation}
-The resulting function for a muon (a heavy electron) is shown in figure~\ref{fig:bb2}. At a momentum of around 300~MeV/c the particle deposits the lowest amount of energy. That is called a minimum ionising particle or a MIP.
+The resulting function for a muon is shown in figure~\ref{fig:bb2}. At a momentum of around 300~MeV/c the particle deposits the lowest amount of energy. That is called a minimum ionising particle or a MIP.
 \end{description}
 
 
@@ -102,7 +101,6 @@ The resulting function for a muon (a heavy electron) is shown in figure~\ref{fig
 \end{figure}
 
 
-%Shockley-Ramo theorem
 \subsection{Signal induction by moving charges}
 The signal induction in a conducting plane by a point-like charge, which couples with an electrode, is derived in~\cite{PDDC:00000}. The electrode can in this case be modelled as an infinite conducting plane. When a point charge $q$ is created (e.g. an electron-hole pair created via ionisation), its electrostatic field lines immediately couple with the electrode, as seen in figure~\ref{fig:chargeind1}. The electric field on the metal surface due to a point-like charge $q$ at the distance $z_\mathrm{0}$ is
 \begin{equation}
@@ -127,15 +125,15 @@ The charge density integrated over the entire plane yields a mirror charge $Q$, 
 \label{eq:chargedensity}
 Q=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \sigma(x,y)\mathrm{d}x\mathrm{d}y = -q.
 \end{equation}
-The plane is segmented into infinitely long strips with a width $w$ whereby each of the strips is grounded (figure~\ref{fig:chargeind3}). Considering a charge density distribution~\ref{eq:chgdnstydist}, the resulting mirror charge on a single strip $Q_\mathrm{2}$ directly below the point charge $(x=0, y=0)$ yields
+The plane is then segmented into infinitely long strips with a width $w$ whereby each of the strips is grounded, as shown in figure~\ref{fig:chargeind3}. Considering a charge density distribution~\ref{eq:chgdnstydist}, the resulting mirror charge on a single strip $Q_\mathrm{2}$ directly below the point charge $(x=0, y=0)$ yields
 \begin{equation}
 \label{eq:stripcharge}
 Q_\mathrm{2}(z_\mathrm{0})=\int_{-\infty}^{\infty}\int_{-w/2}^{w/2}\sigma(x,y)\mathrm{d}x\mathrm{d}y = -\frac{2q}{\pi}\arctan\left(\frac{w}{2z_\mathrm{0}}\right)
 \end{equation} 
-If the charge starts moving towards the conducting plane, the mirror charge density distribution also changes, as shown in figure~\ref{fig:chargeind2}. This results in the $Q_2[z_0(t)]$ to change with time, inducing an electric current $i_n(t)$:
+If the charge starts moving towards the conducting plane, the mirror charge density distribution also changes, as shown in figure~\ref{fig:chargeind2}. As a result the $Q_2[z(t)]$ changes with time. The changing charge is in effect an induced electric current $i_2(t)$:
  \begin{equation}
  \label{eq:indcurr}
- i_n(t) = -\frac{d}{dt}Q_\mathrm{2}[z_\mathrm{0}(t)] = -\frac{\partial Q_\mathrm{2}[z_\mathrm{0}(t)]}{\partial z_\mathrm{0}}\frac{\partial z_\mathrm{0}(t)}{\partial t} = \frac{4qw}{\pi[4z_\mathrm{0}(t)^2 + w^2]}v. 
+ i_2(t) = -\frac{\mathrm{d}}{\mathrm{d}t}Q_\mathrm{2}[z(t)] = -\frac{\partial Q_\mathrm{2}[z(t)]}{\partial z}\frac{\partial z(t)}{\partial t} = \frac{4qw}{\pi[4z(t)^2 + w^2]}v. 
  \end{equation}
  The movement of the point-like charge therefore induces current in the conducting plane. The induced current is linearly dependent on the velocity of the point-like charge.
 
@@ -143,14 +141,14 @@ If the charge starts moving towards the conducting plane, the mirror charge dens
 W. Shockley~\cite{SHOCKLEY:00000} and S. Ramo~\cite{RAMO:00000} independently proposed a theory which explains how a moving point charge induces current in a conductor. The Shockley-Ramo theorem can therefore be used to calculate the instantaneous electric current induced by the charge carrier or a group of charge carriers. It can be used for any number of electrodes. It states that the current $I_\mathrm{n}^{\mathrm{ind}}(t)$ induced on the grounded electrode $n$ by a point charge $q$ moving along a trajectory $\textbf{x}(t)$ reads
 \begin{equation}
 \label{eq:ramo}
-I_\mathrm{n}^{\mathrm{ind}}(t) = -\frac{dQ_\mathrm{n}(t)}{dt} =  -\frac{q}{V_\mathrm{w}}\nabla\Psi_\mathrm{n}[\textbf{x}(t)]v(t)  =  -\frac{q}{V_\mathrm{w}}\textbf{E}_\mathrm{n}[\textbf{x}(t)]v(t),
+I_\mathrm{n}^{\mathrm{ind}}(t) = -\frac{\mathrm{d}Q_\mathrm{n}(t)}{\mathrm{d}t} =  -\frac{q}{V_\mathrm{w}}\nabla\Psi_\mathrm{n}[\textbf{x}(t)]v(t)  =  -\frac{q}{V_\mathrm{w}}\textbf{E}_\mathrm{n}[\textbf{x}(t)]v(t),
 \end{equation}
-where $\textbf{E}_\mathrm{n}(\textbf{x})$ is the electric field in the case where the charge q is removed, electrode $n$ is  set to voltage $V_\mathrm{w}=1$ and all other electrodes are grounded. $\textbf{E}_\mathrm{n}(\textbf{x})$ is also called the \emph{weighting field} of electrode $n$ and is defined as the spatial differential of the \emph{weighting potential}: $\textbf{E}_\mathrm{n}(\textbf{x})=\nabla \Psi_\mathrm{n}(\textbf{x})$. In the case of two parallel electrodes, the weighting field is $E_\mathrm{w} = -\frac{d\Psi}{\mathrm{d}x} = -1/d$, where $d$ is the distance between the electrodes. The resulting induced current is therefore
+where $\textbf{E}_\mathrm{n}(\textbf{x})$ is the \emph{weighting field} of electrode $n$ in the case where the charge q is removed, electrode $n$ is  set to voltage $V_\mathrm{w}=1$ and all other electrodes are grounded.  The weighting field is defined as the spatial differential of the \emph{weighting potential}: $\textbf{E}_\mathrm{n}(\textbf{x})=\nabla \Psi_\mathrm{n}(\textbf{x})$. In the case of two parallel electrodes, the weighting field is $E_\mathrm{w} = -\frac{\mathrm{d}\Psi}{\mathrm{d}x} = -1/d$, where $d$ is the distance between the electrodes. The resulting induced current is therefore
 \begin{equation}
 \label{eq:ramoparallel}
 i(t) = \frac{q}{d}v_\mathrm{drift}(x,t),
 \end{equation} 
-whereby $v_{\mathrm{drift}}$ is the drift velocity of the point-like charge and $d$ is the distance between the electrodes.
+whereby $v_{\mathrm{drift}}$ is the drift velocity of the point-like charge and $d$ is the distance between the electrodes. $d$ is defined by the dimensions of the sensor. The drift velocity is a function of the externally applied electric field, as defined in section~\ref{sec:carrtransp}. If the electric field is set to a constant value, the induced current is directly proportional to the drifting charge. Therefore, by measuring the height of the induced current at a specific point of time the number of moving charges can be deduced.
 
 
 %moving charge->changed i
@@ -173,14 +171,15 @@ whereby $v_{\mathrm{drift}}$ is the drift velocity of the point-like charge and 
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.8\linewidth]{02_pulse_formation/pics/plots/driftboth}
-\caption{Charge carrier drift in diamond for $\upbeta/\upgamma$ and for $\upalpha$ particles.}
+\caption{Charge carrier drift in diamond for $\upbeta/\upgamma$ and for $\upalpha$ particles crossing the sensor at $t=0$.}
 \label{fig:drift}
 \end{center}
 \end{figure}
 
-When a highly-energetic particle travels through the sensor, it interacts with atoms in the lattice. It ionises the valence electrons, creating electron-hole (e-h) pairs on its way. It can either deposit only a fraction of its energy and exit the sensor on the other side or it can get stopped in the bulk, depositing all of its energy. A special case is when it interacts with the core of the atom in the middle of the sensor via a nuclear interaction. All these various types interactions produce different amounts and different spatial distributions of e-h pairs. The induced electrical current therefore differs for different types of interaction. Two most frequent types are shown in figure~\ref{fig:drift}. The first diagram shows the interaction of a minimum ionising particle. The electrons and holes are created all along the trajectory of the particle and immediately start drifting towards the positive and negative electrode, respectively. At the beginning, all charges drift and contribute to the induced current. Those closest to the electrodes have a very short drift path, reducing the induced current. Gradually all the charge carriers reach the electrode. The resulting current signal is a triangular pulse with a sharp rising edge and a linear falling edge. The accumulated charge $Q_\mathrm{s}$ equals to the sum of the contributions of the positive and negative charge carriers. The second type of interaction happens when the particle is stopped in the diamond close to the point of entry. Most of its energy is deposited in a small volume close to the electrode. A cloud of charge carriers is created and the charges with the shorter path to the electrode disappear almost instantly. The carriers of the opposite charge, however, start drifting through the sensor to the other electrode. In an ideal diamond sensor, their velocity is constant throughout the drift up until they are collected at the opposite electrode. The contribution of the first charge cloud is a peak with a short time. The cloud drifting through the sensor, on the other hand, induces a current signal with a flat top. The resulting signal has a shape of a rectangle, with a spike in the beginning. This spike is filtered out in a real device because it is too fast for the electronics existing currently. The accumulated charge $Q_\mathrm{s}$ is equal to a half of the deposited charge by the stopped particle.
+When a highly-energetic particle travels through the sensor, it interacts with atoms in the lattice. It ionises the valence electrons, creating electron-hole (e-h) pairs on its way. It can either deposit only a fraction of its energy and exit the sensor on the other side or it can get stopped in the bulk, depositing all of its energy. A special case is when it interacts with the core of the atom in the middle of the sensor via a nuclear interaction. All these various types interactions produce different amounts and different spatial distributions of e-h pairs. The induced electrical current therefore differs for different types of interaction. Two most frequent types are shown in figure~\ref{fig:drift}. The first diagram shows the interaction of a minimum ionising particle. The electrons and holes are created all along the trajectory of the particle and immediately start drifting towards the positive and negative electrode, respectively. At the beginning, all charges drift and contribute to the induced current. Those closest to the electrodes have a very short drift path, reducing the induced current. Gradually all the charge carriers reach the electrode. The resulting current signal is a triangular pulse with a sharp rising edge and a linear falling edge. The accumulated charge $Q_\mathrm{s}$ equals to the sum of the contributions of the positive and negative charge carriers. The second type of interaction happens when the particle is stopped in the diamond close to the point of entry. Most of its energy is deposited in a small volume close to the electrode. A cloud of charge carriers is created and the charges with the shorter path to the electrode disappear almost instantly. The carriers of the opposite charge, however, start drifting through the sensor to the other electrode. In an ideal diamond sensor, their velocity is constant throughout the drift up until they are collected at the opposite electrode. The contribution of the first charge cloud is a peak with a short time. The cloud drifting through the sensor, on the other hand, induces a current signal with a flat top. The resulting signal has a shape of a rectangle, with a spike in the beginning. %This spike is filtered out by a current amplifier in a real device because it is too fast for the electronics existing currently. 
+The accumulated charge $Q_\mathrm{s}$ is equal to a half of the deposited charge by the stopped particle.
 
-The two aforementioned types of interactions have well defined signal responses. Nuclear interactions on the other hand yield various results. The resulting signal shape depends on the decay products of the interaction, which can be $\upalpha$, $\upbeta$ or $\upgamma$ quanta, inducing a mixed shaped signal. 
+The two aforementioned types of interactions have well defined signal responses. Nuclear interactions on the other hand yield various results. The resulting signal shape depends on the decay products of the interaction, which can be $\upalpha$, $\upbeta$ or $\upgamma$ quanta or other nuclei, inducing a mixed shaped signal. 
 %
 %Current profiles
 %Alpha
@@ -215,7 +214,7 @@ wherein $E_\mathrm{i}(Si)$=~3.6~eV and E$_\mathrm{i}(C)$=~13~eV. E.g., for an $\
 % ---------------------------------------------------------------------------------------------------------------
 This section describes the carrier transport phenomena in diamond. This theory provides the basis for discussion about the measurements in chapter~\ref{ch:meas}. 
 
-Free charge carriers in a semiconductor with no concentration gradient and without an externally applied electric field get thermally excited and scatter in random directions with a thermal velocity $v_{\mathrm{th}}$~\cite{}. Their integral movement due to thermal excitation equals zero. 
+When the charge carriers are freed in a semiconductor with no concentration gradient and without an externally applied electric field, they scatter in random directions with a thermal velocity $v_{\mathrm{th}}$~\cite{}. Their integral movement due to thermal excitation equals zero. 
 
 \begin{description}
 
@@ -249,7 +248,7 @@ The Poisson equation shows that
 \label{eq:poisson}
 \frac{d^2\Phi(x)}{\mathrm{d}x^2} = \frac{dE(x)}{\mathrm{d}x} = \frac{\rho(x)}{\epsilon}
 \end{equation}
-where $\rho(x)$ is the space charge distribution, $E$ is the electrical field and $\Phi$ is the voltage potential. In an ideal diamond, the externally applied high voltage potential on the two electrodes decreases linearly through the bulk. The electrical field is therefore constant throughout the sensor and the space charge distribution across it equals 0. However, space charge may be introduced in the bulk either by means of accumulating of charge carriers in the lattice (i.e. charge trapping) or already during sensor production. The space charge can be either permanent or changing -- sometimes it is possible to reduce it, as is shown in chapter~\ref{ch:meas}. All in all, it is very important to reduce it because it affects the shape of the electrical signal. Since the drift velocity of the charge carriers is proportional to the electrical field, the charges change their velocity while drifting through the space charge region. Figure~\ref{fig:spcchg} compares the voltage potential, electrical field, space charge for an ideal sensor and for that with a uniformly distributed positive space charge.
+where $\rho(x)$ is the space charge distribution, $E$ is the electrical field and $\Phi$ is the voltage potential. In an ideal diamond, the externally applied high voltage potential on the two electrodes decreases linearly through the bulk. The electrical field is therefore constant throughout the sensor and the space charge distribution across it equals 0. However, space charge may be introduced in the bulk either by means of accumulating of charge carriers in the lattice (i.e. charge trapping) or already during sensor production. The space charge can be either permanent or changing -- sometimes it is possible to reduce it, as is shown in chapter~\ref{ch:meas}. All in all, it is very important to reduce it because it affects the shape of the electrical signal. Since the drift velocity of the charge carriers is proportional to the electrical field, the charges change their velocity while drifting through the space charge region. Figure~\ref{fig:spcchg} compares the voltage potential, the electrical field and the space charge for an ideal sensor as well as for that with a uniformly distributed positive space charge.
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.6\linewidth]{02_pulse_formation/pics/plots/spcchg}
@@ -267,9 +266,9 @@ The bonds in the diamond lattice are very strong. However, when highly energetic
 \item[d)]vacancy and
 \item[e)]self interstitial.
 \end{enumerate} 
-These non-uniformities form new energy levels in the forbidden gap -- the separation between the conductive and valence band in which the electrons. These intermediate levels are referred to as charge traps. The drifting charge carriers are stopped in these traps. The energy level of the trapped carriers is reduced from the conduction band to the energy level of the trap. Different types of lattice damage have different energy levels. The carriers trapped in an energy level close to the conduction band have a high probability of being thermally excited back into the conduction band whereby they continue drifting towards the electrode. Their activation energy is therefore low. Those trapped in a deep trap close to the middle of the forbidden gap need a much higher activation energy, which in turn increases the average time to their release. 
+These non-uniformities form new energy levels in the forbidden gap -- the separation between the conductive and valence band in which the electrons. These intermediate levels are referred to as charge traps because they can trap moving charge carriers. The energy level of the trapped carriers is reduced from the conduction band to the energy level of the trap. Different types of lattice damage have different energy levels. The carriers trapped in an energy level close to the conduction band have a high probability of being thermally excited back into the conduction band whereby they continue drifting towards the electrode. Their activation energy is therefore low. Those trapped in a deep trap close to the middle of the forbidden gap need a much higher activation energy, which in turn increases the average time to their release due to thermal excitation.
 
-The trapped carriers do not contribute to the overall induced current on the electrodes. The more charges are trapped along their drift path, the lower the induced current.
+The trapped carriers do not contribute to the overall induced current on the electrodes. The more charges are trapped along their drift path, the lower current is induced on the electrodes.
 
 \begin{figure}[!t]
 \begin{center}
@@ -301,7 +300,7 @@ The trapped carriers do not contribute to the overall induced current on the ele
 This section describes the electronics of a detector, starting with a description of signal amplifiers and then discussing the digitisation and signal processing. All these stages are necessary to extract information from the sensor. First, the signal has to be amplified. Then it is digitised and finally processed in a specially designed processor or a logic unit.
 
 \subsection{Signal preamplifiers}
-The signal charge generated in the sensor by a single energetic particle is of the order of fC. The induced current range is typically between $10^{-8}$~A ($\upbeta, \upgamma$ radiation) and $3\times10^{-7}$~A ($\upalpha$ radiation). Signals as low as these have to be pre-amplified before processing. Depending on the measurement, several types of signal amplifiers can be used. The preamplifiers are designed to minimise electronic noise while maximising gain, thus maximising the signal-to-noise ratio (SNR). In addition, a high bandwidth limit is preferred to minimise the information loss due to signal shape deformation. A critical parameter is the total capacitance, i.e. the sensor capacitance together with the input capacitance of the preamplifier. The SNR improves with a lower capacitance. Several types of amplifiers can be used, all of which affect the measured pulse shape. They behave differently for resistive or capacitive sources. This thesis focuses on semiconductors as capacitive sources. Two preamplifiers are used most commonly, a current and a charge amplifier. Both are described in detail below. 
+The signal charge generated in the sensor by a single energetic particle is of the order of fC. The induced current range is typically between $10^{-8}$~A ($\upbeta, \upgamma$ radiation) and $3\times10^{-7}$~A ($\upalpha$ radiation). Signals as low as these have to be pre-amplified before processing. Depending on the measurement, several types of signal amplifiers can be used. The preamplifiers are designed to minimise electronic noise while maximising gain, thus maximising the signal-to-noise ratio (SNR). In addition, a high bandwidth limit is preferred to minimise the information loss due to signal shape deformation. A critical parameter is the total capacitance, i.e. the sensor capacitance together with the input capacitance of the preamplifier. The SNR improves with a lower capacitance. Several types of amplifiers can be used, all of which affect the measured pulse shape. Two preamplifiers are used most commonly, a current and a charge sensitive amplifier. Both are described in detail below. 
 
 \begin{figure}[!t]
 %\centering
@@ -347,7 +346,7 @@ In reality, however, charge-sensitive amplifiers respond much slower than is the
 
 \subsubsection{Analogue electronic noise}
 %(2 pg)
-Electronic noise determines the ability of a system to distinguish signal levels. The analogue signal contains a lot of information, which can quickly be erased or altered if the signal properties change. It is therefore instrumental to understand the noise contributions to the signal to qualify the information it carries. There are several noise contributions, of which the important ones are listed below. The thermal noise is the dominant noise contribution in the use case for diamond detector signal amplification and therefore defines the limitations of the detector system. Thermal noise or Johnson--Nyquist~\cite{} noise is generated by the random thermal motion of charge carriers in the conductor. The frequency range of the thermal noise is from 0 to $\infty$ with a more or less uniform distribution. Therefore this is nearly a white noise. The resulting signal amplitude has a Gaussian distribution. The RMS of the noise amplitude is defined as
+The electronic noise determines the ability of a system to distinguish differentsignal levels. The analogue signal contains ample information about the type and energy of incident radiation, which can quickly be erased or altered if the signal properties change. Therefore the noise contributions to the signal must be well understood to qualify the information the signal is carrying. The important contributions are listed below. Thermal or Johnson--Nyquist~\cite{} noise is the dominant noise contribution in the use case for diamond detector signal amplification and therefore defines the limitations of the detector system. This noise type is generated by the random thermal motion of charge carriers. The frequency range of the thermal noise is from 0 to $\infty$ with a predominantly uniform distribution. Therefore this is nearly a white noise. The resulting signal amplitude has a Gaussian distribution. The RMS of the noise amplitude is defined as
 \begin{equation}
 \label{eq:thermnoise}
 u_\mathrm{RMS}=\sqrt{4k_BRT\Delta f}
@@ -372,10 +371,27 @@ With a sampling period of $t_\mathrm{s}=$1~ns the sampling rate is $f_\mathrm{s}
 \end{figure}
 
 \begin{description}
-\item[Quantisation error and quantisation noise] (or a round-off error) is a contribution to the overall measurement error due to digitisation (rounding). It is defined as a difference between the actual analog value and the closest digitised representation of this value. The error is defined by the least significant bit (LSB), as seen in figure~\ref{fig:qerr}. Typically, the input signal amplitude is much larger than than the voltage resolution. Therefore the quantisation error is not directly correlated with the signal and has an approximately uniform distribution~\cite{}: 
+\item[Quantisation error and quantisation noise] (or a round-off error) is a contribution to the overall measurement error due to digitisation (rounding). The quantisation error is defined as a difference between the actual analog value and the closest digitised representation of this value, therefore by the least significant bit (LSB), as seen in figure~\ref{fig:qerr}. The input signal amplitude is typically much larger than than the voltage resolution. In this case the quantisation error is not directly correlated with the signal and has an approximately uniform distribution~\cite{}. The probability density function $P(x)$ therefore has a rectangular shape bounded by ($-\frac{1}{2}$LSB, $\frac{1}{2}$LSB): 
+  \begin{numcases}{P(x)=}
+  \frac{1}{\mathrm{LSB}}, & $-\frac{1}{2}\mathrm{LSB}<= x <=-\frac{1}{2} \mathrm{LSB}$  \\
+  0, & otherwise.
+  \end{numcases}
+The height equal to $\frac{1}{\mathrm{LSB}}$ preserves the integrated probability of 1. The variance of the distribution is
+\begin{equation}
+\label{eq:intprob}
+\sigma^2 = \int P(x) (x-\mu)^2 \mathrm{d}x.
+\end{equation} 
+The population mean is $\mu=0$, therefore
+\begin{equation}
+\label{eq:intprob2}
+\sigma^2 = \int_{-\frac{1}{2}\mathrm{LSB}}^{\frac{1}{2}\mathrm{LSB}} \frac{1}{\mathrm{LSB}} x^2 \mathrm{d}x 
+= \frac{x^3}{3\mathrm{LSB}} \Bigg|_{ -\frac{1}{2}\mathrm{LSB} }^{\frac{1}{2}\mathrm{LSB} }
+= \frac{\mathrm{LSB}^2}{12}.
+\end{equation} 
+The RMS of the quantisation noise is defined as the square root of the variance: 
 \begin{equation}
 \label{eq:qerr}
-\Delta Q_\mathrm{ADC}=\frac{1}{\sqrt{12}}\mathrm{LSB}\sim0.289~\mathrm{LSB}.
+\Delta Q_\mathrm{ADC}=\sqrt{\sigma^2} =  \frac{1}{\sqrt{12}}\mathrm{LSB}\sim0.289~\mathrm{LSB}.
 \end{equation} 
 For the example above the quantisation error equals $\Delta Q_\mathrm{ADC}=0.289\cdot 0.39$~mV~$=0.11$~mV. The error depends strongly on the linearity of the ADC, but this is out of scope of this document as the devices used have ADCs with a very good linearity.
 \end{description}
@@ -395,7 +411,7 @@ To update the chip, the design has to be submitted to a foundry, which produces 
 %\centering
 \begin{tabular}{cccc}
 \subfloat{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/fpga} \label{fig:fpga}} & 
-\subfloat{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/asic}  \label{fig:asic}}
+\subfloat{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/asic2}  \label{fig:asic}}
 \end{tabular}
-\caption{An example of a Xilinx Virtex 5 FPGA~\cite{FPGA:00000} and an FE-I4 ASIC chip~\cite{ASIC:00000}.}
+\caption{An example of a Xilinx Virtex 5 FPGA~\cite{FPGA:00000} and an FE-I4 and FE-I3 ASIC chip~\cite{ASIC:00000}.}
 \end{figure}

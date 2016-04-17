@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  6 APR 2016 23:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  15 APR 2016 11:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -99,6 +99,9 @@ Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
 \symugrf@m=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/cases/cases.sty
+Package: cases 2002/05/02 ver 2.5 
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
@@ -242,24 +245,24 @@ LaTeX Warning: Label `eq:vsat' multiply defined.
 ))
 \openout1 = `02_makechapter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 34.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    ... okay on input line 34.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -330,11 +333,11 @@ Package caption Info: End \AtBeginDocument code.
 
 (./02_pulse_formation/chapter.tex
 Chapter 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 16.
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 16.
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -344,16 +347,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Citation `' on page 2 undefined on input line 34.
+LaTeX Warning: Citation `' on page 2 undefined on input line 33.
 
 
-LaTeX Warning: Citation `Jansen:1956431' on page 2 undefined on input line 34.
+LaTeX Warning: Citation `Jansen:1956431' on page 2 undefined on input line 33.
 
 
-LaTeX Warning: Citation `' on page 2 undefined on input line 34.
+LaTeX Warning: Citation `' on page 2 undefined on input line 33.
 
 
-LaTeX Warning: Citation `Jansen:1956431' on page 2 undefined on input line 34.
+LaTeX Warning: Citation `Jansen:1956431' on page 2 undefined on input line 33.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -362,74 +365,65 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-<02_pulse_formation/pics/plots/semilattice9.pdf, id=22, 259.46938pt x 252.945pt
+<02_pulse_formation/pics/plots/semilattice9.pdf, id=21, 259.46938pt x 252.945pt
 >
 File: 02_pulse_formation/pics/plots/semilattice9.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/semilattice9.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/semilattice9.pdf used on
- input line 74.
+ input line 75.
 (pdftex.def)             Requested size: 95.39693pt x 92.99765pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 []\OT1/cmr/m/n/10 (a) |Va-lence bonds
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 \OT1/cmr/m/n/10 in the crys-talline
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 \OT1/cmr/m/n/10 struc-ture can be
  []
 
 
-<02_pulse_formation/pics/plots/simpledrift.pdf, id=23, 128.98187pt x 73.77562pt
+<02_pulse_formation/pics/plots/simpledrift.pdf, id=22, 128.98187pt x 73.77562pt
 >
 File: 02_pulse_formation/pics/plots/simpledrift.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/simpledrift.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/simpledrift.pdf used on 
-input line 75.
+input line 76.
 (pdftex.def)             Requested size: 138.76157pt x 79.37701pt.
 
-<02_pulse_formation/pics/plots/simpledrifteq.pdf, id=24, 124.465pt x 66.2475pt>
+<02_pulse_formation/pics/plots/simpledrifteq.pdf, id=23, 124.465pt x 66.2475pt>
 File: 02_pulse_formation/pics/plots/simpledrifteq.pdf Graphic file (type pdf)
 <use 02_pulse_formation/pics/plots/simpledrifteq.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/simpledrifteq.pdf used o
-n input line 76.
+n input line 77.
 (pdftex.def)             Requested size: 147.4292pt x 78.47765pt.
 
-Underfull \hbox (badness 1789) in paragraph at lines 76--76
+Underfull \hbox (badness 1789) in paragraph at lines 77--77
 []\OT1/cmr/m/n/10 (c) |Equiv-a-lent elec-tri-cal cir-cuit.
  []
 
-
-Overfull \hbox (13.31726pt too wide) in paragraph at lines 86--87
-[]\OT1/cmr/m/n/12 The mean en-ergy loss of a par-ti-cle travers-
- []
-
-<02_pulse_formation/pics/bb2.jpg, id=25, 840.13875pt x 526.96875pt>
+<02_pulse_formation/pics/bb2.jpg, id=24, 840.13875pt x 526.96875pt>
 File: 02_pulse_formation/pics/bb2.jpg Graphic file (type jpg)
 
 <use 02_pulse_formation/pics/bb2.jpg>
 Package pdftex.def Info: 02_pulse_formation/pics/bb2.jpg used on input line 97.
 
 (pdftex.def)             Requested size: 368.57964pt x 231.18349pt.
-
-
-LaTeX Warning: Citation `PDDC:00000' on page 3 undefined on input line 106.
-
-[3 <./02_pulse_formation/pics/plots/semilattice9.pdf> <./02_pulse_formation/pic
-s/plots/simpledrift.pdf> <./02_pulse_formation/pics/plots/simpledrifteq.pdf>]
+ [3 <./02_pulse_formation/pics/plots/semilattice9.pdf> <./02_pulse_formation/pi
+cs/plots/simpledrift.pdf> <./02_pulse_formation/pics/plots/simpledrifteq.pdf>]
 <02_pulse_formation/pics/plots/chargeind1.pdf, id=91, 115.93312pt x 94.85437pt>
 File: 02_pulse_formation/pics/plots/chargeind1.pdf Graphic file (type pdf)
 <use 02_pulse_formation/pics/plots/chargeind1.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chargeind1.pdf used on i
-nput line 113.
+nput line 112.
 (pdftex.def)             Requested size: 130.08731pt x 106.44456pt.
 
-Underfull \hbox (badness 1478) in paragraph at lines 113--113
+Underfull \hbox (badness 1478) in paragraph at lines 112--112
 \OT1/cmr/m/n/10 cou-ples with the con-duc-tive
  []
 
@@ -438,76 +432,69 @@ Underfull \hbox (badness 1478) in paragraph at lines 113--113
 File: 02_pulse_formation/pics/plots/chargeind2.pdf Graphic file (type pdf)
 <use 02_pulse_formation/pics/plots/chargeind2.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chargeind2.pdf used on i
-nput line 114.
+nput line 113.
 (pdftex.def)             Requested size: 130.08731pt x 97.98238pt.
 
 <02_pulse_formation/pics/plots/chargeind3.pdf, id=93, 117.43875pt x 81.30376pt>
 File: 02_pulse_formation/pics/plots/chargeind3.pdf Graphic file (type pdf)
 <use 02_pulse_formation/pics/plots/chargeind3.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chargeind3.pdf used on i
-nput line 115.
+nput line 114.
 (pdftex.def)             Requested size: 130.08731pt x 90.06088pt.
 
-Overfull \hbox (4.39182pt too wide) in paragraph at lines 112--117
+Overfull \hbox (4.39182pt too wide) in paragraph at lines 111--116
 [][] 
  []
 
-[4 <./02_pulse_formation/pics/bb2.jpg>]
-
-LaTeX Warning: Citation `SHOCKLEY:00000' on page 5 undefined on input line 141.
-
-
-
-LaTeX Warning: Citation `RAMO:00000' on page 5 undefined on input line 141.
-
-
-<02_pulse_formation/pics/plots/driftboth.pdf, id=98, 189.20688pt x 139.52126pt>
+[4 <./02_pulse_formation/pics/bb2.jpg>] [5 <./02_pulse_formation/pics/plots/cha
+rgeind1.pdf> <./02_pulse_formation/pics/plots/chargeind2.pdf> <./02_pulse_forma
+tion/pics/plots/chargeind3.pdf>]
+<02_pulse_formation/pics/plots/driftboth.pdf, id=163, 189.20688pt x 139.52126pt
+>
 File: 02_pulse_formation/pics/plots/driftboth.pdf Graphic file (type pdf)
-<use 02_pulse_formation/pics/plots/driftboth.pdf>
+ <use 02_pulse_formation/pics/plots/driftboth.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/driftboth.pdf used on in
 put line 173.
 (pdftex.def)             Requested size: 346.89731pt x 255.82593pt.
- [5 <./02_pulse_formation/pics/plots/chargeind1.pdf> <./02_pulse_formation/pics
-/plots/chargeind2.pdf> <./02_pulse_formation/pics/plots/chargeind3.pdf>] [6 <./
-02_pulse_formation/pics/plots/driftboth.pdf>]
+ [6 <./02_pulse_formation/pics/plots/driftboth.pdf>]
 <../scripts/02_pulse_formation/plots/resolution.pdf, id=193, 569.12625pt x 364.
 36125pt>
 File: ../scripts/02_pulse_formation/plots/resolution.pdf Graphic file (type pdf
 )
  <use ../scripts/02_pulse_formation/plots/resolution.pdf>
 Package pdftex.def Info: ../scripts/02_pulse_formation/plots/resolution.pdf use
-d on input line 200.
+d on input line 201.
 (pdftex.def)             Requested size: 346.89731pt x 222.0988pt.
 
 
-LaTeX Warning: Reference `ch:meas' on page 7 undefined on input line 213.
+LaTeX Warning: Reference `ch:meas' on page 7 undefined on input line 215.
 
 [7]
-Overfull \hbox (12.27548pt too wide) in paragraph at lines 227--228
+Overfull \hbox (12.27548pt too wide) in paragraph at lines 229--230
 []\OT1/cmr/m/n/12 The charge car-ri-ers drift through
  []
-
-
-LaTeX Warning: Reference `ch:meas' on page 8 undefined on input line 241.
 
 [8 <../scripts/02_pulse_formation/plots/resolution.pdf, page is rotated 90 degr
 ees>]
 
-LaTeX Warning: Reference `ch:meas' on page 9 undefined on input line 249.
+LaTeX Warning: Reference `ch:meas' on page 9 undefined on input line 243.
+
+
+LaTeX Warning: Reference `ch:meas' on page 9 undefined on input line 251.
 
 <02_pulse_formation/pics/plots/spcchg.pdf, id=244, 188.20313pt x 96.36pt>
 File: 02_pulse_formation/pics/plots/spcchg.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/spcchg.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/spcchg.pdf used on input
- line 252.
+ line 254.
 (pdftex.def)             Requested size: 260.17464pt x 133.21951pt.
  [9 <./02_pulse_formation/pics/plots/spcchg.pdf>]
 <02_pulse_formation/pics/plots/raddamage.pdf, id=272, 395.4775pt x 187.70125pt>
 File: 02_pulse_formation/pics/plots/raddamage.pdf Graphic file (type pdf)
 <use 02_pulse_formation/pics/plots/raddamage.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/raddamage.pdf used on in
-put line 273.
+put line 275.
 (pdftex.def)             Requested size: 346.89731pt x 164.64488pt.
  [10 <./02_pulse_formation/pics/plots/raddamage.pdf>]
 <02_pulse_formation/pics/plots/curramp.pdf, id=292, 198.24063pt x 70.2625pt>
@@ -515,7 +502,7 @@ File: 02_pulse_formation/pics/plots/curramp.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/curramp.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/curramp.pdf used on inpu
-t line 306.
+t line 308.
 (pdftex.def)             Requested size: 216.81pt x 76.84618pt.
 
 <02_pulse_formation/pics/plots/chgamp.pdf, id=293, 157.08687pt x 108.90688pt>
@@ -523,7 +510,7 @@ File: 02_pulse_formation/pics/plots/chgamp.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/chgamp.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chgamp.pdf used on input
- line 307.
+ line 309.
 (pdftex.def)             Requested size: 173.44534pt x 120.25323pt.
 
 <02_pulse_formation/pics/plots/currrc.pdf, id=294, 156.08313pt x 63.23625pt>
@@ -531,7 +518,7 @@ File: 02_pulse_formation/pics/plots/currrc.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/currrc.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/currrc.pdf used on input
- line 321.
+ line 323.
 (pdftex.def)             Requested size: 346.89731pt x 140.56172pt.
  [11 <./02_pulse_formation/pics/plots/curramp.pdf> <./02_pulse_formation/pics/p
 lots/chgamp.pdf>]
@@ -540,59 +527,48 @@ File: 02_pulse_formation/pics/plots/chgrc.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/chgrc.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chgrc.pdf used on input 
-line 339.
+line 341.
 (pdftex.def)             Requested size: 303.53267pt x 121.03978pt.
- [12 <./02_pulse_formation/pics/plots/currrc.pdf> <./02_pulse_formation/pics/pl
-ots/chgrc.pdf>]
-<02_pulse_formation/pics/plots/qerr.pdf, id=373, 138.5175pt x 100.87688pt>
+ [12 <./02_pulse_formation/pics/plots/currrc.pdf>]
+<02_pulse_formation/pics/plots/qerr.pdf, id=351, 138.5175pt x 100.87688pt>
 File: 02_pulse_formation/pics/plots/qerr.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/qerr.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/qerr.pdf used on input l
-ine 365.
+ine 367.
 (pdftex.def)             Requested size: 303.53267pt x 221.07704pt.
- [13] [14 <./02_pulse_formation/pics/plots/qerr.pdf>]
-Overfull \hbox (0.74881pt too wide) in paragraph at lines 386--388
+ [13 <./02_pulse_formation/pics/plots/chgrc.pdf>] [14 <./02_pulse_formation/pic
+s/plots/qerr.pdf>]
+Overfull \hbox (0.74881pt too wide) in paragraph at lines 405--406
 []\OT1/cmr/m/n/12 (ASIC) is an in-te-grated cir-cuit de-signed
  []
 
-<02_pulse_formation/pics/fpga.jpg, id=403, 168.1482pt x 134.904pt>
+[15] <02_pulse_formation/pics/fpga.jpg, id=407, 168.1482pt x 134.904pt>
 File: 02_pulse_formation/pics/fpga.jpg Graphic file (type jpg)
 
 <use 02_pulse_formation/pics/fpga.jpg>
-Package pdftex.def Info: 02_pulse_formation/pics/fpga.jpg used on input line 39
+Package pdftex.def Info: 02_pulse_formation/pics/fpga.jpg used on input line 41
 3.
 (pdftex.def)             Requested size: 203.80193pt x 163.5143pt.
 
+<02_pulse_formation/pics/asic2.png, id=408, 1782.66pt x 1098.1025pt>
+File: 02_pulse_formation/pics/asic2.png Graphic file (type png)
 
-LaTeX Warning: Citation `FPGA:00000' on page 15 undefined on input line 393.
+<use 02_pulse_formation/pics/asic2.png>
+Package pdftex.def Info: 02_pulse_formation/pics/asic2.png used on input line 4
+14.
+(pdftex.def)             Requested size: 203.80193pt x 125.5335pt.
 
-
-LaTeX Warning: Citation `FPGA:00000' on page 15 undefined on input line 393.
-
-<02_pulse_formation/pics/asic.png, id=404, 421.575pt x 322.20375pt>
-File: 02_pulse_formation/pics/asic.png Graphic file (type png)
-
-<use 02_pulse_formation/pics/asic.png>
-Package pdftex.def Info: 02_pulse_formation/pics/asic.png used on input line 39
-4.
-(pdftex.def)             Requested size: 203.80193pt x 155.76224pt.
-
-
-LaTeX Warning: Citation `ASIC:00000' on page 15 undefined on input line 394.
-
-
-LaTeX Warning: Citation `ASIC:00000' on page 15 undefined on input line 394.
-
-
-Overfull \hbox (5.81711pt too wide) in paragraph at lines 392--396
+Overfull \hbox (5.81711pt too wide) in paragraph at lines 412--416
 [][] 
  []
 
-) [15 <./02_pulse_formation/pics/fpga.jpg> <./02_pulse_formation/pics/asic.png>
-]
-No file 02_makechapter.bbl.
-(./02_makechapter.aux (./02_pulse_formation/chapter.aux))
+) [16 <./02_pulse_formation/pics/fpga.jpg> <./02_pulse_formation/pics/asic2.png
+>] (./02_makechapter.bbl) [17
+
+
+] (./02_makechapter.aux
+(./02_pulse_formation/chapter.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -601,34 +577,33 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4449 strings out of 493089
- 70896 string characters out of 6134843
- 130628 words of memory out of 5000000
- 7788 multiletter control sequences out of 15000+600000
- 15450 words of font info for 58 fonts, out of 8000000 for 9000
+ 4477 strings out of 493089
+ 71406 string characters out of 6134843
+ 127047 words of memory out of 5000000
+ 7812 multiletter control sequences out of 15000+600000
+ 15142 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,16n,53p,2492b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,49p,2394b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on 02_makechapter.pdf (15 pages, 1218894 bytes).
+}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on 02_makechapter.pdf (17 pages, 4706006 bytes).
 PDF statistics:
  474 PDF objects out of 1000 (max. 8388607)
  334 compressed objects within 4 object streams

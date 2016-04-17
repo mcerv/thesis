@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+
+\bibitem{FPGA:00000}
+\emph{Xilinx Virtex 5 FPGA}.
+\newblock http://www.hdl.co.jp/XCM-109/top.560.jpg.
+
+\bibitem{PDDC:00000}
+W.~Blum, W.~Riegler, and L.~Rolandi.
+\newblock {\em \emph{Particle Detection with Drift Chambers}}, volume~2 of {\em
+  2}.
+\newblock Springer-Verlag, Berlin Heidelberg, 2008.
+
+\bibitem{ASIC:00000}
+M.~Garcia-Sciveres.
+\newblock {ATLAS Experiment Pixel Detector Upgrades}.
+\newblock 2011.
+
+\bibitem{JANSEN:00001}
+Hendrik Jansen, Daniel Dobos, Thomas Eisel, Heinz Pernegger, Vladimir Eremin,
+  and Norbert Wermes.
+\newblock Temperature dependence of charge carrier mobility in single-crystal
+  chemical vapour deposition diamond.
+\newblock {\em Journal of Applied Physics}, 113(17), 2013.
+
+\bibitem{RAMO:00000}
+S.~Ramo.
+\newblock \emph{Currents Induced by Electron Motion}.
+\newblock {\em Proceedings of the IRE}, 27:584--585, 1939.
+
+\bibitem{SHOCKLEY:00000}
+W.~Shockley.
+\newblock \emph{Currents to Conductors Induced by a Moving Point Charge}.
+\newblock {\em Journal of applied Physics}, 9:635, 1938.
+
+\end{thebibliography}
