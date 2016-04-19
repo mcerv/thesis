@@ -1,0 +1,22 @@
+\contentsline {chapter}{\numberline {1}Diamond detectors for radiation detection}{2}
+\contentsline {section}{\numberline {1.1}Semiconductor detectors}{3}
+\contentsline {section}{\numberline {1.2}Principles of signal formation in semiconductors}{4}
+\contentsline {subsection}{\numberline {1.2.1}Signal induction by moving charges}{6}
+\contentsline {subsection}{\numberline {1.2.2}Shockley-Ramo theorem}{7}
+\contentsline {subsection}{\numberline {1.2.3}Thermal excitation and p-n junctions}{8}
+\contentsline {subsection}{\numberline {1.2.4}Space charge}{8}
+\contentsline {section}{\numberline {1.3}Carrier transport in a diamond sensor}{9}
+\contentsline {section}{\numberline {1.4}Radiation-induced current signals}{10}
+\contentsline {subsection}{\numberline {1.4.1}Mean energy loss}{12}
+\contentsline {subsection}{\numberline {1.4.2}Signal fluctuation}{12}
+\contentsline {subsection}{\numberline {1.4.3}Charge trapping}{13}
+\contentsline {subsection}{\numberline {1.4.4}Charge collection efficiency and distance}{14}
+\contentsline {section}{\numberline {1.5}Radiation damage}{15}
+\contentsline {section}{\numberline {1.6}Temperature effects}{16}
+\contentsline {section}{\numberline {1.7}Electronics for signal processing}{16}
+\contentsline {subsection}{\numberline {1.7.1}Signal preamplifiers}{16}
+\contentsline {subsubsection}{Current-sensitive amplifier}{17}
+\contentsline {subsubsection}{Charge-sensitive amplifier}{17}
+\contentsline {subsubsection}{Analogue electronic noise}{18}
+\contentsline {subsection}{\numberline {1.7.2}Analogue-to-digital converters}{19}
+\contentsline {subsection}{\numberline {1.7.3}Digital signal processing}{20}

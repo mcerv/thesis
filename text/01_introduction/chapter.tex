@@ -145,37 +145,5 @@ Particle detectors can be divided in two groups: tracking detectors and calorime
 
 %\subsection{Semiconductor sensors}
 
-\subsection{Semiconductor detectors}
-Semiconductor is a class of solids whose electrical conductivity is between that of a conductor and that of an insulator. Semiconductor particle detectors are devices that use a semiconductor to detect radiation. They work on the principle of an ionisation chamber. An incident particle ionises the atoms in the crystal lattice. The charges are freed if the deposited energy is higher than the energy band gap (i.e. the energy needed to excite an electron from its steady state to the conductance band). The freed charge carriers start drifting in an externally applied electric field, inducing current on the electrodes. 
 
-A number of semiconductor materials exist, each with a different band gap. Germanium (Ge) for instance has a band gap of 0.67~eV, which means that most of the electrons at the room temperature are already in an excited state due to thermal excitation. The thermally excited electrons moving through the material are referred to as leakage current. This current is also present in silicon with an energy gap of 1.12~eV. To reduce this effect the semiconductor sensors are doped with donors and acceptors, forming a diode, The diode is then inversely biased to deplete the material of all moving charges. Doped silicon fulfils most of the needs for particle physics requirements and is therefore the most widely used material for particle detection.
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=0.9\textwidth]{01_introduction/pics/ibl}
-\caption{The Insertable B-Layer -- a silicon particle tracker installed in the ATLAS experiment in 2014 \cite{MarcelloniDeOliveira:1702006}.}
-\label{fig:ibl}
-\end{figure}
-
-Semiconductor detectors are most widely used for tracking applications, like the Insertable B-Layer shown in figure~\ref{fig:ibl}~\cite{Pernegger:1985432}, which was installed in ATLAS Experiment in 2014. First, they can be produced in thin layers to minimise the impact on the path of the incident particles. Second, their low sensor capacitance allows for a fast signal response. Third, they are highly efficient and highly resistant to radiation damage. Finally, the industrial processes allow for a fine spatial segmentation, which in turn improves the track resolution of a detector system. 
-
-Semiconductor sensors come in several configurations. The simplest type is a pad -- a single plate with two electrodes. Pads are used for particle counting and radiation monitoring. Next is a strip detector, a more finely segmented detector made out of long parallel sensing areas or strips. Normally each strip has its own signal line for readout. Usually the strip detectors are used in pairs -- one detector is placed on top of the other at an angle to increase spatial resolution in both axes. The third and the most finely segmented is a pixel detector, consisting of a 2D array of independent sensing areas. In tracking applications, pixel detectors are used where the need for a high detection resolution and granularity requirement is the highest. Due to their high production cost and a high number of signal channels, they can only cover limited areas. Strip detectors can be used to cover larger areas in several consecutive layers.
-
-\subsection{Diamond sensors}
-Diamond has been known for over two millennia, valued for its mechanical properties and its appearance. When the procedures for its synthesis were discovered, diamond made its way to a broad range of industries which exploit its optical and electrical properties. The discovery of the Chemical Vapour Deposition (CVD, described below) as a new synthesis process gave rise to a range of new applications. Purer specimens are used in electronics, high-power switching devices, electrochemical systems, radiation sensors, quantum computing etc. Recently it was found that it also exhibits superconductivity~\cite{}. This thesis focuses on the use of diamond for radiation detection.
-\begin{figure}[!t]
-\centering
-\includegraphics[width=0.9\textwidth]{01_introduction/pics/cividecpcvd}
-\caption{A pCVD diamond pad detector \cite{Cividec:00000}.}
-\label{fig:cividecpcvd}
-\end{figure}
-
-Compared to a natural diamond, a CVD diamond used as a particle detector has almost no impurities (foreign atoms like nitrogen or boron). If proper procedures are followed, the diamond lattice can be grown very uniformly. This in turn improves electrical properties of the grown sample. Diamond is an almost perfect thermal and electrical insulator. However, its electrical behaviour is similar to that of a semiconductor. Its high 5.5~eV energy band gap prevents the electrons to be thermally excited to the conduction band. This eliminates the need to dope the diamond to suppress the leakage current. In addition, the gap is too wide for the visible light to excite the electrons. All diamond properties are described in detail in chapter~\ref{ch:diamond}. Figure~\ref{fig:cividecpcvd} shows a diamond pad sensor embedded in a particle detector produced by CIVIDEC Instrumentation GmbH.
-%Its energy band gap is three times as large, reducing the noise and  
-
-\begin{description}
-\item[Chemical vapour deposition] (CVD)~\cite{} is a process where a material is deposited from a gas onto a substrate, involving chemical reactions. It is often carried out under high pressure and high temperatures. It takes place in enclosed chambers called furnaces with careful regulation of the temperature, pressure and gas mixture. Synthetic diamond is grown at 700--900 \textdegree C with a mixture of hydrogen and methane gas. At this temperature the molecules dissociate into carbon and hydrogen atoms. The carbon atoms are the building blocks and are deposited on the surface of the substrate.
-
-Under a carefully controlled pressure and temperature conditions with an added abrasive atomic hydrogen the graphitic bonds break and form into diamond bonds. The speed of the growth can be anywhere between 0.1 and 10~$\upmu$m per hour. The detector grade samples are grown at a rate of the order of 1~$\upmu$m per hour. They can grow up to several millimetres in thickness. The width of the samples, however, depends entirely on the substrate used. Diamond can be deposited on various materials: diamond, silicon, tungsten, quartz glass etc. The substrate material must be able to withstand the high temperatures during the CVD process. The diamond substrate does not need any surface pre-treatment. Carbon atoms form bonds with atoms in the existing crystal structure. This is the homo-epitaxial growth where the newly deposited atoms retain the orientation of the structure in the substrate. Other non-diamond substrates, however, need to be pre-treated, usually by being polished using diamond powder. Some powder particles remain on the surface, acting as seeds for the growth of small crystals or grains. These grains grow and at some point merge with the adjacent ones, making up a compact material. The lower side is later polished away. These diamonds are called \emph{polycrystalline} (pCVD) whereas those grown on a diamond substrate are \emph{single crystal} (sCVD) diamonds. The area of the former can be large - up to 0.5~m$^2$ or more compact 15~cm$^2$ in the case of detector grade diamonds. The sCVD diamonds, on the other hand, can currently only measure up to 1.5~cm$^2$.
-\end{description}
 

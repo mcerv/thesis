@@ -1,8 +1,6 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}
 \contentsline {section}{\numberline {1.1}Fundamental research}{3}
 \contentsline {section}{\numberline {1.2}Research institutes}{4}
-\contentsline {section}{\numberline {1.3}The Large Hadron Collider}{6}
+\contentsline {section}{\numberline {1.3}The Large Hadron Collider}{7}
 \contentsline {section}{\numberline {1.4}The ATLAS experiment}{8}
 \contentsline {section}{\numberline {1.5}Particle detectors}{10}
-\contentsline {subsection}{\numberline {1.5.1}Semiconductor detectors}{10}
-\contentsline {subsection}{\numberline {1.5.2}Diamond sensors}{12}

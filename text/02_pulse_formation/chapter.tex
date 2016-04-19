@@ -1,39 +1,57 @@
 
-\chapter{Signal formation in diamond}
+\chapter{Diamond detectors for radiation detection}
 \label{ch:diamond}
 
-This chapter describes the fundamentals of signal formation in a diamond sensor, as well as its use as a particle detector. This is described in section~\ref{sec:princsigfor} where the principles of energy deposition are explained. Then the current signal shapes of different types of radiation are shown. Later on the internal lattice defects that affect the signal are described. The final section contains the description of the remaining part of the signal chain -- signal amplifiers, digitisers and devices for signal processing. Noise contributions are discussed at every stage of the signal chain.
+%USE ELSEWHERE!
+%This chapter describes the fundamentals of signal formation in a diamond sensor, as well as its use as a particle detector. This is described in section~\ref{sec:princsigfor} where the principles of energy deposition are explained. Then the current signal shapes of different types of radiation are shown. Later on the internal lattice defects that affect the signal are described. The final section contains the description of the remaining part of the signal chain -- signal amplifiers, digitisers and devices for signal processing. Noise contributions are discussed at every stage of the signal chain.
+%
+%Ionisation is the main signal generation mechanism in diamond, silicon and other semiconducting materials. A semiconductor sensor converts the energy deposited by an incident energetic particle to an electrical signal. In particular, the particle ionises the atoms in the lattice, freeing electrons and holes, which then drift towards positively and negatively charged electrodes due to an externally applied electrical field, inducing an electrical signal on the electrodes. 
+%
+%Silicon is currently considered as the industry standard for particle detection. However, there are several disadvantages of using silicon instead of diamond, due to significant differences in the material properties. In particular, the properties of silicon change significantly with radiation. Due to radiation-induced lattice defects, which act as charge traps, the charge collection efficiency is decreased. The defects are also responsible for the increase of the leakage current, increasing the shot noise eventually leading to a thermal runaway. The same is true for diamond, but on a smaller scale.
 
-Ionisation is the main signal generation mechanism in diamond, silicon and other semiconducting materials. A semiconductor sensor converts the energy deposited by an incident energetic particle to an electrical signal. In particular, the particle ionises the atoms in the lattice, freeing electrons and holes, which then drift towards positively and negatively charged electrodes due to an externally applied electrical field, inducing an electrical signal on the electrodes. 
+%------new_ch1-------
+%\section{Diamond sensors}
+Diamond has been known for over two millennia, valued for its mechanical properties and its appearance. When the procedures for its synthesis were discovered, diamond made its way to a broad range of industries which exploit its optical and electrical properties. The discovery of the Chemical Vapour Deposition (CVD, described below) as a new synthesis process gave rise to a range of new applications. Purer specimens are used in electronics, high-power switching devices, electrochemical systems, radiation sensors, quantum computing etc. Recently it was found that it also exhibits superconductivity~\cite{}. This thesis focuses on the use of diamond for radiation detection. An example of such a diamond sample is shown in figure~\ref{fig:cividecpcvd}.
 
-Silicon is currently considered as the industry standard for particle detection. However, there are several disadvantages of using silicon instead of diamond, due to significant differences in the material properties. In particular, the properties of silicon change significantly with radiation. Due to radiation-induced lattice defects, which act as charge traps, the charge collection efficiency is decreased. The defects are also responsible for the increase of the leakage current, increasing the shot noise eventually leading to a thermal runaway. The same is true for diamond, but on a smaller scale.
+Compared to a natural diamond, a CVD diamond used as a particle detector has almost no impurities (foreign atoms like nitrogen or boron). If proper procedures are followed, the diamond lattice can be grown very uniformly. This in turn improves electrical properties of the grown sample. Such a diamond is an almost perfect thermal and electrical insulator. However, its electrical behaviour is similar to that of a semiconductor. For this reason this chapter first introduces semiconductor detectors and then describes the principle of signal formation in semiconductors. Then it focuses on the diamond sensor and its properties.
 
-Table~\ref{tab:semicompare} compares the properties of diamond and silicon. Some of these values are revisited and used in the course of this thesis. 
+%ADD ELSEWHERE!!
+%Its high 5.5~eV energy band gap prevents the electrons to be thermally excited to the conduction band. This eliminates the need to dope the diamond to suppress the leakage current. In addition, the gap is too wide for the visible light to excite the electrons. All diamond properties are described in detail in chapter~\ref{ch:diamond}. Figure~\ref{fig:cividecpcvd} shows a diamond pad sensor embedded in a particle detector produced by CIVIDEC Instrumentation GmbH.
 
-\begin{footnotesize}
-\begin{center}
-\begin{tabular}{   l  c  c   }
-\hline
-Property & Diamond & Silicon \\
-\hline
-Band gap energy E$_\mathrm{g}$ (eV) & 5.5 & 1.12  \\
-Electron mobility $\upmu_\mathrm{e}$ (cm$^2$ V$^{-1}$ s$^{-1}$) & 1800 & 1350 \\
-Hole mobility $\upmu_\mathrm{h}$ (cm$^2$ V$^{-1}$ s$^{-1}$) & 1200 & 450 \\
-Breakdown field (V cm$^{-1}$) & $10^{7}$ & $3\times 10^5$ \\
-Resistivity ($\Upomega$ cm) & $>10^{11}$  & $2.3\times 10^5$  \\
-Intrinsic carrier density (cm$^{-1}$) & $<10^3$ & $1.5\times 10^{10} $ \\
-Mass density (g cm$^{-1}$) & $ 3.52$ & $2.33 $ \\
-Atomic charge  & $6 $ & $ 14$ \\
-Dielectric constant $\upvarepsilon$ & $5.7 $ & $11.9 $ \\
-Displacement energy (eV/atom) & $43 $ & $13-20 $ \\
-Energy to create an e-h pair  (eV) & $13 $ & $ 3.6$ \\
-Radiation length (cm) & $ 12.2$ & $9.6 $ \\
-Avg. signal created/$\upmu$m (e) & 36 & 89 \\\hline
-\end{tabular}
-\captionof{table}{Comparison diamond -- silicon~\cite{ ,Jansen:1956431}.}
-\label{tab:semicompare}
-\end{center}
-\end{footnotesize}
+\begin{description}
+\item[Chemical vapour deposition] (CVD)~\cite{} is a process where a material is deposited from a gas onto a substrate, involving chemical reactions. It is often carried out under high pressure and high temperatures. It takes place in enclosed chambers called furnaces with careful regulation of the temperature, pressure and gas mixture. Synthetic diamond is grown at 700--900 \textdegree C with a mixture of hydrogen and methane gas. At this temperature the molecules dissociate into carbon and hydrogen atoms. The carbon atoms are the building blocks and are deposited on the surface of the substrate.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.9\textwidth]{01_introduction/pics/cividecpcvd}
+\caption{A pCVD diamond pad detector \cite{Cividec:00000}.}
+\label{fig:cividecpcvd}
+\end{figure}
+
+Under a carefully controlled pressure and temperature conditions with an added abrasive atomic hydrogen the graphitic bonds break and form into diamond bonds. The speed of the growth can be anywhere between 0.1 and 10~$\upmu$m per hour. The detector grade samples are grown at a rate of the order of 1~$\upmu$m per hour. They can grow up to several millimetres in thickness. The width of the samples, however, depends entirely on the substrate used. Diamond can be deposited on various materials: diamond, silicon, tungsten, quartz glass etc. The substrate material must be able to withstand the high temperatures during the CVD process. The diamond substrate does not need any surface pre-treatment. Carbon atoms form bonds with atoms in the existing crystal structure. This is the homo-epitaxial growth where the newly deposited atoms retain the orientation of the structure in the substrate. Other non-diamond substrates, however, need to be pre-treated, usually by being polished using diamond powder. Some powder particles remain on the surface, acting as seeds for the growth of small crystals or grains. These grains grow and at some point merge with the adjacent ones, making up a compact material. The lower side is later polished away. These diamonds are called \emph{polycrystalline} (pCVD) whereas those grown on a diamond substrate are \emph{single crystal} (sCVD) diamonds. The area of the former can be large - up to 0.5~m$^2$ or more compact 75~cm$^2$ in the case of detector grade diamonds, which can be further cut into smaller parts. The sCVD diamonds, on the other hand, can currently only achieve sizes up to 1.5~cm$^2$.
+\end{description}
+
+
+
+
+%----------------------------------------------------------------------------------------------------
+\section{Semiconductor detectors}
+Semiconductor is a class of solids whose electrical conductivity is between that of a conductor and that of an insulator -- of the order of  $10^{-5}~\Upomega^{-1}$~cm$^{-1}$. Semiconductors consist of atoms with four electrons in their valence band, e.g. silicon--Si or germanium--Ge, or as combinations of two or more different materials, e.g. gallium arsenide--GaAs). The atoms in the lattice form valence bonds with adjacent atoms, creating solid crystal structures.
+
+Semiconductor particle detectors are devices that use a semiconductor material to detect radiation. They work on the principle of an ionisation chamber. An incident particle ionises the atoms in the crystal lattice. The charges are freed if the deposited energy is higher than the energy band gap, i.e. the energy needed to excite an electron from its steady state to the conductance band. The freed charge carriers start drifting in an externally applied electric field, inducing current on the electrodes. The induced signal is amplified and read out by the electronics in the detector signal chain.
+
+Semiconductor detectors are most widely used for tracking applications, like the Insertable B-Layer shown in figure~\ref{fig:ibl}~\cite{Pernegger:1985432}, which was installed in ATLAS Experiment in 2014. First, they can be produced in thin layers to minimise the impact on the path of the incident particles. Second, their low sensor capacitance allows for a fast signal response. Third, they are highly efficient and highly resistant to radiation damage. Finally, the industrial processes allow for a fine spatial segmentation, which in turn improves the track resolution of the detector systems. 
+
+Semiconductor sensors come in several configurations. The simplest type is a pad -- a single plate with two electrodes. Pads are used for particle counting and radiation monitoring. Next is a strip detector, a more finely segmented detector made out of long parallel sensing areas or strips. Normally each strip has its own signal line for readout. Usually the strip detectors are used in pairs -- one detector is placed on top of the other at an angle to increase spatial resolution in both axes. The third and the most finely segmented is a pixel detector, consisting of a 2D array of independent sensing areas. In tracking applications, pixel detectors are used where the need for a high detection resolution and granularity requirement is the highest. Due to their high production cost and a high number of signal channels, they can only cover limited areas. Strip detectors can be used to cover larger areas in several consecutive layers.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.9\textwidth]{01_introduction/pics/ibl}
+\caption{The Insertable B-Layer -- a silicon particle tracker installed in the ATLAS experiment in 2014 \cite{MarcelloniDeOliveira:1702006}.}
+\label{fig:ibl}
+\end{figure}
+
+
 
 
 % ---------------------------------------------------------------------------------------------------------------
@@ -44,31 +62,15 @@ Avg. signal created/$\upmu$m (e) & 36 & 89 \\\hline
 %Lattice, electron-hole pair production (3 pg)
 %Ramo theorem (2 pg)
 %SC detector systems, pg. 43-73
-Particles can interact with the sensor in several ways, e.g. via bremsstrahlung~\cite{}, elastic or inelastic scattering (e-h pair production) or nuclear reactions. Bremsstrahlung is radiation created when a particle is decelerated due to interaction with the electric field of the core of an atom. Elastic scattering is deflection of the particle's trajectory due to the pull from the nucleus without depositing any energy in it. This is in principle an unwanted effect in semiconductors as it deteriorates the spatial resolution of the sensor. Inelastic scattering is the interaction through which an atom is ionised and an electron-hole pair is created. All these effects are competing and are dependent on the particle's mass, momentum etc. 
+Particles can interact with the sensor in several ways, e.g. via bremsstrahlung~\cite{}, elastic or inelastic scattering or nuclear reactions~\cite{}. Bremsstrahlung is radiation created when a particle is decelerated due to interaction with the electric field of the core of an atom. Elastic scattering is deflection of the particle's trajectory due to the pull from the nucleus without depositing any energy in it. This is in principle an unwanted effect in semiconductors as it deteriorates the spatial resolution of the sensor. Inelastic scattering is the interaction through which an electron in the atom is \emph{ionised}. Nuclear reaction is the direct interaction between the incident particle and the core of the atom. All these effects are competing and are dependent on the particle's mass, momentum etc. The scope of this chapter is to discuss the ionisation mechanism in semiconductors.
 
-Semiconductors are materials with a conductance between that of insulators and that of metals -- of the order of  $10^{?5}~\Upomega^{-1}$~cm$^{?1}$. They can be made up of atoms with four electrons in their valence band (e.g. silicon--Si, carbon--C or germanium--Ge) or as combinations of two or more different materials (e.g. gallium arsenide--GaAs). The atoms in the lattice form valence bonds with adjacent atoms, making solid crystal structures. 
+The energy of the electrons forming valence bonds between atoms in the crystal lattice is within the \emph{valence band}~\cite{}. To break a bond and excite the electron into a \emph{conduction band}, a sufficient energy has to be applied. The minimal energy required is equal to the energy band gap $E_\mathrm{g}$ of the semiconductor. Typical $E_\mathrm{g}$ values are 0.7~eV in Ge, 1.12~eV in Si and 1.4~eV in GaAs. Diamond with its 5.5~eV band gap is considered an insulator. The separation between the conductive and valence band is referred to as \emph{forbidden gap} where no electron states can exist.
 
-The valence bonds between atoms in the crystal lattice can break apart if sufficient external energy is deposited. The electron that was forming the bond is excited into the conductance band, leaving behind a positively charged ion with a vacancy -- a hole -- in its valence band, as shown in figure~\ref{fig:semilattice9}. A free electron-hole pair is thus created. The free electron travels through the crystal until it is recombined with another hole. Similarly, the hole also travels through the material. Its positive charge attracts a bound electron in the vicinity, which breaks from the current bond and moves to the vacancy, leaving a new hole behind. The process continues, making it look like the hole is traveling through the material~\cite{}.
+An electron excited into the conduction band leaves behind a positively charged ion with a vacancy -- a hole -- in its valence band, as shown in figure~\ref{fig:semilattice9}. A free \emph{electron-hole pair} is thus created. The free electron travels through the crystal until it is recombined with another hole. Similarly the positive charge of the hole attracts a bound electron in the vicinity, causing it to break from the current bond and moving to the vacancy, thus leaving behind a newly created hole. The process continues, making it look like the hole is traveling through the material~\cite{}. 
 
-%\begin{figure}[!t]
-%\begin{center}
-%\includegraphics[width=0.4\linewidth]{02_pulse_formation/pics/plots/semilattice9}
-%\caption{Valence bonds in the crystalline structure can be broken, producing a free electron-hole pair}
-%\label{fig:semilattice9}
-%\end{center}
-%\end{figure}
+Both the electron and the hole are referred to as \emph{charge carriers}. Without an externally applied electrical field, they propagate in random directions. Therefore on average there is no overall motion of charge carriers in any particular direction over time.
 
-
-
-The electrons need to absorb a certain energy to get to get ionised. The minimal transferred energy required to excite an electron in a semiconductor is equal to the energy gap $E_\mathrm{g}$. Typical widths of the forbidden gap are 0.7~eV in Ge, 1.12~eV in Si, 1.4~eV in GaAs and 5.5~eV in diamond. Due to the small band gap in semiconductors a significant amount of electrons already occupies the conduction band at room temperature (RT) due to thermal excitation, according to the probabilistic distribution. The intrinsic carrier concentration $n_\mathrm{i}$ in semiconductors is given as
-\begin{equation}
-\label{eq:intrinsiccarrier}
-n_\mathrm{i} = T^{3/2} \cdot \exp\left(-\frac{E_\mathrm{g}}{2k_\mathrm{B}T}\right)
-\end{equation} 
-wherein $k_\mathrm{B} = 1.381\times10^{-23}~$m$^2~$kg~s$^{-2}~$K$^{-1}$ is the Boltzmann constant, $E_\mathrm{g}$ is the energy band gap of the semiconductor and $T$ is the temperature in K. 
-%CONTINEUE 
-
-If an external electric field is applied to the crystalline structure, the free electrons and holes drift toward the positive and negative potential, respectively, as shown in figure~\ref{fig:simpledrift}. While drifting, the charges couple with the electrodes, inducing current in the circuit, which is explained by the Shockley--Ramo theorem below. Upon reaching the electrodes the charges stop inducing the current. The equivalent electrical circuit is shown in figure~\ref{fig:simpledrifteq}.
+However, if an external electric field is applied to the crystalline structure, the free electrons and holes drift toward the positive and negative potential, respectively, as shown in figure~\ref{fig:simpledrift}. While drifting, the charges couple with the electrodes, inducing current in the circuit, which is explained by the Shockley--Ramo theorem below. Upon reaching the electrodes the charges stop inducing the current. The equivalent electrical circuit is shown in figure~\ref{fig:simpledrifteq}.
 
 \begin{figure}[!t]
 \begin{tabular}{cccc}
@@ -81,24 +83,7 @@ If an external electric field is applied to the crystalline structure, the free 
 
 
 
-%BETHE-BLOCH
-\begin{description}
-\item[Mean energy loss] of a particle traversing the detector as a function of the momentum is given with the the Bethe-Bloch equation~\cite{}: 
-\begin{equation}
--\left\langle\frac{\mathrm{d}E}{\mathrm{d}x}\right\rangle = \frac{4\pi}{m_\mathrm{e}c^2}  \cdot \frac{nz^2}{\beta^2}  \cdot  \left(\frac{e^2}{4\pi\epsilon_\mathrm{0}}\right)^2  \cdot  \left( \ln \left(\frac{2m_\mathrm{e}c^2\beta^2}{I\cdot(1-\beta^2)}\right)-\beta^2  \right)
-\label{eq:bethebloch}
-\end{equation}
-The resulting function for a muon is shown in figure~\ref{fig:bb2}. At a momentum of around 300~MeV/c the particle deposits the lowest amount of energy. That is called a minimum ionising particle or a MIP.
-\end{description}
 
-
-\begin{figure}[!t]
-\begin{center}
-\includegraphics[width=0.85\linewidth]{02_pulse_formation/pics/bb2}
-\caption{Stopping power for muons according to the Bethe-Bloch formula~\cite{}.}
-\label{fig:bb2}
-\end{center}
-\end{figure}
 
 
 \subsection{Signal induction by moving charges}
@@ -166,44 +151,33 @@ whereby $v_{\mathrm{drift}}$ is the drift velocity of the point-like charge and 
 %where N$_{ex}$ is the number of excitations (phonos produced) and N$_Q$ is the number of charge pairs released. For this event, if more 
 
 
-\subsection{Radiation-induced electrical pulses}
 
-\begin{figure}[!t]
-\begin{center}
-\includegraphics[width=0.8\linewidth]{02_pulse_formation/pics/plots/driftboth}
-\caption{Charge carrier drift in diamond for $\upbeta/\upgamma$ and for $\upalpha$ particles crossing the sensor at $t=0$.}
-\label{fig:drift}
-\end{center}
-\end{figure}
-
-When a highly-energetic particle travels through the sensor, it interacts with atoms in the lattice. It ionises the valence electrons, creating electron-hole (e-h) pairs on its way. It can either deposit only a fraction of its energy and exit the sensor on the other side or it can get stopped in the bulk, depositing all of its energy. A special case is when it interacts with the core of the atom in the middle of the sensor via a nuclear interaction. All these various types interactions produce different amounts and different spatial distributions of e-h pairs. The induced electrical current therefore differs for different types of interaction. Two most frequent types are shown in figure~\ref{fig:drift}. The first diagram shows the interaction of a minimum ionising particle. The electrons and holes are created all along the trajectory of the particle and immediately start drifting towards the positive and negative electrode, respectively. At the beginning, all charges drift and contribute to the induced current. Those closest to the electrodes have a very short drift path, reducing the induced current. Gradually all the charge carriers reach the electrode. The resulting current signal is a triangular pulse with a sharp rising edge and a linear falling edge. The accumulated charge $Q_\mathrm{s}$ equals to the sum of the contributions of the positive and negative charge carriers. The second type of interaction happens when the particle is stopped in the diamond close to the point of entry. Most of its energy is deposited in a small volume close to the electrode. A cloud of charge carriers is created and the charges with the shorter path to the electrode disappear almost instantly. The carriers of the opposite charge, however, start drifting through the sensor to the other electrode. In an ideal diamond sensor, their velocity is constant throughout the drift up until they are collected at the opposite electrode. The contribution of the first charge cloud is a peak with a short time. The cloud drifting through the sensor, on the other hand, induces a current signal with a flat top. The resulting signal has a shape of a rectangle, with a spike in the beginning. %This spike is filtered out by a current amplifier in a real device because it is too fast for the electronics existing currently. 
-The accumulated charge $Q_\mathrm{s}$ is equal to a half of the deposited charge by the stopped particle.
-
-The two aforementioned types of interactions have well defined signal responses. Nuclear interactions on the other hand yield various results. The resulting signal shape depends on the decay products of the interaction, which can be $\upalpha$, $\upbeta$ or $\upgamma$ quanta or other nuclei, inducing a mixed shaped signal. 
-%
-%Current profiles
-%Alpha
-%beta
-%gamma
-%neutron
-
-
-\subsection{Signal charge fluctuations}
-Two important sensor properties are the magnitude of the signal and the fluctuations of the signal at a given absorbed energy. They determine the relative resolution $\Updelta E/E$. For semiconductors the signal fluctuations are smaller than the simple statistical standard deviation $\upsigma_\mathrm{Q}=\sqrt{N_\mathrm{Q}}$. Here $N_\mathrm{Q}$ is the number of released charge pairs, i.e. the ratio between the total deposited energy $E_\mathrm{0}$ and the average energy deposition $E_\mathrm{i}$ required to produce an electron-hole pair. \cite{} shows that the standard deviation is $\upsigma_\mathrm{Q}=\sqrt{F N_\mathrm{Q}}$, where $F$ is the Fano factor~\cite{} (0.08 for diamond and 0.115 for silicon ~\cite{}). Thus, the standard deviation of the signal charge is smaller than expected, $\upsigma_\mathrm{Q}\approx0.3 \sqrt{N_\mathrm{Q}}$. The resulting intrinsic resolution of semiconductor detectors is 
+\subsection{Thermal excitation and p-n junctions}
+Electrons can be thermally excited to the conduction band. The intrinsic concentration of thermally excited electrons $n_\mathrm{i}$ in semiconductors is given as
 \begin{equation}
-\label{eq:efwhm}
-\Updelta E_\mathrm{FWHM} = 2.35 \sqrt{FEE_\mathrm{i}} 
+\label{eq:intrinsiccarrier}
+n_\mathrm{i} = T^{3/2} \cdot \exp\left(-\frac{E_\mathrm{g}}{2k_\mathrm{B}T}\right)
 \end{equation} 
-wherein $E_\mathrm{i}(Si)$=~3.6~eV and E$_\mathrm{i}(C)$=~13~eV. E.g., for an $\upalpha$ particle with energy $E_\upalpha$ = 5.486 MeV the calculated resolution in diamond is equal to $\Updelta E_{\mathrm{FWHM}}$ = 5.6~keV. This defines the minimum achievable resolution for energy spectroscopy with semiconductors. Figure~\ref{fig:enerres} shows the resolution limit as a function of energy in silicon and diamond.
+wherein $k_\mathrm{B} = 1.381\times10^{-23}~$m$^2~$kg~s$^{-2}~$K$^{-1}$ is the Boltzmann constant, $E_\mathrm{g}$ is the energy band gap of the semiconductor and $T$ is the temperature in K. The $n_\mathrm{i}$ of silicon is 
+%The thermally excited electrons moving through the material are referred to as leakage current. This current is also present in silicon with an energy gap of 1.12~eV.
+To reduce this effect the semiconductor sensors are doped with donors and acceptors, forming a diode, The diode is then inversely biased to deplete the material of all moving charges. Doped silicon fulfils most of the needs for particle physics requirements and is therefore the most widely used material for particle detection.
 
+Due to the small band gap in semiconductors a significant amount of electrons already occupies the conduction band at room temperature due to thermal excitation, according to the probabilistic distribution. 
+
+\subsection{Space charge}
+The Poisson equation shows that 
+\begin{equation}
+\label{eq:poisson}
+\frac{d^2\Phi(x)}{\mathrm{d}x^2} = \frac{dE(x)}{\mathrm{d}x} = \frac{\rho(x)}{\epsilon}
+\end{equation}
+where $\rho(x)$ is the space charge distribution, $E$ is the electrical field and $\Phi$ is the voltage potential. In an ideal diamond, the externally applied high voltage potential on the two electrodes decreases linearly through the sensor. The electrical field is therefore constant throughout the sensor and the space charge distribution across it equals 0. However, space charge may be introduced in the material either by means of accumulating of charge carriers in the lattice (i.e. charge trapping) or already during sensor production. The space charge can be either permanent or changing -- sometimes it is possible to reduce it, as is shown in chapter~\ref{ch:meas}. All in all, it is very important to reduce it because it affects the shape of the electrical signal. Since the drift velocity of the charge carriers is proportional to the electrical field, the charges change their velocity while drifting through the space charge region. Figure~\ref{fig:spcchg} compares the voltage potential, the electrical field and the space charge for an ideal sensor as well as for that with a uniformly distributed positive space charge.
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{../scripts/02_pulse_formation/plots/resolution}
-\caption{Calculated intrinsic energy resolution for silicon and diamond.}
-\label{fig:enerres}
+\includegraphics[width=0.6\linewidth]{02_pulse_formation/pics/plots/spcchg}
+\caption{Left figure shows a profile of a diamond sensor only with an externally applied electric field. In the figure on the right a uniformly distributed space charge is added in the diamond, contributing to  the internal electric field distribution. The induced current signal is proportional to the electrical field. $d$ is the thickness of the diamond sensor.}
+\label{fig:spcchg}
 \end{center}
 \end{figure}
-
 
 
 
@@ -214,71 +188,212 @@ wherein $E_\mathrm{i}(Si)$=~3.6~eV and E$_\mathrm{i}(C)$=~13~eV. E.g., for an $\
 % ---------------------------------------------------------------------------------------------------------------
 This section describes the carrier transport phenomena in diamond. This theory provides the basis for discussion about the measurements in chapter~\ref{ch:meas}. 
 
+Table~\ref{tab:semicompare} compares the properties of diamond and silicon. Some of these values are revisited and used in the course of this thesis. 
+
+\begin{footnotesize}
+\begin{center}
+\begin{tabular}{   l  c  c   }
+\hline
+Property & Diamond & Silicon \\
+\hline
+Band gap energy E$_\mathrm{g}$ (eV) & 5.5 & 1.12  \\
+Electron mobility $\upmu_\mathrm{e}$ (cm$^2$ V$^{-1}$ s$^{-1}$) & 1800 & 1350 \\
+Hole mobility $\upmu_\mathrm{h}$ (cm$^2$ V$^{-1}$ s$^{-1}$) & 1200 & 450 \\
+Breakdown field (V cm$^{-1}$) & $10^{7}$ & $3\times 10^5$ \\
+Resistivity ($\Upomega$ cm) & $>10^{11}$  & $2.3\times 10^5$  \\
+Intrinsic carrier density (cm$^{-1}$) & $<10^3$ & $1.5\times 10^{10} $ \\
+Mass density (g cm$^{-1}$) & $ 3.52$ & $2.33 $ \\
+Atomic charge  & $6 $ & $ 14$ \\
+Dielectric constant $\upvarepsilon$ & $5.7 $ & $11.9 $ \\
+Displacement energy (eV/atom) & $43 $ & $13-20 $ \\
+Energy to create an e-h pair  (eV) & $13 $ & $ 3.6$ \\
+Radiation length (cm) & $ 12.2$ & $9.6 $ \\
+Avg. signal created/$\upmu$m (e) & 36 & 89 \\\hline
+\end{tabular}
+\captionof{table}{Comparison diamond -- silicon~\cite{ ,Jansen:1956431}.}
+\label{tab:semicompare}
+\end{center}
+\end{footnotesize}
+ 
+
 When the charge carriers are freed in a semiconductor with no concentration gradient and without an externally applied electric field, they scatter in random directions with a thermal velocity $v_{\mathrm{th}}$~\cite{}. Their integral movement due to thermal excitation equals zero. 
 
 \begin{description}
 
-\item[Diffusion]
-Diffusion is caused by the concentration gradient. In its presence the integral movement is in the direction of the lower concentration until an equilibrium is reached.
+\item[Diffusion] is caused by the concentration gradient. In its presence the integral movement is in the direction of the lower concentration until an equilibrium is reached.
 The concentration profile dissolves with time forming a Gaussian distribution with variance $\sigma(t)=\sqrt{Dt}$~\cite{} .
 
-\item[Drift]
-Drift is caused by an externally applied electrical field. In that case the carriers move along the field lines. In a sensor with a high applied field the diffusion contribution is negligible. 
+\item[Drift] is caused by an externally applied electrical field. In that case the carriers move along the field lines. In a sensor with a high applied field the diffusion contribution is negligible. 
 
-\item[Drift velocity, saturation velocity and mobility]
-The charge carriers drift through the diamond bulk with a drift velocity $v_\mathrm{drift}(E)$~\cite{}, which is proportional to the electric field $E$ at low electric fields: $v_\mathrm{drift} = \mu E$. The proportionality factor $\mu$ is defined as the mobility in cm$^2$V$^{-1}$s$^{-1}$.
+\item[Drift velocity] $v_\mathrm{drift}(E)$ is the speed at which the charge carriers drift through the diamond sensor~\cite{}.
 
-For higher fields and higher velocities, however, the carriers lose more energy to the lattice. They induce increasingly more lattice vibrations (phonon transport). There is a velocity limit above which the carriers cannot reach -- velocity saturation. The $v^e_\mathrm{sat}=v^h_\mathrm{sat}=(14.23\pm0.12)\times10^6$~cm/s for both positive and negative charge carriers has been derived from the measurements in~\cite{JANSEN:00001}.
+\item[Mobility] $\mu$ is a proportionality factor between the $v_\mathrm{drift}$ and the electric field $E$ at low electric fields: $v_\mathrm{drift} = \mu E$. Its units are in cm$^2$V$^{-1}$s$^{-1}$.
 
-The final equation for $v_\mathrm{drift}$ is therefore
+\item[Phonon transport] is the transfer of energy of the moving charges to the lattice.
+
+\item[Saturation velocity] $v^e_\mathrm{sat}$ is a velocity limit above which the carriers cannot reach. This is due to increasing phonon transport at a high electric field. The $v^e_\mathrm{sat}=v^h_\mathrm{sat}=(14.23\pm0.12)\times10^6$~cm/s for both positive and negative charge carriers has been derived from the measurements in~\cite{JANSEN:00001}.
+
+\end{description}
+
+ The final equation for $v_\mathrm{drift}$ is therefore
 \begin{equation}
 \label{eq:vsat}
-v_\mathrm{drift}(E) = \mu(E)E= \frac{\mu_\mathrm{0} E}{1 + \frac{\mu_\mathrm{o} E}{v_\mathrm{sat}}}
+v_\mathrm{drift}(E) = \mu(E)E= \frac{\mu_\mathrm{0} E}{1 + \frac{\mu_\mathrm{o} E}{v_\mathrm{sat}}}.
 \end{equation}
-where $\mu_\mathrm{0}$ is the low field mobility and $v_\mathrm{sat}$ is saturation velocity. The drift velocity can be retrieved experimentally via the transit time measured with the Transient Current Technique (TCT). This technique enables the measurement of transit time $t_\mathrm{t}$ of the carriers through the sensor with the thickness $d$. 
+It can be retrieved experimentally via the transit time measured with the Transient Current Technique (TCT). This technique enables the measurement of transit time $t_\mathrm{t}$ of the carriers through the sensor with the thickness $d$. 
 \begin{equation}
 \label{eq:vsat}
 v_\mathrm{drift}(E) = \frac{d}{t_\mathrm{t}(E)}.
 \end{equation}
-The velocities for holes and electrons usually differ. In diamond, the holes travel 30~\% faster than electrons~\cite{}. The measurements in chapter~\ref{ch:meas} empirically confirm this statement.
+The velocities for holes and electrons usually differ. In diamond, the holes travel 30~\% faster than electrons~\cite{}, which is empirically confirmed in chapter~\ref{ch:meas}.
 
-\item[Space charge] 
-The Poisson equation shows that 
-\begin{equation}
-\label{eq:poisson}
-\frac{d^2\Phi(x)}{\mathrm{d}x^2} = \frac{dE(x)}{\mathrm{d}x} = \frac{\rho(x)}{\epsilon}
-\end{equation}
-where $\rho(x)$ is the space charge distribution, $E$ is the electrical field and $\Phi$ is the voltage potential. In an ideal diamond, the externally applied high voltage potential on the two electrodes decreases linearly through the bulk. The electrical field is therefore constant throughout the sensor and the space charge distribution across it equals 0. However, space charge may be introduced in the bulk either by means of accumulating of charge carriers in the lattice (i.e. charge trapping) or already during sensor production. The space charge can be either permanent or changing -- sometimes it is possible to reduce it, as is shown in chapter~\ref{ch:meas}. All in all, it is very important to reduce it because it affects the shape of the electrical signal. Since the drift velocity of the charge carriers is proportional to the electrical field, the charges change their velocity while drifting through the space charge region. Figure~\ref{fig:spcchg} compares the voltage potential, the electrical field and the space charge for an ideal sensor as well as for that with a uniformly distributed positive space charge.
+
+%----------------------------------------------
+\section{Radiation-induced current signals}
+
 \begin{figure}[!t]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{02_pulse_formation/pics/plots/spcchg}
-\caption{Left figure shows a profile of a diamond sensor only with an externally applied electric field. In the figure on the right a uniformly distributed space charge is added in the diamond, contributing to  the internal electric field distribution. The induced current signal is proportional to the electrical field. $d$ is the thickness of the diamond sensor.}
-\label{fig:spcchg}
+\includegraphics[width=0.8\linewidth]{02_pulse_formation/pics/plots/driftboth}
+\caption{Charge carrier drift in diamond for $\upbeta/\upgamma$ and for $\upalpha$ particles crossing the sensor at $t=0$.}
+\label{fig:drift}
+\end{center}
+\end{figure}
+
+When a highly-energetic particle travels through the sensor, it interacts with atoms in the lattice. It ionises the valence electrons, creating electron-hole (e-h) pairs on its way. It can either deposit only a fraction of its energy and exit the sensor on the other side or it can get stopped in the sensor, depositing all of its energy. A special case is when it interacts with the core of the atom in the middle of the sensor by means of a a nuclear interaction. All these various types interactions produce different amounts and different spatial distributions of e-h pairs. 
+
+%The induced electrical current therefore differs for different types of interaction. 
+The two most frequent types are shown in figure~\ref{fig:drift}. The first figure shows the interaction of an incident MIP. The electrons and holes created all along the trajectory of the particle immediately start drifting towards the positive and negative electrode, respectively. At $t=0$ all charges drift, contributing to the maximum induced current. Those closest to the electrodes have a very short drift path. They stop inducing current upon reaching the electrode. The resulting current signal is a triangular pulse with a sharp rising edge and a linear falling edge. Gradually all the charge carriers reach the electrode. The accumulated charge $Q_\mathrm{s}$ equals to the sum of the contributions of the positive and negative charge carriers. 
+
+The second type of interaction happens when the particle is stopped in the diamond close to the point of entry. Most of its energy is deposited in a small volume close to the electrode. A cloud of charge carriers is created and the charges with the shorter path to the electrode disappear almost instantly. The carriers of the opposite charge, however, start drifting through the sensor to the other electrode. In an ideal diamond sensor, their velocity is constant throughout the drift up until they are collected at the opposite electrode. The contribution of the first charge cloud is a peak with a short time. The cloud drifting through the sensor, on the other hand, induces a current signal with a flat top. The resulting signal has a shape of a rectangle, with a spike in the beginning. %This spike is filtered out by a current amplifier in a real device because it is too fast for the electronics existing currently. 
+The accumulated charge $Q_\mathrm{s}$ is equal to a half of the deposited charge by the stopped particle.
+
+The two aforementioned types of interactions have well defined signal responses. Nuclear interactions on the other hand yield various results. The resulting signal shape depends on the decay products of the interaction, which can be $\upalpha$, $\upbeta$ or $\upgamma$ quanta or other nuclei, inducing a mixed shaped signal. 
+
+%----ADD!!!!!!!!!-----------\
+%\subsection{Transient Current Technique}
+%The Transient Current Technique (TCT)
+
+
+%BETHE-BLOCH
+\subsection{Mean energy loss}
+A mean energy loss of a particle traversing the detector as a function of the momentum is given with the the Bethe-Bloch equation~\cite{}: 
+\begin{equation}
+-\left\langle\frac{\mathrm{d}E}{\mathrm{d}x}\right\rangle = \frac{4\pi}{m_\mathrm{e}c^2}  \cdot \frac{nz^2}{\beta^2}  \cdot  \left(\frac{e^2}{4\pi\epsilon_\mathrm{0}}\right)^2  \cdot  \left( \ln \left(\frac{2m_\mathrm{e}c^2\beta^2}{I\cdot(1-\beta^2)}\right)-\beta^2  \right)
+\label{eq:bethebloch}
+\end{equation}
+The resulting function for a muon is shown in figure~\ref{fig:bb2}. At a momentum of around 300~MeV/c the incident particle deposits the lowest amount of energy. Hence it is referred to as the \emph{minimum ionising particle} or a MIP.
+
+
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=0.85\linewidth]{02_pulse_formation/pics/bb2}
+\caption{Stopping power for muons according to the Bethe-Bloch formula~\cite{}.}
+\label{fig:bb2}
 \end{center}
 \end{figure}
 
 
-\item[Radiation damage]
-The bonds in the diamond lattice are very strong. However, when highly energetic particles hit the diamond, they can damage the crystal structure. Figure~\ref{fig:raddamage} shows several examples of lattice damage:
+\subsection{Signal fluctuation}
+Two important sensor properties are the magnitude of the signal and the fluctuations of the signal at a given absorbed energy. They determine the relative resolution $\Updelta E/E$. For semiconductors the signal fluctuations are smaller than the simple statistical standard deviation $\upsigma_\mathrm{Q}=\sqrt{N_\mathrm{Q}}$. Here $N_\mathrm{Q}$ is the number of released charge pairs, i.e. the ratio between the total deposited energy $E_\mathrm{0}$ and the average energy deposition $E_\mathrm{i}$ required to produce an electron-hole pair. \cite{} shows that the standard deviation is $\upsigma_\mathrm{Q}=\sqrt{F N_\mathrm{Q}}$, where $F$ is the Fano factor~\cite{} (0.08 for diamond and 0.115 for silicon ~\cite{}). Thus, the standard deviation of the signal charge is smaller than expected, $\upsigma_\mathrm{Q}\approx0.3 \sqrt{N_\mathrm{Q}}$. The resulting intrinsic resolution of semiconductor detectors is 
+\begin{equation}
+\label{eq:efwhm}
+\Updelta E_\mathrm{FWHM} = 2.35 \sqrt{FEE_\mathrm{i}} 
+\end{equation} 
+wherein $E_\mathrm{i}(Si)$=~3.6~eV and E$_\mathrm{i}(Di)$=~13~eV. E.g., for an $\upalpha$ particle with energy $E_\upalpha$ = 5.486 MeV the calculated resolution in diamond is equal to $\Updelta E_{\mathrm{FWHM}}$ = 5.6~keV. This defines the minimum achievable resolution for energy spectroscopy with semiconductors. 
+%Figure~\ref{fig:enerres} shows the resolution limit as a function of energy in silicon and diamond.
+%
+%\begin{figure}[!t]
+%\begin{center}
+%\includegraphics[width=0.8\linewidth]{../scripts/02_pulse_formation/plots/resolution}
+%\caption{Calculated intrinsic energy resolution for silicon and diamond.}
+%\label{fig:enerres}
+%\end{center}
+%\end{figure}
+
+
+
+\subsection{Charge trapping}
+Various types of lattice defects can be created in diamond, similar to those in silicon~\cite{CHTR:00000}.
+Figure~\ref{fig:raddamage} shows several examples of lattice damage:
 \begin{enumerate}
 \item[a)]foreign interstitial (e.g. H, Li),
 \item[b, c)]foreign substitutional (e.g. N, P, B),
 \item[d)]vacancy and
 \item[e)]self interstitial.
-\end{enumerate} 
-These non-uniformities form new energy levels in the forbidden gap -- the separation between the conductive and valence band in which the electrons. These intermediate levels are referred to as charge traps because they can trap moving charge carriers. The energy level of the trapped carriers is reduced from the conduction band to the energy level of the trap. Different types of lattice damage have different energy levels. The carriers trapped in an energy level close to the conduction band have a high probability of being thermally excited back into the conduction band whereby they continue drifting towards the electrode. Their activation energy is therefore low. Those trapped in a deep trap close to the middle of the forbidden gap need a much higher activation energy, which in turn increases the average time to their release due to thermal excitation.
-
-The trapped carriers do not contribute to the overall induced current on the electrodes. The more charges are trapped along their drift path, the lower current is induced on the electrodes.
-
+\end{enumerate}
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.8\linewidth]{02_pulse_formation/pics/plots/raddamage}
 \caption{Impurities and non-uniformities in the crystal lattice due to radiation damage.}
 \label{fig:raddamage}
 \end{center}
+\end{figure} 
+These non-uniformities form new energy levels in the forbidden gap. These intermediate levels are referred to as charge traps because they can trap moving charge carriers. The energy level of the trapped carriers is reduced from the conduction band to the energy level of the trap. Different types of lattice damage have different energy levels. The carriers trapped in a shallow trap -- an energy level close to the conduction band -- have a high probability of being thermally excited back into the conduction band whereby they continue drifting towards the electrode. Their activation energy is therefore low. Those trapped in a deep trap close to the middle of the forbidden gap need a much higher activation energy, which in turn increases the average time to their release due to thermal excitation.
+
+The energy band jumping goes the other way, too. The carriers in the valence band may use the intermediate energy levels as ``stepping stones'' to jump to the conduction band and start drifting in the externally applied electric field. These intermediate energy levels are referred to as the generation centres of leakage current.
+
+
+
+
+\subsection{Charge collection efficiency and distance}
+The total measured charge $Q_\mathrm{i}$ is the integral of the induced current:
+\begin{equation}
+Q_\mathrm{i}=\int i_\mathrm{ind}(t) \mathrm{d}t.
+\end{equation}
+The expected charge $Q_\mathrm{0}$ can be calculated using the thickness of the sensor $d$ and the average number of e-h pairs created per $\upmu$m $\delta_\mathrm{d}$, which is 36 for diamond according to table~\ref{tab:semicompare}. The charge collection efficiency (CCE) is the ratio between the measured and expected charge:
+\begin{equation}
+\label{eq:ccecalc1}
+CCE = \frac{Q_\mathrm{i}}{Q_\mathrm{0}} = \frac{Q_\mathrm{i}}{\delta_\mathrm{d}\cdot d}\cdot100\%.
+\end{equation}
+The charge collection distance (CCD) is a measure of an average path that the charge carriers travel before getting trapped:
+\begin{equation}
+\label{eq:ccdcalc1}
+CCD = \frac{Q_\mathrm{i}}{\delta_\mathrm{d}}
+\end{equation}
+and is usually given in units of $\upmu$m.
+
+Carriers that get trapped stop contributing to the overall induced current on the electrodes. The more charges are trapped along their drift path, the more the current induced on the electrodes is decreased. This in turn yields a lower integrated charge. 
+An expected CCE for non-irradiated sCVD diamonds is close to 100~\% and for non-irradiated pCVD diamonds ranges between 40~\% and 60~\%. In other words, high-quality pCVD diamonds already have traps introduced by means of grain boundaries, which are created in the growing process. Traps can also be created by damaging the diamond using radiation (discussed in section~\ref{sec:raddam}). The more the sensor is irradiated, the larger number of traps is introduced in the material and the higher is the probability that the carriers are stopped on the way, reducing in turn the integrated charge. Therefore the CCD and CCE can be used as a means to quantify the detector damage due to radiation.
+
+
+
+\section{Radiation damage}
+\label{sec:raddam}
+Exposure to ionising radiation degrades sensors by deforming the crystal lattice and introducing charge traps in the material. 
+
+Radiation damage varies with the type of radiation and its energy. There are several models existing~\cite{2002NIMPA,Guthoff:2014223} that try to explain the impact of irradiation and to provide \emph{damage factors} to compare the radiation damage between different particles. The standard way is to convert the damage into \emph{1~MeV neutron equivalent fluence}~\cite{NEQ:00000}. Some models have been extensively verified with simulations and with experiments. In these experiments the charge collection in sensors is measured before and after irradiation. This procedure is repeated several times, with a measurement point taken after every irradiation. Then the charge collection for this set of measurements is plotted as a function of the radiation dose received by a specific particle at a specific energy. From this a damage factor $k_\mathrm{\lambda}$ can be extracted. Damage factors have to be measured across a range of energies and types of radiation to properly quantify the damage in the sensors. Finally they are compared to the simulations to validate the theoretical models.
+
+Diamond is an expensive material and the technology is relatively new as compared to silicon. Therefore few institutes are carrying out diamond irradiation studies. To join the efforts, the RD42 collaboration~\cite{RD42:00000} has been formed. It gathers the experimental data from diamond irradiation studies. Unlike with silicon, the experimental results so far show no significant correlation with the NIEL (non-ionising energy loss) model~\cite{2002NIMPA}, which correlates detector efficiency with the number of lattice displacements. Therefore an alternative model was proposed~\cite{Guthoff:2014223}, correlating the diamond efficiency with the number of displacements per atom (DPA) in the material. The idea is that if the recoil energy of an incident particle is higher than the lattice binding energy (42~eV for diamond), the atom is displaced from its original position. The newly formed vacancy acts as a trap for drifting charge carriers. The more displacements that form in the crystal, the higher is the probability that a drifting carrier gets trapped. However, different types of particles interact differently with the material. In addition the mechanisms of interaction at low energies are different to those at high energies. To assess the damage for individual particles at a range of energies, simulations need to be run first. The simulation shown in~\cite{Guthoff:2014223} shows the DPA model for a range of energies of proton, pion and neutron irradiation in diamond. Figure~\ref{fig:kitdpa}  contains the simulation results as well as the superimposed empirical results of several irradiation studies. According to the figure, a 300~MeV pion beam damages the diamond material twice as much as a 24~GeV proton beam. The data points obtained by RD42 are also added to the figure. They have been normalised to damage by 24~GeV protons. 
+%Finally, the data point measured in the scope of this thesis has been added for comparison. The derivation is done below. $ADD SOMEWHERE ELSE!!
+
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{03_measurement_results/scripts/plots/dpa1}
+\caption{Diamond radiation damage - a model based on displacements per atom~\cite{Guthoff:2014223}. The figure shows the DPA as a function of the kinetic energy for protons, neutrons and pions. Added are data points for protons and pions by RD42~\cite{RD42IRRAD:00000}. %and one data point for pions measured in the scope of this study.
+}
+\label{fig:kitdpa}
+\end{center}
 \end{figure}
 
-\end{description}
+\subsubsection{Irradiation damage factor}
+The irradiation damage factor $k_\uplambda$ is a means to quantify irradiation damage of a specific type of radiation at a specific energy. Via this factor different types of irradiation can be compared. It is obtained experimentally by measuring the CCD of a number of samples at various irradiation steps and fitting the equation~\ref{eq:radfactor1} to the data. $\lambda$ is the measured CCD, $\lambda_\mathrm{0}$ is the CCD of a non-irradiated sample and $\Phi$ the radiation dose. As a reference, the damage factor for 24~GeV protons is set to $1\times10^{-18}~\upmu$m$^{-1}$~cm~$^{-2}$.
+
+
+\begin{equation}
+\label{eq:radfactor}
+\frac{1}{\lambda} = \frac{1}{\lambda_\mathrm{0}}+k_\uplambda\cdot\Phi
+\end{equation} 
+\begin{equation}
+\label{eq:radfactor1}
+\lambda = \frac{\lambda_\mathrm{0}}{k_\uplambda \lambda_0 \Phi + 1}
+\end{equation} 
+
+
+
+
+
+
+\section{Temperature effects}
 
 
 
