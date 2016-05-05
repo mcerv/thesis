@@ -68,7 +68,7 @@ void plotAmpl() {
   vector<double> psaAmplEff, psaAmplEffErr;
   for (int32_t i=0; i<psaSet.nRuns; i++) {
     // psaAmplEff.push_back(psaSet.maxAmpl.at(i)/scopeSet.maxAmpl.at(i));
-    psaAmplEff.push_back(100.0*FIXFACTORAMPL*psaSet.maxAmpl.at(i)/scopeSet.maxAmpl.at(i));
+    psaAmplEff.push_back(100.0*FIXFACTORAMPL*psaSet.maxAmpl.at(i)/scopeSet.maxAmpl.at(i)-100);
     psaAmplEffErr.push_back( 100.0*dr.relError(psaSet.maxAmpl.at(i),
                                       psaSet.maxAmplStd.at(i),
                                       scopeSet.maxAmpl.at(i),
@@ -83,13 +83,19 @@ void plotAmpl() {
                                                   &psaAmplEffErr[0], &psaAmplEffErr[0] );
   dr.prettify(c1);
   dr.prettify(grAmpl);
-  grAmpl->GetYaxis()->SetTitle("PSA/scope amplitude ratio [%]");
-  grAmpl->GetXaxis()->SetTitle("Pulse amplitude [mV]");
+  grAmpl->GetYaxis()->SetTitle("e_{ampl} [%]");
+  grAmpl->GetXaxis()->SetTitle("Amplitude [mV]");
   grAmpl->Draw("AP");
   grAmpl->GetXaxis()->SetRangeUser(6,2000);
   grAmpl->GetXaxis()->SetLimits(6,2000);
-  grAmpl->GetYaxis()->SetRangeUser(0,150);
-  grAmpl->GetYaxis()->SetLimits(0,150);
+  grAmpl->GetYaxis()->SetRangeUser(-21,21);
+  grAmpl->GetYaxis()->SetLimits(-21,21);
+  grAmpl->GetXaxis()->SetTitleSize(0.08);
+  grAmpl->GetYaxis()->SetTitleSize(0.08);
+  grAmpl->GetXaxis()->SetLabelSize(0.06);
+  grAmpl->GetYaxis()->SetLabelSize(0.06);
+  grAmpl->GetXaxis()->SetTitleOffset(0.9);
+  grAmpl->GetYaxis()->SetTitleOffset(0.9);
 
   c1->SetLogx();
   c1->Update();
@@ -116,7 +122,7 @@ void plotWidth() {
   //calculate error bars
   vector<double> psaWidthEff, psaWidthEffErr;
   for (int32_t i=0; i<psaShortSet.nRuns; i++) {
-    psaWidthEff.push_back(100.0*psaShortSet.width.at(i)/scopeSet.width.at(i));
+    psaWidthEff.push_back(100.0*psaShortSet.width.at(i)/scopeSet.width.at(i)-100);
     psaWidthEffErr.push_back( 100.0*dr.relError(psaShortSet.width.at(i),
                                       psaShortSet.widthStd.at(i),
                                       scopeSet.width.at(i),
@@ -125,7 +131,7 @@ void plotWidth() {
   }
   vector<double> psaWidth200Eff, psaWidth200EffErr;
   for (int32_t i=0; i<psaShortSet.nRuns; i++) {
-    psaWidth200Eff.push_back(100.0*psaShortSet.width.at(i)/scope200Set.width.at(i));
+    psaWidth200Eff.push_back(100.0*psaShortSet.width.at(i)/scope200Set.width.at(i)-100);
     psaWidth200EffErr.push_back( 100.0*dr.relError(psaShortSet.width.at(i),
                                       psaShortSet.widthStd.at(i),
                                       scope200Set.width.at(i),
@@ -142,18 +148,21 @@ void plotWidth() {
   dr.prettify(c1);
   dr.prettify(grWidth);
   // grWidth->GetYaxis()->SetRangeUser(0,1.2);
-  grWidth->GetYaxis()->SetTitle("PSA/scope width ratio [%]");
-  grWidth->GetXaxis()->SetTitle("Pulse width [ns]");
+  grWidth->GetYaxis()->SetTitle("e_{width} [%]");
+  grWidth->GetXaxis()->SetTitle("Width [ns]");
   grWidth->GetXaxis()->SetRangeUser(0.9,200);
   grWidth->GetXaxis()->SetLimits(0.9,200);
-  grWidth->GetYaxis()->SetRangeUser(0,150);
-  grWidth->GetYaxis()->SetLimits(0,150);
   grWidth->Draw("AP");
   grWidth->GetXaxis()->SetRangeUser(0.9,200);
   grWidth->GetXaxis()->SetLimits(0.9,200);
-  grWidth->GetYaxis()->SetRangeUser(0,150);
-  grWidth->GetYaxis()->SetLimits(0,150);
-
+  grWidth->GetYaxis()->SetRangeUser(-21,21);
+  grWidth->GetYaxis()->SetLimits(-21,21);
+  grWidth->GetXaxis()->SetTitleSize(0.08);
+  grWidth->GetYaxis()->SetTitleSize(0.08);
+  grWidth->GetXaxis()->SetLabelSize(0.06);
+  grWidth->GetYaxis()->SetLabelSize(0.06);
+  grWidth->GetXaxis()->SetTitleOffset(0.9);
+  grWidth->GetYaxis()->SetTitleOffset(0.9);
   TLegend *leg = new TLegend (0.15,0.15, 0.5, 0.5);
 
   c1->SetLogx();
@@ -193,7 +202,7 @@ void plotArea() {
   //calculate error bars
   vector<double> psaWidthEff, psaWidthEffErr;
   for (int32_t i=0; i<psaShortSet.nRuns; i++) {
-    psaWidthEff.push_back(100.0*psaShortSet.area.at(i)/scopeSet.area.at(i));
+    psaWidthEff.push_back(100.0*psaShortSet.area.at(i)/scopeSet.area.at(i)-100);
     psaWidthEffErr.push_back( 100.0*dr.relError(psaShortSet.area.at(i),
                                       psaShortSet.areaStd.at(i),
                                       scopeSet.area.at(i),
@@ -202,7 +211,7 @@ void plotArea() {
   }
   vector<double> psaWidth200Eff, psaWidth200EffErr;
   for (int32_t i=0; i<psaShortSet.nRuns; i++) {
-    psaWidth200Eff.push_back(100.0*psaShortSet.area.at(i)/scope200Set.area.at(i));
+    psaWidth200Eff.push_back(100.0*psaShortSet.area.at(i)/scope200Set.area.at(i)-100);
     psaWidth200EffErr.push_back( 100.0*dr.relError(psaShortSet.area.at(i),
                                       psaShortSet.areaStd.at(i),
                                       scope200Set.area.at(i),
@@ -219,8 +228,14 @@ void plotArea() {
   dr.prettify(c1);
   dr.prettify(grWidth);
   // grWidth->GetYaxis()->SetRangeUser(0,1.2);
-  grWidth->GetYaxis()->SetTitle("PSA/scope area ratio [%]");
-  grWidth->GetXaxis()->SetTitle("Pulse area [pVs]");
+  grWidth->GetYaxis()->SetTitle("e_{area} [%]");
+  grWidth->GetXaxis()->SetTitle("Area [pVs]");
+  grWidth->GetXaxis()->SetTitleSize(0.08);
+  grWidth->GetYaxis()->SetTitleSize(0.08);
+  grWidth->GetXaxis()->SetLabelSize(0.06);
+  grWidth->GetYaxis()->SetLabelSize(0.06);
+  grWidth->GetXaxis()->SetTitleOffset(0.9);
+  grWidth->GetYaxis()->SetTitleOffset(0.9);
   // grWidth->GetXaxis()->SetRangeUser(0.9,200);
   // grWidth->GetXaxis()->SetLimits(0.9,200);
   // grWidth->GetYaxis()->SetRangeUser(0,150);
@@ -285,21 +300,21 @@ double AmplAVG = 60;
 
 vector<double> psaAreaEff, psaAreaEffErr;
 for (int32_t i=0; i<psaSet.nRuns; i++) {
-  psaAreaEff.push_back(100.0*psaSet.area.at(i)/AreaAVG);
+  psaAreaEff.push_back(100.0*psaSet.area.at(i)/AreaAVG-100);
   psaAreaEffErr.push_back( 100.0*psaSet.areaStd.at(i)/AreaAVG  );
-  cout<<" cur "<< psaSet.area.at(i)/AreaAVG <<endl;
+  cout<<" cur "<< psaSet.area.at(i)/AreaAVG-100 <<endl;
 }
 vector<double> psaWidthEff, psaWidthEffErr;
 for (int32_t i=0; i<psaSet.nRuns; i++) {
-  psaWidthEff.push_back(100.0*psaSet.width.at(i)/WidthAVG);
+  psaWidthEff.push_back(100.0*psaSet.width.at(i)/WidthAVG-100);
   psaWidthEffErr.push_back( 100.0*psaSet.widthStd.at(i)/WidthAVG  );
-  cout<<" cur "<< psaSet.width.at(i)/WidthAVG <<endl;
+  cout<<" cur "<< psaSet.width.at(i)/WidthAVG-100 <<endl;
 }
 vector<double> psaAmplEff, psaAmplEffErr;
 for (int32_t i=0; i<psaSet.nRuns; i++) {
-  psaAmplEff.push_back(100.0*psaSet.maxAmpl.at(i)/AmplAVG);
+  psaAmplEff.push_back(100.0*psaSet.maxAmpl.at(i)/AmplAVG-100);
   psaAmplEffErr.push_back( 100.0*psaSet.maxAmplStd.at(i)/AmplAVG  );
-  cout<<" cur "<< psaSet.area.at(i)/AmplAVG <<endl;
+  cout<<" cur "<< psaSet.maxAmpl.at(i)/AmplAVG-100 <<endl;
 }
 
 
@@ -311,39 +326,64 @@ for (int32_t i=0; i<psaSet.nRuns; i++) {
                                                   &SNRErr[0], &psaAmplEffErr[0] );
   TGraphErrors *grArea = new TGraphErrors(psaSet.nRuns, &SNR[0], &psaAreaEff[0],
                                                   &SNRErr[0], &psaAreaEffErr[0] );
-  dr.prettify(c1);
-  c1->SetLogx();
   dr.prettify(grWidth);
   dr.prettify(grAmpl);
   dr.prettify(grArea);
+
+  dr.prettify(c1);
+  c1->SetLogx();
+
   // grWidth->GetYaxis()->SetRangeUser(0,1.2);
-  grWidth->GetYaxis()->SetTitle("Width [%]");
+  grWidth->GetYaxis()->SetTitle("e_{width} [%]");
   grWidth->GetXaxis()->SetTitle("SNR");
-  grAmpl->GetYaxis()->SetTitle("Amplitude [%]");
+  grAmpl->GetYaxis()->SetTitle("e_{ampl} [%]");
   grAmpl->GetXaxis()->SetTitle("SNR");
-  grArea->GetYaxis()->SetTitle("Area  [%]");
+  grArea->GetYaxis()->SetTitle("e_{area} [%]");
   grArea->GetXaxis()->SetTitle("SNR");
+
+  grWidth->GetXaxis()->SetTitleSize(0.08);
+  grWidth->GetYaxis()->SetTitleSize(0.08);
+  grWidth->GetXaxis()->SetLabelSize(0.06);
+  grWidth->GetYaxis()->SetLabelSize(0.06);
+  grWidth->GetXaxis()->SetTitleOffset(0.9);
+  grWidth->GetYaxis()->SetTitleOffset(0.9);
+  // cout << "ndiv " << grWidth->GetXaxis()->GetNdivisions() << endl;
+  // grWidth->GetYaxis()->SetNdivisions(grWidth->GetXaxis()->GetNdivisions()/100);
+  grAmpl->GetXaxis()->SetTitleSize(0.08);
+  grAmpl->GetYaxis()->SetTitleSize(0.08);
+  grAmpl->GetXaxis()->SetLabelSize(0.06);
+  grAmpl->GetYaxis()->SetLabelSize(0.06);
+  grAmpl->GetXaxis()->SetTitleOffset(0.9);
+  grAmpl->GetYaxis()->SetTitleOffset(0.9);
+  grArea->GetXaxis()->SetTitleSize(0.08);
+  grArea->GetYaxis()->SetTitleSize(0.08);
+  grArea->GetXaxis()->SetLabelSize(0.06);
+  grArea->GetYaxis()->SetLabelSize(0.06);
+  grArea->GetXaxis()->SetTitleOffset(0.9);
+  grArea->GetYaxis()->SetTitleOffset(0.9);
+
+
   grWidth->Draw("AP");
-  grWidth->GetXaxis()->SetRangeUser(4,120);
-  grWidth->GetXaxis()->SetLimits(4,120);
-  grWidth->GetYaxis()->SetRangeUser(80,120);
-  grWidth->GetYaxis()->SetLimits(80,120);
+  grWidth->GetXaxis()->SetRangeUser(4,101);
+  grWidth->GetXaxis()->SetLimits(4,101);
+  grWidth->GetYaxis()->SetRangeUser(-21,21);
+  grWidth->GetYaxis()->SetLimits(-21,21);
 
   c1->Update();
   c1->WaitPrimitive();
   grAmpl->Draw("AP");
-  grAmpl->GetXaxis()->SetRangeUser(4,120);
-  grAmpl->GetXaxis()->SetLimits(4,120);
-  grAmpl->GetYaxis()->SetRangeUser(80,120);
-  grAmpl->GetYaxis()->SetLimits(80,120);
+  grAmpl->GetXaxis()->SetRangeUser(4,101);
+  grAmpl->GetXaxis()->SetLimits(4,101);
+  grAmpl->GetYaxis()->SetRangeUser(-21,21);
+  grAmpl->GetYaxis()->SetLimits(-21,21);
   c1->Update();
   c1->WaitPrimitive();
   grArea->Draw("AP");
-  grArea->GetXaxis()->SetRangeUser(4,120);
-  grArea->GetXaxis()->SetLimits(4,120);
+  grArea->GetXaxis()->SetRangeUser(4,101);
+  grArea->GetXaxis()->SetLimits(4,101);
 
-  grArea->GetYaxis()->SetRangeUser(80,120);
-  grArea->GetYaxis()->SetLimits(80,120);
+  grArea->GetYaxis()->SetRangeUser(-21,21);
+  grArea->GetYaxis()->SetLimits(-21,21);
   c1->Update();
   c1->WaitPrimitive();
 

@@ -1,17 +1,17 @@
 \contentsline {chapter}{\numberline {1}Charge monitoring\hfil \hbox {}\linebreak {\itshape The ATLAS Diamond Beam Monitor}}{2}
-\contentsline {section}{\numberline {1.1}Luminosity measurements}{4}
+\contentsline {section}{\numberline {1.1}Luminosity measurements}{3}
 \contentsline {section}{\numberline {1.2}Diamond pixel module}{4}
 \contentsline {subsection}{\numberline {1.2.1}Sensors}{4}
 \contentsline {subsection}{\numberline {1.2.2}Front-end electronics}{5}
 \contentsline {section}{\numberline {1.3}Module assembly}{8}
-\contentsline {section}{\numberline {1.4}Performance results}{9}
-\contentsline {subsection}{\numberline {1.4.1}Source test results}{9}
-\contentsline {subsubsection}{Pixel connectivity}{10}
-\contentsline {subsubsection}{Pseudo-efficiency}{11}
+\contentsline {section}{\numberline {1.4}Performance results}{8}
+\contentsline {subsection}{\numberline {1.4.1}Source test results}{8}
+\contentsline {subsubsection}{Pixel connectivity}{9}
+\contentsline {subsubsection}{Pseudo-efficiency}{10}
 \contentsline {subsection}{\numberline {1.4.2}Erratic current}{12}
-\contentsline {subsection}{\numberline {1.4.3}Test beam results}{13}
-\contentsline {subsection}{\numberline {1.4.4}Summary of the QC}{14}
-\contentsline {section}{\numberline {1.5}Installation and commissioning}{14}
-\contentsline {subsection}{\numberline {1.5.1}Positioning in ATLAS}{16}
-\contentsline {section}{\numberline {1.6}Operation}{17}
-\contentsline {section}{\numberline {1.7}Conclusion}{20}
+\contentsline {subsection}{\numberline {1.4.3}Test beam results}{12}
+\contentsline {subsection}{\numberline {1.4.4}Summary of the QC}{13}
+\contentsline {section}{\numberline {1.5}Installation and commissioning}{13}
+\contentsline {subsection}{\numberline {1.5.1}Positioning in ATLAS}{15}
+\contentsline {section}{\numberline {1.6}Operation}{16}
+\contentsline {section}{\numberline {1.7}Conclusion}{18}

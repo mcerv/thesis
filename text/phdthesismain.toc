@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {2.4.2}Signal fluctuation}{21}
 \contentsline {subsection}{\numberline {2.4.3}Charge collection}{21}
 \contentsline {subsection}{\numberline {2.4.4}Charge trapping}{22}
-\contentsline {subsubsection}{\numberline {2.4.4.1}Pumping/priming}{24}
+\contentsline {subsubsection}{\numberline {2.4.4.1}Priming/pumping}{24}
 \contentsline {section}{\numberline {2.5}Radiation damage}{24}
 \contentsline {subsubsection}{\numberline {2.5.0.1}Irradiation damage factor}{25}
 \contentsline {section}{\numberline {2.6}Temperature effects}{26}

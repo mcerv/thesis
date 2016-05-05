@@ -269,13 +269,16 @@ void HistAna::plotSpectrum() {
   dr->prettify(m_vp.at(Cx).histMaxampl_acc_v4,"gray");
   dr->prettify(m_vp.at(C2).histMaxampl_acc_v4,"light blue");
   dr->prettify(m_vp.at(C2).extHistArea_acc_v5,"black");
+  m_vp.at(C2).extHistArea_acc_v5->SetLineWidth(1);
 
   m_vp.at(Cx).histMaxampl_acc_v4->Draw();
   m_vp.at(Cx).histMaxampl_acc_v4->GetXaxis()->SetTitle("Amplitude [ADC]");
   m_vp.at(Cx).histMaxampl_acc_v4->GetYaxis()->SetTitle("Normalised counts");
+  // m_vp.at(Cx).histMaxampl_acc_v4->GetYaxis()->SetNdivisions(7);
   m_vp.at(Cx).histMaxampl_acc_v4->GetXaxis()->SetRangeUser(0,150);
   TLatex* text = new TLatex();
-  text->SetTextFont(42);
+  text->SetTextFont(132);
+  text->SetTextSize(0.05);
   text->DrawLatex(70,0.15,"^{148}Gd");
   text->DrawLatex(105,0.08,"^{239}Pu");
   text->DrawLatex(121,0.085,"^{241}Am");
@@ -291,7 +294,7 @@ void HistAna::plotSpectrum() {
   m_vp.at(C2).extHistArea_acc_v5->Rebin(16);
   m_vp.at(C2).extHistArea_acc_v5->GetXaxis()->SetLimits(0,254);
 
-  TLegend *leg = new TLegend(0.65,0.7,0.95,0.95);
+  TLegend *leg = new TLegend(0.71,0.82,0.95,0.95);
   stringstream ss;
   //-------------- Gaussian fit of the amplitude --------------
   TF1 *fit1 =  new TF1("gaussian1", "gaus", 124, 132);
@@ -320,6 +323,7 @@ void HistAna::plotSpectrum() {
   //------------------------------------------------------------
 
   leg->Draw("same");
+  leg->SetTextFont(132);
   cxalpha->Update();
   cxalpha->WaitPrimitive();
   m_vp.at(Cx).histMaxampl_acc_v4->Fit(fit1, "RQS");

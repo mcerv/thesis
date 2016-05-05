@@ -74,8 +74,8 @@ void plotFreq() {
     inFile >> freqPsa[nSample];
 
     //from kHz to MHz
-    freqOsc[nSample] = freqOsc[nSample]/1000;
-    freqPsa[nSample] = freqPsa[nSample]/1000;
+    freqOsc[nSample] = freqOsc[nSample]*1000;
+    freqPsa[nSample] = freqPsa[nSample]*1000;
 
     if (!nSample) corrFactor = freqOsc[nSample]/freqPsa[nSample];
     ratio[nSample] = 100*freqPsa[nSample]/freqOsc[nSample]*corrFactor;
@@ -91,9 +91,10 @@ void plotFreq() {
   dr->prettify(c1);
   gr1->Draw("AP");
   dr->prettify(gr1);
-  gr1->GetXaxis()->SetTitle("Trigger rate [10^{6} s^{-1}]");
-  gr1->GetYaxis()->SetTitle("% analysed pulses");
-
+  gr1->GetYaxis()->SetRangeUser(1,198);
+  gr1->GetXaxis()->SetTitle("Trigger rate [s^{-1}]");
+  // gr1->GetXaxis()->SetNoExponent(kTRUE);
+  gr1->GetYaxis()->SetTitle("Analysed pulses [%]");
   c1->Update();
   c1->WaitPrimitive();
 

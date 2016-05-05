@@ -1,0 +1,64 @@
+\begin{thebibliography}{10}
+
+\bibitem{CIS:00000}
+\emph{CiS Forschungsinstitut fuer Mikrosensorik GmbH}.
+\newblock http://www.cismst.org/.
+
+\bibitem{ACONI:00000}
+\emph{EUDET ACONITE telescope}.
+
+\bibitem{ATLAS-CONF-2010-102}
+\emph{Measurement of the Rate of Collisions from Satellite Bunches for the
+  April-May 2010 LHC Luminosity Calibration}.
+\newblock Technical Report ATLAS-CONF-2010-102, CERN, Geneva, Dec 2010.
+
+\bibitem{Albert:1477014}
+J~\emph{et al.} Albert.
+\newblock \emph{Prototype ATLAS IBL Modules using the FE-I4A Front-End Readout
+  Chip}.
+\newblock {\em J. Instrum.}, 7(arXiv:1209.1906):P11010. 45 p, Sep 2012.
+\newblock Comments: 45 pages, 30 figures, submitted to JINST.
+
+\bibitem{Claus:2021543}
+Richard Claus.
+\newblock \emph{A New ATLAS Muon CSC Readout System with System on Chip
+  Technology on ATCA Platform}.
+\newblock Jun 2015.
+
+\bibitem{Gorisek:1062633}
+A~Gori\v{s}ek, V~Cindro, I~Dolenc, H~Frais-Kšlbl, E~Griesmayer, H~Kagan,
+  S~Korpar, G~Kramberger, I~Mandic, M~Meyer, M~Mikuz, H~Pernegger, S~Smith,
+  W~Trischuk, P~Weilhammer, and M~Zavrtanik.
+\newblock \emph{ATLAS diamond Beam Condition Monitor}.
+\newblock {\em Nucl. Instrum. Methods Phys. Res., A}, 572(1):67--69, 2007.
+
+\bibitem{Huegging:1314083}
+Fabian Huegging.
+\newblock \emph{The ATLAS Pixel Insertable B-Layer (IBL)}.
+\newblock {\em Nucl. Instrum. Methods Phys. Res., A},
+  650(arXiv:1012.2742):45--49. 7 p, Dec 2010.
+\newblock Comments: 7 pages, 5 figures, 4 tables, accepted by Nuclear
+  Instruments and Methods A for publication.
+
+\bibitem{McGoldrick:1982209}
+Garrin McGoldrick, Matev\v{z} \v{C}erv, and Andrej Gori\v{s}ek.
+\newblock \emph{Synchronized analysis of testbeam data with the Judith
+  software}.
+\newblock {\em Nucl. Instrum. Methods Phys. Res., A}, 765:140--145, 2014.
+
+\bibitem{Mueller:1175553}
+S~Mueller, W~deBoer, M~Schneider, A~Sabellek, M~Schmanau, C~Ruehle,
+  T~Schneider, and R~Hall-Wilton.
+\newblock \emph{Study of leakage currents in pCVD diamonds as function of the
+  magnetic field}.
+\newblock {\em Phys. Status Solidi, A}, 206(arXiv:0905.0403):2091--2097. 6 p,
+  May 2009.
+\newblock Comments: 6 pages, 16 figures, poster at Hasselt Diamond Workshop,
+  Mar 2009.
+
+\bibitem{Cerv:1630832}
+Matev\v{z} \v{C}erv.
+\newblock \emph{The ATLAS Diamond Beam Monitor}.
+\newblock Technical Report ATL-INDET-PROC-2013-021, CERN, Geneva, Nov 2013.
+
+\end{thebibliography}

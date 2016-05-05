@@ -24,8 +24,8 @@ int32_t main (void) {
 
   for (int32_t i=num; i<num+1; i++) {
     ss.str("");
-    // ss << "../../../../../../Documents/MarieCurieTALENT/Software/PSA/data/2015-08-29_lab/";
-    ss << "/Volumes/WINSTORAGE/Meas/PSAcalib/Harsh/";
+    ss << "../../../../../../Documents/MarieCurieTALENT/Software/PSA/data/2015-08-29_lab/";
+    // ss << "/Volumes/WINSTORAGE/Meas/PSAcalib/Harsh/";
     if (i<10)
       ss<< "00";
     else
@@ -62,9 +62,9 @@ int32_t main (void) {
   }
   buf.clear();
   //--------------------------- analysis ------------------------------
-  histAna->plotLab();
-  histAna->saveTxt();
-  // histAna->plotSpectrum();
+  // histAna->plotLab();
+  // histAna->saveTxt();
+  histAna->plotSpectrum();
 
   cout<<"All done."<<endl;
   return 0;

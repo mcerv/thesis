@@ -11,9 +11,21 @@ Daniel Dominguez.
 \newblock \emph{Standard Model. Le modele standard}.
 \newblock General Photo, Mar 2015.
 
+\bibitem{Rossi:2026222}
+E~Rossi.
+\newblock \emph{Measurements of the properties of the Higgs-like boson in the
+  four leptons decay channel with the ATLAS detector using $25 fb^{-1}$ of
+  proton-proton collision data}.
+\newblock {\em Nuovo Cimento C}, 037(01):217--221. 5 p, 2014.
+
 \bibitem{CERN:00000}
 \emph{European Centre for Nuclear Research, CERN}.
 \newblock http://home.cern.
+
+\bibitem{Regenstreif:342915}
+E~Regenstreif.
+\newblock \emph{The CERN proton synchrotron, 1}.
+\newblock {\em Ned. T. Natuurk.}, 25:117--132, 1959.
 
 \bibitem{Mills:133232}
 W~P~C Mills.
@@ -48,10 +60,38 @@ Maximilien Brice.
 \newblock \emph{LHC tunnel}.
 \newblock Jan 2011.
 
+\bibitem{Herr:1625184}
+W~Herr, B~J Holzer, and B~Muratori.
+\newblock \emph{Design and Principles of Synchrotrons and Circular Colliders:
+  Concept of Luminosity}.
+\newblock {\em Landolt-Bšrnstein}, 21C:6.4--1 -- 6.4--7, 2013.
+
+\bibitem{BejarAlonso:2069130}
+I~Bejar~Alonso and L~Rossi.
+\newblock \emph{HiLumi LHC Technical Design Report: Deliverable: D1.10}.
+\newblock Technical Report CERN-ACC-2015-0140, CERN, Geneva, Nov 2015.
+
+\bibitem{Jenni:1193085}
+Peter Jenni.
+\newblock \emph{The experiments: ATLAS}.
+\newblock page 16 p, 2009.
+
 \bibitem{Pequenao:1095924}
 Joao Pequenao.
 \newblock \emph{Computer generated image of the whole ATLAS detector}.
 \newblock Mar 2008.
+
+\bibitem{DIAMS:00000}
+E.~A. Ekimov, V.~A. Sidorov, E.~D. Bauer, N.~N. Mel'nik, N.~J. Curro, J.~D.
+  Thompson, and S.~M. Stishov.
+\newblock \emph{Superconductivity in diamond}.
+\newblock {\em Nature}, 428(6982):542--545, 04 2004.
+
+\bibitem{CVD:00000}
+1951 Park, Jong-Hee, 1955 Sudarshan, T.~S., and Inc ebrary.
+\newblock {\em \emph{Chemical vapor deposition}}.
+\newblock Materials Park, Ohio : ASM International, 2001.
+\newblock Includes bibliographical references.
 
 \bibitem{Cividec:00000}
 CIVIDEC~Instrumentation GmbH.
@@ -69,6 +109,21 @@ Claudia Marcelloni De~Oliveira.
   Experiment side C}.
 \newblock General Photo, May 2014.
 
+\bibitem{BREMS:00000}
+\emph{Bremsstrahlung}.
+\newblock 2016.
+
+\bibitem{PARMA:00000}
+Yoshihiko Hatano, Yosuke Katsumura, and A.~Mozumder.
+\newblock {\em \emph{Charged Particle and Photon Interactions with Matter:
+  Recent Advances, Applications, and Interfaces}}.
+\newblock CRC Press, 2010.
+
+\bibitem{PHSEM:00000}
+S.~Sze and K.~N. Kwok.
+\newblock {\em \emph{Physics of Semiconductor Devices, 3rd ed.}}
+\newblock Wiley, Hoboken, NJ, 2007.
+
 \bibitem{PDDC:00000}
 W.~Blum, W.~Riegler, and L.~Rolandi.
 \newblock {\em \emph{Particle Detection with Drift Chambers}}, volume~2 of {\em
@@ -85,23 +140,18 @@ S.~Ramo.
 \newblock \emph{Currents Induced by Electron Motion}.
 \newblock {\em Proceedings of the IRE}, 27:584--585, 1939.
 
-\bibitem{PHSEM:00000}
-S.~Sze and K.~N. Kwok.
-\newblock {\em \emph{Physics of Semiconductor Devices, 3rd ed.}}
-\newblock Wiley, Hoboken, NJ, 2007.
-
 \bibitem{Jansen:1956431}
 Hendrik Jansen, Norbert Wermes, and Heinz Pernegger.
-\newblock {\em {Chemical Vapour Deposition Diamond - Charge Carrier Movement at
-  Low Temperatures and Use in Time-Critical Applications}}.
+\newblock {\em \emph{Chemical Vapour Deposition Diamond - Charge Carrier
+  Movement at Low Temperatures and Use in Time-Critical Applications}}.
 \newblock PhD thesis, Bonn U., Sep 2013.
 \newblock Presented 10 Dec 2013.
 
 \bibitem{JANSEN:00001}
 Hendrik Jansen, Daniel Dobos, Thomas Eisel, Heinz Pernegger, Vladimir Eremin,
   and Norbert Wermes.
-\newblock Temperature dependence of charge carrier mobility in single-crystal
-  chemical vapour deposition diamond.
+\newblock \emph{Temperature dependence of charge carrier mobility in
+  single-crystal chemical vapour deposition diamond}.
 \newblock {\em Journal of Applied Physics}, 113(17), 2013.
 
 \bibitem{VDRIFT:00000}
@@ -111,15 +161,35 @@ Z.~Li and H.~Kraner.
 \newblock {\em Nuclear Physics B - Proceedings Supplements 32}, (32):398--409,
   1993.
 
+\bibitem{BETHE:00001}
+Peter Sigmund.
+\newblock {\em \emph{Particle Penetration and Radiation Effects Volume 2 -
+  General Aspects and Stopping of Swift Point Charges}}, volume 151 of {\em
+  Springer Series in Solid-State Sciences}.
+\newblock Springer-Verlag Berlin Heidelberg, 2006.
+
+\bibitem{1947PhRv...72...26F}
+U.~{Fano}.
+\newblock \emph{Ionization Yield of Radiations. II. The Fluctuations of the
+  Number of Ions}.
+\newblock {\em Physical Review}, 72:26--29, July 1947.
+
+\bibitem{1980PhRvB..22.5565A}
+R.~C. {Alig}, S.~{Bloom}, and C.~W. {Struck}.
+\newblock \emph{Scattering by ionization and phonon emission in
+  semiconductors}.
+\newblock 22:5565--5582, December 1980.
+
 \bibitem{CHTR:00000}
 Claude~A. Klein.
-\newblock Radiation-induced energy levels in silicon.
+\newblock \emph{Radiation-Induced Energy Levels in Silicon}.
 \newblock {\em Journal of Applied Physics}, 30(8):1222--1231, 1959.
 
 \bibitem{pumping:00000}
 Marco Marinelli, E.~Milani, M.~E. Morgada, G.~Pucella, G.~Rodriguez,
   A.~Tucciarone, G.~Verona-Rinati, M.~Angelone, and M.~Pillon.
-\newblock Thermal detrapping analysis of pumping-related defects in diamond.
+\newblock \emph{Thermal detrapping analysis of pumping-related defects in
+  diamond}.
 \newblock {\em Applied Physics Letters}, 83(18):3707--3709, 2003.
 
 \bibitem{2002NIMPA}
@@ -131,8 +201,8 @@ M.~{Huhtinen}.
 
 \bibitem{Guthoff:2014223}
 Moritz Guthoff, Wim de~Boer, and Steffen MÃ¼ller.
-\newblock Simulation of beam induced lattice defects of diamond detectors using
-  \{FLUKA\}.
+\newblock \emph{Simulation of beam induced lattice defects of diamond detectors
+  using \{FLUKA\} }.
 \newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
   Accelerators, Spectrometers, Detectors and Associated Equipment}, 735:223 --
   228, 2014.
@@ -154,13 +224,23 @@ M.~Miku\v{z}.
 
 \bibitem{PhysRevLett.13.13}
 J.~L. Yarnell, J.~L. Warren, and R.~G. Wenzel.
-\newblock Lattice vibrations in diamond.
+\newblock \emph{Lattice Vibrations in Diamond}.
 \newblock {\em Phys. Rev. Lett.}, 13:13--15, Jul 1964.
 
 \bibitem{1970PhyEd...5..226L}
 W.~Y. {Liang}.
-\newblock {Excitons}.
+\newblock \emph{Excitons}.
 \newblock {\em Physics Education}, 5:226--228, July 1970.
+
+\bibitem{PhysRev.32.97}
+J.~B. Johnson.
+\newblock \emph{Thermal Agitation of Electricity in Conductors}.
+\newblock {\em Phys. Rev.}, 32:97--109, Jul 1928.
+
+\bibitem{PhysRev.32.110}
+H.~Nyquist.
+\newblock \emph{Thermal Agitation of Electric Charge in Conductors}.
+\newblock {\em Phys. Rev.}, 32:110--113, Jul 1928.
 
 \bibitem{FPGA:00000}
 \emph{Xilinx Virtex 5 FPGA}.
@@ -168,7 +248,7 @@ W.~Y. {Liang}.
 
 \bibitem{ASIC:00000}
 M.~Garcia-Sciveres.
-\newblock {ATLAS Experiment Pixel Detector Upgrades}.
+\newblock \emph{ATLAS Experiment Pixel Detector Upgrades}.
 \newblock 2011.
 
 \bibitem{E6:00000}
@@ -181,8 +261,8 @@ M.~Garcia-Sciveres.
 
 \bibitem{IIA:00001}
 M.~\v{C}erv, P.~Sarin, H.~Pernegger, P.~Vageeswaran, and E.~Griesmayer.
-\newblock Diamond detector for beam profile monitoring in comet experiment at
-  j-parc.
+\newblock \emph{Diamond detector for beam profile monitoring in COMET
+  experiment at J-PARC}.
 \newblock {\em Journal of Instrumentation}, 10(06):C06016, 2015.
 
 \bibitem{DRS4:00000}
@@ -205,13 +285,13 @@ H.~Bethe and J.~Ashkin.
 
 \bibitem{sarin2014comprehensive}
 V.~Sarin.
-\newblock {\em Comprehensive Hard Materials}.
+\newblock {\em \emph{Comprehensive Hard Materials}}.
 \newblock Elsevier Science, 2014.
 \newblock p. 411.
 
 \bibitem{Griesmayer20121997}
 E.~Griesmayer and B.~Dehning.
-\newblock Diamonds for beam instrumentation.
+\newblock \emph{Diamonds for Beam Instrumentation}.
 \newblock {\em Physics Procedia}, 37:1997 -- 2004, 2012.
 \newblock Proceedings of the 2nd International Conference on Technology and
   Instrumentation in Particle Physics (TIPP 2011).
@@ -219,9 +299,71 @@ E.~Griesmayer and B.~Dehning.
 \bibitem{Kramberger:2013wva}
 Gregor Kramberger, V.~Cindro, A.~Gorisek, I.~Mandic, M.~Mikuz, and
   M.~Zavrtanik.
-\newblock {Effects of bias voltage during priming on operation of diamond
+\newblock \emph{Effects of bias voltage during priming on operation of diamond
   detectors}.
 \newblock {\em PoS}, Vertex2012:013, 2013.
+
+\bibitem{Cerv:1630832}
+Matev\v{z} \v{C}erv.
+\newblock \emph{The ATLAS Diamond Beam Monitor}.
+\newblock Technical Report ATL-INDET-PROC-2013-021, CERN, Geneva, Nov 2013.
+
+\bibitem{Gorisek:1062633}
+A~Gori\v{s}ek, V~Cindro, I~Dolenc, H~Frais-Kšlbl, E~Griesmayer, H~Kagan,
+  S~Korpar, G~Kramberger, I~Mandic, M~Meyer, M~Mikuz, H~Pernegger, S~Smith,
+  W~Trischuk, P~Weilhammer, and M~Zavrtanik.
+\newblock \emph{ATLAS diamond Beam Condition Monitor}.
+\newblock {\em Nucl. Instrum. Methods Phys. Res., A}, 572(1):67--69, 2007.
+
+\bibitem{ATLAS-CONF-2010-102}
+\emph{Measurement of the Rate of Collisions from Satellite Bunches for the
+  April-May 2010 LHC Luminosity Calibration}.
+\newblock Technical Report ATLAS-CONF-2010-102, CERN, Geneva, Dec 2010.
+
+\bibitem{CIS:00000}
+\emph{CiS Forschungsinstitut fuer Mikrosensorik GmbH}.
+\newblock http://www.cismst.org/.
+
+\bibitem{Albert:1477014}
+J~\emph{et al.} Albert.
+\newblock \emph{Prototype ATLAS IBL Modules using the FE-I4A Front-End Readout
+  Chip}.
+\newblock {\em J. Instrum.}, 7(arXiv:1209.1906):P11010. 45 p, Sep 2012.
+\newblock Comments: 45 pages, 30 figures, submitted to JINST.
+
+\bibitem{Huegging:1314083}
+Fabian Huegging.
+\newblock \emph{The ATLAS Pixel Insertable B-Layer (IBL)}.
+\newblock {\em Nucl. Instrum. Methods Phys. Res., A},
+  650(arXiv:1012.2742):45--49. 7 p, Dec 2010.
+\newblock Comments: 7 pages, 5 figures, 4 tables, accepted by Nuclear
+  Instruments and Methods A for publication.
+
+\bibitem{Claus:2021543}
+Richard Claus.
+\newblock \emph{A New ATLAS Muon CSC Readout System with System on Chip
+  Technology on ATCA Platform}.
+\newblock Jun 2015.
+
+\bibitem{Mueller:1175553}
+S~Mueller, W~deBoer, M~Schneider, A~Sabellek, M~Schmanau, C~Ruehle,
+  T~Schneider, and R~Hall-Wilton.
+\newblock \emph{Study of leakage currents in pCVD diamonds as function of the
+  magnetic field}.
+\newblock {\em Phys. Status Solidi, A}, 206(arXiv:0905.0403):2091--2097. 6 p,
+  May 2009.
+\newblock Comments: 6 pages, 16 figures, poster at Hasselt Diamond Workshop,
+  Mar 2009.
+
+\bibitem{McGoldrick:1982209}
+Garrin McGoldrick, Matev\v{z} \v{C}erv, and Andrej Gori\v{s}ek.
+\newblock \emph{Synchronized analysis of testbeam data with the Judith
+  software}.
+\newblock {\em Nucl. Instrum. Methods Phys. Res., A}, 765:140--145, 2014.
+
+\bibitem{ACONI:00000}
+\emph{EUDET ACONITE telescope}.
+\newblock https://telescopes.desy.de.
 
 \bibitem{PAVEL:00000}
 P.~Kavrigin, P.~Finocchiaro, E.~Griesmayer, E.~Jericha, A.~Pappalardo, and

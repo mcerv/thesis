@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  3 MAY 2016 23:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  5 MAY 2016 13:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -589,11 +589,7 @@ File: 02_pulse_formation/pics/plots/raddamage.pdf Graphic file (type pdf)
 Package pdftex.def Info: 02_pulse_formation/pics/plots/raddamage.pdf used on in
 put line 360.
 (pdftex.def)             Requested size: 346.89731pt x 164.64488pt.
-
-
-LaTeX Warning: Citation `' on page 23 undefined on input line 377.
-
-[23 <./02_pulse_formation/pics/plots/raddamage.pdf>] [24]
+ [23 <./02_pulse_formation/pics/plots/raddamage.pdf>] [24]
 <03_measurement_results/scripts/plots/dpa1.pdf, id=328, 569.12625pt x 410.53375
 pt>
 File: 03_measurement_results/scripts/plots/dpa1.pdf Graphic file (type pdf)
@@ -601,13 +597,8 @@ File: 03_measurement_results/scripts/plots/dpa1.pdf Graphic file (type pdf)
 Package pdftex.def Info: 03_measurement_results/scripts/plots/dpa1.pdf used on 
 input line 393.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
-
-
-LaTeX Warning: Reference `eq:radfactor1' on page 25 undefined on input line 402
-.
-
-[25 <./03_measurement_results/scripts/plots/dpa1.pdf, page is rotated 90 degree
-s>] [26]
+ [25 <./03_measurement_results/scripts/plots/dpa1.pdf, page is rotated 90 degre
+es>] [26]
 <02_pulse_formation/pics/plots/curramp.pdf, id=378, 198.24063pt x 70.2625pt>
 File: 02_pulse_formation/pics/plots/curramp.pdf Graphic file (type pdf)
 
@@ -828,13 +819,8 @@ File: 03_measurement_results/scripts/plots/ccd.pdf Graphic file (type pdf)
 Package pdftex.def Info: 03_measurement_results/scripts/plots/ccd.pdf used on i
 nput line 260.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
-
-
-LaTeX Warning: Reference `eq:radfactor1' on page 43 undefined on input line 266
-.
-
-[43 <./03_measurement_results/scripts/plots/ccd.pdf, page is rotated 90 degrees
->]
+ [43 <./03_measurement_results/scripts/plots/ccd.pdf, page is rotated 90 degree
+s>]
 <03_measurement_results/scripts/plots/radfactor1.pdf, id=871, 569.12625pt x 410
 .53375pt>
 File: 03_measurement_results/scripts/plots/radfactor1.pdf Graphic file (type pd
@@ -1276,10 +1262,6 @@ line 78.
 (pdftex.def)             Requested size: 303.53267pt x 165.70912pt.
  [65 <./04_charge_monitoring/pics/fei41.png>] [66 <./04_charge_monitoring/pics/
 analogPix.png>]
-
-LaTeX Warning: Reference `fig:completemod' on page 67 undefined on input line 1
-01.
-
 <04_charge_monitoring/pics/mod1.jpeg, id=2362, 426.80597pt x 283.50488pt>
 File: 04_charge_monitoring/pics/mod1.jpeg Graphic file (type jpg)
 
@@ -1966,23 +1948,26 @@ degrees>]) [115
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 25--27
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
 []\OT1/cmr/m/it/10.95 Atominstitut, Tech-ni-cal Uni-ver-sity of Vi-enna, Aus-tr
 ia\OT1/cmr/m/n/10.95 .
  []
 
-[117]
+Missing character: There is no š in font cmti10!
+[117] [118]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¼ in font cmr10!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 135.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 205.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
- [118]
-[119]) [120] (./phdthesismain.aux (./01_introduction/chapter.aux)
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 205.
+
+[119]
+Missing character: There is no š in font cmr10!
+ [120]) [121] (./phdthesismain.aux (./01_introduction/chapter.aux)
 (./02_pulse_formation/chapter.aux) (./03_measurement_results/chapter.aux)
 (./04_charge_monitoring/chapter.aux) (./05_current_monitoring/chapter.aux))
 
@@ -1993,10 +1978,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5840 strings out of 493089
- 120808 string characters out of 6134843
- 132878 words of memory out of 5000000
- 8672 multiletter control sequences out of 15000+600000
+ 5861 strings out of 493089
+ 121159 string characters out of 6134843
+ 132973 words of memory out of 5000000
+ 8693 multiletter control sequences out of 15000+600000
  18879 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,16n,49p,2146b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2026,10 +2011,10 @@ t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist
 fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on phdthesismain.pdf (124 pages, 20174383 bytes).
+Output written on phdthesismain.pdf (125 pages, 20179634 bytes).
 PDF statistics:
- 4453 PDF objects out of 5155 (max. 8388607)
- 2195 compressed objects within 22 object streams
+ 4456 PDF objects out of 5155 (max. 8388607)
+ 2197 compressed objects within 22 object streams
  0 named destinations out of 1000 (max. 500000)
  661 words of extra memory for PDF output out of 10000 (max. 10000000)
 

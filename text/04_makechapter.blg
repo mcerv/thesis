@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: 04_makechapter.aux
+A level-1 auxiliary file: 04_charge_monitoring/chapter.aux
+The style file: plain.bst
+Database file #1: bibliography/bib.bib
+Warning--to sort, need author or key in ATLAS-CONF-2010-102
+Warning--to sort, need author or key in CIS:00000
+Warning--to sort, need author or key in ACONI:00000
+Warning--empty author in CIS:00000
+Warning--empty author in ACONI:00000
+Warning--empty note in ACONI:00000
+Warning--empty author in ATLAS-CONF-2010-102
+Warning--empty journal in Claus:2021543
+You've used 10 entries,
+            2118 wiz_defined-function locations,
+            569 strings with 5981 characters,
+and the built_in function-call counts, 3195 in all, are:
+= -- 299
+> -- 175
+< -- 2
++ -- 72
+- -- 62
+* -- 278
+:= -- 553
+add.period$ -- 29
+call.type$ -- 10
+change.case$ -- 61
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 95
+empty$ -- 220
+format.name$ -- 62
+if$ -- 630
+int.to.chr$ -- 0
+int.to.str$ -- 10
+missing$ -- 6
+newline$ -- 52
+num.names$ -- 14
+pop$ -- 48
+preamble$ -- 1
+purify$ -- 51
+quote$ -- 0
+skip$ -- 59
+stack$ -- 0
+substring$ -- 194
+swap$ -- 7
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 40
+warning$ -- 8
+while$ -- 19
+width$ -- 12
+write$ -- 106
+(There were 8 warnings)
