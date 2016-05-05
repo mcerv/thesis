@@ -67,7 +67,7 @@ A signal pulse on the input is parametrised during the analysis process. The PSA
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.8\textwidth]{../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params}
+\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/pulse/alpha1params}
 \caption{A pulse and its parameters.}
 \label{fig:params}
 \end{figure}
@@ -75,7 +75,7 @@ A signal pulse on the input is parametrised during the analysis process. The PSA
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/formfac1}
+\includegraphics[width=0.7\textwidth]{05_current_monitoring/plots/formfac1}
 \caption{Form Factor is the ratio between the measured area ($a$) and the calculated area ($A\times BW$) of the pulse. The calculated area is significantly larger than the measured area for a triangular triangular pulse, but less so for the rectangular one. The red and blue dot in the right plot are the value entries of the two pulses shown. The red and blue oval shapes depict the regions for the values expected from triangular and rectangular pulses. By carefully choosing the linear qualifier (dashed line) and taking only the entries below the cut rectangular pulses can be identified.}
 \label{fig:formfac1}
 \end{figure}
@@ -109,7 +109,7 @@ The firmware is written entirely in VHDL. The diagram in figure~\ref{fig:applica
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/application}
+\includegraphics[width=0.7\textwidth]{05_current_monitoring/plots/application}
 \caption{Firmware design structure.}
 \label{fig:application}
 \end{figure}
@@ -131,7 +131,7 @@ This module is different for different applications. The Pulse Shape Analysis (P
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/analysis1}
+\includegraphics[width=0.7\textwidth]{05_current_monitoring/plots/analysis1}
 \caption{Code design plan.}
 \label{fig:architecture}
 \end{figure}
@@ -205,7 +205,7 @@ This section explains how the algorithm is designed. First, the idea for it was 
 This is the most important block. Its inputs are: \emph{vector, parsing active, position of the max. amplitude (PA) and its delay (DA)}. PA is a 32-bit binary number that shows the position of the sample with the maximum amplitude within the data block whereas the DA tells us how many clock cycles after the start of the parsing this PA block is.
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/vector_clean}
+\includegraphics[width=0.7\textwidth]{05_current_monitoring/plots/vector_clean}
 \caption{Vector cleaning routine outputs two vectors - one forward in time and one back in time from the peak of the pulse.}
 \label{fig:routine}
 \end{figure}
@@ -297,7 +297,7 @@ A pulse generator was used to verify the highest achievable rate at which the PS
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.8\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/freq}
+\includegraphics[width=0.7\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/freq}
 \caption{This figure shows the capability of the device to analyse all arriving pulses for a range of input frequencies. The highest achievable rate with zero lost pulses is $5\times10^6$~s$^{-1}$.}
 \label{fig:trigrate}
 \end{figure}
@@ -332,7 +332,7 @@ The calibration was done using a \textsuperscript{148}Gd\textsuperscript{239}Pu\
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.8\textwidth]{../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare}
+\includegraphics[width=0.7\textwidth]{../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare}
 \caption{Spectrum of a \textsuperscript{148}Gd\textsuperscript{239}Pu\textsuperscript{241}Am\textsuperscript{244}Cm source using a Cx and a C2 amplifier.}
 \label{fig:c2cx4alpha}
 \end{figure}
@@ -534,7 +534,7 @@ The one-dimensional histograms in figure~\ref{fig:1dcosrarea} show a quasi-Landa
 %
 %\begin{figure}[!t]
 %\centering
-%\includegraphics[width=0.8\textwidth]{../../../CIVIDEC/dataRead/data/plots/spaceChargeStudy}
+%\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/spaceChargeStudy}
 %\caption{Using $\upbeta$ radiation to reduce space charge in diamond}
 %\label{fig:sm}
 %\end{figure}
@@ -615,7 +615,7 @@ The data collected by the PSA show a high flux of photons, which covers a wide a
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.8\textwidth]{../../../CIVIDEC/dataRead/data/plots/triga-08-area-0}
+\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/triga-08-area-0}
 \caption{Energy spectrum after applied qualifiers reveals the tritium and $\upalpha$ peak}
 \label{fig:areatriga0}
 \end{figure}
@@ -672,7 +672,7 @@ The result could be further improved by further constraining the identification,
 
 \begin{figure}[]
 \centering
-\includegraphics[width=0.8\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4}
+\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4}
 \caption{$^{239}$Pu~Be, energy distribution of the neutrons interacting in the ballistic centre.}
 \label{fig:scatterpuarea}
 \end{figure}
@@ -712,7 +712,7 @@ At the highest reactor activity the system counts particles at a rate of $\sim1.
 
 \begin{figure}[]
 \centering
-\includegraphics[width=0.8\textwidth]{../../../CIVIDEC/dataRead/data/plots/epfl-area-1}
+\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/epfl-area-1}
 \caption{Energy spectrum in CROCUS before and after applied qualifiers}
 \label{fig:scatterepfl2area}
 \end{figure}

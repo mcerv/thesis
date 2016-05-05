@@ -1,98 +1,107 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Fundamental research}{2}
 \contentsline {section}{\numberline {1.2}Research institutes}{3}
-\contentsline {section}{\numberline {1.3}The Large Hadron Collider}{6}
+\contentsline {section}{\numberline {1.3}The Large Hadron Collider}{5}
 \contentsline {section}{\numberline {1.4}The ATLAS experiment}{7}
-\contentsline {section}{\numberline {1.5}Particle detectors}{9}
-\contentsline {subsection}{\numberline {1.5.1}Semiconductor detectors}{9}
-\contentsline {subsection}{\numberline {1.5.2}Diamond sensors}{11}
-\contentsline {chapter}{\numberline {2}Signal formation in diamond}{13}
-\contentsline {section}{\numberline {2.1}Principles of signal formation in semiconductors}{14}
-\contentsline {subsection}{\numberline {2.1.1}Signal induction by moving charges}{16}
-\contentsline {subsection}{\numberline {2.1.2}Shockley-Ramo theorem}{17}
-\contentsline {subsection}{\numberline {2.1.3}Radiation-induced electrical pulses}{18}
-\contentsline {subsection}{\numberline {2.1.4}Signal charge fluctuations}{19}
-\contentsline {section}{\numberline {2.2}Carrier transport in a diamond sensor}{19}
-\contentsline {section}{\numberline {2.3}Electronics for signal processing}{23}
-\contentsline {subsection}{\numberline {2.3.1}Signal preamplifiers}{23}
-\contentsline {subsubsection}{\numberline {2.3.1.1}Current-sensitive amplifier}{23}
-\contentsline {subsubsection}{\numberline {2.3.1.2}Charge-sensitive amplifier}{24}
-\contentsline {subsubsection}{\numberline {2.3.1.3}Analogue electronic noise}{24}
-\contentsline {subsection}{\numberline {2.3.2}Analogue-to-digital converters}{25}
-\contentsline {subsection}{\numberline {2.3.3}Digital signal processing}{27}
-\contentsline {chapter}{\numberline {3}Diamond irradiation study}{29}
-\contentsline {section}{\numberline {3.1}Measurement setup}{30}
-\contentsline {subsection}{\numberline {3.1.1}Preamplifiers}{30}
-\contentsline {subsubsection}{\numberline {3.1.1.1}Calibration}{31}
-\contentsline {subsection}{\numberline {3.1.2}Diamond samples}{32}
-\contentsline {subsection}{\numberline {3.1.3}Readout devices}{33}
-\contentsline {subsection}{\numberline {3.1.4}Setup for the efficiency study using $\upbeta $ particles}{34}
-\contentsline {subsection}{\numberline {3.1.5}Room temperature $\upalpha $-TCT setup}{34}
-\contentsline {subsection}{\numberline {3.1.6}Cryogenic $\upalpha $-TCT setup}{35}
-\contentsline {section}{\numberline {3.2}Charged particle pulses and spectra}{36}
-\contentsline {section}{\numberline {3.3}Radiation limitations}{38}
-\contentsline {subsection}{\numberline {3.3.1}Quantifying radiation damage in diamonds}{39}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Irradiation with a $\uppi _\mathrm {300\nobreakspace {}MeV}$ beam}{39}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Charge collection efficiency and charge collection distance}{40}
-\contentsline {subsubsection}{\numberline {3.3.1.3}Irradiation damage factor}{41}
-\contentsline {subsection}{\numberline {3.3.2}Long-term measurement stability}{43}
-\contentsline {subsubsection}{\numberline {3.3.2.1}$\upbeta $ long-term stability}{43}
-\contentsline {subsubsection}{\numberline {3.3.2.2}$\upalpha $ long-term stability}{44}
-\contentsline {section}{\numberline {3.4}Temperature limitations}{50}
-\contentsline {subsection}{\numberline {3.4.1}Temperature-variant $\upalpha $-TCT before irradiation}{50}
-\contentsline {subsection}{\numberline {3.4.2}Temperature-variant $\upalpha $-TCT after irradiation}{51}
-\contentsline {subsubsection}{\numberline {3.4.2.1}Collected charge as a function of temperature}{53}
-\contentsline {subsubsection}{\numberline {3.4.2.2}Charge trapping}{55}
+\contentsline {section}{\numberline {1.5}Particle detectors}{8}
+\contentsline {chapter}{\numberline {2}Diamond detectors for radiation detection}{11}
+\contentsline {section}{\numberline {2.1}Semiconductor detectors}{12}
+\contentsline {section}{\numberline {2.2}Principles of signal formation in semiconductors}{14}
+\contentsline {subsection}{\numberline {2.2.1}Signal induction by moving charges}{14}
+\contentsline {subsection}{\numberline {2.2.2}Shockley-Ramo theorem}{16}
+\contentsline {subsection}{\numberline {2.2.3}Thermal excitation}{16}
+\contentsline {subsection}{\numberline {2.2.4}Space charge}{17}
+\contentsline {section}{\numberline {2.3}Carrier transport in a diamond sensor}{17}
+\contentsline {section}{\numberline {2.4}Radiation-induced current signals}{19}
+\contentsline {subsection}{\numberline {2.4.1}Mean energy loss}{20}
+\contentsline {subsection}{\numberline {2.4.2}Signal fluctuation}{21}
+\contentsline {subsection}{\numberline {2.4.3}Charge collection}{21}
+\contentsline {subsection}{\numberline {2.4.4}Charge trapping}{22}
+\contentsline {subsubsection}{\numberline {2.4.4.1}Pumping/priming}{24}
+\contentsline {section}{\numberline {2.5}Radiation damage}{24}
+\contentsline {subsubsection}{\numberline {2.5.0.1}Irradiation damage factor}{25}
+\contentsline {section}{\numberline {2.6}Temperature effects}{26}
+\contentsline {subsubsection}{\numberline {2.6.0.1}Collected charge as a function of temperature}{26}
+\contentsline {section}{\numberline {2.7}Electronics for signal processing}{26}
+\contentsline {subsection}{\numberline {2.7.1}Signal preamplifiers}{27}
+\contentsline {subsubsection}{\numberline {2.7.1.1}Current amplifier}{27}
+\contentsline {subsubsection}{\numberline {2.7.1.2}Charge-sensitive amplifier}{28}
+\contentsline {subsubsection}{\numberline {2.7.1.3}Analogue electronic noise}{29}
+\contentsline {subsection}{\numberline {2.7.2}Analogue-to-digital converters}{29}
+\contentsline {subsection}{\numberline {2.7.3}Digital signal processing}{31}
+\contentsline {chapter}{\numberline {3}Diamond irradiation study}{33}
+\contentsline {section}{\numberline {3.1}Measurement setup}{34}
+\contentsline {subsection}{\numberline {3.1.1}Preamplifiers}{34}
+\contentsline {subsubsection}{\numberline {3.1.1.1}Calibration}{35}
+\contentsline {subsection}{\numberline {3.1.2}Diamond samples}{36}
+\contentsline {subsection}{\numberline {3.1.3}Readout devices}{37}
+\contentsline {subsection}{\numberline {3.1.4}Setup for the $\upbeta $ detection efficiency study}{38}
+\contentsline {subsection}{\numberline {3.1.5}Room temperature $\upalpha $-TCT setup}{38}
+\contentsline {subsection}{\numberline {3.1.6}Cryogenic $\upalpha $-TCT setup}{39}
+\contentsline {section}{\numberline {3.2}Charged particle pulses and spectra}{40}
+\contentsline {section}{\numberline {3.3}Radiation limitations}{42}
+\contentsline {subsection}{\numberline {3.3.1}Irradiation study}{42}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Irradiation with a 300\nobreakspace {}MeV $\uppi $ beam}{42}
+\contentsline {subsubsection}{\numberline {3.3.1.2}300\nobreakspace {}MeV $\uppi $ radiation damage factor}{42}
+\contentsline {subsection}{\numberline {3.3.2}Long-term measurement stability}{44}
+\contentsline {subsubsection}{\numberline {3.3.2.1}$\upbeta $ long-term stability}{45}
+\contentsline {subsubsection}{\numberline {3.3.2.2}$\upalpha $ long-term stability}{45}
+\contentsline {section}{\numberline {3.4}Temperature limitations}{52}
+\contentsline {subsection}{\numberline {3.4.1}Temperature-variant $\upalpha $-TCT before irradiation}{52}
+\contentsline {subsection}{\numberline {3.4.2}Temperature-variant $\upalpha $-TCT after irradiation}{54}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Collected charge as a function of temperature}{55}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Charge trapping}{57}
 \contentsline {section}{\numberline {3.5}Conclusion}{59}
 \contentsline {chapter}{\numberline {4}Charge monitoring\hfil \hbox {}\linebreak {\itshape The ATLAS Diamond Beam Monitor}}{61}
 \contentsline {section}{\numberline {4.1}Luminosity measurements}{62}
 \contentsline {section}{\numberline {4.2}Diamond pixel module}{63}
-\contentsline {subsection}{\numberline {4.2.1}Sensors}{64}
-\contentsline {subsection}{\numberline {4.2.2}Front-end electronics}{65}
-\contentsline {section}{\numberline {4.3}Module assembly and quality control}{67}
-\contentsline {subsection}{\numberline {4.3.1}Assembly}{67}
-\contentsline {subsection}{\numberline {4.3.2}Testing}{68}
-\contentsline {subsection}{\numberline {4.3.3}Installation and commissioning}{70}
-\contentsline {section}{\numberline {4.4}Performance results}{71}
-\contentsline {subsection}{\numberline {4.4.1}Source tests}{71}
-\contentsline {subsection}{\numberline {4.4.2}Test beam results}{73}
-\contentsline {section}{\numberline {4.5}Operation}{74}
-\contentsline {subsection}{\numberline {4.5.1}Positioning}{74}
-\contentsline {subsection}{\numberline {4.5.2}Data taking during collisions}{75}
-\contentsline {section}{\numberline {4.6}Conclusion}{77}
+\contentsline {subsection}{\numberline {4.2.1}Sensors}{63}
+\contentsline {subsection}{\numberline {4.2.2}Front-end electronics}{64}
+\contentsline {section}{\numberline {4.3}Module assembly}{66}
+\contentsline {section}{\numberline {4.4}Performance results}{67}
+\contentsline {subsection}{\numberline {4.4.1}Source test results}{68}
+\contentsline {subsubsection}{\numberline {4.4.1.1}Pixel connectivity}{68}
+\contentsline {subsubsection}{\numberline {4.4.1.2}Pseudo-efficiency}{69}
+\contentsline {subsection}{\numberline {4.4.2}Erratic current}{71}
+\contentsline {subsection}{\numberline {4.4.3}Test beam results}{71}
+\contentsline {subsection}{\numberline {4.4.4}Summary of the QC}{72}
+\contentsline {section}{\numberline {4.5}Installation and commissioning}{73}
+\contentsline {subsection}{\numberline {4.5.1}Positioning in ATLAS}{74}
+\contentsline {section}{\numberline {4.6}Operation}{75}
+\contentsline {section}{\numberline {4.7}Conclusion}{78}
 \contentsline {chapter}{\numberline {5}Current monitoring\hfil \hbox {}\linebreak {\itshape Real-time particle identification}}{79}
 \contentsline {section}{\numberline {5.1}Motivation}{80}
 \contentsline {section}{\numberline {5.2}Requirements}{80}
 \contentsline {section}{\numberline {5.3}Device specifications}{81}
 \contentsline {section}{\numberline {5.4}Pulse parameters}{81}
-\contentsline {section}{\numberline {5.5}Applications}{83}
-\contentsline {section}{\numberline {5.6}Description of the firmware}{84}
+\contentsline {section}{\numberline {5.5}Applications}{82}
+\contentsline {section}{\numberline {5.6}Description of the firmware}{83}
 \contentsline {subsection}{\numberline {5.6.1}Design constraints}{84}
-\contentsline {subsection}{\numberline {5.6.2}Analysis module}{85}
+\contentsline {subsection}{\numberline {5.6.2}Analysis module}{84}
 \contentsline {subsection}{\numberline {5.6.3}Area and width measurement}{87}
 \contentsline {subsubsection}{\numberline {5.6.3.1}Vector cleaning}{88}
 \contentsline {subsubsection}{\numberline {5.6.3.2}Algorithm}{89}
-\contentsline {section}{\numberline {5.7}Control and data interface}{91}
-\contentsline {subsection}{\numberline {5.7.1}Software}{91}
-\contentsline {subsection}{\numberline {5.7.2}Data readout}{91}
-\contentsline {section}{\numberline {5.8}Performance results}{92}
-\contentsline {subsection}{\numberline {5.8.1}Comparison between the charge- and current-sensitive spectroscopy}{93}
-\contentsline {section}{\numberline {5.9}Source calibration}{96}
-\contentsline {subsection}{\numberline {5.9.1}Source measurements -- scatter plots}{98}
-\contentsline {subsubsection}{\numberline {5.9.1.1}$^{241}$Am source}{98}
-\contentsline {subsubsection}{\numberline {5.9.1.2}$^{90}$Sr and $^{60}$Co source}{103}
-\contentsline {section}{\numberline {5.10}Applications in neutron instrumentation}{107}
-\contentsline {subsection}{\numberline {5.10.1}Thermal neutron flux monitoring}{107}
-\contentsline {subsubsection}{\numberline {5.10.1.1}Measurements}{108}
-\contentsline {subsubsection}{\numberline {5.10.1.2}Results and discussion}{109}
+\contentsline {section}{\numberline {5.7}Control and data interface}{89}
+\contentsline {subsection}{\numberline {5.7.1}Software}{90}
+\contentsline {subsection}{\numberline {5.7.2}Data readout}{90}
+\contentsline {section}{\numberline {5.8}Performance results}{91}
+\contentsline {subsection}{\numberline {5.8.1}Comparison between the charge- and current-sensitive spectroscopy}{92}
+\contentsline {section}{\numberline {5.9}Source calibration}{95}
+\contentsline {subsection}{\numberline {5.9.1}Source measurements -- scatter plots}{97}
+\contentsline {subsubsection}{\numberline {5.9.1.1}$^{241}$Am source}{97}
+\contentsline {subsubsection}{\numberline {5.9.1.2}$^{90}$Sr and $^{60}$Co source}{102}
+\contentsline {section}{\numberline {5.10}Applications in neutron instrumentation}{106}
+\contentsline {subsection}{\numberline {5.10.1}Thermal neutron flux monitoring}{106}
+\contentsline {subsubsection}{\numberline {5.10.1.1}Measurements}{107}
+\contentsline {subsubsection}{\numberline {5.10.1.2}Results and discussion}{107}
 \contentsline {subsubsection}{\numberline {5.10.1.3}Conclusion}{109}
 \contentsline {subsection}{\numberline {5.10.2}Fusion power monitoring}{109}
-\contentsline {subsubsection}{\numberline {5.10.2.1}Measurements}{110}
-\contentsline {subsubsection}{\numberline {5.10.2.2}Results and discussion}{111}
-\contentsline {subsubsection}{\numberline {5.10.2.3}Conclusion}{111}
-\contentsline {subsection}{\numberline {5.10.3}Fast and thermal neutron monitoring}{113}
-\contentsline {subsubsection}{\numberline {5.10.3.1}Measurements}{113}
-\contentsline {subsubsection}{\numberline {5.10.3.2}Results and discussion}{115}
-\contentsline {subsubsection}{\numberline {5.10.3.3}Conclusion}{115}
-\contentsline {section}{\numberline {5.11}Conclusion}{116}
+\contentsline {subsubsection}{\numberline {5.10.2.1}Measurements}{109}
+\contentsline {subsubsection}{\numberline {5.10.2.2}Results and discussion}{110}
+\contentsline {subsubsection}{\numberline {5.10.2.3}Conclusion}{110}
+\contentsline {subsection}{\numberline {5.10.3}Fast and thermal neutron monitoring}{110}
+\contentsline {subsubsection}{\numberline {5.10.3.1}Measurements}{112}
+\contentsline {subsubsection}{\numberline {5.10.3.2}Results and discussion}{112}
+\contentsline {subsubsection}{\numberline {5.10.3.3}Conclusion}{114}
+\contentsline {section}{\numberline {5.11}Conclusion}{115}
 \contentsline {chapter}{Bibliography}{117}

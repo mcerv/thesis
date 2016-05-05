@@ -1,8 +1,47 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{FPGA:00000}
-\emph{Xilinx Virtex 5 FPGA}.
-\newblock http://www.hdl.co.jp/XCM-109/top.560.jpg.
+\bibitem{DIAMS:00000}
+E.~A. Ekimov, V.~A. Sidorov, E.~D. Bauer, N.~N. Mel'nik, N.~J. Curro, J.~D.
+  Thompson, and S.~M. Stishov.
+\newblock Superconductivity in diamond.
+\newblock {\em Nature}, 428(6982):542--545, 04 2004.
+
+\bibitem{CVD:00000}
+1951 Park, Jong-Hee, 1955 Sudarshan, T.~S., and Inc ebrary.
+\newblock {\em \emph{Chemical vapor deposition}}.
+\newblock Materials Park, Ohio : ASM International, 2001.
+\newblock Includes bibliographical references.
+
+\bibitem{Cividec:00000}
+CIVIDEC~Instrumentation GmbH.
+\newblock \emph{sCVD diamond sensor}.
+\newblock http://www.cividec.at, 2015.
+
+\bibitem{Pernegger:1985432}
+Heinz Pernegger.
+\newblock \emph{The Pixel Detector of the ATLAS Experiment for LHC Run-2}.
+\newblock Technical Report ATL-INDET-PROC-2015-001, CERN, Geneva, Feb 2015.
+
+\bibitem{MarcelloniDeOliveira:1702006}
+Claudia Marcelloni De~Oliveira.
+\newblock \emph{IBL installation into the inner detector of the ATLAS
+  Experiment side C}.
+\newblock General Photo, May 2014.
+
+\bibitem{BREMS:00000}
+\emph{Bremsstrahlung}.
+\newblock 2016.
+
+\bibitem{PARMA:00000}
+Yoshihiko Hatano, Yosuke Katsumura, and A.~Mozumder.
+\newblock {\em \emph{Charged Particle and Photon Interactions with Matter:
+  Recent Advances, Applications, and Interfaces}}.
+\newblock CRC Press, 2010.
+
+\bibitem{PHSEM:00000}
+S.~Sze and K.~N. Kwok.
+\newblock {\em \emph{Physics of Semiconductor Devices, 3rd ed.}}
+\newblock Wiley, Hoboken, NJ, 2007.
 
 \bibitem{PDDC:00000}
 W.~Blum, W.~Riegler, and L.~Rolandi.
@@ -10,10 +49,22 @@ W.~Blum, W.~Riegler, and L.~Rolandi.
   2}.
 \newblock Springer-Verlag, Berlin Heidelberg, 2008.
 
-\bibitem{ASIC:00000}
-M.~Garcia-Sciveres.
-\newblock {ATLAS Experiment Pixel Detector Upgrades}.
-\newblock 2011.
+\bibitem{SHOCKLEY:00000}
+W.~Shockley.
+\newblock \emph{Currents to Conductors Induced by a Moving Point Charge}.
+\newblock {\em Journal of applied Physics}, 9:635, 1938.
+
+\bibitem{RAMO:00000}
+S.~Ramo.
+\newblock \emph{Currents Induced by Electron Motion}.
+\newblock {\em Proceedings of the IRE}, 27:584--585, 1939.
+
+\bibitem{Jansen:1956431}
+Hendrik Jansen, Norbert Wermes, and Heinz Pernegger.
+\newblock {\em {Chemical Vapour Deposition Diamond - Charge Carrier Movement at
+  Low Temperatures and Use in Time-Critical Applications}}.
+\newblock PhD thesis, Bonn U., Sep 2013.
+\newblock Presented 10 Dec 2013.
 
 \bibitem{JANSEN:00001}
 Hendrik Jansen, Daniel Dobos, Thomas Eisel, Heinz Pernegger, Vladimir Eremin,
@@ -22,14 +73,99 @@ Hendrik Jansen, Daniel Dobos, Thomas Eisel, Heinz Pernegger, Vladimir Eremin,
   chemical vapour deposition diamond.
 \newblock {\em Journal of Applied Physics}, 113(17), 2013.
 
-\bibitem{RAMO:00000}
-S.~Ramo.
-\newblock \emph{Currents Induced by Electron Motion}.
-\newblock {\em Proceedings of the IRE}, 27:584--585, 1939.
+\bibitem{VDRIFT:00000}
+Z.~Li and H.~Kraner.
+\newblock \emph{Modeling and simulation of charge collection properties for
+  neutron irradiated silicon detectors}.
+\newblock {\em Nuclear Physics B - Proceedings Supplements 32}, (32):398--409,
+  1993.
 
-\bibitem{SHOCKLEY:00000}
-W.~Shockley.
-\newblock \emph{Currents to Conductors Induced by a Moving Point Charge}.
-\newblock {\em Journal of applied Physics}, 9:635, 1938.
+\bibitem{BETHE:00001}
+Peter Sigmund.
+\newblock {\em \emph{Particle Penetration and Radiation Effects Volume 2 -
+  General Aspects and Stopping of Swift Point Charges}}, volume 151 of {\em
+  Springer Series in Solid-State Sciences}.
+\newblock Springer-Verlag Berlin Heidelberg, 2006.
+
+\bibitem{1947PhRv...72...26F}
+U.~{Fano}.
+\newblock {Ionization Yield of Radiations. II. The Fluctuations of the Number
+  of Ions}.
+\newblock {\em Physical Review}, 72:26--29, July 1947.
+
+\bibitem{1980PhRvB..22.5565A}
+R.~C. {Alig}, S.~{Bloom}, and C.~W. {Struck}.
+\newblock {Scattering by ionization and phonon emission in semiconductors}.
+\newblock 22:5565--5582, December 1980.
+
+\bibitem{CHTR:00000}
+Claude~A. Klein.
+\newblock Radiation-induced energy levels in silicon.
+\newblock {\em Journal of Applied Physics}, 30(8):1222--1231, 1959.
+
+\bibitem{pumping:00000}
+Marco Marinelli, E.~Milani, M.~E. Morgada, G.~Pucella, G.~Rodriguez,
+  A.~Tucciarone, G.~Verona-Rinati, M.~Angelone, and M.~Pillon.
+\newblock Thermal detrapping analysis of pumping-related defects in diamond.
+\newblock {\em Applied Physics Letters}, 83(18):3707--3709, 2003.
+
+\bibitem{2002NIMPA}
+M.~{Huhtinen}.
+\newblock \emph{Simulation of non-ionising energy loss and defect formation in
+  silicon}.
+\newblock {\em Nuclear Instruments and Methods in Physics Research A},
+  491:194--215, September 2002.
+
+\bibitem{Guthoff:2014223}
+Moritz Guthoff, Wim de~Boer, and Steffen Müller.
+\newblock Simulation of beam induced lattice defects of diamond detectors using
+  \{FLUKA\}.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 735:223 --
+  228, 2014.
+
+\bibitem{NEQ:00000}
+{\em \emph{Determination of operational dose equivalent quantities for
+  neutrons}}.
+\newblock ICRU, Washington, DC, 2001.
+
+\bibitem{RD42:00000}
+\emph{RD42 collaboration}.
+\newblock http://rd42.web.cern.ch/rd42/.
+
+\bibitem{RD42IRRAD:00000}
+M.~Miku\v{z}.
+\newblock \emph{Diamond sensors for high energy radiation and particle
+  detection}.
+\newblock TIPP, 2011.
+
+\bibitem{PhysRevLett.13.13}
+J.~L. Yarnell, J.~L. Warren, and R.~G. Wenzel.
+\newblock Lattice vibrations in diamond.
+\newblock {\em Phys. Rev. Lett.}, 13:13--15, Jul 1964.
+
+\bibitem{1970PhyEd...5..226L}
+W.~Y. {Liang}.
+\newblock {Excitons}.
+\newblock {\em Physics Education}, 5:226--228, July 1970.
+
+\bibitem{PhysRev.32.97}
+J.~B. Johnson.
+\newblock \emph{Thermal Agitation of Electricity in Conductors}.
+\newblock {\em Phys. Rev.}, 32:97--109, Jul 1928.
+
+\bibitem{PhysRev.32.110}
+H.~Nyquist.
+\newblock \emph{Thermal Agitation of Electric Charge in Conductors}.
+\newblock {\em Phys. Rev.}, 32:110--113, Jul 1928.
+
+\bibitem{FPGA:00000}
+\emph{Xilinx Virtex 5 FPGA}.
+\newblock http://www.hdl.co.jp/XCM-109/top.560.jpg.
+
+\bibitem{ASIC:00000}
+M.~Garcia-Sciveres.
+\newblock {ATLAS Experiment Pixel Detector Upgrades}.
+\newblock 2011.
 
 \end{thebibliography}

@@ -1,5 +1,5 @@
 % ---------------------------- comment out when compiling the full document -------------------
-\documentclass[twoside,openright,12pt]{packages/mytustyle}  % default square logo 
+\documentclass[twoside,openright,11pt]{packages/mytustyle}  % default square logo 
 \usepackage{amssymb}
 \usepackage{caption}
 \usepackage{upgreek}
@@ -32,14 +32,14 @@
 %\renewcommand{\footrulewidth}{0.7pt}% Default \footrulewidth is 0pt
 %\rfoot{\thepage}
 \usepackage{lineno}
-  \linenumbers
+%  \linenumbers
 
 
 
 \title{CVD diamond applications   \\[1ex]     %your thesis title,
  for particle detection   \\[1ex]     %your thesis title,
  and identification in  \\[1ex]
-radiation-hard environments}   %note \\[1ex] is a line break in the title
+high-radiation environments}   %note \\[1ex] is a line break in the title
 
 \author{Matev\v{z} \v{C}erv}             %your name
 %\supervisor{Dr. Erich Griesmayer}             %supervisor
@@ -56,19 +56,19 @@ radiation-hard environments}   %note \\[1ex] is a line break in the title
 %this baselineskip gives sufficient line spacing for an examiner to easily
 %markup the thesis with comments
 %\baselineskip=18pt plus1pt
-\baselineskip=15pt
+\baselineskip=16pt
 
 %set the number of sectioning levels that get number and appear in the contents
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{1}
 
 
 \maketitle                  % create a title page from the preamble info
 
 \begin{romanpages}          % start roman page numbering
 \tableofcontents            % generate and include a table of contents
-\listoffigures              % generate and include a list of figures
-\end{romanpages}            % end roman page numbering
+\end{romanpages}        
+
 
 %now include the files of latex for each of the chapters etc
 %\include{00_preface/abstract}
@@ -96,8 +96,15 @@ radiation-hard environments}   %note \\[1ex] is a line break in the title
 %\renewcommand{\bibname}{References}
 %   \bibliography{refs}        %use a bibtex bibliography file refs.bib
 %   \bibliographystyle{plain}  %use the plain bibliography style
-\bibliography{01_introduction/bib,02_pulse_formation/bib,03_measurement_results/bib,04_charge_monitoring/bib,05_current_monitoring/bib}{}
-\bibliographystyle{plain}
+%\bibliography{01_introduction/bib,02_pulse_formation/bib,03_measurement_results/bib,04_charge_monitoring/bib,05_current_monitoring/bib}{}
+
+%\begin{romanpages}          % start roman page numbering
+%\listoffigures              % generate and include a list of figures
+%\end{romanpages}            % end roman page numbering
+
+
+\bibliography{bibliography/bib}{}
+\bibliographystyle{unsrt}
 
 \end{document}
 

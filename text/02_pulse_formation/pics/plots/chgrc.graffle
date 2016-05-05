@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {559, 783}}</string>
+		<string>{{0, 0}, {559.28998756408691, 782.8900146484375}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -72,6 +72,38 @@
 	<integer>8</integer>
 	<key>GraphicsList</key>
 	<array>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>6</integer>
+				<key>Info</key>
+				<integer>1</integer>
+			</dict>
+			<key>ID</key>
+			<integer>30</integer>
+			<key>Points</key>
+			<array>
+				<string>{98.218233076324893, 256.46727531111526}</string>
+				<string>{103.07735141977609, 313.29605356869212}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>Legacy</key>
+					<true/>
+					<key>TailArrow</key>
+					<string>0</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+		</dict>
 		<dict>
 			<key>Bounds</key>
 			<string>{{312.70719220621498, 241.98895792636424}, {58, 25}}</string>
@@ -550,21 +582,12 @@
 		<dict>
 			<key>Class</key>
 			<string>LineGraphic</string>
-			<key>Head</key>
-			<dict>
-				<key>ID</key>
-				<integer>4</integer>
-				<key>Position</key>
-				<real>0.48187130689620972</real>
-			</dict>
 			<key>ID</key>
 			<integer>6</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{98, 255.84795539233926}</string>
-				<string>{144.44444177315503, 312.21053336047504}</string>
+				<string>{103.07735141977609, 313.29605356869212}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -686,7 +709,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2015-11-24 22:38:26 +0000</string>
+	<string>2016-04-19 21:20:39 +0000</string>
 	<key>Modifier</key>
 	<string>Matevz Cerv</string>
 	<key>NotesVisible</key>
@@ -717,7 +740,7 @@
 		<key>NSPaperSize</key>
 		<array>
 			<string>size</string>
-			<string>{595, 842}</string>
+			<string>{595.28998756408691, 841.8900146484375}</string>
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
@@ -781,7 +804,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-4, 95.303870416205086}, {567.4033328547398, 399.44752644009435}}</string>
+		<string>{{-3, 95.303870416205086}, {567.4033328547398, 399.44752644009435}}</string>
 		<key>Zoom</key>
 		<real>1.809999942779541</real>
 		<key>ZoomValues</key>

@@ -16,158 +16,158 @@
 \newlabel{fig:params}{{5.1}{82}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Form Factor is the ratio between the measured area ($a$) and the calculated area ($A\times BW$) of the pulse. The calculated area is significantly larger than the measured area for a triangular triangular pulse, but less so for the rectangular one. The red and blue dot in the right plot are the value entries of the two pulses shown. The red and blue oval shapes depict the regions for the values expected from triangular and rectangular pulses. By carefully choosing the linear qualifier (dashed line) and taking only the entries below the cut rectangular pulses can be identified.\relax }}{82}}
 \newlabel{fig:formfac1}{{5.2}{82}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Applications}{83}}
-\newlabel{sec:applications}{{5.5}{83}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Applications}{82}}
+\newlabel{sec:applications}{{5.5}{82}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Description of the firmware}{83}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Firmware design structure.\relax }}{84}}
 \newlabel{fig:application}{{5.3}{84}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Description of the firmware}{84}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.6.1}Design constraints}{84}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.2}Analysis module}{84}}
+\newlabel{subsec:algorithm}{{5.6.2}{84}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Code design plan.\relax }}{85}}
 \newlabel{fig:architecture}{{5.4}{85}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.2}Analysis module}{85}}
-\newlabel{subsec:algorithm}{{5.6.2}{85}}
-\newlabel{eq:formfactor1}{{5.1}{87}}
+\newlabel{eq:formfactor1}{{5.1}{86}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces A sample pulse. The first vector shows which samples are above the width measurement height. The second vector is a clean vector. The third line shows the position of the maximum amplitude. The vector cleaning algorithm starts from the maximum amplitude and continues in both ways along the vector.\relax }}{87}}
+\newlabel{fig:samplepulse}{{5.5}{87}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.6.3}Area and width measurement}{87}}
 \newlabel{sec:vecclean}{{5.6.3}{87}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces A sample pulse. The first vector shows which samples are above the width measurement height. The second vector is a clean vector. The third line shows the position of the maximum amplitude. The vector cleaning algorithm starts from the maximum amplitude and continues in both ways along the vector.\relax }}{88}}
-\newlabel{fig:samplepulse}{{5.5}{88}}
 \newlabel{fig:width}{{\caption@xref {fig:width}{ on input line 192}}{88}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces This block counts the remaining binary ones in the clean vectors and outputs this value as the pulse width.\relax }}{88}}
+\newlabel{fig:area}{{\caption@xref {fig:area}{ on input line 198}}{88}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces This block masks the input data with the clean vector and sums the remaining samples.\relax }}{88}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Vector cleaning routine outputs two vectors - one forward in time and one back in time from the peak of the pulse.\relax }}{88}}
+\newlabel{fig:routine}{{5.8}{88}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.3.1}Vector cleaning}{88}}
-\newlabel{fig:area}{{\caption@xref {fig:area}{ on input line 198}}{89}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces This block masks the input data with the clean vector and sums the remaining samples.\relax }}{89}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Vector cleaning routine outputs two vectors - one forward in time and one back in time from the peak of the pulse.\relax }}{89}}
-\newlabel{fig:routine}{{5.8}{89}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.3.2}Algorithm}{89}}
-\newlabel{fig:logic1}{{5.9a}{90}}
+\newlabel{fig:logic1}{{5.9a}{89}}
 \newlabel{sub@fig:logic1}{{(a)}{a}}
-\newlabel{fig:logic2}{{5.9b}{90}}
+\newlabel{fig:logic2}{{5.9b}{89}}
 \newlabel{sub@fig:logic2}{{(b)}{b}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces One logic step in the algorithm chain before and after Karnaugh minimisation.\relax }}{90}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces One logic step in the algorithm chain before and after Karnaugh minimisation.\relax }}{89}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.3.2}Algorithm}{89}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Control and data interface}{89}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Vector is divided into two 16-bit logic chains. The algorithm logic is then run on the two chains separately. The results are then merged into one 32-bit clean vector by using a set of AND gates.\relax }}{90}}
 \newlabel{fig:algobase}{{5.10}{90}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7.1}Software}{90}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7.2}Data readout}{90}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Abstraction levels of the controller software.\relax }}{91}}
 \newlabel{fig:controller}{{5.11}{91}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}Control and data interface}{91}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.7.1}Software}{91}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.7.2}Data readout}{91}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.8}Performance results}{92}}
-\newlabel{sec:perres}{{5.8}{92}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces This figure shows the capability of the device to analyse all arriving pulses for a range of input frequencies. The highest achievable rate with zero lost pulses is $5\times 10^6$\nobreakspace  {}s$^{-1}$.\relax }}{93}}
-\newlabel{fig:trigrate}{{5.12}{93}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.8.1}Comparison between the charge- and current-sensitive spectroscopy}{93}}
-\newlabel{fig:ratioAmpl1}{{5.13a}{94}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}Performance results}{91}}
+\newlabel{sec:perres}{{5.8}{91}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces This figure shows the capability of the device to analyse all arriving pulses for a range of input frequencies. The highest achievable rate with zero lost pulses is $5\times 10^6$\nobreakspace  {}s$^{-1}$.\relax }}{92}}
+\newlabel{fig:trigrate}{{5.12}{92}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8.1}Comparison between the charge- and current-sensitive spectroscopy}{92}}
+\newlabel{fig:ratioAmpl1}{{5.13a}{93}}
 \newlabel{sub@fig:ratioAmpl1}{{(a)}{a}}
-\newlabel{fig:snrAmpl1}{{5.13b}{94}}
+\newlabel{fig:snrAmpl1}{{5.13b}{93}}
 \newlabel{sub@fig:snrAmpl1}{{(b)}{b}}
-\newlabel{fig:ratioWidth1}{{5.13c}{94}}
+\newlabel{fig:ratioWidth1}{{5.13c}{93}}
 \newlabel{sub@fig:ratioWidth1}{{(c)}{c}}
-\newlabel{fig:snrWidth1}{{5.13d}{94}}
+\newlabel{fig:snrWidth1}{{5.13d}{93}}
 \newlabel{sub@fig:snrWidth1}{{(d)}{d}}
-\newlabel{fig:snrArea1}{{5.13e}{94}}
+\newlabel{fig:snrArea1}{{5.13e}{93}}
 \newlabel{sub@fig:snrArea1}{{(e)}{e}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces These diagrams show the linearity of the measurements and their stability with respect to analog noise.\relax }}{94}}
-\newlabel{fig:ratiosnr}{{5.13}{94}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Linearity across the amplitude range.}}}{94}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Amplitude stability.}}}{94}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Linearity across the width range.}}}{94}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Width stability.}}}{94}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {Area stability.}}}{94}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Spectrum of a \textsuperscript  {148}Gd\textsuperscript  {239}Pu\textsuperscript  {241}Am\textsuperscript  {244}Cm source using a Cx and a C2 amplifier.\relax }}{95}}
-\newlabel{fig:c2cx4alpha}{{5.14}{95}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces These diagrams show the linearity of the measurements and their stability with respect to analog noise.\relax }}{93}}
+\newlabel{fig:ratiosnr}{{5.13}{93}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Linearity across the amplitude range.}}}{93}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Amplitude stability.}}}{93}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Linearity across the width range.}}}{93}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Width stability.}}}{93}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {Area stability.}}}{93}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Spectrum of a \textsuperscript  {148}Gd\textsuperscript  {239}Pu\textsuperscript  {241}Am\textsuperscript  {244}Cm source using a Cx and a C2 amplifier.\relax }}{94}}
+\newlabel{fig:c2cx4alpha}{{5.14}{94}}
 \citation{PAVEL:00003}
 \citation{CHRISSI:00005}
-\@writefile{toc}{\contentsline {section}{\numberline {5.9}Source calibration}{96}}
-\newlabel{sec:sourcecalib}{{5.9}{96}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Measurements carried out at Atominstitut.\relax }}{96}}
-\newlabel{tab:semicompare}{{5.2}{96}}
-\newlabel{fig:am1}{{5.15a}{97}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.9}Source calibration}{95}}
+\newlabel{sec:sourcecalib}{{5.9}{95}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Measurements carried out at Atominstitut.\relax }}{95}}
+\newlabel{tab:semicompare}{{5.2}{95}}
+\newlabel{fig:am1}{{5.15a}{96}}
 \newlabel{sub@fig:am1}{{(a)}{a}}
-\newlabel{fig:am2}{{5.15b}{97}}
+\newlabel{fig:am2}{{5.15b}{96}}
 \newlabel{sub@fig:am2}{{(b)}{b}}
-\newlabel{fig:am3}{{5.15c}{97}}
+\newlabel{fig:am3}{{5.15c}{96}}
 \newlabel{sub@fig:am3}{{(c)}{c}}
-\newlabel{fig:sr1}{{5.15d}{97}}
+\newlabel{fig:sr1}{{5.15d}{96}}
 \newlabel{sub@fig:sr1}{{(d)}{d}}
-\newlabel{fig:co1}{{5.15e}{97}}
+\newlabel{fig:co1}{{5.15e}{96}}
 \newlabel{sub@fig:co1}{{(e)}{e}}
-\newlabel{fig:pu1}{{5.15f}{97}}
+\newlabel{fig:pu1}{{5.15f}{96}}
 \newlabel{sub@fig:pu1}{{(f)}{f}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Accumulated pulses for all runs.\relax }}{97}}
-\newlabel{fig:accpulses}{{5.15}{97}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {$^{241}$Am background.}}}{97}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {$^{241}$Am, e$^{-}$ collection.}}}{97}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {$^{241}$Am, h$^+$ collection.}}}{97}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {$^{90}$Sr.}}}{97}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {$^{60}$Co.}}}{97}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {$^{239}$Pu\nobreakspace {}Be.}}}{97}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.9.1}Source measurements -- scatter plots}{98}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.9.1.1}$^{241}$Am source}{98}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces $^{241}$Am, e$^{-}$ collection. Qualifier: FWHM. Optional qualifiers: Amplitude, Form Factor.\relax }}{100}}
-\newlabel{fig:scatterae}{{5.16}{100}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces $^{241}$Am, h$^{+}$ collection. Qualifier: FWHM.\relax }}{101}}
-\newlabel{fig:scatterah}{{5.17}{101}}
-\newlabel{fig:1dearea}{{5.18a}{102}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Accumulated pulses for all runs.\relax }}{96}}
+\newlabel{fig:accpulses}{{5.15}{96}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {$^{241}$Am background.}}}{96}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {$^{241}$Am, e$^{-}$ collection.}}}{96}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {$^{241}$Am, h$^+$ collection.}}}{96}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {$^{90}$Sr.}}}{96}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {$^{60}$Co.}}}{96}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {$^{239}$Pu\nobreakspace {}Be.}}}{96}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.9.1}Source measurements -- scatter plots}{97}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.9.1.1}$^{241}$Am source}{97}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces $^{241}$Am, e$^{-}$ collection. Qualifier: FWHM. Optional qualifiers: Amplitude, Form Factor.\relax }}{99}}
+\newlabel{fig:scatterae}{{5.16}{99}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces $^{241}$Am, h$^{+}$ collection. Qualifier: FWHM.\relax }}{100}}
+\newlabel{fig:scatterah}{{5.17}{100}}
+\newlabel{fig:1dearea}{{5.18a}{101}}
 \newlabel{sub@fig:1dearea}{{(a)}{a}}
-\newlabel{fig:1dharea}{{5.18b}{102}}
+\newlabel{fig:1dharea}{{5.18b}{101}}
 \newlabel{sub@fig:1dharea}{{(b)}{b}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces $^{241}$Am area histograms for electron and hole collection.\relax }}{102}}
-\newlabel{fig:1dalphaarea}{{5.18}{102}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {$^{241}$Am, e$^{-}$ collection.}}}{102}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {$^{241}$Am, h$^+$ collection.}}}{102}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.9.1.2}$^{90}$Sr and $^{60}$Co source}{103}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces $^{90}$Sr scatter plots.\relax }}{104}}
-\newlabel{fig:scattersr}{{5.19}{104}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces $^{60}$Co scatter plots.\relax }}{105}}
-\newlabel{fig:scatterco}{{5.20}{105}}
-\newlabel{fig:1dsrarea}{{5.21a}{106}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces $^{241}$Am area histograms for electron and hole collection.\relax }}{101}}
+\newlabel{fig:1dalphaarea}{{5.18}{101}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {$^{241}$Am, e$^{-}$ collection.}}}{101}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {$^{241}$Am, h$^+$ collection.}}}{101}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.9.1.2}$^{90}$Sr and $^{60}$Co source}{102}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces $^{90}$Sr scatter plots.\relax }}{103}}
+\newlabel{fig:scattersr}{{5.19}{103}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces $^{60}$Co scatter plots.\relax }}{104}}
+\newlabel{fig:scatterco}{{5.20}{104}}
+\newlabel{fig:1dsrarea}{{5.21a}{105}}
 \newlabel{sub@fig:1dsrarea}{{(a)}{a}}
-\newlabel{fig:1coharea}{{5.21b}{106}}
+\newlabel{fig:1coharea}{{5.21b}{105}}
 \newlabel{sub@fig:1coharea}{{(b)}{b}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces Energy distributions for $\upgamma $ and $\upbeta $ particles.\relax }}{106}}
-\newlabel{fig:1dcosrarea}{{5.21}{106}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {$^{90}$Sr.}}}{106}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {$^{60}$Co.}}}{106}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces Energy distributions for $\upgamma $ and $\upbeta $ particles.\relax }}{105}}
+\newlabel{fig:1dcosrarea}{{5.21}{105}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {$^{90}$Sr.}}}{105}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {$^{60}$Co.}}}{105}}
 \citation{TRIGA:00001}
 \citation{ATOM:00001}
-\@writefile{toc}{\contentsline {section}{\numberline {5.10}Applications in neutron instrumentation}{107}}
-\newlabel{sec:nm}{{5.10}{107}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.10.1}Thermal neutron flux monitoring}{107}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.10}Applications in neutron instrumentation}{106}}
+\newlabel{sec:nm}{{5.10}{106}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.10.1}Thermal neutron flux monitoring}{106}}
+\newlabel{eq:reaction}{{5.2}{106}}
 \citation{PAVEL:00000}
 \citation{PAVEL:00002}
-\newlabel{eq:reaction}{{5.2}{108}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.1.1}Measurements}{108}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.1.1}Measurements}{107}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.1.2}Results and discussion}{107}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces Thermal neutrons, photons. Qualifier: FWHM.\relax }}{108}}
+\newlabel{fig:scattertriga1}{{5.22}{108}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces Energy spectrum after applied qualifiers reveals the tritium and $\upalpha $ peak\relax }}{108}}
+\newlabel{fig:areatriga0}{{5.23}{108}}
 \citation{ITER:00000}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces Thermal neutrons, photons. Qualifier: FWHM.\relax }}{109}}
-\newlabel{fig:scattertriga1}{{5.22}{109}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.1.2}Results and discussion}{109}}
+\citation{PAVEL:00001}
+\citation{CHRISSI:00001}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.1.3}Conclusion}{109}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.10.2}Fusion power monitoring}{109}}
-\citation{PAVEL:00001}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces Energy spectrum after applied qualifiers reveals the tritium and $\upalpha $ peak\relax }}{110}}
-\newlabel{fig:areatriga0}{{5.23}{110}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.2.1}Measurements}{110}}
-\citation{CHRISSI:00001}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.2.1}Measurements}{109}}
 \citation{????}
 \citation{EPFL:00000}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.2.2}Results and discussion}{111}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.2.3}Conclusion}{111}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.24}{\ignorespaces $^{239}$Pu\nobreakspace  {}Be. Qualifiers: BW-FWHM, FWHM, Form Factor\relax }}{112}}
-\newlabel{fig:scatterpu}{{5.24}{112}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.25}{\ignorespaces $^{239}$Pu\nobreakspace  {}Be, energy distribution of the neutrons interacting in the ballistic centre.\relax }}{113}}
-\newlabel{fig:scatterpuarea}{{5.25}{113}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.10.3}Fast and thermal neutron monitoring}{113}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.3.1}Measurements}{113}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.26}{\ignorespaces Fast neutrons, thermal neutrons, photons. Qualifiers: BW-FWHM, FWHM, Form factor, Slope.\relax }}{114}}
-\newlabel{fig:scatterepfl2}{{5.26}{114}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.27}{\ignorespaces Energy spectrum in CROCUS before and after applied qualifiers\relax }}{115}}
-\newlabel{fig:scatterepfl2area}{{5.27}{115}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.3.2}Results and discussion}{115}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.3.3}Conclusion}{115}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.11}Conclusion}{116}}
-\newlabel{sec:conclcurrent}{{5.11}{116}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.2.2}Results and discussion}{110}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.2.3}Conclusion}{110}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.10.3}Fast and thermal neutron monitoring}{110}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.24}{\ignorespaces $^{239}$Pu\nobreakspace  {}Be. Qualifiers: BW-FWHM, FWHM, Form Factor\relax }}{111}}
+\newlabel{fig:scatterpu}{{5.24}{111}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.25}{\ignorespaces $^{239}$Pu\nobreakspace  {}Be, energy distribution of the neutrons interacting in the ballistic centre.\relax }}{112}}
+\newlabel{fig:scatterpuarea}{{5.25}{112}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.3.1}Measurements}{112}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.3.2}Results and discussion}{112}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.26}{\ignorespaces Fast neutrons, thermal neutrons, photons. Qualifiers: BW-FWHM, FWHM, Form factor, Slope.\relax }}{113}}
+\newlabel{fig:scatterepfl2}{{5.26}{113}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.27}{\ignorespaces Energy spectrum in CROCUS before and after applied qualifiers\relax }}{114}}
+\newlabel{fig:scatterepfl2area}{{5.27}{114}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.3.3}Conclusion}{114}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.11}Conclusion}{115}}
+\newlabel{sec:conclcurrent}{{5.11}{115}}
 \@setckpt{05_current_monitoring/chapter}{
-\setcounter{page}{117}
+\setcounter{page}{116}
 \setcounter{equation}{3}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
@@ -192,6 +192,6 @@
 \setcounter{subtable}{0}
 \setcounter{subtable@save}{0}
 \setcounter{lotdepth}{1}
-\setcounter{linenumber}{2792}
-\setcounter{LN@truepage}{128}
+\setcounter{linenumber}{1}
+\setcounter{LN@truepage}{119}
 }

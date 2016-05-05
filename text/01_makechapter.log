@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  17 APR 2016 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  5 MAY 2016 11:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -15,8 +15,8 @@ LaTeX Warning: You have requested document class `packages/mytustyle',
 Document Class: mytustyle 2010/11/22 v2.2 OCIAM thesis class
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -349,93 +349,88 @@ Chapter 1.
 [2
 
 
-] <01_introduction/pics/sm.png, id=12, 853.1875pt x 479.7925pt>
+] <01_introduction/pics/sm.png, id=13, 853.1875pt x 479.7925pt>
 File: 01_introduction/pics/sm.png Graphic file (type png)
 
 <use 01_introduction/pics/sm.png>
 Package pdftex.def Info: 01_introduction/pics/sm.png used on input line 50.
-(pdftex.def)             Requested size: 390.25534pt x 219.46263pt.
+(pdftex.def)             Requested size: 303.53267pt x 170.69724pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [3
 
  <./01_introduction/pics/sm.png>] [4]
-<01_introduction/pics/triga.jpg, id=25, 732.7375pt x 301.125pt>
+<01_introduction/pics/triga.jpg, id=26, 732.7375pt x 301.125pt>
 File: 01_introduction/pics/triga.jpg Graphic file (type jpg)
 
 <use 01_introduction/pics/triga.jpg>
 Package pdftex.def Info: 01_introduction/pics/triga.jpg used on input line 79.
-(pdftex.def)             Requested size: 390.25534pt x 160.3812pt.
- [5 <./01_introduction/pics/triga.jpg>]
-<01_introduction/pics/ntof.jpg, id=29, 4156.52875pt x 3758.04pt>
+(pdftex.def)             Requested size: 303.53267pt x 124.7394pt.
+
+<01_introduction/pics/ntof.jpg, id=27, 4156.52875pt x 3758.04pt>
 File: 01_introduction/pics/ntof.jpg Graphic file (type jpg)
 
 <use 01_introduction/pics/ntof.jpg>
 Package pdftex.def Info: 01_introduction/pics/ntof.jpg used on input line 92.
-(pdftex.def)             Requested size: 390.25534pt x 352.83148pt.
- [6 <./01_introduction/pics/ntof.jpg>]
-<01_introduction/pics/lhc.jpg, id=33, 749.80125pt x 563.10374pt>
+(pdftex.def)             Requested size: 303.53267pt x 274.38625pt.
+ [5 <./01_introduction/pics/triga.jpg>]
+[6 <./01_introduction/pics/ntof.jpg>]
+<01_introduction/pics/lhc.jpg, id=34, 749.80125pt x 563.10374pt>
 File: 01_introduction/pics/lhc.jpg Graphic file (type jpg)
 
 <use 01_introduction/pics/lhc.jpg>
 Package pdftex.def Info: 01_introduction/pics/lhc.jpg used on input line 113.
-(pdftex.def)             Requested size: 390.25534pt x 293.08199pt.
- [7]
-<01_introduction/pics/atlas3.jpg, id=40, 810.52812pt x 520.94624pt>
+(pdftex.def)             Requested size: 303.53267pt x 227.95265pt.
+ [7 <./01_introduction/pics/lhc.jpg>]
+<01_introduction/pics/atlas3.jpg, id=41, 810.52812pt x 520.94624pt>
 File: 01_introduction/pics/atlas3.jpg Graphic file (type jpg)
 
 <use 01_introduction/pics/atlas3.jpg>
 Package pdftex.def Info: 01_introduction/pics/atlas3.jpg used on input line 125
 .
-(pdftex.def)             Requested size: 390.25534pt x 250.83035pt.
- [8 <./01_introduction/pics/lhc.jpg>]
-[9 <./01_introduction/pics/atlas3.jpg>]) [10] (./01_makechapter.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
-[]\OT1/cmr/m/it/12 Atominstitut, Tech-ni-cal Uni-ver-sity of Vi-enna, Aus-tria\
-OT1/cmr/m/n/12 .
+(pdftex.def)             Requested size: 303.53267pt x 195.09204pt.
+ [8 <./01_introduction/pics/atlas3.jpg>]
+[9]) [10] (./01_makechapter.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
+[]\OT1/cmr/m/it/10.95 Atominstitut, Tech-ni-cal Uni-ver-sity of Vi-enna, Aus-tr
+ia\OT1/cmr/m/n/10.95 .
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--43
-[]\OT1/cmr/m/n/12 CIVIDEC In-stru-men-ta-tion GmbH.  \OT1/cmr/m/it/12 sCVD di-a
--mond sen-sor\OT1/cmr/m/n/12 .
- []
-
+Missing character: There is no š in font cmti10!
 ) [11
 
 
-] (./01_makechapter.aux (./01_introduction/chapter.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./01_makechapter.aux (./01_introduction/chapter.aux)) ) 
 Here is how much of TeX's memory you used:
- 4271 strings out of 493089
- 65509 string characters out of 6134843
- 125169 words of memory out of 5000000
- 7681 multiletter control sequences out of 15000+600000
- 11989 words of font info for 44 fonts, out of 8000000 for 9000
+ 4273 strings out of 493089
+ 65570 string characters out of 6134843
+ 125151 words of memory out of 5000000
+ 7683 multiletter control sequences out of 15000+600000
+ 12602 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,43p,1979b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on 01_makechapter.pdf (11 pages, 1854955 bytes).
+ 38i,10n,43p,1974b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2
+015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/cm-super/sfrm1095.pfb>
+Output written on 01_makechapter.pdf (11 pages, 1880571 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 92 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
