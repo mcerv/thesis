@@ -90,11 +90,11 @@ void plotAmpl() {
   grAmpl->GetXaxis()->SetLimits(6,2000);
   grAmpl->GetYaxis()->SetRangeUser(-21,21);
   grAmpl->GetYaxis()->SetLimits(-21,21);
-  grAmpl->GetXaxis()->SetTitleSize(0.08);
-  grAmpl->GetYaxis()->SetTitleSize(0.08);
+  grAmpl->GetXaxis()->SetTitleSize(0.07);
+  grAmpl->GetYaxis()->SetTitleSize(0.07);
   grAmpl->GetXaxis()->SetLabelSize(0.06);
   grAmpl->GetYaxis()->SetLabelSize(0.06);
-  grAmpl->GetXaxis()->SetTitleOffset(0.9);
+  grAmpl->GetXaxis()->SetTitleOffset(1.1);
   grAmpl->GetYaxis()->SetTitleOffset(0.9);
 
   c1->SetLogx();
@@ -157,11 +157,11 @@ void plotWidth() {
   grWidth->GetXaxis()->SetLimits(0.9,200);
   grWidth->GetYaxis()->SetRangeUser(-21,21);
   grWidth->GetYaxis()->SetLimits(-21,21);
-  grWidth->GetXaxis()->SetTitleSize(0.08);
-  grWidth->GetYaxis()->SetTitleSize(0.08);
+  grWidth->GetXaxis()->SetTitleSize(0.07);
+  grWidth->GetYaxis()->SetTitleSize(0.07);
   grWidth->GetXaxis()->SetLabelSize(0.06);
   grWidth->GetYaxis()->SetLabelSize(0.06);
-  grWidth->GetXaxis()->SetTitleOffset(0.9);
+  grWidth->GetXaxis()->SetTitleOffset(1.1);
   grWidth->GetYaxis()->SetTitleOffset(0.9);
   TLegend *leg = new TLegend (0.15,0.15, 0.5, 0.5);
 
@@ -230,11 +230,11 @@ void plotArea() {
   // grWidth->GetYaxis()->SetRangeUser(0,1.2);
   grWidth->GetYaxis()->SetTitle("e_{area} [%]");
   grWidth->GetXaxis()->SetTitle("Area [pVs]");
-  grWidth->GetXaxis()->SetTitleSize(0.08);
-  grWidth->GetYaxis()->SetTitleSize(0.08);
+  grWidth->GetXaxis()->SetTitleSize(0.07);
+  grWidth->GetYaxis()->SetTitleSize(0.07);
   grWidth->GetXaxis()->SetLabelSize(0.06);
   grWidth->GetYaxis()->SetLabelSize(0.06);
-  grWidth->GetXaxis()->SetTitleOffset(0.9);
+  grWidth->GetXaxis()->SetTitleOffset(1.1);
   grWidth->GetYaxis()->SetTitleOffset(0.9);
   // grWidth->GetXaxis()->SetRangeUser(0.9,200);
   // grWidth->GetXaxis()->SetLimits(0.9,200);
@@ -341,25 +341,25 @@ for (int32_t i=0; i<psaSet.nRuns; i++) {
   grArea->GetYaxis()->SetTitle("e_{area} [%]");
   grArea->GetXaxis()->SetTitle("SNR");
 
-  grWidth->GetXaxis()->SetTitleSize(0.08);
-  grWidth->GetYaxis()->SetTitleSize(0.08);
+  grWidth->GetXaxis()->SetTitleSize(0.07);
+  grWidth->GetYaxis()->SetTitleSize(0.07);
   grWidth->GetXaxis()->SetLabelSize(0.06);
   grWidth->GetYaxis()->SetLabelSize(0.06);
-  grWidth->GetXaxis()->SetTitleOffset(0.9);
+  grWidth->GetXaxis()->SetTitleOffset(1.1);
   grWidth->GetYaxis()->SetTitleOffset(0.9);
   // cout << "ndiv " << grWidth->GetXaxis()->GetNdivisions() << endl;
   // grWidth->GetYaxis()->SetNdivisions(grWidth->GetXaxis()->GetNdivisions()/100);
-  grAmpl->GetXaxis()->SetTitleSize(0.08);
-  grAmpl->GetYaxis()->SetTitleSize(0.08);
+  grAmpl->GetXaxis()->SetTitleSize(0.07);
+  grAmpl->GetYaxis()->SetTitleSize(0.07);
   grAmpl->GetXaxis()->SetLabelSize(0.06);
   grAmpl->GetYaxis()->SetLabelSize(0.06);
-  grAmpl->GetXaxis()->SetTitleOffset(0.9);
+  grAmpl->GetXaxis()->SetTitleOffset(1.1);
   grAmpl->GetYaxis()->SetTitleOffset(0.9);
-  grArea->GetXaxis()->SetTitleSize(0.08);
-  grArea->GetYaxis()->SetTitleSize(0.08);
+  grArea->GetXaxis()->SetTitleSize(0.07);
+  grArea->GetYaxis()->SetTitleSize(0.07);
   grArea->GetXaxis()->SetLabelSize(0.06);
   grArea->GetYaxis()->SetLabelSize(0.06);
-  grArea->GetXaxis()->SetTitleOffset(0.9);
+  grArea->GetXaxis()->SetTitleOffset(1.1);
   grArea->GetYaxis()->SetTitleOffset(0.9);
 
 

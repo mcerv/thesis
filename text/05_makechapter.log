@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  6 MAY 2016 00:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  8 MAY 2016 15:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -345,12 +345,6 @@ LaTeX Warning: Reference `ch:meas' on page 1 undefined on input line 10.
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Citation `PAVEL:00000' on page 2 undefined on input line 30.
-
-
-LaTeX Warning: Citation `PAVEL:00002' on page 2 undefined on input line 30.
-
-
 LaTeX Warning: Reference `ch:meas' on page 2 undefined on input line 34.
 
 
@@ -403,13 +397,13 @@ t line 134.
 (pdftex.def)             Requested size: 303.53267pt x 198.25009pt.
  [6 <./05_current_monitoring/plots/application.pdf>] [7 <./05_current_monitorin
 g/plots/analysis1.pdf>] [8]
-<05_current_monitoring/plots/pulse1.pdf, id=158, 472.76625pt x 243.91125pt>
+<05_current_monitoring/plots/pulse1.pdf, id=158, 4727.6625pt x 2459.1875pt>
 File: 05_current_monitoring/plots/pulse1.pdf Graphic file (type pdf)
 
 <use 05_current_monitoring/plots/pulse1.pdf>
 Package pdftex.def Info: 05_current_monitoring/plots/pulse1.pdf used on input l
 ine 181.
-(pdftex.def)             Requested size: 303.53267pt x 156.60138pt.
+(pdftex.def)             Requested size: 303.53267pt x 157.86401pt.
 
 
 Package caption Warning: \label without proper \caption on input line 192.
@@ -579,13 +573,6 @@ enTests/plots/snrArea1.pdf, page is rotated 90 degrees>]
 LaTeX Warning: Reference `sec:spacecharge' on page 16 undefined on input line 3
 93.
 
-
-LaTeX Warning: Citation `PAVEL:00003' on page 16 undefined on input line 393.
-
-
-LaTeX Warning: Citation `CHRISSI:00005' on page 16 undefined on input line 393.
-
-
 [16 <../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare.pdf, page 
 is rotated 90 degrees>]
 <../../../CIVIDEC/dataRead/data/plots/reportATI/27-pulse-background-1.pdf, id=6
@@ -659,15 +646,15 @@ pulse-neutron-0.pdf, page is rotated 90 degrees>] [18
 
 
 ]
-<../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add.pdf, id=926, 5
-97.52231pt x 845.0471pt>
-File: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add.pdf Graph
-ic file (type pdf)
+<../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add4.pdf, id=926, 
+329.76741pt x 453.53691pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add4.pdf Grap
+hic file (type pdf)
 
-<use ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add.pdf>
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add4.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/10-scat
-ter-0_add.pdf used on input line 459.
-(pdftex.def)             Requested size: 429.28616pt x 607.13112pt.
+ter-0_add4.pdf used on input line 459.
+(pdftex.def)             Requested size: 429.28616pt x 590.43529pt.
 
 <../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf, id=927, 531.9
 875pt x 739.76375pt>
@@ -699,7 +686,17 @@ Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/18-area
 -0.pdf used on input line 478.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
  [19]
-[20 <../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add.pdf>]
+
+LaTeX Warning: Text page 20 contains only floats.
+
+
+Overfull \vbox (4.20529pt too high) has occurred while \output is active []
+
+
+[20 <../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-0_add4.pdf>]
+
+LaTeX Warning: Text page 21 contains only floats.
+
 [21 <../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-0.pdf>] [22 <../
 ../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0.pdf, page is rotated 90 d
 egrees> <../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0.pdf, page is 
@@ -709,7 +706,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 490.
 
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf, id=1110, 531.
+<../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf, id=1098, 531.
 9875pt x 739.76375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-0.pdf Graphic f
 ile (type pdf)
@@ -724,7 +721,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 498.
 
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf, id=1111, 531.
+<../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf, id=1099, 531.
 9875pt x 739.76375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-0.pdf Graphic f
 ile (type pdf)
@@ -739,7 +736,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 505.
 
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0.pdf, id=1112, 569.126
+<../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0.pdf, id=1100, 569.126
 25pt x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0.pdf Graphic file
  (type pdf)
@@ -749,7 +746,7 @@ Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/13-area
 -0.pdf used on input line 508.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf, id=1113, 569.126
+<../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf, id=1101, 569.126
 25pt x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0.pdf Graphic file
  (type pdf)
@@ -776,27 +773,21 @@ LaTeX Warning: Citation `ATOM:00001' on page 27 undefined on input line 599.
 
 ]
 
-LaTeX Warning: Citation `PAVEL:00000' on page 28 undefined on input line 608.
-
-
-LaTeX Warning: Citation `PAVEL:00002' on page 28 undefined on input line 608.
-
-
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 619.
 
 
-<../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add1.pdf, id=1304, 614
-.295pt x 311.27312pt>
-File: ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add1.pdf Graphic 
+<../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add2.pdf, id=1292, 329
+.76741pt x 170.7165pt>
+File: ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add2.pdf Graphic 
 file (type pdf)
 
-<use ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add1.pdf>
+<use ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add2.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-
-1_add1.pdf used on input line 621.
-(pdftex.def)             Requested size: 429.28616pt x 217.52872pt.
+1_add2.pdf used on input line 621.
+(pdftex.def)             Requested size: 429.28616pt x 222.24661pt.
  [28]
-<../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf, id=1308, 569.12625pt
+<../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf, id=1296, 569.12625pt
  x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf Graphic file (ty
 pe pdf)
@@ -805,14 +796,8 @@ Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/triga-08-area-0.p
 df used on input line 632.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
-[29 <../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add1.pdf> <../../.
+[29 <../../../CIVIDEC/dataRead/data/plots/triga-08-scatter-1_add2.pdf> <../../.
 ./CIVIDEC/dataRead/data/plots/triga-08-area-0.pdf, page is rotated 90 degrees>]
-
-LaTeX Warning: Citation `ITER:00000' on page 30 undefined on input line 653.
-
-
-LaTeX Warning: Citation `PAVEL:00001' on page 30 undefined on input line 661.
-
 
 LaTeX Warning: Citation `CHRISSI:00001' on page 30 undefined on input line 666.
 
@@ -826,22 +811,22 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 680.
 
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add1.pdf, id=1390,
- 597.52231pt x 845.0471pt>
-File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add1.pdf Grap
+<../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add2.pdf, id=1375,
+ 329.76741pt x 453.53691pt>
+File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add2.pdf Grap
 hic file (type pdf)
 
-<use ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add1.pdf>
+<use ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add2.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-scat
-ter-0_add1.pdf used on input line 682.
-(pdftex.def)             Requested size: 429.28616pt x 607.13112pt.
+ter-0_add2.pdf used on input line 682.
+(pdftex.def)             Requested size: 429.28616pt x 590.43529pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 687.
 
 
-<../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf, id=1391, 569.126
+<../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf, id=1376, 569.126
 25pt x 410.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf Graphic file
  (type pdf)
@@ -852,29 +837,26 @@ Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/reportATI/15-area
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
 
-LaTeX Warning: Citation `EPFL:00000' on page 31 undefined on input line 711.
-
-
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 720.
 
 
-<../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add1.pdf, id=1392, 597.522
-31pt x 845.0471pt>
-File: ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add1.pdf Graphic file
+<../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add2.pdf, id=1377, 329.767
+41pt x 453.53691pt>
+File: ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add2.pdf Graphic file
  (type pdf)
 
-<use ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add1.pdf>
+<use ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add2.pdf>
 Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_ad
-d1.pdf used on input line 722.
-(pdftex.def)             Requested size: 429.28616pt x 607.13112pt.
+d2.pdf used on input line 722.
+(pdftex.def)             Requested size: 429.28616pt x 590.43529pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 727.
 
 
-<../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf, id=1393, 569.12625pt x 4
+<../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf, id=1378, 569.12625pt x 4
 10.53375pt>
 File: ../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf Graphic file (type p
 df)
@@ -883,53 +865,51 @@ Package pdftex.def Info: ../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf u
 sed on input line 729.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
  [31]
-[32 <../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add1.pdf>]
+[32 <../../../CIVIDEC/dataRead/data/plots/reportATI/15-scatter-0_add2.pdf>]
 [33 <../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4.pdf, page is rota
-ted 90 degrees>] [34 <../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add1.
-pdf>] [35 <../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf, page is rotate
-d 90 degrees>]) [36
+ted 90 degrees>] [34 <../../../CIVIDEC/dataRead/data/plots/epfl-scatter-1_add2.
+pdf>]) [35 <../../../CIVIDEC/dataRead/data/plots/epfl-area-1.pdf, page is rotat
+ed 90 degrees>] (./05_makechapter.bbl) [36
 
-]
-No file 05_makechapter.bbl.
-(./05_makechapter.aux (./05_current_monitoring/chapter.aux))
+
+] (./05_makechapter.aux
+(./05_current_monitoring/chapter.aux))
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 4650 strings out of 493089
- 81600 string characters out of 6134843
- 126992 words of memory out of 5000000
- 7905 multiletter control sequences out of 15000+600000
- 16322 words of font info for 60 fonts, out of 8000000 for 9000
+ 4657 strings out of 493089
+ 81689 string characters out of 6134843
+ 127013 words of memory out of 5000000
+ 7908 multiletter control sequences out of 15000+600000
+ 16943 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,16n,49p,1626b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 05_makechapter.pdf (36 pages, 1959177 bytes).
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on 05_makechapter.pdf (36 pages, 1942314 bytes).
 PDF statistics:
- 1627 PDF objects out of 1728 (max. 8388607)
- 846 compressed objects within 9 object streams
+ 1606 PDF objects out of 1728 (max. 8388607)
+ 832 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

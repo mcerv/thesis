@@ -23,7 +23,7 @@
 #include <fstream>
 #include "TEllipse.h"
 #include "TDatime.h"
-
+#include "THStack.h"
 
 
 
@@ -111,7 +111,7 @@ int32_t main (void) {
   h->GetXaxis()->SetNdivisions(-n);
   for (Long64_t j=0;j<n;j++) h->Fill(month[j].c_str(),0);
   h->SetMinimum(0);
-  h->SetMaximum(40);
+  h->SetMaximum(91);
   h->Draw();
 
   TGraph *gr1 = new TGraph(n,timeData,IBL);
@@ -126,28 +126,72 @@ int32_t main (void) {
   gr2->SetMarkerStyle(21);
   gr3->SetMarkerStyle(22);
   gr4->SetMarkerStyle(23);
-  gr1->SetMarkerSize(1.4);
-  gr2->SetMarkerSize(1.4);
-  gr3->SetMarkerSize(1.4);
-  gr4->SetMarkerSize(1.4);
-  gr1->Draw("PL");
-  gr2->Draw("PL");
-  gr3->Draw("PL");
-  gr4->Draw("PL");
+  // gr1->SetMarkerSize(1.4);
+  // gr2->SetMarkerSize(1.4);
+  // gr3->SetMarkerSize(1.4);
+  // gr4->SetMarkerSize(1.4);
+  // gr1->Draw("PL");
+  // gr2->Draw("PL");
+  // gr3->Draw("PL");
+  // gr4->Draw("PL");
 
-  TLegend *leg = new TLegend(0.25,0.6,0.60,0.87);
-  leg->AddEntry(gr1, "IBL, 12 units", "LEP");
-  leg->AddEntry(gr2, "Si, 24 units", "LEP");
-  leg->AddEntry(gr3, "C, 43 units", "LEP");
-  leg->AddEntry(gr4, "C accepted, 20 units", "LEP");
+  TH1I* h1 = new TH1I("h1","h1",n,startDate, endDate);
+  TH1I* h2 = new TH1I("h2","h2",n,startDate, endDate);
+  TH1I* h3 = new TH1I("h3","h3",n,startDate, endDate);
+  TH1I* h4 = new TH1I("h4","h4",n,startDate, endDate);
+  h1->GetXaxis()->SetNdivisions(-n);
+  h2->GetXaxis()->SetNdivisions(-n);
+  h3->GetXaxis()->SetNdivisions(-n);
+  h4->GetXaxis()->SetNdivisions(-n);
+  dr->prettify(h1,"green");
+  dr->prettify(h2,"blue");
+  dr->prettify(h3,"red");
+  dr->prettify(h4,"green");
+  for (int i=0; i<n; i++) {
+    h1->Fill(month[i].c_str(), IBL[i]);
+    h2->Fill(month[i].c_str(), Si[i]);
+    h3->Fill(month[i].c_str(), C[i]);
+    h4->Fill(month[i].c_str(), C1[i]);
+  }
+  THStack *hs = new THStack("hs","");
+  hs->Add(h1);
+  hs->Add(h2);
+  hs->Add(h3);
+  // hs->Add(h4);
+  // h1->GetYaxis()->SetTitle("Produced units");
+  // h1->GetXaxis()->SetTitle("Year 2013");
+  // h2->GetYaxis()->SetTitle("Produced units");
+  // h2->GetXaxis()->SetTitle("Year 2013");
+  // h3->GetYaxis()->SetTitle("Produced units");
+  // h3->GetXaxis()->SetTitle("Year 2013");
+  // h4->GetYaxis()->SetTitle("Produced units");
+  // h4->GetXaxis()->SetTitle("Year 2013");
+  // hs->GetHistogram()->GetXaxis()->SetTitle("Year 2013");
+  // hs->GetHistogram()->GetYaxis()->SetTitle("Produced units");
+  h->GetXaxis()->SetTitle("Year 2013");
+  h->GetYaxis()->SetTitle("Produced units");
+  hs->Draw("b same");
+  h1->SetBarWidth(0.8);
+  h2->SetBarWidth(0.8);
+  h3->SetBarWidth(0.8);
+  h4->SetBarWidth(0.8);
+
+
+  TLegend *leg = new TLegend(0.29,0.73,0.60,0.87);
+  // leg->AddEntry(gr1, "IBL, 12 units", "P");
+  // leg->AddEntry(gr2, "Si, 24 units", "P");
+  // leg->AddEntry(gr3, "C, 43 units", "P");
+  // leg->AddEntry(gr4, "C accepted, 20 units", "P");
+  leg->AddEntry(h3, "pCVD, 43 units", "F");
+  leg->AddEntry(h2, "Si, 24 units", "F");
+  leg->AddEntry(h1, "IBL, 12 units", "F");
+  // leg->AddEntry(h4, "C accepted, 20 units", "P");
 
   leg->Draw("same");
-
-  h->GetYaxis()->SetTitle("Produced units");
-  h->GetXaxis()->SetTitle("2013");
-  h->GetYaxis()->SetRangeUser(0,45);
+  // hs->GetYaxis()->SetRangeUser(0,45);
   canvas->Update();
   canvas->WaitPrimitive();
+  canvas->Update();
 
 
 //  yearlyPlot();

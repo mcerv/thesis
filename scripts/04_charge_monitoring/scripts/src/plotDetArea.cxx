@@ -81,12 +81,12 @@ int32_t main (void) {
   gPad->SetLogy();
   gr->Draw("AP");
   dr->prettify(gr);
-  gr->SetMarkerStyle(21);
-  gr->SetMarkerSize(1.5);
+  // gr->SetMarkerStyle(21);
+  // gr->SetMarkerSize(1.);
   gr->GetYaxis()->SetRangeUser(0.9, 400);
   // mg->GetXaxis()->SetLimits(0.9, 100000);
-  gr->GetXaxis()->SetRangeUser(2000, 2019);
-  gr->GetXaxis()->SetLimits(2000, 2019);
+  gr->GetXaxis()->SetRangeUser(2001, 2017);
+  gr->GetXaxis()->SetLimits(2001, 2017);
   gr->GetXaxis()->SetTitle("Year");
   gr->GetYaxis()->SetTitle("Active area [cm^{2}]");
 
@@ -94,6 +94,8 @@ int32_t main (void) {
 
   for (int32_t a=0; a<i; a++) {
     tex[a] = new TLatex (year[a],area[a]*1.1,detName[a].c_str());
+    tex[a]->SetTextFont(42);
+    tex[a]->SetTextSize(0.04);
     tex[a]->Draw("same");
   }
 

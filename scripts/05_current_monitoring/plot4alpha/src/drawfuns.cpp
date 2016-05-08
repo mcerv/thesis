@@ -1,6 +1,6 @@
 /*
   Draw functions
-  2016-05-05
+  2016-05-07 v2
   Matevz Cerv
 */
 
@@ -126,18 +126,18 @@ void DrawFuns::prettify (TGraph *gr ) {
     gr->SetTitle("");
     gr->GetXaxis()->SetTitle("X axis [unit]");
     gr->GetYaxis()->SetTitle("Y axis [unit]");
-    gr->GetXaxis()->SetTitleSize(0.06);
-    gr->GetYaxis()->SetTitleSize(0.06);
+    gr->GetXaxis()->SetTitleSize(0.05);
+    gr->GetYaxis()->SetTitleSize(0.05);
     gr->GetXaxis()->SetTitleOffset(1.2);
     gr->GetYaxis()->SetTitleOffset(1.2);
-    gr->GetXaxis()->SetLabelOffset(-0.010);
-    gr->GetXaxis()->SetLabelSize(0.06);
-    gr->GetYaxis()->SetLabelSize(0.06);
+    gr->GetXaxis()->SetLabelOffset(0.007);
+    gr->GetXaxis()->SetLabelSize(0.04);
+    gr->GetYaxis()->SetLabelSize(0.04);
     gr->GetYaxis()->SetTickLength(0.01);
-    gr->GetXaxis()->SetTitleFont(132);
-    gr->GetYaxis()->SetTitleFont(132);
-    gr->GetXaxis()->SetLabelFont(132);
-    gr->GetYaxis()->SetLabelFont(132);
+    gr->GetXaxis()->SetTitleFont(42);
+    gr->GetYaxis()->SetTitleFont(42);
+    gr->GetXaxis()->SetLabelFont(42);
+    gr->GetYaxis()->SetLabelFont(42);
 
 
     gr->SetMarkerColor(kBlack);
@@ -153,15 +153,18 @@ void DrawFuns::prettify (TMultiGraph *gr) {
   gr->SetTitle("");
   gr->GetXaxis()->SetTitle("X axis [unit]");
   gr->GetYaxis()->SetTitle("Y axis [unit]");
-  gr->GetXaxis()->SetTitleSize(0.07);
-  gr->GetYaxis()->SetTitleSize(0.07);
-  gr->GetXaxis()->SetTitleOffset(1);
+  gr->GetXaxis()->SetTitleSize(0.05);
+  gr->GetYaxis()->SetTitleSize(0.05);
+  gr->GetXaxis()->SetTitleOffset(1.2);
   gr->GetYaxis()->SetTitleOffset(1.2);
-  // gr->GetXaxis()->SetTitleFont(132);
-  // gr->GetYaxis()->SetTitleFont(132);
-  gr->GetXaxis()->SetLabelSize(0.05);
-  gr->GetYaxis()->SetLabelSize(0.05);
+  gr->GetXaxis()->SetLabelOffset(0.007);
+  gr->GetXaxis()->SetLabelSize(0.04);
+  gr->GetYaxis()->SetLabelSize(0.04);
   gr->GetYaxis()->SetTickLength(0.01);
+  gr->GetXaxis()->SetTitleFont(42);
+  gr->GetYaxis()->SetTitleFont(42);
+  gr->GetXaxis()->SetLabelFont(42);
+  gr->GetYaxis()->SetLabelFont(42);
 }
 
 void DrawFuns::prettify (TVirtualPad *c, string histType = "th1") {
@@ -175,12 +178,12 @@ void DrawFuns::prettify (TVirtualPad *c, string histType = "th1") {
     gStyle->SetGridStyle(1001);
     // c->SetLogx();
     c->SetTopMargin(0.02);
-    c->SetBottomMargin(0.15);
+    c->SetBottomMargin(0.18);
     c->SetLeftMargin(0.15 );
     c->SetRightMargin(0.03);
-    if (!histType.compare("th2")) {
-      c->SetRightMargin(0.15);
-    }
+    // if (!histType.compare("th2")) {
+    //   c->SetRightMargin(0.15);
+    // }
     c->SetTitle("");
     c->Update();
   }
@@ -207,14 +210,17 @@ void DrawFuns::prettify (TH2 *h ) {
   h->SetTitle("");
   h->GetXaxis()->SetTitle("X axis [unit]");
   h->GetYaxis()->SetTitle("Y axis [unit]");
-  h->GetXaxis()->SetTitleSize(0.07);
-  h->GetYaxis()->SetTitleSize(0.07);
-  h->GetYaxis()->SetTitleOffset(0.9);
-  h->GetXaxis()->SetTitleOffset(0.9);
-  // h->GetXaxis()->SetTitleFont(132);
-  // h->GetYaxis()->SetTitleFont(132);
-  h->GetXaxis()->SetLabelSize(0.05);
-  h->GetYaxis()->SetLabelSize(0.05);
+  h->GetXaxis()->SetTitleSize(0.06);
+  h->GetYaxis()->SetTitleSize(0.06);
+  h->GetYaxis()->SetTitleOffset(1.2);
+  h->GetXaxis()->SetTitleOffset(1.0);
+  h->GetXaxis()->SetLabelOffset(0.007);
+  h->GetXaxis()->SetTitleFont(42);
+  h->GetYaxis()->SetTitleFont(42);
+  h->GetXaxis()->SetLabelFont(42);
+  h->GetYaxis()->SetLabelFont(42);
+  h->GetXaxis()->SetLabelSize(0.04);
+  h->GetYaxis()->SetLabelSize(0.04);
   h->GetYaxis()->SetTickLength(0.01);
   h->SetDrawOption("colz");
 }
@@ -225,7 +231,9 @@ void DrawFuns::prettify (TH1 *h) {
 
 void DrawFuns::prettify (TLine *l ) {
   l->SetLineWidth(3);
-  l->SetLineColor(kRed+1);
+  // l->SetLineColor(kRed+1);
+  TColor* colobj = new TColor();
+  l->SetLineColor(colobj->GetColor("#EE6D6D") );
 
 }
 
@@ -234,17 +242,23 @@ void DrawFuns::prettify (TH1 *h , std::string color = "red") {
   //gr->GetXaxis()->SetLogx();
   int32_t colorNum = kRed;
   int32_t colorFill = 3005;
+  TColor* clrObj = new TColor();
   if(!color.compare("red")) {
-    colorNum = kRed+1;
-    colorFill = 3005;
+
+    // colorNum = kRed+1;
+    // colorFill = 3005;
+    colorNum = clrObj->GetColor("#952929");
+    colorFill = 1001;
   }
   else if (!color.compare("light blue")) {
     colorNum = kBlue-7;
     colorFill = 3004;
   }
   else if (!color.compare("dark blue") || !color.compare("blue") ) {
-    colorNum = kBlue-1;
-    colorFill = 3004;
+    // colorNum = kBlue-1;
+    // colorFill = 3004;
+    colorNum = clrObj->GetColor("#418f8f");
+    colorFill = 1001;
   }
     else if (!color.compare("dark green") || !color.compare("green") ) {
     colorNum = kGreen+3;
@@ -267,7 +281,10 @@ void DrawFuns::prettify (TH1 *h , std::string color = "red") {
     colorFill = 3005;
   }
   gStyle->SetOptStat(0);
+  // h->SetLineColor(colorNum);
   h->SetLineColor(colorNum);
+  h->SetFillColorAlpha(colorNum, 0.6);
+  h->SetFillStyle(colorFill);
   //h->Draw("AL.");
   //h->SetMarkerColor(kBlack);
   //h->GetYaxis()->SetRangeUser(minYd,maxYd);
@@ -277,21 +294,19 @@ void DrawFuns::prettify (TH1 *h , std::string color = "red") {
   h->SetTitle("");
   h->GetXaxis()->SetTitle("X axis [unit]");
   h->GetYaxis()->SetTitle("Y axis [unit]");
-  h->GetXaxis()->SetTitleSize(0.06);
-  h->GetYaxis()->SetTitleSize(0.06);
-  h->GetXaxis()->SetTitleOffset(1.2);
+  h->GetXaxis()->SetTitleSize(0.05);
+  h->GetYaxis()->SetTitleSize(0.05);
   h->GetYaxis()->SetTitleOffset(1.2);
-  h->GetXaxis()->SetTitleFont(132);
-  h->GetYaxis()->SetTitleFont(132);
-  h->GetXaxis()->SetLabelFont(132);
-  h->GetYaxis()->SetLabelFont(132);
-  h->GetXaxis()->SetLabelSize(0.06);
-  h->GetYaxis()->SetLabelSize(0.06);
-  h->GetXaxis()->SetLabelOffset(0.000);
-
+  h->GetXaxis()->SetTitleOffset(1.2);
+  h->GetXaxis()->SetLabelOffset(0.007);
+  h->GetXaxis()->SetTitleFont(42);
+  h->GetYaxis()->SetTitleFont(42);
+  h->GetXaxis()->SetLabelFont(42);
+  h->GetYaxis()->SetLabelFont(42);
+  h->GetXaxis()->SetLabelSize(0.04);
+  h->GetYaxis()->SetLabelSize(0.04);
   h->GetYaxis()->SetTickLength(0.01);
-  h->SetFillStyle(colorFill);
-  h->SetFillColor(colorNum);
+
 }
 
 void DrawFuns::prettyGraphShade (int n, double *xaxis, double *yaxis,

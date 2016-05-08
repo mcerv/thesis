@@ -71,8 +71,9 @@ int32_t main (void) {
       hist[plot] = new TH1D( *(TH1D*)f->Get(histName[plot].c_str() )  );
 
       if (!plot) {
-        dr->prettify(hist[plot], "black");
-        hist[plot]->GetXaxis()->SetTitle(xAx[plot].c_str() );
+        dr->prettify(hist[plot], "blue");
+        // hist[plot]->GetXaxis()->SetTitle(xAx[plot].c_str() );
+        hist[plot]->GetXaxis()->SetTitle("Z0 [mm]" );
         hist[plot]->GetYaxis()->SetRangeUser(0,yaxis[i]);
         hist[plot]->GetYaxis()->SetLimits(0,yaxis[i]);
         hist[plot]->GetYaxis()->SetTitle("Normalised entries");
@@ -80,7 +81,8 @@ int32_t main (void) {
       }
       else {
         dr->prettify(hist[plot],"red");
-        hist[plot]->GetXaxis()->SetTitle(xAx[plot].c_str() );
+        // hist[plot]->GetXaxis()->SetTitle(xAx[plot].c_str() );
+        hist[plot]->GetXaxis()->SetTitle("D0 [mm]" );
         hist[plot]->GetYaxis()->SetRangeUser(0,yaxis[i]);
         hist[plot]->GetYaxis()->SetLimits(0,yaxis[i]);
         hist[plot]->GetYaxis()->SetTitle("Normalised entries");
@@ -90,7 +92,7 @@ int32_t main (void) {
 
 
 
-      leg->AddEntry(hist[plot], histLeg[plot].c_str(), "L" );
+      leg->AddEntry(hist[plot], histLeg[plot].c_str(), "F" );
       // hist[plot]->SetMaximum(max[i]);
       // can->Update();
       // can->WaitPrimitive();

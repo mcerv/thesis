@@ -67,13 +67,19 @@ int32_t main (void) {
     }
     hist[i] = new TH2D( *(TH2D*)f->Get(histName[i].c_str() )  );
     dr->prettify(hist[i]);
-    hist[i]->Draw("col");
+    hist[i]->Draw("colz");
 
-    hist[i]->GetXaxis()->SetTitle("X position [um]");
+    hist[i]->GetXaxis()->SetTitle("X position [#mum]");
     hist[i]->GetXaxis()->SetTicks("b");
-    hist[i]->GetYaxis()->SetTitle("Y position [um]");
+    hist[i]->GetYaxis()->SetTitle("Y position [#mum]");
+    hist[i]->GetXaxis()->SetNdivisions(8);
+    hist[i]->GetYaxis()->SetNdivisions(6);
+    hist[i]->GetXaxis()->SetTitleSize(0.07);
+    hist[i]->GetYaxis()->SetTitleSize(0.07);
+    hist[i]->GetYaxis()->SetTitleOffset(0.9);
     hist[i]->SetMaximum(max[i]);
-    can->SetRightMargin(0.06);
+
+    can->SetRightMargin(0.093);
     can->Update();
     can->WaitPrimitive();
     can->Update();

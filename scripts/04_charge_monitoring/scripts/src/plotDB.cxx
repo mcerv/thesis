@@ -134,7 +134,7 @@ int32_t main (void) {
   for (int i = 0; i < nEntriesMax; i++) {
     //apply cuts
     if ( !runTypeBuf[i].compare("Unknown") )            continue;
-    if ( !runTypeBuf[i].compare("Occupancy") )          continue;
+    // if ( !runTypeBuf[i].compare("Occupancy") )          continue;
     // if ( !moduleIDBuf[i].compare(0,4,"MSBM") )            continue;
     // if ( voltageBuf[i] == 0 )                           continue;
     if ( triggersBuf[i] < 30000 )                       continue;
@@ -197,10 +197,11 @@ int32_t main (void) {
   histEffCorrectedSi->Draw("same");
   histEffCorrected->GetXaxis()->SetTitle("Pseudo-efficiency [\%]");
   histEffCorrected->GetYaxis()->SetTitle("Entries");
-  histEffCorrected->GetYaxis()->SetRangeUser(0,25);
-  TLegend *leg = new TLegend (0.2, 0.7, 0.5, 0.9);
-  leg->AddEntry(histEffCorrected, "C modules", "L");
-  leg->AddEntry(histEffCorrectedSi, "Si modules", "L");
+  histEffCorrected->GetYaxis()->SetRangeUser(0,26);
+  histEffCorrected->GetXaxis()->SetRangeUser(0,100.01);
+  TLegend *leg = new TLegend (0.2, 0.76, 0.5, 0.9);
+  leg->AddEntry(histEffCorrected, "C modules", "F");
+  leg->AddEntry(histEffCorrectedSi, "Si modules", "F");
   leg->Draw("same");
   // histEffCorrectedAcc->Draw("same");
   c->Update();
@@ -243,12 +244,13 @@ int32_t main (void) {
   dr->prettify(histDisconnected, "red");
   dr->prettify(histDisconnectedSi, "blue");
   histDisconnectedSi->Draw();
+  histDisconnectedSi->GetXaxis()->SetRangeUser(0,21);
   histDisconnected->Draw("same");
   histDisconnectedSi->GetXaxis()->SetTitle("Disconnected region [\%]");
   histDisconnectedSi->GetYaxis()->SetTitle("Entries");
-  TLegend *leg1 = new TLegend(0.6, 0.7, 0.9, 0.9);
-  leg1->AddEntry(histDisconnected, "C modules", "L");
-  leg1->AddEntry(histDisconnectedSi, "Si modules", "L");
+  TLegend *leg1 = new TLegend(0.6, 0.77, 0.9, 0.9);
+  leg1->AddEntry(histDisconnected, "C modules", "F");
+  leg1->AddEntry(histDisconnectedSi, "Si modules", "F");
   leg1->Draw("same");
   c->Update();
   c->WaitPrimitive();

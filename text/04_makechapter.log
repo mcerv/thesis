@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  5 MAY 2016 13:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  8 MAY 2016 22:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -426,17 +426,17 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf
 used on input line 134.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
  [9 <./04_charge_monitoring/pics/mod1.jpeg>]
-<../scripts/04_charge_monitoring/plots/disconnectedregion.png, id=93, 569.05399
-pt x 410.4936pt>
-File: ../scripts/04_charge_monitoring/plots/disconnectedregion.png Graphic file
- (type png)
+<../scripts/04_charge_monitoring/plots/disconnectedregion1.pdf, id=93, 569.1262
+5pt x 410.53375pt>
+File: ../scripts/04_charge_monitoring/plots/disconnectedregion1.pdf Graphic fil
+e (type pdf)
 
-<use ../scripts/04_charge_monitoring/plots/disconnectedregion.png>
+<use ../scripts/04_charge_monitoring/plots/disconnectedregion1.pdf>
 Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/disconnectedregi
-on.png used on input line 144.
-(pdftex.def)             Requested size: 303.53267pt x 218.96362pt.
+on1.pdf used on input line 144.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
-<../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf, id=95, 569.12625pt x 41
+<../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf, id=94, 569.12625pt x 41
 0.53375pt>
 File: ../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf Graphic file (type 
 pdf)
@@ -445,7 +445,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf
 used on input line 160.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf, id=96, 569.12625pt x 41
+<../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf, id=95, 569.12625pt x 41
 0.53375pt>
 File: ../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf Graphic file (type 
 pdf)
@@ -456,27 +456,29 @@ used on input line 161.
  [10 <../scripts/04_charge_monitoring/plots/MSBM-34-occ.pdf, page is rotated 90
  degrees> <../scripts/04_charge_monitoring/plots/MDBM-23-occ.pdf, page is rotat
 ed 90 degrees>]
-<../scripts/04_charge_monitoring/plots/pseudoefficiency.png, id=187, 569.05399p
-t x 410.4936pt>
-File: ../scripts/04_charge_monitoring/plots/pseudoefficiency.png Graphic file (
-type png)
+<../scripts/04_charge_monitoring/plots/pseudoefficiency1.pdf, id=186, 569.12625
+pt x 410.53375pt>
+File: ../scripts/04_charge_monitoring/plots/pseudoefficiency1.pdf Graphic file 
+(type pdf)
 
-<use ../scripts/04_charge_monitoring/plots/pseudoefficiency.png>
+<use ../scripts/04_charge_monitoring/plots/pseudoefficiency1.pdf>
 Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/pseudoefficiency
-.png used on input line 170.
-(pdftex.def)             Requested size: 303.53267pt x 218.96362pt.
- [11 <../scripts/04_charge_monitoring/plots/disconnectedregion.png> <../scripts
-/04_charge_monitoring/plots/MSBM-34-eff.pdf, page is rotated 90 degrees> <../sc
-ripts/04_charge_monitoring/plots/MDBM-23-eff.pdf, page is rotated 90 degrees>]
-<04_charge_monitoring/pics/erratic1.jpg, id=279, 618.05907pt x 225.09094pt>
+1.pdf used on input line 170.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
+ [11 <../scripts/04_charge_monitoring/plots/disconnectedregion1.pdf, page is ro
+tated 90 degrees> <../scripts/04_charge_monitoring/plots/MSBM-34-eff.pdf, page 
+is rotated 90 degrees> <../scripts/04_charge_monitoring/plots/MDBM-23-eff.pdf, 
+page is rotated 90 degrees>]
+<04_charge_monitoring/pics/erratic1.jpg, id=320, 618.05907pt x 225.09094pt>
 File: 04_charge_monitoring/pics/erratic1.jpg Graphic file (type jpg)
 
 <use 04_charge_monitoring/pics/erratic1.jpg>
 Package pdftex.def Info: 04_charge_monitoring/pics/erratic1.jpg used on input l
 ine 185.
 (pdftex.def)             Requested size: 303.53267pt x 110.54623pt.
- [12 <../scripts/04_charge_monitoring/plots/pseudoefficiency.png>]
-<../scripts/04_charge_monitoring/plots/map.pdf, id=284, 569.12625pt x 410.53375
+ [12 <../scripts/04_charge_monitoring/plots/pseudoefficiency1.pdf, page is rota
+ted 90 degrees>]
+<../scripts/04_charge_monitoring/plots/map.pdf, id=367, 569.12625pt x 410.53375
 pt>
 File: ../scripts/04_charge_monitoring/plots/map.pdf Graphic file (type pdf)
  <use ../scripts/04_charge_monitoring/plots/map.pdf>
@@ -484,7 +486,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/map.pdf used on
 input line 202.
 (pdftex.def)             Requested size: 195.12767pt x 140.75104pt.
 
-<../scripts/04_charge_monitoring/plots/distribution.pdf, id=285, 569.12625pt x 
+<../scripts/04_charge_monitoring/plots/distribution.pdf, id=368, 569.12625pt x 
 410.53375pt>
 File: ../scripts/04_charge_monitoring/plots/distribution.pdf Graphic file (type
  pdf)
@@ -498,19 +500,20 @@ LaTeX Warning: Reference `sec:srctestres' on page 13 undefined on input line 21
 2.
 
 
-<../scripts/04_charge_monitoring/plots/production.png, id=286, 569.05399pt x 41
-0.4936pt>
-File: ../scripts/04_charge_monitoring/plots/production.png Graphic file (type p
-ng)
- <use ../scripts/04_charge_monitoring/plots/production.png>
-Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/production.png u
-sed on input line 217.
-(pdftex.def)             Requested size: 303.53267pt x 218.96362pt.
- [13 <./04_charge_monitoring/pics/erratic1.jpg>] [14 <../scripts/04_charge_moni
-toring/plots/map.pdf, page is rotated 90 degrees> <../scripts/04_charge_monitor
-ing/plots/distribution.pdf, page is rotated 90 degrees> <../scripts/04_charge_m
-onitoring/plots/production.png>]
-<04_charge_monitoring/pics/DBM-installed-colour1.jpg, id=381, 2276.505pt x 1710
+<../scripts/04_charge_monitoring/plots/production1.pdf, id=369, 569.12625pt x 4
+10.53375pt>
+File: ../scripts/04_charge_monitoring/plots/production1.pdf Graphic file (type 
+pdf)
+ <use ../scripts/04_charge_monitoring/plots/production1.pdf>
+Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/production1.pdf 
+used on input line 217.
+(pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
+
+[13 <./04_charge_monitoring/pics/erratic1.jpg>] [14 <../scripts/04_charge_monit
+oring/plots/map.pdf, page is rotated 90 degrees> <../scripts/04_charge_monitori
+ng/plots/distribution.pdf, page is rotated 90 degrees> <../scripts/04_charge_mo
+nitoring/plots/production1.pdf, page is rotated 90 degrees>]
+<04_charge_monitoring/pics/DBM-installed-colour1.jpg, id=507, 2276.505pt x 1710
 .39pt>
 File: 04_charge_monitoring/pics/DBM-installed-colour1.jpg Graphic file (type jp
 g)
@@ -519,7 +522,7 @@ Package pdftex.def Info: 04_charge_monitoring/pics/DBM-installed-colour1.jpg us
 ed on input line 253.
 (pdftex.def)             Requested size: 303.53267pt x 228.04796pt.
  [15]
-<../scripts/04_charge_monitoring/plots/DBM-positioning.pdf, id=385, 2163.08125p
+<../scripts/04_charge_monitoring/plots/DBM-positioning.pdf, id=511, 2163.08125p
 t x 682.55pt>
 File: ../scripts/04_charge_monitoring/plots/DBM-positioning.pdf Graphic file (t
 ype pdf)
@@ -528,7 +531,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/DBM-positioning.
 pdf used on input line 261.
 (pdftex.def)             Requested size: 303.53267pt x 95.77505pt.
 
-<04_charge_monitoring/pics/occupancy.png, id=386, 696.6025pt x 476.78125pt>
+<04_charge_monitoring/pics/occupancy.png, id=512, 696.6025pt x 476.78125pt>
 File: 04_charge_monitoring/pics/occupancy.png Graphic file (type png)
 
 <use 04_charge_monitoring/pics/occupancy.png>
@@ -537,7 +540,7 @@ line 279.
 (pdftex.def)             Requested size: 303.53267pt x 207.74736pt.
  [16 <./04_charge_monitoring/pics/DBM-installed-colour1.jpg> <../scripts/04_cha
 rge_monitoring/plots/DBM-positioning.pdf>]
-<../scripts/04_charge_monitoring/plots/z-r-distance.pdf, id=406, 242.9075pt x 1
+<../scripts/04_charge_monitoring/plots/z-r-distance.pdf, id=533, 242.9075pt x 1
 79.16937pt>
 File: ../scripts/04_charge_monitoring/plots/z-r-distance.pdf Graphic file (type
  pdf)
@@ -547,7 +550,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/z-r-distance.pdf
 (pdftex.def)             Requested size: 303.53267pt x 223.88461pt.
 
 [17 <./04_charge_monitoring/pics/occupancy.png>]
-<../scripts/04_charge_monitoring/plots/D0.pdf, id=411, 569.12625pt x 410.53375p
+<../scripts/04_charge_monitoring/plots/D0.pdf, id=538, 569.12625pt x 410.53375p
 t>
 File: ../scripts/04_charge_monitoring/plots/D0.pdf Graphic file (type pdf)
  <use ../scripts/04_charge_monitoring/plots/D0.pdf>
@@ -555,7 +558,7 @@ Package pdftex.def Info: ../scripts/04_charge_monitoring/plots/D0.pdf used on i
 nput line 297.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
-<../scripts/04_charge_monitoring/plots/Z0.pdf, id=412, 569.12625pt x 410.53375p
+<../scripts/04_charge_monitoring/plots/Z0.pdf, id=539, 569.12625pt x 410.53375p
 t>
 File: ../scripts/04_charge_monitoring/plots/Z0.pdf Graphic file (type pdf)
  <use ../scripts/04_charge_monitoring/plots/Z0.pdf>
@@ -592,7 +595,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  4422 strings out of 493089
- 71356 string characters out of 6134843
+ 71371 string characters out of 6134843
  125553 words of memory out of 5000000
  7774 multiletter control sequences out of 15000+600000
  13312 words of font info for 48 fonts, out of 8000000 for 9000
@@ -612,10 +615,10 @@ l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on 04_makechapter.pdf (20 pages, 5854559 bytes).
+Output written on 04_makechapter.pdf (20 pages, 5249663 bytes).
 PDF statistics:
- 571 PDF objects out of 1000 (max. 8388607)
- 275 compressed objects within 3 object streams
+ 698 PDF objects out of 1000 (max. 8388607)
+ 329 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
