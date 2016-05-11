@@ -203,6 +203,9 @@ int32_t main (void) {
         pulse[sample][temp][toPlot[num]].GetYaxis()->SetTitle("Amplitude [V]");
         pulse[sample][temp][toPlot[num]].GetYaxis()->SetRangeUser(-0.02,0.10); //[V]
         pulse[sample][temp][toPlot[num]].GetXaxis()->SetRangeUser(-2,15); //[s]
+        pulse[sample][temp][toPlot[num]].GetXaxis()->SetTitleSize(0.07);
+        pulse[sample][temp][toPlot[num]].GetYaxis()->SetTitleSize(0.07);
+        pulse[sample][temp][toPlot[num]].GetYaxis()->SetTitleOffset(0.9);
 
         sss.str("");
         sssEH.str("");
@@ -223,11 +226,15 @@ int32_t main (void) {
           sssEH << "holes";
         sss << tempS[temp];
         tex1[num] = new TLatex(-1.8, -0.017,"MEASUREMENT");
-        tex1[num]->SetTextFont(132);
+        tex1[num]->SetTextFont(42);
         texEH1[num] = new TLatex(-1.8,0.09,sssEH.str().c_str());
+          texEH1[num]->SetTextSize(0.06);
+          texEH1[num]->SetTextFont(42);
         // texEH1[num]->SetTextFont(22);
         texEH1sam[num] = new TLatex(10,0.06,sssEHsam.str().c_str());
-        texEH1sam[num]->SetTextSize(0.07);
+        texEH1sam[num]->SetTextSize(0.06);
+        texEH1sam[num]->SetTextSize(0.06);
+        texEH1sam[num]->SetTextFont(42);
 
         // leg[temp][toPlot[num]]->Draw("same");
         // tex1[num]->Draw("same");

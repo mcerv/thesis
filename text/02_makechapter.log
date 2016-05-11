@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  5 MAY 2016 13:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  11 MAY 2016 22:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -710,13 +710,13 @@ Underfull \hbox (badness 1924) in paragraph at lines 77--77
  []
 
 
-<02_pulse_formation/pics/plots/simpledrift.pdf, id=30, 128.98187pt x 73.77562pt
->
+<02_pulse_formation/pics/plots/simpledrift.pdf, id=30, 1289.81876pt x 938.50626
+pt>
 File: 02_pulse_formation/pics/plots/simpledrift.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/simpledrift.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/simpledrift.pdf used on 
 input line 78.
-(pdftex.def)             Requested size: 138.76157pt x 79.37701pt.
+(pdftex.def)             Requested size: 138.76157pt x 100.95905pt.
 
 Underfull \hbox (badness 1331) in paragraph at lines 78--78
 []\OT1/cmr/m/n/9 (b) |The freed electron-hole pair
@@ -777,61 +777,56 @@ lots/chargeind2.pdf> <./02_pulse_formation/pics/plots/chargeind3.pdf>] [7]
 
 LaTeX Warning: Reference `ch:meas' on page 8 undefined on input line 175.
 
-<02_pulse_formation/pics/plots/spcchg.pdf, id=172, 188.20313pt x 96.36pt>
+<02_pulse_formation/pics/plots/spcchg.pdf, id=176, 1892.06876pt x 963.6pt>
 File: 02_pulse_formation/pics/plots/spcchg.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/spcchg.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/spcchg.pdf used on input
  line 178.
-(pdftex.def)             Requested size: 260.17464pt x 133.21951pt.
+(pdftex.def)             Requested size: 260.17464pt x 132.49173pt.
 
 
 LaTeX Warning: Reference `ch:meas' on page 8 undefined on input line 191.
 
 [8 <./02_pulse_formation/pics/plots/spcchg.pdf>] [9]
-<02_pulse_formation/pics/plots/driftboth.pdf, id=206, 189.20688pt x 139.52126pt
+<02_pulse_formation/pics/plots/driftboth.pdf, id=210, 189.20688pt x 139.52126pt
 >
 File: 02_pulse_formation/pics/plots/driftboth.pdf Graphic file (type pdf)
  <use 02_pulse_formation/pics/plots/driftboth.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/driftboth.pdf used on in
 put line 257.
-(pdftex.def)             Requested size: 346.89731pt x 255.82593pt.
+(pdftex.def)             Requested size: 303.53267pt x 223.84743pt.
  [10 <./02_pulse_formation/pics/plots/driftboth.pdf>]
-<02_pulse_formation/pics/bb2.jpg, id=236, 840.13875pt x 526.96875pt>
+<02_pulse_formation/pics/bb2.jpg, id=240, 840.13875pt x 526.96875pt>
 File: 02_pulse_formation/pics/bb2.jpg Graphic file (type jpg)
 
 <use 02_pulse_formation/pics/bb2.jpg>
 Package pdftex.def Info: 02_pulse_formation/pics/bb2.jpg used on input line 289
 .
-(pdftex.def)             Requested size: 368.57964pt x 231.18349pt.
+(pdftex.def)             Requested size: 303.53267pt x 190.38403pt.
  [11 <./02_pulse_formation/pics/bb2.jpg>]
 [12]
-<02_pulse_formation/pics/plots/raddamage.pdf, id=243, 395.4775pt x 187.70125pt>
+<02_pulse_formation/pics/plots/raddamage.pdf, id=247, 3954.775pt x 1877.0125pt>
 File: 02_pulse_formation/pics/plots/raddamage.pdf Graphic file (type pdf)
 <use 02_pulse_formation/pics/plots/raddamage.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/raddamage.pdf used on in
 put line 360.
-(pdftex.def)             Requested size: 346.89731pt x 164.64488pt.
+(pdftex.def)             Requested size: 238.49231pt x 113.1887pt.
  [13 <./02_pulse_formation/pics/plots/raddamage.pdf>] [14]
-<03_measurement_results/scripts/plots/dpa1.pdf, id=268, 569.12625pt x 410.53375
+<03_measurement_results/scripts/plots/dpa1.pdf, id=272, 569.12625pt x 410.53375
 pt>
 File: 03_measurement_results/scripts/plots/dpa1.pdf Graphic file (type pdf)
  <use 03_measurement_results/scripts/plots/dpa1.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/dpa1.pdf used on 
 input line 393.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
- [15]
+ [15 <./03_measurement_results/scripts/plots/dpa1.pdf, page is rotated 90 degre
+es>]
 
-LaTeX Warning: Reference `fig:chgtempelecs' on page 16 undefined on input line 
-429.
+LaTeX Warning: Reference `ch:meas' on page 16 undefined on input line 428.
 
-
-LaTeX Warning: Reference `fig:chgtempholes' on page 16 undefined on input line 
-429.
-
-[16 <./03_measurement_results/scripts/plots/dpa1.pdf, page is rotated 90 degree
-s>]
-<02_pulse_formation/pics/plots/curramp.pdf, id=318, 198.24063pt x 70.2625pt>
+[16]
+<02_pulse_formation/pics/plots/curramp.pdf, id=323, 198.24063pt x 70.2625pt>
 File: 02_pulse_formation/pics/plots/curramp.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/curramp.pdf>
@@ -839,41 +834,41 @@ Package pdftex.def Info: 02_pulse_formation/pics/plots/curramp.pdf used on inpu
 t line 451.
 (pdftex.def)             Requested size: 216.81pt x 76.84618pt.
 
-<02_pulse_formation/pics/plots/chgamp.pdf, id=319, 157.08687pt x 108.90688pt>
+<02_pulse_formation/pics/plots/chgamp.pdf, id=324, 157.08687pt x 108.90688pt>
 File: 02_pulse_formation/pics/plots/chgamp.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/chgamp.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chgamp.pdf used on input
  line 452.
 (pdftex.def)             Requested size: 173.44534pt x 120.25323pt.
- [17 <./02_pulse_formation/pics/plots/curramp.pdf> <./02_pulse_formation/pics/p
-lots/chgamp.pdf>]
-<02_pulse_formation/pics/plots/currrc.pdf, id=356, 156.08313pt x 63.23625pt>
+
+<02_pulse_formation/pics/plots/currrc.pdf, id=325, 1500.60625pt x 592.2125pt>
 File: 02_pulse_formation/pics/plots/currrc.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/currrc.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/currrc.pdf used on input
  line 467.
-(pdftex.def)             Requested size: 346.89731pt x 140.56172pt.
-
-<02_pulse_formation/pics/plots/chgrc.pdf, id=357, 1611.01875pt x 642.4pt>
+(pdftex.def)             Requested size: 303.53267pt x 119.78682pt.
+ [17 <./02_pulse_formation/pics/plots/curramp.pdf> <./02_pulse_formation/pics/p
+lots/chgamp.pdf>]
+<02_pulse_formation/pics/plots/chgrc.pdf, id=361, 1595.9625pt x 602.25pt>
 File: 02_pulse_formation/pics/plots/chgrc.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/chgrc.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/chgrc.pdf used on input 
 line 484.
-(pdftex.def)             Requested size: 303.53267pt x 121.02803pt.
- [18 <./02_pulse_formation/pics/plots/currrc.pdf>]
-<02_pulse_formation/pics/plots/qerr.pdf, id=377, 138.5175pt x 100.87688pt>
+(pdftex.def)             Requested size: 303.53267pt x 114.53896pt.
+ [18 <./02_pulse_formation/pics/plots/currrc.pdf> <./02_pulse_formation/pics/pl
+ots/chgrc.pdf>]
+<02_pulse_formation/pics/plots/qerr.pdf, id=403, 1385.175pt x 978.65625pt>
 File: 02_pulse_formation/pics/plots/qerr.pdf Graphic file (type pdf)
 
 <use 02_pulse_formation/pics/plots/qerr.pdf>
 Package pdftex.def Info: 02_pulse_formation/pics/plots/qerr.pdf used on input l
 ine 512.
-(pdftex.def)             Requested size: 303.53267pt x 221.07704pt.
- [19 <./02_pulse_formation/pics/plots/chgrc.pdf>] [20 <./02_pulse_formation/pic
-s/plots/qerr.pdf>]
-<02_pulse_formation/pics/fpga.jpg, id=429, 168.1482pt x 134.904pt>
+(pdftex.def)             Requested size: 303.53267pt x 214.45386pt.
+ [19] [20 <./02_pulse_formation/pics/plots/qerr.pdf>]
+<02_pulse_formation/pics/fpga.jpg, id=433, 168.1482pt x 134.904pt>
 File: 02_pulse_formation/pics/fpga.jpg Graphic file (type jpg)
 
 <use 02_pulse_formation/pics/fpga.jpg>
@@ -881,7 +876,7 @@ Package pdftex.def Info: 02_pulse_formation/pics/fpga.jpg used on input line 55
 8.
 (pdftex.def)             Requested size: 203.80193pt x 163.5143pt.
 
-<02_pulse_formation/pics/asic2.png, id=430, 1782.66pt x 1098.1025pt>
+<02_pulse_formation/pics/asic2.png, id=434, 1782.66pt x 1098.1025pt>
 File: 02_pulse_formation/pics/asic2.png Graphic file (type png)
 
 <use 02_pulse_formation/pics/asic2.png>
@@ -918,10 +913,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13183 strings out of 493089
- 274183 string characters out of 6134843
+ 13181 strings out of 493089
+ 274147 string characters out of 6134843
  271152 words of memory out of 5000000
- 16429 multiletter control sequences out of 15000+600000
+ 16427 multiletter control sequences out of 15000+600000
  18634 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,16n,49p,10399b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -946,10 +941,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on 02_makechapter.pdf (25 pages, 6344876 bytes).
+Output written on 02_makechapter.pdf (25 pages, 6349007 bytes).
 PDF statistics:
- 512 PDF objects out of 1000 (max. 8388607)
- 359 compressed objects within 4 object streams
+ 516 PDF objects out of 1000 (max. 8388607)
+ 362 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

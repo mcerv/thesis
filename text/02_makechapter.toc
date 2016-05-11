@@ -14,12 +14,12 @@
 \contentsline {subsubsection}{Priming/pumping}{14}
 \contentsline {section}{\numberline {1.5}Radiation damage}{14}
 \contentsline {subsubsection}{Irradiation damage factor}{15}
-\contentsline {section}{\numberline {1.6}Temperature effects}{15}
+\contentsline {section}{\numberline {1.6}Temperature effects}{16}
 \contentsline {subsubsection}{Collected charge as a function of temperature}{16}
-\contentsline {section}{\numberline {1.7}Electronics for signal processing}{17}
+\contentsline {section}{\numberline {1.7}Electronics for signal processing}{16}
 \contentsline {subsection}{\numberline {1.7.1}Signal preamplifiers}{17}
 \contentsline {subsubsection}{Current amplifier}{17}
 \contentsline {subsubsection}{Charge-sensitive amplifier}{18}
 \contentsline {subsubsection}{Analogue electronic noise}{18}
 \contentsline {subsection}{\numberline {1.7.2}Analogue-to-digital converters}{19}
-\contentsline {subsection}{\numberline {1.7.3}Digital signal processing}{21}
+\contentsline {subsection}{\numberline {1.7.3}Digital signal processing}{20}

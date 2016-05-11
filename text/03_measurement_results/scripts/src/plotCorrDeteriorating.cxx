@@ -60,7 +60,7 @@ int32_t main (void) {
                           "S79 1#times10^{14} #pi cm^{-2} - Holes"  };
 
 
-  TLegend *leg = new TLegend (0.5,0.66,0.95,0.95);
+  TLegend *leg = new TLegend (0.5,0.76,0.95,0.95);
 
   TF1* decayfun = new TF1("decay","[0] + ([1]-[0])*exp(-(x+[3])/[2])");
   decayfun->SetParName(0,"chgInf");     //charge at infinity
@@ -137,8 +137,8 @@ int32_t main (void) {
   dr->prettify(mg);
   mg->GetXaxis()->SetRangeUser(0.9, 100000);
   // mg->GetXaxis()->SetLimits(0.9, 100000);
-  mg->GetYaxis()->SetRangeUser(0.01,1);
-  mg->GetXaxis()->SetTitle("Received dose #Phi [#alpha]");
+  mg->GetYaxis()->SetRangeUser(0.01,1.01);
+  mg->GetXaxis()->SetTitle("Received dose #Phi [#alpha_{5.5 MeV}]");
   mg->GetYaxis()->SetTitle("#frac{#sigma(#Phi)}{#sigma_{ref}}");
   leg->Draw("same");
 

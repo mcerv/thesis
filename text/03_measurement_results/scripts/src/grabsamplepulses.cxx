@@ -194,13 +194,13 @@ int32_t main (void) {
         dr->prettify(&histvec[sample][temp][volt]);
         gr[sample][temp][volt]->SetLineColor(kBlack);
         gr[sample][temp][volt]->SetLineWidth(4);
-        leg[sample][temp][volt] = new TLegend (0.66,0.75,0.95,0.95);
+        leg[sample][temp][volt] = new TLegend (0.70,0.85,0.95,0.95);
         ss.str("");
         ss << radiation[temp] << " pulses";
         leg[sample][temp][volt]->AddEntry (&histvec[sample][temp][volt],ss.str().c_str(),"");
         ss.str("");
         ss << "Averaged pulse";
-        leg[sample][temp][volt]->AddEntry (gr[sample][temp][volt],ss.str().c_str(), "L");
+        // leg[sample][temp][volt]->AddEntry (gr[sample][temp][volt],ss.str().c_str(), "L");
 
         clrCnt++;
         // leg[temp][volt]->AddEntry(&histvec[sample][temp][volt], ss.str().c_str(),  "L");
@@ -237,6 +237,9 @@ int32_t main (void) {
         histvec[sample][temp][volt].Draw("col");
         histvec[sample][temp][volt].GetXaxis()->SetTitle("Time [ns]");
         histvec[sample][temp][volt].GetXaxis()->SetTitleFont(42);
+        histvec[sample][temp][volt].GetXaxis()->SetTitleSize(0.07);
+        histvec[sample][temp][volt].GetYaxis()->SetTitleSize(0.07);
+        histvec[sample][temp][volt].GetYaxis()->SetTitleOffset(0.9);
         histvec[sample][temp][volt].GetYaxis()->SetTitleFont(42);
         histvec[sample][temp][volt].GetYaxis()->SetTitle("Voltage [V]");
         histvec[sample][temp][volt].GetYaxis()->SetRangeUser(-0.02,0.10); //[V]

@@ -14,6 +14,7 @@
 //#include "TSpectrum.h"
 #include "TH1.h"
 #include "TH2.h"
+#include "TLine.h"
 #include <iostream>
 
 using namespace std;
@@ -26,6 +27,7 @@ public:
   void prettify (TMultiGraph *gr );
   void prettify (TCanvas *c, string histType); //string is th1 or th2 (margins)
   void prettify (TCanvas *c);
+  void prettify (TLine *l);
   void prettify (TVirtualPad *c, string histType); //string is th1 or th2 (margins)
   void prettify (TVirtualPad *c);
   void prettify (TH1 *h );

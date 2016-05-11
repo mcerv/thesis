@@ -121,7 +121,7 @@ int32_t main (void) {
   gr[0]->GetXaxis()->SetTitle("Electric field [V/ #mu m]");
   gr[0]->GetYaxis()->SetTitle("Charge collection distance [ #mu m]");
 
-  TLegend* leg1 = new TLegend(0.57,0.17,0.965,0.44);
+  TLegend* leg1 = new TLegend(0.57,0.20,0.965,0.44);
   leg1->AddEntry(gr[2],"S37 non-irrad","lep");
   leg1->AddEntry(gr[1],"S79 1e14 #pi cm{}^{-2}","lep");
   leg1->AddEntry(gr[0],"S52 3.63e14 #pi cm{}^{-2}","lep");
@@ -177,15 +177,15 @@ int32_t main (void) {
       <<endl;
   cout<<" --------------------------------"<<endl;
 
-  TLegend* leg2 = new TLegend(0.4,0.65,0.95,0.95);
-  leg2->SetTextFont(132);
+  TLegend* leg2 = new TLegend(0.48,0.77,0.95,0.95);
+  leg2->SetTextFont(42);
   leg2->AddEntry(fun,"RD42 fit: k = 2.2 #times 10^{-18}","l");
   leg2->AddEntry(gp[0],"CCD at 1 V/#mu m","lep");
   // stringstream sskfit;
   // sskfit.str("");
   // sskfit << "Data fit: k_{fit} = " <<
   //        << 3.2#pm
-  leg2->AddEntry(fitf, "Data fit: k_{fit} = 4.4 #pm 1.2 #times 10^{-18}","l");
+  leg2->AddEntry(fitf, "Data fit: k_{fit} = 4.4 #pm 1.2 #times 10^{-18} ","l");
 
 
   // gp[0]->GetXaxis()->SetTitle("Radiation dose [10^{14} pions cm{}^{-2}]");
@@ -201,7 +201,7 @@ int32_t main (void) {
   gp[0]->Draw("AP");
   fun->Draw("SAME");
   leg2->Draw("same");
-  gp[0]->GetXaxis()->SetTitle("Radiation dose [10{}^{14} #pi cm{}^{-2}]");
+  gp[0]->GetXaxis()->SetTitle("Radiation dose [10^{14} #pi cm^{-2}]");
   gp[0]->GetYaxis()->SetTitle("Charge collection distance [ #mu m]");
   gp[0]->GetXaxis()->SetRangeUser(-2,20);
 

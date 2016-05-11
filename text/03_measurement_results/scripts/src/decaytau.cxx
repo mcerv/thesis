@@ -561,7 +561,7 @@ int32_t main (void) {
   // legTau->SetTextSize(0.04);
   legTau->Draw("same");
   TLatex *texTau = new TLatex(3.3,4.3,"MEASUREMENT");
-  texTau->SetTextFont(132);
+  texTau->SetTextFont(42);
   // texTau->Draw("same");
   can->Update();
   can->Write();
@@ -675,7 +675,7 @@ int32_t main (void) {
   mgTau1->GetXaxis()->SetRangeUser(3,450);
   mgTau1->GetXaxis()->SetLimits(3,450);
   mgTau1->GetXaxis()->SetTitle("Temperature [K]");
-  mgTau1->GetYaxis()->SetTitle("#tau [s{}^{-1}]");
+  mgTau1->GetYaxis()->SetTitle("#tau [s^{-1}]");
 // cout<<"1"<<endl;
   // legTau1->SetHeader("For #pm 400 V, #pm 500 V");
   // legTau1->SetTextSize(0.04);
@@ -695,14 +695,14 @@ int32_t main (void) {
   dr->prettify(grTau1All);
   grTau1All->SetMarkerStyle(20);
   grTau1All->Draw("AP");
-  grTau1All->GetXaxis()->SetTitle("Radiation dose [10^{14} #pi cm{}^{-2}]");
-  grTau1All->GetYaxis()->SetTitle("Carrier lifetime #tau [ns{}^{-1}]");
+  grTau1All->GetXaxis()->SetTitle("Radiation dose [10^{14} #pi cm^{-2}]");
+  grTau1All->GetYaxis()->SetTitle("Carrier lifetime #tau [ns^{-1}]");
   grTau1All->GetXaxis()->SetRangeUser(-0.3,5);
   grTau1All->GetXaxis()->SetLimits(-0.3,5);
-  grTau1All->GetYaxis()->SetRangeUser(4,500);
-  grTau1All->GetYaxis()->SetLimits(4,500);
+  grTau1All->GetYaxis()->SetRangeUser(4,505);
+  grTau1All->GetYaxis()->SetLimits(4,505);
   TLatex *tex3 = new TLatex(-0.23,4.5,"MEASUREMENT");
-  tex3->SetTextFont(132);
+  tex3->SetTextFont(42);
   // tex3->Draw("same");
 
   TF1* fitf = new TF1("fit","[0] / ([0]*[1]*x + 1) ", 0, 20);
@@ -717,9 +717,9 @@ int32_t main (void) {
       // <<" x 10^-18"
       <<endl;
   cout<<" --------------------------------"<<endl;
-  TLegend *legfit = new TLegend(0.5,0.64,0.95,0.95);
+  TLegend *legfit = new TLegend(0.62,0.82,0.95,0.95);
   legfit->AddEntry(grTau1All, "Averaged lifetime","lep");
-  legfit->AddEntry(fitf, "Fit: k = (3.5#pm0.8)#times10^{-16}","L");
+  legfit->AddEntry(fitf, "Fit: k = (3.5#pm0.8)#times10^{-16} ","L");
   legfit->Draw("same");
 
 

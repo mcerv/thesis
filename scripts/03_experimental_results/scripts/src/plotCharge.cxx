@@ -44,10 +44,11 @@ int32_t main (void) {
   const int ndets = 5;
 
   // string detstr[ndets] = {"1scdhq","S52","S79","S37","S50","ELSC", "S52_3-63e14","S79_1e14"};
-  string detstr[ndets] = {"S52","S79","S37","S52_3-63e14","S79_1e14"};
-  string detName[ndets] = {"S52","S79","S37","S52 3.63#times10^{14} #pi cm^{-2}","S79 1#times10^{14} #pi cm^{-2}"};
+  string detstr[ndets] = {"S52","S79","S37","S79_1e14","S52_3-63e14"};
+  string detName[ndets] = {"S52","S79","S37","S79 1#times10^{14} #pi cm^{-2}","S52 3.63#times10^{14} #pi cm^{-2}"};
   string voltstr[nvolts] = {"-500V", "500V"};
   string carrier[nvolts] = {"holes","electrons"};
+  string colors[ndets] = {"red", "blue", "green", "orange", ""};
   string filePath[nvolts][ndets];
 
   for (int i=0; i<ndets; i++) {
@@ -79,19 +80,19 @@ int32_t main (void) {
     c[volt] = new TCanvas (voltstr[volt].c_str(), voltstr[volt].c_str(), 800 ,600);
     dr->prettify(c[volt]->cd() );
     c[volt]->SetTopMargin(0.06);
-    leg[volt] = new TLegend (0.49,0.18,0.9,0.47);
+    leg[volt] = new TLegend (0.49,0.23,0.9,0.47);
     for (int det=0; det<ndets; det++) {
       file = new TFile(filePath[volt][det].c_str(), "read");
       if (file->IsOpen()) cout<<"File "<<filePath[volt][det]<<" open."<<endl;
 
       gr[volt][det] = (TGraph*)file->Get("Graph");
-      dr->prettify(gr[volt][det]);
+      dr->prettify(gr[volt][det], colors[det]);
       gr[volt][det]->GetXaxis()->SetRangeUser(0,310);
-      gr[volt][det]->GetYaxis()->SetRangeUser(0,60e-15);
+      gr[volt][det]->GetYaxis()->SetRangeUser(0,60.1e-15);
       gr[volt][det]->GetYaxis()->SetLimits(0,60);
       gr[volt][det]->GetYaxis()->SetLimits(0,60);
       gr[volt][det]->GetYaxis()->SetLimits(0,60);
-      gr[volt][det]->SetMarkerStyle(20+det);
+      gr[volt][det]->SetMarkerStyle(24-det);
       gr[volt][det]->SetLineColor(kBlack);
       gr[volt][det]->SetLineWidth(1);
 
@@ -113,6 +114,7 @@ int32_t main (void) {
       file = 0;
       leg[volt]->AddEntry(gr[volt][det],detName[det].c_str(),"LEP");
       TLatex *lat = new TLatex(248.68,5.55e-14, carrier[volt].c_str());
+      lat->SetTextFont(42);
       lat->Draw("same");
     }
     leg[volt]->Draw("same");

@@ -85,7 +85,7 @@ int32_t main (void) {
     gr[proc] = new TGraph(i-2, &delay[proc][1], &corrNorm[proc][1]);
     dr->prettify(gr[proc]);
     gr[proc]->SetMarkerStyle(20+proc);
-    gr[proc]->SetMarkerSize(1.8);
+    // gr[proc]->SetMarkerSize(1.8);
     ss.str("");
     // TCanvas *c1 = new TCanvas ("c1","c1", 800,600);
     // gr[proc]->Draw("AP");

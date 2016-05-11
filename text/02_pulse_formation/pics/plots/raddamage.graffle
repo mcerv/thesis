@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {1118, 783}}</string>
+		<string>{{0, 0}, {1118.5799751281738, 782.8900146484375}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -74,7 +74,7 @@
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{510.33091314863509, 299.8686194064399}, {22, 55}}</string>
+			<string>{{510.33091314863509, 299.8686194064399}, {16, 42}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -84,9 +84,9 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>Helvetica</string>
+				<string>TimesNewRomanPS-ItalicMT</string>
 				<key>Size</key>
-				<real>12</real>
+				<real>36</real>
 			</dict>
 			<key>ID</key>
 			<integer>951</integer>
@@ -120,7 +120,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\i\fs96 \cf0 e}</string>
+\f0\i\fs72 \cf0 e}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
@@ -129,7 +129,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{726.91256842199732, 268.30773490978231}, {24, 55}}</string>
+			<string>{{726.91256842199732, 268.30773490978231}, {19, 42}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -139,9 +139,9 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>Helvetica</string>
+				<string>TimesNewRomanPS-ItalicMT</string>
 				<key>Size</key>
-				<real>12</real>
+				<real>36</real>
 			</dict>
 			<key>ID</key>
 			<integer>950</integer>
@@ -175,7 +175,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\i\fs96 \cf0 d}</string>
+\f0\i\fs72 \cf0 d}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
@@ -184,7 +184,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{647.72528076171875, 111.91554424741119}, {22, 55}}</string>
+			<string>{{647.72528076171875, 111.91554424741119}, {16, 42}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -194,9 +194,9 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>Helvetica</string>
+				<string>TimesNewRomanPS-ItalicMT</string>
 				<key>Size</key>
-				<real>12</real>
+				<real>36</real>
 			</dict>
 			<key>ID</key>
 			<integer>949</integer>
@@ -230,7 +230,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\i\fs96 \cf0 c}</string>
+\f0\i\fs72 \cf0 c}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
@@ -239,7 +239,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{358.78331934486692, 167.85714809789155}, {24, 55}}</string>
+			<string>{{358.78331934486692, 167.85714809789155}, {19, 42}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -249,9 +249,9 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>Helvetica</string>
+				<string>TimesNewRomanPS-ItalicMT</string>
 				<key>Size</key>
-				<real>12</real>
+				<real>36</real>
 			</dict>
 			<key>ID</key>
 			<integer>948</integer>
@@ -285,7 +285,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\i\fs96 \cf0 b}</string>
+\f0\i\fs72 \cf0 b}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
@@ -294,7 +294,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{208.97872924804688, 163.28399505447646}, {24, 55}}</string>
+			<string>{{208.97872924804688, 163.28399505447646}, {19, 42}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -304,9 +304,9 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>Helvetica</string>
+				<string>TimesNewRomanPS-ItalicMT</string>
 				<key>Size</key>
-				<real>12</real>
+				<real>36</real>
 			</dict>
 			<key>ID</key>
 			<integer>947</integer>
@@ -340,7 +340,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\i\fs96 \cf0 a}</string>
+\f0\i\fs72 \cf0 a}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
@@ -392,8 +392,8 @@
 			<integer>943</integer>
 			<key>Points</key>
 			<array>
-				<string>{550.50073307412731, 355.86827623789372}</string>
-				<string>{544.03895753416998, 360.89820975947657}</string>
+				<string>{550.50073309780316, 355.86827626571818}</string>
+				<string>{544.03895756965312, 360.89820980117707}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -751,8 +751,8 @@
 			<integer>845</integer>
 			<key>Points</key>
 			<array>
-				<string>{743.28190698596154, 361.7836407304826}</string>
-				<string>{743.79453882416146, 407.04985454722834}</string>
+				<string>{743.28190698596131, 361.7836407304826}</string>
+				<string>{743.79453882416067, 407.04985454722834}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1529,8 +1529,8 @@
 			<integer>788</integer>
 			<key>Points</key>
 			<array>
-				<string>{799.85781233315208, 310.98777138933724}</string>
-				<string>{806.83728324693277, 343.74193632566511}</string>
+				<string>{799.84929633260037, 310.98943042156651}</string>
+				<string>{806.81097107658832, 343.74702780167189}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1591,7 +1591,7 @@
 			<key>Points</key>
 			<array>
 				<string>{813.20473090102291, 295.3077213980946}</string>
-				<string>{860.24029361956843, 295.3077213980946}</string>
+				<string>{860.24029361957025, 295.3077213980946}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1623,8 +1623,8 @@
 			<integer>784</integer>
 			<key>Points</key>
 			<array>
-				<string>{793.81338299820163, 356.10639786847878}</string>
-				<string>{759.42650628672686, 349.10708743834766}</string>
+				<string>{793.81346804463885, 356.1060121678521}</string>
+				<string>{759.42677043743072, 349.105889355351}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1870,8 +1870,8 @@
 			<integer>776</integer>
 			<key>Points</key>
 			<array>
-				<string>{683.70642285651718, 311.67036656234421}</string>
-				<string>{679.2686452711722, 343.56687291087411}</string>
+				<string>{683.70647765940248, 311.67037357554267}</string>
+				<string>{679.26881028786545, 343.56689390892973}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1903,8 +1903,8 @@
 			<integer>775</integer>
 			<key>Points</key>
 			<array>
-				<string>{679.2322626546071, 236.59976801527682}</string>
-				<string>{684.11806866447375, 279.89770684361361}</string>
+				<string>{679.23226548509717, 236.59976772406154}</string>
+				<string>{684.11807919791931, 279.89770575986932}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1992,8 +1992,8 @@
 			<integer>771</integer>
 			<key>Points</key>
 			<array>
-				<string>{726.78751429917406, 349.16386942016845}</string>
-				<string>{693.38412514158347, 356.0883094946829}</string>
+				<string>{726.78551468180115, 349.15494933027679}</string>
+				<string>{693.37807156714871, 356.06111596510277}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2115,8 +2115,8 @@
 			<integer>764</integer>
 			<key>Points</key>
 			<array>
-				<string>{549.56505854860734, 310.39246292330489}</string>
-				<string>{557.17212642433913, 330.95424832497235}</string>
+				<string>{549.73823741637455, 310.33263130962843}</string>
+				<string>{557.57734631676283, 330.802373060565}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2209,8 +2209,8 @@
 			<integer>761</integer>
 			<key>Points</key>
 			<array>
-				<string>{498.30949528260777, 295.67388144179262}</string>
-				<string>{527.29673887255763, 295.4413861238101}</string>
+				<string>{498.30949564698403, 295.67392337398371}</string>
+				<string>{527.29673986922853, 295.44150089467615}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2242,8 +2242,8 @@
 			<integer>759</integer>
 			<key>Points</key>
 			<array>
-				<string>{594.76512488632386, 354.8974626587617}</string>
-				<string>{579.39297863017578, 350.54542540476291}</string>
+				<string>{594.78301223871426, 354.83959451138503}</string>
+				<string>{579.4291699333445, 350.43231112241182}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2456,8 +2456,8 @@
 			<integer>752</integer>
 			<key>Points</key>
 			<array>
-				<string>{410.90663674002178, 319.39947700405321}</string>
-				<string>{410.90663674002178, 343.42711991987204}</string>
+				<string>{410.90663674002178, 319.39947700405315}</string>
+				<string>{410.90663674002178, 343.42711991986897}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2489,8 +2489,8 @@
 			<integer>751</integer>
 			<key>Points</key>
 			<array>
-				<string>{410.90664100243941, 263.36708283757952}</string>
-				<string>{410.90664100243941, 287.3946950533761}</string>
+				<string>{410.90664100243941, 263.36708283757645}</string>
+				<string>{410.90664100243941, 287.39469505322626}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2522,8 +2522,8 @@
 			<integer>750</integer>
 			<key>Points</key>
 			<array>
-				<string>{427.49170960600679, 301.61627765282043}</string>
-				<string>{465.03647204548804, 297.58493697773054}</string>
+				<string>{427.49179836073836, 301.61704209076754}</string>
+				<string>{465.03676141132593, 297.58743196059862}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2555,8 +2555,8 @@
 			<integer>749</integer>
 			<key>Points</key>
 			<array>
-				<string>{356.82321208919609, 299.11518095444194}</string>
-				<string>{394.27479540660818, 302.08024568600717}</string>
+				<string>{356.82321052293798, 299.11519920613068}</string>
+				<string>{394.27479031395023, 302.08030503684171}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2649,8 +2649,8 @@
 			<integer>746</integer>
 			<key>Points</key>
 			<array>
-				<string>{480.63218016325402, 311.78210957722882}</string>
-				<string>{478.66978079006191, 343.45425776238608}</string>
+				<string>{480.63562338566817, 311.78230423557528}</string>
+				<string>{478.68005113686979, 343.45483344399014}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2682,8 +2682,8 @@
 			<integer>745</integer>
 			<key>Points</key>
 			<array>
-				<string>{485.99867524786509, 247.62713366147779}</string>
-				<string>{483.04128767226689, 279.86298545297331}</string>
+				<string>{486.0082256681153, 247.62793219446934}</string>
+				<string>{483.07015433168607, 279.86535910068585}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2901,8 +2901,8 @@
 			<integer>738</integer>
 			<key>Points</key>
 			<array>
-				<string>{294.50274073103662, 295.97355714131601}</string>
-				<string>{323.51760748346447, 297.13222740755572}</string>
+				<string>{294.50273717624077, 295.97363929031576}</string>
+				<string>{323.5175977720408, 297.13245250943385}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3023,8 +3023,8 @@
 			<integer>734</integer>
 			<key>Points</key>
 			<array>
-				<string>{341.33861475544018, 313.76317586921101}</string>
-				<string>{343.47302739526913, 343.46458673112483}</string>
+				<string>{341.33804697589221, 313.7632131496598}</string>
+				<string>{343.47140329098886, 343.46469327692154}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3056,8 +3056,8 @@
 			<integer>733</integer>
 			<key>Points</key>
 			<array>
-				<string>{331.69847945662667, 251.92427892439832}</string>
-				<string>{337.27818658625716, 282.04043126981037}</string>
+				<string>{331.69708770940355, 251.92451484149043}</string>
+				<string>{337.27413465101614, 282.04111727885538}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3369,8 +3369,8 @@
 			<integer>719</integer>
 			<key>Points</key>
 			<array>
-				<string>{207.94118634712217, 252.11930094983452}</string>
-				<string>{210.20784757179146, 279.35609709540995}</string>
+				<string>{207.94230050973377, 252.11921612984833}</string>
+				<string>{210.21086404603355, 279.35586699787359}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3621,8 +3621,8 @@
 			<integer>709</integer>
 			<key>Points</key>
 			<array>
-				<string>{744.54932071357996, 167.56413870588159}</string>
-				<string>{793.20146585867406, 167.56416452891619}</string>
+				<string>{744.54932071357996, 167.56413870637473}</string>
+				<string>{793.20146585867406, 167.56416453084694}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3654,8 +3654,8 @@
 			<integer>708</integer>
 			<key>Points</key>
 			<array>
-				<string>{793.67767156502748, 235.49079684373191}</string>
-				<string>{759.31172091761982, 243.55627329405019}</string>
+				<string>{793.67786866522977, 235.49157211126467}</string>
+				<string>{759.3123362521917, 243.55869187201037}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4027,8 +4027,8 @@
 			<integer>696</integer>
 			<key>Points</key>
 			<array>
-				<string>{676.90112135545473, 175.15023447854915}</string>
-				<string>{677.24852363507637, 204.68834646630754}</string>
+				<string>{676.9011518962842, 175.15023412381521}</string>
+				<string>{677.24867309473746, 204.68834485629785}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4060,8 +4060,8 @@
 			<integer>695</integer>
 			<key>Points</key>
 			<array>
-				<string>{676.81191963390654, 130.44094469116038}</string>
-				<string>{676.81191963390654, 159.97752071976183}</string>
+				<string>{676.81191963390654, 130.44094469116027}</string>
+				<string>{676.81191963390654, 159.97752071975495}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4093,8 +4093,8 @@
 			<integer>694</integer>
 			<key>Points</key>
 			<array>
-				<string>{684.39851777660954, 167.56413794341356}</string>
-				<string>{711.17306857718665, 167.56413794341356}</string>
+				<string>{684.39851777660715, 167.56413794341356}</string>
+				<string>{711.17306857706524, 167.56413794341356}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4126,8 +4126,8 @@
 			<integer>693</integer>
 			<key>Points</key>
 			<array>
-				<string>{642.45071369064181, 167.56414117425524}</string>
-				<string>{669.22528243371471, 167.56414117425524}</string>
+				<string>{642.45071369064192, 167.56414117425524}</string>
+				<string>{669.22528243371676, 167.56414117425524}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4187,8 +4187,8 @@
 			<integer>691</integer>
 			<key>Points</key>
 			<array>
-				<string>{727.73083121045067, 241.12092468628538}</string>
-				<string>{692.80675796445428, 226.93364008969391}</string>
+				<string>{727.73084745556969, 241.12088785189627}</string>
+				<string>{692.80681118099335, 226.93351958253149}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4220,8 +4220,8 @@
 			<integer>690</integer>
 			<key>Points</key>
 			<array>
-				<string>{730.86750817122027, 183.30610500121384}</string>
-				<string>{740.0947265052132, 231.62263628965098}</string>
+				<string>{730.86744830156488, 183.30611543534275}</string>
+				<string>{740.09448290009004, 231.62267886044904}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4253,8 +4253,8 @@
 			<integer>689</integer>
 			<key>Points</key>
 			<array>
-				<string>{739.77837011374834, 119.02145768412534}</string>
-				<string>{731.69025394520168, 151.98655091474714}</string>
+				<string>{739.77691633838583, 119.02113093469862}</string>
+				<string>{731.68572424057129, 151.98553180239509}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4286,8 +4286,8 @@
 			<integer>688</integer>
 			<key>Points</key>
 			<array>
-				<string>{693.25887054964312, 111.72042446688296}</string>
-				<string>{727.14661866612448, 106.11991108397827}</string>
+				<string>{693.26046494282446, 111.72935356391221}</string>
+				<string>{727.15145773558595, 106.14724461886064}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4593,8 +4593,8 @@
 			<integer>678</integer>
 			<key>Points</key>
 			<array>
-				<string>{560.42240775631581, 167.56416474325957}</string>
-				<string>{609.07446153784815, 167.56416474325957}</string>
+				<string>{560.4224077563141, 167.56416474325957}</string>
+				<string>{609.07446153768717, 167.56416474325957}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4659,8 +4659,8 @@
 			<integer>676</integer>
 			<key>Points</key>
 			<array>
-				<string>{527.04614460633366, 231.68594477473624}</string>
-				<string>{504.14927958592995, 231.68594477473624}</string>
+				<string>{527.04614460634582, 231.68594477473624}</string>
+				<string>{504.14927958650009, 231.68594477473624}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4725,8 +4725,8 @@
 			<integer>674</integer>
 			<key>Points</key>
 			<array>
-				<string>{622.04453867686652, 183.16634004745274}</string>
-				<string>{614.20223067971745, 216.07530912451068}</string>
+				<string>{622.05302673791596, 183.16819020180944}</string>
+				<string>{614.22863016562883, 216.08102827490436}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4758,8 +4758,8 @@
 			<integer>673</integer>
 			<key>Points</key>
 			<array>
-				<string>{614.20224794729143, 119.05300233455256}</string>
-				<string>{621.96253677232653, 151.98006900704851}</string>
+				<string>{614.22864745396942, 119.0472831918365}</string>
+				<string>{622.04454341158817, 151.96196406720159}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5032,8 +5032,8 @@
 			<integer>664</integer>
 			<key>Points</key>
 			<array>
-				<string>{411.2069463923919, 167.41538906821228}</string>
-				<string>{411.05478117664234, 200.00519043601167}</string>
+				<string>{411.2069083258931, 167.41538890552789}</string>
+				<string>{411.05466558492327, 200.00518990038239}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5065,8 +5065,8 @@
 			<integer>663</integer>
 			<key>Points</key>
 			<array>
-				<string>{410.86308381084922, 119.44354319001448}</string>
-				<string>{411.06909030306355, 135.41205725075574}</string>
+				<string>{410.86461990350165, 119.4435250374884}</string>
+				<string>{411.07215934295772, 135.41202020467639}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5098,8 +5098,8 @@
 			<integer>662</integer>
 			<key>Points</key>
 			<array>
-				<string>{427.76230268394096, 153.93559352052731}</string>
-				<string>{465.14130670029925, 159.65661792552783}</string>
+				<string>{427.76230279923709, 153.93559282600236}</string>
+				<string>{465.14130707676867, 159.65661565573214}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5131,8 +5131,8 @@
 			<integer>661</integer>
 			<key>Points</key>
 			<array>
-				<string>{360.57876048559899, 159.54052938655073}</string>
-				<string>{394.82073724970917, 154.05187372770357}</string>
+				<string>{360.57875349069144, 159.54048883689103}</string>
+				<string>{394.82071559116486, 154.05174884499746}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5164,8 +5164,8 @@
 			<integer>660</integer>
 			<key>Points</key>
 			<array>
-				<string>{379.27243907972803, 233.41491121656753}</string>
-				<string>{345.44081272417816, 235.26395723714427}</string>
+				<string>{379.27231180505709, 233.4125672920436}</string>
+				<string>{345.44052765566971, 235.25910775325315}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5197,8 +5197,8 @@
 			<integer>659</integer>
 			<key>Points</key>
 			<array>
-				<string>{470.7730274418314, 231.68596790888222}</string>
-				<string>{442.58775069682849, 231.68596790888222}</string>
+				<string>{470.77302744183157, 231.68596790888222}</string>
+				<string>{442.58775069683566, 231.68596790888222}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5230,8 +5230,8 @@
 			<integer>658</integer>
 			<key>Points</key>
 			<array>
-				<string>{482.90786273633881, 178.13413679151819}</string>
-				<string>{485.93953646559208, 215.74984545528301}</string>
+				<string>{482.95717651799947, 178.1304326748652}</string>
+				<string>{486.10501040021921, 215.73618983306199}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5263,8 +5263,8 @@
 			<integer>657</integer>
 			<key>Points</key>
 			<array>
-				<string>{478.58070758233083, 119.40790455813539}</string>
-				<string>{480.48671872554536, 146.21351449117674}</string>
+				<string>{478.580707652054, 119.40790455362102}</string>
+				<string>{480.48671891234852, 146.21351447932315}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5537,8 +5537,8 @@
 			<integer>648</integer>
 			<key>Points</key>
 			<array>
-				<string>{282.58682219690098, 178.18145032282902}</string>
-				<string>{282.58682219690098, 220.1649368725439}</string>
+				<string>{282.58682219690098, 178.18145032282899}</string>
+				<string>{282.58682219690098, 220.16493687254021}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5570,8 +5570,8 @@
 			<integer>647</integer>
 			<key>Points</key>
 			<array>
-				<string>{278.93874168365136, 119.39184727226797}</string>
-				<string>{281.22675928897479, 146.22959673317948}</string>
+				<string>{278.93881701155664, 119.39184141717128}</string>
+				<string>{281.22696136585677, 146.22958098895739}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5603,8 +5603,8 @@
 			<integer>646</integer>
 			<key>Points</key>
 			<array>
-				<string>{299.2749604659013, 162.17959236243126}</string>
-				<string>{327.42967717355657, 162.18049163861713}</string>
+				<string>{299.274960473622, 162.17913346413141}</string>
+				<string>{327.42967712003275, 162.17925852806715}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5636,8 +5636,8 @@
 			<integer>645</integer>
 			<key>Points</key>
 			<array>
-				<string>{223.30177645848516, 162.17910324263025}</string>
-				<string>{265.89870831674671, 162.1792245070728}</string>
+				<string>{223.30177645854437, 162.1790716945905}</string>
+				<string>{265.89870831632589, 162.1790716945905}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5670,7 +5670,7 @@
 			<key>Points</key>
 			<array>
 				<string>{265.89870996813613, 236.16732560166884}</string>
-				<string>{223.30178072822076, 236.16732560166884}</string>
+				<string>{223.30178072822315, 236.16732560166884}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5702,8 +5702,8 @@
 			<integer>643</integer>
 			<key>Points</key>
 			<array>
-				<string>{312.09103992800323, 236.14100677715675}</string>
-				<string>{299.27489198390828, 236.12079166972737}</string>
+				<string>{312.09101978718684, 236.15890767758134}</string>
+				<string>{299.2749549750389, 236.15244017285687}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5735,8 +5735,8 @@
 			<integer>642</integer>
 			<key>Points</key>
 			<array>
-				<string>{340.86366257674922, 177.87586490113523}</string>
-				<string>{332.0332662617808, 220.4705215439713}</string>
+				<string>{340.86366610106927, 177.87586556797791}</string>
+				<string>{332.03327934955655, 220.47052402081499}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -5768,8 +5768,8 @@
 			<integer>641</integer>
 			<key>Points</key>
 			<array>
-				<string>{344.29948798511771, 119.44461624289681}</string>
-				<string>{344.1853510579366, 146.17680000827789}</string>
+				<string>{344.29966977666908, 119.44461694915307}</string>
+				<string>{344.18583653700261, 146.17680188417523}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -6108,8 +6108,8 @@
 			<integer>629</integer>
 			<key>Points</key>
 			<array>
-				<string>{161.12712885346704, 166.1783337047811}</string>
-				<string>{190.00783879023518, 163.77105644104054}</string>
+				<string>{161.12274220754227, 166.1305010694623}</string>
+				<string>{189.9948357804268, 163.64021954530051}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -6141,8 +6141,8 @@
 			<integer>625</integer>
 			<key>Points</key>
 			<array>
-				<string>{189.97116100678616, 234.98129395691808}</string>
-				<string>{161.13950992357042, 232.92658863122324}</string>
+				<string>{189.97214318439109, 234.96861679161972}</string>
+				<string>{161.1422634182241, 232.89195442257108}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -6174,8 +6174,8 @@
 			<integer>624</integer>
 			<key>Points</key>
 			<array>
-				<string>{206.61366561742733, 178.18144671816245}</string>
-				<string>{206.61366561742733, 220.1649405054568}</string>
+				<string>{206.61366561742733, 178.18144671816486}</string>
+				<string>{206.61366561742733, 220.16494050566232}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -6207,8 +6207,8 @@
 			<integer>623</integer>
 			<key>Points</key>
 			<array>
-				<string>{210.01523702118718, 119.39824072009523}</string>
-				<string>{207.87192786042399, 146.2219551081902}</string>
+				<string>{210.01913180594823, 119.39852481350356}</string>
+				<string>{207.88237068398956, 146.22271112674977}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -6489,7 +6489,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2015-12-02 08:38:40 +0000</string>
+	<string>2016-05-11 20:02:14 +0000</string>
 	<key>Modifier</key>
 	<string>Matevz Cerv</string>
 	<key>NotesVisible</key>
@@ -6520,7 +6520,7 @@
 		<key>NSPaperSize</key>
 		<array>
 			<string>size</string>
-			<string>{595, 842}</string>
+			<string>{595.28998756408691, 841.8900146484375}</string>
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
@@ -6584,7 +6584,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-100.99999999999997, -124.00000000000001}, {1318.5714510265666, 1032.8571604465956}}</string>
+		<string>{{-100, -124}, {1318.5714510265666, 1032.8571604465956}}</string>
 		<key>Zoom</key>
 		<real>0.69999998807907104</real>
 		<key>ZoomValues</key>

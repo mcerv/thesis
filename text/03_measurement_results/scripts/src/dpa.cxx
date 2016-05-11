@@ -29,7 +29,7 @@ int32_t main (void) {
   fileName[1] = "data/DPAinDiamondN.csv";
   fileName[2] = "data/DPAinDiamondPi.csv";
   string radType[3] = {"DPA, p","DPA, n","DPA, #pi"};
-  TLegend* leg = new TLegend(0.6,0.5,0.95,0.95);
+  TLegend* leg = new TLegend(0.73,0.71,0.95,0.95);
   // cout<<"Filename "<<fileName<<endl;
 
   for (int32_t i=0; i<3; i++) {
@@ -115,27 +115,30 @@ int32_t main (void) {
   rd42pi->SetMarkerStyle(20);
   mypi->SetMarkerStyle(21);
 
-  // rd42->SetMarkerSize(1.5);
-  // rd42pi->SetMarkerSize(1.5);
-  // mypi->SetMarkerSize(1.5);
+  rd42->SetMarkerSize(1.4);
+  rd42pi->SetMarkerSize(1.4);
+  mypi->SetMarkerSize(1.4);
 
 
   rd42->Draw("P SAME");
   rd42pi->Draw("P SAME");
-  mypi->Draw("P SAME");
 
 
   leg->AddEntry(rd42, "RD42, p","lep");
   leg->AddEntry(rd42pi, "RD42, #pi","lep");
-  leg->AddEntry(mypi, "Measured, #pi","lep");
   leg->Draw("same");
 
   c2->Update();
   c2->WaitPrimitive();
   c2->Update();
 
+  mypi->Draw("P SAME");
+  leg->AddEntry(mypi, "Measured, #pi","lep");
+  leg->Draw("same");
 
-
+  c2->Update();
+  c2->WaitPrimitive();
+  c2->Update();
 
 
   delete(dr);

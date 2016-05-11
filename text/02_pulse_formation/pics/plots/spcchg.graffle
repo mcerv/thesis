@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {559, 783}}</string>
+		<string>{{0, 0}, {559.28998756408691, 782.8900146484375}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -74,7 +74,7 @@
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{198.06071349586114, 175.06930875371532}, {31, 25}}</string>
+			<string>{{196.56071349586114, 175.06930875371532}, {34, 25}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -120,7 +120,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\i\fs36 \cf0 V
+\f0\i\fs36 \cf0 \uc0\u934 
 \fs24 \sub bias}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
@@ -147,7 +147,7 @@
 			<integer>42</integer>
 			<key>Points</key>
 			<array>
-				<string>{267.87003806605946, 212.00000270092494}</string>
+				<string>{267.87003806605946, 211.99999835717705}</string>
 				<string>{369.93650256943283, 184.49999644982842}</string>
 			</array>
 			<key>Style</key>
@@ -324,7 +324,7 @@
 			<key>Points</key>
 			<array>
 				<string>{369.51121520996105, 153.49999877440956}</string>
-				<string>{369.51121520996105, 119.49458482081553}</string>
+				<string>{369.51121520996105, 119.49458047706764}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -510,6 +510,8 @@
 					<integer>2</integer>
 					<key>TailArrow</key>
 					<string>0</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -541,6 +543,8 @@
 					<integer>2</integer>
 					<key>TailArrow</key>
 					<string>0</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -572,6 +576,8 @@
 					<integer>2</integer>
 					<key>TailArrow</key>
 					<string>0</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -605,6 +611,8 @@
 					<integer>1</integer>
 					<key>TailArrow</key>
 					<string>0</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -691,6 +699,8 @@
 					<integer>2</integer>
 					<key>TailArrow</key>
 					<string>FilledArrow</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -940,6 +950,8 @@
 					<integer>1</integer>
 					<key>TailArrow</key>
 					<string>0</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -987,7 +999,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{47, 202}, {31, 21}}</string>
+			<string>{{45.5, 202}, {34, 21}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1033,7 +1045,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\i\fs36 \cf0 V(x)}</string>
+\f0\i\fs36 \cf0 \uc0\u934 (x)}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
@@ -1233,6 +1245,8 @@
 					<integer>2</integer>
 					<key>TailArrow</key>
 					<string>0</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -1264,6 +1278,8 @@
 					<integer>2</integer>
 					<key>TailArrow</key>
 					<string>0</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -1328,6 +1344,8 @@
 					<integer>1</integer>
 					<key>TailArrow</key>
 					<string>0</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -1423,7 +1441,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2015-12-01 22:20:47 +0000</string>
+	<string>2016-05-11 20:07:59 +0000</string>
 	<key>Modifier</key>
 	<string>Matevz Cerv</string>
 	<key>NotesVisible</key>
@@ -1454,7 +1472,7 @@
 		<key>NSPaperSize</key>
 		<array>
 			<string>size</string>
-			<string>{595, 842}</string>
+			<string>{595.28998756408691, 841.8900146484375}</string>
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
@@ -1504,7 +1522,7 @@
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{-9, 0}, {1058, 878}}</string>
+		<string>{{86, 0}, {1058, 878}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -1518,15 +1536,15 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-170, 0}, {900.00000849808805, 715.84159091762115}}</string>
+		<string>{{0, 0}, {547.59037245650643, 426.50603267239438}}</string>
 		<key>Zoom</key>
-		<real>1.0099999904632568</real>
+		<real>1.6599999666213989</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>Canvas 1</string>
-				<real>1.0099999904632568</real>
-				<real>1.1399999856948853</real>
+				<real>1.6599999666213989</real>
+				<real>1.4500000476837158</real>
 			</array>
 		</array>
 	</dict>
