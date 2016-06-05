@@ -55,6 +55,11 @@ Maximilien Brice.
 \newblock \emph{View of the nTOF detector}.
 \newblock Oct 2010.
 
+\bibitem{Evans:1447127}
+Lyndon Evans.
+\newblock {The Large Hadron Collider}.
+\newblock {\em Annu. Rev. Nucl. Part. Sci.}, 61:435--466. 32 p, 2011.
+
 \bibitem{Maximilien:1324852}
 Maximilien Brice.
 \newblock \emph{LHC tunnel}.
@@ -98,6 +103,11 @@ CIVIDEC~Instrumentation GmbH.
 \newblock \emph{sCVD diamond sensor}.
 \newblock http://www.cividec.at, 2015.
 
+\bibitem{PHSEM:00000}
+S.~Sze and K.~N. Kwok.
+\newblock {\em \emph{Physics of Semiconductor Devices, 3rd ed.}}
+\newblock Wiley, Hoboken, NJ, 2007.
+
 \bibitem{Pernegger:1985432}
 Heinz Pernegger.
 \newblock \emph{The Pixel Detector of the ATLAS Experiment for LHC Run-2}.
@@ -118,11 +128,6 @@ Yoshihiko Hatano, Yosuke Katsumura, and A.~Mozumder.
 \newblock {\em \emph{Charged Particle and Photon Interactions with Matter:
   Recent Advances, Applications, and Interfaces}}.
 \newblock CRC Press, 2010.
-
-\bibitem{PHSEM:00000}
-S.~Sze and K.~N. Kwok.
-\newblock {\em \emph{Physics of Semiconductor Devices, 3rd ed.}}
-\newblock Wiley, Hoboken, NJ, 2007.
 
 \bibitem{PDDC:00000}
 W.~Blum, W.~Riegler, and L.~Rolandi.
@@ -242,6 +247,12 @@ H.~Nyquist.
 \newblock \emph{Thermal Agitation of Electric Charge in Conductors}.
 \newblock {\em Phys. Rev.}, 32:110--113, Jul 1928.
 
+\bibitem{Spieler:1010490}
+Helmuth Spieler.
+\newblock {\em {Semiconductor detector systems}}.
+\newblock Semiconductor Science and Technology. Oxford Univ. Press, Oxford,
+  2005.
+
 \bibitem{FPGA:00000}
 \emph{Xilinx Virtex 5 FPGA}.
 \newblock http://www.hdl.co.jp/XCM-109/top.560.jpg.
@@ -279,6 +290,13 @@ Giorgio Brianti.
 \newblock Technical Report CERN-SPSC-T-73-8. LabII-EA-Note-73-4, CERN, Geneva,
   1973.
 
+\bibitem{pomorski2008electronic}
+Michal Pomorski.
+\newblock Electronic properties of single crystal cvd diamond and its
+  suitability for particle detection in hadron physics experiments.
+\newblock {\em Wolfgang von Goethe University, Frankfurt am Main, Germany},
+  2008.
+
 \bibitem{BETHE:00000}
 H.~Bethe and J.~Ashkin.
 \newblock {\em {Experimental Nuclear Physics, ed. E. Segre}}, page 253, 1953.
@@ -302,6 +320,14 @@ Gregor Kramberger, V.~Cindro, A.~Gorisek, I.~Mandic, M.~Mikuz, and
 \newblock \emph{Effects of bias voltage during priming on operation of diamond
   detectors}.
 \newblock {\em PoS}, Vertex2012:013, 2013.
+
+\bibitem{Bates2005113}
+Alison~G. Bates and Michael Moll.
+\newblock A comparison between irradiated magnetic czochralski and float zone
+  silicon detectors using the transient current technique.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  555(1–2):113 -- 124, 2005.
 
 \bibitem{Cerv:1630832}
 Matev\v{z} \v{C}erv.

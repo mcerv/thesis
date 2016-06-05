@@ -1,0 +1,51 @@
+
+- review the references				OKish
+
+CHAPTER 2:
+Electronics
+- noise part limited	ADDED
+- noise of the current and charge amp - strong diff
+- operation time, peaking time, 
+- differences between the noise
+- influence on the measurements that follow
+- which noise part drives the precision of the result
+
+CH 3 DONE:
+- CCD lower than RD42 why?			OK
+priming? reference the figure of priming	OK
+
+
+
+CHAPTER 4:
+-pseudo-eff difference of estimate - compare MSBM-03 testbeam vs test stand
+our opartion conditions si 100% efficienc. 
+when you see 95, diff between pseudoeff and eff due to the setup is 5% or less
+
+
+- 
+
+Branching ratio of Americium 
+distinguish from gammas and alphas
+source data sheet
+60 k gamma range higher than alpha
+ratio between gamma and alpha should be
+
+- alpha energy dist plot explain the gamma peak.
+- decay properties of americium source in the introduction.
+- energy dist of the gammas - what do you expect from the source? 
+ 
+-landau dist should have a long tail, but does not. Saturation? Where are they? Simulation
+landau and superimpose.
+
+- tritium peak, alpha peak, expected. 
+
+
+FIX PLOTS IN CH 3:
+- vs Fluence (on all)					OK
+- Proportionality factor for electrons and holes 	OK
+- superimpose Hendrik’s plot of charge vs temp
+-more thorough on the description of figure  3.9
+-dose values in the current pulses			OK
+-approval of atlas plots. cc doug.			
+
+

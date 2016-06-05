@@ -1,0 +1,49 @@
+\begin{thebibliography}{1}
+
+\bibitem{PAVEL:00000}
+P.~Kavrigin, P.~Finocchiaro, E.~Griesmayer, E.~Jericha, A.~Pappalardo, and
+  C.~Weiss.
+\newblock \emph{Pulse-shape analysis for gamma background rejection in thermal
+  neutron radiation using CVD diamond detectors}.
+\newblock {\em Nuclear Instruments and Methods in Physics Research A}, (795),
+  2015.
+
+\bibitem{PAVEL:00002}
+E.~Griesmayer, R.~Bergmann, H.~B{\"o}ck, M.~Cagnazzo, P.~Kavrigin,
+  B.~Morgenbesser, and M.~Villa.
+\newblock \emph{A Novel Neutron Flux Monitor Based On Diamond Detectors at the
+  Vienna TRIGA Mark II Reactor}.
+\newblock {\em submitted to the proceedings of ICRR 2015}, 2015.
+
+\bibitem{PAVEL:00003}
+C.~Weiss, H.~Frais-K{\"o}lbl, E.~Griesmayer, and P.~Kavrigin.
+\newblock \emph{Ionization signals of diamond detectors in fast neutron
+  fields}.
+\newblock {\em publication in preparation}, 2016.
+
+\bibitem{CHRISSI:00005}
+C.~Weiss.
+\newblock {\em \emph{A CVD diamond detector for (n,$\alpha$) cross-section
+  measurements}}.
+\newblock PhD thesis, TU Wien, Vienna, 2014.
+
+\bibitem{TRIGA:00000}
+\emph{TRIGA MARK II neutron reactor}.
+\newblock http://ati.tuwien.ac.at/reactor/EN/.
+
+\bibitem{AtomInst:00000}
+\emph{Atominstitut, Technical University of Vienna, Austria}.
+\newblock http://ati.tuwien.ac.at/startpage/EN/.
+
+\bibitem{ITER:00000}
+\emph{ITER fusion reactor}.
+\newblock https://www.iter.org/.
+
+\bibitem{PAVEL:00001}
+P.~Kavrigin, E.~Griesmayer, F.~Belloni, A.J.M. Plompen, P.~Schillebeeckx, and
+  C.~Weiss.
+\newblock \emph{$\mathbf{^{13}}$C(n,$\mathbf{\alpha_{0}}$)$\mathbf{^{10}}$Be
+  cross section measurement with sCVD diamond detector}.
+\newblock {\em submitted to EPJA}, 2016.
+
+\end{thebibliography}

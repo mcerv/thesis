@@ -8,10 +8,6 @@ A level-1 auxiliary file: 04_charge_monitoring/chapter.aux
 A level-1 auxiliary file: 05_current_monitoring/chapter.aux
 The style file: unsrt.bst
 Database file #1: bibliography/bib.bib
-Warning--I didn't find a database entry for "TRIGA:00001"
-Warning--I didn't find a database entry for "ATOM:00001"
-Warning--I didn't find a database entry for "CHRISSI:00001"
-Warning--I didn't find a database entry for "????"
 Warning--empty author in CERN:00000
 Warning--empty author in AtomInst:00000
 Warning--empty author in Triga:00000
@@ -42,45 +38,45 @@ Warning--empty author in ACONI:00000
 Warning--there's a number but no volume in PAVEL:00000
 Warning--empty author in ITER:00000
 Warning--empty author in EPFL:00000
-You've used 73 entries,
+You've used 77 entries,
             1791 wiz_defined-function locations,
-            907 strings with 14892 characters,
-and the built_in function-call counts, 12574 in all, are:
-= -- 1084
-> -- 542
+            927 strings with 15494 characters,
+and the built_in function-call counts, 13374 in all, are:
+= -- 1161
+> -- 562
 < -- 9
-+ -- 221
-- -- 148
-* -- 850
-:= -- 2105
-add.period$ -- 208
-call.type$ -- 73
-change.case$ -- 63
++ -- 230
+- -- 153
+* -- 897
+:= -- 2233
+add.period$ -- 221
+call.type$ -- 77
+change.case$ -- 66
 chr.to.int$ -- 0
-cite$ -- 103
-duplicate$ -- 550
-empty$ -- 1206
-format.name$ -- 148
-if$ -- 2715
+cite$ -- 107
+duplicate$ -- 586
+empty$ -- 1294
+format.name$ -- 153
+if$ -- 2898
 int.to.chr$ -- 0
-int.to.str$ -- 73
-missing$ -- 49
-newline$ -- 357
-num.names$ -- 56
-pop$ -- 151
+int.to.str$ -- 77
+missing$ -- 54
+newline$ -- 377
+num.names$ -- 60
+pop$ -- 160
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 192
+skip$ -- 204
 stack$ -- 0
-substring$ -- 667
-swap$ -- 67
+substring$ -- 733
+swap$ -- 71
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 30
-while$ -- 89
-width$ -- 75
-write$ -- 733
-(There were 34 warnings)
+while$ -- 95
+width$ -- 79
+write$ -- 777
+(There were 30 warnings)

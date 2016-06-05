@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Seminar_Digital_Design.aux
+A level-1 auxiliary file: Seminar_Digital_Design/chapter.aux
+The style file: unsrt.bst
+Database file #1: bibliography/bib.bib
+Warning--there's a number but no volume in PAVEL:00000
+Warning--empty author in TRIGA:00000
+Warning--empty author in AtomInst:00000
+Warning--empty author in ITER:00000
+You've used 8 entries,
+            1791 wiz_defined-function locations,
+            487 strings with 5007 characters,
+and the built_in function-call counts, 1161 in all, are:
+= -- 82
+> -- 84
+< -- 0
++ -- 32
+- -- 24
+* -- 74
+:= -- 221
+add.period$ -- 21
+call.type$ -- 8
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 51
+empty$ -- 93
+format.name$ -- 24
+if$ -- 234
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 4
+newline$ -- 40
+num.names$ -- 5
+pop$ -- 19
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 19
+stack$ -- 0
+substring$ -- 0
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 5
+width$ -- 9
+write$ -- 75
+(There were 4 warnings)

@@ -142,8 +142,8 @@ void DrawFuns::prettify (TGraph *gr ) {
 
     gr->SetMarkerColor(kBlack);
     gr->SetMarkerStyle(20);
-    gr->SetMarkerSize(1.2);
-    gr->SetMarkerSize(1.2);
+    gr->SetMarkerSize(1.45);
+    gr->SetMarkerSize(1.45);
     gr->SetLineWidth(1);
 }
 

@@ -1,0 +1,100 @@
+\begin{thebibliography}{10}
+
+\bibitem{E6:00000}
+\emph{Element Six}.
+\newblock http://www.e6.com.
+
+\bibitem{IIA:00000}
+\emph{IIa Technologies Pte. Ltd.}
+\newblock https://www.2atechnologies.com.
+
+\bibitem{IIA:00001}
+M.~\v{C}erv, P.~Sarin, H.~Pernegger, P.~Vageeswaran, and E.~Griesmayer.
+\newblock \emph{Diamond detector for beam profile monitoring in COMET
+  experiment at J-PARC}.
+\newblock {\em Journal of Instrumentation}, 10(06):C06016, 2015.
+
+\bibitem{DRS4:00000}
+\emph{DRS4}.
+\newblock https://www.psi.ch/drs/evaluation-board.
+
+\bibitem{Jansen:1956431}
+Hendrik Jansen, Norbert Wermes, and Heinz Pernegger.
+\newblock {\em \emph{Chemical Vapour Deposition Diamond - Charge Carrier
+  Movement at Low Temperatures and Use in Time-Critical Applications}}.
+\newblock PhD thesis, Bonn U., Sep 2013.
+\newblock Presented 10 Dec 2013.
+
+\bibitem{PSI:00000}
+\emph{Paul Scherrer Institute}.
+\newblock https://www.psi.ch/.
+
+\bibitem{Brianti:604383}
+Giorgio Brianti.
+\newblock {SPS North Experimental Area}.
+\newblock Technical Report CERN-SPSC-T-73-8. LabII-EA-Note-73-4, CERN, Geneva,
+  1973.
+
+\bibitem{pomorski2008electronic}
+Michal Pomorski.
+\newblock Electronic properties of single crystal cvd diamond and its
+  suitability for particle detection in hadron physics experiments.
+\newblock {\em Wolfgang von Goethe University, Frankfurt am Main, Germany},
+  2008.
+
+\bibitem{RD42IRRAD:00000}
+M.~Miku\v{z}.
+\newblock \emph{Diamond sensors for high energy radiation and particle
+  detection}.
+\newblock TIPP, 2011.
+
+\bibitem{sarin2014comprehensive}
+V.~Sarin.
+\newblock {\em \emph{Comprehensive Hard Materials}}.
+\newblock Elsevier Science, 2014.
+\newblock p. 411.
+
+\bibitem{Griesmayer20121997}
+E.~Griesmayer and B.~Dehning.
+\newblock \emph{Diamonds for Beam Instrumentation}.
+\newblock {\em Physics Procedia}, 37:1997 -- 2004, 2012.
+\newblock Proceedings of the 2nd International Conference on Technology and
+  Instrumentation in Particle Physics (TIPP 2011).
+
+\bibitem{Eremin2002537}
+V~Eremin, E~Verbitskaya, and Z~Li.
+\newblock Effect of radiation induced deep level traps on si detector
+  performance.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 476(3):537
+  -- 549, 2002.
+\newblock Proc. of the 3rd Int. Conf. on Radiation Effects on Semiconductor
+  Materials, Detectors and Devices.
+
+\bibitem{4327634}
+S.~F. Kozlov, R.~Stuck, M.~Hage-Ali, and P.~Siffert.
+\newblock Preparation and characteristics of natural diamond nuclear radiation
+  detectors.
+\newblock {\em IEEE Transactions on Nuclear Science}, 22(1):160--170, Feb 1975.
+
+\bibitem{s150613424}
+Eugenijus Gaubas, Tomas Ceponis, Dovile Meskauskaite, and Nikolai Kazuchits.
+\newblock Profiling of current transients in capacitor type diamond sensors.
+\newblock {\em Sensors}, 15(6):13424, 2015.
+
+\bibitem{Kramberger:2013wva}
+Gregor Kramberger, V.~Cindro, A.~Gorisek, I.~Mandic, M.~Mikuz, and
+  M.~Zavrtanik.
+\newblock \emph{Effects of bias voltage during priming on operation of diamond
+  detectors}.
+\newblock {\em PoS}, Vertex2012:013, 2013.
+
+\bibitem{Bates2005113}
+Alison~G. Bates and Michael Moll.
+\newblock A comparison between irradiated magnetic czochralski and float zone
+  silicon detectors using the transient current technique.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  555(1–2):113 -- 124, 2005.
+
+\end{thebibliography}

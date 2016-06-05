@@ -28,7 +28,7 @@ Compared to a natural diamond, a CVD diamond used as a particle detector has alm
 \label{fig:cividecpcvd}
 \end{figure}
 
-Under a carefully controlled pressure and temperature conditions with an added abrasive atomic hydrogen the graphitic bonds break and form into diamond bonds. The speed of the growth can be anywhere between 0.1 and 10~$\upmu$m per hour. The detector grade samples are grown at a rate of the order of 1~$\upmu$m per hour. They can grow up to several millimetres in thickness. The width of the samples, however, depends entirely on the substrate used. Diamond can be deposited on various materials: diamond, silicon, tungsten, quartz glass etc. The substrate material must be able to withstand the high temperatures during the CVD process. The diamond substrate does not need any surface pre-treatment. Carbon atoms form bonds with atoms in the existing crystal structure. This is the homo-epitaxial growth where the newly deposited atoms retain the orientation of the structure in the substrate. Other non-diamond substrates, however, need to be pre-treated, usually by being polished using diamond powder. Some powder particles remain on the surface, acting as seeds for the growth of small crystals or grains. These grains grow and at some point merge with the adjacent ones, making up a compact material. The lower side is later polished away. These diamonds are called \emph{polycrystalline} (pCVD) whereas those grown on a diamond substrate are \emph{single crystal} (sCVD) diamonds. The area of the former can be large - up to 0.5~m$^2$ or more compact 75~cm$^2$ in the case of detector grade diamonds, which can be further cut into smaller parts. The sCVD diamonds, on the other hand, can currently only achieve sizes up to 1.5~cm$^2$.
+Under carefully controlled pressure and temperature conditions with an added abrasive atomic hydrogen the graphitic bonds break and form into diamond bonds. The speed of the growth can be anywhere between 0.1 and 10~$\upmu$m per hour. The detector grade samples are grown at a rate of the order of 1~$\upmu$m per hour. They can grow up to several millimetres in thickness. The width of the samples, however, depends entirely on the substrate used. Diamond can be deposited on various materials: diamond, silicon, tungsten, quartz glass etc. The substrate material must be able to withstand the high temperatures during the CVD process. The diamond substrate does not need any surface pre-treatment. Carbon atoms form bonds with atoms in the existing crystal structure. This is the homo-epitaxial growth where the newly deposited atoms retain the orientation of the structure in the substrate. Other non-diamond substrates, however, need to be pre-treated, usually by being polished using diamond powder. Some powder particles remain on the surface, acting as seeds for the growth of small crystals or grains. These grains grow and at some point merge with the adjacent ones, making up a compact material. The lower side is later polished away. These diamonds are \emph{polycrystalline} (pCVD) whereas those grown on a diamond substrate are \emph{single crystal} (sCVD) diamonds. The area of the former can be large - up to 0.5~m$^2$ or more compact 75~cm$^2$ in the case of detector grade diamonds, which can be further cut into smaller parts. The sCVD diamonds, on the other hand, can currently only achieve sizes up to 1.5~cm$^2$.
 \end{description}
 
 
@@ -36,7 +36,7 @@ Under a carefully controlled pressure and temperature conditions with an added a
 
 %----------------------------------------------------------------------------------------------------
 \section{Semiconductor detectors}
-Semiconductor is a class of solids whose electrical conductivity is between that of a conductor and that of an insulator -- of the order of  $10^{-5}~\Upomega^{-1}$~cm$^{-1}$. Semiconductors consist of atoms with four electrons in their valence band, e.g. silicon--Si or germanium--Ge, or as combinations of two or more different materials, e.g. gallium arsenide--GaAs). The atoms in the lattice form valence bonds with adjacent atoms, creating solid crystal structures.
+Semiconductor is a class of solids whose electrical conductivity is between that of a conductor and that of an insulator -- of the order of  $10^{-5}~\Upomega^{-1}$~cm$^{-1}$~\cite{PHSEM:00000}. Semiconductors consist of atoms with four electrons in their valence band, e.g. silicon--Si or germanium--Ge, or as combinations of two or more different materials, e.g. gallium arsenide--GaAs). The atoms in the lattice form valence bonds with adjacent atoms, creating solid crystal structures.
 
 Semiconductor particle detectors are devices that use a semiconductor material to detect radiation. They work on the principle of an ionisation chamber. An incident particle ionises the atoms in the crystal lattice. The charges are freed if the deposited energy is higher than the energy band gap, i.e. the energy needed to excite an electron from its steady state to the conductance band. The freed charge carriers start drifting in an externally applied electric field, inducing current on the electrodes. The induced signal is amplified and read out by the electronics in the detector signal chain.
 
@@ -66,11 +66,6 @@ Particles can interact with the sensor in several ways, e.g. via bremsstrahlung~
 
 The energy of the electrons forming valence bonds between atoms in the crystal lattice is within the \emph{valence band}~\cite{PHSEM:00000}. To break a bond and excite the electron into a \emph{conduction band}, a sufficient energy has to be applied. The minimal energy required is equal to the energy band gap $E_\mathrm{g}$ of the semiconductor. Typical $E_\mathrm{g}$ values are 0.7~eV in Ge, 1.12~eV in Si and 1.4~eV in GaAs. Diamond with its 5.5~eV band gap is considered an insulator. The separation between the conductive and valence band is referred to as \emph{forbidden gap} where no electron states can exist.
 
-An electron excited into the conduction band leaves behind a positively charged ion with a vacancy -- a hole -- in its valence band, as shown in figure~\ref{fig:semilattice9}. A free \emph{electron-hole pair} is thus created. The free electron travels through the crystal until it is recombined with another hole. Similarly the positive charge of the hole attracts a bound electron in the vicinity, causing it to break from the current bond and moving to the vacancy, thus leaving behind a newly created hole. The process continues, making it look like the hole is traveling through the material~\cite{PHSEM:00000}. 
-
-Both the electron and the hole are referred to as \emph{charge carriers}. Without an externally applied electrical field, they propagate in random directions. Therefore on average there is no overall motion of charge carriers in any particular direction over time.
-
-However, if an external electric field is applied to the crystalline structure, the free electrons and holes drift toward the positive and negative potential, respectively, as shown in figure~\ref{fig:simpledrift}. While drifting, the charges couple with the electrodes, inducing current in the circuit, which is explained by the Shockley--Ramo theorem below. Upon reaching the electrodes the charges stop inducing the current. The equivalent electrical circuit is shown in figure~\ref{fig:simpledrifteq}.
 
 \begin{figure}[!t]
 \begin{tabular}{cccc}
@@ -80,6 +75,13 @@ However, if an external electric field is applied to the crystalline structure, 
 \end{tabular}
 \caption{In the equivalent electrical circuit diagram the electron-hole creation and drift can be modelled as a current source with a capacitor in parallel.}
 \end{figure}
+
+An electron excited into the conduction band leaves behind a positively charged ion with a vacancy -- a hole -- in its valence band, as shown in figure~\ref{fig:semilattice9}. A free \emph{electron-hole pair} is thus created. The free electron travels through the crystal until it is recombined with another hole. Similarly the positive charge of the hole attracts a bound electron in the vicinity, causing it to break from the current bond and moving to the vacancy, thus leaving behind a newly created hole. The process continues, making it look like the hole is traveling through the material~\cite{PHSEM:00000}. 
+
+Both the electron and the hole are referred to as \emph{charge carriers}. Without an externally applied electrical field, they propagate in random directions. Therefore on average there is no overall motion of charge carriers in any particular direction over time.
+
+However, if an external electric field is applied to the crystalline structure, the free electrons and holes drift toward the positive and negative potential, respectively, as shown in figure~\ref{fig:simpledrift}. While drifting, the charges couple with the electrodes, inducing current in the circuit, which is explained by the Shockley--Ramo theorem below. Upon reaching the electrodes the charges stop inducing the current. The equivalent electrical circuit is shown in figure~\ref{fig:simpledrifteq}.
+
 
 
 
@@ -154,7 +156,7 @@ whereby $v_{\mathrm{drift}}$ is the drift velocity of the point-like charge and 
 
 %-----------------------------------------------------------------------------------------------------------------
 \subsection{Thermal excitation}
-Electrons can be thermally excited to the conduction band. The intrinsic concentration of thermally excited electrons $n_\mathrm{i}$ in semiconductors is proportional to\cite{PHSEM:00000}
+Electrons can be thermally excited to the conduction band. The intrinsic concentration of thermally excited electrons $n_\mathrm{i}$ in semiconductors is proportional to~\cite{PHSEM:00000}
 \begin{equation}
 \label{eq:intrinsiccarrier}
 n_\mathrm{i} \propto \exp\left(-\frac{E_\mathrm{g}}{2k_\mathrm{B}T}\right)
@@ -232,11 +234,7 @@ The concentration profile dissolves with time forming a Gaussian distribution wi
 
 \item[Phonon transport] is the transfer of energy of the moving charges to the lattice.
 
-\item[Saturation velocity] $v^e_\mathrm{sat}$ is a velocity limit above which the carriers cannot reach. This is due to increasing phonon transport at a high electric field. The $v^e_\mathrm{sat}=v^h_\mathrm{sat}=(14.23\pm0.12)\times10^6$~cm/s for both positive and negative charge carriers has been derived from the measurements in~\cite{JANSEN:00001}.
-
-\end{description}
-
- The final equation for $v_\mathrm{drift}$ is therefore~\cite{VDRIFT:00000}
+\item[Saturation velocity] $v^e_\mathrm{sat}$ is a velocity limit above which the carriers cannot reach. This is due to increasing phonon transport at a high electric field. The $v^e_\mathrm{sat}=v^h_\mathrm{sat}=(14.23\pm0.12)\times10^6$~cm/s for both positive and negative charge carriers has been derived from the measurements in~\cite{JANSEN:00001}. The equation for $v_\mathrm{drift}$ is~\cite{VDRIFT:00000}
 \begin{equation}
 \label{eq:vsat}
 v_\mathrm{drift}(E) = \mu(E)E= \frac{\mu_\mathrm{0} E}{1 + \frac{\mu_\mathrm{o} E}{v_\mathrm{sat}}}.
@@ -246,11 +244,19 @@ It can be retrieved experimentally via the transit time measured with the Transi
 \label{eq:vsat}
 v_\mathrm{drift}(E) = \frac{d}{t_\mathrm{t}(E)}.
 \end{equation}
-The velocities for holes and electrons usually differ. In diamond, the holes travel approximately 30~\% faster than electrons at the room temperature~\cite{Jansen:1956431}.
+The velocities for holes and electrons usually differ. In diamond, the holes travel approximately 30~\% faster than electrons at room temperature~\cite{Jansen:1956431}.
 
+
+\end{description}
 
 %-----------------------------------------------------------------------------------------------------------------
 \section{Radiation-induced current signals}
+
+
+When a highly-energetic particle travels through the sensor, it interacts with atoms in the lattice. It ionises the valence electrons, creating electron-hole (e-h) pairs on its way. It can either deposit only a fraction of its energy and exit the sensor on the other side or it can get stopped in the sensor, depositing all of its energy. A special case is when it interacts with the core of the atom in the middle of the sensor by means of a a nuclear interaction. All these various types interactions produce different amounts and different spatial distributions of e-h pairs. 
+
+%The induced electrical current therefore differs for different types of interaction. 
+The two most frequent types are shown in figure~\ref{fig:drift}. The first figure shows the interaction of an incident MIP. The electrons and holes created all along the trajectory of the particle immediately start drifting towards the positive and negative electrode, respectively. At $t=0$ all charges drift, contributing to the maximum induced current. Those closest to the electrodes have a very short drift path. They stop inducing current upon reaching the electrode. The resulting current signal is a triangular pulse with a sharp rising edge and a linear falling edge. Gradually all the charge carriers reach the electrode. The accumulated charge $Q_\mathrm{s}$ equals to the sum of the contributions of the positive and negative charge carriers. 
 
 \begin{figure}[!t]
 \begin{center}
@@ -259,11 +265,6 @@ The velocities for holes and electrons usually differ. In diamond, the holes tra
 \label{fig:drift}
 \end{center}
 \end{figure}
-
-When a highly-energetic particle travels through the sensor, it interacts with atoms in the lattice. It ionises the valence electrons, creating electron-hole (e-h) pairs on its way. It can either deposit only a fraction of its energy and exit the sensor on the other side or it can get stopped in the sensor, depositing all of its energy. A special case is when it interacts with the core of the atom in the middle of the sensor by means of a a nuclear interaction. All these various types interactions produce different amounts and different spatial distributions of e-h pairs. 
-
-%The induced electrical current therefore differs for different types of interaction. 
-The two most frequent types are shown in figure~\ref{fig:drift}. The first figure shows the interaction of an incident MIP. The electrons and holes created all along the trajectory of the particle immediately start drifting towards the positive and negative electrode, respectively. At $t=0$ all charges drift, contributing to the maximum induced current. Those closest to the electrodes have a very short drift path. They stop inducing current upon reaching the electrode. The resulting current signal is a triangular pulse with a sharp rising edge and a linear falling edge. Gradually all the charge carriers reach the electrode. The accumulated charge $Q_\mathrm{s}$ equals to the sum of the contributions of the positive and negative charge carriers. 
 
 The second type of interaction happens when the particle is stopped in the diamond close to the point of entry. Most of its energy is deposited in a small volume close to the electrode. A cloud of charge carriers is created and the charges with the shorter path to the electrode disappear almost instantly. The carriers of the opposite charge, however, start drifting through the sensor to the other electrode. In an ideal diamond sensor, their velocity is constant throughout the drift up until they are collected at the opposite electrode. The contribution of the first charge cloud is a peak with a short time. The cloud drifting through the sensor, on the other hand, induces a current signal with a flat top. The resulting signal has a shape of a rectangle, with a spike in the beginning. %This spike is filtered out by a current amplifier in a real device because it is too fast for the electronics existing currently. 
 The accumulated charge $Q_\mathrm{s}$ is equal to a half of the deposited charge by the stopped particle.
@@ -381,11 +382,11 @@ Priming or pumping~\cite{pumping:00000} is a process of irradiating the diamond 
 %-----------------------------------------------------------------------------------------------------------------
 \section{Radiation damage}
 \label{sec:raddam}
-Exposure to ionising radiation degrades sensors by deforming the crystal lattice and introducing charge traps in the material. 
+Exposure to radiation degrades sensors by deforming the crystal lattice and introducing charge traps in the material. 
 
 Radiation damage varies with the type of radiation and its energy. There are several models existing~\cite{2002NIMPA,Guthoff:2014223} that try to explain the impact of irradiation and to provide \emph{damage factors} to compare the radiation damage between different particles. The standard way is to convert the damage into \emph{1~MeV neutron equivalent fluence}~\cite{NEQ:00000}. Some models have been extensively verified with simulations and with experiments. In these experiments the charge collection in sensors is measured before and after irradiation. This procedure is repeated several times, with a measurement point taken after every irradiation. Then the charge collection for this set of measurements is plotted as a function of the radiation dose received by a specific particle at a specific energy. From this a damage factor $k_\mathrm{\lambda}$ can be extracted. Damage factors have to be measured across a range of energies and types of radiation to properly quantify the damage in the sensors. Finally they are compared to the simulations to validate the theoretical models.
 
-Diamond is an expensive material and the technology is relatively new as compared to silicon. Therefore few institutes are carrying out diamond irradiation studies. To join the efforts, the RD42 collaboration~\cite{RD42:00000} has been formed. It gathers the experimental data from diamond irradiation studies. Unlike with silicon, the experimental results so far show no significant correlation with the NIEL (non-ionising energy loss) model~\cite{2002NIMPA}, which correlates detector efficiency with the number of lattice displacements. Therefore an alternative model was proposed~\cite{Guthoff:2014223}, correlating the diamond efficiency with the number of displacements per atom (DPA) in the material. The idea is that if the recoil energy of an incident particle is higher than the lattice binding energy (42~eV for diamond), the atom is displaced from its original position. The newly formed vacancy acts as a trap for drifting charge carriers. The more displacements that form in the crystal, the higher is the probability that a drifting carrier gets trapped. However, different types of particles interact differently with the material. In addition the mechanisms of interaction at low energies are different to those at high energies. To assess the damage for individual particles at a range of energies, simulations need to be run first. The simulation shown in~\cite{Guthoff:2014223} shows the DPA model for a range of energies of proton, pion and neutron irradiation in diamond. Figure~\ref{fig:kitdpa}  contains the simulation results as well as the superimposed empirical results of several irradiation studies. According to the figure, a 300~MeV pion beam damages the diamond material twice as much as a 24~GeV proton beam. The data points obtained by RD42 are also added to the figure. They have been normalised to damage by 24~GeV protons. This value has been chosen because radiation damage at this energy and radiation type is well understood at CERN.
+Diamond is an expensive material and the technology is relatively new as compared to silicon. Therefore few institutes are carrying out diamond irradiation studies. To join the efforts, the RD42 collaboration~\cite{RD42:00000} has been formed. It gathers the experimental data from diamond irradiation studies. Unlike with silicon, the experimental results so far show no significant correlation with the NIEL (non-ionising energy loss) model~\cite{2002NIMPA}, which correlates detector efficiency with the number of lattice displacements. Therefore an alternative model was proposed~\cite{Guthoff:2014223}, correlating the diamond efficiency with the number of displacements per atom (DPA) in the material, taking recombination into account while omitting the phonon interactions. The idea is that if the recoil energy of an incident particle is higher than the lattice binding energy (42~eV for diamond), the atom is displaced from its original position. The newly formed vacancy acts as a trap for drifting charge carriers. The more displacements that form in the crystal, the higher is the probability that a drifting carrier gets trapped. However, different types of particles interact differently with the material. In addition the mechanisms of interaction at low energies are different to those at high energies. To assess the damage for individual particles at a range of energies, simulations need to be run first. The simulation shown in~\cite{Guthoff:2014223} shows the DPA model for a range of energies of proton, pion and neutron irradiation in diamond. Figure~\ref{fig:kitdpa}  contains the simulation results as well as the superimposed empirical results of several irradiation campaigns. According to the figure, a 300~MeV pion beam damages the diamond material twice as much as a 24~GeV proton beam. The data points obtained by RD42 are also added to the figure. They have been normalised to damage by 24~GeV protons. This value has been chosen because radiation damage at this energy and radiation type is well understood at CERN.
 %Finally, the data point measured in the scope of this thesis has been added for comparison. The derivation is done below. $ADD SOMEWHERE ELSE!!
 
 \begin{figure}[!t]
@@ -398,7 +399,7 @@ Diamond is an expensive material and the technology is relatively new as compare
 \end{figure}
 
 %-----------------------------------------------------------------------------------------------------------------
-\subsubsection{Irradiation damage factor}
+\subsection{Irradiation damage factor}
 The irradiation damage factor $k_\uplambda$ is a means to quantify irradiation damage of a specific type of radiation at a specific energy. Via this factor different types of irradiation can be compared. It is obtained experimentally by measuring the CCD of a number of samples at various irradiation steps and fitting the equation~\ref{eq:radfactor1} to the data. $\lambda$ is the measured CCD, $\lambda_\mathrm{0}$ is the CCD of a non-irradiated sample and $\Phi$ the radiation dose. As a reference, the damage factor for 24~GeV protons is set to $1\times10^{-18}~\upmu$m$^{-1}$~cm~$^{-2}$.
 
 
@@ -423,7 +424,7 @@ The remaining energy, however, is converted into lattice vibrations -- phonons~\
 
 The free electron binds with the free hole into a bound state (not recombination) -- the exciton~\cite{1970PhyEd...5..226L}. The exciton binding energy is 80~meV, which introduces an energy level within the forbidden gap just under the conduction band. At higher temperatures the lattice provides enough energy to thermally excite the electron from the exciton state back to the conduction band. At lower temperatures, however, the exciton lifetime increases, which means that it takes a longer time for the electrons to get re-excited to the conduction band. The re-excitation lifetime at room temperature is $\sim$30~ps, increasing to $\sim$150~$\upmu$s at 50~K~\cite{Jansen:1956431}. This means that some of the bound electrons do not even start drifting within the period of $\sim$10~ns, which is the expected carrier drift time. When they are finally freed, the current they induce is already hidden in the electronics noise. The effective area of the observed current pulse is therefore smaller than that of a pulse induced by all the carriers drifting at the same time. This in effect reduces the measured collected charge. The longer the time constant, the lower the measured collected charge, as shown in section~\ref{subsec:qvst}.
 
-\subsubsection{Collected charge as a function of temperature}
+\subsection{Collected charge as a function of temperature}
 \label{subsec:qvst}
 The area below the current pulse is proportional to the charge collected by the diamond detector. The collected charge is measured as a function of temperature. First, the amplitude values of the averaged pulses at a bias voltage of $\pm$500~V and across the temperature range between 4~K and 295~K have to be integrated. Then a calibration factor is used to derive the charge for all data points. The results of such measurements have been presented in~\cite{Jansen:1956431}. Chapter~\ref{ch:meas} shows the results of the measurements taken in the scope of this thesis.
 %The resulting values for electrons and holes are plotted in figures~\ref{fig:chgtempelecs} and~\ref{fig:chgtempholes}, respectively.
@@ -458,8 +459,15 @@ The signal charge generated in the sensor by a single energetic particle is of t
 \subsubsection{Current amplifier}
 Figure~\ref{fig:curramp} shows the equivalent circuit of a current source and a current amplifier. An amplifier operates in current mode if the source has a low charge collection time $t_\mathrm{c}$ with respect to the $R_\mathrm{i}C_\mathrm{d}$ time constant of the circuit. In this case the sensor capacitance discharges rapidly and the output current $i_\mathrm{o}$ is proportional to the instantaneous current $i_\mathrm{i}$. The amplifier is providing a voltage gain, so the output signal voltage $u_o$ is directly proportional to the input voltage $u_\mathrm{i}$:
 \begin{equation}
-u_\mathrm{o}(t) = A \cdot R_\mathrm{i} \cdot i_\mathrm{s}(t).
+u_\mathrm{o}(t) = A \cdot R_\mathrm{i} \cdot i_\mathrm{i}(t).
+%u_\mathrm{o}(t) = A \cdot u{i}(t).
 \end{equation}
+%Taking into account the detector capacitance $C_\mathrm{d}$, the magnitude of peak voltage on the output is 
+%\begin{equation}
+%u_\mathrm{o}(t) = A \cdot \frac{Q(t)} {C_\mathrm{d}} = 
+%\end{equation}
+
+
 The detector capacitance $C_\mathrm{d}$ together with the input resistance of the amplifier $R_\mathrm{i}$ defines the time constant of the signal, as shown in figure~\ref{fig:currc}. The higher $C_\mathrm{d}$, the slower is the response of the amplifier. For the case of the diamond sensor, which has the capacitance of the order of 2~pF and the input resistance of 50~$\Omega$, the resulting time constant is $\tau=10^{-10}$~s. This yields the signal rise time $t_\mathrm{r}\sim2.2\tau=2.2\times10^{-10}$~s.
 
 \begin{figure}[!t]
@@ -476,7 +484,11 @@ The detector capacitance $C_\mathrm{d}$ together with the input resistance of th
 %(0.5 pg)
 In order to measure integrated charge in the sensor, a feedback loop is added to the amplifier, as shown in figure~\ref{fig:chgamp}. The feedback can be used to control the gain and input resistance, as well as to integrate the input signal. The charge amplifier is in principle an inverting voltage amplifier with a high input resistance. 
  
-In an ideal amplifier the output voltage $u_\mathrm{o}$ equals $-Au_\mathrm{i}$. Therefore the voltage difference across the capacitor $C_\mathrm{f}$ is $u_\mathrm{f}=(A+1)u_\mathrm{i}$ and the charge deposited on the capacitor is $Q_\mathrm{f}=C_\mathrm{f}u_\mathrm{f} = C_\mathrm{f}(A+1)u_\mathrm{i}$. Since no current can flow into the amplifier, all of the signal current must charge up the feedback capacitance, so $Q_\mathrm{f} = Q_\mathrm{i}$.
+In an ideal amplifier the output voltage $u_\mathrm{o}$ equals $-Au_\mathrm{i}$. Therefore the voltage difference across the capacitor $C_\mathrm{f}$ is $u_\mathrm{f}=(A+1)u_\mathrm{i}$ and the charge deposited on the capacitor is
+\begin{equation}
+Q_\mathrm{f}=C_\mathrm{f}u_\mathrm{f} = C_\mathrm{f}(A+1)u_\mathrm{i}.
+\end{equation}
+Since no current can flow into the amplifier, all of the signal current must charge up the feedback capacitance, so $Q_\mathrm{f} = Q_\mathrm{i}$.
 
 In reality, however, charge-sensitive amplifiers respond much slower than is the duration of the current pulse from the sensor. In addition, a resistor is added to the feedback line in parallel to the capacitor. The resistor and capacitor define the decay time constant of the pulse, as shown in figure~\ref{fig:chgrc}. This is necessary to return the signal to its initial state to be ready for a new measurement.
 \begin{figure}[!t]
@@ -487,18 +499,59 @@ In reality, however, charge-sensitive amplifiers respond much slower than is the
 \end{center}
 \end{figure}
 
-\subsubsection{Analogue electronic noise}
+\subsection{Analogue electronic noise}
 %(2 pg)
-The electronic noise determines the ability of a system to distinguish different signal levels. The analogue signal contains ample information about the type and energy of incident radiation, which can quickly be erased or altered if the signal properties change. Therefore the noise contributions to the signal must be well understood to qualify the information the signal is carrying. The important contributions are listed below. Thermal or Johnson--Nyquist noise~\cite{PhysRev.32.97,PhysRev.32.110} is the dominant noise contribution in the use case for diamond detector signal amplification and therefore defines the limitations of the detector system. This noise type is generated by the random thermal motion of charge carriers. The frequency range of the thermal noise is from 0 to $\infty$ with a predominantly uniform distribution. Therefore this is nearly a white noise. The resulting signal amplitude has a Gaussian distribution. The RMS of the 
-%noise amplitude
-open-loop equivalent voltage is defined as
-\begin{equation}
-\label{eq:thermnoise}
-u_\mathrm{RMS}=\sqrt{4k_BRT\Delta f}
-\end{equation}
-where $k_\mathrm{B}$ is the Boltzmann constant, $R$ is the input resistance of the amplifier, $T$ its temperature and $\Delta f$ the frequency range. This equation shows that it is possible to reduce the noise RMS by either (1) reducing the frequency range, (2) reducing the resistance or (3) reducing the temperature. 
+The electronic noise determines the ability of a system to distinguish different signal levels. The analogue signal contains ample information about the type and energy of incident radiation, which can quickly be erased or altered if the signal properties change. Therefore the noise contributions to the signal must be well understood to qualify the information the signal is carrying. In electrical circuits there are five common noise sources:
+\begin{itemize}
+\item[-]Thermal noise
+\item[-]Shot noise
+\item[-]Flicker noise
+\item[-]Burst noise
+\item[-]Avalanche noise.
+\end{itemize}
+The last two contributions can be eliminated if present, so the focus is on the first three.
 
-Contributions of shot noise, flicker noise and burst noise and other types are not significant relative to the thermal noise. However, the contributions of external factors can severely deteriorate the signal. This means the noise produced by capacitive or inductive coupling with an external source, which causes interference in the signal. These effects can be reduced by shielding the electronics and avoiding ground loops. 
+Considering $n$ carriers of charge $e$ moving with a velocity $v$ through a sample of length $l$, the induced current $i$ at the ends of the sample is
+\begin{equation}
+i = \frac {Q \cdot v_\mathrm{drift}} {d}  = \frac {n e v } {d}
+\end{equation}
+where $d$ is the distance travelled. Two mechanisms contribute to the total noise: velocity fluctuations (thermal noise) and number fluctuations (shot noise, flicker noise). They are statistically uncorrelated and can therefore be added in quadrature.
+
+\begin{description}
+\item[Thermal noise]
+or Johnson--Nyquist noise~\cite{PhysRev.32.97,PhysRev.32.110} is the dominant noise contribution in the use case for diamond detector signal amplification and therefore defines the limitations of the detector system. This noise type is generated by the random thermal motion of charge carriers. The frequency range of the thermal noise is from 0 to $\infty$ with a predominantly uniform distribution (white noise). The resulting signal amplitude has a Gaussian distribution. The spectral noise voltage density is
+\begin{equation}
+e^2_\mathrm{n} = 4 k_\mathrm{B}RT
+\end{equation}
+where $k_\mathrm{B}$ is the Boltzmann constant, $R$ is the input resistance of the amplifier and $T$ its temperature. The total noise on the output depends on the frequency~\cite{Spieler:1010490}:
+\begin{equation}
+u^2_\mathrm{on}=\int^\infty_0 e^2_\mathrm{n}A^2(f) \mathrm{d}f.
+\end{equation}
+Assuming a uniform gain across the frequency range between the low and the high cut-off $\Delta f = f_\mathrm{max}-f_\mathrm{min}$, the equation is simplified into
+\begin{equation}
+u_\mathrm{o}=A\sqrt{4k_\mathrm{B}RT\Delta f},
+\end{equation}
+where $u_\mathrm{o}$ is the RMS of the open-loop equivalent voltage. This equation shows that it is possible to reduce the noise RMS by either (1) reducing the input bandwidth, (2) reducing the resistance or (3) decreasing the temperature. 
+
+\item[Shot noise]
+occurs whenever charge carriers are injected into a sample volume independently of one another. The spectral noise current density in this case is proportional to the DC current:
+\begin{equation}
+e^2_\mathrm{i} = 2 q I.
+\end{equation}
+
+\item[Flicker noise]
+occurs when charge carriers are trapped and then released after a characteristic time $\tau$. For a number of traps with different $\tau$, the spectral noise density yields a near $1/f$ distribution~\cite{Spieler:1010490}. This noise contribution becomes more prononunced in heavily irradiated sensors with a high number of introduced charge traps.
+\end{description}
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Analogue-to-digital converters}
 An analogue-to-digital converter (ADC) is a device that converts the analogue electrical signal on the input to its digital representation - a series of digital values. This involves a quantisation -- \emph{sampling} of the signal at a defined sampling period, resulting in a sequence of samples at a discrete time period and with discrete amplitude values. The resolution of the ADC is the number of output levels the ADC can quantise to and is expressed in bits. For instance, an ADC with a resolution equal to $n=8$~bit  has a dynamic range of $N=2^n=256$~steps. The resulting voltage resolution $Q_\mathrm{ADC}$ at the input voltage range of $V_\mathrm{ADC}=\pm$50~mV is then
@@ -541,15 +594,15 @@ The RMS of the quantisation noise is defined as the square root of the variance:
 For the example above the quantisation error equals $\Delta Q_\mathrm{ADC}=0.11$~mV. The error depends strongly on the linearity of the ADC, but this is out of scope of this document as the devices used have ADCs with a very good linearity.
 \end{description}
 
+
+
 \subsection{Digital signal processing}
 The digitised signal can be processed to extract useful information. Therefore after the signal amplification and digitisation the signal is routed in a device which handles the digital analysis. The signal can either be processed immediately (in real time) or it can be saved to a data storage for analysis at a later stage (offline). The devices carrying out the processing can be multipurpose (e.g. Field Programmable Gate Arrays) or dedicated (e.g. Application-Specific Integrated Circuits).
 
 \begin{description}
 \item[Field Programmable Gate Array] (FPGA) is an integrated circuit designed to be reprogrammable and reconfigured after manufacturing. It consists of a set of logic gates that can be interconnected in numerous combinations to carry out a set of logic operations. Many such logic operations can take place in parallel, making the FPGA a powerful tool for signal processing. FPGAs are often used during system development or in systems in which the requirements might change with time. They can be reprogrammed in the order of seconds. In addition, the logic design only needs minor changes when migrating to a newer version of the FPGA chip of the same vendor. The FPGAs also offer faster time-to-market with comparison to application-specific solutions, which have to be developed. On the other hand, the price per part can be significantly higher than for the application-specific solutions. Also, their other major disadvantages are a high power consumption and a relatively low speed as compared to more application-specific solutions. However, today's solutions are capable of clock speeds higher than 500~MHz. Together with the integrated digital signal processing blocks, embedded processors and other modules, they are already very powerful and versatile. All in all, FPGAs are a good choice for prototyping and limited production, for projects with limited requirements for speed and complexity.
 
-\item[Application-Specific Integrated Circuit] (ASIC) is an integrated circuit designed for a specific use. The design cannot be modified after chip production, as is the case with FPGAs. On the other hand, the ASICs can be optimised to perform a required operation at a high speed and at a low power consumption. In addition, due to the specific design the size of the chip can be much smaller. ASICs can be designed as hybrid chips, containing both a digital and an analog part. Finally, ASICs can be designed to withstand much higher irradiation doses than FPGAs and can therefore be used in harsh environments like in space or in particle colliders.
-
-To update the chip, the design has to be submitted to a foundry, which produces the new chips with a turnover time of 4---6 weeks. The costs of a submission are high, but the price per part can be reduced significantly with a high volume. To sum up, ASICs are used for high volume designs with well defined requirements where some stringent constraints in terms of power consumption and speed have to be met.
+\item[Application-Specific Integrated Circuit] (ASIC) is an integrated circuit designed for a specific use. The design cannot be modified after chip production, as is the case with FPGAs. On the other hand, the ASICs can be optimised to perform a required operation at a high speed and at a low power consumption. In addition, due to the specific design the size of the chip can be much smaller. ASICs can be designed as hybrid chips, containing both a digital and an analog part. Finally, ASICs can be designed to withstand much higher irradiation doses than FPGAs and can therefore be used in harsh environments like in space or in particle colliders. To update the chip, the design has to be submitted to a foundry, which produces the new chips with a turnover time of 4---6 weeks. The costs of a submission are high, but the price per part can be reduced significantly with a high volume. To sum up, ASICs are used for high volume designs with well defined requirements where some stringent constraints in terms of power consumption and speed have to be met.
 \end{description} 
 
 \begin{figure}[!t]

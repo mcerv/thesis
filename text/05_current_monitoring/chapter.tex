@@ -189,14 +189,16 @@ This section explains how the algorithm is designed. First, the idea for it was 
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.95\textwidth]{05_current_monitoring/plots/width2}  \label{fig:width}
+\includegraphics[width=0.95\textwidth]{05_current_monitoring/plots/width2}
 \caption{This block counts the remaining binary ones in the clean vectors and outputs this value as the pulse width.}
+\label{fig:width}
 \end{figure}
 
 
 \begin{figure}[!t]
-\centering\includegraphics[width=0.95\textwidth]{05_current_monitoring/plots/area2}  \label{fig:area}
+\centering\includegraphics[width=0.95\textwidth]{05_current_monitoring/plots/area2}
 \caption{This block masks the input data with the clean vector and sums the remaining samples.}
+\label{fig:area}
 \end{figure}
 
 
@@ -390,7 +392,8 @@ Run & Source & Radiation & Energy [MeV] & Time [h]  & Triggers & Rate [s$^{-1}$]
 \end{footnotesize}
 
 The pulses acquired during the data taking are shown in persistence plots in figures~\ref{fig:accpulses}. Figure~\ref{fig:am1} showing the $^{241}$Am source background reveals that the diamond detector had been contaminated, probably with chipped-off grains of the unsealed source. This stems from the fact that $\upalpha$ pulses are recorded despite having a sheet of paper, which stops all the particles emitted by the source. 
-However, the number of $\upalpha$ hits due to contamination is negligible - an estimated 1~h$^{-1}$. Another point worth noting is the falling slope of the rectangular pulse in figure~\ref{fig:am3}. This stems from the space charge that had built up during the neutron irradiation and is discussed in section~\ref{sec:spacecharge}. Finally, figure~\ref{fig:pu1} shows that the neutron source causes the widest variety of pulse shapes - triangular and rectangular as well as those in between. Pulse shapes caused by neutrons are described in detail in~\cite{PAVEL:00003, CHRISSI:00005}.
+However, the number of $\upalpha$ hits due to contamination is negligible - an estimated 1~h$^{-1}$. Another point worth noting is the falling slope of the rectangular pulse in figure~\ref{fig:am3}. This stems from the space charge that had built up during the neutron irradiation. %and is discussed in section~\ref{sec:spacecharge}. 
+Finally, figure~\ref{fig:pu1} shows that the neutron source causes the widest variety of pulse shapes - triangular and rectangular as well as those in between. Pulse shapes caused by neutrons are described in detail in~\cite{PAVEL:00003, CHRISSI:00005}.
 
 % ATI source measurements
 \clearpage
@@ -596,7 +599,7 @@ Note the changing scale on the X axis in the figures.
 
 %----------------------------------------------------------
 \subsection{Thermal neutron flux monitoring}
-Research neutron reactors like TRIGA MARK II~\cite{TRIGA:00001} at Atominstitut~\cite{ATOM:00001} in Vienna are capable of emitting neutrons at a wide range of energies. The neutron flux is proportional to the current power of the reactor. It is therefore instrumental to monitor the neutron flux to make sure that the reactor operation is within the specified limits. However, the byproduct of the radioactive decays in the core is $\upgamma$ radiation, which has an energy range that overlaps with that of neutrons, making it difficult to measure the neutron flux. This is where PSA and diamond detectors come into play. This section describes the application of thermal neutron flux monitoring by means of the PSA.
+Research neutron reactors like TRIGA MARK II~\cite{Triga:00000} at Atominstitut~\cite{AtomInst:00000} in Vienna are capable of emitting neutrons at a wide range of energies. The neutron flux is proportional to the current power of the reactor. It is therefore instrumental to monitor the neutron flux to make sure that the reactor operation is within the specified limits. However, the byproduct of the radioactive decays in the core is $\upgamma$ radiation, which has an energy range that overlaps with that of neutrons, making it difficult to measure the neutron flux. This is where PSA and diamond detectors come into play. This section describes the application of thermal neutron flux monitoring by means of the PSA.
 
 Thermal neutrons do not interact with the diamond bulk due to their low kinetic energy (of the order of 0.012~eV). Hence a converter foil has to be added to produce second order effects. Incoming neutrons interact with the foil, producing a set of secondary particles. These can then be detected upon hitting the detector bulk. Common neutron interactions that are used in thermal neutron detection are \textsuperscript{10}B(n,$\alpha$)\textsuperscript{7}Li reaction and \textsuperscript{6}Li(n,$\alpha$)\textsuperscript{3}H reaction ($\alpha$ stands for $^4_2$He, see equation~\ref{eq:reaction}). The focus in this section is on the latter. With a foil installed, there are several possibilities for neutrons to interact with the detector system. Each of these interactions ionises the diamond bulk in its own way, resulting in a specific shape of the current pulse. A neutron can: 1) interact with the foil, producing an $\upalpha$ and a \textsuperscript{3}H, 2) interact with a carbon atom in the lattice, producing an $\upalpha$ and a $\upgamma$ or even three $\upalpha$. The thermal neutrons do not have enough kinetic energy to interact with the lattice, therefore the focus is on case (1). The equation for this reaction is the following:
 \begin{equation}
@@ -663,11 +666,11 @@ The neutrons emitted are 14~MeV mono-energetic fast neutrons. The most accurate 
 \subsubsection{Measurements}
 The $^{239}$Pu~Be neutron source has been used to simulate the fusion reactor. It emits a mixed field of neutrons and photons with a wide range of energies. The neutrons are rarely detected with diamond -- the interactions happen mostly in the electrodes on either side of the detector. The $\upalpha$ particles created by the interactions are detected by the diamond. Depending on the side of the interaction, the created pulse is either due to hole-- or electron collection. These two interactions make the two distinct lines in the [area, FWHM] phase space at 9~ns and 6~ns, as shown in figure~\ref{fig:scatterpu}, top left plot. 
 
-A very interesting interaction point is the ballistic centre~\cite{CHRISSI:00001} of the diamond. A ballistic centre is the position from which it takes the holes and the electrons the same amount of time to drift to the opposite electrodes. In this case the shortest possible pulse is created. Conversely, to conserve the collected charge and thus the pulse area, the pulse amplitude must be the highest at the ballistic centre. The entries in between are created by neutron interactions at random positions in the diamond, which produce pulses of various shapes. 
+A very interesting interaction point is the ballistic centre~\cite{PAVEL:00001, CHRISSI:00005} of the diamond. A ballistic centre is the position from which it takes the holes and the electrons the same amount of time to drift to the opposite electrodes. In this case the shortest possible pulse is created. Conversely, to conserve the collected charge and thus the pulse area, the pulse amplitude must be the highest at the ballistic centre. The entries in between are created by neutron interactions at random positions in the diamond, which produce pulses of various shapes. 
 %at 4~ns is created when a neutron interacts .
 
 \subsubsection{Results and discussion}
-Coming back to the motivation, the most efficient way of counting the 14~MeV neutrons is through the measurement of the neutrons interacting in the ballistic centre~\cite{????}. To extract this type of interaction several qualifiers must be used. The first possibility is the FWHM set to 3--5~ns. However, this time the cuts on the [area, amplitude] and the [area, amplitude$\times$base value] phase space are preferred. First, a minimum constant amplitude qualifier is set to 22~mV, as shown in figure~\ref{fig:scatterpu}, middle left plot. Then a linear amplitude qualifier is set such that only the pulses with the highest amplitude for every area value are taken. This ensures that the high pulses from the ballistic centre are chosen. Second, a maximum linear amplitude$\times$base value qualifier is set such that only the pulses bearing the closest resemblance to a rectangle are chosen, as shown in figure~\ref{fig:scatterpu}, middle right plot. In this phase space the entries at the bottom of the distribution are bearing more resemblance to a rectangle whereas those at the top are more akin to triangles.
+Coming back to the motivation, the most efficient way of counting the 14~MeV neutrons is through the measurement of the neutrons interacting in the ballistic centre~\cite{PAVEL:00001, CHRISSI:00005}. To extract this type of interaction several qualifiers must be used. The first possibility is the FWHM set to 3--5~ns. However, this time the cuts on the [area, amplitude] and the [area, amplitude$\times$base value] phase space are preferred. First, a minimum constant amplitude qualifier is set to 22~mV, as shown in figure~\ref{fig:scatterpu}, middle left plot. Then a linear amplitude qualifier is set such that only the pulses with the highest amplitude for every area value are taken. This ensures that the high pulses from the ballistic centre are chosen. Second, a maximum linear amplitude$\times$base value qualifier is set such that only the pulses bearing the closest resemblance to a rectangle are chosen, as shown in figure~\ref{fig:scatterpu}, middle right plot. In this phase space the entries at the bottom of the distribution are bearing more resemblance to a rectangle whereas those at the top are more akin to triangles.
 
 The resulting [area, FWHM] subfigure after applied qualifiers highlights the entries with a FWHM of 4~ns, which is the width of the pulses induced by neutrons interacting in the ballistic centre. This proves that these combined qualifiers indeed pinpoint these neutron interactions. The final one-dimensional area/energy distribution of the neutrons interacting in the ballistic centre is shown in figure~\ref{fig:scatterpuarea}. 
 

@@ -1,0 +1,17 @@
+Basic noise mechanisms and characteristics
+- Thermal - velocity fluc
+	- assumption: A uniform across frequencies
+	- 
+- Shot - number fluc
+- Flicker - charge trapping
+
+
+
+Capacitance and its effect on S/N
+- in current amp: C up, peak voltage down.
+- in charge amp: C up, noise up
+
+
+
+noise
+v^2 = integral of voltage density e^2

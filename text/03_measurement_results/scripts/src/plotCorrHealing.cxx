@@ -106,7 +106,7 @@ int32_t main (void) {
   // mg->GetXaxis()->SetRangeUser(0.9, 100000);
   // mg->GetXaxis()->SetLimits(0.9, 100000);
   mg->GetYaxis()->SetRangeUser(0.01,1);
-  mg->GetXaxis()->SetTitle("Received dose #Phi [#beta]");
+  mg->GetXaxis()->SetTitle("Fluence #Phi [#beta]");
   mg->GetYaxis()->SetTitle("#frac{#sigma(#Phi)}{#sigma_{ref} }");
   leg->Draw("same");
 

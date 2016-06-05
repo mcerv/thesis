@@ -65,6 +65,7 @@ int32_t main (void) {
 
   int32_t toPlot[3] = {0, 100, 140}; //0, 15 and 30 min
   string toPlotName[3] = {"0 min", "15 min", "30 min"};
+  string toPlotNameNum[3] = {" ", "N = 6#times10^{3}", "N = 12#times10^{3}"};
 
   int32_t cntFiles = 0;
   int32_t cntFilesOpen = 0;
@@ -218,8 +219,10 @@ int32_t main (void) {
         else
           timet = "60 min";
         sssEHsam << "#splitline{#splitline{" << timet << "}{"
-                 << "U_{bias}=" << voltage[polarity[sample]-1] << "V}}{"
-                 << sampleNameState[sample] << "}";
+                 << toPlotNameNum[num]
+                 << "}}{#splitline{"
+                 << "U_{bias}=" << voltage[polarity[sample]-1] << " V}{"
+                 << sampleNameState[sample] << "}}";
         if (polarity[sample])
           sssEH << "electrons"; //500V
         else

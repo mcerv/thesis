@@ -138,8 +138,8 @@ int32_t main (void) {
   mg->GetXaxis()->SetRangeUser(0.9, 100000);
   // mg->GetXaxis()->SetLimits(0.9, 100000);
   mg->GetYaxis()->SetRangeUser(0.01,1.01);
-  mg->GetXaxis()->SetTitle("Received dose #Phi [#alpha_{5.5 MeV}]");
-  mg->GetYaxis()->SetTitle("#frac{#sigma(#Phi)}{#sigma_{ref}}");
+  mg->GetXaxis()->SetTitle("Fluence #Phi [#alpha_{5.5 MeV}]");
+  mg->GetYaxis()->SetTitle("#frac{#sigma(#Phi)}{#sigma(0)}");
   leg->Draw("same");
 
 

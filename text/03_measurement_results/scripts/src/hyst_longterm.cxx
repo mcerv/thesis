@@ -203,7 +203,7 @@ int32_t main (void) {
   mg->Draw("APL");
   dr->prettify(mg);
   // mg->GetXaxis()->SetTitle("Time [s]");
-  mg->GetXaxis()->SetTitle("Received dose #Phi [#alpha_{5.5 MeV}]");
+  mg->GetXaxis()->SetTitle("Fluence #Phi [#alpha_{5.5 MeV}]");
   // mg->GetYaxis()->SetTitle("Collected charge [fC]");
   mg->GetYaxis()->SetTitle("#frac{Q(#Phi)}{Q(0)}");
   mg->GetYaxis()->SetRangeUser(0.2,1.1); //[V]

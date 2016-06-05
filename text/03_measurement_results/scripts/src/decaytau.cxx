@@ -66,7 +66,7 @@ int32_t main (void) {
   // TGraph* diff = new TGraph();
   double samplingTime = 0.1; //ns
   //set the input data
-  const int nSamples = 5;
+  const int nSamples = 2;
   const int nVoltages = 4;
   // const int nVoltages = 14;
   const int nTemp = 18;
@@ -78,11 +78,15 @@ int32_t main (void) {
   //                       -100.0, -200.0, -300.0, -400.0, -500.0, -600.0, -700.0};
   double voltage[nVoltages] = {500.0, 400.0, -400.0, -500.0};
   // string sampleRealName[nSamples] = {"S52","S79","S37","S79_1e14","S52_3-63e14"};
-  string sampleRealName[nSamples] = {"S52","S79","S37","S52 3.6#times10^{14} #pi cm^{-2}", "S79 1#times10^{14} #pi cm^{-2}"};
-  string sampleName[nSamples] = {"S52","S79","S37","S52_3-63e14","S79_1e14"};
+  // string sampleRealName[nSamples] = {"S52","S79","S37","S52 3.6#times10^{14} #pi cm^{-2}", "S79 1#times10^{14} #pi cm^{-2}"};
+  // string sampleName[nSamples] = {"S52","S79","S37","S52_3-63e14","S79_1e14"};
+  string sampleName[nSamples] = {"S79_1e14","S52_3-63e14"};
+  string sampleRealName[nSamples] = {"S79 1#times10^{14} #pi cm^{-2}","S52 3.6#times10^{14} #pi cm^{-2}"};
 
-  double irrad[nSamples] = {0,0,0,3.63,1};
-  double irrade[nSamples] = {0,0,0,0.76,0.21};
+  double irrad[nSamples] = {1,3.63};
+  double irrade[nSamples] = {0.21,0.76};
+    // double irrad[nSamples] = {0,0,0,3.63,1};
+    // double irrade[nSamples] = {0,0,0,0.76,0.21};
   // string sampleName[nSamples] = {"S79_1e14","S52_3-63e14","S37"};
   // string sampleName[nSamples] = {"S52", "S52_3-63e14"};
   // string sampleName[nSamples] = {"S79_1e14"};
@@ -381,516 +385,861 @@ int32_t main (void) {
 
 
 
-  //------------ open file for saving plots --------------------------
+  // //------------ open file for saving plots --------------------------
   TFile* filePlots = new TFile("plots/plotsdecay.root","update");
-  //------------------------------------------------------------------
-
-
-  // //----------------- Save the pulses -------------------------------
-  // TDirectory* dirp;
-  // TDirectory* dirs;
-  // TDirectory* dirt;
-  // stringstream sst;
-  // for (int32_t sample = 0; sample < nSamples; sample++) {
-  //   sst.str("");
-  //   sst << "Sample_" << sampleName[sample];
-  //   dirs = filePlots->mkdir(sst.str().c_str());
-  //   dirs->cd();
-  //   // filePlots->cd(sst.str().c_str());
-  //   for (int32_t temp = 0; temp < nTemp; temp++) {
-  //     for (int32_t volt = 0; volt < nVoltages; volt++) {
-  //       profvec.at(sample).at(temp).at(volt).Write();
+  // //------------------------------------------------------------------
+  //
+  //
+  // // //----------------- Save the pulses -------------------------------
+  // // TDirectory* dirp;
+  // // TDirectory* dirs;
+  // // TDirectory* dirt;
+  // // stringstream sst;
+  // // for (int32_t sample = 0; sample < nSamples; sample++) {
+  // //   sst.str("");
+  // //   sst << "Sample_" << sampleName[sample];
+  // //   dirs = filePlots->mkdir(sst.str().c_str());
+  // //   dirs->cd();
+  // //   // filePlots->cd(sst.str().c_str());
+  // //   for (int32_t temp = 0; temp < nTemp; temp++) {
+  // //     for (int32_t volt = 0; volt < nVoltages; volt++) {
+  // //       profvec.at(sample).at(temp).at(volt).Write();
+  // //     }
+  // //   }
+  // // }
+  // // filePlots->cd();
+  // // //-----------------------------------------------------------------
+  //
+  //
+  //
+  // //----------------- Prepare the tau data-------------------------------
+  // //remove all non-fitted inputs.
+  // TGraph* grTemp[nSamples][nVoltages];
+  // int32_t nRemovedTemp[nSamples][nVoltages];
+  //
+  //
+  // for (int32_t sample=0; sample<nSamples; sample++) {
+  //   for (int32_t volt=0; volt<nVoltages; volt++) {
+  //     nRemovedTemp[sample][volt] = 0;
+  //   }
+  // }
+  // for (int32_t sample=0; sample<nSamples; sample++) {
+  //   for (int32_t volt=0; volt<nVoltages; volt++) {
+  //     grTemp[sample][volt] = new TGraph(nTemp,tempN,tauDecayTemp[sample][volt]);
+  //     for (int32_t temp=0; temp<nTemp; temp++) {
+  //       // cout<<" sample "<<sample<<" temp "<<temp<<" voltage "<<volt
+  //       //     <<" tauDecayTemp "<<tauDecayTemp[sample][volt][temp]<< endl;
+  //       if (tauDecayTemp[sample][volt][temp] < -1.0){
+  //         // -10 in case it's not found. we delete the entry.
+  //         grTemp[sample][volt]->RemovePoint(temp-nRemovedTemp[sample][volt]);
+  //         nRemovedTemp[sample][volt]++;
+  //       }
   //     }
   //   }
   // }
-  // filePlots->cd();
-  // //-----------------------------------------------------------------
+  //
+  //
+  // //----------------- Plot decay vs Temperature-------------------------------
+  // cout<<endl<<" Plotting the decay vs temperature... "<<endl;
+  // can = new TCanvas("can","can",800,600);
+  // dr->prettify(can);
+  // can->SetLogy();
+  // TLegend* legTemp = new TLegend(0.7,0.65,0.95,0.95); //for All, Odd and Even
+  // bool first3 = true;
+  //
+  // for (int32_t sample=0; sample<nSamples; sample++) {
+  //   for (int32_t volt=0; volt<nVoltages; volt++) {
+  //     if (!grTemp[sample][volt]->GetN()) {
+  //       continue; //if the graph is empty, get out
+  //     }
+  //     dr->prettify(grTemp[sample][volt]);
+  //     if (first3) { //first draw
+  //       first3 = false;
+  //       grTemp[sample][volt]->Draw ("AL.");
+  //       grTemp[sample][volt]->GetYaxis()->SetRangeUser(1,450);
+  //       grTemp[sample][volt]->GetXaxis()->SetRangeUser(1,450);
+  //       grTemp[sample][volt]->GetXaxis()->SetLimits(1,450);
+  //       grTemp[sample][volt]->GetXaxis()->SetTitle("Temperature [K]");
+  //       grTemp[sample][volt]->GetYaxis()->SetTitle("#tau [s{}^{-1}]");
+  //     }
+  //     else {
+  //       grTemp[sample][volt]->Draw ("L SAME");
+  //     }
+  //     grTemp[sample][volt]->SetLineColor(clrScheme[sample][volt]);
+  //     ssleg.str("");
+  //     ssleg << sampleName[sample];// << "_" << voltage[volt];
+  //     if (!volt) {
+  //       legTemp->AddEntry(grTemp[sample][volt],ssleg.str().c_str(),"l");
+  //     }
+  //
+  //   }
+  // }
+  // legTemp->SetHeader("For #pm 400 V, #pm 500 V");
+  // legTemp->SetTextSize(0.04);
+  // legTemp->Draw("same");
+  // can->Update();
+  // can->Write();
+  // can->WaitPrimitive();
+  // legTemp->Clear();
+  // delete(can);
+  // //------------------------------------------------------------
 
 
 
+
+//---------------- BOTH POLARITIES SEPARATELY -------------------------------------------
   //----------------- Prepare the tau data-------------------------------
-  //remove all non-fitted inputs.
-  TGraph* grTemp[nSamples][nVoltages];
-  int32_t nRemovedTemp[nSamples][nVoltages];
+  const int nPol=2; //0-electrons, 1-holes
+  TGraphErrors *grTau[nSamples][nPol];
+  double tempNTau[nPol][nSamples][nTemp], tauTau[nPol][nSamples][nTemp], tempNTaue[nPol][nSamples][nTemp], tauTaue[nPol][nSamples][nTemp];
 
-
-  for (int32_t sample=0; sample<nSamples; sample++) {
-    for (int32_t volt=0; volt<nVoltages; volt++) {
-      nRemovedTemp[sample][volt] = 0;
-    }
-  }
-  for (int32_t sample=0; sample<nSamples; sample++) {
-    for (int32_t volt=0; volt<nVoltages; volt++) {
-      grTemp[sample][volt] = new TGraph(nTemp,tempN,tauDecayTemp[sample][volt]);
+  //ELECTRONS AND HOLES
+  for (int32_t pol=0; pol<nPol; pol++) {
+    for (int32_t sample=0; sample<nSamples; sample++) {
+      int32_t nTempTau=0;
       for (int32_t temp=0; temp<nTemp; temp++) {
-        // cout<<" sample "<<sample<<" temp "<<temp<<" voltage "<<volt
-        //     <<" tauDecayTemp "<<tauDecayTemp[sample][volt][temp]<< endl;
-        if (tauDecayTemp[sample][volt][temp] < -1.0){
-          // -10 in case it's not found. we delete the entry.
-          grTemp[sample][volt]->RemovePoint(temp-nRemovedTemp[sample][volt]);
-          nRemovedTemp[sample][volt]++;
+        double taumean=0;
+        double taurms=0;
+        if (tempN[temp]>70 && tempN[temp]<150) continue; //skip the region between 75 andd 150
+        int32_t tmpVol=0;
+        for (int32_t volt=(0+2*pol); volt<(2+2*pol); volt++) {
+        // for (int32_t volt=(0); volt<nVoltages; volt++) {
+          if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+          taumean += tauDecayTemp[sample][volt][temp];
+          tmpVol++;
         }
+        taumean/= tmpVol;
+        // for (int32_t volt=0; volt<nVoltages; volt++) {
+        for (int32_t volt=(0+2*pol); volt<(2+2*pol); volt++) {
+          if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+          taurms += (taumean-tauDecayTemp[sample][volt][temp])*(taumean-tauDecayTemp[sample][volt][temp]);
+        }
+        taurms = sqrt(taurms/tmpVol);
+
+        tempNTau[pol][sample][nTempTau] = tempN[temp];
+        tempNTaue[pol][sample][nTempTau] = 0.01*tempN[temp];
+        tauTau[pol][sample][nTempTau] = taumean;
+        tauTaue[pol][sample][nTempTau] = taurms;
+
+        cout<<nTempTau<<"\t"
+            <<tempN[temp]<<"\t"
+            <<0.01*tempN[temp]<<"\t"
+            <<taumean<<"\t"
+            <<taurms
+            <<endl;
+        nTempTau++;
       }
+      grTau[sample][pol]=new TGraphErrors(nTempTau, tempNTau[pol][sample], tauTau[pol][sample], tempNTaue[pol][sample], tauTaue[pol][sample]);
     }
-  }
-
-
-  //----------------- Plot decay vs Temperature-------------------------------
-  cout<<endl<<" Plotting the decay vs temperature... "<<endl;
-  can = new TCanvas("can","can",800,600);
-  dr->prettify(can);
-  can->SetLogy();
-  TLegend* legTemp = new TLegend(0.7,0.65,0.95,0.95); //for All, Odd and Even
-  bool first3 = true;
-
-  for (int32_t sample=0; sample<nSamples; sample++) {
-    for (int32_t volt=0; volt<nVoltages; volt++) {
-      if (!grTemp[sample][volt]->GetN()) {
-        continue; //if the graph is empty, get out
-      }
-      dr->prettify(grTemp[sample][volt]);
-      if (first3) { //first draw
-        first3 = false;
-        grTemp[sample][volt]->Draw ("AL.");
-        grTemp[sample][volt]->GetYaxis()->SetRangeUser(1,450);
-        grTemp[sample][volt]->GetXaxis()->SetRangeUser(1,450);
-        grTemp[sample][volt]->GetXaxis()->SetLimits(1,450);
-        grTemp[sample][volt]->GetXaxis()->SetTitle("Temperature [K]");
-        grTemp[sample][volt]->GetYaxis()->SetTitle("#tau [s{}^{-1}]");
-      }
-      else {
-        grTemp[sample][volt]->Draw ("L SAME");
-      }
-      grTemp[sample][volt]->SetLineColor(clrScheme[sample][volt]);
-      ssleg.str("");
-      ssleg << sampleName[sample];// << "_" << voltage[volt];
-      if (!volt) {
-        legTemp->AddEntry(grTemp[sample][volt],ssleg.str().c_str(),"l");
-      }
-
-    }
-  }
-  legTemp->SetHeader("For #pm 400 V, #pm 500 V");
-  legTemp->SetTextSize(0.04);
-  legTemp->Draw("same");
-  can->Update();
-  can->Write();
-  can->WaitPrimitive();
-  legTemp->Clear();
-  delete(can);
-  //------------------------------------------------------------
-
-
-
-
-
-  //----------------- Prepare the tau data-------------------------------
-  TGraphErrors *grTau[nSamples];
-  double tempNTau[nSamples][nTemp], tauTau[nSamples][nTemp], tempNTaue[nSamples][nTemp], tauTaue[nSamples][nTemp];
-
-  for (int32_t sample=0; sample<nSamples; sample++) {
-    int32_t nTempTau=0;
-    for (int32_t temp=0; temp<nTemp; temp++) {
-      double taumean=0;
-      double taurms=0;
-      if (tempN[temp]>70 && tempN[temp]<150) continue; //skip the region between 75 andd 150
-      int32_t tmpVol=0;
-      for (int32_t volt=0; volt<nVoltages; volt++) {
-        if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
-        taumean += tauDecayTemp[sample][volt][temp];
-        tmpVol++;
-      }
-      taumean/= tmpVol;
-      for (int32_t volt=0; volt<nVoltages; volt++) {
-        if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
-        taurms += (taumean-tauDecayTemp[sample][volt][temp])*(taumean-tauDecayTemp[sample][volt][temp]);
-      }
-      taurms = sqrt(taurms/tmpVol);
-
-      tempNTau[sample][nTempTau] = tempN[temp];
-      tempNTaue[sample][nTempTau] = 0.01*tempN[temp];
-      tauTau[sample][nTempTau] = taumean;
-      tauTaue[sample][nTempTau] = taurms;
-
-      cout<<nTempTau<<"\t"
-          <<tempN[temp]<<"\t"
-          <<0.01*tempN[temp]<<"\t"
-          <<taumean<<"\t"
-          <<taurms
-          <<endl;
-      nTempTau++;
-    }
-    grTau[sample]=new TGraphErrors(nTempTau, tempNTau[sample], tauTau[sample], tempNTaue[sample], tauTaue[sample]);
   }
 
 
 
   //----------------- Plot mean and rms of +-4/500 decay vs Temperature-------------------------------
-  cout<<endl<<" Plotting the MEAN decay vs temperature... "<<endl;
+  cout<<endl<<" Plotting the MEAN decay vs temperature for ELECS and HOLES SEPARATELY... "<<endl;
   can = new TCanvas("canmean","canmean",800,600);
   dr->prettify(can);
   can->SetLogy();
   can->SetLogx();
-  TLegend* legTau = new TLegend(0.22,0.57,0.52,0.8); //for All, Odd and Even
-  TMultiGraph *mgTau = new TMultiGraph();
+  TLegend* legTau = new TLegend(0.52,0.77,0.82,0.93); //for All, Odd and Even
+  TMultiGraph *mgTau[nPol];
   bool first4 = true;
 
-  for (int32_t sample=0; sample<nSamples; sample++) {
-    if (!grTau[sample]->GetN()) {
-      continue; //if the graph is empty, get out
+  for (int32_t pol=0; pol<nPol; pol++) {
+    mgTau[pol]  = new TMultiGraph();
+    for (int32_t sample=0; sample<nSamples; sample++) {
+      cout << "Pol " << pol << " nsam " << grTau[sample][pol]->GetN() << endl;
+      if (!grTau[sample][pol]->GetN()) {
+        continue; //if the graph is empty, get out
+      }
+      // for (int i=0; i<grTau[sample][pol]->GetN(); i++) {
+      //   double x, y;
+      //   grTau[sample][pol]->GetPoint(i,x,y);
+      //   cout << "x " << x << " y " << y << endl;
+      // }
+
+      dr->prettify(grTau[sample][pol]);
+      grTau[sample][pol]->SetMarkerStyle(24-sample);
+      // grTau[sample]->SetLineColor(clrScheme[sample][volt]);
+      mgTau[pol]->Add(grTau[sample][pol]);
+
+      ssleg.str("");
+      ssleg << sampleRealName[sample];// << "_" << voltage[volt];
+      legTau->AddEntry(grTau[sample][pol],ssleg.str().c_str(),"lep");
     }
-    dr->prettify(grTau[sample]);
-    grTau[sample]->SetMarkerStyle(24-sample);
-    // grTau[sample]->SetLineColor(clrScheme[sample][volt]);
-    mgTau->Add(grTau[sample]);
-
-    ssleg.str("");
-    ssleg << sampleRealName[sample];// << "_" << voltage[volt];
-    legTau->AddEntry(grTau[sample],ssleg.str().c_str(),"lep");
+    mgTau[pol]->Draw("AP");
+    dr->prettify(mgTau[pol]);
+    mgTau[pol]->GetYaxis()->SetRangeUser(4,81);
+    mgTau[pol]->GetYaxis()->SetLimits(4,81);
+    mgTau[pol]->GetXaxis()->SetRangeUser(3,402);
+    mgTau[pol]->GetXaxis()->SetLimits(3,402);
+    mgTau[pol]->GetXaxis()->SetTitle("Temperature [K]");
+    mgTau[pol]->GetYaxis()->SetTitle("Carrier lifetime #tau [ns]");
+    mgTau[pol]->GetXaxis()->SetTitleSize(0.065);
+    mgTau[pol]->GetYaxis()->SetTitleSize(0.065);
+    mgTau[pol]->GetYaxis()->SetTitleOffset(0.9);
+    // legTau->SetHeader("For #pm 400 V, #pm 500 V");
+    // legTau->SetTextSize(0.04);
+    legTau->Draw("same");
+    string elhol;
+    if (pol) elhol="holes"; else elhol="electrons";
+    TLatex *texTau = new TLatex(3.3,68.3,elhol.c_str());
+    texTau->SetTextFont(42);
+    texTau->Draw("same");
+    can->Update();
+    can->Write();
+    can->WaitPrimitive();
+    legTau->Clear();
+    can->Clear();
   }
-  mgTau->Draw("AP");
-  dr->prettify(mgTau);
-  mgTau->GetYaxis()->SetRangeUser(4,500);
-  mgTau->GetYaxis()->SetLimits(4,500);
-  mgTau->GetXaxis()->SetRangeUser(3,400);
-  mgTau->GetXaxis()->SetLimits(3,400);
-  mgTau->GetXaxis()->SetTitle("Temperature [K]");
-  mgTau->GetYaxis()->SetTitle("Carrier lifetime #tau [ns{}^{-1}]");
-
-  // legTau->SetHeader("For #pm 400 V, #pm 500 V");
-  // legTau->SetTextSize(0.04);
-  legTau->Draw("same");
-  TLatex *texTau = new TLatex(3.3,4.3,"MEASUREMENT");
-  texTau->SetTextFont(42);
-  // texTau->Draw("same");
-  can->Update();
-  can->Write();
-  can->WaitPrimitive();
-  legTau->Clear();
-  delete(can);
   //------------------------------------------------------------
+  //mean of all samples
 
-
-
-
-
-  //----------------- Prepare the tau data-------------------------------
-  // from 4 to 60 and from 160 to 295 K
-  TGraphErrors *grTau1[nSamples];
-  TGraphErrors *grTau12[nSamples];
-  TGraphErrors *grTau1All = new TGraphErrors();
-  // double tempNTau1[nSamples][nTemp], tauTau1[nSamples][nTemp], tempNTaue1[nSamples][nTemp], tauTaue1[nSamples][nTemp];
-
-  for (int32_t sample=0; sample<nSamples; sample++) {
-    int32_t nTempTau70=0;
-    int32_t nTempTau150=0;
-    double taumean70=0;
-    double taurms70=0;
-    double taumean150=0;
-    double taurms150=0;
-    double taumeanall=0;
-    double taurmsall=0;
-
-    for (int32_t temp=0; temp<nTemp; temp++) {
-      if (tempN[temp]<70) {
-        for (int32_t volt=0; volt<nVoltages; volt++) {
-          if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
-          taumean70 += tauDecayTemp[sample][volt][temp];
-          nTempTau70++;
-        }
-      }
-      else if (tempN[temp]>150) {
-        for (int32_t volt=0; volt<nVoltages; volt++) {
-          if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
-          taumean150 += tauDecayTemp[sample][volt][temp];
-          nTempTau150++;
-        }
-      }
+  // Draw the proportionality factor
+  TGraphErrors *grProp[nPol];
+  TMultiGraph *mgProp = new TMultiGraph();
+  can->SetLogx(false);
+  can->SetLogy(false);
+  for (int pol=0; pol<nPol; pol++) {
+    grProp[pol] = new TGraphErrors();
+    dr->prettify(grProp[pol]);
+    grProp[pol]->SetMarkerStyle(24-pol);
+    for (int sam=0; sam<nSamples; sam++) {
+      double meanOrig = grTau[sam][pol]->GetMean(2); //in Y axis
+      double rmsOrig = grTau[sam][pol]->GetRMS(2); //in Y axis
+      double mean = 1/meanOrig; //in Y axis
+      double rms = rmsOrig/meanOrig * mean; //in Y axis
+      cout << "sam " << irrad[sam] << " same " << irrade[sam] << " mean " << mean << " rms " << rms << endl;
+      grProp[pol]->SetPoint (sam, irrad[sam],mean);
+      grProp[pol]->SetPointError (sam, irrade[sam], rms);
     }
-    taumeanall = taumean70+taumean150;
-    taumeanall = taumeanall/(nTempTau150+nTempTau70);
-    taumean70 /= nTempTau70;
-    taumean150 /= nTempTau150;
-    for (int32_t temp=0; temp<nTemp; temp++) {
-      if (tempN[temp]<70) {
-        for (int32_t volt=0; volt<nVoltages; volt++) {
-          if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
-          taurms70 += (taumean70-tauDecayTemp[sample][volt][temp])*(taumean70-tauDecayTemp[sample][volt][temp]);
-        }
-      }
-      else if (tempN[temp]>150) {
-        for (int32_t volt=0; volt<nVoltages; volt++) {
-          if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
-          taurms150 += (taumean150-tauDecayTemp[sample][volt][temp])*(taumean150-tauDecayTemp[sample][volt][temp]);
-        }
-      }
-    }
-    taurmsall = taurms70 + taurms150;
-
-
-    taurms70 = sqrt(taurms70/nTempTau70);
-    taurms150 = sqrt(taurms150/nTempTau150);
-    taurmsall = sqrt(taurmsall/(nTempTau150+nTempTau70));
-    cout << taumean70 << " " << taurms70 << " " << taumean150 << " " << taurms150 << " "<< taumeanall << " "<< taurmsall <<endl;
-
-    grTau1[sample]=new TGraphErrors();
-    grTau1[sample]->SetPoint(0, 0, taumean70);
-    grTau1[sample]->SetPointError(0, 0, taurms70);
-    grTau1[sample]->SetPoint(1, 1, taumean150);
-    grTau1[sample]->SetPointError(1, 0, taurms150);
-    grTau1All->SetPoint(sample, irrad[sample], taumeanall);
-    grTau1All->SetPointError(sample, irrade[sample], taurmsall);
+    mgProp->Add(grProp[pol]);
   }
+  mgProp->Draw("AP");
+  dr->prettify(mgProp);
+  mgProp->GetXaxis()->SetTitle("Fluence [10^{14} #pi cm^{-2}]");
+  mgProp->GetYaxis()->SetTitle("1/#tau [ns^{-1}]");
+  mgProp->GetXaxis()->SetRangeUser(0,10);
+  mgProp->GetXaxis()->SetLimits(0,10);
+  mgProp->GetXaxis()->SetRangeUser(0,10.1);
+  mgProp->GetYaxis()->SetRangeUser(0,0.26);
 
-
-
-
-  //----------------- Plot mean and rms of +-4/500 decay vs Temperature-------------------------------
-  cout<<endl<<" Plotting the MEAN decay vs temperature... "<<endl;
-  can = new TCanvas("canmean","canmean",800,600);
-  dr->prettify(can);
-  can->SetLogy();
-  can->SetLogx();
-  TLegend* legTau1 = new TLegend(0.7,0.65,0.95,0.95); //for All, Odd and Even
-  TMultiGraph *mgTau1 = new TMultiGraph();
-  cout<<"1"<<endl;
-  for (int32_t sample=0; sample<nSamples; sample++) {
-    if (!grTau1[sample]->GetN()) {
-      continue; //if the graph is empty, get out
-    }
-    dr->prettify(grTau1[sample]);
-    grTau1[sample]->SetMarkerStyle(24-sample);
-    // grTau[sample]->SetLineColor(clrScheme[sample][volt]);
-    mgTau1->Add(grTau1[sample]);
-
-    ssleg.str("");
-    ssleg << sampleRealName[sample];// << "_" << voltage[volt];
-    legTau1->AddEntry(grTau1[sample],ssleg.str().c_str(),"lep");
-  }
-  // cout<<"1"<<endl;
-  mgTau1->Draw("AP");
-  dr->prettify(mgTau1);
-  mgTau1->GetYaxis()->SetRangeUser(4,500);
-  mgTau1->GetXaxis()->SetLimits(4,500);
-  mgTau1->GetXaxis()->SetRangeUser(3,450);
-  mgTau1->GetXaxis()->SetLimits(3,450);
-  mgTau1->GetXaxis()->SetTitle("Temperature [K]");
-  mgTau1->GetYaxis()->SetTitle("#tau [s^{-1}]");
-// cout<<"1"<<endl;
-  // legTau1->SetHeader("For #pm 400 V, #pm 500 V");
-  // legTau1->SetTextSize(0.04);
-  legTau1->Draw("same");
   can->Update();
-  can->Write();
-  // can->WaitPrimitive();
-  legTau1->Clear();
-  delete(can);
+  can->WaitPrimitive();
+  can->Update();
+  TF1* fitf0 = new TF1("fit0","[0]*x", 0, 10);
+  TF1* fitf1 = new TF1("fit1","[0]*x", 0, 10);
+  fitf0->SetParameter(0,0.03);
+  fitf0->SetParLimits(0,0,1);
+  fitf0->SetLineColor(kBlack);
+  fitf0->SetLineStyle(2);
+  fitf0->SetLineWidth(1);
+  fitf1->SetParameter(0,0.03);
+  fitf1->SetParLimits(0,0,1);
+  fitf1->SetLineColor(kBlack);
+  fitf1->SetLineStyle(1);
+  fitf1->SetLineWidth(1);
 
-
-
-
-  can = new TCanvas("canmean","canmean",800,600);
-  dr->prettify(can);
-  can->SetLogy();
-  dr->prettify(grTau1All);
-  grTau1All->SetMarkerStyle(20);
-  grTau1All->Draw("AP");
-  grTau1All->GetXaxis()->SetTitle("Radiation dose [10^{14} #pi cm^{-2}]");
-  grTau1All->GetYaxis()->SetTitle("Carrier lifetime #tau [ns^{-1}]");
-  grTau1All->GetXaxis()->SetRangeUser(-0.3,5);
-  grTau1All->GetXaxis()->SetLimits(-0.3,5);
-  grTau1All->GetYaxis()->SetRangeUser(4,505);
-  grTau1All->GetYaxis()->SetLimits(4,505);
-  TLatex *tex3 = new TLatex(-0.23,4.5,"MEASUREMENT");
-  tex3->SetTextFont(42);
-  // tex3->Draw("same");
-
-  TF1* fitf = new TF1("fit","[0] / ([0]*[1]*x + 1) ", 0, 20);
-  fitf->SetParameter(0,300);
-  fitf->SetParLimits(0,100,700);
-  fitf->SetParameter(1,3e-2);
-  fitf->SetLineColor(kBlack);
-  TFitResultPtr ptr = grTau1All->Fit("fit","SR");
+  TFitResultPtr ptr0 = grProp[0]->Fit("fit0","SR");
+  TFitResultPtr ptr1 = grProp[1]->Fit("fit1","SR");
   cout<<endl<<" --------------------------------"<<endl;
-  cout<<" Fitted kTau = "<<ptr->Parameter(1)
-      <<" +- "<<ptr->ParError(1)
+  cout<<" Fitted Elecs Prop factor Beta = "<<ptr0->Parameter(0)
+      <<" +- "<<ptr0->ParError(0)
       // <<" x 10^-18"
       <<endl;
   cout<<" --------------------------------"<<endl;
-  TLegend *legfit = new TLegend(0.62,0.82,0.95,0.95);
-  legfit->AddEntry(grTau1All, "Averaged lifetime","lep");
-  legfit->AddEntry(fitf, "Fit: k = (3.5#pm0.8)#times10^{-16} ","L");
+  cout<<" Fitted Holes Prop factor Beta = "<<ptr1->Parameter(0)
+      <<" +- "<<ptr1->ParError(0)
+      // <<" x 10^-18"
+      <<endl;
+  cout<<" --------------------------------"<<endl;
+  TLegend *legfit = new TLegend(0.53,0.22,0.93,0.58);
+  legfit->AddEntry(grProp[0], "#tau_{e avg}","lep");
+  legfit->AddEntry(grProp[1], "#tau_{h avg}","lep");
+  legfit->AddEntry(fitf0, "#beta_{e} = (3.8#pm0.9)#times10^{-16} cm^{2}/ns  ","L");
+  legfit->AddEntry(fitf1, "#beta_{h} = (3.4#pm0.8)#times10^{-16} cm^{2}/ns  ","L");
   legfit->Draw("same");
-
-
-
-
   can->Update();
-  can->Write();
   can->WaitPrimitive();
-  legTau1->Clear();
-  delete(can);
-  //------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //----------------- Prepare the tau data for decimated temp range--------------
-  //remove all non-fitted inputs.
-  TGraph* grTempDec[2][nSamples][nVoltages];
-  int32_t nRemovedTempDec[2][nSamples][nVoltages];
-  for (int32_t dec=0; dec<2; dec++) {
-    for (int32_t sample=0; sample<nSamples; sample++) {
-      for (int32_t volt=0; volt<nVoltages; volt++) {
-        nRemovedTempDec[dec][sample][volt] = 0;
-      }
-    }
-  }
-
-  for (int32_t dec=0; dec<2; dec++) {
-    for (int32_t sample=0; sample<nSamples; sample++) {
-      for (int32_t volt=0; volt<nVoltages; volt++) {
-        grTempDec[dec][sample][volt] = new TGraph(nTemp,tempN,tauDecayTempDec[dec][sample][volt]);
-        for (int32_t temp=0; temp<nTemp; temp++) {
-          // cout<<" sample "<<sample<<" temp "<<temp<<" voltage "<<volt
-          //     <<" tauDecayTempOdd "<<tauDecayTempDec[dec][sample][volt][temp]<< endl;
-          if (tauDecayTempDec[dec][sample][volt][temp] < -1.0){
-            // -10 in case it's not found. we delete the entry.
-            grTempDec[dec][sample][volt]->RemovePoint(temp-nRemovedTempDec[dec][sample][volt]);
-            nRemovedTempDec[dec][sample][volt]++;
-          }
-        }
-      }
-    }
-  }
-
-  //----------------- Plot decimated decay vs Voltage-------------------------------
-  cout<<endl<<" Plotting the decimated decay vs temperature... "<<endl;
-  can = new TCanvas("can","can",800,600);
-  dr->prettify(can);
-  can->SetLogy();
-  // TLine* line1;
-  // TLine* line2;
-  bool first = true;
-
-  for (int32_t dec=0; dec<2; dec++) {
-    for (int32_t sample=0; sample<nSamples; sample++) {
-      for (int32_t volt=0; volt<nVoltages; volt++) {
-
-        if (!grTempDec[dec][sample][volt]->GetN()) {
-          continue; //if the graph is empty, get out
-        }
-        dr->prettify(grTempDec[dec][sample][volt]);
-
-        if (first) { //first draw
-          first = false;
-          grTempDec[dec][sample][volt]->Draw ("AL.");
-          grTempDec[dec][sample][volt]->GetYaxis()->SetRangeUser(1,450); //tau
-          grTempDec[dec][sample][volt]->GetXaxis()->SetLimits(1,450); //temp
-          grTempDec[dec][sample][volt]->GetXaxis()->SetTitle("Temperature [K]");
-          grTempDec[dec][sample][volt]->GetYaxis()->SetTitle("#tau [s{}^{-1}]");
-          // can->Update();
-          // can->WaitPrimitive();
-        }
-        else {
-          grTempDec[dec][sample][volt]->Draw ("L SAME");
-        }
-        grTempDec[dec][sample][volt]->SetLineColor(clrScheme[sample][volt]);
-        ssleg.str("");
-        ssleg << sampleName[sample] << "_" << voltage[volt];
-        legTemp->AddEntry(grTempDec[dec][sample][volt],ssleg.str().c_str(),"l");
-        // can->Update();
-        // can->WaitPrimitive();
-      }
-    }
-    legTemp->Draw("same");
-    can->Update();
-    can->Write();
-    // can->WaitPrimitive();
-    can->Clear();
-    legTemp->Clear();
-    first = true;
-  }
-
-  delete(can);
-  //------------------------------------------------------------
-
-
-
-
-  //----------------- Prepare the tau data-------------------------------
-  //remove all non-fitted inputs.
-  TH2D* mapTau[nSamples];
-  int32_t nRemovedMap[nSamples];
-  stringstream ssmap;
-  for (int32_t sample=0; sample<nSamples; sample++) {
-      nRemovedMap[sample] = 0;
-  }
-  for (int32_t sample=0; sample<nSamples; sample++) {
-    ssmap.str("");
-    ssmap << "Tau_map_"<<sampleName[sample];
-    mapTau[sample] = new TH2D(ssmap.str().c_str(),ssmap.str().c_str(),
-              nTemp, 0, nTemp, nVoltages, 0, nVoltages);
-    // cout<<"sample "<< sample<<endl;
-    for (int32_t volt=0; volt<nVoltages; volt++) {
-      // cout<<"    volt "<< volt<<endl;
-      for (int32_t temp=0; temp<nTemp; temp++) {
-        // cout<<"       temp "<< temp;
-        if (tauDecayTemp[sample][volt][temp] >= 0.0){
-          mapTau[sample]->Fill(temp,volt,tauDecayTemp[sample][volt][temp]);
-          // cout<<" filling "<< tauDecayTemp[sample][volt][temp];
-        }
-        // cout<<endl;
-      }
-    }
-  }
-
-  //----------------- Plot decimated decay vs Voltage-------------------------------
-  cout<<endl<<" Plotting the map of decimated decay vs temperature... "<<endl;
-  can = new TCanvas("can","can",nSamples*400,500);
-  can->Divide(3,3);
-
-  for (int32_t sample=0; sample<nSamples; sample++) {
-    // dr->prettify(can->cd(sample));
-    can->cd(sample+1);
-    gPad->SetLogz();
-    mapTau[sample]->Draw("colz");
-    mapTau[sample]->GetZaxis()->SetRangeUser(1,450);
-  }
-
-  TH2D* mapTauDiff[nSamples];
-  if (nSamples == 5) {
-      mapTauDiff[0] = new TH2D(*mapTau[3]); //copy the S52
-      mapTauDiff[1] = new TH2D(*mapTau[4]); //copy the S79
-      mapTauDiff[0]->Divide(mapTau[0]);
-      mapTauDiff[1]->Divide(mapTau[1]);
-      can->cd(7);
-      gPad->SetLogz();
-      mapTauDiff[0]->Draw("colz");
-      mapTauDiff[0]->GetZaxis()->SetRangeUser(0,1);
-      can->cd(8);
-      gPad->SetLogz();
-      mapTauDiff[1]->Draw("colz");
-      mapTauDiff[1]->GetZaxis()->SetRangeUser(0,1);
-  }
-
   can->Update();
-  can->Write();
-  // can->WaitPrimitive();
-  can->Clear();
+
   delete(can);
-  //------------------------------------------------------------
+
+
+//
+//
+//
+//   //----------------- Prepare the tau data-------------------------------
+//   // from 4 to 60 and from 160 to 295 K
+//   TGraphErrors *grTau1[nSamples];
+//   TGraphErrors *grTau12[nSamples];
+//   TGraphErrors *grTau1All = new TGraphErrors();
+//   // double tempNTau1[nSamples][nTemp], tauTau1[nSamples][nTemp], tempNTaue1[nSamples][nTemp], tauTaue1[nSamples][nTemp];
+//
+//   for (int32_t sample=0; sample<nSamples; sample++) {
+//     int32_t nTempTau70=0;
+//     int32_t nTempTau150=0;
+//     double taumean70=0;
+//     double taurms70=0;
+//     double taumean150=0;
+//     double taurms150=0;
+//     double taumeanall=0;
+//     double taurmsall=0;
+//
+//     for (int32_t temp=0; temp<nTemp; temp++) {
+//       if (tempN[temp]<70) {
+//         for (int32_t volt=0; volt<nVoltages; volt++) {
+//           if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+//           taumean70 += tauDecayTemp[sample][volt][temp];
+//           nTempTau70++;
+//         }
+//       }
+//       else if (tempN[temp]>150) {
+//         for (int32_t volt=0; volt<nVoltages; volt++) {
+//           if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+//           taumean150 += tauDecayTemp[sample][volt][temp];
+//           nTempTau150++;
+//         }
+//       }
+//     }
+//     taumeanall = taumean70+taumean150;
+//     taumeanall = taumeanall/(nTempTau150+nTempTau70);
+//     taumean70 /= nTempTau70;
+//     taumean150 /= nTempTau150;
+//     for (int32_t temp=0; temp<nTemp; temp++) {
+//       if (tempN[temp]<70) {
+//         for (int32_t volt=0; volt<nVoltages; volt++) {
+//           if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+//           taurms70 += (taumean70-tauDecayTemp[sample][volt][temp])*(taumean70-tauDecayTemp[sample][volt][temp]);
+//         }
+//       }
+//       else if (tempN[temp]>150) {
+//         for (int32_t volt=0; volt<nVoltages; volt++) {
+//           if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+//           taurms150 += (taumean150-tauDecayTemp[sample][volt][temp])*(taumean150-tauDecayTemp[sample][volt][temp]);
+//         }
+//       }
+//     }
+//     taurmsall = taurms70 + taurms150;
+//
+//
+//     taurms70 = sqrt(taurms70/nTempTau70);
+//     taurms150 = sqrt(taurms150/nTempTau150);
+//     taurmsall = sqrt(taurmsall/(nTempTau150+nTempTau70));
+//     cout << taumean70 << " " << taurms70 << " " << taumean150 << " " << taurms150 << " "<< taumeanall << " "<< taurmsall <<endl;
+//
+//     grTau1[sample]=new TGraphErrors();
+//     grTau1[sample]->SetPoint(0, 0, taumean70);
+//     grTau1[sample]->SetPointError(0, 0, taurms70);
+//     grTau1[sample]->SetPoint(1, 1, taumean150);
+//     grTau1[sample]->SetPointError(1, 0, taurms150);
+//     grTau1All->SetPoint(sample, irrad[sample], taumeanall);
+//     grTau1All->SetPointError(sample, irrade[sample], taurmsall);
+//   }
+//
+//
+//
+//
+//   //----------------- Plot mean and rms of +-4/500 decay vs Temperature-------------------------------
+//   cout<<endl<<" Plotting the MEAN decay vs temperature... "<<endl;
+//   can = new TCanvas("canmean","canmean",800,600);
+//   dr->prettify(can);
+//   can->SetLogy();
+//   can->SetLogx();
+//   TLegend* legTau1 = new TLegend(0.7,0.65,0.95,0.95); //for All, Odd and Even
+//   TMultiGraph *mgTau1 = new TMultiGraph();
+//   cout<<"1"<<endl;
+//   for (int32_t sample=0; sample<nSamples; sample++) {
+//     if (!grTau1[sample]->GetN()) {
+//       continue; //if the graph is empty, get out
+//     }
+//     dr->prettify(grTau1[sample]);
+//     grTau1[sample]->SetMarkerStyle(24-sample);
+//     // grTau[sample]->SetLineColor(clrScheme[sample][volt]);
+//     mgTau1->Add(grTau1[sample]);
+//
+//     ssleg.str("");
+//     ssleg << sampleRealName[sample];// << "_" << voltage[volt];
+//     legTau1->AddEntry(grTau1[sample],ssleg.str().c_str(),"lep");
+//   }
+//   // cout<<"1"<<endl;
+//   mgTau1->Draw("AP");
+//   dr->prettify(mgTau1);
+//   mgTau1->GetYaxis()->SetRangeUser(4,500);
+//   mgTau1->GetXaxis()->SetLimits(4,500);
+//   mgTau1->GetXaxis()->SetRangeUser(3,450);
+//   mgTau1->GetXaxis()->SetLimits(3,450);
+//   mgTau1->GetXaxis()->SetTitle("Temperature [K]");
+//   mgTau1->GetYaxis()->SetTitle("#tau [s^{-1}]");
+// // cout<<"1"<<endl;
+//   // legTau1->SetHeader("For #pm 400 V, #pm 500 V");
+//   // legTau1->SetTextSize(0.04);
+//   legTau1->Draw("same");
+//   can->Update();
+//   can->Write();
+//   // can->WaitPrimitive();
+//   legTau1->Clear();
+//   delete(can);
+//
+//
+//
+//
+//   can = new TCanvas("canmean","canmean",800,600);
+//   dr->prettify(can);
+//   can->SetLogy();
+//   dr->prettify(grTau1All);
+//   grTau1All->SetMarkerStyle(20);
+//   grTau1All->Draw("AP");
+//   grTau1All->GetXaxis()->SetTitle("Fluence [10^{14} #pi cm^{-2}]");
+//   grTau1All->GetYaxis()->SetTitle("Carrier lifetime #tau [ns^{-1}]");
+//   grTau1All->GetXaxis()->SetRangeUser(-0.3,5);
+//   grTau1All->GetXaxis()->SetLimits(-0.3,5);
+//   grTau1All->GetYaxis()->SetRangeUser(4,505);
+//   grTau1All->GetYaxis()->SetLimits(4,505);
+//   TLatex *tex3 = new TLatex(-0.23,4.5,"MEASUREMENT");
+//   tex3->SetTextFont(42);
+//   // tex3->Draw("same");
+//
+//   TF1* fitf = new TF1("fit","[0] / ([0]*[1]*x + 1) ", 0, 20);
+//   fitf->SetParameter(0,300);
+//   fitf->SetParLimits(0,100,700);
+//   fitf->SetParameter(1,3e-2);
+//   fitf->SetLineColor(kBlack);
+//   TFitResultPtr ptr = grTau1All->Fit("fit","SR");
+//   cout<<endl<<" --------------------------------"<<endl;
+//   cout<<" Fitted kTau = "<<ptr->Parameter(1)
+//       <<" +- "<<ptr->ParError(1)
+//       // <<" x 10^-18"
+//       <<endl;
+//   cout<<" --------------------------------"<<endl;
+//   TLegend *legfit = new TLegend(0.62,0.82,0.95,0.95);
+//   legfit->AddEntry(grTau1All, "Averaged lifetime","lep");
+//   legfit->AddEntry(fitf, "Fit: #beta = (3.5#pm0.8)#times10^{-16} ","L");
+//   legfit->Draw("same");
+//
+//
+//
+//
+//   can->Update();
+//   can->Write();
+//   can->WaitPrimitive();
+//   legTau1->Clear();
+//   delete(can);
+//   //------------------------------------------------------------
+
+
+
+
+
+//------------ELECTRONS AND HOLES TOGETHER -----------------------------------------------------
+//
+//   //----------------- Prepare the tau data-------------------------------
+//   TGraphErrors *grTau[nSamples];
+//   double tempNTau[nSamples][nTemp], tauTau[nSamples][nTemp], tempNTaue[nSamples][nTemp], tauTaue[nSamples][nTemp];
+//
+//   for (int32_t sample=0; sample<nSamples; sample++) {
+//     int32_t nTempTau=0;
+//     for (int32_t temp=0; temp<nTemp; temp++) {
+//       double taumean=0;
+//       double taurms=0;
+//       if (tempN[temp]>70 && tempN[temp]<150) continue; //skip the region between 75 andd 150
+//       int32_t tmpVol=0;
+//       for (int32_t volt=0; volt<nVoltages; volt++) {
+//         if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+//         taumean += tauDecayTemp[sample][volt][temp];
+//         tmpVol++;
+//       }
+//       taumean/= tmpVol;
+//       for (int32_t volt=0; volt<nVoltages; volt++) {
+//         if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+//         taurms += (taumean-tauDecayTemp[sample][volt][temp])*(taumean-tauDecayTemp[sample][volt][temp]);
+//       }
+//       taurms = sqrt(taurms/tmpVol);
+//
+//       tempNTau[sample][nTempTau] = tempN[temp];
+//       tempNTaue[sample][nTempTau] = 0.01*tempN[temp];
+//       tauTau[sample][nTempTau] = taumean;
+//       tauTaue[sample][nTempTau] = taurms;
+//
+//       cout<<nTempTau<<"\t"
+//           <<tempN[temp]<<"\t"
+//           <<0.01*tempN[temp]<<"\t"
+//           <<taumean<<"\t"
+//           <<taurms
+//           <<endl;
+//       nTempTau++;
+//     }
+//     grTau[sample]=new TGraphErrors(nTempTau, tempNTau[sample], tauTau[sample], tempNTaue[sample], tauTaue[sample]);
+//   }
+//
+//
+//
+//   //----------------- Plot mean and rms of +-4/500 decay vs Temperature-------------------------------
+//   cout<<endl<<" Plotting the MEAN decay vs temperature... "<<endl;
+//   can = new TCanvas("canmean","canmean",800,600);
+//   dr->prettify(can);
+//   can->SetLogy();
+//   can->SetLogx();
+//   TLegend* legTau = new TLegend(0.22,0.57,0.52,0.8); //for All, Odd and Even
+//   TMultiGraph *mgTau = new TMultiGraph();
+//   bool first4 = true;
+//
+//   for (int32_t sample=0; sample<nSamples; sample++) {
+//     if (!grTau[sample]->GetN()) {
+//       continue; //if the graph is empty, get out
+//     }
+//     dr->prettify(grTau[sample]);
+//     grTau[sample]->SetMarkerStyle(24-sample);
+//     // grTau[sample]->SetLineColor(clrScheme[sample][volt]);
+//     mgTau->Add(grTau[sample]);
+//
+//     ssleg.str("");
+//     ssleg << sampleRealName[sample];// << "_" << voltage[volt];
+//     legTau->AddEntry(grTau[sample],ssleg.str().c_str(),"lep");
+//   }
+//   mgTau->Draw("AP");
+//   dr->prettify(mgTau);
+//   mgTau->GetYaxis()->SetRangeUser(4,500);
+//   mgTau->GetYaxis()->SetLimits(4,500);
+//   mgTau->GetXaxis()->SetRangeUser(3,400);
+//   mgTau->GetXaxis()->SetLimits(3,400);
+//   mgTau->GetXaxis()->SetTitle("Temperature [K]");
+//   mgTau->GetYaxis()->SetTitle("Carrier lifetime #tau [ns{}^{-1}]");
+//
+//   // legTau->SetHeader("For #pm 400 V, #pm 500 V");
+//   // legTau->SetTextSize(0.04);
+//   legTau->Draw("same");
+//   TLatex *texTau = new TLatex(3.3,4.3,"MEASUREMENT");
+//   texTau->SetTextFont(42);
+//   // texTau->Draw("same");
+//   can->Update();
+//   can->Write();
+//   can->WaitPrimitive();
+//   legTau->Clear();
+//   delete(can);
+//   //------------------------------------------------------------
+//
+//
+//
+//
+//
+//   //----------------- Prepare the tau data-------------------------------
+//   // from 4 to 60 and from 160 to 295 K
+//   TGraphErrors *grTau1[nSamples];
+//   TGraphErrors *grTau12[nSamples];
+//   TGraphErrors *grTau1All = new TGraphErrors();
+//   // double tempNTau1[nSamples][nTemp], tauTau1[nSamples][nTemp], tempNTaue1[nSamples][nTemp], tauTaue1[nSamples][nTemp];
+//
+//   for (int32_t sample=0; sample<nSamples; sample++) {
+//     int32_t nTempTau70=0;
+//     int32_t nTempTau150=0;
+//     double taumean70=0;
+//     double taurms70=0;
+//     double taumean150=0;
+//     double taurms150=0;
+//     double taumeanall=0;
+//     double taurmsall=0;
+//
+//     for (int32_t temp=0; temp<nTemp; temp++) {
+//       if (tempN[temp]<70) {
+//         for (int32_t volt=0; volt<nVoltages; volt++) {
+//           if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+//           taumean70 += tauDecayTemp[sample][volt][temp];
+//           nTempTau70++;
+//         }
+//       }
+//       else if (tempN[temp]>150) {
+//         for (int32_t volt=0; volt<nVoltages; volt++) {
+//           if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+//           taumean150 += tauDecayTemp[sample][volt][temp];
+//           nTempTau150++;
+//         }
+//       }
+//     }
+//     taumeanall = taumean70+taumean150;
+//     taumeanall = taumeanall/(nTempTau150+nTempTau70);
+//     taumean70 /= nTempTau70;
+//     taumean150 /= nTempTau150;
+//     for (int32_t temp=0; temp<nTemp; temp++) {
+//       if (tempN[temp]<70) {
+//         for (int32_t volt=0; volt<nVoltages; volt++) {
+//           if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+//           taurms70 += (taumean70-tauDecayTemp[sample][volt][temp])*(taumean70-tauDecayTemp[sample][volt][temp]);
+//         }
+//       }
+//       else if (tempN[temp]>150) {
+//         for (int32_t volt=0; volt<nVoltages; volt++) {
+//           if (tauDecayTemp[sample][volt][temp] < -1.0) continue;
+//           taurms150 += (taumean150-tauDecayTemp[sample][volt][temp])*(taumean150-tauDecayTemp[sample][volt][temp]);
+//         }
+//       }
+//     }
+//     taurmsall = taurms70 + taurms150;
+//
+//
+//     taurms70 = sqrt(taurms70/nTempTau70);
+//     taurms150 = sqrt(taurms150/nTempTau150);
+//     taurmsall = sqrt(taurmsall/(nTempTau150+nTempTau70));
+//     cout << taumean70 << " " << taurms70 << " " << taumean150 << " " << taurms150 << " "<< taumeanall << " "<< taurmsall <<endl;
+//
+//     grTau1[sample]=new TGraphErrors();
+//     grTau1[sample]->SetPoint(0, 0, taumean70);
+//     grTau1[sample]->SetPointError(0, 0, taurms70);
+//     grTau1[sample]->SetPoint(1, 1, taumean150);
+//     grTau1[sample]->SetPointError(1, 0, taurms150);
+//     grTau1All->SetPoint(sample, irrad[sample], taumeanall);
+//     grTau1All->SetPointError(sample, irrade[sample], taurmsall);
+//   }
+//
+//
+//
+//
+//   //----------------- Plot mean and rms of +-4/500 decay vs Temperature-------------------------------
+//   cout<<endl<<" Plotting the MEAN decay vs temperature... "<<endl;
+//   can = new TCanvas("canmean","canmean",800,600);
+//   dr->prettify(can);
+//   can->SetLogy();
+//   can->SetLogx();
+//   TLegend* legTau1 = new TLegend(0.7,0.65,0.95,0.95); //for All, Odd and Even
+//   TMultiGraph *mgTau1 = new TMultiGraph();
+//   cout<<"1"<<endl;
+//   for (int32_t sample=0; sample<nSamples; sample++) {
+//     if (!grTau1[sample]->GetN()) {
+//       continue; //if the graph is empty, get out
+//     }
+//     dr->prettify(grTau1[sample]);
+//     grTau1[sample]->SetMarkerStyle(24-sample);
+//     // grTau[sample]->SetLineColor(clrScheme[sample][volt]);
+//     mgTau1->Add(grTau1[sample]);
+//
+//     ssleg.str("");
+//     ssleg << sampleRealName[sample];// << "_" << voltage[volt];
+//     legTau1->AddEntry(grTau1[sample],ssleg.str().c_str(),"lep");
+//   }
+//   // cout<<"1"<<endl;
+//   mgTau1->Draw("AP");
+//   dr->prettify(mgTau1);
+//   mgTau1->GetYaxis()->SetRangeUser(4,500);
+//   mgTau1->GetXaxis()->SetLimits(4,500);
+//   mgTau1->GetXaxis()->SetRangeUser(3,450);
+//   mgTau1->GetXaxis()->SetLimits(3,450);
+//   mgTau1->GetXaxis()->SetTitle("Temperature [K]");
+//   mgTau1->GetYaxis()->SetTitle("#tau [s^{-1}]");
+// // cout<<"1"<<endl;
+//   // legTau1->SetHeader("For #pm 400 V, #pm 500 V");
+//   // legTau1->SetTextSize(0.04);
+//   legTau1->Draw("same");
+//   can->Update();
+//   can->Write();
+//   // can->WaitPrimitive();
+//   legTau1->Clear();
+//   delete(can);
+//
+//
+//
+//
+//   can = new TCanvas("canmean","canmean",800,600);
+//   dr->prettify(can);
+//   can->SetLogy();
+//   dr->prettify(grTau1All);
+//   grTau1All->SetMarkerStyle(20);
+//   grTau1All->Draw("AP");
+//   grTau1All->GetXaxis()->SetTitle("Fluence [10^{14} #pi cm^{-2}]");
+//   grTau1All->GetYaxis()->SetTitle("Carrier lifetime #tau [ns^{-1}]");
+//   grTau1All->GetXaxis()->SetRangeUser(-0.3,5);
+//   grTau1All->GetXaxis()->SetLimits(-0.3,5);
+//   grTau1All->GetYaxis()->SetRangeUser(4,505);
+//   grTau1All->GetYaxis()->SetLimits(4,505);
+//   TLatex *tex3 = new TLatex(-0.23,4.5,"MEASUREMENT");
+//   tex3->SetTextFont(42);
+//   // tex3->Draw("same");
+//
+//   TF1* fitf = new TF1("fit","[0] / ([0]*[1]*x + 1) ", 0, 20);
+//   fitf->SetParameter(0,300);
+//   fitf->SetParLimits(0,100,700);
+//   fitf->SetParameter(1,3e-2);
+//   fitf->SetLineColor(kBlack);
+//   TFitResultPtr ptr = grTau1All->Fit("fit","SR");
+//   cout<<endl<<" --------------------------------"<<endl;
+//   cout<<" Fitted kTau = "<<ptr->Parameter(1)
+//       <<" +- "<<ptr->ParError(1)
+//       // <<" x 10^-18"
+//       <<endl;
+//   cout<<" --------------------------------"<<endl;
+//   TLegend *legfit = new TLegend(0.62,0.82,0.95,0.95);
+//   legfit->AddEntry(grTau1All, "Averaged lifetime","lep");
+//   legfit->AddEntry(fitf, "Fit: #beta = (3.5#pm0.8)#times10^{-16} ","L");
+//   legfit->Draw("same");
+//
+//
+//
+//
+//   can->Update();
+//   can->Write();
+//   can->WaitPrimitive();
+//   legTau1->Clear();
+//   delete(can);
+//   //------------------------------------------------------------
+//
+//--------------ELECTRONS AND HOLES TOGETHER OVER -----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // //----------------- Prepare the tau data for decimated temp range--------------
+  // //remove all non-fitted inputs.
+  // TGraph* grTempDec[2][nSamples][nVoltages];
+  // int32_t nRemovedTempDec[2][nSamples][nVoltages];
+  // for (int32_t dec=0; dec<2; dec++) {
+  //   for (int32_t sample=0; sample<nSamples; sample++) {
+  //     for (int32_t volt=0; volt<nVoltages; volt++) {
+  //       nRemovedTempDec[dec][sample][volt] = 0;
+  //     }
+  //   }
+  // }
+  //
+  // for (int32_t dec=0; dec<2; dec++) {
+  //   for (int32_t sample=0; sample<nSamples; sample++) {
+  //     for (int32_t volt=0; volt<nVoltages; volt++) {
+  //       grTempDec[dec][sample][volt] = new TGraph(nTemp,tempN,tauDecayTempDec[dec][sample][volt]);
+  //       for (int32_t temp=0; temp<nTemp; temp++) {
+  //         // cout<<" sample "<<sample<<" temp "<<temp<<" voltage "<<volt
+  //         //     <<" tauDecayTempOdd "<<tauDecayTempDec[dec][sample][volt][temp]<< endl;
+  //         if (tauDecayTempDec[dec][sample][volt][temp] < -1.0){
+  //           // -10 in case it's not found. we delete the entry.
+  //           grTempDec[dec][sample][volt]->RemovePoint(temp-nRemovedTempDec[dec][sample][volt]);
+  //           nRemovedTempDec[dec][sample][volt]++;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  //
+  // //----------------- Plot decimated decay vs Voltage-------------------------------
+  // cout<<endl<<" Plotting the decimated decay vs temperature... "<<endl;
+  // can = new TCanvas("can","can",800,600);
+  // dr->prettify(can);
+  // can->SetLogy();
+  // // TLine* line1;
+  // // TLine* line2;
+  // bool first = true;
+  //
+  // for (int32_t dec=0; dec<2; dec++) {
+  //   for (int32_t sample=0; sample<nSamples; sample++) {
+  //     for (int32_t volt=0; volt<nVoltages; volt++) {
+  //
+  //       if (!grTempDec[dec][sample][volt]->GetN()) {
+  //         continue; //if the graph is empty, get out
+  //       }
+  //       dr->prettify(grTempDec[dec][sample][volt]);
+  //
+  //       if (first) { //first draw
+  //         first = false;
+  //         grTempDec[dec][sample][volt]->Draw ("AL.");
+  //         grTempDec[dec][sample][volt]->GetYaxis()->SetRangeUser(1,450); //tau
+  //         grTempDec[dec][sample][volt]->GetXaxis()->SetLimits(1,450); //temp
+  //         grTempDec[dec][sample][volt]->GetXaxis()->SetTitle("Temperature [K]");
+  //         grTempDec[dec][sample][volt]->GetYaxis()->SetTitle("#tau [s{}^{-1}]");
+  //         // can->Update();
+  //         // can->WaitPrimitive();
+  //       }
+  //       else {
+  //         grTempDec[dec][sample][volt]->Draw ("L SAME");
+  //       }
+  //       grTempDec[dec][sample][volt]->SetLineColor(clrScheme[sample][volt]);
+  //       ssleg.str("");
+  //       ssleg << sampleName[sample] << "_" << voltage[volt];
+  //       legTemp->AddEntry(grTempDec[dec][sample][volt],ssleg.str().c_str(),"l");
+  //       // can->Update();
+  //       // can->WaitPrimitive();
+  //     }
+  //   }
+  //   legTemp->Draw("same");
+  //   can->Update();
+  //   can->Write();
+  //   // can->WaitPrimitive();
+  //   can->Clear();
+  //   legTemp->Clear();
+  //   first = true;
+  // }
+  //
+  // delete(can);
+  // //------------------------------------------------------------
+  //
+  //
+  //
+  //
+  // //----------------- Prepare the tau data-------------------------------
+  // //remove all non-fitted inputs.
+  // TH2D* mapTau[nSamples];
+  // int32_t nRemovedMap[nSamples];
+  // stringstream ssmap;
+  // for (int32_t sample=0; sample<nSamples; sample++) {
+  //     nRemovedMap[sample] = 0;
+  // }
+  // for (int32_t sample=0; sample<nSamples; sample++) {
+  //   ssmap.str("");
+  //   ssmap << "Tau_map_"<<sampleName[sample];
+  //   mapTau[sample] = new TH2D(ssmap.str().c_str(),ssmap.str().c_str(),
+  //             nTemp, 0, nTemp, nVoltages, 0, nVoltages);
+  //   // cout<<"sample "<< sample<<endl;
+  //   for (int32_t volt=0; volt<nVoltages; volt++) {
+  //     // cout<<"    volt "<< volt<<endl;
+  //     for (int32_t temp=0; temp<nTemp; temp++) {
+  //       // cout<<"       temp "<< temp;
+  //       if (tauDecayTemp[sample][volt][temp] >= 0.0){
+  //         mapTau[sample]->Fill(temp,volt,tauDecayTemp[sample][volt][temp]);
+  //         // cout<<" filling "<< tauDecayTemp[sample][volt][temp];
+  //       }
+  //       // cout<<endl;
+  //     }
+  //   }
+  // }
+  //
+  // //----------------- Plot decimated decay vs Voltage-------------------------------
+  // cout<<endl<<" Plotting the map of decimated decay vs temperature... "<<endl;
+  // can = new TCanvas("can","can",nSamples*400,500);
+  // can->Divide(3,3);
+  //
+  // for (int32_t sample=0; sample<nSamples; sample++) {
+  //   // dr->prettify(can->cd(sample));
+  //   can->cd(sample+1);
+  //   gPad->SetLogz();
+  //   mapTau[sample]->Draw("colz");
+  //   mapTau[sample]->GetZaxis()->SetRangeUser(1,450);
+  // }
+  //
+  // TH2D* mapTauDiff[nSamples];
+  // if (nSamples == 5) {
+  //     mapTauDiff[0] = new TH2D(*mapTau[3]); //copy the S52
+  //     mapTauDiff[1] = new TH2D(*mapTau[4]); //copy the S79
+  //     mapTauDiff[0]->Divide(mapTau[0]);
+  //     mapTauDiff[1]->Divide(mapTau[1]);
+  //     can->cd(7);
+  //     gPad->SetLogz();
+  //     mapTauDiff[0]->Draw("colz");
+  //     mapTauDiff[0]->GetZaxis()->SetRangeUser(0,1);
+  //     can->cd(8);
+  //     gPad->SetLogz();
+  //     mapTauDiff[1]->Draw("colz");
+  //     mapTauDiff[1]->GetZaxis()->SetRangeUser(0,1);
+  // }
+  //
+  // can->Update();
+  // can->Write();
+  // // can->WaitPrimitive();
+  // can->Clear();
+  // delete(can);
+  // //------------------------------------------------------------
 
 
   //---------------- close the file ----------------------------
