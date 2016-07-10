@@ -38,7 +38,8 @@ The measurements using diamond that are explained in these chapters have been ca
 
 \subsection{Preamplifiers}
 \label{sec:preamps}
-Two preamplifiers are used for the measurements, one sensitive to charge and the other to current. \emph{CIVIDEC Cx} (figure~\ref{fig:ampcx}) is a charge sensitive amplifier. Its high SNR is achieved due to a low equivalent noise charge of 300~e$^-$ with an additional 30~e$^-$ per each pF of the sensor capacitance. A reported gain of $\sim$12~mV/fC makes it a good choice for spectroscopic measurements with diamond sensors. \emph{CIVIDEC C2} (figure~\ref{fig:ampc2}) is a fast current preamplifier with a 2~GHz bandwidth limit. It is used for TCT measurements because of its fast response and a good SNR. Both are embedded in an RF-tight aluminium box to reduce the noise pickup. Both have an AC coupled input and a  50~$\Upomega$ output.
+Two preamplifiers are used for the measurements, one sensitive to charge and the other to current. \emph{CIVIDEC Cx} (figure~\ref{fig:ampcx}) is a charge sensitive amplifier. Its high SNR is achieved due to a low equivalent noise charge of 300~e$^-$ with an additional 30~e$^-$ per each pF of the sensor capacitance. A reported gain of $\sim$12~mV/fC makes it a good choice for spectroscopic measurements with diamond sensors. \emph{CIVIDEC C2} (figure~\ref{fig:ampc2})~\cite{1369574} is a fast current preamplifier with a 2~GHz bandwidth limit. %It is used for TCT measurements because of its fast response and a good SNR. 
+Both are embedded in an RF-tight aluminium box to reduce the noise pickup. Both have an AC coupled input and a  50~$\Upomega$ output.
 
 A 2~GHz bandwidth limit defines the minimum rising time equal to $t_{\mathrm{r}}\simeq\frac{0.34}{BW}=\frac{0.34}{2\times10^9}=170$~ps, therefore the system with a CIVIDEC C2 amplifier is capable of measuring pulses with a minimum FWHM~$\simeq170~ps$. The initial peak in the $\upalpha$ pulse has a lower FWHM; for example, if a charge carrier travelling through the bulk takes $t_{\mathrm{1}}\sim~$6~ns to reach the electrode on the opposite side (d$_\mathrm{1}\sim500~\upmu$m), the carrier with the opposite charge and a shorter path to the closer electrode -- max. d$_2\sim10~\upmu$m -- only takes $t_{\mathrm{2}}\sim \frac{d_\mathrm{2}}{d_\mathrm{1}}t_{\mathrm{1}}=120$~ps. Such a short drift time induces a current pulse that is too narrow for the system to detect.
 
@@ -120,7 +121,7 @@ The diamond samples have quoted impurity densities of $\leq2\times10^{14}$~cm$^{
 \label{sec:readoutdev}
 Electrical signals in diamond detectors are in the GHz frequency range. To preserve the information in the signals, the readout device with a high bandwidth limit must be used. For instance, a 20~MHz limit is enough for the spectroscopic measurements with the Cx charge amplifier, but is insufficient for the current measurements with the C2 amplifier. 
 
-Two devices are used take data shown in this chapter. The first choice is a 2~GHz LeCroy WaveRunner 204MXi-A. This specific model has a sufficiently high bandwidth limit for the fast current preamplifier signals. It offers a reliable solution for analogue signal readout of limited amounts of data. However, its slow acquisition speed is a bottleneck in a test beam experiment. Its initial 100~Hz readout rate decreases to a mere 20~Hz within 20 minutes, because every single trigger is saved as a separate file and the Windows operating system is not capable of handling 10000+ files in a single directory easily. This is why it has been exchanged with a DRS4~\cite{DRS4:00000}, an analogue readout device developed by PSI, Switzerland. This compact device is capable of recording up to four waveforms at a time at a steady rate of up to 500~Hz. Its 700~MHz bandwidth limitation is sufficient for the signal from the charge amplifier.
+Two devices are used take data shown in this chapter. The first choice is a 2~GHz LeCroy WaveRunner 204MXi-A. This specific model has a sufficiently high bandwidth limit for the fast current preamplifier signals. It offers a reliable solution for analogue signal readout of limited amounts of data. However, its slow acquisition speed is a bottleneck in a test beam experiment. Its initial 100~Hz readout rate decreases to a mere 20~Hz within 20 minutes, because every single trigger is saved as a separate file and the Windows operating system is not capable of handling $10'000$+ files in a single directory easily. This is why it has been exchanged with a DRS4~\cite{DRS4:00000}, an analogue readout device developed by PSI, Switzerland. This compact device is capable of recording up to four waveforms at a time at a steady rate of up to 500~Hz. Its 700~MHz bandwidth limitation is sufficient for the signal from the charge amplifier.
 
 
 
@@ -249,8 +250,8 @@ The integrated amplitude spectrum is a Landau distribution. Its most probable va
 \label{eq:ccdcalc}
 Q_\mathrm{i}~[\mathrm{e}^-] 
 = \frac{1} {1.6\times 10^{-19}} Q_\mathrm{i}~[\mathrm{C}] 
-= 6241 \cdot Q_\mathrm{i}~[\mathrm{fC}] 
-= 6241 \cdot \frac{MPV~[\mathrm{mV}]}{A~[\frac{\mathrm{mV}}{\mathrm{fC}}]}
+= 6'241 \cdot Q_\mathrm{i}~[\mathrm{fC}] 
+= 6'241 \cdot \frac{MPV~[\mathrm{mV}]}{A~[\frac{\mathrm{mV}}{\mathrm{fC}}]}
 ,
 \end{equation} 
 where A$=9.3$~mV/fC is the preamplifier gain factor and 1~e$^-$~=~1.6$\times10^{-19}$~C. 
@@ -265,8 +266,10 @@ The CCD for the three measured samples at a bias voltages ranging from 0.2--1.6~
 \end{center}
 \end{figure}
 
-The data points with the maximum CCD obtained in the test beam measurements are plotted as a function of fluence in figure~\ref{fig:radfactor}. Equation~\ref{eq:radfactor1} is fitted to the data points and a damage factor $k_{\mathrm{\lambda}}=(4.4\pm1.2)\times10^{-18}~\upmu$m$^{-1}$~cm$^{-2}$ is obtained. The value is for a factor of two higher than the damage factor obtained by RD42. %The irradiated samples do not yet have a full charge collection at 1.0~V~$\upmu$m$^{-1}$. 
-This could be due to an insufficient priming time ahead of the measurement. Figure~\ref{fig:ccincrease} shows the effect of priming. The samples were only exposed to the radioactive source for a short time and might not have achieved the maximum charge collection. In addition, the diamond samples have not been polished and re-metallised after irradiation, as is the case for the RD42. A study of effects of re-metallisation on the charge collection is done in~\cite{pomorski2008electronic} and supports this theory. Finally, with only two samples measured, the statistical uncertainty is high. Nevertheless, it can be concluded that the 300~MeV pions damage the diamond bulk significantly more than the 24~GeV protons, as shown in chapter~\ref{ch:diam}.
+The data points with the maximum CCD obtained in the test beam measurements are plotted as a function of fluence in figure~\ref{fig:radfactor}. Equation~\ref{eq:radfactor1} is fitted to the data points and a damage factor $k_{\mathrm{\lambda}}=(4.4\pm1.2)\times10^{-18}~\upmu$m$^{-1}$~cm$^{2}$ is obtained. The value is for a factor of two higher than the damage factor obtained by RD42. %The irradiated samples do not yet have a full charge collection at 1.0~V~$\upmu$m$^{-1}$. 
+This could be due to an insufficient priming time ahead of the measurement. Figure~\ref{fig:ccincrease} shows the effect of priming. The samples were only exposed to the radioactive source for a short time and might not have achieved the maximum charge collection. In addition, the diamond samples have not been polished and re-metallised after irradiation, as is the case for the RD42. A study of effects of re-metallisation on the charge collection has been done in~\cite{pomorski2008electronic} and supports this theory. Furthermore, with only two samples measured, the statistical uncertainty is high. For a better fit another measurement point at a higher fluence would need to be added. Nevertheless, it can be concluded that the 300~MeV pions damage the diamond bulk significantly more than the 24~GeV protons, as shown in chapter~\ref{ch:diam}.
+
+Another diamond irradiation study has been carried out using the Beam Conditions Monitor (BCM) at the CMS experiment~\cite{Guthoff:1977429}. The BCM's diamond sensors have been exposed to radiation from beam collisions with a wide spectrum of energies and particle types. The damage factors measured are an average of $3.5\times10^{-17}~\upmu$m$^{-1}$~cm$^{2}$ and $9.2\times10^{-16}~\upmu$m$^{-1}$~cm$^{2}$ for pCVD and sCVD diamonds, which is for a factor of 58 and 1500 higher than the RD42. These low charge collection efficiencies, however, are purported to be convoluted with other effects, such as polarisation, which will be discussed later in the chapter.
 
 
 \begin{figure}[!t]
@@ -422,8 +425,8 @@ This hypothesis explains the gradual loss of collected charge in figure~\ref{fig
 \item No source, with bias voltage, 
 \item No source, without bias voltage, 
 \item Priming with $\upgamma$ at a rate of 400~s$^{-1}$cm$^{-1}$ without bias voltage, 
-\item Priming with $\upbeta$ at a rate of 1000~s$^{-1}$cm$^{-1}$ with bias voltage and 
-\item Priming with $\upbeta$ at a rate of 1000~s$^{-1}$cm$^{-1}$ without bias voltage. 
+\item Priming with $\upbeta$ at a rate of $1'000$~s$^{-1}$cm$^{-1}$ with bias voltage and 
+\item Priming with $\upbeta$ at a rate of $1'000$~s$^{-1}$cm$^{-1}$ without bias voltage. 
 \end{enumerate}
 Before starting each method, the diamond sample S79 is first primed using a $^{90}$Sr source for approximately one hour. Then the bias voltage is switched on and an $^{241}$Am source is put on top. The pulses produced by the incident $\upalpha$ particles have a proper rectangular pulse at the beginning, but then start changing -- first gradually and later increasingly more in an erratic way, as described in the text above. After approximately 30~minutes, one of the methods is tested. When a ``healing'' procedure is started, a set of 60~pulses is taken at irregular points of time to observe the change in the pulse shape and to assess the quality of the ``healing'' procedure. Then the bias voltage is switched off and the sample is primed again to reset its state before starting with the next run. 
 
@@ -577,7 +580,7 @@ In the framework of this thesis the focus is on the effect in the irradiated dev
 %The values for them are lower than the those of non-irradiated samples, which is expected. %TO SUMMARY
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.70\textwidth]{03_measurement_results/scripts/plots/charge500V} 
+\includegraphics[width=0.70\textwidth]{../scripts/03_experimental_results/plots/charge500V} 
 \caption{Collected charge for electrons as a function of temperature.}
 \label{fig:chgtempelecs}
 \end{figure}
@@ -589,7 +592,7 @@ An interesting detail in figure~\ref{fig:chgtempelecs} is that the ratio between
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.70\textwidth]{03_measurement_results/scripts/plots/charge-500V}
+\includegraphics[width=0.70\textwidth]{../scripts/03_experimental_results/plots/charge-500V}
 \caption{Collected charge for holes as a function of temperature.}
  \label{fig:chgtempholes}
 \end{figure}
@@ -637,7 +640,7 @@ where $\beta$ is the proportionality factor. A low $\beta$ value would mean that
 % ---------------------------------------------------------------------------------------------------------------
 This chapter gives an overview of the capabilities and limitations of diamond as a particle detector. Two effects on diamond are studied -- radiation and temperature. 
 
-Two sCVD diamond detectors were irradiated with 300~MeV pions. They were tested alongside a non-irradiated sample to observe the changes in the ability to detect $\upalpha$, $\upbeta$ and $\upgamma$ radiation. Their charge collection efficiency was measured in a test beam facility. The results were compared to the results from the RD42 collaboration and a DPA model. A radiation damage factor $k_{\mathrm{\lambda}}=(4.4\pm1.2)\times10^{-18}~\upmu$m$^{-1}$~cm$^{-2}$ was obtained for $\uppi_{\mathrm{300~MeV}}$ particles. The data point was not in agreement with the data provided by RD42 nor with the model. However, the irradiation process and the low number of tested samples hold a relatively high statistical uncertainty. In addition, there was no diamond surface treatment done in between the measurements, as is the case in the study conducted by RD42. The results obtained in the course of these measurements are going to be fed into the existing pool of data in the RD42 collaboration.
+Two sCVD diamond detectors were irradiated with 300~MeV pions. They were tested alongside a non-irradiated sample to observe the changes in the ability to detect $\upalpha$, $\upbeta$ and $\upgamma$ radiation. Their charge collection efficiency was measured in a test beam facility. The results were compared to the results from the RD42 collaboration and a DPA model. A radiation damage factor $k_{\mathrm{\lambda}}=(4.4\pm1.2)\times10^{-18}~\upmu$m$^{-1}$~cm$^{2}$ was obtained for $\uppi_{\mathrm{300~MeV}}$ particles. The data point was not in agreement with the data provided by RD42 nor with the model. However, the irradiation process and the low number of tested samples hold a relatively high statistical uncertainty. In addition, there was no diamond surface treatment done in between the measurements, as is the case in the study conducted by RD42. The results obtained in the course of these measurements are going to be fed into the existing pool of data in the RD42 collaboration.
 
 The next step was to test the long-term capabilities for $\upalpha$ detection. The shape of the ionisation profile was investigated to determine the behaviour of the charge carriers in the irradiated diamond. An exponential decay was observed in the pulses of irradiated samples, proving that there are charge traps in the bulk that were created during irradiation. Then a long-term stability test was carried out. The results show that the irradiated diamond detectors do not provide a stable and reliable long-term measurement of $\upalpha$ particles. This might be due to a space-charge build-up in the bulk, which changes the electric field, affecting the charge carriers. A procedure to improve the pulse shape using $\upbeta$ and $\upgamma$ radiation was proposed.
 

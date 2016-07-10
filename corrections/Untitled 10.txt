@@ -1,0 +1,21 @@
+PSA_USB_RAW_CONSTANT	1
+Wren uptime counter to U16
+
+why is the Reg IO inaccessible?
+Possibly because the gpif is still on.
+
+Failure odes
+
+- gpif gets stuck
+SOLUTION: timeout the transfer to 100 miliseconds - if not done send an idle patern instead and raise a flag.
+
+
+- deadbeef on the output (not seen anymore)
+
+
+
+
+
+
+
+

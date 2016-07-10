@@ -190,6 +190,12 @@ Claude~A. Klein.
 \newblock \emph{Radiation-Induced Energy Levels in Silicon}.
 \newblock {\em Journal of Applied Physics}, 30(8):1222--1231, 1959.
 
+\bibitem{Guthoff:1977429}
+Moritz Guthoff and Willem De~Boer.
+\newblock {\em {Radiation Damage to the diamond-based Beam Condition Monitor of
+  the CMS Detector at the LHC}}.
+\newblock PhD thesis, CERN, 2014.
+
 \bibitem{pumping:00000}
 Marco Marinelli, E.~Milani, M.~E. Morgada, G.~Pucella, G.~Rodriguez,
   A.~Tucciarone, G.~Verona-Rinati, M.~Angelone, and M.~Pillon.
@@ -236,6 +242,12 @@ J.~L. Yarnell, J.~L. Warren, and R.~G. Wenzel.
 W.~Y. {Liang}.
 \newblock \emph{Excitons}.
 \newblock {\em Physics Education}, 5:226--228, July 1970.
+
+\bibitem{1369574}
+H.~Frais-Kolbl, E.~Griesmayer, H.~Kagan, and H.~Pernegger.
+\newblock A fast low-noise charged-particle cvd diamond detector.
+\newblock {\em IEEE Transactions on Nuclear Science}, 51(6):3833--3837, Dec
+  2004.
 
 \bibitem{PhysRev.32.97}
 J.~B. Johnson.
@@ -297,10 +309,6 @@ Michal Pomorski.
 \newblock {\em Wolfgang von Goethe University, Frankfurt am Main, Germany},
   2008.
 
-\bibitem{BETHE:00000}
-H.~Bethe and J.~Ashkin.
-\newblock {\em {Experimental Nuclear Physics, ed. E. Segre}}, page 253, 1953.
-
 \bibitem{sarin2014comprehensive}
 V.~Sarin.
 \newblock {\em \emph{Comprehensive Hard Materials}}.
@@ -314,6 +322,27 @@ E.~Griesmayer and B.~Dehning.
 \newblock Proceedings of the 2nd International Conference on Technology and
   Instrumentation in Particle Physics (TIPP 2011).
 
+\bibitem{Eremin2002537}
+V~Eremin, E~Verbitskaya, and Z~Li.
+\newblock Effect of radiation induced deep level traps on si detector
+  performance.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 476(3):537
+  -- 549, 2002.
+\newblock Proc. of the 3rd Int. Conf. on Radiation Effects on Semiconductor
+  Materials, Detectors and Devices.
+
+\bibitem{4327634}
+S.~F. Kozlov, R.~Stuck, M.~Hage-Ali, and P.~Siffert.
+\newblock Preparation and characteristics of natural diamond nuclear radiation
+  detectors.
+\newblock {\em IEEE Transactions on Nuclear Science}, 22(1):160--170, Feb 1975.
+
+\bibitem{s150613424}
+Eugenijus Gaubas, Tomas Ceponis, Dovile Meskauskaite, and Nikolai Kazuchits.
+\newblock Profiling of current transients in capacitor type diamond sensors.
+\newblock {\em Sensors}, 15(6):13424, 2015.
+
 \bibitem{Kramberger:2013wva}
 Gregor Kramberger, V.~Cindro, A.~Gorisek, I.~Mandic, M.~Mikuz, and
   M.~Zavrtanik.
@@ -326,8 +355,8 @@ Alison~G. Bates and Michael Moll.
 \newblock A comparison between irradiated magnetic czochralski and float zone
   silicon detectors using the transient current technique.
 \newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment},
-  555(1–2):113 -- 124, 2005.
+  Accelerators, Spectrometers, Detectors and Associated Equipment}, 555(12):113
+  -- 124, 2005.
 
 \bibitem{Cerv:1630832}
 Matev\v{z} \v{C}erv.
@@ -391,6 +420,23 @@ Garrin McGoldrick, Matev\v{z} \v{C}erv, and Andrej Gori\v{s}ek.
 \emph{EUDET ACONITE telescope}.
 \newblock https://telescopes.desy.de.
 
+\bibitem{GRIES:00005}
+E.~Griesmayer et~al.
+\newblock \emph{Diamond detectors for LHC}.
+\newblock {\em Proceedings for IBIC2012. Tsukuba, Japan}, 2012.
+
+\bibitem{Capeans:1291633}
+M~Capeans, G~Darbo, K~Einsweiller, M~Elsing, T~Flick, M~Garcia-Sciveres,
+  C~Gemme, H~Pernegger, O~Rohne, and R~Vuillermet.
+\newblock {ATLAS Insertable B-Layer Technical Design Report}.
+\newblock Technical Report CERN-LHCC-2010-013. ATLAS-TDR-19, CERN, Geneva, Sep
+  2010.
+
+\bibitem{Dopke:1560823}
+J~Dopke.
+\newblock {Overview of the ATLAS Insertable B-Layer (IBL) Project}.
+\newblock Jul 2013.
+
 \bibitem{PAVEL:00000}
 P.~Kavrigin, P.~Finocchiaro, E.~Griesmayer, E.~Jericha, A.~Pappalardo, and
   C.~Weiss.
@@ -410,7 +456,7 @@ E.~Griesmayer, R.~Bergmann, H.~B{\"o}ck, M.~Cagnazzo, P.~Kavrigin,
 C.~Weiss, H.~Frais-K{\"o}lbl, E.~Griesmayer, and P.~Kavrigin.
 \newblock \emph{Ionization signals of diamond detectors in fast neutron
   fields}.
-\newblock {\em publication in preparation}, 2016.
+\newblock 2016.
 
 \bibitem{CHRISSI:00005}
 C.~Weiss.
@@ -427,7 +473,7 @@ P.~Kavrigin, E.~Griesmayer, F.~Belloni, A.J.M. Plompen, P.~Schillebeeckx, and
   C.~Weiss.
 \newblock \emph{$\mathbf{^{13}}$C(n,$\mathbf{\alpha_{0}}$)$\mathbf{^{10}}$Be
   cross section measurement with sCVD diamond detector}.
-\newblock {\em submitted to EPJA}, 2016.
+\newblock {\em EPJA}, 2016.
 
 \bibitem{EPFL:00000}
 \emph{CROCUS neutron reactor}.

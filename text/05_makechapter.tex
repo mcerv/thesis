@@ -1,11 +1,15 @@
 % ---------------------------- comment out when compiling the full document -------------------
-\documentclass[twoside,11pt]{packages/mytustyle}  % default square logo 
+\documentclass[twoside,openright,11pt]{packages/mytustyle}  % default square logo 
 \usepackage{amssymb}
 \usepackage{caption}
 \usepackage{upgreek}
 \usepackage{subfig}
 \usepackage{textcomp}
 \usepackage{enumitem}
+\usepackage{emptypage}
+\usepackage{cases}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+
 \setlist[description]{leftmargin=0cm,labelindent=0cm}
 
 \newcommand\Chapter[2]{\chapter
@@ -28,13 +32,13 @@
 %\renewcommand{\footrulewidth}{0.7pt}% Default \footrulewidth is 0pt
 %\rfoot{\thepage}
 \usepackage{lineno}
-  \linenumbers
+%  \linenumbers
 
 \begin{document}
-\baselineskip=15pt
+\baselineskip=16pt
 % ---------------------------------------------------------------------------------------------------------------
 
-%\tableofcontents
+\tableofcontents
 
 % ---------------------------------------------------------------------------------------------------------------
 \include{05_current_monitoring/chapter}

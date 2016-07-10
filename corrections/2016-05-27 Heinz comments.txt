@@ -30,8 +30,8 @@ source data sheet
 60 k gamma range higher than alpha
 ratio between gamma and alpha should be
 
-- alpha energy dist plot explain the gamma peak.
-- decay properties of americium source in the introduction.
+- alpha energy dist plot explain the gamma peak.		OK
+- decay properties of americium source in the introduction.	
 - energy dist of the gammas - what do you expect from the source? 
  
 -landau dist should have a long tail, but does not. Saturation? Where are they? Simulation

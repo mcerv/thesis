@@ -1,0 +1,70 @@
+Unfortunately?
+Relative expressions? Big, small… 
+
+references to pictures
+
+redo the figure 4.13					OK
+two figures - collision and beam background.
+
+Test
+Measured in LHC - refer to paper with bunch structure
+bump bond 
+diamond with pixel metallisation
+
+Table:
+position resolution			
+time resolution
+double pulse resolution
+
+beam abort gap				
+dynamic range of fei4
+gain
+
+
+Intro: principle of charge monitor\ing
+
+schematics
+diamond det
+lv readout, readout on lv side.
+capacitively connect the amp
+
+
+
+
+
+
+Current monitoring
+comption scattering
+
+form factor	- how do we define it? explain.
+
+spectrum of 4alpha source
+quadruple alpha source containing a, b, c, d		OK
+
+do NOT USE CHIPPED-OFF SOURCE.				OK
+electrons holes colour					OK
+
+explain the pulses					OK
+
+classes of current signals readout			OK
+a el drift
+b h drift
+c elecs
+d gamma = d
+e neutron
+f protons
+
+elastic - pum paf
+inelastic - scattering
+
+neutron interaction always accompanied by a gamma
+introduction: expect the graphs 		OK
+use scvd	
+
+proton recoil vs FWHM vs area			OK
+
+1 pg explanation for each figure. 		OK
+
+area —> fC
+
+bibilography fix				OK

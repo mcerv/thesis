@@ -99,8 +99,6 @@
 					<string>0</string>
 					<key>Legacy</key>
 					<true/>
-					<key>Pattern</key>
-					<integer>1</integer>
 					<key>TailArrow</key>
 					<string>0</string>
 				</dict>
@@ -750,13 +748,13 @@
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
-					<string>0</string>
+					<string>FilledArrow</string>
 					<key>Legacy</key>
 					<true/>
-					<key>Pattern</key>
-					<integer>1</integer>
 					<key>TailArrow</key>
-					<string>0</string>
+					<string>FilledArrow</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -768,20 +766,20 @@
 			<key>Points</key>
 			<array>
 				<string>{222.47356463806102, 138.99513655883217}</string>
-				<string>{222.47356463806102, 232.57317003662408}</string>
+				<string>{222.47356463806102, 231.36095914503122}</string>
 			</array>
 			<key>Style</key>
 			<dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
-					<string>0</string>
+					<string>FilledArrow</string>
 					<key>Legacy</key>
 					<true/>
-					<key>Pattern</key>
-					<integer>1</integer>
 					<key>TailArrow</key>
-					<string>0</string>
+					<string>FilledArrow</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -800,13 +798,13 @@
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
-					<string>0</string>
+					<string>FilledArrow</string>
 					<key>Legacy</key>
 					<true/>
-					<key>Pattern</key>
-					<integer>1</integer>
 					<key>TailArrow</key>
-					<string>0</string>
+					<string>FilledArrow</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 		</dict>
@@ -818,20 +816,20 @@
 			<key>Points</key>
 			<array>
 				<string>{76.764858599071388, 138.19120361129907}</string>
-				<string>{76.581426686477599, 232.36095304538784}</string>
+				<string>{76.764858599071388, 231.36095304538784}</string>
 			</array>
 			<key>Style</key>
 			<dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
-					<string>0</string>
+					<string>FilledArrow</string>
 					<key>Legacy</key>
 					<true/>
-					<key>Pattern</key>
-					<integer>1</integer>
 					<key>TailArrow</key>
-					<string>0</string>
+					<string>FilledArrow</string>
+					<key>Width</key>
+					<real>0.5</real>
 				</dict>
 			</dict>
 			<key>Tail</key>
@@ -1854,7 +1852,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2016-03-19 14:00:49 +0000</string>
+	<string>2016-06-11 19:25:15 +0000</string>
 	<key>Modifier</key>
 	<string>Matevz Cerv</string>
 	<key>NotesVisible</key>
@@ -1949,15 +1947,15 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{6.7934781376321753, 70.923911756879917}, {478.26086088930515, 384.78260171548641}}</string>
+		<string>{{-48, 0}, {656.71640155203374, 539.55222536604595}}</string>
 		<key>Zoom</key>
-		<real>1.8400000333786011</real>
+		<real>1.3400000333786011</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>Canvas 1</string>
-				<real>1.8400000333786011</real>
-				<real>2.190000057220459</real>
+				<real>1.3400000333786011</real>
+				<real>1.5700000524520874</real>
 			</array>
 		</array>
 	</dict>

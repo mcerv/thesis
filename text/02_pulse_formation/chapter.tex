@@ -169,12 +169,6 @@ Due to the small band gap in semiconductors a significant amount of electrons al
 
 %-----------------------------------------------------------------------------------------------------------------
 \subsection{Space charge}
-The Poisson equation shows that 
-\begin{equation}
-\label{eq:poisson}
-\frac{d^2\Phi(x)}{\mathrm{d}x^2} = \frac{dE(x)}{\mathrm{d}x} = \frac{\rho(x)}{\epsilon}
-\end{equation}
-where $\rho(x)$ is the space charge distribution, $E$ is the electrical field and $\Phi$ is the voltage potential. In an ideal diamond, the externally applied high voltage potential on the two electrodes decreases linearly through the sensor. The electrical field is therefore constant throughout the sensor and the space charge distribution across it equals 0. However, space charge may be introduced in the material either by means of accumulating of charge carriers in the lattice (i.e. charge trapping) or already during sensor production. The space charge can be either permanent or changing -- sometimes it is possible to reduce it, as is shown in chapter~\ref{ch:meas}. All in all, it is very important to reduce it because it affects the shape of the electrical signal. Since the drift velocity of the charge carriers is proportional to the electrical field, the charges change their velocity while drifting through the space charge region. Figure~\ref{fig:spcchg} compares the voltage potential, the electrical field and the space charge for an ideal sensor as well as for that with a uniformly distributed positive space charge.
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.6\linewidth]{02_pulse_formation/pics/plots/spcchg}
@@ -182,6 +176,13 @@ where $\rho(x)$ is the space charge distribution, $E$ is the electrical field an
 \label{fig:spcchg}
 \end{center}
 \end{figure}
+The Poisson equation shows that 
+\begin{equation}
+\label{eq:poisson}
+\frac{d^2\Phi(x)}{\mathrm{d}x^2} = \frac{dE(x)}{\mathrm{d}x} = \frac{\rho(x)}{\epsilon}
+\end{equation}
+where $\rho(x)$ is the space charge distribution, $E$ is the electrical field and $\Phi$ is the voltage potential. In an ideal diamond, the externally applied high voltage potential on the two electrodes decreases linearly through the sensor. The electrical field is therefore constant throughout the sensor and the space charge distribution across it equals 0. However, space charge may be introduced in the material either by means of accumulating of charge carriers in the lattice (i.e. charge trapping) or already during sensor production. The space charge can be either permanent or changing -- sometimes it is possible to reduce it, as is shown in chapter~\ref{ch:meas}. All in all, it is very important to reduce it because it affects the shape of the electrical signal. Since the drift velocity of the charge carriers is proportional to the electrical field, the charges change their velocity while drifting through the space charge region. Figure~\ref{fig:spcchg} compares the voltage potential, the electrical field and the space charge for an ideal sensor as well as for that with a uniformly distributed positive space charge.
+
 
 
 
@@ -288,7 +289,7 @@ The resulting function for a muon is shown in figure~\ref{fig:bb2}. At a momentu
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=0.7\linewidth]{02_pulse_formation/pics/bb2}
-\caption{Stopping power for muons according to the Bethe-Bloch formula~\cite{BETHE:00001}.}
+\caption{Stopping power according to the Bethe-Bloch formula~\cite{BETHE:00001}.}
 \label{fig:bb2}
 \end{center}
 \end{figure}
@@ -374,6 +375,22 @@ I(t)= I_0 + I(0) \cdot e^{-\frac{t-t_0}{\tau} },
 \end{equation}
 where $I(0)$ is the initial induced current, $I_0$ is the end current, $t$ is time, $t_0$ is temporal displacement of the pulse and $\tau$ is the decay time constant. This value describes how long it takes before the amplitude of the pulse decreases to 63~\% of its initial height.
 
+\subsubsection{Polarisation}
+Space charge may be introduced in the material by means of accumulating of charge carriers in local defects (i.e. charge trapping) or in the interface between the diamond and the metal electrode. The accumulated space charge deforms the electric field. This process is referred to as \emph{polarisation}. 
+
+An example of creation of polarisation is with a MIP particle shown in figure~\ref{fig:polar1}. The created electrons and holes drift towards their respective electrodes. The amount of trapped charge is proportional to the density distribution and so the holes tend to get trapped close to the negative electrode and vice versa. The electric field formed by the trapped charge counteracts the applied electric field, leading to a reduced field in the centre of the diamond bulk. Since the electrodes are connected to a current source they charge up more due to electrostatic induction. The externally applied HV is conserved and so is the integral over the electric field. The reduction of the electric field in the centre of the bulk is compensated by an increase in electric field close to the electrodes. 
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{02_pulse_formation/pics/plots/polar1}
+\caption{Polarisation due to space charge.}
+\label{fig:polar1}
+\end{center}
+\end{figure}
+The actual shape of the electric field is defined by the distribution of space charge, which itself depends on the type and distribution of traps, the trapping and de-trapping times, the type of incident radiation and the rate at which charge carriers are created.
+
+This effect is undesirable because it affects the shape of the electrical signal. Since the drift velocity of the charge carriers is proportional to the electrical field, the charge carriers change their velocity while drifting through the space charge region. Figure~\ref{fig:spcchg} compares the voltage potential, the electrical field and the space charge for an ideal sensor as well as for that with a uniformly distributed positive space charge. As discussed in~\cite{Guthoff:1977429}, the main techniques to reduce polarisation are to either increase or alternate the bias voltage or to use a UV light to excite and release the trapped charges.
+
+
 \subsubsection{Priming/pumping}
 Priming or pumping~\cite{pumping:00000} is a process of irradiating the diamond with ionising radiation with a goal to improve the sensor properties. The pumping process strongly reduces the concentration of active carrier trapping centres. This leads to an enhancement of electronic properties of such material. The improved transport properties due to a reduced number of active charge traps give rise to an increased charge collection efficiency. The diamond is usually pumped for a few hours using a strong $\upbeta$ source, preferably a $^{90}Sr$ source with the activity of at least 50~MBq. The diamond remains in a pumped state from a few minutes to several days, depending on the quality of the material. A direct exposure to light results in an immediate return to an non-pumped state.
 
@@ -400,7 +417,7 @@ Diamond is an expensive material and the technology is relatively new as compare
 
 %-----------------------------------------------------------------------------------------------------------------
 \subsection{Irradiation damage factor}
-The irradiation damage factor $k_\uplambda$ is a means to quantify irradiation damage of a specific type of radiation at a specific energy. Via this factor different types of irradiation can be compared. It is obtained experimentally by measuring the CCD of a number of samples at various irradiation steps and fitting the equation~\ref{eq:radfactor1} to the data. $\lambda$ is the measured CCD, $\lambda_\mathrm{0}$ is the CCD of a non-irradiated sample and $\Phi$ the radiation dose. As a reference, the damage factor for 24~GeV protons is set to $1\times10^{-18}~\upmu$m$^{-1}$~cm~$^{-2}$.
+The irradiation damage factor $k_\uplambda$ is a means to quantify irradiation damage of a specific type of radiation at a specific energy. Via this factor different types of irradiation can be compared. It is obtained experimentally by measuring the CCD of a number of samples at various irradiation steps and fitting the equation~\ref{eq:radfactor1} to the data. $\lambda$ is the measured CCD, $\lambda_\mathrm{0}$ is the CCD of a non-irradiated sample and $\Phi$ the radiation dose. As a reference, the damage factor for 24~GeV protons is set to $1\times10^{-18}~\upmu$m$^{-1}$~cm~$^{2}$.
 
 
 \begin{equation}
@@ -441,42 +458,73 @@ The area below the current pulse is proportional to the charge collected by the 
 \section{Electronics for signal processing} % signal acquisition
 % ---------------------------------------------------------------------------------------------------------------
 \label{sec:elecsigproc}
-This section describes the electronics of a detector, starting with a description of signal amplifiers and then discussing the digitisation and signal processing. All these stages are necessary to extract information from the sensor. First, the signal has to be amplified. Then it is digitised and finally processed in a specially designed processor or a logic unit.
+This section describes the electronics of a detector, starting with a description of signal amplifiers and then discussing the digitisation and signal processing. All these stages are necessary to extract information from the sensor. First, the signal has to be amplified. Then it is digitised and finally processed in a specially designed processor or a logic unit. A more detailed description of the detector chain can be found in~\cite{1369574}.
 
 \subsection{Signal preamplifiers}
 The signal charge generated in the sensor by a single energetic particle is of the order of a few fC. The range of the induced current for single particles is typically between $10^{-8}$~A ($\upbeta, \upgamma$ radiation) and $3\times10^{-7}$~A ($\upalpha$ radiation). Signals as low as these have to be pre-amplified before processing. Depending on the measurement, several types of signal amplifiers can be used. The preamplifiers are designed to minimise electronic noise while maximising gain, thus maximising the signal-to-noise ratio (SNR). In addition, a bandwidth limit must be optimised to minimise the information loss due to signal shape deformation. A critical parameter is the total capacitance, i.e. the sensor capacitance together with the capacitance load of the preamplifier. The SNR improves with a lower capacitance. Several types of amplifiers can be used, all of which affect the measured pulse shape. Two preamplifiers are used most commonly, a current and a charge sensitive amplifier. Both are described below. 
 
-\begin{figure}[!t]
-%\centering
-\begin{tabular}{cccc}
-\subfloat[A capacitive source and a current amplifier.]{\includegraphics[width=0.50\textwidth]{02_pulse_formation/pics/plots/curramp} \label{fig:curramp}} &
-\subfloat[A capacitive source and a charge amplifier.]{\includegraphics[width=0.40\textwidth]{02_pulse_formation/pics/plots/chgamp}  \label{fig:chgamp}}
-\end{tabular}
-\caption{Simplified equivalent circuits of a current and charge amplifier.}
-\end{figure}
+%\begin{figure}[!t]
+%%\centering
+%\begin{tabular}{cccc}
+%\subfloat[A capacitive source and a current amplifier.]{\includegraphics[width=0.50\textwidth]{02_pulse_formation/pics/plots/curramp} \label{fig:curramp}} &
+%\subfloat[A capacitive source and a charge amplifier.]{\includegraphics[width=0.40\textwidth]{02_pulse_formation/pics/plots/chgamp}  \label{fig:chgamp}}
+%\end{tabular}
+%\caption{Simplified equivalent circuits of a current and charge amplifier.}
+%\end{figure}
 
 
 \subsubsection{Current amplifier}
 Figure~\ref{fig:curramp} shows the equivalent circuit of a current source and a current amplifier. An amplifier operates in current mode if the source has a low charge collection time $t_\mathrm{c}$ with respect to the $R_\mathrm{i}C_\mathrm{d}$ time constant of the circuit. In this case the sensor capacitance discharges rapidly and the output current $i_\mathrm{o}$ is proportional to the instantaneous current $i_\mathrm{i}$. The amplifier is providing a voltage gain, so the output signal voltage $u_o$ is directly proportional to the input voltage $u_\mathrm{i}$:
 \begin{equation}
-u_\mathrm{o}(t) = A \cdot R_\mathrm{i} \cdot i_\mathrm{i}(t).
+u_\mathrm{o}(t) = A \cdot R_\mathrm{i} \cdot i_\mathrm{i}(t),
 %u_\mathrm{o}(t) = A \cdot u{i}(t).
 \end{equation}
+whereby $i(t)$ is the induced current calculated using the Shockley-Ramo theorem.
 %Taking into account the detector capacitance $C_\mathrm{d}$, the magnitude of peak voltage on the output is 
 %\begin{equation}
 %u_\mathrm{o}(t) = A \cdot \frac{Q(t)} {C_\mathrm{d}} = 
 %\end{equation}
 
 
-The detector capacitance $C_\mathrm{d}$ together with the input resistance of the amplifier $R_\mathrm{i}$ defines the time constant of the signal, as shown in figure~\ref{fig:currc}. The higher $C_\mathrm{d}$, the slower is the response of the amplifier. For the case of the diamond sensor, which has the capacitance of the order of 2~pF and the input resistance of 50~$\Omega$, the resulting time constant is $\tau=10^{-10}$~s. This yields the signal rise time $t_\mathrm{r}\sim2.2\tau=2.2\times10^{-10}$~s.
+The detector capacitance $C_\mathrm{d}$ together with the input resistance of the amplifier $R_\mathrm{i}$ defines the time constant of the signal, as shown in figure~\ref{fig:currc}. The higher $C_\mathrm{d}$, the slower is the response of the amplifier. For the case of the diamond sensor, which has the capacitance of the order of 2~pF and the input resistance of 50~$\Omega$, the resulting time constant is $\tau=10^{-10}$~s. This yields the signal rise time $t_\mathrm{r}\sim2.2\tau=2.2\times10^{-10}$~s. $t_\mathrm{r}$ is a function of the input bandwidth limit:
+\begin{equation}
+\label{eq:bwl}
+t_\mathrm{r}=\frac{0.34}{\mathrm{BW}}
+\end{equation}
+where BW is the cutoff frequency. To ensure that the signal is not distorted significantly, the $t_\mathrm{r}$ must be shorter than 10~\% of the pulse width:
+\begin{equation}
+\label{eq:tr}
+t_\mathrm{r} < \frac{\mathrm{FWHM}}{10}.
+\end{equation}
+
+For a 500~$\upmu$m thick diamond with a bias voltage of 500~V and electron collection, the drift velocity is $v_\mathrm{drift}=6\times10^6$cm/s~\cite{Jansen:1956431}. An $\upalpha$ particle with the energy of 5.5~MeV induces a current
+\begin{equation}
+i(t)=\frac{Q}{d}v_\mathrm{drift} = 8\mathrm{\upmu A}
+\end{equation}
+where $Q$=68~fC according to equation~\ref{eq:qAlpha}. The drift time $t_\mathrm{drift}$ of charge carriers through the sensor equals the pulse FWHM and is 
+\begin{equation}
+\mathrm{FWHM} = t_\mathrm{d}=\frac{d}{v_\mathrm{drift}} = 8.3\mathrm{ns},
+\end{equation}
+which means that the maximum rise time must be $t_\mathrm{r}=0.83~$ns according to equation~\ref{eq:tr}. The minimum bandwidth limit for observing $\upalpha$ pulses for such a system is therefore 400~MHz according to equation~\ref{eq:bwl}. 
+
 
 \begin{figure}[!t]
-\begin{center}
-\includegraphics[width=0.7\linewidth]{02_pulse_formation/pics/plots/currrc}
-\caption{Input and output signal of the current amplifier.}
-\label{fig:currc}
-\end{center}
+%\centering
+\begin{tabular}{cccc}
+\subfloat{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/plots/curramp} \label{fig:curramp}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/plots/currrc}  \label{fig:currc}}
+\end{tabular}
+\caption{Left: a simplified equivalent circuit of a current amplifier. Right: an input and an output signal of the current amplifier.}
 \end{figure}
+
+
+%\begin{figure}[!t]
+%\begin{center}
+%\includegraphics[width=0.5\linewidth]{02_pulse_formation/pics/plots/currrc}
+%\caption{Input and output signal of the current amplifier.}
+%\label{fig:currc}
+%\end{center}
+%\end{figure}
 
 
 
@@ -491,13 +539,29 @@ Q_\mathrm{f}=C_\mathrm{f}u_\mathrm{f} = C_\mathrm{f}(A+1)u_\mathrm{i}.
 Since no current can flow into the amplifier, all of the signal current must charge up the feedback capacitance, so $Q_\mathrm{f} = Q_\mathrm{i}$.
 
 In reality, however, charge-sensitive amplifiers respond much slower than is the duration of the current pulse from the sensor. In addition, a resistor is added to the feedback line in parallel to the capacitor. The resistor and capacitor define the decay time constant of the pulse, as shown in figure~\ref{fig:chgrc}. This is necessary to return the signal to its initial state to be ready for a new measurement.
+%\begin{figure}[!t]
+%\begin{center}
+%\includegraphics[width=0.5\linewidth]{02_pulse_formation/pics/plots/chgrc}
+%\caption{Input and output signal of the charge amplifier.}
+%\label{fig:chgrc}
+%\end{center}
+%\end{figure}
+
 \begin{figure}[!t]
-\begin{center}
-\includegraphics[width=0.7\linewidth]{02_pulse_formation/pics/plots/chgrc}
-\caption{Input and output signal of the charge amplifier.}
-\label{fig:chgrc}
-\end{center}
+%\centering
+\begin{tabular}{cccc}
+\subfloat{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/plots/chgamp} \label{fig:chgamp}} &
+\subfloat{\includegraphics[width=0.47\textwidth]{02_pulse_formation/pics/plots/chgrc}  \label{fig:chgrc}}
+\end{tabular}
+\caption{Left: a simplified equivalent circuit of a charge amplifier. Right: an input and an output signal of the charge amplifier.}
 \end{figure}
+
+A MIP deposits 2.88~fC in a 500~$\upmu$m thick diamond. In a pCVD diamond sensor with a quoted CCE of 35~\% the MPV of the collected charge is 1~fC. The low and high end of the Landau distribution are at $\frac{2}{3}\times$MPV and 10$\times$MPV, therefore at 0.67~fC and 10~fC. To ensure a good separation between the noise floor and the signal, the noise RMS must be 5~times lower than the signals with the lowest charge deposition -- below 0.133~fC, which equals 836~e$^{-}$. For an amplifier with the gain of 10~mV/fC with such a noise floor, the voltage noise RMS on the output is 1.3~mV.
+
+
+
+
+
 
 \subsection{Analogue electronic noise}
 %(2 pg)

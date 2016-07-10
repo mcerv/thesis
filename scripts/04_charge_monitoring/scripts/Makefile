@@ -12,7 +12,7 @@ BOOST =
 BOOST_INCLUDES = 
 INCLUDES =  `root-config --cflags`
 LIBS =  `root-config --ldflags --glibs`
-OBJECTS = $(OBJPATH)/drawfuns.o 
+OBJECTS = $(OBJPATH)/AtlasStyle.o $(OBJPATH)/AtlasUtils.o $(OBJPATH)/drawfuns.o 
 OBJMAIN0 = $(OBJPATH)/plotAtlasData.o 
 OBJMAIN1 = $(OBJPATH)/plotDB.o 
 OBJMAIN2 = $(OBJPATH)/plotDetArea.o 
@@ -28,6 +28,12 @@ exec: $(OBJECTS) $(OBJMAIN0) $(OBJMAIN1) $(OBJMAIN2) $(OBJMAIN3) $(OBJMAIN4)
 	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN3) -o $(EXECUTABLE3) 
 	$(CC) $(LFLAGS) $(LIBS) $(OBJECTS) $(OBJMAIN4) -o $(EXECUTABLE4) 
 
+
+$(OBJPATH)/AtlasStyle.o: $(SRCPATH)/AtlasStyle.cpp
+	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/AtlasStyle.cpp -o $(OBJPATH)/AtlasStyle.o
+
+$(OBJPATH)/AtlasUtils.o: $(SRCPATH)/AtlasUtils.cpp
+	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/AtlasUtils.cpp -o $(OBJPATH)/AtlasUtils.o
 
 $(OBJPATH)/drawfuns.o: $(SRCPATH)/drawfuns.cpp
 	$(CC) $(CFLAGS) $(INCLUDES)  -c $(SRCPATH)/drawfuns.cpp -o $(OBJPATH)/drawfuns.o

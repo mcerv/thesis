@@ -1,0 +1,28 @@
+
+When freezing:
+
+- Analysis still ongoing
+
+
+- wren counter increasing
+
+- fifo seems to be filling
+- during readout we get deadbeef. therefore:
+	- s_read_fifo seems to be off
+	- read_en_i off
+	- s_raw_signal_to_usb_en
+	- s_usb_write_fifo_en_d1
+	- s_usb_write_fifo_en
+	- s_fsm_usbfifo_wren
+	- usbfifo_wren_o is off.
+	- FSM FIFO: either
+		- WAITEMPTY
+		- IDLE
+how does the usbfifo get reset?
+
+
+SOLUTION 1:
+- disable and re-enable PSA_RAW_SIG_HANDLER_ENABLE
+s_PSA_status(0) <= s_raw_fifo_empty; -- MATEVZ ADDED 2016-06-13
+
+RANDOM ERRORS - MAYBE DUE TO THE TRIGGER????

@@ -19,6 +19,7 @@
 #include "TStyle.h"
 #include "TColor.h"
 #include "TLatex.h"
+#include "TMath.h"
 
 #define DEBUG 0
 #define S52 0
@@ -28,6 +29,17 @@
 #define S79_1e14 4
 #define SCDHQ 5
 
+Double_t fNfree2(Double_t *x, Double_t *par)
+{
+	Double_t Ntot = par[0];
+	Double_t Ni = par[1];
+	Double_t Na = Ntot - Ni;
+	Double_t trel = par[2];
+	Double_t Ea = par[3];
+	Double_t k = 8.6e-5;
+
+	return Na + Ni/(1 + trel*TMath::Exp(Ea / (k*x[0])));
+}
 
 
 
@@ -80,7 +92,7 @@ int32_t main (void) {
     c[volt] = new TCanvas (voltstr[volt].c_str(), voltstr[volt].c_str(), 800 ,600);
     dr->prettify(c[volt]->cd() );
     c[volt]->SetTopMargin(0.06);
-    leg[volt] = new TLegend (0.49,0.23,0.9,0.47);
+    leg[volt] = new TLegend (0.49,0.21,0.9,0.50);
     for (int det=0; det<ndets; det++) {
       file = new TFile(filePath[volt][det].c_str(), "read");
       if (file->IsOpen()) cout<<"File "<<filePath[volt][det]<<" open."<<endl;
@@ -117,6 +129,21 @@ int32_t main (void) {
       lat->SetTextFont(42);
       lat->Draw("same");
     }
+    TF1* funcc = new TF1("Nfree2a",fNfree2,40,300,4);
+    if (!volt) {
+      funcc->FixParameter(0,52.4e-15);
+      funcc->FixParameter(1,33.9e-15);
+      funcc->FixParameter(2,4.45e-5);
+      funcc->FixParameter(3,0.08);
+    } else {
+      funcc->FixParameter(0,50.5e-15);
+      funcc->FixParameter(1,32.7e-15);
+      funcc->FixParameter(2,4.41e-5);
+      funcc->FixParameter(3,0.08);
+    }
+    funcc->Draw("same");
+    leg[volt]->AddEntry(funcc,"S52 by H. Jansen");
+
     leg[volt]->Draw("same");
     string savePath = "../plots/charge";
     savePath += voltstr[volt];
