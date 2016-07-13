@@ -25,10 +25,10 @@ when you see 95, diff between pseudoeff and eff due to the setup is 5% or less
 - 
 
 Branching ratio of Americium 
-distinguish from gammas and alphas
-source data sheet
-60 k gamma range higher than alpha
-ratio between gamma and alpha should be
+distinguish from gammas and alphas		?
+source data sheet				?
+60 k gamma range higher than alpha		?
+ratio between gamma and alpha should be		?
 
 - alpha energy dist plot explain the gamma peak.		OK
 - decay properties of americium source in the introduction.	

@@ -7,23 +7,23 @@ redo the figure 4.13					OK
 two figures - collision and beam background.
 
 Test
-Measured in LHC - refer to paper with bunch structure
+Measured in LHC - refer to paper with bunch structure	OK
 bump bond 
-diamond with pixel metallisation
+diamond with pixel metallisation			
 
 Table:
-position resolution			
+position resolution					
 time resolution
 double pulse resolution
 
-beam abort gap				
-dynamic range of fei4
-gain
+beam abort gap						OK
+dynamic range of fei4	?
+gain			?
 
 
-Intro: principle of charge monitor\ing
+Intro: principle of charge monitoring
 
-schematics
+schematics	
 diamond det
 lv readout, readout on lv side.
 capacitively connect the amp
@@ -58,13 +58,13 @@ elastic - pum paf
 inelastic - scattering
 
 neutron interaction always accompanied by a gamma
-introduction: expect the graphs 		OK
+introduction: expect the graphs 			OK
 use scvd	
 
-proton recoil vs FWHM vs area			OK
+proton recoil vs FWHM vs area				OK
 
-1 pg explanation for each figure. 		OK
+1 pg explanation for each figure. 			OK
 
 area —> fC
 
-bibilography fix				OK
+bibilography fix					OK
