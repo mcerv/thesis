@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  10 JUL 2016 10:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  4 SEP 2016 13:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -687,6 +687,9 @@ t line 33.
 
 LaTeX Warning: Citation `1369574' on page 4 undefined on input line 41.
 
+
+LaTeX Warning: Reference `fig:drift' on page 4 undefined on input line 44.
+
 <03_measurement_results/pics/setup/Cx.png, id=18, 903.375pt x 501.875pt>
 File: 03_measurement_results/pics/setup/Cx.png Graphic file (type png)
 
@@ -721,7 +724,11 @@ Overfull \hbox (7.4544pt too wide) in paragraph at lines 61--62
 
 [5 <./03_measurement_results/pics/setup/Cx.png> <./03_measurement_results/pics/
 setup/C2.png>]
-<03_measurement_results/pics/setup/diamond4.jpeg, id=57, 1421.31pt x 657.45625p
+
+LaTeX Warning: Citation `IIa:00001' on page 6 undefined on input line 88.
+
+
+<03_measurement_results/pics/setup/diamond4.jpeg, id=56, 1421.31pt x 657.45625p
 t>
 File: 03_measurement_results/pics/setup/diamond4.jpeg Graphic file (type jpg)
  <use 03_measurement_results/pics/setup/diamond4.jpeg>
@@ -734,7 +741,7 @@ File: 03_measurement_results/pics/setup/carrier2.jpg Graphic file (type jpg)
 
 <use 03_measurement_results/pics/setup/carrier2.jpg>
 Package pdftex.def Info: 03_measurement_results/pics/setup/carrier2.jpg used on
- input line 145.
+ input line 147.
 (pdftex.def)             Requested size: 203.80193pt x 152.84224pt.
 
 <03_measurement_results/pics/setup/carriersource2.jpg, id=71, 1638.12pt x 1228.
@@ -743,15 +750,15 @@ File: 03_measurement_results/pics/setup/carriersource2.jpg Graphic file (type j
 pg)
  <use 03_measurement_results/pics/setup/carriersource2.jpg>
 Package pdftex.def Info: 03_measurement_results/pics/setup/carriersource2.jpg u
-sed on input line 146.
+sed on input line 148.
 (pdftex.def)             Requested size: 203.80193pt x 152.84224pt.
 
-Overfull \hbox (5.28384pt too wide) in paragraph at lines 144--148
+Overfull \hbox (5.28384pt too wide) in paragraph at lines 146--150
 [][] 
  []
 
-[8] [9 <./03_measurement_results/pics/setup/carrier2.jpg> <./03_measurement_res
-ults/pics/setup/carriersource2.jpg>]
+[8 <./03_measurement_results/pics/setup/carrier2.jpg> <./03_measurement_results
+/pics/setup/carriersource2.jpg>] [9]
 <03_measurement_results/scripts/plots/samplePulses/alpha.pdf, id=78, 569.12625p
 t x 410.53375pt>
 File: 03_measurement_results/scripts/plots/samplePulses/alpha.pdf Graphic file 
@@ -759,7 +766,7 @@ File: 03_measurement_results/scripts/plots/samplePulses/alpha.pdf Graphic file
 
 <use 03_measurement_results/scripts/plots/samplePulses/alpha.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/alph
-a.pdf used on input line 191.
+a.pdf used on input line 185.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/samplePulses/alphadist.pdf, id=79, 569.12
@@ -769,7 +776,7 @@ ile (type pdf)
 
 <use 03_measurement_results/scripts/plots/samplePulses/alphadist.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/alph
-adist.pdf used on input line 192.
+adist.pdf used on input line 186.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/samplePulses/beta.pdf, id=80, 569.12625pt
@@ -779,7 +786,7 @@ type pdf)
 
 <use 03_measurement_results/scripts/plots/samplePulses/beta.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/beta
-.pdf used on input line 193.
+.pdf used on input line 187.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/samplePulses/betadist.pdf, id=81, 569.126
@@ -789,7 +796,7 @@ le (type pdf)
 
 <use 03_measurement_results/scripts/plots/samplePulses/betadist.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/beta
-dist.pdf used on input line 194.
+dist.pdf used on input line 188.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/samplePulses/gamma.pdf, id=82, 569.12625p
@@ -799,7 +806,7 @@ File: 03_measurement_results/scripts/plots/samplePulses/gamma.pdf Graphic file
 
 <use 03_measurement_results/scripts/plots/samplePulses/gamma.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/gamm
-a.pdf used on input line 195.
+a.pdf used on input line 189.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/samplePulses/gammadist.pdf, id=83, 569.12
@@ -809,10 +816,10 @@ ile (type pdf)
 
 <use 03_measurement_results/scripts/plots/samplePulses/gammadist.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/samplePulses/gamm
-adist.pdf used on input line 196.
+adist.pdf used on input line 190.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-Overfull \hbox (5.28387pt too wide) in paragraph at lines 190--198
+Overfull \hbox (5.28387pt too wide) in paragraph at lines 184--192
  [][] 
  []
 
@@ -825,16 +832,20 @@ ement_results/scripts/plots/samplePulses/gamma.pdf, page is rotated 90 degrees>
  <./03_measurement_results/scripts/plots/samplePulses/gammadist.pdf, page is ro
 tated 90 degrees>]
 
-LaTeX Warning: Reference `fig:kitdpa' on page 12 undefined on input line 230.
+LaTeX Warning: Reference `fig:kitdpa' on page 12 undefined on input line 224.
 
 
-LaTeX Warning: Reference `sec:raddam' on page 12 undefined on input line 232.
+LaTeX Warning: Reference `eq:radfactor1' on page 12 undefined on input line 226
+.
+
+
+LaTeX Warning: Reference `sec:raddam' on page 12 undefined on input line 226.
 
 [12
 
 ]
 
-LaTeX Warning: Reference `eq:ccdcalc1' on page 13 undefined on input line 259.
+LaTeX Warning: Reference `eq:ccdcalc1' on page 13 undefined on input line 253.
 
 
 <03_measurement_results/scripts/plots/ccd.pdf, id=352, 569.12625pt x 410.53375p
@@ -842,19 +853,19 @@ t>
 File: 03_measurement_results/scripts/plots/ccd.pdf Graphic file (type pdf)
  <use 03_measurement_results/scripts/plots/ccd.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/ccd.pdf used on i
-nput line 263.
+nput line 257.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
 
-LaTeX Warning: Reference `eq:radfactor1' on page 13 undefined on input line 269
+LaTeX Warning: Reference `eq:radfactor1' on page 13 undefined on input line 263
 .
 
 
-LaTeX Warning: Reference `ch:diam' on page 13 undefined on input line 270.
+LaTeX Warning: Reference `ch:diamond' on page 13 undefined on input line 264.
 
 
-LaTeX Warning: Citation `Guthoff:1977429' on page 13 undefined on input line 27
-2.
+LaTeX Warning: Citation `Guthoff:1977429' on page 13 undefined on input line 26
+6.
 
 [13 <./03_measurement_results/scripts/plots/ccd.pdf, page is rotated 90 degrees
 >]
@@ -864,16 +875,20 @@ File: 03_measurement_results/scripts/plots/radfactor1.pdf Graphic file (type pd
 f)
  <use 03_measurement_results/scripts/plots/radfactor1.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/radfactor1.pdf us
-ed on input line 277.
+ed on input line 271.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
- [14 <./03_measurement_results/scripts/plots/radfactor1.pdf, page is rotated 90
- degrees>]
+
+
+LaTeX Warning: Reference `ch:cur' on page 14 undefined on input line 294.
+
+[14 <./03_measurement_results/scripts/plots/radfactor1.pdf, page is rotated 90 
+degrees>]
 <03_measurement_results/plots/ccdpriming.pdf, id=447, 569.12625pt x 381.425pt>
 File: 03_measurement_results/plots/ccdpriming.pdf Graphic file (type pdf)
 
 <use 03_measurement_results/plots/ccdpriming.pdf>
 Package pdftex.def Info: 03_measurement_results/plots/ccdpriming.pdf used on in
-put line 309.
+put line 304.
 (pdftex.def)             Requested size: 303.53267pt x 203.4347pt.
  [15]
 <03_measurement_results/scripts/plots/amplvstimecx4.pdf, id=451, 569.12625pt x 
@@ -882,7 +897,7 @@ File: 03_measurement_results/scripts/plots/amplvstimecx4.pdf Graphic file (type
  pdf)
  <use 03_measurement_results/scripts/plots/amplvstimecx4.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/amplvstimecx4.pdf
- used on input line 332.
+ used on input line 327.
 (pdftex.def)             Requested size: 303.53267pt x 203.4347pt.
 
 <03_measurement_results/scripts/plots/plotLifetime/elecs0.pdf, id=452, 569.1262
@@ -892,7 +907,7 @@ File: 03_measurement_results/scripts/plots/plotLifetime/elecs0.pdf Graphic file
 
 <use 03_measurement_results/scripts/plots/plotLifetime/elecs0.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/elec
-s0.pdf used on input line 352.
+s0.pdf used on input line 347.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/plotLifetime/holes0.pdf, id=453, 569.1262
@@ -902,7 +917,7 @@ File: 03_measurement_results/scripts/plots/plotLifetime/holes0.pdf Graphic file
 
 <use 03_measurement_results/scripts/plots/plotLifetime/holes0.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/hole
-s0.pdf used on input line 353.
+s0.pdf used on input line 348.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/plotLifetime/elecs15.pdf, id=454, 569.126
@@ -912,7 +927,7 @@ e (type pdf)
 
 <use 03_measurement_results/scripts/plots/plotLifetime/elecs15.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/elec
-s15.pdf used on input line 354.
+s15.pdf used on input line 349.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/plotLifetime/holes15.pdf, id=455, 569.126
@@ -922,7 +937,7 @@ e (type pdf)
 
 <use 03_measurement_results/scripts/plots/plotLifetime/holes15.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/hole
-s15.pdf used on input line 355.
+s15.pdf used on input line 350.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/plotLifetime/elecs30.pdf, id=456, 569.126
@@ -932,7 +947,7 @@ e (type pdf)
 
 <use 03_measurement_results/scripts/plots/plotLifetime/elecs30.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/elec
-s30.pdf used on input line 356.
+s30.pdf used on input line 351.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/plotLifetime/holes30.pdf, id=457, 569.126
@@ -942,10 +957,10 @@ e (type pdf)
 
 <use 03_measurement_results/scripts/plots/plotLifetime/holes30.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/hole
-s30.pdf used on input line 357.
+s30.pdf used on input line 352.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-Overfull \hbox (5.28387pt too wide) in paragraph at lines 351--359
+Overfull \hbox (5.28387pt too wide) in paragraph at lines 346--354
  [][] 
  []
 
@@ -958,7 +973,7 @@ c file (type pdf)
 
 <use 03_measurement_results/scripts/plots/plotLifetime/corrlifetime.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/corr
-lifetime.pdf used on input line 382.
+lifetime.pdf used on input line 377.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
 <03_measurement_results/plots/elfield.pdf, id=506, 1114.1625pt x 1219.55624pt>
@@ -966,7 +981,7 @@ File: 03_measurement_results/plots/elfield.pdf Graphic file (type pdf)
 
 <use 03_measurement_results/plots/elfield.pdf>
 Package pdftex.def Info: 03_measurement_results/plots/elfield.pdf used on input
- line 404.
+ line 399.
 (pdftex.def)             Requested size: 173.44534pt x 189.84805pt.
  [17 <./03_measurement_results/scripts/plots/amplvstimecx4.pdf, page is rotated
  90 degrees>] [18 <./03_measurement_results/scripts/plots/plotLifetime/elecs0.p
@@ -986,7 +1001,7 @@ phic file (type pdf)
 
 <use 03_measurement_results/scripts/plots/plotLifetime/formCorrelation.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/plotLifetime/form
-Correlation.pdf used on input line 455.
+Correlation.pdf used on input line 451.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
 [20] [21 <./03_measurement_results/scripts/plots/plotLifetime/formCorrelation.p
@@ -999,7 +1014,7 @@ f Graphic file (type pdf)
 <use 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_elecs_260k.pdf
 >
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulsesVolt/varVol
-t_S52_elecs_260k.pdf used on input line 503.
+t_S52_elecs_260k.pdf used on input line 502.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_holes_260k.pdf, id
@@ -1010,10 +1025,10 @@ f Graphic file (type pdf)
 <use 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_holes_260k.pdf
 >
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulsesVolt/varVol
-t_S52_holes_260k.pdf used on input line 504.
+t_S52_holes_260k.pdf used on input line 503.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-Overfull \hbox (5.28387pt too wide) in paragraph at lines 502--506
+Overfull \hbox (5.28387pt too wide) in paragraph at lines 501--505
 [][] 
  []
 
@@ -1025,7 +1040,7 @@ ype pdf)
 
 <use 03_measurement_results/scripts/plots/pulses/S37_elecs.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S37_elecs.
-pdf used on input line 512.
+pdf used on input line 511.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/pulses/S37_holes.pdf, id=936, 569.12625pt
@@ -1035,7 +1050,7 @@ ype pdf)
 
 <use 03_measurement_results/scripts/plots/pulses/S37_holes.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S37_holes.
-pdf used on input line 513.
+pdf used on input line 512.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/pulses/S79_elecs.pdf, id=937, 569.12625pt
@@ -1045,7 +1060,7 @@ ype pdf)
 
 <use 03_measurement_results/scripts/plots/pulses/S79_elecs.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S79_elecs.
-pdf used on input line 514.
+pdf used on input line 513.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/pulses/S79_holes.pdf, id=938, 569.12625pt
@@ -1055,7 +1070,7 @@ ype pdf)
 
 <use 03_measurement_results/scripts/plots/pulses/S79_holes.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S79_holes.
-pdf used on input line 515.
+pdf used on input line 514.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/pulses/S52_elecs.pdf, id=939, 569.12625pt
@@ -1065,7 +1080,7 @@ ype pdf)
 
 <use 03_measurement_results/scripts/plots/pulses/S52_elecs.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S52_elecs.
-pdf used on input line 516.
+pdf used on input line 515.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
 <03_measurement_results/scripts/plots/pulses/S52_holes.pdf, id=940, 569.12625pt
@@ -1075,10 +1090,10 @@ ype pdf)
 
 <use 03_measurement_results/scripts/plots/pulses/S52_holes.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S52_holes.
-pdf used on input line 517.
+pdf used on input line 516.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-Overfull \hbox (5.28387pt too wide) in paragraph at lines 511--519
+Overfull \hbox (5.28387pt too wide) in paragraph at lines 510--518
 [][] 
  []
 
@@ -1093,57 +1108,65 @@ ees> <./03_measurement_results/scripts/plots/pulses/S79_elecs.pdf, page is rota
 ted 90 degrees> <./03_measurement_results/scripts/plots/pulses/S79_holes.pdf, p
 age is rotated 90 degrees> <./03_measurement_results/scripts/plots/pulses/S52_e
 lecs.pdf, page is rotated 90 degrees> <./03_measurement_results/scripts/plots/p
-ulses/S52_holes.pdf, page is rotated 90 degrees>] [24]
+ulses/S52_holes.pdf, page is rotated 90 degrees>]
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_230k
-.pdf, id=1296, 569.12625pt x 410.53375pt>
+_1.pdf, id=1293, 453.53691pt x 329.76741pt>
 File: 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs
-_230k.pdf Graphic file (type pdf)
+_230k_1.pdf Graphic file (type pdf)
 
 <use 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_
-230k.pdf>
+230k_1.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulsesVolt/varVol
-t_S52_3-63e14_elecs_230k.pdf used on input line 549.
-(pdftex.def)             Requested size: 203.80193pt x 147.009pt.
+t_S52_3-63e14_elecs_230k_1.pdf used on input line 539.
+(pdftex.def)             Requested size: 203.80193pt x 148.18262pt.
 
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes_230k
-.pdf, id=1297, 569.12625pt x 410.53375pt>
+_1.pdf, id=1294, 453.53691pt x 329.76741pt>
 File: 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes
-_230k.pdf Graphic file (type pdf)
+_230k_1.pdf Graphic file (type pdf)
 
 <use 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes_
-230k.pdf>
+230k_1.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulsesVolt/varVol
-t_S52_3-63e14_holes_230k.pdf used on input line 550.
-(pdftex.def)             Requested size: 203.80193pt x 147.009pt.
+t_S52_3-63e14_holes_230k_1.pdf used on input line 540.
+(pdftex.def)             Requested size: 203.80193pt x 148.18262pt.
 
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_260k
-.pdf, id=1298, 569.12625pt x 410.53375pt>
+_1.pdf, id=1295, 453.53691pt x 329.76741pt>
 File: 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs
-_260k.pdf Graphic file (type pdf)
+_260k_1.pdf Graphic file (type pdf)
 
 <use 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_
-260k.pdf>
+260k_1.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulsesVolt/varVol
-t_S52_3-63e14_elecs_260k.pdf used on input line 551.
-(pdftex.def)             Requested size: 203.80193pt x 147.009pt.
+t_S52_3-63e14_elecs_260k_1.pdf used on input line 541.
+(pdftex.def)             Requested size: 203.80193pt x 148.18262pt.
 
 <03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes_260k
-.pdf, id=1299, 569.12625pt x 410.53375pt>
+_1.pdf, id=1296, 453.53691pt x 329.76741pt>
 File: 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes
-_260k.pdf Graphic file (type pdf)
+_260k_1.pdf Graphic file (type pdf)
 
 <use 03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_holes_
-260k.pdf>
+260k_1.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulsesVolt/varVol
-t_S52_3-63e14_holes_260k.pdf used on input line 552.
-(pdftex.def)             Requested size: 203.80193pt x 147.009pt.
+t_S52_3-63e14_holes_260k_1.pdf used on input line 542.
+(pdftex.def)             Requested size: 203.80193pt x 148.18262pt.
 
-Overfull \hbox (5.28387pt too wide) in paragraph at lines 548--554
+Overfull \hbox (5.28387pt too wide) in paragraph at lines 538--544
 [][] 
  []
 
+[24
+
+ <./03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_2
+30k_1.pdf> <./03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e
+14_holes_230k_1.pdf> <./03_measurement_results/scripts/plots/pulsesVolt/varVolt
+_S52_3-63e14_elecs_260k_1.pdf> <./03_measurement_results/scripts/plots/pulsesVo
+lt/varVolt_S52_3-63e14_holes_260k_1.pdf>]
 File: 03_measurement_results/scripts/plots/pulses/S37_elecs.pdf Graphic file (t
 ype pdf)
+
 <use 03_measurement_results/scripts/plots/pulses/S37_elecs.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S37_elecs.
 pdf used on input line 564.
@@ -1156,7 +1179,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S37_holes.
 pdf used on input line 565.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S79_1e14_elecs.pdf, id=1300, 569.1
+<03_measurement_results/scripts/plots/pulses/S79_1e14_elecs.pdf, id=1465, 569.1
 2625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S79_1e14_elecs.pdf Graphic fi
 le (type pdf)
@@ -1166,7 +1189,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S79_1e14_e
 lecs.pdf used on input line 566.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S79_1e14_holes.pdf, id=1301, 569.1
+<03_measurement_results/scripts/plots/pulses/S79_1e14_holes.pdf, id=1466, 569.1
 2625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S79_1e14_holes.pdf Graphic fi
 le (type pdf)
@@ -1176,7 +1199,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S79_1e14_h
 oles.pdf used on input line 567.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S52_3-63e14_elecs.pdf, id=1302, 56
+<03_measurement_results/scripts/plots/pulses/S52_3-63e14_elecs.pdf, id=1467, 56
 9.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S52_3-63e14_elecs.pdf Graphic
  file (type pdf)
@@ -1186,7 +1209,7 @@ Package pdftex.def Info: 03_measurement_results/scripts/plots/pulses/S52_3-63e1
 4_elecs.pdf used on input line 568.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/pulses/S52_3-63e14_holes.pdf, id=1303, 56
+<03_measurement_results/scripts/plots/pulses/S52_3-63e14_holes.pdf, id=1468, 56
 9.12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/pulses/S52_3-63e14_holes.pdf Graphic
  file (type pdf)
@@ -1200,8 +1223,13 @@ Overfull \hbox (5.28387pt too wide) in paragraph at lines 563--571
 [][] 
  []
 
+[25] [26 <./03_measurement_results/scripts/plots/pulses/S79_1e14_elecs.pdf, pag
+e is rotated 90 degrees> <./03_measurement_results/scripts/plots/pulses/S79_1e1
+4_holes.pdf, page is rotated 90 degrees> <./03_measurement_results/scripts/plot
+s/pulses/S52_3-63e14_elecs.pdf, page is rotated 90 degrees> <./03_measurement_r
+esults/scripts/plots/pulses/S52_3-63e14_holes.pdf, page is rotated 90 degrees>]
 
-<../scripts/03_experimental_results/plots/charge500V.pdf, id=1304, 569.12625pt 
+<../scripts/03_experimental_results/plots/charge500V.pdf, id=1649, 569.12625pt 
 x 410.53375pt>
 File: ../scripts/03_experimental_results/plots/charge500V.pdf Graphic file (typ
 e pdf)
@@ -1210,78 +1238,72 @@ Package pdftex.def Info: ../scripts/03_experimental_results/plots/charge500V.pd
 f used on input line 583.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
-[25 <./03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elec
-s_230k.pdf, page is rotated 90 degrees> <./03_measurement_results/scripts/plots
-/pulsesVolt/varVolt_S52_3-63e14_holes_230k.pdf, page is rotated 90 degrees> <./
-03_measurement_results/scripts/plots/pulsesVolt/varVolt_S52_3-63e14_elecs_260k.
-pdf, page is rotated 90 degrees> <./03_measurement_results/scripts/plots/pulses
-Volt/varVolt_S52_3-63e14_holes_260k.pdf, page is rotated 90 degrees>] [26 <./03
-_measurement_results/scripts/plots/pulses/S79_1e14_elecs.pdf, page is rotated 9
-0 degrees> <./03_measurement_results/scripts/plots/pulses/S79_1e14_holes.pdf, p
-age is rotated 90 degrees> <./03_measurement_results/scripts/plots/pulses/S52_3
--63e14_elecs.pdf, page is rotated 90 degrees> <./03_measurement_results/scripts
-/plots/pulses/S52_3-63e14_holes.pdf, page is rotated 90 degrees>]
-<../scripts/03_experimental_results/plots/charge-500V.pdf, id=1657, 569.12625pt
+[27
+
+ <../scripts/03_experimental_results/plots/charge500V.pdf, page is rotated 90 d
+egrees>]
+<../scripts/03_experimental_results/plots/charge-500V.pdf, id=1696, 569.12625pt
  x 410.53375pt>
 File: ../scripts/03_experimental_results/plots/charge-500V.pdf Graphic file (ty
 pe pdf)
  <use ../scripts/03_experimental_results/plots/charge-500V.pdf>
 Package pdftex.def Info: ../scripts/03_experimental_results/plots/charge-500V.p
-df used on input line 595.
+df used on input line 597.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
 
 
-LaTeX Warning: Reference `eq:decayexp' on page 27 undefined on input line 601.
+LaTeX Warning: Reference `eq:decayexp' on page 28 undefined on input line 603.
 
-[27 <../scripts/03_experimental_results/plots/charge500V.pdf, page is rotated 9
-0 degrees> <../scripts/03_experimental_results/plots/charge-500V.pdf, page is r
-otated 90 degrees>]
-<03_measurement_results/scripts/plots/taunew/lifetimevstempE.pdf, id=1748, 569.
+
+<03_measurement_results/scripts/plots/taunew/lifetimevstempE.pdf, id=1697, 569.
 12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/taunew/lifetimevstempE.pdf Graphic f
 ile (type pdf)
 
 <use 03_measurement_results/scripts/plots/taunew/lifetimevstempE.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/taunew/lifetimevs
-tempE.pdf used on input line 607.
+tempE.pdf used on input line 609.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-<03_measurement_results/scripts/plots/taunew/lifetimevstempH.pdf, id=1749, 569.
+<03_measurement_results/scripts/plots/taunew/lifetimevstempH.pdf, id=1698, 569.
 12625pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/taunew/lifetimevstempH.pdf Graphic f
 ile (type pdf)
 
 <use 03_measurement_results/scripts/plots/taunew/lifetimevstempH.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/taunew/lifetimevs
-tempH.pdf used on input line 608.
+tempH.pdf used on input line 610.
 (pdftex.def)             Requested size: 203.80193pt x 147.009pt.
 
-Overfull \hbox (5.28384pt too wide) in paragraph at lines 606--610
+Overfull \hbox (5.28384pt too wide) in paragraph at lines 608--612
 [][] 
  []
 
-[28 <./03_measurement_results/scripts/plots/taunew/lifetimevstempE.pdf, page is
- rotated 90 degrees> <./03_measurement_results/scripts/plots/taunew/lifetimevst
-empH.pdf, page is rotated 90 degrees>]
-<03_measurement_results/scripts/plots/taunew/avglifetime1.pdf, id=1839, 569.126
+[28 <../scripts/03_experimental_results/plots/charge-500V.pdf, page is rotated 
+90 degrees>]
+<03_measurement_results/scripts/plots/taunew/avglifetime1.pdf, id=1745, 569.126
 25pt x 410.53375pt>
 File: 03_measurement_results/scripts/plots/taunew/avglifetime1.pdf Graphic file
  (type pdf)
 
 <use 03_measurement_results/scripts/plots/taunew/avglifetime1.pdf>
 Package pdftex.def Info: 03_measurement_results/scripts/plots/taunew/avglifetim
-e1.pdf used on input line 624.
+e1.pdf used on input line 626.
 (pdftex.def)             Requested size: 303.53267pt x 218.95998pt.
- [29 <./03_measurement_results/scripts/plots/taunew/avglifetime1.pdf, page is r
-otated 90 degrees>]) [30] (./03_makechapter.bbl [31
+ [29 <./03_measurement_results/scripts/plots/taunew/lifetimevstempE.pdf, page i
+s rotated 90 degrees> <./03_measurement_results/scripts/plots/taunew/lifetimevs
+tempH.pdf, page is rotated 90 degrees> <./03_measurement_results/scripts/plots/
+taunew/avglifetime1.pdf, page is rotated 90 degrees>]) [30
+
+] (./03_makechapter.bbl [31
 
 
 ]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-) [32] (./03_makechapter.aux
-(./03_measurement_results/chapter.aux))
+)
+[32] (./03_makechapter.aux (./03_measurement_results/chapter.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1290,13 +1312,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13430 strings out of 493089
- 288853 string characters out of 6134843
- 269416 words of memory out of 5000000
- 16553 multiletter control sequences out of 15000+600000
+ 13435 strings out of 493089
+ 288956 string characters out of 6134843
+ 270429 words of memory out of 5000000
+ 16558 multiletter control sequences out of 15000+600000
  19678 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,15n,49p,10402b,684s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,13n,43p,10402b,684s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1317,10 +1339,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb>
-Output written on 03_makechapter.pdf (32 pages, 4682869 bytes).
+Output written on 03_makechapter.pdf (32 pages, 4784654 bytes).
 PDF statistics:
- 1960 PDF objects out of 2073 (max. 8388607)
- 867 compressed objects within 9 object streams
+ 1953 PDF objects out of 2073 (max. 8388607)
+ 923 compressed objects within 10 object streams
  0 named destinations out of 1000 (max. 500000)
  231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

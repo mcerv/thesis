@@ -1,0 +1,24 @@
+
+
+scintilators	OK
+calorimeters
+multiwire proportional chambers	OK
+
+summer student lectures
+isabelle wingertner (LAPP) <- what I need to know about detectors
+
+hpht 1800 deg		OK
+plasma assisted		OK
+
+Vsat temperature dependent 
+
+diamond related materials
+pomorski
+exciton lifetime vs temp
+excitons recombine at low temps
+
+photoelectrons gamma
+
+norbert wermer
+
+pathl ength gives the charge	OK, but reread!

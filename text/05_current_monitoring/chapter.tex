@@ -30,9 +30,8 @@ Pulse shape analysis (PSA) is a common software tool for extracting information 
 
 The offline pulse shape analysis has already been used for particle identification with a diamond sensor~\cite{PAVEL:00000, PAVEL:00002}. An effort has been made to implement an online and real time application for this analysis by porting the algorithms into an FPGA. This section first describes the device specifications. Then it describes in detail the PSA algorithms and the structure of the code. Afterwards it discusses the performance results, which showcase the limitations of the device. Finally it describes the data acquired with radioactive sources and in neutron reactors.
 
-
 \section{Requirements}
-Chapter~\ref{ch:meas} shows that the shape is heavily dependent on several factors, such as environmental temperature and received irradiation dose. At temperatures lower than 150~K the signal from an $\upalpha$ starts deteriorating due to recombination of charges in the charge cloud. Sensor irradiation, on the other hand, introduces charge traps, which cause the signal to decay exponentially. These two factors are a significant limitation for particle identification. Priming can improve the charge collection and longterm stability of the pulse shapes. To improve the measurement further, a high bias voltage has to be applied, increasing the measurement SNR. 
+Chapter~\ref{ch:meas} shows that the shape is heavily dependent on several factors, such as environmental temperature and received irradiation dose. Section~\ref{sec:templimit} shows that at temperatures lower than 150~K the signal from an $\upalpha$ starts deteriorating due to recombination of charges in the charge cloud. Sensor irradiation, on the other hand, introduces charge traps, which change the signal pulse shapes, as shown in section~\ref{sec:afterirrad}. In addition, irradiated sensors have a reduced long-term stability during operation, as shown in section~\ref{sec:longterm}. These factors are a significant limitation for particle identification. Priming can improve the charge collection and longterm stability of the pulse shapes, as shown in section~\ref{}. To improve the measurement further, a high bias voltage has to be applied, increasing the measurement SNR.
 %with the right polarity for hole collection. 
 %These settings will yield a high and narrow $\upalpha$ pulse, 
 %The most straightforward way is to discriminate between $\upalpha$ (rectangular) and $\upgamma$ or proton (triangular) pulses.
@@ -46,7 +45,7 @@ Temperature & 150~K -- 400~K \\
 Radiation dose & $<1\times10^{13}$~neq~cm$^{-2}~$s$^{-1}$ \\
 %Charge carriers & holes \\
 Bias voltage & $\sim$1~V $\upmu$m$^{-1}$ \\
-Signal-to-noise & 5 \\
+Signal-to-noise & >5 \\
 \end{tabular}
 \captionof{table}{Limitations to particle identification.}
 \label{tab:limits}
@@ -74,7 +73,7 @@ A signal pulse on the input is parametrised during the analysis process. The PSA
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/pulse/alpha2params}
-\caption{Pulse parametrisation.}
+\caption{Pulse parametrisation: FWHM, area, amplitude, base width and falling slope.}
 \label{fig:params}
 \end{figure}
 
@@ -187,7 +186,7 @@ The trigger can be vetoed by three signals: if the pulse analysis is still takin
 \label{eq:formfactor1}
 x\cdot a - y \cdot A \cdot BW \geq 0,
 \end{equation}
-where $a$ is the measured area, $A$ is the amplitude, $BW$ is the baseline width and $x$ and $y$ the weighting factors for the measured and calculated area, respectively. The output of the block is the boolean result of this equation.
+where $a$ is the measured area, $A$ is the amplitude, $BW$ is the baseline width and $x$ and $y$ the user-defined weighting factors for the measured and calculated area. Typical values for these factors are 2 and 1, respectively. The output of the block is the boolean result of this equation.
 \item[Evaluation] block takes in all the parameters from the analysis blocks and compares them against the user-defined qualifiers. If the parameters are within the bounds, the pulse is accepted, otherwise it is rejected. The corresponding counters within the block are incremented.
 
 \end{description}
@@ -372,7 +371,7 @@ The calibration was done using a quadruple-$\upalpha$ source containing \textsup
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.7\textwidth]{../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare}
-\caption{Energy spectrum of a quadruple-$\upalpha$ source using a CIVIDEC Cx spectroscopic amplifier and a CIVIDEC C2 current amplifier.}
+\caption{Energy spectrum of a quadruple-$\upalpha$ source using a CIVIDEC Cx spectroscopic amplifier and a CIVIDEC C2 current amplifier. The peak on the left part of the Cx distribution is attributed to the $\upgamma$ background.}
 \label{fig:c2cx4alpha}
 \end{figure}
 
@@ -441,7 +440,7 @@ Schematic 2) in figure~\ref{fig:classabcd} shows the negative charge carriers dr
 
 Schematic 3) in figure~\ref{fig:classabcd} shows the configuration of the deposited charge created by an incident $\upbeta$ particle -- Class C. The positive and negative charge carriers induce a triangular pulse while drifting to their respective electrodes. The number of electrons and holes created differs from pulse to pulse, but follows a Landau distribution, as discussed in previous chapters. The amplitude of the pulse is linearly dependent on the initial number of created carriers, but has a higher coefficient than that of Class A or B. The same goes for the width and base width. The width of the pulses is lower than that of Class A and B. The base width, however, can already be close to Class A and B for the widest Class C pulses. The coefficient between the measured and calculated area is close to 2. The difference between the base width and width is a wide distribution. The falling slope is a low value for triangular pulses of all amplitudes.
 
-$\upgamma$ particles interact with the diamond via Compton scattering, exciting an electron, which in turn ionises the sensor. Therefore the predicted pulse shape -- Class D -- will be similar to that of $\upbeta$ particles -- Class C. 
+$\upgamma$ particles interact with the diamond mostly via the photoelectric effect and via Compton scattering, exciting an electron, which in turn ionises the sensor. Therefore the predicted pulse shape -- Class D -- will be similar to that of $\upbeta$ particles -- Class C. 
 
 
 
@@ -479,7 +478,7 @@ In summary, Class E pulses stem from neutron interactions at the electrodes or i
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/classF}
-\caption{Class F.}
+\caption{Class F. Red points in the graphs marked 1, 2, 3 and 4 correspond to example pulses on the left.}
 \label{fig:classf}
 \end{figure}
 
@@ -540,6 +539,7 @@ Run & Source & Radiation & Energy [MeV] & Time [h]  & Triggers & Rate [s$^{-1}$]
 %The pulses acquired during the data taking are shown in persistence plots in figures~\ref{fig:accpulses}. 
 %Figure~\ref{fig:am1} showing the $^{241}$Am source background reveals that the diamond detector had been contaminated, probably with chipped-off grains of the unsealed source. This stems from the fact that $\upalpha$ pulses are recorded despite having a sheet of paper, which stops all the particles emitted by the source. 
 %However, the number of $\upalpha$ hits due to contamination is negligible - an estimated 1~h$^{-1}$. 
+Figure~\ref{fig:accpulses} shows five sets of data acquired by a non-irradiated diamond sensor. The measurements were carried out in the following order: a), c), d), e), b).
 
 Figure~\ref{fig:am2} shows a set of current pulses induced by the $\upalpha$ particles whereby only the electrons drift through the sensor. The great majority of particles creates a defined number of charge carriers. According to the FWHM of the pulse, the electrons drift for 9~ns before reaching the opposite electrode. The pulse amplitude is stable during the drift, with a gentle positive inclination. This hints on a weak negative space-charge built up across the sensor. Some pulses have a lower amplitude while retaining the width; the smaller pulse area means that there are fewer drifting charge carriers than a nominal value. This shows that some incident $\upalpha$ already lose a part of their energy while traveling through the air before hitting the sensor. Furthermore, there is a number of low-amplitude triangular pulses which are created by incident $\upgamma$ particles. Finally, the scarce entries above the baseline after the pulse stem from interference pulses.
 
@@ -589,7 +589,8 @@ Every individual parameter can be attributed a set of qualifiers with which a ce
 
 \clearpage
 \subsubsection{$^{241}$Am source, h$^+$ collection}
-The source emits $\upalpha$ particles at $\sim$5.5~MeV and 60~keV $\upgamma$ photons. Due to the losses in the air and in the electrode the measured $\upalpha$ energy varies -- between $\sim$5~MeV down to 1~MeV.  Figure~\ref{fig:scatterah} shows the parameter space of the acquired data for hole collection - Class A . Width, amplitude and calculated area qualifiers have been used to identify the $\upalpha$ pulses and reject the $\upgamma$. Figure~\ref{fig:1dalphaareah} shows a one-dimensional area distribution of the acquired data.
+\label{sec:amsrch}
+The source emits $\upalpha$ particles at $\sim$5.5~MeV and 60~keV $\upgamma$ photons. Due to the losses in the air and in the electrode the measured $\upalpha$ energy varies -- between $\sim$5~MeV down to 1~MeV.  Figure~\ref{fig:scatterah} shows the parameter space of the acquired data for hole collection - Class A . Width, amplitude and calculated area qualifiers have been used to identify the $\upalpha$ pulses and reject the $\upgamma$. Figure~\ref{fig:1dalphaareah} shows a one-dimensional area distribution of the acquired data. The MPV of the $\upgamma$ distribution is not at the expected position (30~pVs, which is approximately a factor of 20 lower than the $\upalpha$ peak). This is due to two factors: increased non-linearity in area measurement at the lower range as shown in figure~\ref{fig:ratiorange} and the fact that the threshold for self-triggering cuts the majority of the Landau distribution due to the low amplitude of the pulses. The effect is also observed in $\upgamma$ source measurements in section~\ref{sec:gammasrc}.
 \begin{description}
 \setlength\itemsep{-0.3em}
 \item[Width: ] A distinct horizontal line at 6.5~ns starting from 100 and peaking at 600~pVs shows the aforementioned spread of $\upalpha$ energies. The width of the pulse remains constant. $\upgamma$ cluster overlaps with the $\upalpha$ cluster at low energies. Width qualifier is used.
@@ -631,7 +632,7 @@ The source emits $\upalpha$ particles at $\sim$5.5~MeV and 60~keV $\upgamma$ pho
 
 \clearpage
 \subsubsection{$^{241}$Am source, e$^-$ collection}
-Figure~\ref{fig:scatterae} shows the parameter space of the acquired data for electron collection - Class B. Width, amplitude and calculated area qualifiers have been used to identify the $\upalpha$ pulses and reject the $\upgamma$. Figure~\ref{fig:1dalphaareae} shows a one-dimensional area distribution of the acquired data.
+Figure~\ref{fig:scatterae} shows the parameter space of the acquired data for electron collection - Class B. Width, amplitude and calculated area qualifiers have been used to identify the $\upalpha$ pulses and reject the $\upgamma$. Figure~\ref{fig:1dalphaareae} shows a one-dimensional area distribution of the acquired data. The $\upgamma$ MPV of 70~pVs is not as expected (30~pVs); the reason for the shift is discussed in section~\ref{sec:amsrch}.
 \begin{description}
 \setlength\itemsep{-0.3em}
 \item[Width: ] A distinct horizontal line at 8.5~ns starting from 100 and peaking at 600~pVs shows the spread of $\upalpha$ energies. The width of the pulse remains constant. $\upgamma$ cluster does not overlap with the $\upalpha$ cluster at low energies as none of the $\upgamma$ pulses are as wide as the $\upalpha$. Width qualifier is used.
@@ -692,6 +693,7 @@ Figure~\ref{fig:scattersr} shows the parameter space of the acquired data for $\
 
 \clearpage
 \subsubsection{$^{60}$Co source}
+\label{sec:gammasrc}
 The parameter space of the $^{60}$Co source overlaps entirely with that of the $^{90}$Sr source. This renders it virtually impossible to distinguish between $\upgamma$ and $\upbeta$ particles. Comparing the width of the $\upgamma$ and $\upbeta$ and the high reach of the former, the electron collection of the alphas would need to be used to effectively discriminate between the two types of particles. 
 
 The one-dimensional histogram in figure~\ref{fig:1dcoarea} shows a quasi-Landau distribution with the MPV at $\sim$60~pVs, which is in agreement with the background $\upgamma$ radiation emitted by the $^{241}Am$~source, as shown in figure~\ref{fig:1dalphaareae} in the previous subsection. This is again not a pure Landau distribution -- the real MPV should be peaking at 30~pVs, with a minimum expected area of 20~pVs at 2/3 of the MPV. This is not possible to measure due to the high electronics noise of the amplifier and consequently a high trigger threshold to avoid noise triggers.
@@ -795,7 +797,7 @@ Thermal neutrons do not interact with the diamond bulk due to their low kinetic 
 \label{eq:reaction}
    ^6_3Li   +   ^1_0n \;\rightarrow\; ^3_1H_{(2.73 MeV)} + \alpha_{(2.05 MeV)}
 \end{equation}
-The particles in the first case are produced outside the diamond and get stopped immediately upon hitting the sensor. The resulting pulses for both particles have a rectangular shape of the same width, because the carriers drift with the same velocity in both cases. The difference is in the number of free carriers produced - the tritium creates more (proportional to the deposited energy), which in turn induces a higher pulse.
+The particles in the first case are produced outside the diamond and get stopped immediately upon hitting the sensor. The resulting pulses for both particles have a rectangular shape of the same width, because the carriers drift with the same velocity in both cases. The difference is in the number of free carriers produced - the tritium creates more (proportional to the deposited energy), which in turn induces a higher pulse. The tritium and $\upalpha$ particle produced travel at 180~\textdegree from each other. Therefore a sensor placed after the converter foil can detect at most one of the two.
 
 TRIGA MARK II neutron reactor emits large amounts of $\upgamma$ radiation in the energy range up to 3~MeV. This already affects the measurements of $\upalpha$ particles, the energy of which peaks at 2.05 MeV in the case of \textsuperscript{6}Li converter foil. However, $\upgamma$ background radiation can be suppressed by discriminating current pulses of $\upgamma$ from those induced by $\upalpha$ particles. 
 %This idea has already been implemented in offline analysis in~\cite{PAVEL:00000,PAVEL:00002}. 
@@ -826,7 +828,9 @@ The data shown in figure~\ref{fig:scattertriga1} show a high flux of $\upgamma$,
 \item[Width] The $^3$He peak is clearly visible in the top left plot and has almost no overlap with the $\upgamma$ cluster. The $\upalpha$ cluster has a much lower energy and is in the same energy range as the $\upgamma$. However, its width is higher and makes a separation between the $\upgamma$ and the $\upalpha$. By setting a qualifier to the right value, the photon background is cut away, leaving only the thermal neutron decay products in the data set. 
 \item[Amplitude] A clear difference between the linear coefficients is seen. However, at low area values the $\upalpha$ peak is already hidden by the $\upgamma$, which makes the amplitude qualifier insufficient.
 \end{description}
-The resulting one-dimensional area histogram before and after applied cuts is shown in figure~\ref{fig:areatriga0}. The blue distribution is the mixed field of background $\upgamma$, tritium and $\upalpha$ particles. The latter are completely hidden in the $\upgamma$ energy distribution. After applied qualifiers the $\upalpha$ peak appears. There are $2'422$ and $1'174$ entries in the respective peaks, pointing to a $\sim$50~\% detection efficiency of $\upalpha$ particles. This loss is mostly due to energy losses in the air, which yields rectangular pulses with a low amplitude. The mean values are at 260~pVs and 100~pVs, which correspond to 2.1~MeV and 0.8~MeV. $\upalpha$ therefore loses 60~\% of its energy whereas tritium only loses 22~\%.
+The resulting one-dimensional area histogram before and after applied cuts is shown in figure~\ref{fig:areatriga0}. The blue distribution is the mixed field of background $\upgamma$, tritium and $\upalpha$ particles. The latter are completely hidden in the $\upgamma$ energy distribution. After applied qualifiers the $\upalpha$ peak appears. There are $2'422$ and $1'174$ entries in the respective peaks, pointing to a $\sim$50~\% detection efficiency of $\upalpha$ particles. This is due to the limitations of the measurement system, which can not detect low-energy $\upalpha$ pulses. These have a low energy due to losses in the air, yielding rectangular pulses with amplitudes below the trigger level. The mean values of the distributions for tritium and $\upalpha$ are at 260~pVs and 100~pVs, which correspond to 2.1~MeV and 0.8~MeV. $\upalpha$ therefore on average lose 60~\% of their energy whereas tritium particles only lose 22~\%.
+
+Given that the sensor can only detect one of the two particles per neutron interaction due to the geometry of the decay trajectories and assuming that the sensor geometry allows for detection of 100~\% of the converted neutrons, the converted thermal neutron detection efficiency of the system is 75~\%.
 
 \clearpage
 \begin{figure}[!t]

@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {559.28998756408691, 782.8900146484375}}</string>
+		<string>{{0, 0}, {559, 783}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -72,62 +72,6 @@
 	<integer>8</integer>
 	<key>GraphicsList</key>
 	<array>
-		<dict>
-			<key>Bounds</key>
-			<string>{{119.42239793400175, 248.11070869867055}, {9, 11}}</string>
-			<key>Class</key>
-			<string>ShapedGraphic</string>
-			<key>FitText</key>
-			<string>YES</string>
-			<key>Flow</key>
-			<string>Resize</string>
-			<key>FontInfo</key>
-			<dict>
-				<key>Font</key>
-				<string>ArialMT</string>
-				<key>Size</key>
-				<real>9</real>
-			</dict>
-			<key>ID</key>
-			<integer>170</integer>
-			<key>Shape</key>
-			<string>Rectangle</string>
-			<key>Style</key>
-			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>stroke</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-			</dict>
-			<key>Text</key>
-			<dict>
-				<key>Pad</key>
-				<integer>0</integer>
-				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
-
-\f0\fs18 \cf0 d
-\fs12 \sub 0}</string>
-				<key>VerticalPad</key>
-				<integer>0</integer>
-			</dict>
-			<key>Wrap</key>
-			<string>NO</string>
-		</dict>
 		<dict>
 			<key>Class</key>
 			<string>LineGraphic</string>
@@ -263,7 +207,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs18 \cf0 R
+\f0\fs18 \cf0 D
 \fs12 \sub 0}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
@@ -1252,7 +1196,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{125.60975414974314, 209.52127222599108}, {7, 14}}</string>
+			<string>{{125.60975414974314, 209.52127222599108}, {6, 14}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1307,7 +1251,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{215.38922082729727, 339.16031372157454}, {7, 14}}</string>
+			<string>{{215.38922082729727, 339.16031372157454}, {6, 14}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1582,7 +1526,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2016-06-05 19:05:39 +0000</string>
+	<string>2016-09-03 13:34:03 +0000</string>
 	<key>Modifier</key>
 	<string>Matevz Cerv</string>
 	<key>NotesVisible</key>
@@ -1613,7 +1557,7 @@
 		<key>NSPaperSize</key>
 		<array>
 			<string>size</string>
-			<string>{595.28998756408691, 841.8900146484375}</string>
+			<string>{595, 842}</string>
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
@@ -1677,7 +1621,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{49.779736101089476, 108.14978064440236}, {365.19824095401043, 311.89427574841903}}</string>
+		<string>{{43.171806530148395, 101.54185107346129}, {371.3656418868888, 318.50220531936009}}</string>
 		<key>Zoom</key>
 		<real>2.2699999809265137</real>
 		<key>ZoomValues</key>

@@ -51,28 +51,37 @@ int32_t main (void) {
   //                             "../plots/MSBM-34-eff.pdf", "../plots/MSBM-34-occ.pdf"};
   string fileName[nFiles] = { "../data/Z0hist.root",
                               "../data/D0hist.root" };
+  string fitNum[nFiles] = { "Mean    53.2#pm0.4 mm",
+                            "Mean    -8.4#pm0.1 mm"};
+  string fitNumRms[nFiles] = { "RMS     52.0#pm0.4 mm",
+                               "RMS      7.2#pm0.1 mm"};
   string plotName[nFiles][nSaves] = { "../plots/Z0.pdf", "../plots/Z0.eps", "../plots/Z0.ps", "../plots/Z0.png",
                               "../plots/D0.pdf", "../plots/D0.eps", "../plots/D0.ps", "../plots/D0.png" };
   string histName[nPlots] = { "histpaired_0" , "histunpaired_0"  };
   string histLeg[nPlots] = {  "Paired bunches" ,"Unpaired bunches"};
   string xAx[nFiles] = { "Z0 [mm]", "D0 [mm]"};
+  string tracks[nFiles] = { "Tracks [20 mm]", "Tracks [5 mm]"};
+
   int yaxis[nPlots] = {100, 160};
   // int max[nPlots] = { 40, 100, 100, 750 };
 
   TApplication *app = new TApplication("app",0,0);
   DrawFuns *dr = new DrawFuns();
   TCanvas *can = new TCanvas("ca","ca",800,600);
-  TLegend *leg = new TLegend (0.62,0.77,0.93,0.93);
+  TLegend *leg = new TLegend (0.62,0.77,0.95,0.93);
+  TF1* fit1 = new TF1("fit1","gaus");
 
   TH1D *hist[nPlots];
   for (int i=0; i<nFiles; i++) {
-            SetAtlasStyle();
+    SetAtlasStyle();
 
     dr->prettify(can);
-      gStyle->SetGridColor(kGray);
-      gStyle->SetGridWidth(1);
-      gStyle->SetGridStyle(1001);
-  can->SetRightMargin(0.06);
+      // gStyle->SetGridColor(kGray);
+      // gStyle->SetGridWidth(0);
+      // gStyle->SetGridStyle(1001);
+    gPad->SetGrid(0,0);
+    gPad->SetTicks();
+    can->SetRightMargin(0.06);
     f = new TFile(fileName[i].c_str());
     for (int plot=0; plot<nPlots; plot++) {
       if (!(TH1D*)f->Get(histName[plot].c_str() ) ) {
@@ -85,9 +94,9 @@ int32_t main (void) {
         // hist[plot]->GetXaxis()->SetTitle(xAx[plot].c_str() );
         hist[plot]->GetXaxis()->SetTitle("Z0 [mm]" );
         hist[plot]->GetXaxis()->SetRangeUser(-601,601);
-        hist[plot]->GetYaxis()->SetRangeUser(0,yaxis[i]+1);
-        hist[plot]->GetYaxis()->SetLimits(0,yaxis[i]+1);
-        hist[plot]->GetYaxis()->SetTitle("Entries");
+        hist[plot]->GetYaxis()->SetRangeUser(0,yaxis[i]+20);
+        hist[plot]->GetYaxis()->SetLimits(0,yaxis[i]+20);
+        hist[plot]->GetYaxis()->SetTitle(tracks[i].c_str() );
         hist[plot]->SetLineStyle(1);
           hist[plot]->GetXaxis()->SetTitleSize(0.05);
           hist[plot]->GetYaxis()->SetTitleSize(0.05);
@@ -102,7 +111,10 @@ int32_t main (void) {
           hist[plot]->GetYaxis()->SetLabelSize(0.04);
           hist[plot]->GetYaxis()->SetTickLength(0.01);
 
-        hist[plot]->Draw();
+        hist[plot]->SetMarkerStyle(20);// (for marker)
+        hist[plot]->Sumw2(); //(for error bar)
+        hist[plot]->Draw("pe");
+        hist[plot]->Fit("fit1","W");
         SetAtlasStyle();
       }
       else {
@@ -122,10 +134,13 @@ int32_t main (void) {
           hist[plot]->GetYaxis()->SetLabelSize(0.04);
           hist[plot]->GetYaxis()->SetTickLength(0.01);
         // hist[plot]->GetXaxis()->SetRangeUser(-150,151);
-        hist[plot]->GetYaxis()->SetRangeUser(0,yaxis[i]+1);
-        hist[plot]->GetYaxis()->SetLimits(0,yaxis[i]+1);
+        hist[plot]->GetYaxis()->SetRangeUser(0,yaxis[i]+20);
+        hist[plot]->GetYaxis()->SetLimits(0,yaxis[i]+20);
         hist[plot]->GetYaxis()->SetTitle("Entries");
-        hist[plot]->SetLineStyle(2);
+        // hist[plot]->SetLineStyle(2);
+        hist[plot]->SetMarkerStyle(24);// (for marker)
+        hist[plot]->Sumw2(); //(for error bar)
+
         hist[plot]->Draw("same");
 
 
@@ -133,23 +148,38 @@ int32_t main (void) {
 
 
 
-      leg->AddEntry(hist[plot], histLeg[plot].c_str(), "L" );
+      leg->AddEntry(hist[plot], histLeg[plot].c_str(), "LEP" );
       // hist[plot]->SetMaximum(max[i]);
       // can->Update();
       // can->WaitPrimitive();
     }
+      leg->AddEntry( fit1, "Gaussian fit for paired", "L");
     int color = 1;
     double x = 0.18, y=0.88;
     leg->SetLineWidth(0);
     leg->Draw();
     SetAtlasStyle();
+    leg->SetBorderSize(0);
+    leg->SetFillStyle(0);
+    leg->SetFillColor(0);
     TLatex l; //l.SetTextAlign(12); l.SetTextSize(tsize);
     l.SetNDC();
     l.SetTextFont(72);
     l.SetTextColor(color);
-    l.DrawLatex(x,y,"ATLAS Internal");
+    l.DrawLatex(x,y,"ATLAS Preliminary");
     l.DrawLatex(x,y-0.055,"DBM");
+    l.SetTextFont(42);
+    // l.DrawLatex(x-0.020,y-0.575,"Data 2015");
+    // l.DrawLatex(x-0.020,y-0.625,"July, 1 run");
+    l.DrawLatex(x-0.000,y-0.305,"Data 2015");
+
+    l.SetTextSize(0.034);
+    l.DrawLatex(x+0.524, y-0.148, fitNum[i].c_str());
+    l.DrawLatex(x+0.524, y-0.202, fitNumRms[i].c_str());
+    // l.DrawLatex(x+0.47,y-0.3,fitNum[i].c_str());
     can->Update();
+    can->WaitPrimitive();
+    can->WaitPrimitive();
     can->WaitPrimitive();
     can->Update();
     for (int s=0; s<nSaves; s++)

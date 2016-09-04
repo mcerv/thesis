@@ -1,0 +1,1 @@
+Longitudinal distance of the closest approach of the projected particle tracks to the interaction point as recorded by a single DBM telescope. The Gaussian fit yields a Z0 with a mean of 53.2~mm and an RMS of 52.0~mm. No alignment has yet been included. Data acquired during one run in July 2015.
