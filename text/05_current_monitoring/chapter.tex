@@ -31,7 +31,7 @@ Pulse shape analysis (PSA) is a common software tool for extracting information 
 The offline pulse shape analysis has already been used for particle identification with a diamond sensor~\cite{PAVEL:00000, PAVEL:00002}. An effort has been made to implement an online and real time application for this analysis by porting the algorithms into an FPGA. This section first describes the device specifications. Then it describes in detail the PSA algorithms and the structure of the code. Afterwards it discusses the performance results, which showcase the limitations of the device. Finally it describes the data acquired with radioactive sources and in neutron reactors.
 
 \section{Requirements}
-Chapter~\ref{ch:meas} shows that the shape is heavily dependent on several factors, such as environmental temperature and received irradiation dose. Section~\ref{sec:templimit} shows that at temperatures lower than 150~K the signal from an $\upalpha$ starts deteriorating due to recombination of charges in the charge cloud. Sensor irradiation, on the other hand, introduces charge traps, which change the signal pulse shapes, as shown in section~\ref{sec:afterirrad}. In addition, irradiated sensors have a reduced long-term stability during operation, as shown in section~\ref{sec:longterm}. These factors are a significant limitation for particle identification. Priming can improve the charge collection and longterm stability of the pulse shapes, as shown in section~\ref{}. To improve the measurement further, a high bias voltage has to be applied, increasing the measurement SNR.
+Chapter~\ref{ch:meas} shows that the shape is heavily dependent on several factors, such as environmental temperature and received irradiation dose. Section~\ref{sec:templimit} shows that at temperatures lower than 150~K the signal from an $\upalpha$ starts deteriorating due to recombination of charges in the charge cloud. Sensor irradiation, on the other hand, introduces charge traps, which change the signal pulse shapes, as shown in section~\ref{sec:afterirrad}. In addition, irradiated sensors have a reduced long-term stability during operation, as shown in section~\ref{sec:longterm}. These factors are a significant limitation for particle identification. Priming can improve the charge collection and longterm stability of the pulse shapes, as shown in section~\ref{sec:longterm}. To improve the measurement further, a high bias voltage has to be applied, increasing the measurement SNR.
 %with the right polarity for hole collection. 
 %These settings will yield a high and narrow $\upalpha$ pulse, 
 %The most straightforward way is to discriminate between $\upalpha$ (rectangular) and $\upgamma$ or proton (triangular) pulses.
@@ -45,7 +45,7 @@ Temperature & 150~K -- 400~K \\
 Radiation dose & $<1\times10^{13}$~neq~cm$^{-2}~$s$^{-1}$ \\
 %Charge carriers & holes \\
 Bias voltage & $\sim$1~V $\upmu$m$^{-1}$ \\
-Signal-to-noise & >5 \\
+Signal-to-noise & $>$5 \\
 \end{tabular}
 \captionof{table}{Limitations to particle identification.}
 \label{tab:limits}
@@ -560,9 +560,8 @@ Pulse shapes caused by neutrons are described in detail in~\cite{PAVEL:00003, CH
 
 
 \subsection{Scatter plots}
-The parameters of the pulses are plotted in 2D histograms - in form of scatter plots. The energy spectrum is directly proportional to the measured area of the current pulses, therefore all the parameters are plotted as a function of the pulse area.
-
-Every individual parameter can be attributed a set of qualifiers with which a certain part of the distribution can be rejected. There are two ways to apply the qualifiers. One is to set the minimum and maximum value for a specific parameter. The accepted pulses are those in between these two values. The minimum and the maximum qualifier are marked with a blue and a red line in the subsequent scatter plots. The second way is to apply a linear cut to the distribution in the scatter plot. The user can choose the slope of the line and to accept either the pulses above or below the line. The colour of the line is blue if the part above the line is accepted and red if opposite. Currently two scatter plots have this option implemented: area vs amplitude and area vs amplitude$\times$base width. The latter represents the Form Factor, which is discussed in section~\ref{subsec:algorithm}.
+The parameters of the pulses are plotted in 2D histograms - in form of scatter plots. The energy spectrum is directly proportional to the measured area of the current pulses, therefore all the parameters are plotted as a function of the pulse area. 
+Every individual parameter can be attributed a set of qualifiers with which a certain part of the distribution can be rejected. There are two ways to apply the qualifiers. One is to set the minimum and maximum value for a specific parameter. The accepted pulses are those in between these two values. The minimum and the maximum qualifier are marked with a blue and a red line in the scatter plots. The second way is to apply a linear cut to the distribution in the scatter plot. The user can choose the slope of the line and to accept either the pulses above or below the line. The line is blue if the part above the line is accepted and red if opposite. Currently two scatter plots have this option implemented: area vs amplitude and area vs amplitude$\times$base width. The latter represents the Form Factor, which is discussed in section~\ref{subsec:algorithm}.
 
 %The sets of plots in figures~\ref{fig:scatterae}, \ref{fig:scatterah}, \ref{fig:scattersr} and \ref{fig:scatterco} show the above listed parameters plotted as a function of the pulse area for $^{241}$Am (electrons and holes), $^{90}$Sr and $^{60}$Co source, respectively. Any distinguishable difference between the plots of two sources would suggest that that particular parameter can be used to distinguish one type radiation from the other. 
 %For the most part the $\upgamma$ are considered the rejected pulses (greyscale colour palette) whereas $\upalpha$ particles or neutrons are accepted (yellow colour palette). In special cases only a certain types of neutron interactions are accepted, as depicted in section~\ref{sec:nm}.
@@ -590,11 +589,13 @@ Every individual parameter can be attributed a set of qualifiers with which a ce
 \clearpage
 \subsubsection{$^{241}$Am source, h$^+$ collection}
 \label{sec:amsrch}
-The source emits $\upalpha$ particles at $\sim$5.5~MeV and 60~keV $\upgamma$ photons. Due to the losses in the air and in the electrode the measured $\upalpha$ energy varies -- between $\sim$5~MeV down to 1~MeV.  Figure~\ref{fig:scatterah} shows the parameter space of the acquired data for hole collection - Class A . Width, amplitude and calculated area qualifiers have been used to identify the $\upalpha$ pulses and reject the $\upgamma$. Figure~\ref{fig:1dalphaareah} shows a one-dimensional area distribution of the acquired data. The MPV of the $\upgamma$ distribution is not at the expected position (30~pVs, which is approximately a factor of 20 lower than the $\upalpha$ peak). This is due to two factors: increased non-linearity in area measurement at the lower range as shown in figure~\ref{fig:ratiorange} and the fact that the threshold for self-triggering cuts the majority of the Landau distribution due to the low amplitude of the pulses. The effect is also observed in $\upgamma$ source measurements in section~\ref{sec:gammasrc}.
+The source emits $\upalpha$ particles at $\sim$5.5~MeV and 60~keV $\upgamma$ photons. Due to the losses in the air and in the electrode the measured $\upalpha$ energy varies -- between $\sim$5~MeV down to 1~MeV.  Figure~\ref{fig:scatterah} shows the parameter space of the acquired data for hole collection - Class A . Width, amplitude and calculated area qualifiers have been used to identify the $\upalpha$ pulses and reject the $\upgamma$. Figure~\ref{fig:1dalphaareah} shows a one-dimensional area distribution of the acquired data. The MPV of the $\upgamma$ distribution is not at the expected position (30~pVs, which is approximately a factor of 20 lower than the $\upalpha$ peak). 
+This is due to two factors: increased non-linearity in area measurement at the lower range as shown in figure~\ref{fig:ratiorange} and the fact that the threshold for self-triggering cuts the majority of the Landau distribution due to the low amplitude of the pulses. 
+The effect is also observed in $\upgamma$ source measurements in section~\ref{sec:gammasrc}.
 \begin{description}
 \setlength\itemsep{-0.3em}
 \item[Width: ] A distinct horizontal line at 6.5~ns starting from 100 and peaking at 600~pVs shows the aforementioned spread of $\upalpha$ energies. The width of the pulse remains constant. $\upgamma$ cluster overlaps with the $\upalpha$ cluster at low energies. Width qualifier is used.
-\item[Base width: ] Wider than the FWHM, yet still constant over the entire range. High overlap with $\upgamma$.
+\item[Base width: ] Wider than the FWHM, yet still constant over the range. High overlap with $\upgamma$.
 \item[Amplitude: ] Linear increase with area. The coefficient for $\upalpha$ pulses is lower than that for $\upgamma$. Amplitude qualifier is used.
 \item[Calculated area: ] Barely distinguishable difference in slope coefficients for $\upalpha$ and $\upgamma$. Calculated area qualifier is used.
 \item[Base width -- width: ] Minimal difference for $\upalpha$, high spread for $\upgamma$ as expected. At low $\upgamma$ area the overlap is high, so the qualifier cannot be used.
@@ -603,7 +604,9 @@ The source emits $\upalpha$ particles at $\sim$5.5~MeV and 60~keV $\upgamma$ pho
 \begin{figure}[]
 \centering
 \includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0}
-\caption{$^{241}$Am area histograms for hole collection. The green histogram represents all collected data whereas the red one marks the data whereby the pulse parameters are within the qualifiers. The $\upalpha$ peak at 600~pVs is clearly visible, followed by a $\upgamma$ quasi-Landau distribution with an MPV of $\sim$70~pVs and a noise peak at the very left of the area distribution. These two contributions have been rejected by the qualifiers.}
+\caption{$^{241}$Am area histograms for hole collection. The green histogram represents all collected data whereas the red one marks the data whereby the pulse parameters are within the qualifiers. The $\upalpha$ peak at 600~pVs is clearly visible, followed by a $\upgamma$ quasi-Landau distribution with an MPV of $\sim$70~pVs and a noise peak at the very left of the area distribution. 
+%These two contributions have been rejected by the qualifiers.
+}
 \label{fig:1dalphaareah}
 \end{figure}
 %The shape of the pulse from this type of radiation retains the width even at smaller energies. Only its amplitude is decreased. This is because the free charge carriers in the diamond are traveling with the same speed in all cases, inducing rectangular pulses of the same widths. 
@@ -850,7 +853,7 @@ To sum up, by applying the FWHM qualifier to the acquired data from the TRIGA ne
 
 
 
-
+\newpage\null\thispagestyle{empty}\newpage
 %------------------------------------------------
 \clearpage
 \subsection{Fusion power monitoring}
@@ -870,7 +873,6 @@ The $^{239}$Pu~Be neutron source has been used to simulate the fusion reactor. I
 
 A very interesting interaction point is the ballistic centre~\cite{PAVEL:00001, CHRISSI:00005} of the diamond. A ballistic centre is the position from which it takes the holes and the electrons the same amount of time to drift to the respective electrodes. In this case the shortest possible pulse is created. Conversely, to conserve the collected charge and thus the pulse area, the pulse amplitude must be the highest at the ballistic centre. The entries in between are created by neutron interactions at random positions in the diamond, which produce pulses of various shapes. 
 %at 4~ns is created when a neutron interacts .
-
 
 \clearpage
 \begin{figure}[]
@@ -938,7 +940,7 @@ To sum up, recoil protons can be extracted from a mix of created particles after
 
 
 
-
+\newpage\null\thispagestyle{empty}\newpage
 %-------------------------------------------------
 \clearpage
 \subsection{Fast and thermal neutron monitoring}
