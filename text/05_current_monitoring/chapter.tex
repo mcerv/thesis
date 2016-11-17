@@ -46,6 +46,7 @@ Radiation dose & $<1\times10^{13}$~neq~cm$^{-2}~$s$^{-1}$ \\
 %Charge carriers & holes \\
 Bias voltage & $\sim$1~V $\upmu$m$^{-1}$ \\
 Signal-to-noise & $>$5 \\
+\hline
 \end{tabular}
 \captionof{table}{Limitations to particle identification.}
 \label{tab:limits}
@@ -55,7 +56,7 @@ Signal-to-noise & $>$5 \\
 
 
 \section{Device specifications}
-The CIVIDEC ROSY readout system has been used for this task. It has a single BNC input with a $50~\Omega$ or $1~M\Omega$ termination and a DC or AC coupling. The analog chain has a 250~MHz bandwidth limit. The input range can be set from $\pm$50~mV up to $\pm$5~V. The signal offset can be set to any value within this range. The ADC samples the signal with an 8-bit precision at a rate of up to 5~GSPS. The PSA uses the highest sampling to achieve width measurement resolution of 0.2~ns. 
+The CIVIDEC ROSY readout system has been used for this task. It has a single BNC input with a $50~\Omega$ or $1~M\Omega$ termination and a DC or AC coupling. The analogue chain has a 250~MHz bandwidth limit. The input range can be set from $\pm$50~mV up to $\pm$5~V. The signal offset can be set to any value within this range. The ADC samples the signal with an 8-bit precision at a rate of up to 5~GSPS. The PSA uses the highest sampling to achieve width measurement resolution of 0.2~ns. 
 %The spectroscopic application does not need such a fine timing resolution and therefore operates at a reduced sampling rate of 0.8~ns. 
 The amplitude resolution depends on the chosen input range, but at 256 ADC counts per sample, it can be as low as 0.39~mV~s$^{-1}$ at the range of $\pm$50~mV and as high as 39~mV~s$^{-1}$ at the range of $\pm$5~V.
 
@@ -72,8 +73,8 @@ A signal pulse on the input is parametrised during the analysis process. The PSA
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/pulse/alpha2params}
-\caption{Pulse parametrisation: FWHM, area, amplitude, base width and falling slope.}
+\includegraphics[width=0.6\textwidth]{../../../CIVIDEC/dataRead/data/plots/pulse/alpha2params}
+\caption{Pulse parametrisation: FWHM, area, amplitude, base width and maximum falling slope.}
 \label{fig:params}
 \end{figure}
 
@@ -94,8 +95,8 @@ The Amplitude $\times$ Base width qualifier is referred to as the \emph{calculat
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{05_current_monitoring/plots/formfac1}
-\caption{Form Factor. The black squares show the calculated area of the pulse. The calculated area is similar to the measured area for rectangular pulses, but not so much for triangular pulses. The red and blue dot in the right plot are the value entries of the two pulses shown. The red and blue oval shapes depict the regions for the values expected for triangular and rectangular pulses. %By carefully choosing the linear qualifier (black line) and taking only the entries below the cut rectangular pulses can be identified.
+\includegraphics[width=0.6\textwidth]{05_current_monitoring/plots/formfac1}
+\caption{Form Factor. The black squares show the calculated area of the pulse. The calculated area is similar to the measured area for rectangular pulses, but less so for triangular pulses. The red and blue dot in the right plot are the value entries of the two pulses shown. The red and blue oval shapes depict the regions for the values expected for triangular and rectangular pulses. %By carefully choosing the linear qualifier (black line) and taking only the entries below the cut rectangular pulses can be identified.
 }
 \label{fig:formfac1}
 \end{figure}
@@ -124,14 +125,14 @@ The Amplitude $\times$ Base width qualifier is referred to as the \emph{calculat
 \section{Description of the firmware}
 The application is built on top of the existing platform that handles the low-level connectivity with the hardware. It also provides the interface to the ADC data, the input/output registers and the USB data transfer. The PSA application has a set of modules that handle the data input and output and a module for signal analysis, as shown in figure~\ref{fig:application}. 
 %The data handling modules are very similar in all the applications to ensure compatibility of the communication between software and firmware and the readout data format. 
-The data handling layer consists of the final state machine (FSM), the histogram builder, the raw signal handler, the USB FIFO buffer and the register array.
+The data handling layer consists of the finite state machine (FSM), the histogram builder, the raw signal handler, the USB FIFO buffer and the register array.
 
 The firmware is written entirely in VHDL. The diagram in figure~\ref{fig:application} shows the module architecture. The ADC provides the module with 32 digitised signal samples every clock cycle. The signal is routed directly to the pulse analyser and into the raw signal handler. The analyser outputs are connected to I/O registers and to histogram buffers. Both the histogram buffers and raw signal buffers are connected to the USB FIFO through a multiplexor. The firmware communication to the controller is done via input/output (I/O) registers (control and status registers, counters) and serially via USB (histogram data, waveforms). 
 
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{05_current_monitoring/plots/application}
+\includegraphics[width=0.6\textwidth]{05_current_monitoring/plots/application}
 \caption{Firmware design structure.}
 \label{fig:application}
 \end{figure}
@@ -153,7 +154,7 @@ This module is different for different applications. The Pulse Shape Analysis (P
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{05_current_monitoring/plots/analysis1}
+\includegraphics[width=0.6\textwidth]{05_current_monitoring/plots/analysis1}
 \caption{Code design plan.}
 \label{fig:architecture}
 \end{figure}
@@ -186,7 +187,7 @@ The trigger can be vetoed by three signals: if the pulse analysis is still takin
 \label{eq:formfactor1}
 x\cdot a - y \cdot A \cdot BW \geq 0,
 \end{equation}
-where $a$ is the measured area, $A$ is the amplitude, $BW$ is the baseline width and $x$ and $y$ the user-defined weighting factors for the measured and calculated area. Typical values for these factors are 2 and 1, respectively. The output of the block is the boolean result of this equation.
+where $a$ is the measured area, $A$ is the amplitude, $BW$ is the baseline width and $x$ and $y$ the user-defined weighting factors for the measured and calculated area. Typical values for these factors are 3 and 2, respectively. These values define the slope of the linear qualifier described in figure~\ref{fig:formfac1}. The output of the block is the boolean result of this equation.
 \item[Evaluation] block takes in all the parameters from the analysis blocks and compares them against the user-defined qualifiers. If the parameters are within the bounds, the pulse is accepted, otherwise it is rejected. The corresponding counters within the block are incremented.
 
 \end{description}
@@ -196,29 +197,29 @@ where $a$ is the measured area, $A$ is the amplitude, $BW$ is the baseline width
 \label{sec:vecclean}
 The routine for measuring pulse area and width must have a specific algorithm implemented to carry out the measurements correctly. The core point is that the routine precisely defines the edges of a pulse. It does so by means of \emph{vector cleaning}, presented in figure~\ref{fig:samplepulse}. An important input, beside the ADC data and the measurement threshold, is the position of the sample with the highest amplitude. 
 
-The signal arrives from the ADC as a set of 32 8-bit samples every every clock cycle with a period of 6.4~ns. All 32 samples are compared against the width measurement threshold. If a sample value is equal or higher than this threshold, a binary 1 is set in a 32-bit \emph{vector} on the position corresponding to the position of the sample in the incoming ADC data set. The resulting vector might also include some noise at the edges of the pulse, depending on the height of the width measurement threshold. The old routine simply counts the binary ones in this vector to get the pulse width. This works well for measuring the FWHM because the threshold is high. However, for width measurements at 25~\%, 12.5~\% or 6.25~\% of the pulse height this might already become a problem, because the noise might be counted in as well. This is why the new routine cleans the outliers in this vector before counting the remaining ones in the clean vector. 
+The signal arrives from the ADC as a set of 32 8-bit samples every clock cycle with a period of 6.4~ns. All 32 samples are compared against the width measurement threshold. If a sample value is equal or higher than this threshold, a binary 1 is set in a 32-bit \emph{vector} on the position corresponding to the position of the sample in the incoming ADC data set. The resulting vector might also include some noise at the edges of the pulse, depending on the height of the width measurement threshold. The old routine simply counts the binary ones in this vector to get the pulse width. This works well for measuring the FWHM because the threshold is high. However, for width measurements at 25~\%, 12.5~\% or 6.25~\% of the pulse height this might already become a problem, because the noise might be counted in as well. This is why the new routine cleans the outliers in this vector before counting the remaining ones in the clean vector. 
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{05_current_monitoring/plots/pulse1}
+\includegraphics[width=0.6\textwidth]{05_current_monitoring/plots/pulse1}
 \caption{A sample pulse. The first vector shows which samples are above the width measurement threshold. The second vector is a clean vector. The third line shows the position of the maximum amplitude. The vector cleaning algorithm starts from the maximum amplitude and continues in both ways along the vector. From the first falling edge on it sets all bits to 0.}
 \label{fig:samplepulse}
 \end{figure}
 
 The routine starts from the position of the maximum height. It follows the vector in both ways and finds the first falling edge (0 at this position and 1 at the previous one). From there on it rewrites any binary 1 with a binary 0. The resulting clean vector only has one bunched set of binary ones which are summed, yielding a precise pulse width. The area measurement is similar - it only integrates over the samples marked in the clean vector. Both measurement routines, for area and for width, are implemented separately so that the area routine can have a different threshold set.
 
-This section explains how the algorithm is designed. The idea for it was tested using Excel and was only afterwards ported to the VHDL. The underlying algorithm first cleans the vector. Then it passes the cleaned vector either to the width or area measurement, as shown in figures~\ref{fig:width} and \ref{fig:area}. The width measurement module only sums the ones in the vector whereas the area measurement module sums the data samples marked by the cleaned vector. Both modules issue a \emph{valid} signal when they finish the measurement.
+This section explains how the algorithm is designed. The idea for it was tested using Microsoft Excel and was only afterwards ported to the VHDL. The underlying algorithm first cleans the vector. Then it passes the cleaned vector either to the width or area measurement, as shown in figures~\ref{fig:width} and \ref{fig:area}. The width measurement module only sums the ones in the vector whereas the area measurement module sums the data samples marked by the cleaned vector. Both modules issue a \emph{valid} signal when they finish the measurement.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.95\textwidth]{05_current_monitoring/plots/width2}
+\includegraphics[width=0.85\textwidth]{05_current_monitoring/plots/width2}
 \caption{This block counts the remaining binary ones in the clean vectors and outputs this value as the pulse width.}
 \label{fig:width}
 \end{figure}
 
 
 \begin{figure}[!t]
-\centering\includegraphics[width=0.95\textwidth]{05_current_monitoring/plots/area2}
+\centering\includegraphics[width=0.85\textwidth]{05_current_monitoring/plots/area2}
 \caption{This block masks the input data with the clean vector and sums the remaining samples.}
 \label{fig:area}
 \end{figure}
@@ -229,7 +230,7 @@ This section explains how the algorithm is designed. The idea for it was tested 
 This is the most important block. Its inputs are: \emph{vector, parsing active, position of the max. amplitude (PA) and its delay (DA)}. PA is a 32-bit binary number that shows the position of the sample with the maximum amplitude within the data block (see figure~\ref{fig:samplepulse}) whereas the DA tells how many clock cycles after the start of the parsing this PA block is.
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/vector_clean}
+\includegraphics[width=0.85\textwidth]{05_current_monitoring/plots/vector_clean}
 \caption{Vector cleaning routine outputs two vectors - one forward in time and one back in time starting from the peak of the pulse.}
 \label{fig:routine}
 \end{figure}
@@ -246,8 +247,8 @@ The underlying algorithm is sequential - it carries out a logic operation shown 
 
 \begin{figure}[!t]
 \begin{tabular}{rr}
-\subfloat{\includegraphics[width=0.47\textwidth]{05_current_monitoring/plots/logic1} \label{fig:logic1}} &
-\subfloat{\includegraphics[width=0.47\textwidth]{05_current_monitoring/plots/logic2}  \label{fig:logic2}}
+\subfloat{\includegraphics[width=0.43\textwidth]{05_current_monitoring/plots/logic1} \label{fig:logic1}} &
+\subfloat{\includegraphics[width=0.43\textwidth]{05_current_monitoring/plots/logic2}  \label{fig:logic2}}
 \end{tabular}
 \caption{One logic step in the algorithm chain before and after Karnaugh minimisation.}
 \label{fig:log}
@@ -255,7 +256,7 @@ The underlying algorithm is sequential - it carries out a logic operation shown 
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.5\textwidth]{05_current_monitoring/plots/algobase}
+\includegraphics[width=0.45\textwidth]{05_current_monitoring/plots/algobase}
 \caption{The vector is divided into two 16-bit logic chains. The algorithm logic is then run on the two chains separately. The results are then merged into one 32-bit clean vector by using a set of AND gates.}
 \label{fig:algobase}
 \end{figure}
@@ -278,7 +279,7 @@ The software has been designed in C++ in several levels of abstraction. Figure~\
 The device records the data in two forms - as signal waveforms and as histograms of analysed pulse parameters. Both are available upon request from the controller. Only one of the two can be transferred via the USB line at a time. 
 %The waveforms are read out as a series of 64 pulses whereas the histograms are 
 
-The waveforms are saved into a FIFO buffer, which can hold up to 64 pulses of the length of $\sim$500~samples. The data format for each pulse is such that it starts with a header containing the pulse timestamp and the sequential number, continues with the data samples and ends with a header containing all the measured parameters (width, amplitude, area, fallling slope and form factor). When the FIFO is full, it issues a flag, which tells the controller that the data buffer is ready for readout. 
+The waveforms are saved into a FIFO buffer, which can hold up to 64 pulses of the length of $\sim$500~samples. The data format for each pulse is such that it starts with a header containing the pulse timestamp and the sequential number, continues with the data samples and ends with a header containing all the measured parameters (width, amplitude, area, falling slope and form factor). When the FIFO is full, it issues a flag, which tells the controller that the data buffer is ready for readout. 
 
 The histograms are implemented into the FPGA's Block RAM. Their sizes range from 256 to 4'096 bins (8-bit to 12-bit histograms, respectively), depending on the required histogram resolution. For instance, the width parameter is measured with a 0.2~ns resolution and the expected maximum pulse width is less than 20~ns. This yields the maximum range of 100 bins, making an 8-bit histogram sufficiently large. The amplitude histogram range is defined by the 8-bit resolution of the ADC. The area measurement, however, yields higher values and can therefore have a more refined 12-bit binning. Finally, a single 12-bit 2D histogram is included, with six bits for every axis. It is used as an online scatter plot for comparing two measured parameters. An example for it is a comparison of the width against the area, which can help the user determine the cuts that need to be applied to the measurement. All implemented 2-D plots are shown in section~\ref{sec:sourcecalib}.
 
@@ -322,7 +323,7 @@ A pulse generator was used to verify the highest achievable rate at which the PS
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/freq}
+\includegraphics[width=0.6\textwidth]{../scripts/05_current_monitoring/PulseGenTests/plots/freq}
 \caption{This figure shows the capability of the device to analyse all arriving pulses for a range of input frequencies. The highest achievable rate with zero lost pulses is $6\times10^6$~s$^{-1}$.}
 \label{fig:trigrate}
 \end{figure}
@@ -366,12 +367,12 @@ The results show that: 1) the amplitude, area and width measurement are linear f
 
 
 \subsection{Comparison between the charge-sensitive and current spectroscopy}
-The calibration was done using a quadruple-$\upalpha$ source containing \textsuperscript{148}Gd, \textsuperscript{239}Pu, \textsuperscript{241}Am and \textsuperscript{244}Cm. Each of the radioactive elements emits $\upalpha$ particles with a specific energy: 3.2~MeV, 5.2~MeV, 5.5 MeV and 5.8~MeV. The PSA in combination with the CIVIDEC C2 current amplifier was compared against an 8-bit spectroscopic application in combination with the CIVIDEC Cx spectroscopy amplifier.% and a commercial 14-bit spectroscopic readout.
+The calibration was done using a quadruple-$\upalpha$ source containing \textsuperscript{148}Gd, \textsuperscript{239}Pu, \textsuperscript{241}Am and \textsuperscript{244}Cm. Each of the radioactive elements emits $\upalpha$ particles with a specific energy: 3.2~MeV, 5.2~MeV, 5.5 MeV and 5.8~MeV. The PSA in combination with the CIVIDEC C2 Broadband Amplifier was compared against an 8-bit spectroscopic application in combination with the CIVIDEC Cx Spectroscopic Shaping Amplifier.% and a commercial 14-bit spectroscopic readout.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare}
-\caption{Energy spectrum of a quadruple-$\upalpha$ source using a CIVIDEC Cx spectroscopic amplifier and a CIVIDEC C2 current amplifier. The peak on the left part of the Cx distribution is attributed to the $\upgamma$ background.}
+\includegraphics[width=0.6\textwidth]{../scripts/05_current_monitoring/plot4alpha/plots/4alphaCompare}
+\caption{Energy spectrum of a quadruple-$\upalpha$ source using a CIVIDEC Cx Spectroscopic Shaping Amplifier and a CIVIDEC C2 Broadband Amplifier. The peak on the left part of the Cx distribution is attributed to the $\upgamma$ background.}
 \label{fig:c2cx4alpha}
 \end{figure}
 
@@ -421,7 +422,7 @@ F & p                       & Mixed pulse shapes         & $^{239}$Pu  \\
 
 %\clearpage
 
-\begin{figure}[h]
+\begin{figure}[]
 \centering
 \includegraphics[width=0.9\textwidth]{05_current_monitoring/plots/classABCD}
 \caption{Class A, B, C, D.}
@@ -541,13 +542,13 @@ Run & Source & Radiation & Energy [MeV] & Time [h]  & Triggers & Rate [s$^{-1}$]
 %However, the number of $\upalpha$ hits due to contamination is negligible - an estimated 1~h$^{-1}$. 
 Figure~\ref{fig:accpulses} shows five sets of data acquired by a non-irradiated diamond sensor. The measurements were carried out in the following order: a), c), d), e), b).
 
-Figure~\ref{fig:am2} shows a set of current pulses induced by the $\upalpha$ particles whereby only the electrons drift through the sensor. The great majority of particles creates a defined number of charge carriers. According to the FWHM of the pulse, the electrons drift for 9~ns before reaching the opposite electrode. The pulse amplitude is stable during the drift, with a gentle positive inclination. This hints on a weak negative space-charge built up across the sensor. Some pulses have a lower amplitude while retaining the width; the smaller pulse area means that there are fewer drifting charge carriers than a nominal value. This shows that some incident $\upalpha$ already lose a part of their energy while traveling through the air before hitting the sensor. Furthermore, there is a number of low-amplitude triangular pulses which are created by incident $\upgamma$ particles. Finally, the scarce entries above the baseline after the pulse stem from interference pulses.
+Figure~\ref{fig:am2} shows a set of current pulses induced predominantly by the $\upalpha$ particles whereby only the electrons drift through the sensor. The great majority of particles creates a defined number of charge carriers. According to the FWHM of the pulse, the electrons drift for 9~ns before reaching the opposite electrode. The pulse amplitude is stable during the drift, with a gentle positive inclination. This hints at a weak negative space-charge built up across the sensor. Some pulses have a lower amplitude while retaining the width; the smaller pulse area means that there are fewer drifting charge carriers than a nominal value. This shows that some incident $\upalpha$ already lose a part of their energy while traveling through the air before hitting the sensor. Furthermore, there is a number of low-amplitude triangular pulses created by incident $\upgamma$ particles. This is background $\upgamma$ radiation in the room, also detected during measurements without a source (not shown). This has been confirmed independently by measurements with a Ge-detector. Finally, the scarce entries above the baseline after the pulse stem from interference pulses.
 
-Figure~\ref{fig:am3} also shows the $\upalpha$-induced current signals, but for the hole collection. The number of holes created is equal to the number of created electrons, therefore the collected charge is the same for both. This means that the area of the current pulse is equal to that in figure~\ref{fig:am2}. The pulses are only 6~ns wide, which confirms that hole mobility in diamond is $\sim$30~\% higher than that of electrons at room temperature. Therefore the current pulse must be higher to preserve the area. The pulses have a steep negative droop. This is due to a strong negative space-charge built up during preceding measurements with a neutron source. Furthermore, some pulses induced by a lower energy $\upalpha$ have a lower amplitude and hence a lower pulse area. Finally, the $\upgamma$-created triangular pulses are still present. 
+Figure~\ref{fig:am3} also shows the $\upalpha$-induced current signals, but for the hole collection. The number of holes created is equal to the number of created electrons, therefore the collected charge is the same for both. This means that the area of the current pulse is equal to that in figure~\ref{fig:am2}. The pulses are only 6~ns wide, which confirms that hole mobility in diamond is $\sim$30~\% higher than that of electrons at room temperature. Therefore the current pulse must be higher to preserve the area. The pulses have a steep negative droop. This is due to a strong negative space-charge built up during preceding measurements with a neutron source. Furthermore, some pulses induced by a lower energy $\upalpha$ have a lower amplitude and hence a lower pulse area. Finally, the background radiation -- $\upgamma$-created triangular pulses -- is still present.
 
 Figure~\ref{fig:sr1} shows the triangular pulses created by the incident $\upbeta$ particles. Most have a low amplitude that is close to the trigger threshold (red coloured line). Those below the threshold are not visible by the PSA. The entries behind the pulses are either interference pulses or $\upbeta$ pulses following the first pulse.
 
-Figure~\ref{fig:co1} shows the triangular pulses created by the incident $\upgamma$ particles. The distribution is very similar to that created by the incident electrons in figure~\ref{fig:sr1}. This is expected -- $\upgamma$ particles interact with the sensor via compton scattering, freeing an electron which in turn ionises the sensor. Therefore the resulting current pulses of an incident $\upgamma$ are similar to those of an incident $\upbeta$.
+Figure~\ref{fig:co1} shows the triangular pulses created by the incident $\upgamma$ particles. The distribution is very similar to that created by the incident electrons in figure~\ref{fig:sr1}. This is expected -- $\upgamma$ particles interact with the sensor via Compton scattering, freeing an electron which in turn ionises the sensor. Therefore the resulting current pulses of an incident $\upgamma$ are similar to those of an incident $\upbeta$.
 
 Figure~\ref{fig:pu1} shows that the neutron source causes the widest variety of pulse shapes - triangular and rectangular as well as those in between. This stems from the various interactions of neutron with carbon atoms, whereby $\upalpha, \upbeta, \upgamma$ or protons can be produced. The prevailing pulses are still those created by $\upgamma$. %The area spectrum is also significantly higher than that of all previous radiation types.  
 Pulse shapes caused by neutrons are described in detail in~\cite{PAVEL:00003, CHRISSI:00005}. 
@@ -560,8 +561,8 @@ Pulse shapes caused by neutrons are described in detail in~\cite{PAVEL:00003, CH
 
 
 \subsection{Scatter plots}
-The parameters of the pulses are plotted in 2D histograms - in form of scatter plots. The energy spectrum is directly proportional to the measured area of the current pulses, therefore all the parameters are plotted as a function of the pulse area. 
-Every individual parameter can be attributed a set of qualifiers with which a certain part of the distribution can be rejected. There are two ways to apply the qualifiers. One is to set the minimum and maximum value for a specific parameter. The accepted pulses are those in between these two values. The minimum and the maximum qualifier are marked with a blue and a red line in the scatter plots. The second way is to apply a linear cut to the distribution in the scatter plot. The user can choose the slope of the line and to accept either the pulses above or below the line. The line is blue if the part above the line is accepted and red if opposite. Currently two scatter plots have this option implemented: area vs amplitude and area vs amplitude$\times$base width. The latter represents the Form Factor, which is discussed in section~\ref{subsec:algorithm}.
+The parameters of the pulses are plotted in form of scatter plots -- 2D histograms. The energy spectrum is directly proportional to the measured area of the current pulses, therefore all parameters are plotted as a function of the pulse area. 
+Every individual parameter can be attributed a set of qualifiers with which a certain part of the distribution can be rejected. There are two ways to apply the qualifiers. One is to set the minimum and maximum value for a specific parameter. The accepted pulses are those in between these two values. The minimum and the maximum qualifier are marked with a blue and a red line in the scatter plots. The second way is to apply a linear cut to the distribution in the scatter plot. The user can set the slope and to accept either the pulses above or below the line. The line is blue if the part above the line is accepted and red if opposite. %The latter represents the Form Factor, which is discussed in section~\ref{subsec:algorithm}.
 
 %The sets of plots in figures~\ref{fig:scatterae}, \ref{fig:scatterah}, \ref{fig:scattersr} and \ref{fig:scatterco} show the above listed parameters plotted as a function of the pulse area for $^{241}$Am (electrons and holes), $^{90}$Sr and $^{60}$Co source, respectively. Any distinguishable difference between the plots of two sources would suggest that that particular parameter can be used to distinguish one type radiation from the other. 
 %For the most part the $\upgamma$ are considered the rejected pulses (greyscale colour palette) whereas $\upalpha$ particles or neutrons are accepted (yellow colour palette). In special cases only a certain types of neutron interactions are accepted, as depicted in section~\ref{sec:nm}.
@@ -579,7 +580,7 @@ Every individual parameter can be attributed a set of qualifiers with which a ce
 %\label{fig:scatterbm}
 %\end{figure}
 \clearpage
-\begin{figure}[!t]
+\begin{figure}[]
 \centering
 \includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/18-scatter-10-add}
 \caption{$^{241}$Am, h$^{+}$ collection. Qualifiers: FWHM, amplitude, calculated area.}
@@ -589,26 +590,27 @@ Every individual parameter can be attributed a set of qualifiers with which a ce
 \clearpage
 \subsubsection{$^{241}$Am source, h$^+$ collection}
 \label{sec:amsrch}
-The source emits $\upalpha$ particles at $\sim$5.5~MeV and 60~keV $\upgamma$ photons. Due to the losses in the air and in the electrode the measured $\upalpha$ energy varies -- between $\sim$5~MeV down to 1~MeV.  Figure~\ref{fig:scatterah} shows the parameter space of the acquired data for hole collection - Class A . Width, amplitude and calculated area qualifiers have been used to identify the $\upalpha$ pulses and reject the $\upgamma$. Figure~\ref{fig:1dalphaareah} shows a one-dimensional area distribution of the acquired data. The MPV of the $\upgamma$ distribution is not at the expected position (30~pVs, which is approximately a factor of 20 lower than the $\upalpha$ peak). 
+\begin{figure}[]
+\centering
+\includegraphics[width=0.54\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0-1}
+\caption{$^{241}$Am area histograms for hole collection. The green histogram represents all collected data whereas the red one marks the data within the qualifiers. The $\upalpha$ peak at 600~pVs is clearly visible, followed by a $\upgamma$ distribution attributed to environmental background radiation and a noise peak at the very left of the histogram. 
+}
+\label{fig:1dalphaareah}
+\end{figure}
+The source emits $\upalpha$ particles at $\sim$5.5~MeV and 60~keV $\upgamma$ photons. Due to the losses in the air and in the electrode the measured $\upalpha$ energy varies -- between $\sim$5~MeV down to 1~MeV.  Photon pulse amplitudes are too low to be detected -- hidden in analogue noise. Figure~\ref{fig:scatterah} shows the parameter space of the acquired data for hole collection - Class A . Width, amplitude and calculated area qualifiers have been used to identify the $\upalpha$ pulses and reject the rest. Figure~\ref{fig:1dalphaareah} shows a one-dimensional area distribution of the acquired data.  Three distinct contributions are visible -- that of $\upalpha$ (right), $\upgamma$ (middle) and noise triggers (left). The middle peak is MeV-range environmental background radiation. In that range the photons predominantly interact via Compton scattering producing Compton electrons, which in turn ionise the diamond. Energy distribution of such an interaction is Landau-like. The trigger rate is 8.5 per hour, which is comparable to the rate of 11 per hour calculated for the measurement of background radiation. That being said, in figure~\ref{fig:1dalphaareah} the maximum of the distribution is not at the expected position (30~pVs, approximately a factor of 20 lower than the $\upalpha$ peak) and is instead 60~pVs.
 This is due to two factors: increased non-linearity in area measurement at the lower range as shown in figure~\ref{fig:ratiorange} and the fact that the threshold for self-triggering cuts the majority of the Landau distribution due to the low amplitude of the pulses. 
-The effect is also observed in $\upgamma$ source measurements in section~\ref{sec:gammasrc}.
+The observed effect is discussed in section~\ref{sec:gammasrc}.
+
 \begin{description}
 \setlength\itemsep{-0.3em}
 \item[Width: ] A distinct horizontal line at 6.5~ns starting from 100 and peaking at 600~pVs shows the aforementioned spread of $\upalpha$ energies. The width of the pulse remains constant. $\upgamma$ cluster overlaps with the $\upalpha$ cluster at low energies. Width qualifier is used.
 \item[Base width: ] Wider than the FWHM, yet still constant over the range. High overlap with $\upgamma$.
 \item[Amplitude: ] Linear increase with area. The coefficient for $\upalpha$ pulses is lower than that for $\upgamma$. Amplitude qualifier is used.
-\item[Calculated area: ] Barely distinguishable difference in slope coefficients for $\upalpha$ and $\upgamma$. Calculated area qualifier is used.
+\item[Calculated area: ] Barely distinguishable difference in slope coefficients for $\upalpha$ and $\upgamma$. Used.
 \item[Base width -- width: ] Minimal difference for $\upalpha$, high spread for $\upgamma$ as expected. At low $\upgamma$ area the overlap is high, so the qualifier cannot be used.
 \item[Slope: ] Linear increase with the area. Significant overlap in the low area range. A line of entries with a high slope at low area pertains to short noise pulses with a high spike.
 \end{description}
-\begin{figure}[]
-\centering
-\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-area-0}
-\caption{$^{241}$Am area histograms for hole collection. The green histogram represents all collected data whereas the red one marks the data whereby the pulse parameters are within the qualifiers. The $\upalpha$ peak at 600~pVs is clearly visible, followed by a $\upgamma$ quasi-Landau distribution with an MPV of $\sim$70~pVs and a noise peak at the very left of the area distribution. 
-%These two contributions have been rejected by the qualifiers.
-}
-\label{fig:1dalphaareah}
-\end{figure}
+
 %The shape of the pulse from this type of radiation retains the width even at smaller energies. Only its amplitude is decreased. This is because the free charge carriers in the diamond are traveling with the same speed in all cases, inducing rectangular pulses of the same widths. 
 %
 %The other cluster in the [area, FWHM] space comes from the background $\upgamma$. The two clusters are far apart from one another with no overlap. It is therefore straightforward to define a cut in the FWHM to distinguish between the $\upalpha$ and $\upgamma$ entries. This is done by means of the minimum and maximum FWHM constant qualifier, which marked red and blue in the [area, FWHM] subfigure.
@@ -625,9 +627,9 @@ The effect is also observed in $\upgamma$ source measurements in section~\ref{se
 
 
 \clearpage
-\begin{figure}[!t]
+\begin{figure}[]
 \centering
-\includegraphics[width=0.93\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-10-add}
+\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/10-scatter-10-add}
 \caption{$^{241}$Am, e$^{-}$ collection. Qualifiers: FWHM, amplitude, calculated area.}
 \label{fig:scatterae}
 \end{figure}
@@ -635,7 +637,9 @@ The effect is also observed in $\upgamma$ source measurements in section~\ref{se
 
 \clearpage
 \subsubsection{$^{241}$Am source, e$^-$ collection}
-Figure~\ref{fig:scatterae} shows the parameter space of the acquired data for electron collection - Class B. Width, amplitude and calculated area qualifiers have been used to identify the $\upalpha$ pulses and reject the $\upgamma$. Figure~\ref{fig:1dalphaareae} shows a one-dimensional area distribution of the acquired data. The $\upgamma$ MPV of 70~pVs is not as expected (30~pVs); the reason for the shift is discussed in section~\ref{sec:amsrch}.
+\label{sec:amsrce}
+Figure~\ref{fig:scatterae} shows the parameter space of the acquired data for electron collection - Class B. Width, amplitude and calculated area qualifiers have been used to identify the $\upalpha$ pulses and reject the $\upgamma$. Figure~\ref{fig:1dalphaareae} shows a one-dimensional area distribution of the acquired data. The distribution is the same as in subsection~\ref{sec:amsrch} -- The $\upalpha$ Gaussian peak on the right, MeV-range $\upgamma$ distribution due to background radiation and a noise peak due to short and high noise signal spikes. 
+The maximum of the background radiation is again higher as expected for a Landau distribution of a MIP (60~pVs instead of 30~pVs); the reason for the shift is discussed in the previous and the following section~\ref{sec:amsrch}.
 \begin{description}
 \setlength\itemsep{-0.3em}
 \item[Width: ] A distinct horizontal line at 8.5~ns starting from 100 and peaking at 600~pVs shows the spread of $\upalpha$ energies. The width of the pulse remains constant. $\upgamma$ cluster does not overlap with the $\upalpha$ cluster at low energies as none of the $\upgamma$ pulses are as wide as the $\upalpha$. Width qualifier is used.
@@ -648,8 +652,8 @@ Figure~\ref{fig:scatterae} shows the parameter space of the acquired data for el
 
 \begin{figure}[]
 \centering
-\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0}
-\caption{$^{241}$Am area histograms for electron collection. The green histogram represents all collected data whereas the red one marks the data whereby the pulse parameters are within the qualifiers. The $\upalpha$ peak at 600~pVs is clearly visible, followed by a $\upgamma$ quasi-Landau distribution with an MPV of $\sim$70~pVs and a noise peak at the very left of the area distribution. These two contributions have been rejected by the qualifiers.}
+\includegraphics[width=0.6\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/18-area-0-1}
+\caption{$^{241}$Am area histograms for electron collection. The green histogram represents all collected data whereas the red one marks the data whereby the pulse parameters are within the qualifiers. The $\upalpha$ peak at 600~pVs is clearly visible, followed by $\upgamma$ distribution with a maximum of $\sim$60~pVs and a noise peak at the very left of the area distribution. These two contributions have been rejected by the qualifiers.}
 \label{fig:1dalphaareae}
 \end{figure}
 
@@ -659,17 +663,18 @@ Figure~\ref{fig:scatterae} shows the parameter space of the acquired data for el
 \clearpage
 \begin{figure}[]
 \centering
-\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-10}
-\caption{$^{90}$Sr scatter plots.}
+\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-scatter-11}
+\caption{$^{90}$Sr. Qualifiers: amplitude.}
 \label{fig:scattersr}
 \end{figure}
 
 \clearpage
 \subsubsection{$^{90}$Sr source}
-Figure~\ref{fig:scattersr} shows the parameter space of the acquired data for $\upbeta$ particles - Class 3. Figure~\ref{fig:1dsrarea} shows a one-dimensional area distribution of the acquired data. 
+\label{sec:strontsrc}
+Figure~\ref{fig:scattersr} shows the parameter space of the acquired data for $\upbeta$ particles - Class 3. Figure~\ref{fig:1dsrarea} shows a one-dimensional area distribution of the acquired data. Relative to the 600~pVs $\upalpha$ peak from previous sections, the expected MPV of a $\upbeta$ MIP is $\sim$30~pVs, which is not the case in the acquired spectrum (peaking at 60~pVs). This is because the PSA device is a self-triggering system (amplitude threshold), which cuts the lower energetic particles that do not reach the trigger threshold. The resulting distribution is therefore only the top part of the real Landau distribution. This is a limitation of the device, governed by the analogue noise of the current pre-amplifier. To show the effect of the amplitude trigger threshold, an amplitude qualifier is set to 18~mV, moving the effective maximum in the spectrum after cuts to the right while still making it look like a Landau.
 \begin{description}
 \setlength\itemsep{-0.3em}
-\item[Width: ] The width of the $\upbeta$ cluster is spread over a wide range and is not linearly dependent on the area. This implies that the pulse shapes are not necessarily triangular but have varying shapes.
+\item[Width: ] The width of the $\upbeta$ cluster is spread over a wide range and is not linearly dependent on the area. This implies that the pulse shapes are not necessarily only triangular but have varying shapes.
 \item[Base width: ] Wider than the FWHM with a similar distribution.
 \item[Amplitude: ] Linear increase with the area. A line of entries with a high slope at low area pertains to short noise pulses with a high spike.
 \item[Calculated area: ] Linear increase with area.
@@ -680,8 +685,9 @@ Figure~\ref{fig:scattersr} shows the parameter space of the acquired data for $\
 
 \begin{figure}[]
 \centering
-\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0}
-\caption{Area histogram for $\upbeta$ particles. Relative to the 600~pVs $\upalpha$ peak, the expected MPV of a $\upbeta$ MIP is $\sim$30~pVs, which is not the case in these distributions (peaking at 60~pVs). This is because the PSA device is a self-triggering system, which cuts the lower energetic particles with the trigger threshold. The resulting distribution is therefore only the top part of the real Landau distribution. This is a limitation of the device, governed by the analog noise of the current pre-amplifier.}
+\includegraphics[width=0.6\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/13-area-0-11}
+\caption{Area distribution for $\upbeta$ particles. The spectrum after cuts is using the amplitude qualifier of 18~mV to show how the shape of the distribution changes for different amplitude thresholds.
+}
 \label{fig:1dsrarea}
 \end{figure} 
  
@@ -689,8 +695,8 @@ Figure~\ref{fig:scattersr} shows the parameter space of the acquired data for $\
 \clearpage
 \begin{figure}[]
 \centering
-\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-10}
-\caption{$^{60}$Co scatter plots.}
+\includegraphics[width=0.99\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-scatter-11}
+\caption{$^{60}$Co. Qualifiers: amplitude.}
 \label{fig:scatterco}
 \end{figure}
 
@@ -699,12 +705,17 @@ Figure~\ref{fig:scattersr} shows the parameter space of the acquired data for $\
 \label{sec:gammasrc}
 The parameter space of the $^{60}$Co source overlaps entirely with that of the $^{90}$Sr source. This renders it virtually impossible to distinguish between $\upgamma$ and $\upbeta$ particles. Comparing the width of the $\upgamma$ and $\upbeta$ and the high reach of the former, the electron collection of the alphas would need to be used to effectively discriminate between the two types of particles. 
 
-The one-dimensional histogram in figure~\ref{fig:1dcoarea} shows a quasi-Landau distribution with the MPV at $\sim$60~pVs, which is in agreement with the background $\upgamma$ radiation emitted by the $^{241}Am$~source, as shown in figure~\ref{fig:1dalphaareae} in the previous subsection. This is again not a pure Landau distribution -- the real MPV should be peaking at 30~pVs, with a minimum expected area of 20~pVs at 2/3 of the MPV. This is not possible to measure due to the high electronics noise of the amplifier and consequently a high trigger threshold to avoid noise triggers.
+The one-dimensional histogram in figure~\ref{fig:1dcoarea} shows the area distribution with the maximum at $\sim$60~pVs, which is in agreement with the background $\upgamma$ radiation emitted by the $^{241}Am$~source, as shown in figure~\ref{fig:1dalphaareae}. This is again not a Landau distribution, but instead only its top part. Relative to the 600~pVs $\upalpha$ peak, the expected MPV of MeV-range $\upgamma$ energy distribution is $\sim$30~pVs, which is not the case in the acquired spectrum (peaking at 60~pVs). This is due to a self-trigger (amplitude threshold), which does not trigger on low current pulses and thus cuts the left part of the distribution. The low pulses cannot be measured due to the high electronics noise of the amplifier and consequently a high trigger threshold to avoid noise triggers. 
 
-\begin{figure}
+The threshold does not cut the left part of area distribution abruptly. Due to analogue noise fluctuations, digitisation error and measurement errors in area measurement algorithm, the edge is smeared -- convoluted with a Gaussian function. To showcase this artefact of the selection process, an additional qualifier is set to 18~mV to show that an additional amplitude threshold pushes the effective maximum in the spectrum after cuts in figure~\ref{fig:1dcoarea} to the right while still making it look like a Landau.
+
+ 
+
+\begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0} 
-\caption{Area distribution of $\upgamma$ particles. Relative to the 600~pVs $\upalpha$ peak, the expected MPV of a $\upbeta$ MIP is $\sim$30~pVs, which is not the case in these distributions (peaking at 60~pVs). }
+\includegraphics[width=0.6\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/12-area-0-11} 
+\caption{Area distribution of $\upgamma$ particles. The spectrum after cuts is using the amplitude qualifier of 18~mV to show how the shape of the distribution changes for different amplitude thresholds.
+}
 \label{fig:1dcoarea}
 \end{figure}
 
@@ -745,7 +756,7 @@ The one-dimensional histogram in figure~\ref{fig:1dcoarea} shows a quasi-Landau 
 %
 %\begin{figure}[!t]
 %\centering
-%\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/spaceChargeStudy}
+%\includegraphics[width=0.6\textwidth]{../../../CIVIDEC/dataRead/data/plots/spaceChargeStudy}
 %\caption{Using $\upbeta$ radiation to reduce space charge in diamond}
 %\label{fig:sm}
 %\end{figure}
@@ -793,7 +804,7 @@ Note the changing scale on the $x$ axis in the figures.
 
 %----------------------------------------------------------
 \subsection{Thermal neutron flux monitoring}
-Research neutron reactors like TRIGA MARK II~\cite{Triga:00000} at Atominstitut~\cite{AtomInst:00000} in Vienna are capable of emitting neutrons at a wide range of energies. The neutron flux is proportional to the current power of the reactor. It is therefore instrumental to monitor the neutron flux to make sure that the reactor operation is within the specified limits. However, the byproduct of the radioactive decays in the core is $\upgamma$ radiation, which has an energy range that overlaps with that of neutrons, making it difficult to measure the neutron flux. This is where PSA and diamond detectors come into play. This section describes the application of thermal neutron flux monitoring by means of the PSA.
+Research neutron reactors like TRIGA MARK II~\cite{Triga:00000} at Atominstitut~\cite{AtomInst:00000} in Vienna are capable of emitting neutrons at a wide range of energies. The neutron flux is proportional to the current power of the reactor. It is therefore instrumental to monitor the neutron flux to make sure that the reactor operation is within the specified limits. However, the by-product of the radioactive decays in the core is $\upgamma$ radiation, which has an energy range that overlaps with that of neutrons, making it difficult to measure the neutron flux. This is where PSA and diamond detectors come into play. This section describes the application of thermal neutron flux monitoring by means of the PSA.
 
 Thermal neutrons do not interact with the diamond bulk due to their low kinetic energy (of the order of 0.012~eV). Hence a converter foil has to be added to produce second order effects. Incoming neutrons interact with the foil, producing a set of secondary particles. These can then be detected upon hitting the detector bulk. Common neutron interactions that are used in thermal neutron detection are \textsuperscript{10}B(n,$\alpha$)\textsuperscript{7}Li reaction and \textsuperscript{6}Li(n,$\alpha$)\textsuperscript{3}H reaction ($\alpha$ stands for $^4_2$He, see equation~\ref{eq:reaction}). The focus in this section is on the latter. With a foil installed, there are several possibilities for neutrons to interact with the detector system. Each of these interactions ionises the diamond bulk in its own way, resulting in a specific shape of the current pulse. A neutron can: 1) interact with the foil, producing an $\upalpha$ and a \textsuperscript{3}H, 2) interact with a carbon atom in the lattice, producing an $\upalpha$ and a $\upgamma$ or even three $\upalpha$. The thermal neutrons do not have enough kinetic energy to interact with the lattice, therefore the focus is on case (1). The equation for this reaction is the following:
 \begin{equation}
@@ -838,7 +849,7 @@ Given that the sensor can only detect one of the two particles per neutron inter
 \clearpage
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/triga-08-area-0}
+\includegraphics[width=0.6\textwidth]{../../../CIVIDEC/dataRead/data/plots/triga-08-area-0-1}
 \caption{Energy spectrum after applied qualifiers reveals the tritium and the $\upalpha$ peak.}
 \label{fig:areatriga0}
 \end{figure}
@@ -858,13 +869,13 @@ To sum up, by applying the FWHM qualifier to the acquired data from the TRIGA ne
 \clearpage
 \subsection{Fusion power monitoring}
 \label{sec:fusion}
-Many research collaborations around the world are trying to develop a functional fusion reactor, which could provide a cleaner energy source. One of them is ITER~\cite{ITER:00000}, a research fusion reactor being built in France. The idea behind it is to harvest energy from the fusion of light atoms into a heavier one. For ITER the fuel chosen is a mixture of deuterium and tritium, which fuse into a helium atom at extremely high temperatures (plasma), emitting a highly energetic neutron as a byproduct. The equation is the following:
+Many research collaborations around the world are trying to develop a functional fusion reactor, which could provide a cleaner energy source. One of them is ITER~\cite{ITER:00000}, a research fusion reactor being built in France. The idea behind it is to harvest energy from the fusion of light atoms into a heavier one. For ITER the fuel chosen is a mixture of deuterium and tritium, which fuse into a helium atom at extremely high temperatures (plasma), emitting a highly energetic neutron as a by-product. The equation is the following:
 \begin{equation}
 ^2_1D+^3_1T ~\rightarrow~ ^4_2He+^1_0n+17.6~\textrm{MeV}.
 \end{equation}
 The $\upalpha$ particle immediately deposits its energy within the plasma. The neutron, due to its neutral charge, continues its way out of the system where it is stopped. The stopping power is converted into energy, which heats the water into steam, which in turn spins the turbines, generating electricity.
 
-It is possible to monitor the activity of the reactor by measuring the flux of neutrons emitted. Neutron diagnostics such as neutron cameras, neutron spectrometers and neutron flux monitors therefore provide robust measurements of fusion power. A high $\upgamma$ background makes it difficult to accurately measure the neutron flux. This is a motivation to use a diamond based detector with a real-time PSA algorithm.
+It is possible to monitor the activity of the reactor by measuring the flux of neutrons emitted. Neutron diagnostics such as neutron cameras, neutron spectrometers and neutron flux monitors therefore provide robust measurements of fusion power. A high $\upgamma$ background makes it difficult to accurately measure the neutron flux. This is a motivation to use a diamond-based detector with a real-time PSA algorithm.
 
 The neutrons emitted are 14~MeV mono-energetic fast neutrons. The most accurate and efficient way to detect them with a diamond detector is by means of a C$_\mathrm{12}$(n,$\upalpha$) reaction with a carbon atom in the ballistic centre~\cite{PAVEL:00001}. In this region the positive and negative charge carriers created by $\upalpha$ that start drifting in the opposite directions need the same time to reach the opposite electrodes.
 
@@ -885,7 +896,7 @@ A very interesting interaction point is the ballistic centre~\cite{PAVEL:00001, 
 \clearpage
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4}
+\includegraphics[width=0.6\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-4-1}
 \caption{$^{239}$Pu~Be, energy distribution of the neutrons interacting in the ballistic centre.}
 \label{fig:scatterpuarea}
 \end{figure}
@@ -929,7 +940,7 @@ To sum up, recoil protons can be extracted from a mix of created particles after
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-11}
+\includegraphics[width=0.6\textwidth]{../../../CIVIDEC/dataRead/data/plots/reportATI/15-area-11-1}
 \caption{$^{239}$Pu~Be, energy distribution of the neutrons creating a recoil proton.}
 \label{fig:scatterpuarea}
 \end{figure}
@@ -949,7 +960,7 @@ The CROCUS reactor at EPFL~\cite{EPFL:00000} is a research neutron reactor. The 
 The highest output power of the CROCUS reactor is 100~W. Currently there are fission chambers that carry out the neutron counting, which is a measure of the activity of the reactor. The new goal is to measure both neutrons and $\upgamma$, but separately. The pulse shape analysis is a good solution for this task. For this, a 400~$\upmu$m thick diamond detector with a specially designed casing was installed to measure the activity. The $^6$LiF foil was added for conversion of thermal neutrons. The ROSY box with the integrated PSA routine was used for signal analysis.
 
 \subsubsection{Measurements}
-At the highest reactor activity the real-time system counts and analyses particles at a rate of $\sim1.5\times10^{5}$~s$^{-1}$. The results from a test run at 10~W output power are shown in figure~\ref{fig:scatterepfl2}. The data include a mixed field consisting of fast neutrons, $\upgamma$ and of $\upalpha$ and $^3$H particles as products of thermal neutron decay in the $^6$LiF foil in front of the detector. The energy deposited in the diamond is not as high as that from the $^{239}$Pu~Be source. In addition, the analog noise during this measurement is higher than in the previous application. These conditions combined make particle identification at CROCUS a challenging task.
+At the highest reactor activity the real-time system counts and analyses particles at a rate of $\sim1.5\times10^{5}$~s$^{-1}$. The results from a test run at 10~W output power are shown in figure~\ref{fig:scatterepfl2}. The data include a mixed field consisting of fast neutrons, $\upgamma$ and of $\upalpha$ and $^3$H particles as products of thermal neutron decay in the $^6$LiF foil in front of the detector. The energy deposited in the diamond is not as high as that from the $^{239}$Pu~Be source. In addition, the analogue noise during this measurement is higher than in the previous application. These conditions combined make particle identification at CROCUS a challenging task.
 
 
 \clearpage
@@ -963,8 +974,8 @@ At the highest reactor activity the real-time system counts and analyses particl
 \clearpage
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.7\textwidth]{../../../CIVIDEC/dataRead/data/plots/epfl-area-1}
-\caption{Energy spectrum in CROCUS before and after applied qualifiers.}
+\includegraphics[width=0.6\textwidth]{../../../CIVIDEC/dataRead/data/plots/epfl-area-1}
+\caption{Energy spectrum in CROCUS before and after applied qualifiers. The red spectrum consists of fast and slow neutrons. These could be further decoupled by introducing a minimum width qualifier (}
 \label{fig:scatterepfl2area}
 \end{figure}
 
@@ -981,6 +992,9 @@ To sum up, by applying the Form Factor qualifier both fast and thermal neutrons 
 \section{Conclusion}
 \label{sec:conclcurrent}
 % ---------------------------------------------------------------------------------------------------------------
-This chapter describes a system that can identify the type of radiation in real time. The system is implemented on an FPGA in a CIVIDEC ROSY box and is used with diamond detectors. The signal from the diamond sensor is read in and analysed in the firmware. First the shape of the pulse is parametrised. Then the logic determines the type of particle according to the user defined cuts. Finally the parameters are written into a histogram, which is read out by the user. The firmware is designed to carry out the pulse shape analysis of a single pulse in $\sim$200~ns, yielding a maximum pulse rate of $6\times10^6$ particles per second. The rate as well as the linearity the measurement stability with respect to noise have been verified using a pulse generator. Then several radioactive sources were used to calibrate the device. Finally the system has been set up in two neutron reactors to test the operation in a mixed field containing thermal neutrons, fast neutrons and $\upgamma$. The identification can be optimised using a combination of qualifiers to achieve the desired effect.
+This chapter describes a system that can identify the type of radiation in real time. The system is implemented on an FPGA in a CIVIDEC ROSY box and is used with diamond detectors. The signal from the diamond sensor is read in and analysed in the firmware. First the shape of the pulse is parameterised. Then the logic determines the type of particle according to the user defined cuts. Finally the parameters are written into a histogram, which is read out by the user. The firmware is designed to carry out the pulse shape analysis of a single pulse in $\sim$200~ns, yielding a maximum pulse rate of $6\times10^6$ particles per second. The rate as well as the linearity the measurement stability with respect to noise have been verified using a pulse generator. 
 
+Then several radioactive sources were used to calibrate the device. 
+The acquired spectra show that MeV-range $\upgamma$ and $\upbeta$ particles induce current pulses with a similar signature. This prevents the algorithm from distinguishing between the two types of radiation. An additional limitation is the self-trigger, which must be set relatively high to avoid noise triggers, thus cutting off the low range of the energy spectrum. The effect is observed in $\upgamma$ and $\upbeta$ Landau-like distributions, which have the MPV at twice the expected value (60~pVs or 500~keV instead of 30~pVs or 250~keV). 
 
+Finally the system has been set up in two neutron reactors to test the operation in a mixed field containing thermal neutrons, fast neutrons and $\upgamma$. The identification can be optimised using a combination of qualifiers to achieve the desired effect.

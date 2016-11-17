@@ -1,0 +1,28 @@
+radioprotection room
+
+300 seconds per signal
+
+a traversing particle
+photons, MIPs
+
+
+germanium detector nTOF background meas.
+
+write the numbers - rate of bckgrnd during alpha calib the same as the rate during bckbgrd 
+
+190 cnts / 17 hrs
+11.176 — per hour
+504 cnts / 60 hrs
+8.4 — per hour
+
+
+pair protdcution
+just over 1 MeV
+
+check compton scattering energy distribution
+
+artefacts of selection process
+put in the artificial 
+lower acceptance by selection cut on the amplitude.
+to show the effect, plotted with different cuts , reulting with different distribution shapt.e
+

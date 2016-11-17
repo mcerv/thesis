@@ -198,18 +198,21 @@ int32_t main (void) {
   //               fun->GetXmax(), fun->GetMaximum(),
   //               "");
   fitf->Draw();
+  fitf->GetXaxis()->SetRangeUser(0,20);
   gp[0]->Draw("AP");
   fun->Draw("SAME");
+  fun->GetXaxis()->SetRangeUser(0,20);
   leg2->Draw("same");
   gp[0]->GetXaxis()->SetTitle("Radiation dose [10^{14} #pi cm^{-2}]");
-  gp[0]->GetYaxis()->SetTitle("Charge collection distance [ #mu m]");
-  gp[0]->GetXaxis()->SetRangeUser(-2,20);
+  gp[0]->GetYaxis()->SetTitle("Charge collection distance [#mum]");
+  gp[0]->GetXaxis()->SetRangeUser(-2,40);
+  gp[0]->GetYaxis()->SetRangeUser(0,701);
 
   TLatex* lat = new TLatex();
 
 
 
-  c3->Modified();
+  // c3->Modified();
   c3->Update();
   c3->WaitPrimitive();
   delete(c3);

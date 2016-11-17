@@ -23,6 +23,9 @@
 %define the default submitted text
 \newcommand{\submittedtext}{{A thesis submitted for the degree of}}
 
+%define the supervisor text
+\newcommand{\supervisortext}{{under supervision of}}
+
 %
 % DECLARATIONS
 %
@@ -35,6 +38,8 @@
 \def\degree#1{\gdef\@degree{#1}}
 % The name of your Oxford college (e.g. Christ Church, Pembroke)
 \def\college#1{\gdef\@college{#1}}
+% The full (unabbreviated) name of the degree
+\def\supervisor#1{\gdef\@supervisor{#1}}
 
 
 %
@@ -108,22 +113,26 @@
   \begin{center}
 
 %logo
-{\large \vspace*{0mm} {\logo \par} \vspace*{40mm}}
+{\large \vspace*{-10mm} {\logo \par} \vspace*{20mm}}
 
 %title
     { \Huge {\bfseries {\@title}} \par}
 %author
-    {{\Large \vspace*{30mm} \@author} \par}
+    {{\Large \vspace*{19mm} \@author} \par}
 {\large \vspace*{1ex}
 %college
     {{\@college} \par}
+\vspace*{5ex}
 \vspace*{1ex}
+    {{\supervisortext} \par}
+\vspace*{1ex}
+    {{\@supervisor} \par}    
 
-\vspace*{25mm}
+\vspace*{15mm}
     {{\submittedtext} \par}
 \vspace*{1ex}
     {\it {\@degree} \par}
-\vspace*{2ex}
+\vspace*{10ex}
     {\@degreedate}}
   \end{center}
   \null\vfill
@@ -142,9 +151,23 @@
   {\LARGE }
   \end{center}
   \vspace{0.5cm}
-  \begin{verse}\begin{center}}
-{\end{center}\end{verse}\end{alwayssingle}}
+\begin{center}}
+{\end{center}\end{alwayssingle}}
 
+
+% ACRONYMS
+%
+% List of acronyms 
+
+\newenvironment{acronyms}
+{\begin{alwayssingle} %\thispagestyle{empty}
+\begin{center}
+\vspace*{1.5cm}
+{\Large \bfseries Acronyms}
+\end{center}
+\vspace{0.5cm}
+\begin{quote}}
+{\end{quote}\end{alwayssingle}}
 
 % ACKNOWLEDGEMENTS
 %
@@ -160,8 +183,8 @@
 {\Large \bfseries Acknowledgements}
 \end{center}
 \vspace{0.5cm}
-\begin{quote}}
-{\end{quote}\end{alwayssingle}}
+}
+{\end{alwayssingle}}
 
 % The acknowledgementslong environment puts a large, bold, centered 
 % "Acknowledgements" label at the top of the page. The acknowledgement itself 
@@ -216,12 +239,23 @@
 
 \renewenvironment{abstract} {\begin{alwayssingle} \thispagestyle{empty}
   \begin{center}
-  \vspace*{1.5cm}
+  \vspace*{0cm}
   {\Large \bfseries  Abstract}
   \end{center}
   \vspace{0.5cm}
    \begin{quote}}
 {\end{quote}\end{alwayssingle}}
+
+\newenvironment{abstractger} {\begin{alwayssingle} \thispagestyle{empty}
+  \begin{center}
+  \vspace*{-1cm}
+  {\Large \bfseries  Kurzfassung}
+  \end{center}
+  \vspace{0.5cm}
+   %\begin{quote}
+   }
+{%\end{quote}
+\end{alwayssingle}}
 
 %The abstractlong environment puts a large, bold, centered "Abstract" label at
 %the top of the page. The abstract itself does not appears in a quote
@@ -234,6 +268,15 @@
   \end{center}
   \vspace{0.5cm}}
 {\end{alwayssingle}}
+
+\newenvironment{abstractlongger} {\begin{alwayssingle} \thispagestyle{empty}
+  \begin{center}
+  \vspace*{1.5cm}
+  {\Large \bfseries  Kurzfassung}
+  \end{center}
+  \vspace{0.5cm}}
+{\end{alwayssingle}}
+
 
 %The abstractseparate environment is for running of a page with the abstract
 %on including title and author etc as required to be handed in separately

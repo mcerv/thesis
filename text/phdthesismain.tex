@@ -44,11 +44,12 @@ high-radiation environments}   %note \\[1ex] is a line break in the title
 \author{Matev\v{z} \v{C}erv}             %your name
 %\supervisor{Dr. Erich Griesmayer}             %supervisor
 
-\college{Vienna University of Technology}  %your college
+\college{TU Wien \\[1 ex] Faculty of Electrical Engineering and Information Technology}  %your college
 
 %\renewcommand{\submittedtext}{change the default text here if needed}
 \degree{Doctor of technical sciences}     %the degree
-\degreedate{Geneva 2016}         %the degree date
+\degreedate{Vienna, December 2016}         %the degree date
+\supervisor{Univ.Doz. Dipl.-Ing. Dr.techn. Erich Griesmayer}
 
 %end the preamble and start the document
 \begin{document}
@@ -67,18 +68,24 @@ high-radiation environments}   %note \\[1ex] is a line break in the title
 
 \begin{romanpages}          % start roman page numbering
 \tableofcontents            % generate and include a table of contents
-\end{romanpages}        
 
 
 %now include the files of latex for each of the chapters etc
-%\include{00_preface/abstract}
+\include{00_preface/abstract}
+\include{00_preface/abstractger}
 %\include{00_preface/acknowledgements}
-%\include{00_preface/dedication}
+\include{00_preface/dedication}
+\end{romanpages}        
+\setcounter{page}{1}
 \include{01_introduction/chapter}
 \include{02_pulse_formation/chapter}
 \include{03_measurement_results/chapter}
 \include{04_charge_monitoring/chapter}
 \include{05_current_monitoring/chapter}
+\include{00_preface/acronyms}
+
+
+
 %\include{text/09_conclusions/chapter}
 %\include{text/10_appendices/chapter}
 

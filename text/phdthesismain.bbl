@@ -18,6 +18,11 @@ E~Rossi.
   proton-proton collision data}.
 \newblock {\em Nuovo Cimento C}, 037(01):217--221. 5 p, 2014.
 
+\bibitem{GeneralAtomics}
+General Atomics.
+\newblock \emph{View of the TRIGA reactor.}
+\newblock 2015.
+
 \bibitem{CERN:00000}
 \emph{European Centre for Nuclear Research, CERN}.
 \newblock http://home.cern.
@@ -36,11 +41,6 @@ W~P~C Mills.
 \bibitem{AtomInst:00000}
 \emph{Atominstitut, Technical University of Vienna, Austria}.
 \newblock http://ati.tuwien.ac.at/startpage/EN/.
-
-\bibitem{GeneralAtomics}
-General Atomics.
-\newblock \emph{View of the TRIGA reactor.}
-\newblock 2015.
 
 \bibitem{Triga:00000}
 \emph{TRIGA MARK II neutron reactor}.
@@ -200,6 +200,10 @@ Peter Sigmund.
   General Aspects and Stopping of Swift Point Charges}}, volume 151 of {\em
   Springer Series in Solid-State Sciences}.
 \newblock Springer-Verlag Berlin Heidelberg, 2006.
+
+\bibitem{BB:00000}
+\emph{Bethe-Bloch plot}.
+\newblock http://physik.wikia.com/wiki/Detektoren.
 
 \bibitem{Kotte:172812}
 R~Kotte, H~J Keller, H~G Ortlepp, and F~Stary.

@@ -23,8 +23,6 @@ class DrawFuns {
 
 public:
   void prettify (TGraph *gr );
-  void prettify (TGraph *gr, string color );
-  void prettify (TGraphErrors *gr, string color );
   void prettify (TGraphErrors *gr );
   void prettify (TMultiGraph *gr );
   void prettify (TCanvas *c, string histType); //string is th1 or th2 (margins)

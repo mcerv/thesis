@@ -9,6 +9,7 @@
 #include "TApplication.h"
 #include "TProfile.h"
 #include "TGraph.h"
+#include "TMultiGraph.h"
 #include "TDirectory.h"
 #include "TCanvas.h"
 #include "TFitResult.h"
@@ -98,7 +99,7 @@ int32_t main (void) {
       if (file->IsOpen()) cout<<"File "<<filePath[volt][det]<<" open."<<endl;
 
       gr[volt][det] = (TGraph*)file->Get("Graph");
-      dr->prettify(gr[volt][det], colors[det]);
+      dr->prettify(gr[volt][det]);
       gr[volt][det]->GetXaxis()->SetRangeUser(0,310);
       gr[volt][det]->GetYaxis()->SetRangeUser(0,60.1e-15);
       gr[volt][det]->GetYaxis()->SetLimits(0,60);
@@ -148,91 +149,75 @@ int32_t main (void) {
     string savePath = "../plots/charge";
     savePath += voltstr[volt];
     savePath += ".pdf";
-    c[volt]->SaveAs(savePath.c_str() );
+    // c[volt]->SaveAs(savePath.c_str() );
 
     c[volt]->Update();
     c[volt]->WaitPrimitive();
     c[volt]->Update();
   }
 
-  // stringstream ss;
-  // TFile* f;
-  // const int nPlots=4;
-  // string plotName[nPlots] = { "../plots/MDBM-23-eff.pdf", "../plots/MDBM-23-occ.pdf",
-  //                             "../plots/MSBM-34-eff.pdf", "../plots/MSBM-34-occ.pdf"};
-  // string fileName[nPlots] = {  "../data/MDBM-23-eff.root",
-  //                         "../data/MDBM-23-occ.root",
-  //                         "../data/MSBM-34-eff.root",
-  //                         "../data/MSBM-34-occ.root" };
-  // string histName[nPlots] = {  "Occupancy/Plane0ClusterOccupancy",
-  //                         "Occupancy/Plane0ClusterOccupancy",
-  //                         "Occupancy/Plane0ClusterOccupancy",
-  //                         "Occupancy/Plane0ClusterOccupancy" };
-  // int max[nPlots] = { 40, 100, 100, 750 };
-  //
-  // TApplication *app = new TApplication("app",0,0);
-  // DrawFuns *dr = new DrawFuns();
-  // TCanvas *can = new TCanvas("ca","ca",800,600);
-  // dr->prettify(can);
-  //
-  // TH2D *hist[nPlots];
-  // for (int i=0; i<nPlots; i++) {
-  //
-  //   f = new TFile(fileName[i].c_str());
-  //   if (!(TH1D*)f->Get(histName[i].c_str() ) ) {
-  //     cout<<" File " << fileName[i].c_str() << " doesn't include the occ plot!" << endl;
-  //   }
-  //   hist[i] = new TH2D( *(TH2D*)f->Get(histName[i].c_str() )  );
-  //   dr->prettify(hist[i]);
-  //   hist[i]->Draw("col");
-  //
-  //   hist[i]->GetXaxis()->SetTitle("X position [um]");
-  //   hist[i]->GetXaxis()->SetTicks("b");
-  //   hist[i]->GetYaxis()->SetTitle("Y position [um]");
-  //   hist[i]->SetMaximum(max[i]);
-  //   can->SetRightMargin(0.06);
-  //   can->Update();
-  //   can->WaitPrimitive();
-  //   can->Update();
-  //   can->SaveAs(plotName[i].c_str());
-  //   can->Clear();
-  //   f->Close();
-  //   delete f;
-  // }
 
-  // dr->prettify(can);
-  // for (int i=0; i<nPlots; i++) {
-  //   hist[i]->Draw();
-  //   dr->prettify(hist[i]);
-  //   can->Update();
-  //   can->WaitPrimitive();
-  //   can->Update();
-  //   can->Clear();
-  //
-  // }
+	// DIFF
+	TCanvas *can = new TCanvas("c","c",800,600);
+	dr->prettify(can);
+	TMultiGraph *mg = new TMultiGraph();
+	// gr[0][1]->Draw("AP");
+	// gr[0][3]->Draw("sameP");
+	const int ncompares = 2;
+	TGraph *diff[nvolts][ncompares];
+	string entry[nvolts][ncompares] = {"S79 electrons","S79 holes","S52 electrons","S52 holes"};
+	TLegend *leg1 = new TLegend(0.65, 0.75, 0.95, 0.975);
 
-        // cout << "\r" << "Opening file " << ss.str() << flush;// << endl;
-        // f = new TFile(ss.str().c_str(),"read");
-        // if (!f->IsOpen()) {
-        //   cout<<" File " << ss.str().c_str() << " not open properly!" << endl;
-        //   missingprof[sample][temp][num] = true;
-        //   // profvec prof;
-        //   continue;
-        // }
-        // cntFilesOpen++;
-        // // if (!(TProfile*)f->Get("avgpulses_filt")) {
-        // if (!(TProfile*)f->Get("avgpulses")) {
-        //   cout<<" File " << ss.str().c_str() << " doesn't include avgpulses!" << endl;
-        //   missingprof[sample][temp][num] = true;
-        //   continue;
-        // }
-        // if (!((TParameter<Int_t>*)f->Get("avgTimestamp")) ) {
-        //   cout<<" File " << ss.str().c_str() << " doesn't include avgTimestamp!" << endl;
-        //   missingprof[sample][temp][num] = true;
-        //   continue;
-        // }
-        // avgTimestamp[sample][temp][num] = (((TParameter<Int_t>*)f->Get("avgTimestamp"))->GetVal());
-        //
+	for (int volt=0; volt<nvolts; volt++) {
+		for (int compare=0; compare<ncompares; compare++) {
+			int nonir, ir;
+			if (compare == 0) {nonir=1, ir=3;}//S79
+									 else {nonir=0; ir=4;}//S52
+			diff[volt][compare] = new TGraph();
+			dr->prettify(diff[volt][compare]);
+			diff[volt][compare]->GetYaxis()->SetTitle("Temperature [K]");
+			diff[volt][compare]->GetYaxis()->SetTitle("CCE [%]");
+			diff[volt][compare]->GetYaxis()->SetRangeUser(40,121);
+			diff[volt][compare]->SetMarkerStyle(20 + volt*2 + compare);
+			diff[volt][compare]->SetMarkerSize(1.2);
+
+			int a=0;
+			for (int i=0; i<gr[volt][nonir]->GetN(); i++ ) {
+				double x,y, x2,y2;
+				bool found = false;
+				gr[volt][nonir]->GetPoint(i, x, y);
+				cout << "-------------------------" << endl;
+				cout << "x = " << x << "   y = " << y << endl;
+				for (int j=0; j<gr[volt][ir]->GetN(); j++) {
+					gr[volt][ir]->GetPoint(j, x2, y2);
+					cout << "   - " << x2 << "  " << y2 << endl;
+					if (x == x2) {
+						found = true;
+						cout << "   FOUND! " << endl;
+						break;
+					}
+				}
+				if (found) {
+					diff[volt][compare]->SetPoint(a,x,y2/y*100);
+					a++;
+				}
+			}
+			leg1->AddEntry(diff[volt][compare],entry[volt][compare].c_str(),"LEP");
+			mg->Add(diff[volt][compare]);
+		}
+	}
+
+	mg->Draw("APL");
+	dr->prettify(mg);
+	mg->GetXaxis()->SetTitle("Temperature [K]");
+	mg->GetYaxis()->SetTitle("CCE [%]");
+	mg->GetYaxis()->SetRangeUser(40,121);
+	leg1->Draw("same");
+
+	can->Update();
+	can->WaitPrimitive();
+	can->Update();
+
 
   cout<<" All done."<<endl;
   return 0;

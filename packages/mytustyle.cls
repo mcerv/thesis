@@ -146,6 +146,19 @@
 {\end{center}\end{verse}\end{alwayssingle}}
 
 
+% ACRONYMS
+%
+% List of Acronyms
+
+\newenvironment{acronyms}
+{\begin{alwayssingle} \thispagestyle{empty}
+\begin{center}
+\vspace*{1.5cm}
+{\Large \bfseries Acronyms}
+\end{center}
+\vspace{0.5cm}}
+{\end{alwayssingle}}
+
 % ACKNOWLEDGEMENTS
 %
 % The acknowledgements environment puts a large, bold, centered 

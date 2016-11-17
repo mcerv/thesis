@@ -13,20 +13,20 @@
 \contentsline {subsection}{\numberline {2.2.4}Space charge}{14}
 \contentsline {section}{\numberline {2.3}Carrier transport in a diamond sensor}{15}
 \contentsline {section}{\numberline {2.4}Radiation-induced current signals}{16}
-\contentsline {subsection}{\numberline {2.4.1}Mean energy loss}{17}
-\contentsline {subsection}{\numberline {2.4.2}Signal fluctuation}{17}
+\contentsline {subsection}{\numberline {2.4.1}Mean energy loss}{18}
+\contentsline {subsection}{\numberline {2.4.2}Signal fluctuation}{18}
 \contentsline {subsection}{\numberline {2.4.3}Charge collection}{18}
 \contentsline {subsection}{\numberline {2.4.4}Charge trapping}{19}
 \contentsline {subsubsection}{\numberline {2.4.4.1}Polarisation}{20}
 \contentsline {subsubsection}{\numberline {2.4.4.2}Priming/pumping}{21}
 \contentsline {section}{\numberline {2.5}Radiation damage}{21}
 \contentsline {subsection}{\numberline {2.5.1}Irradiation damage factor}{22}
-\contentsline {section}{\numberline {2.6}Temperature effects}{22}
-\contentsline {subsection}{\numberline {2.6.1}Collected charge as a function of temperature}{23}
-\contentsline {section}{\numberline {2.7}Electronics for signal processing}{23}
-\contentsline {subsection}{\numberline {2.7.1}Signal preamplifiers}{23}
+\contentsline {section}{\numberline {2.6}Temperature effects}{23}
+\contentsline {subsection}{\numberline {2.6.1}Collected charge as a function of temperature}{24}
+\contentsline {section}{\numberline {2.7}Electronics for signal processing}{24}
+\contentsline {subsection}{\numberline {2.7.1}Signal preamplifiers}{24}
 \contentsline {subsubsection}{\numberline {2.7.1.1}Current amplifier}{24}
-\contentsline {subsubsection}{\numberline {2.7.1.2}Charge-sensitive amplifier}{24}
+\contentsline {subsubsection}{\numberline {2.7.1.2}Charge-sensitive amplifier}{25}
 \contentsline {subsection}{\numberline {2.7.2}Analogue electronic noise}{26}
 \contentsline {subsection}{\numberline {2.7.3}Analogue-to-digital converters}{27}
 \contentsline {subsection}{\numberline {2.7.4}Digital signal processing}{28}
@@ -38,8 +38,8 @@
 \contentsline {subsection}{\numberline {3.1.3}Readout devices}{34}
 \contentsline {subsection}{\numberline {3.1.4}Setup for the $\upbeta $ detection efficiency study}{35}
 \contentsline {subsection}{\numberline {3.1.5}Room temperature $\upalpha $-TCT setup}{35}
-\contentsline {subsection}{\numberline {3.1.6}Cryogenic $\upalpha $-TCT setup}{35}
-\contentsline {section}{\numberline {3.2}Charged particle pulses and spectra}{36}
+\contentsline {subsection}{\numberline {3.1.6}Cryogenic $\upalpha $-TCT setup}{36}
+\contentsline {section}{\numberline {3.2}Charged particle pulses and spectra}{37}
 \contentsline {section}{\numberline {3.3}Radiation limitations}{39}
 \contentsline {subsection}{\numberline {3.3.1}Irradiation study}{39}
 \contentsline {subsubsection}{\numberline {3.3.1.1}300\nobreakspace {}MeV $\uppi $ radiation damage factor}{39}
@@ -59,20 +59,20 @@
 \contentsline {subsection}{\numberline {4.3.1}Sensors}{59}
 \contentsline {subsection}{\numberline {4.3.2}Front-end electronics}{60}
 \contentsline {section}{\numberline {4.4}Module assembly}{62}
-\contentsline {section}{\numberline {4.5}Performance results}{63}
+\contentsline {section}{\numberline {4.5}Performance results}{62}
 \contentsline {subsection}{\numberline {4.5.1}Source test results}{63}
 \contentsline {subsubsection}{\numberline {4.5.1.1}Pixel connectivity}{63}
 \contentsline {subsubsection}{\numberline {4.5.1.2}Pseudo-efficiency}{64}
 \contentsline {subsection}{\numberline {4.5.2}Erratic current}{65}
 \contentsline {subsection}{\numberline {4.5.3}Test beam results}{66}
 \contentsline {subsection}{\numberline {4.5.4}Summary of the QC}{67}
-\contentsline {section}{\numberline {4.6}Installation and commissioning}{68}
+\contentsline {section}{\numberline {4.6}Installation and commissioning}{67}
 \contentsline {subsection}{\numberline {4.6.1}Positioning in ATLAS}{68}
-\contentsline {section}{\numberline {4.7}First collision data}{70}
-\contentsline {subsection}{\numberline {4.7.1}LHC beam bunch structure}{70}
-\contentsline {subsection}{\numberline {4.7.2}Collision point reference system}{70}
-\contentsline {subsection}{\numberline {4.7.3}Discussion}{71}
-\contentsline {section}{\numberline {4.8}Conclusion}{72}
+\contentsline {section}{\numberline {4.7}First collision data}{69}
+\contentsline {subsection}{\numberline {4.7.1}LHC beam bunch structure}{69}
+\contentsline {subsection}{\numberline {4.7.2}Collision point reference system}{69}
+\contentsline {subsection}{\numberline {4.7.3}Discussion}{70}
+\contentsline {section}{\numberline {4.8}Conclusion}{71}
 \contentsline {chapter}{\numberline {5}Current monitoring\hfil \hbox {}\linebreak {\itshape Real-time particle identification}}{73}
 \contentsline {section}{\numberline {5.1}Motivation}{73}
 \contentsline {section}{\numberline {5.2}Requirements}{74}
@@ -84,16 +84,16 @@
 \contentsline {subsection}{\numberline {5.5.3}Area and width measurement}{79}
 \contentsline {subsubsection}{\numberline {5.5.3.1}Vector cleaning}{80}
 \contentsline {subsubsection}{\numberline {5.5.3.2}Algorithm}{81}
-\contentsline {section}{\numberline {5.6}Control and data interface}{82}
+\contentsline {section}{\numberline {5.6}Control and data interface}{81}
 \contentsline {subsection}{\numberline {5.6.1}Software}{82}
 \contentsline {subsection}{\numberline {5.6.2}Data readout}{82}
-\contentsline {section}{\numberline {5.7}Performance results}{83}
+\contentsline {section}{\numberline {5.7}Performance results}{82}
 \contentsline {subsection}{\numberline {5.7.1}Tests with a pulse generator}{83}
 \contentsline {subsubsection}{\numberline {5.7.1.1}Trigger rate}{83}
 \contentsline {subsubsection}{\numberline {5.7.1.2}Linearity}{83}
-\contentsline {subsubsection}{\numberline {5.7.1.3}Stability}{84}
+\contentsline {subsubsection}{\numberline {5.7.1.3}Stability}{83}
 \contentsline {subsubsection}{\numberline {5.7.1.4}Conclusion}{84}
-\contentsline {subsection}{\numberline {5.7.2}Comparison between the charge-sensitive and current spectroscopy}{84}
+\contentsline {subsection}{\numberline {5.7.2}Comparison between the charge-sensitive and current spectroscopy}{85}
 \contentsline {section}{\numberline {5.8}Source calibration}{85}
 \contentsline {subsection}{\numberline {5.8.1}Pulse classification}{85}
 \contentsline {subsubsection}{\numberline {5.8.1.1}Class A, B, C, D}{87}
@@ -119,4 +119,4 @@
 \contentsline {subsubsection}{\numberline {5.9.4.1}Measurements}{113}
 \contentsline {subsubsection}{\numberline {5.9.4.2}Results and discussion}{115}
 \contentsline {section}{\numberline {5.10}Conclusion}{116}
-\contentsline {chapter}{Bibliography}{117}
+\contentsline {chapter}{Bibliography}{119}

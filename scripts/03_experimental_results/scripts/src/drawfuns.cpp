@@ -142,46 +142,12 @@ void DrawFuns::prettify (TGraph *gr ) {
 
     gr->SetMarkerColor(kBlack);
     gr->SetMarkerStyle(20);
-    gr->SetMarkerSize(1.0);
+    gr->SetMarkerSize(1.45);
+    gr->SetMarkerSize(1.45);
+    gr->SetLineWidth(1);
 }
 
 void DrawFuns::prettify (TGraphErrors *gr) {
-  prettify ( (TGraph*) gr );
-}
-
-void DrawFuns::prettify (TGraphErrors *gr, string color) {
-  prettify ( (TGraph*) gr, color);
-}
-void DrawFuns::prettify (TGraph *gr, string color) {
-  int32_t colorNum = kRed;
-  int32_t colorFill = 3005;
-  TColor* clrObj = new TColor();
-  cout << color << endl;
-  if (!color.compare("red")) {
-    colorNum = clrObj->GetColor("#952929");
-    colorFill = 1001;
-    gr->SetLineColor(colorNum);
-    gr->SetMarkerColor(colorNum);
-    gr->SetFillStyle(colorFill);
-  } else if (!color.compare("blue")) {
-    colorNum = clrObj->GetColor("#418f8f");
-    colorFill = 1001;
-    gr->SetLineColor(colorNum);
-    gr->SetMarkerColor(colorNum);
-    gr->SetFillStyle(colorFill);
-  } else if (!color.compare("green")) {
-    colorNum = clrObj->GetColor("#57be57");
-    colorFill = 1001;
-    gr->SetLineColor(colorNum);
-    gr->SetMarkerColor(colorNum);
-    gr->SetFillStyle(colorFill);
-  } else if (!color.compare("orange")) {
-    colorNum = clrObj->GetColor("#eea76d");
-    colorFill = 1001;
-    gr->SetLineColor(colorNum);
-    gr->SetMarkerColor(colorNum);
-    gr->SetFillStyle(colorFill);
-  }
   prettify ( (TGraph*) gr );
 }
 
