@@ -49,7 +49,11 @@ high-radiation environments}   %note \\[1ex] is a line break in the title
 %\renewcommand{\submittedtext}{change the default text here if needed}
 \degree{Doctor of technical sciences}     %the degree
 \degreedate{Vienna, December 2016}         %the degree date
-\supervisor{Univ.Doz. Dipl.-Ing. Dr.techn. Erich Griesmayer}
+\supervisor{Univ.Doz. Dipl.-Ing. Dr.techn. Erich Griesmayer \\[1 ex]
+and\\[1 ex]
+Dr. Heinz Pernegger
+}
+
 
 %end the preamble and start the document
 \begin{document}
@@ -73,7 +77,7 @@ high-radiation environments}   %note \\[1ex] is a line break in the title
 %now include the files of latex for each of the chapters etc
 \include{00_preface/abstract}
 \include{00_preface/abstractger}
-%\include{00_preface/acknowledgements}
+\include{00_preface/acknowledgements}
 \include{00_preface/dedication}
 \end{romanpages}        
 \setcounter{page}{1}
@@ -82,6 +86,7 @@ high-radiation environments}   %note \\[1ex] is a line break in the title
 \include{03_measurement_results/chapter}
 \include{04_charge_monitoring/chapter}
 \include{05_current_monitoring/chapter}
+\include{09_conclusions/chapter}
 \include{00_preface/acronyms}
 
 

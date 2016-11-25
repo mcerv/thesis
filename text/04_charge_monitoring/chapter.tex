@@ -64,12 +64,12 @@ One side is segmented into pixels. Guard rings at the edges of the sensor provid
 
 
 \subsection{Front-end electronics}
-The FE-I4 (front-end integrated circuit)~\cite{Albert:1477014} is an ASIC pixel chip designed specifically for the ATLAS pixel detector upgrade. It is built as a successor to the current pixel chip FE-I3, surpassing it in size of the active area (6$\times$ larger) as well as the number of channels/pixels (10$\times$ more). 336 such FE-I4 modules are used in the newly installed pixel layer called the Insertable B-Layer (IBL)~\cite{Huegging:1314083}. The DBM is also instrumented with these chips. The FE-I4's integrated circuit contains readout circuitry for $26'880$ pixels arranged in 80 columns on a 250~$\upmu$m pitch and 336 rows on a 50~$\upmu$m pitch. The size of the active area is therefore 20.0~cm~$\times$~16.8~mm. This fine granularity allows for a high-precision particle tracking. The chip operates at 40~MHz with a 25~ns acquisition window, which corresponds to the spacing of the particle bunches in the LHC. It is hence able to correlate hits/tracks to their corresponding bunch. Furthermore, each pixel is capable of measuring the deposited charge of a detected particle by using the Time-over-Threshold (ToT) method~\cite{ATLIBL:00001}. Finally, the FEI4 has been designed to withstand a radiation dose up to 300 Mrad. This ensures a longterm stability in the radiation-hard forward region of the ATLAS experiment.
+The FE-I4 (front-end integrated circuit)~\cite{Albert:1477014} is an ASIC pixel chip designed specifically for the ATLAS pixel detector upgrade. It is built as a successor to the current pixel chip FE-I3, surpassing it in size of the active area (6$\times$ larger) as well as the number of channels/pixels (10$\times$ more). 336 such FE-I4 modules are used in the newly installed pixel layer called the Insertable B-Layer (IBL)~\cite{Huegging:1314083}. The DBM is also instrumented with these chips. The FE-I4's integrated circuit contains readout circuitry for $26'880$ pixels arranged in 80 columns on a 250~$\upmu$m pitch and 336 rows on a 50~$\upmu$m pitch. The size of the active area is therefore 20.0~mm~$\times$~16.8~mm. This fine granularity allows for a high-precision particle tracking. The chip operates at 40~MHz with a 25~ns acquisition window, which corresponds to the spacing of the particle bunches in the LHC. It is hence able to correlate hits/tracks to their corresponding bunch. Furthermore, each pixel is capable of measuring the deposited charge of a detected particle by using the Time-over-Threshold (ToT) method~\cite{ATLIBL:00001}. Finally, the FEI4 has been designed to withstand a radiation dose up to 300 Mrad. This ensures a longterm stability in the radiation-hard forward region of the ATLAS experiment.
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.5\textwidth]{04_charge_monitoring/pics/fei41}
-\caption{FE-I4 layout, top-down view. The purple area are pixels grouped into columns, the green area below is the common logic and the red strip at the bottom are the wire bond pads.}
+\caption{FE-I4 layout, top-down view. The purple area are pixels grouped into columns, the green area below is the common logic and the red strip at the bottom are the wire bond pads.~\cite{Albert:1477014}}
 \label{fig:anapix}
 \end{figure}
 
@@ -78,7 +78,7 @@ Each pixel is designed as a separate entity. Its electrical chain is shown in fi
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.6\textwidth]{04_charge_monitoring/pics/analogPix}
-\caption{Schematic of an analogue pixel. Courtesy of the FE-I4 collaboration.}
+\caption{Schematic of an analogue pixel. Courtesy of the FE-I4 collaboration.~\cite{Albert:1477014}}
 \label{fig:anapix}
 \end{figure}
 
@@ -202,7 +202,7 @@ The first two assembled prototype DBM modules, MDBM-01 and MDBM-03, were tested 
 \caption{An efficiency study of a prototype DBM diamond module in a test beam~\cite{Cerv:1630832,McGoldrick:1982209}. The statistics are low ($\sim$10~hits/pixel) as the data were collected during a short run. }
 \end{figure}
 
-The test beam prototypes did not meet the acceptance criteria for production DBM modules in the following areas: first, the reported CCDs were slightly below 200~$\upmu$m, which would be the DBM minimum. Second, the applied bias voltages ranged from 1--2~V/$\upmu$m, which is in some cases below the minimal required value. In addition, the threshold cut could only be set to $1'500$~electrons, which is higher than the DBM minimum ($1'000$~e). Nonetheless, the resulting module efficiencies were still in the range between 70--85~\%.
+The test beam prototypes did not meet the acceptance criteria for production DBM modules in the following areas: first, the reported CCDs were slightly below 200~$\upmu$m, which would be the DBM minimum. Second, the applied bias voltages ranged from 1--2~V/$\upmu$m, which is in some cases below the minimal required value. In addition, the threshold cut could only be set to $1'500$~electrons, which is higher than the DBM minimum ($800$~e). Nonetheless, the resulting module efficiencies were still in the range between 70--85~\%, which is in the upper part of the pseudo-efficiency distribution (see figure~\ref{fig:pseudoeff}.
 
 To analyse the test beam data, Judith software framework~\cite{McGoldrick:1982209} was used. Judith is capable of synchronising data streams from several detector systems only connected via a trigger system, reconstructing tracks and calculating efficiency for the DUTs (devices under test). It was also used to reconstruct and analyse the acquired Kartel test beam data together with the silicon and diamond module as DUTs. A sample of the analysed data is shown in figures~\ref{fig:beammap} and~\ref{fig:beamdist}. First figure shows the efficiencies for individual pixels of the MDBM-03 diamond module. Only the top half of the sensor is measured because the telescope trigger window is smaller than the sensor area. The map is non-uniform (granulated) due to grain boundaries of the pCVD material, which cause high efficiency gradients at a $\upmu$m scale. The second figure shows the efficiency distribution for the measured pixels.
 

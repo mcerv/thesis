@@ -3,16 +3,17 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: phdthesismain.aux
 A level-1 auxiliary file: 00_preface/abstract.aux
 A level-1 auxiliary file: 00_preface/abstractger.aux
+A level-1 auxiliary file: 00_preface/acknowledgements.aux
 A level-1 auxiliary file: 00_preface/dedication.aux
 A level-1 auxiliary file: 01_introduction/chapter.aux
 A level-1 auxiliary file: 02_pulse_formation/chapter.aux
 A level-1 auxiliary file: 03_measurement_results/chapter.aux
 A level-1 auxiliary file: 04_charge_monitoring/chapter.aux
 A level-1 auxiliary file: 05_current_monitoring/chapter.aux
+A level-1 auxiliary file: 09_conclusions/chapter.aux
 A level-1 auxiliary file: 00_preface/acronyms.aux
 The style file: unsrt.bst
 Database file #1: bibliography/bib.bib
-Warning--empty note in GeneralAtomics
 Warning--empty author in CERN:00000
 Warning--empty author in AtomInst:00000
 Warning--empty author in Triga:00000
@@ -22,7 +23,6 @@ Warning--empty note in Maximilien:1324852
 Warning--empty journal in Jenni:1193085
 Warning--empty note in Pequenao:1095924
 Warning--empty author in BREMS:00000
-Warning--empty note in BREMS:00000
 Warning--there's a number but no volume in VDRIFT:00000
 Warning--empty author in BB:00000
 Warning--empty journal in 1980PhRvB..22.5565A
@@ -49,43 +49,43 @@ Warning--empty author in ITER:00000
 Warning--empty author in EPFL:00000
 You've used 96 entries,
             1791 wiz_defined-function locations,
-            1029 strings with 18742 characters,
-and the built_in function-call counts, 16784 in all, are:
-= -- 1433
-> -- 753
+            1036 strings with 18496 characters,
+and the built_in function-call counts, 16885 in all, are:
+= -- 1443
+> -- 763
 < -- 11
-+ -- 303
-- -- 207
-* -- 1144
-:= -- 2830
-add.period$ -- 278
++ -- 306
+- -- 210
+* -- 1151
+:= -- 2849
+add.period$ -- 281
 call.type$ -- 96
 change.case$ -- 82
 chr.to.int$ -- 0
-cite$ -- 131
-duplicate$ -- 727
-empty$ -- 1612
-format.name$ -- 207
-if$ -- 3621
+cite$ -- 129
+duplicate$ -- 731
+empty$ -- 1618
+format.name$ -- 210
+if$ -- 3645
 int.to.chr$ -- 0
 int.to.str$ -- 96
-missing$ -- 69
-newline$ -- 472
+missing$ -- 70
+newline$ -- 475
 num.names$ -- 76
-pop$ -- 203
+pop$ -- 201
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 243
+skip$ -- 245
 stack$ -- 0
 substring$ -- 874
-swap$ -- 78
+swap$ -- 79
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 35
+warning$ -- 33
 while$ -- 117
 width$ -- 98
-write$ -- 976
-(There were 35 warnings)
+write$ -- 984
+(There were 33 warnings)

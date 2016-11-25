@@ -166,8 +166,10 @@
 {\Large \bfseries Acronyms}
 \end{center}
 \vspace{0.5cm}
-\begin{quote}}
-{\end{quote}\end{alwayssingle}}
+%\begin{quote}
+}
+{%\end{quote}
+\end{alwayssingle}}
 
 % ACKNOWLEDGEMENTS
 %
